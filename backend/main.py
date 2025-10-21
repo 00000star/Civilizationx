@@ -8,6 +8,16 @@ import asyncio
 from config import settings
 from src.simulation.engine import SimulationEngine
 
+# Phase 2-3 imports
+from src.agents.memory.memory_manager import memory_manager
+from src.technology.discovery_engine import discovery_engine
+from src.social.relationship_manager import relationship_manager
+from src.settlements.settlement_detector import settlement_detector
+from src.economy.trade_system import trade_system
+from src.culture.culture_system import culture_system
+from src.diplomacy.diplomacy_system import diplomacy_system
+from src.governance.leadership_system import leadership_system
+
 # Configure logging
 logging.basicConfig(
     level=getattr(logging, settings.log_level),
@@ -165,6 +175,201 @@ async def get_resources():
     return {
         "resources": simulation_engine.get_resources(),
         "count": len(simulation_engine.world.resources)
+    }
+
+
+# Phase 2-3 API Endpoints
+
+@app.get("/api/agents/{agent_id}")
+async def get_agent_details(agent_id: str):
+    """Get detailed information about a specific agent."""
+    if not simulation_engine:
+        return {"error": "Simulation not initialized"}
+    
+    # Find agent
+    agent = next((a for a in simulation_engine.agents if a.id == agent_id), None)
+    if not agent:
+        return {"error": "Agent not found"}
+    
+    # Get memories
+    memories = memory_manager.get_recent_memories(agent_id, hours=48, limit=20)
+    
+    # Get technologies
+    technologies = discovery_engine.get_agent_technologies(agent_id)
+    
+    # Get relationships
+    relationships = relationship_manager.get_agent_relationships(agent_id)
+    
+    # Get specialization
+    specialization = trade_system.get_agent_specialization(agent_id)
+    
+    # Get settlement
+    settlement = settlement_detector.get_agent_settlement(agent_id)
+    
+    return {
+        "agent": agent.to_dict(),
+        "memories": [
+            {
+                "content": m["content"],
+                "type": m["memory_type"],
+                "importance": m["importance_score"],
+                "created_at": m["created_at"].isoformat()
+            }
+            for m in memories
+        ],
+        "technologies": technologies,
+        "relationships": [
+            {
+                "other_agent_id": r.agent_b_id if r.agent_a_id == agent_id else r.agent_a_id,
+                "score": r.relationship_score,
+                "type": r.relationship_type,
+                "trust": r.trust_level
+            }
+            for r in relationships
+        ],
+        "specialization": {
+            "primary_role": specialization.primary_role if specialization else None,
+            "skill_levels": dict(specialization.skill_levels) if specialization else {}
+        },
+        "settlement": {
+            "id": settlement.id,
+            "name": settlement.name,
+            "population": settlement.population
+        } if settlement else None
+    }
+
+
+@app.get("/api/settlements")
+async def get_settlements():
+    """Get all settlements."""
+    if not simulation_engine:
+        return {"error": "Simulation not initialized"}
+    
+    settlements = settlement_detector.get_all_settlements()
+    
+    return {
+        "settlements": [
+            {
+                **settlement.to_dict(),
+                "culture": culture_system.get_settlement_culture(settlement.id).to_dict()
+                if culture_system.get_settlement_culture(settlement.id) else None,
+                "leadership": leadership_system.get_leadership_info(settlement.id)
+            }
+            for settlement in settlements
+        ],
+        "count": len(settlements)
+    }
+
+
+@app.get("/api/settlements/{settlement_id}")
+async def get_settlement_details(settlement_id: str):
+    """Get detailed information about a specific settlement."""
+    if not simulation_engine:
+        return {"error": "Simulation not initialized"}
+    
+    settlement = settlement_detector.get_settlement_by_id(settlement_id)
+    if not settlement:
+        return {"error": "Settlement not found"}
+    
+    # Get culture
+    culture = culture_system.get_settlement_culture(settlement_id)
+    
+    # Get leadership
+    leadership = leadership_system.get_leadership_info(settlement_id)
+    
+    # Get diplomatic relationships
+    all_settlements = settlement_detector.get_all_settlements()
+    diplomatic_relations = []
+    for other_settlement in all_settlements:
+        if other_settlement.id != settlement_id:
+            rel = diplomacy_system.get_relationship(settlement_id, other_settlement.id)
+            if rel:
+                diplomatic_relations.append({
+                    "settlement_id": other_settlement.id,
+                    "settlement_name": other_settlement.name,
+                    "status": rel.status.value,
+                    "trust_level": rel.trust_level
+                })
+    
+    return {
+        "settlement": settlement.to_dict(),
+        "culture": culture.to_dict() if culture else None,
+        "leadership": leadership,
+        "diplomatic_relations": diplomatic_relations,
+        "member_count": len(settlement.member_ids)
+    }
+
+
+@app.get("/api/technologies")
+async def get_technologies():
+    """Get all known technologies across all agents."""
+    if not simulation_engine:
+        return {"error": "Simulation not initialized"}
+    
+    # Collect all unique technologies
+    all_techs = set()
+    agent_tech_map = {}
+    
+    for agent in simulation_engine.agents:
+        if agent.is_alive:
+            techs = discovery_engine.get_agent_technologies(agent.id)
+            all_techs.update(techs)
+            if techs:
+                agent_tech_map[agent.id] = {
+                    "agent_name": agent.name,
+                    "technologies": techs
+                }
+    
+    return {
+        "unique_technologies": list(all_techs),
+        "total_unique": len(all_techs),
+        "agent_technologies": agent_tech_map
+    }
+
+
+@app.get("/api/economy/trade")
+async def get_trade_statistics():
+    """Get trade system statistics."""
+    if not simulation_engine:
+        return {"error": "Simulation not initialized"}
+    
+    return trade_system.get_trade_statistics()
+
+
+@app.get("/api/relationships")
+async def get_all_relationships():
+    """Get all relationships in the simulation."""
+    if not simulation_engine:
+        return {"error": "Simulation not initialized"}
+    
+    relationships = []
+    for agent in simulation_engine.agents:
+        if agent.is_alive:
+            agent_rels = relationship_manager.get_agent_relationships(agent.id)
+            for rel in agent_rels:
+                relationships.append({
+                    "agent_a_id": rel.agent_a_id,
+                    "agent_b_id": rel.agent_b_id,
+                    "score": rel.relationship_score,
+                    "type": rel.relationship_type,
+                    "trust": rel.trust_level,
+                    "interactions": rel.interaction_count
+                })
+    
+    return {
+        "relationships": relationships,
+        "count": len(relationships)
+    }
+
+
+@app.get("/api/events/recent")
+async def get_recent_events():
+    """Get recent simulation events."""
+    # This would require event storage, which we can add
+    # For now, return placeholder
+    return {
+        "events": [],
+        "message": "Event history not yet implemented"
     }
 
 
