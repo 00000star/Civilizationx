@@ -1,11 +1,13 @@
 """Conversation engine for agent-to-agent interactions."""
 import logging
 import random
+import asyncio
 from typing import List, Dict, Optional, Tuple
 from datetime import datetime
 from .relationship_manager import relationship_manager
 from src.agents.memory.memory_manager import memory_manager
 from src.technology.discovery_engine import discovery_engine
+from src.llm.llm_service import llm_service
 
 logger = logging.getLogger(__name__)
 
@@ -192,13 +194,15 @@ class ConversationEngine:
             conv.add_message(agent_a_id, f"Hello {agent_b_name}.", "greeting")
             conv.add_message(agent_b_id, f"Hello {agent_a_name}.", "greeting")
 
-    def continue_conversation(
+    async def continue_conversation(
         self,
         conv_id: str,
         agent_a_id: str,
         agent_a_name: str,
         agent_b_id: str,
-        agent_b_name: str
+        agent_b_name: str,
+        agent_a_context: Optional[Dict] = None,
+        agent_b_context: Optional[Dict] = None
     ) -> bool:
         """
         Continue an active conversation for one more turn.
@@ -221,12 +225,21 @@ class ConversationEngine:
         if conv.topic == "knowledge_sharing":
             self._handle_knowledge_sharing(conv, agent_a_id, agent_a_name, agent_b_id, agent_b_name)
         elif conv.topic == "social_bonding":
-            self._handle_social_bonding(conv, agent_a_id, agent_a_name, agent_b_id, agent_b_name)
+            await self._handle_social_bonding(
+                conv, agent_a_id, agent_a_name, agent_b_id, agent_b_name,
+                agent_a_context, agent_b_context
+            )
         elif conv.topic == "request_help":
-            self._handle_help_request(conv, agent_a_id, agent_a_name, agent_b_id, agent_b_name)
+            await self._handle_help_request(
+                conv, agent_a_id, agent_a_name, agent_b_id, agent_b_name,
+                agent_a_context, agent_b_context
+            )
         else:
             # Simple greeting conversation
-            self._handle_simple_conversation(conv, agent_a_id, agent_a_name, agent_b_id, agent_b_name)
+            await self._handle_simple_conversation(
+                conv, agent_a_id, agent_a_name, agent_b_id, agent_b_name,
+                agent_a_context, agent_b_context
+            )
 
         # Check if conversation should end
         if conv.turn_count >= random.randint(3, 6):
@@ -316,15 +329,51 @@ class ConversationEngine:
             conv.add_message(agent_a_id, "I enjoy learning new things.", "statement")
             conv.add_message(agent_b_id, "As do I. Knowledge helps us survive.", "statement")
 
-    def _handle_social_bonding(
+    async def _handle_social_bonding(
         self,
         conv: Conversation,
         agent_a_id: str,
         agent_a_name: str,
         agent_b_id: str,
-        agent_b_name: str
+        agent_b_name: str,
+        agent_a_context: Optional[Dict] = None,
+        agent_b_context: Optional[Dict] = None
     ):
         """Handle social bonding conversation."""
+        # Try to use LLM if available
+        if llm_service.is_available() and agent_a_context and agent_b_context:
+            try:
+                # Generate agent A's message
+                message_a = await llm_service.generate_conversation_message(
+                    agent_name=agent_a_name,
+                    agent_context=agent_a_context,
+                    other_agent_name=agent_b_name,
+                    conversation_topic="social_bonding",
+                    conversation_history=conv.messages,
+                    max_tokens=100
+                )
+                conv.add_message(agent_a_id, message_a, "statement")
+
+                # Generate agent B's response
+                message_b = await llm_service.generate_conversation_message(
+                    agent_name=agent_b_name,
+                    agent_context=agent_b_context,
+                    other_agent_name=agent_a_name,
+                    conversation_topic="social_bonding",
+                    conversation_history=conv.messages,
+                    max_tokens=100
+                )
+                conv.add_message(agent_b_id, message_b, "statement")
+
+                # Positive relationship impact
+                relationship_manager.handle_positive_interaction(agent_a_id, agent_b_id, "cooperation")
+                return
+
+            except Exception as e:
+                logger.error(f"LLM generation failed in social bonding: {e}")
+                # Fall through to template-based fallback
+
+        # Fallback to template-based conversation
         bonding_exchanges = [
             (f"I'm glad we crossed paths today.", f"Me too, {agent_a_name}. It's good to have company."),
             (f"How has your day been?", f"Challenging but manageable. How about yours?"),
@@ -339,18 +388,71 @@ class ConversationEngine:
         # Positive relationship impact
         relationship_manager.handle_positive_interaction(agent_a_id, agent_b_id, "cooperation")
 
-    def _handle_help_request(
+    async def _handle_help_request(
         self,
         conv: Conversation,
         agent_a_id: str,
         agent_a_name: str,
         agent_b_id: str,
-        agent_b_name: str
+        agent_b_name: str,
+        agent_a_context: Optional[Dict] = None,
+        agent_b_context: Optional[Dict] = None
     ):
         """Handle help request conversation."""
-        conv.add_message(agent_a_id, "I'm struggling to find food. Can you help?", "request")
-
         rel = relationship_manager.get_relationship(agent_a_id, agent_b_id)
+
+        # Try to use LLM if available
+        if llm_service.is_available() and agent_a_context and agent_b_context:
+            try:
+                # Generate help request
+                request_message = await llm_service.generate_conversation_message(
+                    agent_name=agent_a_name,
+                    agent_context=agent_a_context,
+                    other_agent_name=agent_b_name,
+                    conversation_topic="request_help",
+                    conversation_history=conv.messages,
+                    max_tokens=100
+                )
+                conv.add_message(agent_a_id, request_message, "request")
+
+                # Generate response based on relationship
+                response_context = {
+                    **agent_b_context,
+                    "will_help": rel and rel.relationship_score > 30
+                }
+
+                response_message = await llm_service.generate_conversation_message(
+                    agent_name=agent_b_name,
+                    agent_context=response_context,
+                    other_agent_name=agent_a_name,
+                    conversation_topic="respond_to_help_request",
+                    conversation_history=conv.messages,
+                    max_tokens=100
+                )
+
+                if rel and rel.relationship_score > 30:
+                    conv.add_message(agent_b_id, response_message, "accept")
+                    conv.outcomes.append({
+                        "type": "help_given",
+                        "helper": agent_b_id,
+                        "helped": agent_a_id
+                    })
+                    relationship_manager.handle_positive_interaction(agent_a_id, agent_b_id, "help")
+                else:
+                    conv.add_message(agent_b_id, response_message, "decline")
+                    conv.outcomes.append({
+                        "type": "help_declined",
+                        "requester": agent_a_id,
+                        "decliner": agent_b_id
+                    })
+                return
+
+            except Exception as e:
+                logger.error(f"LLM generation failed in help request: {e}")
+                # Fall through to template-based fallback
+
+        # Fallback to template-based conversation
+        conv.add_message(agent_a_id, "I'm struggling to find food. Can you help?", "request")
 
         # Help depends on relationship
         if rel and rel.relationship_score > 30:
@@ -369,15 +471,50 @@ class ConversationEngine:
                 "decliner": agent_b_id
             })
 
-    def _handle_simple_conversation(
+    async def _handle_simple_conversation(
         self,
         conv: Conversation,
         agent_a_id: str,
         agent_a_name: str,
         agent_b_id: str,
-        agent_b_name: str
+        agent_b_name: str,
+        agent_a_context: Optional[Dict] = None,
+        agent_b_context: Optional[Dict] = None
     ):
         """Handle simple greeting conversation."""
+        # Try to use LLM if available
+        if llm_service.is_available() and agent_a_context and agent_b_context:
+            try:
+                # Generate agent A's message
+                message_a = await llm_service.generate_conversation_message(
+                    agent_name=agent_a_name,
+                    agent_context=agent_a_context,
+                    other_agent_name=agent_b_name,
+                    conversation_topic="greeting",
+                    conversation_history=conv.messages,
+                    max_tokens=80
+                )
+                conv.add_message(agent_a_id, message_a, "statement")
+
+                # Generate agent B's response
+                message_b = await llm_service.generate_conversation_message(
+                    agent_name=agent_b_name,
+                    agent_context=agent_b_context,
+                    other_agent_name=agent_a_name,
+                    conversation_topic="greeting",
+                    conversation_history=conv.messages,
+                    max_tokens=80
+                )
+                conv.add_message(agent_b_id, message_b, "statement")
+
+                relationship_manager.handle_positive_interaction(agent_a_id, agent_b_id, "greeting")
+                return
+
+            except Exception as e:
+                logger.error(f"LLM generation failed in simple conversation: {e}")
+                # Fall through to template-based fallback
+
+        # Fallback to template-based conversation
         simple_exchanges = [
             ("How are you?", "I'm well, thank you."),
             ("Nice weather today.", "Yes, it is pleasant."),
