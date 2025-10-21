@@ -23,6 +23,9 @@ from src.diplomacy.diplomacy_system import diplomacy_system
 from src.governance.leadership_system import leadership_system
 # GOAP Planning System
 from src.planning.goap_system import goap_system, ActionType
+# Conflict Mechanics
+from src.conflict.combat_system import combat_system, CombatParticipant, ConflictType
+from src.conflict.war_system import war_system, WarGoal
 
 logger = logging.getLogger(__name__)
 
