@@ -227,21 +227,31 @@ class SimulationEngine:
         - Reflection triggers
         - Trade opportunities
         """
-        # Phase 2-3: Check for reflection
+        # Phase 2-3: Check for reflection (now async with LLM)
         if reflection_engine.should_reflect(agent.id, agent.to_dict()):
-            reflection_engine.perform_reflection(agent.id, agent.name)
+            await reflection_engine.perform_reflection(agent.id, agent.name)
 
-        # Phase 2-3: Check for technology discovery
+        # Phase 2-3: Check for technology discovery (now async with LLM)
         simulation_days = (self.simulation_time - agent.birth_time).days
-        discovered_tech = discovery_engine.check_for_discovery(
+        
+        # Build agent context for LLM narrative generation
+        agent_context = {
+            "location": agent.position,
+            "recent_activities": [agent.current_activity],
+            "needs": agent.needs.to_dict(),
+            "inventory": agent.inventory
+        }
+        
+        discovered_tech = await discovery_engine.check_for_discovery(
             agent.id,
             agent.name,
             agent.current_activity,
-            simulation_days
+            simulation_days,
+            agent_context
         )
 
         if discovered_tech:
-            # Technology discovered! Create high-importance memory
+            # Technology discovered! Emit event
             self._emit_event({
                 "type": "technology_discovered",
                 "agent_id": agent.id,
@@ -349,6 +359,21 @@ class SimulationEngine:
 
             # Check if they can start conversation
             if conversation_engine.can_start_conversation(agent_a.id, agent_b.id):
+                # Build agent contexts for LLM-based conversations
+                agent_a_context = {
+                    "memories": memory_manager.get_recent_memories(agent_a.id, hours=24, limit=5),
+                    "position": agent_a.position,
+                    "needs": agent_a.needs.to_dict(),
+                    "current_activity": agent_a.current_activity
+                }
+                
+                agent_b_context = {
+                    "memories": memory_manager.get_recent_memories(agent_b.id, hours=24, limit=5),
+                    "position": agent_b.position,
+                    "needs": agent_b.needs.to_dict(),
+                    "current_activity": agent_b.current_activity
+                }
+                
                 # Initiate conversation
                 context = {
                     "has_critical_need": agent_a.get_critical_need() is not None
@@ -363,15 +388,18 @@ class SimulationEngine:
                 )
 
                 if conv:
-                    # Continue conversation for a few turns
+                    # Continue conversation for a few turns (now async with LLM)
                     for _ in range(random.randint(2, 4)):
-                        if not conversation_engine.continue_conversation(
+                        continued = await conversation_engine.continue_conversation(
                             conv.id,
                             agent_a.id,
                             agent_a.name,
                             agent_b.id,
-                            agent_b.name
-                        ):
+                            agent_b.name,
+                            agent_a_context,
+                            agent_b_context
+                        )
+                        if not continued:
                             break
 
                     self._emit_event({
