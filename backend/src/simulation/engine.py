@@ -21,6 +21,8 @@ from src.economy.trade_system import trade_system
 from src.culture.culture_system import culture_system
 from src.diplomacy.diplomacy_system import diplomacy_system
 from src.governance.leadership_system import leadership_system
+# GOAP Planning System
+from src.planning.goap_system import goap_system, ActionType
 
 logger = logging.getLogger(__name__)
 
