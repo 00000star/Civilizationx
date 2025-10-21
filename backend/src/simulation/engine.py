@@ -216,18 +216,16 @@ class SimulationEngine:
 
     async def _agent_behavior(self, agent: Agent):
         """
-        Execute agent behavior logic (Phase 1 simple version, with Phase 2-3 enhancements).
+        Execute agent behavior logic with GOAP planning.
 
-        In Phase 1, agents have simple needs-based behavior:
-        - If hungry: find and gather food
-        - If tired: rest
-        - If low social: socialize (Phase 2-3 implemented)
-        - Otherwise: wander or idle
+        The agent now uses Goal-Oriented Action Planning (GOAP) to create
+        intelligent multi-step plans to achieve goals.
 
         Phase 2-3 additions:
         - Technology discovery attempts
         - Reflection triggers
         - Trade opportunities
+        - LLM integration for narratives
         """
         # Phase 2-3: Check for reflection (now async with LLM)
         if reflection_engine.should_reflect(agent.id, agent.to_dict()):
@@ -268,7 +266,104 @@ class SimulationEngine:
             agent.current_activity = "socializing"
             return
 
-        # Check critical needs
+        # GOAP Planning: Get next action from planning system
+        # Build agent data with environmental awareness
+        alive_agents = [a for a in self.agents if a.is_alive and a.id != agent.id]
+        nearby_agents = [
+            a for a in alive_agents
+            if self._distance(agent.position, a.position) < 10.0
+        ]
+        nearby_resources = self.world.get_resources_near(agent.position, radius=5.0)
+        
+        agent_data = agent.to_dict()
+        agent_data["near_resources"] = len(nearby_resources) > 0
+        agent_data["near_agents"] = len(nearby_agents) > 0
+        
+        next_action = goap_system.update_agent_plan(agent.id, agent_data)
+        
+        if next_action:
+            # Execute the planned action
+            await self._execute_goap_action(agent, next_action, nearby_resources, nearby_agents)
+        else:
+            # Fallback: Use simple needs-based behavior if GOAP returns nothing
+            await self._simple_behavior_fallback(agent)
+
+    async def _execute_goap_action(self, agent: Agent, action, nearby_resources, nearby_agents):
+        """Execute a GOAP planned action."""
+        
+        if action.action_type == ActionType.GATHER_FOOD:
+            agent.current_activity = "gathering_food"
+            # Find and gather food
+            berry_bushes = [r for r in nearby_resources if r["resource_type"] == "bush"
+                           and not r.get("is_depleted", False)]
+            
+            if berry_bushes:
+                bush = berry_bushes[0]
+                # Move towards bush if not there
+                if self._distance(agent.position, bush["position"]) > 1.0:
+                    agent.set_target_position(bush["position"])
+                else:
+                    # Harvest
+                    harvested = self.world.harvest_resource(bush, amount=1)
+                    if harvested > 0:
+                        agent.gather_resource("berries", harvested)
+                        trade_system.record_activity(agent.id, "gathering_resources", {"berries": harvested})
+                        
+                        memory_manager.create_memory(
+                            agent_id=agent.id,
+                            memory_type="episodic",
+                            content=f"I gathered {harvested} berries from a bush.",
+                            importance_score=3.0,
+                            metadata={"location": agent.position, "activity": "gathering"}
+                        )
+            else:
+                # No food nearby, need to explore first
+                agent.current_activity = "seeking_food"
+                
+        elif action.action_type == ActionType.EAT_FOOD:
+            agent.current_activity = "eating"
+            if agent.inventory.get("berries", 0) > 0:
+                agent.inventory["berries"] -= 1
+                agent.eat_food(20.0)
+                
+                memory_manager.create_memory(
+                    agent_id=agent.id,
+                    memory_type="episodic",
+                    content=f"I ate berries to satisfy my hunger.",
+                    importance_score=4.0,
+                    metadata={"location": agent.position, "activity": "eating"}
+                )
+                
+        elif action.action_type == ActionType.REST:
+            agent.current_activity = "sleeping"
+            agent.rest()
+            agent.target_position = None
+            
+        elif action.action_type == ActionType.SOCIALIZE:
+            agent.current_activity = "socializing"
+            # Social interaction will be handled by _check_social_interactions
+            
+        elif action.action_type == ActionType.EXPLORE:
+            agent.current_activity = "exploring"
+            # Wander to explore
+            if not agent.target_position:
+                # Set random target nearby
+                import random
+                angle = random.random() * 2 * 3.14159
+                distance = 20.0
+                target_x = agent.position[0] + distance * random.random() * (1 if random.random() > 0.5 else -1)
+                target_y = agent.position[1] + distance * random.random() * (1 if random.random() > 0.5 else -1)
+                
+                # Clamp to world bounds
+                target_x = max(0, min(self.world_size - 1, target_x))
+                target_y = max(0, min(self.world_size - 1, target_y))
+                
+                agent.set_target_position((target_x, target_y))
+                
+            trade_system.record_activity(agent.id, "exploring")
+
+    async def _simple_behavior_fallback(self, agent: Agent):
+        """Simple needs-based behavior as fallback when GOAP doesn't provide action."""
         critical_need = agent.get_critical_need()
 
         if critical_need == "hunger":
@@ -279,8 +374,6 @@ class SimulationEngine:
                 # Move towards food
                 agent.set_target_position(food_resource["position"])
                 agent.current_activity = "seeking_food"
-                
-                # Phase 2-3: Record activity for trade system
                 trade_system.record_activity(agent.id, "gathering_resources")
 
             elif agent.target_position is None:
@@ -295,16 +388,13 @@ class SimulationEngine:
                     harvested = self.world.harvest_resource(bush, amount=1)
                     if harvested > 0:
                         agent.gather_resource("berries", harvested)
-                        
-                        # Phase 2-3: Record production
                         trade_system.record_activity(agent.id, "gathering_resources", {"berries": harvested})
                         
                         # Eat immediately when hungry
                         if agent.inventory.get("berries", 0) > 0:
                             agent.inventory["berries"] -= 1
-                            agent.eat_food(20.0)  # Berries restore 20 hunger
+                            agent.eat_food(20.0)
                             
-                            # Phase 2-3: Create memory
                             memory_manager.create_memory(
                                 agent_id=agent.id,
                                 memory_type="episodic",
@@ -320,12 +410,12 @@ class SimulationEngine:
                 agent.target_position = None
 
         elif critical_need == "social":
-            # Phase 2-3: Seek social interaction
+            # Seek social interaction
             agent.current_activity = "seeking_social"
             # This will be handled by _check_social_interactions
 
         else:
-            # No critical needs - Phase 2-3: check for trade opportunities
+            # No critical needs - check for trade opportunities
             if random.random() < 0.05:  # 5% chance per tick
                 self._check_trade_opportunity(agent)
             
@@ -622,3 +712,9 @@ class SimulationEngine:
         """Emit simulation event to callbacks."""
         for callback in self.on_event_callbacks:
             asyncio.create_task(callback(event))
+
+    def _distance(self, pos1: tuple, pos2: tuple) -> float:
+        """Calculate distance between two positions."""
+        dx = pos1[0] - pos2[0]
+        dy = pos1[1] - pos2[1]
+        return (dx * dx + dy * dy) ** 0.5
