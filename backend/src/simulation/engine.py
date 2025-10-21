@@ -2,12 +2,25 @@
 import asyncio
 import logging
 import time
+import random
 from typing import List, Dict, Optional
 from datetime import datetime
 
 from src.agents.agent import Agent
 from src.world.world_state import WorldState
 from config import settings
+
+# Phase 2-3 Systems
+from src.agents.memory.memory_manager import memory_manager
+from src.agents.memory.reflection import reflection_engine
+from src.technology.discovery_engine import discovery_engine
+from src.social.relationship_manager import relationship_manager
+from src.social.conversation_engine import conversation_engine
+from src.settlements.settlement_detector import settlement_detector
+from src.economy.trade_system import trade_system
+from src.culture.culture_system import culture_system
+from src.diplomacy.diplomacy_system import diplomacy_system
+from src.governance.leadership_system import leadership_system
 
 logger = logging.getLogger(__name__)
 
@@ -45,6 +58,10 @@ class SimulationEngine:
         # Performance tracking
         self.last_tick_time = 0.0
         self.tick_duration = 0.0
+
+        # Phase 2-3: All systems are global singletons, no initialization needed
+        # They're imported and ready to use
+        logger.info("All Phase 2-3 systems loaded")
 
     async def initialize(self):
         """Initialize simulation (generate world, etc.)."""
@@ -158,6 +175,23 @@ class SimulationEngine:
         # Update all agents
         await self._update_agents()
 
+        # Phase 2-3: Check for social interactions
+        if self.tick_count % 10 == 0:  # Every 10 ticks
+            await self._check_social_interactions()
+
+        # Phase 2-3: Check for settlement formation
+        if self.tick_count % 50 == 0:  # Every 50 ticks
+            self._check_settlement_formation()
+
+        # Phase 2-3: Update settlements
+        if self.tick_count % 20 == 0:  # Every 20 ticks
+            self._update_settlements()
+
+        # Phase 2-3: Decay relationships and diplomacy
+        if self.tick_count % 100 == 0:  # Every 100 ticks
+            relationship_manager.decay_relationships(hours_elapsed=1.0)
+            diplomacy_system.decay_relationships(hours_elapsed=1.0)
+
         # Emit tick event
         for callback in self.on_tick_callbacks:
             await callback(self.get_simulation_state())
@@ -180,14 +214,48 @@ class SimulationEngine:
 
     async def _agent_behavior(self, agent: Agent):
         """
-        Execute agent behavior logic (Phase 1 simple version).
+        Execute agent behavior logic (Phase 1 simple version, with Phase 2-3 enhancements).
 
         In Phase 1, agents have simple needs-based behavior:
         - If hungry: find and gather food
         - If tired: rest
-        - If low social: socialize (not implemented yet)
+        - If low social: socialize (Phase 2-3 implemented)
         - Otherwise: wander or idle
+
+        Phase 2-3 additions:
+        - Technology discovery attempts
+        - Reflection triggers
+        - Trade opportunities
         """
+        # Phase 2-3: Check for reflection
+        if reflection_engine.should_reflect(agent.id, agent.to_dict()):
+            reflection_engine.perform_reflection(agent.id, agent.name)
+
+        # Phase 2-3: Check for technology discovery
+        simulation_days = (self.simulation_time - agent.birth_time).days
+        discovered_tech = discovery_engine.check_for_discovery(
+            agent.id,
+            agent.name,
+            agent.current_activity,
+            simulation_days
+        )
+
+        if discovered_tech:
+            # Technology discovered! Create high-importance memory
+            self._emit_event({
+                "type": "technology_discovered",
+                "agent_id": agent.id,
+                "agent_name": agent.name,
+                "technology": discovered_tech["display_name"],
+                "timestamp": self.simulation_time.isoformat()
+            })
+
+        # Phase 2-3: Check if agent is in conversation
+        if conversation_engine.is_in_conversation(agent.id):
+            # Don't interrupt ongoing conversations
+            agent.current_activity = "socializing"
+            return
+
         # Check critical needs
         critical_need = agent.get_critical_need()
 
@@ -199,6 +267,9 @@ class SimulationEngine:
                 # Move towards food
                 agent.set_target_position(food_resource["position"])
                 agent.current_activity = "seeking_food"
+                
+                # Phase 2-3: Record activity for trade system
+                trade_system.record_activity(agent.id, "gathering_resources")
 
             elif agent.target_position is None:
                 # Check if at food resource
@@ -212,10 +283,23 @@ class SimulationEngine:
                     harvested = self.world.harvest_resource(bush, amount=1)
                     if harvested > 0:
                         agent.gather_resource("berries", harvested)
+                        
+                        # Phase 2-3: Record production
+                        trade_system.record_activity(agent.id, "gathering_resources", {"berries": harvested})
+                        
                         # Eat immediately when hungry
                         if agent.inventory.get("berries", 0) > 0:
                             agent.inventory["berries"] -= 1
                             agent.eat_food(20.0)  # Berries restore 20 hunger
+                            
+                            # Phase 2-3: Create memory
+                            memory_manager.create_memory(
+                                agent_id=agent.id,
+                                memory_type="episodic",
+                                content=f"I gathered and ate berries to satisfy my hunger.",
+                                importance_score=4.0,
+                                metadata={"location": agent.position, "activity": "eating"}
+                            )
 
         elif critical_need == "energy":
             # Rest to restore energy
@@ -223,10 +307,214 @@ class SimulationEngine:
                 agent.rest()
                 agent.target_position = None
 
+        elif critical_need == "social":
+            # Phase 2-3: Seek social interaction
+            agent.current_activity = "seeking_social"
+            # This will be handled by _check_social_interactions
+
         else:
-            # No critical needs - wander or idle
+            # No critical needs - Phase 2-3: check for trade opportunities
+            if random.random() < 0.05:  # 5% chance per tick
+                self._check_trade_opportunity(agent)
+            
+            # Otherwise wander or idle
             if agent.current_activity in ["seeking_food", "sleeping"]:
                 agent.current_activity = "idle"
+
+    async def _check_social_interactions(self):
+        """Phase 2-3: Check for social interactions between nearby agents."""
+        alive_agents = [a for a in self.agents if a.is_alive]
+
+        for i, agent_a in enumerate(alive_agents):
+            # Skip if already in conversation
+            if conversation_engine.is_in_conversation(agent_a.id):
+                continue
+
+            # Find nearby agents
+            nearby = relationship_manager.get_nearby_agents_for_interaction(
+                agent_a.id,
+                [a.to_dict() for a in alive_agents],
+                radius=5.0
+            )
+
+            if not nearby:
+                continue
+
+            # Pick a random nearby agent
+            agent_b_id = random.choice(nearby)
+            agent_b = next((a for a in alive_agents if a.id == agent_b_id), None)
+
+            if not agent_b or conversation_engine.is_in_conversation(agent_b.id):
+                continue
+
+            # Check if they can start conversation
+            if conversation_engine.can_start_conversation(agent_a.id, agent_b.id):
+                # Initiate conversation
+                context = {
+                    "has_critical_need": agent_a.get_critical_need() is not None
+                }
+
+                conv = conversation_engine.initiate_conversation(
+                    agent_a.id,
+                    agent_a.name,
+                    agent_b.id,
+                    agent_b.name,
+                    context
+                )
+
+                if conv:
+                    # Continue conversation for a few turns
+                    for _ in range(random.randint(2, 4)):
+                        if not conversation_engine.continue_conversation(
+                            conv.id,
+                            agent_a.id,
+                            agent_a.name,
+                            agent_b.id,
+                            agent_b.name
+                        ):
+                            break
+
+                    self._emit_event({
+                        "type": "conversation",
+                        "participants": [agent_a.name, agent_b.name],
+                        "topic": conv.topic,
+                        "timestamp": self.simulation_time.isoformat()
+                    })
+
+            # Only one conversation per check to avoid overwhelming
+            break
+
+    def _check_settlement_formation(self):
+        """Phase 2-3: Check for settlement formation."""
+        agent_data = [a.to_dict() for a in self.agents]
+        
+        settlement_detector.check_for_settlement_formation(
+            agents=agent_data,
+            min_group_size=3,
+            proximity_radius=15.0,
+            stability_hours=0.5  # Faster for testing
+        )
+
+        # Check for new settlements
+        settlements = settlement_detector.get_all_settlements()
+        if settlements:
+            for settlement in settlements:
+                # Create settlement culture
+                culture_system.create_or_get_culture(settlement.id, settlement.name)
+
+                # Assign agents to culture
+                for agent_id in settlement.member_ids:
+                    culture_system.assign_agent_to_culture(agent_id, settlement.id)
+
+                # Check for leadership emergence
+                leadership_system.update_leadership_scores(
+                    settlement.id,
+                    [a.to_dict() for a in self.agents if a.id in settlement.member_ids],
+                    settlement.to_dict()
+                )
+
+                leadership_system.check_for_leadership_emergence(
+                    settlement.id,
+                    settlement.name,
+                    settlement.population,
+                    (datetime.now() - settlement.founded_at).days
+                )
+
+    def _update_settlements(self):
+        """Phase 2-3: Update existing settlements."""
+        agent_data = [a.to_dict() for a in self.agents]
+        
+        # Update settlement membership
+        settlement_detector.update_settlements(agent_data)
+
+        # Update cultures
+        settlements = settlement_detector.get_all_settlements()
+        for settlement in settlements:
+            # Check for cultural trait development
+            culture_system.check_and_develop_traits(
+                settlement.id,
+                settlement.to_dict(),
+                [a.to_dict() for a in self.agents if a.id in settlement.member_ids]
+            )
+
+            # Update leadership approval ratings
+            leadership_system.update_approval_ratings(
+                settlement.id,
+                settlement_prosperity=50.0,  # Placeholder
+                conflicts=0,
+                cooperation=1
+            )
+
+    def _check_trade_opportunity(self, agent: Agent):
+        """Phase 2-3: Check if agent should seek trade."""
+        trade_need = trade_system.evaluate_trade_need(
+            agent.id,
+            agent.inventory,
+            agent.needs.to_dict()
+        )
+
+        if not trade_need:
+            return
+
+        offering_items, requesting_items = trade_need
+
+        # Find nearby agents
+        alive_agents = [a for a in self.agents if a.is_alive and a.id != agent.id]
+        nearby = relationship_manager.get_nearby_agents_for_interaction(
+            agent.id,
+            [a.to_dict() for a in alive_agents],
+            radius=10.0
+        )
+
+        if not nearby:
+            return
+
+        # Create trade offer to random nearby agent
+        target_id = random.choice(nearby)
+        target_agent = next((a for a in alive_agents if a.id == target_id), None)
+
+        if not target_agent:
+            return
+
+        # Create trade offer
+        offer = trade_system.create_trade_offer(
+            agent.id,
+            target_id,
+            offering_items,
+            requesting_items
+        )
+
+        # Evaluate if target accepts
+        rel = relationship_manager.get_relationship(agent.id, target_id)
+        relationship_score = rel.relationship_score if rel else 0.0
+
+        accepts = trade_system.evaluate_trade_offer(
+            offer.id,
+            target_agent.inventory,
+            target_agent.needs.to_dict(),
+            relationship_score
+        )
+
+        if accepts:
+            # Execute trade
+            success = trade_system.execute_trade(
+                offer.id,
+                agent.inventory,
+                target_agent.inventory
+            )
+
+            if success:
+                # Positive relationship impact
+                relationship_manager.handle_positive_interaction(agent.id, target_id, "cooperation")
+
+                self._emit_event({
+                    "type": "trade_completed",
+                    "agents": [agent.name, target_agent.name],
+                    "timestamp": self.simulation_time.isoformat()
+                })
+        else:
+            # Trade rejected
+            trade_system.reject_trade(offer.id)
 
     def set_simulation_speed(self, speed: float):
         """Set simulation speed multiplier."""
@@ -235,6 +523,8 @@ class SimulationEngine:
 
     def get_simulation_state(self) -> Dict:
         """Get current simulation state."""
+        settlements = settlement_detector.get_all_settlements()
+        
         return {
             "is_running": self.is_running,
             "simulation_speed": self.simulation_speed,
@@ -244,6 +534,15 @@ class SimulationEngine:
             "alive_agent_count": sum(1 for a in self.agents if a.is_alive),
             "world_summary": self.world.get_world_summary(),
             "tick_duration": self.tick_duration,
+            # Phase 2-3 additions
+            "settlement_count": len(settlements),
+            "total_technologies_known": len(set(
+                tech 
+                for agent in self.agents 
+                for tech in discovery_engine.get_agent_technologies(agent.id)
+            )),
+            "active_conversations": len(conversation_engine.active_conversations),
+            "trade_statistics": trade_system.get_trade_statistics(),
         }
 
     def get_agents_state(self) -> List[Dict]:
