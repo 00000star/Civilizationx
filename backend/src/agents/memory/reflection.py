@@ -1,8 +1,10 @@
 """Reflection engine for synthesizing insights from memories."""
 import logging
+import asyncio
 from typing import List, Dict
 from datetime import datetime, timedelta
 from .memory_manager import memory_manager
+from src.llm.llm_service import llm_service
 
 logger = logging.getLogger(__name__)
 
@@ -55,7 +57,7 @@ class ReflectionEngine:
 
         return False
 
-    def perform_reflection(self, agent_id: str, agent_name: str) -> List[Dict]:
+    async def perform_reflection(self, agent_id: str, agent_name: str) -> List[Dict]:
         """
         Perform reflection for an agent, creating semantic memories from patterns.
 
@@ -66,7 +68,7 @@ class ReflectionEngine:
         Returns:
             List of generated semantic memories (insights)
         """
-        logger.info(f"Agent {agent_name} is reflecting...")
+        logger.info(f"💭 Agent {agent_name} is reflecting...")
 
         last_reflection_time = self.last_reflection.get(agent_id, datetime.now() - timedelta(hours=24))
 
@@ -83,8 +85,8 @@ class ReflectionEngine:
             logger.info(f"Agent {agent_name} has no significant memories to reflect on")
             return []
 
-        # Simple pattern recognition (in real implementation, would use LLM)
-        insights = self._extract_insights(agent_id, agent_name, significant_memories)
+        # Extract insights using LLM or pattern recognition
+        insights = await self._extract_insights(agent_id, agent_name, significant_memories)
 
         # Create semantic memories from insights
         semantic_memories = []
@@ -94,22 +96,61 @@ class ReflectionEngine:
                 memory_type="semantic",
                 content=insight["content"],
                 importance_score=insight["importance"],
-                metadata={"reflection": True, "evidence_count": insight["evidence_count"]}
+                metadata={"reflection": True, "evidence_count": insight.get("evidence_count", 0)}
             )
             semantic_memories.append(memory)
 
         # Update last reflection time
         self.last_reflection[agent_id] = datetime.now()
 
-        logger.info(f"Agent {agent_name} reflected and generated {len(semantic_memories)} insights")
+        logger.info(f"✓ Agent {agent_name} reflected and generated {len(semantic_memories)} insights")
         return semantic_memories
 
-    def _extract_insights(self, agent_id: str, agent_name: str, memories: List[Dict]) -> List[Dict]:
+    async def _extract_insights(self, agent_id: str, agent_name: str, memories: List[Dict]) -> List[Dict]:
         """
-        Extract insights from memories using pattern recognition.
+        Extract insights from memories using LLM or pattern recognition.
 
-        In full implementation, this would use LLM (Claude) for complex reasoning.
-        For now, using simple heuristics.
+        Uses LLM (Claude/GPT) when available for complex reasoning.
+        Falls back to heuristics otherwise.
+        """
+        # Try LLM-based insight generation first
+        if llm_service.is_available():
+            try:
+                agent_context = {
+                    "name": agent_name,
+                    "memories": memories
+                }
+
+                insight_texts = await llm_service.generate_reflection_insights(
+                    agent_name=agent_name,
+                    agent_context=agent_context,
+                    significant_memories=memories,
+                    max_insights=3
+                )
+
+                # Convert to insight format
+                insights = []
+                for i, insight_text in enumerate(insight_texts):
+                    insights.append({
+                        "content": insight_text,
+                        "importance": 7.0 - (i * 0.5),  # Decreasing importance
+                        "evidence_count": len(memories)
+                    })
+
+                if insights:
+                    logger.info(f"Generated {len(insights)} LLM-based insights for {agent_name}")
+                    return insights
+
+            except Exception as e:
+                logger.error(f"LLM reflection failed for {agent_name}: {e}")
+                # Fall through to pattern-based fallback
+
+        # Fallback: Pattern-based insight generation
+        return self._pattern_based_insights(memories)
+
+    def _pattern_based_insights(self, memories: List[Dict]) -> List[Dict]:
+        """
+        Generate insights using simple pattern recognition (fallback method).
         """
         insights = []
 
