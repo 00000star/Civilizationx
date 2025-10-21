@@ -1,9 +1,11 @@
 """Technology discovery engine."""
 import logging
 import random
+import asyncio
 from typing import List, Dict, Optional
 from .tech_definitions import TechnologyDefinitions
 from src.agents.memory.memory_manager import memory_manager
+from src.llm.llm_service import llm_service
 
 logger = logging.getLogger(__name__)
 
@@ -18,12 +20,13 @@ class DiscoveryEngine:
         # Track discovery attempts: agent_id -> tech_name -> attempt_count
         self.discovery_attempts: Dict[str, Dict[str, int]] = {}
 
-    def check_for_discovery(
+    async def check_for_discovery(
         self,
         agent_id: str,
         agent_name: str,
         current_activity: str,
-        simulation_days: int
+        simulation_days: int,
+        agent_context: Optional[Dict] = None
     ) -> Optional[Dict]:
         """
         Check if agent discovers a new technology.
@@ -33,6 +36,7 @@ class DiscoveryEngine:
             agent_name: Agent's name
             current_activity: What agent is currently doing
             simulation_days: Days since agent was born
+            agent_context: Optional agent context for LLM generation
 
         Returns:
             Discovered technology dict or None
@@ -48,18 +52,19 @@ class DiscoveryEngine:
 
         # Check each technology for discovery
         for tech in discoverable:
-            if self._attempt_discovery(agent_id, agent_name, tech, current_activity, simulation_days):
+            if await self._attempt_discovery(agent_id, agent_name, tech, current_activity, simulation_days, agent_context):
                 return tech
 
         return None
 
-    def _attempt_discovery(
+    async def _attempt_discovery(
         self,
         agent_id: str,
         agent_name: str,
         tech: Dict,
         current_activity: str,
-        simulation_days: int
+        simulation_days: int,
+        agent_context: Optional[Dict] = None
     ) -> bool:
         """Attempt to discover a specific technology."""
         conditions = tech.get("discovery_conditions", {})
@@ -106,12 +111,12 @@ class DiscoveryEngine:
         # Roll for discovery
         if random.random() < final_prob:
             logger.info(f"🎉 Agent {agent_name} discovered {tech['display_name']}!")
-            self._register_discovery(agent_id, agent_name, tech)
+            await self._register_discovery(agent_id, agent_name, tech, agent_context)
             return True
 
         return False
 
-    def _register_discovery(self, agent_id: str, agent_name: str, tech: Dict):
+    async def _register_discovery(self, agent_id: str, agent_name: str, tech: Dict, agent_context: Optional[Dict] = None):
         """Register a successful discovery."""
         tech_name = tech["tech_name"]
 
@@ -120,8 +125,10 @@ class DiscoveryEngine:
             self.agent_knowledge[agent_id] = []
         self.agent_knowledge[agent_id].append(tech_name)
 
+        # Generate discovery narrative (LLM or fallback)
+        discovery_narrative = await self._generate_discovery_narrative(agent_name, tech, agent_context)
+        
         # Create high-importance memory
-        discovery_narrative = self._generate_discovery_narrative(agent_name, tech)
         memory_manager.create_memory(
             agent_id=agent_id,
             memory_type="episodic",
@@ -136,8 +143,24 @@ class DiscoveryEngine:
 
         logger.info(f"Agent {agent_name} now knows: {', '.join(self.agent_knowledge[agent_id])}")
 
-    def _generate_discovery_narrative(self, agent_name: str, tech: Dict) -> str:
+    async def _generate_discovery_narrative(self, agent_name: str, tech: Dict, agent_context: Optional[Dict] = None) -> str:
         """Generate a narrative for the discovery moment."""
+        # Try LLM generation first
+        if llm_service.is_available() and agent_context:
+            try:
+                narrative = await llm_service.generate_discovery_narrative(
+                    agent_name=agent_name,
+                    technology_name=tech["display_name"],
+                    technology_description=tech["description"],
+                    agent_context=agent_context
+                )
+                if narrative:
+                    return narrative
+            except Exception as e:
+                logger.error(f"LLM discovery narrative failed: {e}")
+                # Fall through to hardcoded fallback
+
+        # Fallback: Hardcoded narratives
         narratives = {
             "fire": f"Through repeated attempts, I finally created fire by rubbing sticks together! The warmth and light will change everything.",
             "stone_tools": f"By striking stones together, I discovered I can create sharp edges. These tools will make gathering much easier!",
