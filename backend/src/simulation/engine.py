@@ -197,6 +197,10 @@ class SimulationEngine:
             relationship_manager.decay_relationships(hours_elapsed=1.0)
             diplomacy_system.decay_relationships(hours_elapsed=1.0)
 
+        # Conflict mechanics: Check for conflicts periodically
+        if self.tick_count % 150 == 0:  # Every 150 ticks
+            await self._check_for_conflicts()
+
         # Emit tick event
         for callback in self.on_tick_callbacks:
             await callback(self.get_simulation_state())
