@@ -643,6 +643,278 @@ class SimulationEngine:
             # Trade rejected
             trade_system.reject_trade(offer.id)
 
+    async def _check_for_conflicts(self):
+        """
+        Check for and resolve conflicts between agents and settlements.
+        
+        Conflict types:
+        - Individual duels: Hostile agents (enemies) fighting
+        - Settlement raids: Small-scale attacks between hostile settlements
+        - Wars: Large-scale conflicts between settlements
+        """
+        alive_agents = [a for a in self.agents if a.is_alive]
+        
+        # Check for individual duels (hostile agents fighting)
+        await self._check_individual_conflicts(alive_agents)
+        
+        # Check for settlement-level conflicts
+        await self._check_settlement_conflicts(alive_agents)
+
+    async def _check_individual_conflicts(self, alive_agents: List[Agent]):
+        """Check for conflicts between individual agents with hostile relationships."""
+        for i, agent_a in enumerate(alive_agents):
+            # Find nearby hostile agents
+            nearby_agents = [
+                a for a in alive_agents
+                if a.id != agent_a.id and self._distance(agent_a.position, a.position) < 5.0
+            ]
+            
+            for agent_b in nearby_agents:
+                rel = relationship_manager.get_relationship(agent_a.id, agent_b.id)
+                
+                # Check if relationship is hostile (enemy)
+                if rel and rel.relationship_type == "enemy":
+                    # 10% chance per check for enemies to fight
+                    if random.random() < 0.1:
+                        logger.info(f"Duel initiated between {agent_a.name} and {agent_b.name}")
+                        
+                        # Create combat participants
+                        participant_a = CombatParticipant(
+                            id=agent_a.id,
+                            name=agent_a.name,
+                            combat_strength=50.0,  # Base strength
+                            health=agent_a.needs.hunger,  # Use hunger as health proxy
+                            morale=100.0 - agent_a.needs.social,  # Inverse of social need
+                            technologies=discovery_engine.get_agent_technologies(agent_a.id),
+                            is_defender=False
+                        )
+                        
+                        participant_b = CombatParticipant(
+                            id=agent_b.id,
+                            name=agent_b.name,
+                            combat_strength=50.0,
+                            health=agent_b.needs.hunger,
+                            morale=100.0 - agent_b.needs.social,
+                            technologies=discovery_engine.get_agent_technologies(agent_b.id),
+                            is_defender=True  # Defender gets bonus
+                        )
+                        
+                        # Resolve duel
+                        result = combat_system.resolve_duel(
+                            participant_a,
+                            participant_b,
+                            allow_death=True
+                        )
+                        
+                        # Apply results
+                        victor_id = result.victor_ids[0] if result.victor_ids else None
+                        defeated_id = result.defeated_ids[0] if result.defeated_ids else None
+                        
+                        # Apply morale impacts
+                        for agent_id, morale_change in result.morale_impact.items():
+                            agent = next((a for a in alive_agents if a.id == agent_id), None)
+                            if agent:
+                                # Adjust social need based on morale (inverse relationship)
+                                agent.needs.social = max(0, min(100, agent.needs.social - morale_change))
+                        
+                        # Handle casualties
+                        if agent_a.id in result.casualties:
+                            agent_a.is_alive = False
+                            logger.info(f"{agent_a.name} was killed in duel")
+                            
+                            self._emit_event({
+                                "type": "agent_died",
+                                "agent_id": agent_a.id,
+                                "agent_name": agent_a.name,
+                                "cause": "combat",
+                                "timestamp": self.simulation_time.isoformat()
+                            })
+                        
+                        if agent_b.id in result.casualties:
+                            agent_b.is_alive = False
+                            logger.info(f"{agent_b.name} was killed in duel")
+                            
+                            self._emit_event({
+                                "type": "agent_died",
+                                "agent_id": agent_b.id,
+                                "agent_name": agent_b.name,
+                                "cause": "combat",
+                                "timestamp": self.simulation_time.isoformat()
+                            })
+                        
+                        # Emit battle event
+                        self._emit_event({
+                            "type": "battle",
+                            "conflict_type": "duel",
+                            "attacker": agent_a.name,
+                            "defender": agent_b.name,
+                            "victor": next((a.name for a in alive_agents if a.id == victor_id), "Unknown") if victor_id else "None",
+                            "casualties": len(result.casualties),
+                            "timestamp": self.simulation_time.isoformat()
+                        })
+                        
+                        # Create memories for survivors
+                        for agent_id in result.survivors:
+                            agent = next((a for a in alive_agents if a.id == agent_id), None)
+                            if agent:
+                                outcome = "won" if agent_id == victor_id else "lost"
+                                memory_manager.create_memory(
+                                    agent_id=agent.id,
+                                    memory_type="episodic",
+                                    content=f"I fought in a duel against {agent_b.name if agent.id == agent_a.id else agent_a.name} and {outcome}.",
+                                    importance_score=9.0,
+                                    metadata={"location": agent.position, "activity": "combat", "outcome": outcome}
+                                )
+                        
+                        # Only process one duel per check
+                        return
+
+    async def _check_settlement_conflicts(self, alive_agents: List[Agent]):
+        """Check for conflicts between settlements."""
+        settlements = settlement_detector.get_all_settlements()
+        
+        if len(settlements) < 2:
+            return  # Need at least 2 settlements for conflict
+        
+        for i, settlement_a in enumerate(settlements):
+            for j, settlement_b in enumerate(settlements[i+1:], start=i+1):
+                # Check diplomatic relationship
+                relationship = diplomacy_system.get_relationship(settlement_a.id, settlement_b.id)
+                
+                if not relationship or relationship.status not in ["hostile", "war"]:
+                    continue
+                
+                # Check for active war
+                active_wars = [w for w in war_system.active_wars.values() 
+                              if (w.aggressor_id == settlement_a.id and w.defender_id == settlement_b.id) or
+                                 (w.aggressor_id == settlement_b.id and w.defender_id == settlement_a.id)]
+                
+                if relationship.status == "hostile" and not active_wars:
+                    # 5% chance to escalate to war
+                    if random.random() < 0.05:
+                        logger.info(f"War declared between {settlement_a.name} and {settlement_b.name}")
+                        
+                        war = war_system.declare_war(
+                            aggressor_id=settlement_a.id,
+                            aggressor_name=settlement_a.name,
+                            defender_id=settlement_b.id,
+                            defender_name=settlement_b.name,
+                            war_goal=WarGoal.CONQUEST,
+                            casus_belli="Hostile relations"
+                        )
+                        
+                        self._emit_event({
+                            "type": "war_declared",
+                            "aggressor": settlement_a.name,
+                            "defender": settlement_b.name,
+                            "war_goal": war.war_goal.value,
+                            "timestamp": self.simulation_time.isoformat()
+                        })
+                
+                elif relationship.status == "war" and active_wars:
+                    # War is active, 10% chance per check for a battle
+                    if random.random() < 0.1:
+                        war = active_wars[0]
+                        logger.info(f"Battle in war between {settlement_a.name} and {settlement_b.name}")
+                        
+                        # Get agents from each settlement
+                        settlement_a_agents = [a for a in alive_agents if a.id in settlement_a.member_ids]
+                        settlement_b_agents = [a for a in alive_agents if a.id in settlement_b.member_ids]
+                        
+                        if not settlement_a_agents or not settlement_b_agents:
+                            continue
+                        
+                        # Select random sample for battle (up to 5 from each side)
+                        import random
+                        battle_size = min(5, len(settlement_a_agents), len(settlement_b_agents))
+                        attackers_agents = random.sample(settlement_a_agents, min(battle_size, len(settlement_a_agents)))
+                        defenders_agents = random.sample(settlement_b_agents, min(battle_size, len(settlement_b_agents)))
+                        
+                        # Create combat participants
+                        attackers = [
+                            CombatParticipant(
+                                id=agent.id,
+                                name=agent.name,
+                                combat_strength=50.0,
+                                health=agent.needs.hunger,
+                                morale=100.0 - agent.needs.social,
+                                technologies=discovery_engine.get_agent_technologies(agent.id),
+                                is_defender=False
+                            )
+                            for agent in attackers_agents
+                        ]
+                        
+                        defenders = [
+                            CombatParticipant(
+                                id=agent.id,
+                                name=agent.name,
+                                combat_strength=50.0,
+                                health=agent.needs.hunger,
+                                morale=100.0 - agent.needs.social,
+                                technologies=discovery_engine.get_agent_technologies(agent.id),
+                                is_defender=True
+                            )
+                            for agent in defenders_agents
+                        ]
+                        
+                        # Resolve battle
+                        result = combat_system.resolve_group_combat(
+                            attackers,
+                            defenders,
+                            ConflictType.BATTLE
+                        )
+                        
+                        # Update war based on result
+                        victor_settlement_id = settlement_a.id if result.victor_ids and result.victor_ids[0] in [a.id for a in attackers_agents] else settlement_b.id
+                        defeated_settlement_id = settlement_b.id if victor_settlement_id == settlement_a.id else settlement_a.id
+                        
+                        war_system.process_battle_result(
+                            war.war_id,
+                            victor_settlement_id,
+                            defeated_settlement_id,
+                            len(result.casualties)
+                        )
+                        
+                        # Handle casualties
+                        for casualty_id in result.casualties:
+                            agent = next((a for a in alive_agents if a.id == casualty_id), None)
+                            if agent:
+                                agent.is_alive = False
+                                logger.info(f"{agent.name} was killed in battle")
+                                
+                                self._emit_event({
+                                    "type": "agent_died",
+                                    "agent_id": agent.id,
+                                    "agent_name": agent.name,
+                                    "cause": "war",
+                                    "timestamp": self.simulation_time.isoformat()
+                                })
+                        
+                        # Emit battle event
+                        self._emit_event({
+                            "type": "battle",
+                            "conflict_type": "war_battle",
+                            "attacker": settlement_a.name,
+                            "defender": settlement_b.name,
+                            "victor": settlement_a.name if victor_settlement_id == settlement_a.id else settlement_b.name,
+                            "participants": len(attackers) + len(defenders),
+                            "casualties": len(result.casualties),
+                            "war_score": war.war_score,
+                            "timestamp": self.simulation_time.isoformat()
+                        })
+                        
+                        # Check if war should conclude
+                        conclusion = war_system.check_war_conclusion(war.war_id)
+                        if conclusion:
+                            self._emit_event({
+                                "type": "war_concluded",
+                                "war_id": war.war_id,
+                                "outcome": conclusion,
+                                "aggressor": settlement_a.name,
+                                "defender": settlement_b.name,
+                                "timestamp": self.simulation_time.isoformat()
+                            })
+
     def set_simulation_speed(self, speed: float):
         """Set simulation speed multiplier."""
         self.simulation_speed = max(0.1, min(10.0, speed))
