@@ -1,0 +1,197 @@
+{
+  "id": "printing-press-movable-type",
+  "name": "Printing Press (Movable Type)",
+  "tagline": "Mechanised impression of reusable type — mass duplication of text with repeatable fidelity",
+  "category": "communication",
+  "era": "medieval",
+  "difficulty": 3,
+  "prerequisites": [
+    "paper-and-ink-media",
+    "steel-production",
+    "basic-hand-tools"
+  ],
+  "unlocks": [
+    "electrical-telegraph"
+  ],
+  "problem": "Scriptoria copied manuscripts slowly; errors compounded; cost limited books to institutions. Movable type cuts marginal cost per page after the first composition: each character is a durable punch, cast in alloy, arranged into a forme, inked, and pressed uniformly.\n\nThe engineering problems are mechanical: even impression across a wide platen, ink viscosity that neither dries on type nor bleeds on paper, and alloy hardness that survives millions of impacts. The information problem is workflow: justification, proofing, and distribution of corrected editions.\n\nPrinting did not invent text — it industrialised fidelity and speed, enabling law, science, and heresy to travel faster than censors could rewrite by hand.",
+  "overview": "Punches cut in steel are struck into copper matrices; type is cast in lead-tin-antimony alloy with a shoulder for locking. Compositors set lines in composing sticks; furniture and quoins lock the chase. The press supplies gradual pressure via screw or later lever and toggle mechanisms; platen or cylinder designs evolve toward rotary newspaper presses.\n\nOil-based inks coat metal type better than water-based on greasy fingers — formulation becomes chemistry. Paper must withstand squeeze without embossing through; dampening helps some processes.\n\nPost-Gutenberg evolution added stereotype plates, linotype slug casting, and offset lithography — but movable type is the conceptual fork between copying and manufacturing text.\n\nDigital fonts are coordinate lists — intellectual descendants of the punchcutter’s file.",
+  "principles": [
+    {
+      "name": "Viscosity and tack",
+      "explanation": "Ink must split cleanly between type surface and paper without picking fibres — temperature and pigment load tune rheology."
+    },
+    {
+      "name": "Hardness matching",
+      "explanation": "Type metal softer than punch steel but harder than paper contaminants — otherwise letters mushroom."
+    },
+    {
+      "name": "Impression pressure distribution",
+      "explanation": "Platen parallelism and packing paper shims equalise density — else outer lines fade."
+    },
+    {
+      "name": "Justification geometry",
+      "explanation": "Word spacing and thin spaces absorb line-length slack — hyphenation rules are hyphenation algorithms."
+    }
+  ],
+  "components": [
+    {
+      "id": "type",
+      "name": "Movable type sorts",
+      "function": "Carries reversed letter relief",
+      "position": "Locked in chase",
+      "madeFrom": "Pb-Sn-Sb alloy"
+    },
+    {
+      "id": "chase",
+      "name": "Chase and furniture",
+      "function": "Holds composed forme under pressure",
+      "position": "On press bed",
+      "madeFrom": "Hardwood or metal"
+    },
+    {
+      "id": "press",
+      "name": "Press mechanism",
+      "function": "Applies controlled normal force",
+      "position": "Workshop floor",
+      "madeFrom": "Iron screw, later lever systems"
+    },
+    {
+      "id": "ink",
+      "name": "Printing ink",
+      "function": "Transfers pigment under shear",
+      "position": "Brayer or roller",
+      "madeFrom": "Linseed oil, carbon pigment historically"
+    },
+    {
+      "id": "composition",
+      "name": "Composing stick and cases",
+      "function": "Human interface for setting lines",
+      "position": "Compositors bench",
+      "madeFrom": "Wood, divided type cases"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Type metal",
+      "purpose": "Casts sharp yet tough type",
+      "earthLocations": [
+        "Lead smelters",
+        "tin trade routes"
+      ],
+      "spaceAlternatives": "3D-printed polymer type for short runs — wears fast",
+      "processingRequired": "Remelt with antimony adjustment"
+    },
+    {
+      "name": "Punch steel",
+      "purpose": "Cut master letters",
+      "earthLocations": [
+        "Tool steel supply"
+      ],
+      "spaceAlternatives": "Electrical discharge machining later",
+      "processingRequired": "Harden and temper; polish striking face"
+    },
+    {
+      "name": "Paper stock",
+      "purpose": "Receives impression",
+      "earthLocations": [
+        "Paper mills"
+      ],
+      "spaceAlternatives": "Rag paper historically",
+      "processingRequired": "Grain direction aligned to press"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Cut and justify punches",
+      "description": "File counters; proof on smoke-blackened paper; strike matrix.",
+      "prerequisiteTools": [
+        "punch vise",
+        "10x loupe"
+      ],
+      "warningNote": "Lead dust — ventilation and hygiene"
+    },
+    {
+      "order": 2,
+      "title": "Cast type to height",
+      "description": "Measure type height to press standard; shave feet if needed.",
+      "prerequisiteTools": [
+        "type height gauge"
+      ],
+      "warningNote": "Mixed heights crack formes under pressure"
+    },
+    {
+      "order": 3,
+      "title": "Compose and lock",
+      "description": "Insert leads; lock with quoins; proof on waste sheets.",
+      "prerequisiteTools": [
+        "composing stick"
+      ],
+      "warningNote": "Bruised sorts print grey — replace"
+    },
+    {
+      "order": 4,
+      "title": "Ink and pull",
+      "description": "Charge rollers evenly; two-pull habit for solids; inspect register.",
+      "prerequisiteTools": [
+        "composition rollers"
+      ],
+      "warningNote": "Over-ink fills counters"
+    },
+    {
+      "order": 5,
+      "title": "Distribute and maintain",
+      "description": "Return sorts to cases; melt worn type; document font inventory.",
+      "prerequisiteTools": [
+        "melting pot"
+      ],
+      "warningNote": "Antimony fumes — respirators"
+    }
+  ],
+  "history": [
+    {
+      "year": "c. 1040",
+      "event": "Bi Sheng experiments with ceramic movable type in Chinese tradition.",
+      "location": "China",
+      "person": "Bi Sheng"
+    },
+    {
+      "year": "c. 1450",
+      "event": "Gutenberg Bible era printing with metal type and press in Mainz.",
+      "location": "Germany",
+      "person": "Johannes Gutenberg"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "Johannes Gutenberg",
+      "contribution": "European metal movable-type printing with oil ink and press",
+      "years": "c. 1400-1468",
+      "nationality": "German"
+    }
+  ],
+  "impact": "Printing collapsed the price of identical knowledge — law, scripture, and diagrams could disagree in public because multiple copies existed. It preconditioned scientific societies and newspapers.\n\nMovable type’s social externalities include propaganda at scale — technology never prints only truth.",
+  "images": [],
+  "videos": [
+    {
+      "id": "letterpress",
+      "title": "Letterpress printing",
+      "description": "Museum demonstrations of composition and pull.",
+      "durationSeconds": 600
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "britannica-printing",
+      "title": "Britannica — printing press",
+      "url": "https://www.britannica.com/technology/printing-press"
+    },
+    {
+      "id": "gutenberg-museum",
+      "title": "Gutenberg Museum",
+      "url": "https://www.gutenberg-museum.de/"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

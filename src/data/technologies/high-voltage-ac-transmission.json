@@ -1,0 +1,193 @@
+{
+  "id": "high-voltage-ac-transmission",
+  "name": "High-Voltage AC Transmission",
+  "tagline": "Extra-high-voltage lines and substations that move gigawatts thousands of kilometres with controlled losses",
+  "category": "energy",
+  "era": "industrial",
+  "difficulty": 4,
+  "prerequisites": [
+    "electrical-power-grid",
+    "copper-wire-and-cable",
+    "steel-production"
+  ],
+  "unlocks": [
+    "nuclear-fission-power-plant"
+  ],
+  "problem": "Urban networks at kilovolt class cannot push power across continents — current squared times resistance devours megawatts as heat in conductors. Raising voltage lowers current for the same real power, shrinking copper tonnage and I²R loss. The problem is not only towers and wires but insulation coordination: lightning, switching surges, and contamination on insulators in fog and salt spray.\n\nStability also changes: long lines exhibit charging current, Ferranti rise, and low-frequency oscillations between regions. Series capacitors and FACTS devices become part of the physics package, not accessories.\n\nWithout EHV, remote hydro, nuclear, and wind basins cannot feed distant cities — civilisation recentralises on local fuel piles.",
+  "overview": "Transformers step generation voltage to hundreds of kilovolts; bundle conductors control corona; shield wires intercept lightning; grounding grids manage fault currents. Substations house breakers, instrument transformers, and reactive compensation banks. Protection zones overlap so only the smallest necessary segment trips for a fault.\n\nEnvironmental design addresses audible noise from corona, right-of-way vegetation, and avian collisions. Underground EHV exists in cities but trades capacitance and cost against aesthetics.\n\nOperationally, maintenance is live-line work with robots and helicopters in some grids — a reminder that infrastructure is theatre as well as steel.\n\nStandards bodies harmonise insulation levels (BIL), clearances, and testing so equipment from different factories interoperates on the same corridor.",
+  "principles": [
+    {
+      "name": "Surge impedance loading",
+      "explanation": "Natural power transfer capability of a lossless line relates to voltage and surge impedance — compensation adjusts effective electrical length."
+    },
+    {
+      "name": "Corona onset",
+      "explanation": "Electric field at conductor surface ionises air; bundle conductors reduce peak field for the same phase voltage."
+    },
+    {
+      "name": "Reactive power flow",
+      "explanation": "Line inductance consumes vars; shunt reactors at light load prevent overvoltage from line charging."
+    },
+    {
+      "name": "Single-line-to-ground statistics",
+      "explanation": "Most faults are SLG; zero-sequence networks determine relaying and grounding strategy."
+    }
+  ],
+  "components": [
+    {
+      "id": "conductors",
+      "name": "Bundled phase conductors",
+      "function": "Carries current with controlled field gradient",
+      "position": "Between towers",
+      "madeFrom": "ACSR or ACCC composite"
+    },
+    {
+      "id": "insulators",
+      "name": "Insulator strings",
+      "function": "Supports conductors electrically above steel",
+      "position": "Suspension or tension sets",
+      "madeFrom": "Porcelain or silicone composite"
+    },
+    {
+      "id": "towers",
+      "name": "Lattice or tubular towers",
+      "function": "Mechanical support; lightning shield attachment",
+      "position": "Spanning terrain",
+      "madeFrom": "Galvanised steel"
+    },
+    {
+      "id": "substation",
+      "name": "EHV substation yard",
+      "function": "Breaks and transforms paths; hosts protection",
+      "position": "Line terminals",
+      "madeFrom": "SF6 breakers, CTs, PTs, reactors"
+    },
+    {
+      "id": "relay",
+      "name": "Line differential and distance relays",
+      "function": "Clears faults with selectivity",
+      "position": "Control house",
+      "madeFrom": "Microprocessor IEDs"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Aluminium rod for stranding",
+      "purpose": "Lightweight conductor with steel core for strength",
+      "earthLocations": [
+        "Bauxite-to-smelter chains globally"
+      ],
+      "spaceAlternatives": "Copper heavier — launch-cost sensitive",
+      "processingRequired": "Continuous casting and rod breakdown"
+    },
+    {
+      "name": "Zinc for galvanising",
+      "purpose": "Corrosion protection on towers",
+      "earthLocations": [
+        "Sphalerite deposits worldwide"
+      ],
+      "spaceAlternatives": "Stainless steel more costly",
+      "processingRequired": "Hot-dip galvanising baths"
+    },
+    {
+      "name": "Porcelain or epoxy insulators",
+      "purpose": "Dielectric support",
+      "earthLocations": [
+        "Ceramic districts in China, EU"
+      ],
+      "spaceAlternatives": "Composite sheds lighter",
+      "processingRequired": "Glazing and proof testing"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Route selection and EMF studies",
+      "description": "Optimise corridor; model corona audible noise; consult land tenure.",
+      "prerequisiteTools": [
+        "LiDAR",
+        "EMF calculators"
+      ],
+      "warningNote": "Underestimated icing loads collapse spans"
+    },
+    {
+      "order": 2,
+      "title": "Foundations and tower erection",
+      "description": "Geotech borings; micropiles in rock; torque bolts to spec.",
+      "prerequisiteTools": [
+        "cranes",
+        "theodolite"
+      ],
+      "warningNote": "Guyed assembly near energized lines — induction risk"
+    },
+    {
+      "order": 3,
+      "title": "String insulators and sag",
+      "description": "Tension versus suspension; sag at max temperature; clearance to ground.",
+      "prerequisiteTools": [
+        "dynamometers"
+      ],
+      "warningNote": "Over-tension cracks porcelain"
+    },
+    {
+      "order": 4,
+      "title": "Commission protection",
+      "description": "End-to-end fibre differential; GPS time sync; staged fault tests.",
+      "prerequisiteTools": [
+        "relay test sets"
+      ],
+      "warningNote": "Incorrect CT polarity trips wrong breaker"
+    },
+    {
+      "order": 5,
+      "title": "Energise at reduced voltage then full",
+      "description": "Infrared scan joints; corona camera at night; record signature.",
+      "prerequisiteTools": [
+        "thermal camera"
+      ],
+      "warningNote": "Corona ozone is an environmental permit item"
+    }
+  ],
+  "history": [
+    {
+      "year": 1891,
+      "event": "Three-phase transmission at 25 kV class demonstrates scalable polyphase lines.",
+      "location": "Germany"
+    },
+    {
+      "year": 1954,
+      "event": "First 345 kV lines in North America scale bulk transfer.",
+      "location": "USA"
+    },
+    {
+      "year": 2009,
+      "event": "HVDC overlays expand for asynchronous interconnection and submarine links.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "EHV turned continents into single electrical machines — with the political entanglements of mutual dependence that implies.\n\nIt is prerequisite to siting generation where fuel or sun exists, not where load sits.",
+  "images": [],
+  "videos": [
+    {
+      "id": "ehv-lines",
+      "title": "EHV transmission engineering",
+      "description": "Accredited power engineering lectures on corona, bundles, and reactive compensation.",
+      "durationSeconds": 900
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "cigre",
+      "title": "CIGRE — international grid research",
+      "url": "https://www.cigre.org/"
+    },
+    {
+      "id": "ferc",
+      "title": "FERC — transmission policy context (USA)",
+      "url": "https://www.ferc.gov/"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

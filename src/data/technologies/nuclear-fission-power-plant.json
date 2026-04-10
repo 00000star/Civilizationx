@@ -1,0 +1,199 @@
+{
+  "id": "nuclear-fission-power-plant",
+  "name": "Nuclear Fission Power Plant",
+  "tagline": "Controlled chain reaction steam supply that decouples electricity from chemical fuel oxidation for years per refuelling",
+  "category": "energy",
+  "era": "mid-20th",
+  "difficulty": 5,
+  "prerequisites": [
+    "steam-turbine-electric-generation",
+    "boiler-feedwater-treatment",
+    "high-voltage-ac-transmission",
+    "steel-production"
+  ],
+  "unlocks": [],
+  "problem": "Fossil steam ties megawatt-years to combustion chemistry and CO₂ venting. Fission concentrates energy in heavy nuclei — a teaspoon of idea-level fuel carries road-train coal energy if released in a disciplined lattice. The engineering problem is kinetics: sustain exactly one neutron per fission causing another fission; remove heat faster than meltdown; confine radioactive products across earthquakes and human error.\n\nMaterials face neutron embrittlement, helium bubbles in vessels, and boron depletion in absorbers. Chemistry faces radiolysis, crud on fuel surfaces, and iodine spike risks during transients.\n\nSocially, the technology cannot be honest without waste stewardship, proliferation safeguards, and transparent regulation — physics alone is insufficient.",
+  "overview": "Light-water reactors use low-enriched uranium oxide pellets in zirconium alloy cladding, cooled by pressurised water transferring heat to a steam generator or boiling directly in BWRs. Control rods and soluble boron shim reactivity. Pressurisers or level control maintain coolant inventory. Containment buildings resist pressure from pipe breaks and hydrogen deflagrations if mitigation fails.\n\nSecondary steam systems resemble fossil plants — turbines, condensers, feed trains — except radiation zoning demands remote maintenance and shielding mazes. Spent fuel pools cool decay heat for years before dry cask storage or reprocessing politics.\n\nAdvanced designs propose coolants from helium to liquid sodium, each trading corrosion, activation, and leak reactivity.\n\nOperation is a licence to practice applied ethics: every alarm ties to a scenario analysis written in blood or ink from prior plants.",
+  "principles": [
+    {
+      "name": "Six-factor formula intuition",
+      "explanation": "Thermal utilisation, resonance escape, fast fission, reproduction factor, non-leakage probabilities multiply to k-effective — kept near 1.000 by operators."
+    },
+    {
+      "name": "Doppler broadening",
+      "explanation": "Fuel temperature rise broadens resonances, increasing absorption — negative reactivity feedback that buys seconds in transients."
+    },
+    {
+      "name": "Decay heat",
+      "explanation": "After shutdown, fission products still release ~6-7% power immediately — cooling must persist through blackouts or ponds boil."
+    },
+    {
+      "name": "Dose ALARA",
+      "explanation": "As low as reasonably achievable — optimisation under uncertainty, not minimisation regardless of cost."
+    }
+  ],
+  "components": [
+    {
+      "id": "vessel",
+      "name": "Reactor pressure vessel",
+      "function": "Contains core and coolant at pressure",
+      "position": "Containment well",
+      "madeFrom": "Forged low-alloy steel with stainless clad"
+    },
+    {
+      "id": "fuel",
+      "name": "Fuel assemblies",
+      "function": "Host fission in moderated spectrum",
+      "position": "Core lattice",
+      "madeFrom": "UO₂ pellets, Zircaloy tubes, spacer grids"
+    },
+    {
+      "id": "steam-gen",
+      "name": "Steam generator (PWR)",
+      "function": "Transfers primary heat to secondary feedwater",
+      "position": "Between primary and turbine island",
+      "madeFrom": "Inconel tubesheets, alloy-690 tubes"
+    },
+    {
+      "id": "rcp",
+      "name": "Reactor coolant pumps",
+      "function": "Circulates primary water",
+      "position": "Hot leg to steam generator",
+      "madeFrom": "Austenitic stainless castings, flywheels"
+    },
+    {
+      "id": "containment",
+      "name": "Containment and suppression",
+      "function": "Holds fission product releases",
+      "position": "Surrounds RPV",
+      "madeFrom": "Prestressed concrete, steel liner, ice condensers in some designs"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Uranium concentrate",
+      "purpose": "Fuel feed after conversion and enrichment",
+      "earthLocations": [
+        "Kazakhstan, Canada, Australia, Namibia"
+      ],
+      "spaceAlternatives": "Terrestrial import — lunar He-3 is a different reactor class",
+      "processingRequired": "Conversion to UF₆, centrifuge enrichment, reduction to UO₂"
+    },
+    {
+      "name": "Heavy forgings",
+      "purpose": "RPV shell monolithic integrity",
+      "earthLocations": [
+        "JSW, Creusot Loire historical"
+      ],
+      "spaceAlternatives": "Import — cannot improvise",
+      "processingRequired": "Quench and temper, UT inspection"
+    },
+    {
+      "name": "Boron carbide",
+      "purpose": "Control rod poison",
+      "earthLocations": [
+        "Turkey, Argentina boron sources"
+      ],
+      "spaceAlternatives": "Hafnium rods alternative",
+      "processingRequired": "Sintered pellets in stainless cladding"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Licensing and safety analysis",
+      "description": "Probabilistic risk assessment; severe accident management; emergency planning zones.",
+      "prerequisiteTools": [
+        "RELAP, MELCOR class codes"
+      ],
+      "warningNote": "Skipping peer review is criminal negligence"
+    },
+    {
+      "order": 2,
+      "title": "Fabricate nuclear-grade components",
+      "description": "Material certificates; weld procedure qualification; clean-room assembly for internals.",
+      "prerequisiteTools": [
+        "radiography",
+        "eddy current"
+      ],
+      "warningNote": "Counterfeit bolts have killed projects"
+    },
+    {
+      "order": 3,
+      "title": "Fuel load and criticality benchmark",
+      "description": "Approach critical with small boron dilution steps; compare keff to predictions.",
+      "prerequisiteTools": [
+        "startup instrumentation"
+      ],
+      "warningNote": "Mis-counted bundles have approached criticality wrong — check twice"
+    },
+    {
+      "order": 4,
+      "title": "Hot functional testing",
+      "description": "Run primary loops at temperature without fission power; vibration baseline pumps.",
+      "prerequisiteTools": [
+        "seismic monitors"
+      ],
+      "warningNote": "Water hammer cracks steam generator tubes"
+    },
+    {
+      "order": 5,
+      "title": "Power ascension and relicensing",
+      "description": "Ramp power through xenon transients; verify radiation monitors; maintain ageing management programmes.",
+      "prerequisiteTools": [
+        "health physics lab"
+      ],
+      "warningNote": "Organisational drift causes accidents — training is hardware"
+    }
+  ],
+  "history": [
+    {
+      "year": 1942,
+      "event": "First self-sustaining chain reaction at Chicago Pile-1.",
+      "location": "USA",
+      "person": "Enrico Fermi"
+    },
+    {
+      "year": 1954,
+      "event": "Obninsk APS-1 supplies grid power — first civilian nuclear electricity.",
+      "location": "USSR"
+    },
+    {
+      "year": 1957,
+      "event": "Shippingport reactor demonstrates PWR lineage in United States.",
+      "location": "USA"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "Enrico Fermi",
+      "contribution": "First controlled nuclear chain reaction",
+      "years": "1901-1954",
+      "nationality": "Italian-American"
+    }
+  ],
+  "impact": "Nuclear plants supplied large fractions of carbon-free electricity in several nations — and concentrated waste, risk, and regulatory expertise.\n\nRestart without enrichment and metallurgy knowledge is effectively impossible; preserving documents is not enough without institutions.",
+  "images": [],
+  "videos": [
+    {
+      "id": "pwr-thermo",
+      "title": "Pressurised water reactor thermohydraulics",
+      "description": "Accredited nuclear engineering course segments on decay heat and containment.",
+      "durationSeconds": 1500
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "iaea",
+      "title": "IAEA — nuclear power information",
+      "url": "https://www.iaea.org/topics/energy/nuclear-power"
+    },
+    {
+      "id": "nrc",
+      "title": "U.S. NRC — reactor concepts",
+      "url": "https://www.nrc.gov/reading-rm/basic-ref/students/reactor-types.html"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

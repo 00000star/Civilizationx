@@ -1,0 +1,198 @@
+{
+  "id": "solar-photovoltaic-power-systems",
+  "name": "Solar Photovoltaic Power Systems",
+  "tagline": "Semiconductor junctions that convert sunlight directly into DC electricity — modular generation without rotating prime movers",
+  "category": "energy",
+  "era": "late-20th",
+  "difficulty": 4,
+  "prerequisites": [
+    "transistor",
+    "glass-making",
+    "copper-wire-and-cable",
+    "electrical-power-grid"
+  ],
+  "unlocks": [],
+  "problem": "Steam plants excel at baseload but demand fuel logistics. Photovoltaics harvest radiative flux where it lands — no turbine hall, no cooling water mandate for the cell itself. The problem is intermittency and area: sun returns vary with weather and season; useful power densities are orders of magnitude below fossil chemical bonds per kilogram of hardware.\n\nCell manufacturing couples semiconductor purity with micrometre metallisation and encapsulation that survives decades of UV, humidity, and thermal cycling. Field systems add trackers, inverters, and grid integration rules for frequency and voltage ride-through.\n\nWithout power electronics literacy, solar becomes a fragile sticker on roofs rather than grid infrastructure.",
+  "overview": "Silicon cells begin as doped wafers; screen-print or plate front grid fingers; anti-reflection coat; interconnect ribbons string cells into modules laminated between glass and EVA backsheet. Modules series-parallel into strings; string inverters or central inverters convert DC to grid-synchronous AC. Maximum power point trackers adjust voltage to harvest changing irradiance.\n\nThin-film alternatives trade efficiency for manufacturing throughput on glass. Bifacial modules harvest albedo from below. Utility scales add single-axis trackers with backtracking algorithms to avoid row shading.\n\nDegradation modes include potential-induced degradation, snail trails, and solder bond fatigue — reliability engineering is outdoor weathering science.\n\nRecycling loops recover silver, silicon, and aluminium frames — emerging as gigawatts age out.",
+  "principles": [
+    {
+      "name": "Shockley-Queisser limit",
+      "explanation": "Single-junction detailed balance caps ideal efficiency near 33% for silicon under AM1.5 — tandem cells relax limit at cost."
+    },
+    {
+      "name": "MPP tracking",
+      "explanation": "Panel I-V curve shifts with irradiance and temperature; operating away from knee wastes harvest."
+    },
+    {
+      "name": "Temperature coefficient",
+      "explanation": "Higher cell temperature reduces open-circuit voltage — desert installs trade sun for heat penalty."
+    },
+    {
+      "name": "Harmonics from inverters",
+      "explanation": "PWM grid ties must meet utility THD and anti-islanding rules."
+    }
+  ],
+  "components": [
+    {
+      "id": "cell",
+      "name": "Solar cell",
+      "function": "Photovoltaic conversion",
+      "position": "Module string",
+      "madeFrom": "Silicon PERC or heterojunction stacks"
+    },
+    {
+      "id": "module",
+      "name": "Glass-encapsulated module",
+      "function": "Protects cells; provides frame mounting",
+      "position": "Array field",
+      "madeFrom": "Low-iron glass, EVA, backsheet"
+    },
+    {
+      "id": "inverter",
+      "name": "Grid-tie inverter",
+      "function": "MPPT and grid synchronisation",
+      "position": "String or central",
+      "madeFrom": "IGBT H-bridge, DSP control"
+    },
+    {
+      "id": "tracker",
+      "name": "Tracker actuator",
+      "function": "Aims modules toward sun",
+      "position": "Row torque tube",
+      "madeFrom": "Slew drives, anemometer interlock"
+    },
+    {
+      "id": "transformer",
+      "name": "Step-up transformer",
+      "function": "Matches inverter voltage to medium-voltage collection",
+      "position": "Pad mount",
+      "madeFrom": "Dry-type or liquid-filled"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Polysilicon",
+      "purpose": "Wafer feedstock",
+      "earthLocations": [
+        "China, Germany, USA polysilicon plants"
+      ],
+      "spaceAlternatives": "Import until chlorosilane chain exists",
+      "processingRequired": "Directional solidification ingots, wire saw"
+    },
+    {
+      "name": "Silver paste",
+      "purpose": "Front contacts",
+      "earthLocations": [
+        "Precious metals refiners"
+      ],
+      "spaceAlternatives": "Copper plating under development to cut Ag",
+      "processingRequired": "Fire-through contact firing profile"
+    },
+    {
+      "name": "Low-iron glass",
+      "purpose": "High transmission front sheet",
+      "earthLocations": [
+        "Float lines near deserts"
+      ],
+      "spaceAlternatives": "Thin films on flexible substrates",
+      "processingRequired": "Tempering for mechanical load"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Site insolation and interconnection study",
+      "description": "Model shading, soil resistivity for grounding, and queue position on grid.",
+      "prerequisiteTools": [
+        "PVsyst or equivalent"
+      ],
+      "warningNote": "Transformer tap mismatch causes chronic inverter trips"
+    },
+    {
+      "order": 2,
+      "title": "Mechanical install and bonding",
+      "description": "Torque clamps; equipotential bonding; lightning protection down conductors.",
+      "prerequisiteTools": [
+        "torque wrenches",
+        "megger"
+      ],
+      "warningNote": "Wind torsion cracks cells if clamps underspecified"
+    },
+    {
+      "order": 3,
+      "title": "Commission inverters",
+      "description": "Set anti-islanding; verify G59/G83 class protections; harmonics scan at POC.",
+      "prerequisiteTools": [
+        "PQ analyser"
+      ],
+      "warningNote": "Lagging power factor penalties erase revenue"
+    },
+    {
+      "order": 4,
+      "title": "Performance ratio monitoring",
+      "description": "Irradiance sensors versus expected kWh; identify string outages.",
+      "prerequisiteTools": [
+        "SCADA"
+      ],
+      "warningNote": "Snail trails start as warranty fights — photograph modules at handover"
+    },
+    {
+      "order": 5,
+      "title": "Plan end-of-life logistics",
+      "description": "Track serials for silver recovery; avoid landfill arsenic from thin-film panels if used.",
+      "prerequisiteTools": [
+        "recycler contracts"
+      ],
+      "warningNote": "Firefighters need module hazard sheets — DC strings stay live in daylight"
+    }
+  ],
+  "history": [
+    {
+      "year": 1954,
+      "event": "Bell Labs demonstrates silicon solar cell with useful efficiency.",
+      "location": "USA"
+    },
+    {
+      "year": 2000,
+      "event": "Grid parity pursuit drives polysilicon scaling and feed-in tariff experiments.",
+      "location": "Germany, Spain"
+    },
+    {
+      "year": 2020,
+      "event": "Utility PV becomes cheapest new generation in many sunbelt markets.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "Russell Ohl",
+      "contribution": "Patent work on silicon photovoltaic effect at Bell Labs",
+      "years": "1898-1987",
+      "nationality": "American"
+    }
+  ],
+  "impact": "PV decentralised generation to rooftops and deserts alike — and forced grids to learn flexibility, storage, and forecasting.\n\nIt is semiconductor manufacturing wearing a civil engineering hat.",
+  "images": [],
+  "videos": [
+    {
+      "id": "pv-mppt",
+      "title": "Solar MPPT and grid integration",
+      "description": "Renewable energy engineering courses on inverter controls.",
+      "durationSeconds": 720
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "nrel-pv",
+      "title": "NREL — photovoltaics research",
+      "url": "https://www.nrel.gov/pv/"
+    },
+    {
+      "id": "iea-pvps",
+      "title": "IEA PVPS programme",
+      "url": "https://iea-pvps.org/"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

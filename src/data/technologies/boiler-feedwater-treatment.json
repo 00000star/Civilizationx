@@ -1,0 +1,51 @@
+{
+  "id": "boiler-feedwater-treatment",
+  "name": "Boiler Feedwater Treatment",
+  "tagline": "Chemistry and polishing that prevent scale, corrosion, and turbine damage in steam plants",
+  "category": "energy",
+  "era": "industrial",
+  "difficulty": 3,
+  "prerequisites": ["steam-engine", "steel-production", "glass-making"],
+  "unlocks": ["steam-turbine-electric-generation"],
+  "problem": "Boiling untreated water plates minerals onto tubes and drums. Scale insulates metal, creating hot spots that warp and burst. Dissolved oxygen pits steel; carbon dioxide acidifies condensate and chews economisers. Foam and priming carry slurry into superheaters and turbine nozzles, sandblading blades and falsifying level gauges.\n\nReciprocating plants sometimes tolerated abuse; high-speed turbines and high-pressure drums do not. The reliability of a whole grid can hinge on parts-per-billion chemistry that looks invisible on a tour.\n\nRestart cultures that forge boilers but skip titration inherit short, violent careers for their machinery — and often blame metallurgy when the culprit is makeup water from a chalky river.",
+  "overview": "Treatment trains screen and clarify raw water, remove hardness by precipitation or ion exchange, strip oxygen in deaerators, and dose phosphates, sulphites, or organic oxygen scavengers to hold a protective magnetite layer on steel. Continuous blowdown exports concentrated dissolved solids; surface blowdown skims foam.\n\nDemineralised makeup is standard for high-pressure boilers: cation and anion resins produce water nearly free of ions, reducing blowdown and silica risk. Chemical programmes are matched to pressure regime — caustic gouging under deposits is as lethal as oxygen pitting.\n\nOperators trend conductivity, silica, phosphate, and iron. Laboratories or handheld meters close the loop. Layup procedures when idling prevent oxygen ingress during shutdowns.\n\nThe discipline is half chemistry and half plumbing: sample points must be representative, coolers must drop grab samples to safe temperature, and vents must not recycle corrosive gases into the condenser.",
+  "principles": [
+    {"name": "Solubility product", "explanation": "Hardness salts exceed solubility when water concentrates in the drum; blowdown or softer makeup restores margin."},
+    {"name": "Oxygen cell corrosion", "explanation": "Oxygen concentrates at crevices and deposits, driving localised pits that become crack starters under fatigue."},
+    {"name": "Carryover mechanisms", "explanation": "High drum level, sudden load swings, and organic contamination stabilise foam that entraps water in steam."},
+    {"name": "Ion-exchange stoichiometry", "explanation": "Softeners exhaust predictably; regeneration timing must track actual throughput, not calendar guesses."}
+  ],
+  "components": [
+    {"id": "softener", "name": "Softener or demineraliser", "function": "Removes hardness or all dissolved ions before the boiler", "position": "Upstream of deaerator", "madeFrom": "Pressure vessels, resin, valves", "criticalNote": "Brine or acid waste streams need containment and permitting"},
+    {"id": "deaerator", "name": "Deaerator", "function": "Heats water to saturation and strips O₂ and CO₂", "position": "Feed pump suction", "madeFrom": "Carbon steel shell, stainless trays"},
+    {"id": "dosing", "name": "Chemical dosing pumps", "function": "Injects scavengers, phosphates, amines", "position": "Feed line and drum", "madeFrom": "Diaphragm pumps, PE tanks"},
+    {"id": "blowdown", "name": "Blowdown system", "function": "Controls drum TDS and removes sludge", "position": "Drum surface and bottom connections", "madeFrom": "Angle valves, orifices, flash tanks"},
+    {"id": "sampling", "name": "Sample coolers and racks", "function": "Provides safe, representative chemistry samples", "position": "Around drum and superheater drains", "madeFrom": "Coiled stainless coolers, needle valves"}
+  ],
+  "rawMaterials": [
+    {"name": "Ion-exchange resin", "purpose": "Softening and demineralisation", "earthLocations": ["Global chemical distributors"], "spaceAlternatives": "Import until local regeneration acids and bases exist", "processingRequired": "Regenerate on schedule; avoid resin fouling with oil"},
+    {"name": "Treatment chemicals", "purpose": "Oxygen control and pH buffering", "earthLocations": ["Industrial sulphite, phosphate, and amine suppliers"], "spaceAlternatives": "Simpler programmes with more blowdown cost", "processingRequired": "Dilute for safe skin contact during handling"},
+    {"name": "Makeup water", "purpose": "Replaces steam exports and blowdown", "earthLocations": ["Surface and well sources"], "spaceAlternatives": "Aggressive condensate return", "processingRequired": "Filtration and disinfection if biological slime risk"}
+  ],
+  "buildSteps": [
+    {"order": 1, "title": "Baseline the source water", "description": "Measure hardness, alkalinity, silica, chlorides, and iron across seasons. Design for worst credible intake.", "prerequisiteTools": ["lab kit or service lab"], "warningNote": "Grab samples without coolers scald operators"},
+    {"order": 2, "title": "Install and commission softening train", "description": "Size for peak makeup; prove effluent hardness before raising drum pressure.", "prerequisiteTools": ["hardness titration"], "warningNote": "Exhausted resin silently passes hardness — trend effluent daily"},
+    {"order": 3, "title": "Prove deaerator oxygen removal", "description": "Vent correctly; stabilise steam supply; measure dissolved oxygen at deaerator outlet.", "prerequisiteTools": ["DO meter"], "warningNote": "Cold slug feed can oxygen-spike the entire system"},
+    {"order": 4, "title": "Start chemical programme conservatively", "description": "Target middle of vendor band; increase blowdown if silica climbs; watch iron in condensate for condenser leaks.", "prerequisiteTools": ["conductivity loop"], "warningNote": "Incompatible amines and phosphates precipitate — one programme owner"},
+    {"order": 5, "title": "Document and train shifts", "description": "Run sheets with drum levels, blowdown positions, and chemistry trends. Recovery depends on night crews, not manuals alone.", "prerequisiteTools": ["logbooks"], "warningNote": "Undocumented trips hide chronic contamination"}
+  ],
+  "history": [
+    {"year": 1850, "event": "Marine and locomotive boiler explosions push insurers toward mandatory inspections and water-quality guidance.", "location": "United Kingdom"},
+    {"year": 1920, "event": "High-pressure utility boilers adopt demineralisers and coordinated phosphate programmes.", "location": "United States"}
+  ],
+  "inventors": [],
+  "impact": "Chemistry turned steam from a workshop curiosity into grid infrastructure. It is the invisible half of every thermal and nuclear steam turbine hall.\n\nFor collapse recovery, protect chemists and glassware as carefully as machinists.",
+  "images": [],
+  "videos": [{"id": "chem-overview", "title": "Steam plant water chemistry", "description": "Accredited power-plant training on cycles of concentration, blowdown, and phosphate programmes.", "durationSeconds": 720}],
+  "externalLinks": [
+    {"id": "asme-boiler", "title": "ASME — boiler and pressure vessel code (context)", "url": "https://www.asme.org/topics-resources/content/boilers"},
+    {"id": "who-water", "title": "WHO — drinking-water quality parameters (source context)", "url": "https://www.who.int/teams/environment-climate-change-and-health/water-sanitation-and-health/water-safety-and-quality/drinking-water-quality-guidelines"}
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

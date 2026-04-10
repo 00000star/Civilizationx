@@ -1,0 +1,199 @@
+{
+  "id": "high-capacity-electrochemical-batteries",
+  "name": "High-Capacity Electrochemical Batteries",
+  "tagline": "Reversible electron transfer cells that store grid and mobility energy as chemical potential — hours to days of buffer",
+  "category": "energy",
+  "era": "late-20th",
+  "difficulty": 4,
+  "prerequisites": [
+    "copper-wire-and-cable",
+    "steel-production",
+    "smelting-bronze-age",
+    "electric-motor"
+  ],
+  "unlocks": [],
+  "problem": "Electricity is notoriously hard to inventory as electricity — without rotation or chemistry it vanishes in milliseconds of mismatch. Batteries store energy as compositional gradients across electrodes and electrolyte, releasing it when ions shuffle back under controlled electron flow through external circuits.\n\nScaling requires managing dendrites, thermal runaway, gas venting, and state-of-charge estimation across thousands of series cells. Recycling demands separation of cobalt, nickel, lithium, and fluorinated salts without poisoning workers.\n\nLead-acid taught industry about stratification and sulfation; lithium-ion taught it about nail penetration tests and shipping regulations — each chemistry has its moral syllabus.",
+  "overview": "Primary cells are single-use; secondary cells intercalate ions reversibly. Lead-acid uses Pb and PbO₂ in sulphuric acid — heavy but recyclable. Lithium-ion inserts Li⁺ into graphite and metal oxide cathodes with carbonate electrolytes; solid-state variants promise safer electrolytes at manufacturing pain cost. Flow batteries shunt energy into dissolved redox couples in tanks, decoupling power from energy capacity.\n\nBattery management systems monitor cell voltages and temperatures, balance series strings, and isolate faults. Thermal systems use cold plates or refrigerant loops for fast charge.\n\nGrid-scale containers integrate inverters, transformers, and fire suppression — codes are evolving as incidents teach what 'thermal propagation' means in a packed aisle.\n\nSecond-life EV packs for stationary storage extend useful life before recycling — if state-of-health algorithms are honest.",
+  "principles": [
+    {
+      "name": "Nernst voltage",
+      "explanation": "Open-circuit potential ties to activities of redox species — SOC estimation fuses voltage with coulomb counting."
+    },
+    {
+      "name": "Solid-electrolyte interphase",
+      "explanation": "Passivation layer on anode consumes lithium irreversibly — formation cycles matter."
+    },
+    {
+      "name": "C-rate limits",
+      "explanation": "High current raises ohmic loss and lithium plating risk on graphite — fast charge needs thermal headroom."
+    },
+    {
+      "name": "Arrhenius ageing",
+      "explanation": "Calendar and cycle life accelerate exponentially with temperature — parking a hot EV full kills capacity quietly."
+    }
+  ],
+  "components": [
+    {
+      "id": "cell",
+      "name": "Cell can or pouch",
+      "function": "Holds electrodes, separator, electrolyte",
+      "position": "Module building block",
+      "madeFrom": "Aluminium pouch or steel cylindrical can"
+    },
+    {
+      "id": "separator",
+      "name": "Microporous separator",
+      "function": "Ionically conductive, electronically insulating",
+      "position": "Between electrodes",
+      "madeFrom": "PE/PP trilayer with shutdown melt"
+    },
+    {
+      "id": "bms",
+      "name": "Battery management system",
+      "function": "Balances, protects, estimates SOC/SOH",
+      "position": "Module or pack controller",
+      "madeFrom": "ASIC front ends, microcontroller, contactors"
+    },
+    {
+      "id": "cooling",
+      "name": "Thermal management",
+      "function": "Keeps cells within safe map",
+      "position": "Cold plates or refrigerant loop",
+      "madeFrom": "Aluminium extrusions, glycol"
+    },
+    {
+      "id": "inverter",
+      "name": "Bidirectional inverter",
+      "function": "Charges/discharges pack to AC grid",
+      "position": "Container skid",
+      "madeFrom": "IGBT stack matching dc-power drives"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Lithium salts",
+      "purpose": "Electrolyte LiPF₆ etc.",
+      "earthLocations": [
+        "Atacama brines, Australian spodumene"
+      ],
+      "spaceAlternatives": "Import until brine processing exists",
+      "processingRequired": "Dry rooms during cell fill"
+    },
+    {
+      "name": "Nickel cobalt manganese oxides",
+      "purpose": "Cathode active material",
+      "earthLocations": [
+        "New Caledonia, Indonesia nickel laterites"
+      ],
+      "spaceAlternatives": "LFP cathodes reduce cobalt dependence",
+      "processingRequired": "Hydrothermal co-precipitation, lithiation calcine"
+    },
+    {
+      "name": "Graphite anodes",
+      "purpose": "Intercalation host",
+      "earthLocations": [
+        "China synthetic graphite dominant"
+      ],
+      "spaceAlternatives": "Silicon blends for higher capacity — swelling challenges",
+      "processingRequired": "Spheroidisation and carbon coating"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Electrode coating and calendering",
+      "description": "Slurry coat foils; dry; compress to target porosity; slit widths.",
+      "prerequisiteTools": [
+        "coating lines",
+        "beta gauges"
+      ],
+      "warningNote": "Humidity spikes gel slurries — dew point control"
+    },
+    {
+      "order": 2,
+      "title": "Stack and fill",
+      "description": "Wind jelly rolls or stack prismatic layers; electrolyte fill under vacuum; seal.",
+      "prerequisiteTools": [
+        "leak testers"
+      ],
+      "warningNote": "Contaminant ppm levels shift cycle life by double digits"
+    },
+    {
+      "order": 3,
+      "title": "Formation cycling",
+      "description": "Slow charge cycles grow SEI; sort cells by capacity.",
+      "prerequisiteTools": [
+        "cycler farms"
+      ],
+      "warningNote": "Gas generation during formation needs vent paths"
+    },
+    {
+      "order": 4,
+      "title": "Pack integration and abuse testing",
+      "description": "Nail crush, overcharge, external fire protocols for certification.",
+      "prerequisiteTools": [
+        "calorimeter"
+      ],
+      "warningNote": "Propagation tests must be witnessed remotely"
+    },
+    {
+      "order": 5,
+      "title": "Deploy with EMS integration",
+      "description": "Ancillary service schedules; SOC guard bands for warranty; recycling contracts.",
+      "prerequisiteTools": [
+        "grid SCADA APIs"
+      ],
+      "warningNote": "Cycling to 100% daily voids warranties fast"
+    }
+  ],
+  "history": [
+    {
+      "year": 1859,
+      "event": "Planté rechargeable lead-acid cell demonstrates secondary battery concept.",
+      "location": "France",
+      "person": "Gaston Planté"
+    },
+    {
+      "year": 1991,
+      "event": "Sony commercialises lithium-ion cylindrical cells for consumer electronics.",
+      "location": "Japan"
+    },
+    {
+      "year": 2010,
+      "event": "Grid-scale lithium containers proliferate with renewable integration.",
+      "location": "USA, Australia, EU"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "John Goodenough",
+      "contribution": "Cathode materials enabling rechargeable lithium batteries",
+      "years": "1922-2023",
+      "nationality": "American"
+    }
+  ],
+  "impact": "Batteries made handheld computers and EVs credible — and forced chemists, fire departments, and miners into one supply chain argument.\n\nThey are chemical factories folded into flat packs — respect the vent.",
+  "images": [],
+  "videos": [
+    {
+      "id": "li-ion-safety",
+      "title": "Lithium-ion safety mechanisms",
+      "description": "Accredited materials science lectures on SEI and thermal runaway.",
+      "durationSeconds": 900
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "battery-university",
+      "title": "Battery University — technical primers",
+      "url": "https://batteryuniversity.com/"
+    },
+    {
+      "id": "iea-batteries",
+      "title": "IEA — batteries and secure transitions",
+      "url": "https://www.iea.org/energy-system/electricity/batteries"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

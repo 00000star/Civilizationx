@@ -1,0 +1,52 @@
+{
+  "id": "copper-wire-and-cable",
+  "name": "Copper Wire and Cable",
+  "tagline": "Drawn and stranded conductors that carry current with low loss — the nervous system of electrification",
+  "category": "energy",
+  "era": "industrial",
+  "difficulty": 3,
+  "prerequisites": ["smelting-bronze-age", "steel-production"],
+  "unlocks": ["electrical-power-grid", "electrical-telegraph", "electrical-transformer"],
+  "problem": "Electricity without conductors is a laboratory trick. Early experimenters used iron and charcoal-salted paper; scaling to miles of path required metal that combines high conductivity, ductility for drawing, and resistance to gradual corrosion in damp air. Copper won for most power and signal roles because it solders reliably, work-hardens predictably, and can be refined electrolytically to purity that minimises grain boundary loss.\n\nThe manufacturing problem is geometry: a solid bar is too stiff; wire must be drawn through dies in stages with intermediate anneals. Insulation is equally critical — bare conductors touching create faults; cloth and rubber age; modern polymers tolerate higher temperatures in machine windings.\n\nWithout standard gauges and stranding rules, terminations loosen thermally, fires start at lugs, and grids cannot be maintained by interchangeable spares.",
+  "overview": "Cathode copper is melted and cast into rod for continuous extrusion or rolling to feed drawing machines. Each pass through a tungsten-carbide or diamond die reduces diameter while lengthening wire; intermediate annealing in reducing atmosphere restores ductility. Multiple drawn strands are twisted into rope-lay conductors for flexibility in cords and generator bars.\n\nInsulation systems evolved: gutta-percha on early telegraph cables, rubber with braid, paper-impregnated oil in high-voltage cables, cross-linked polyethylene in modern distribution. Jackets add mechanical armour, moisture barriers, and fire retardance — each layer is a materials compatibility puzzle with semiconducting screens to grade electric field in HV cables.\n\nJointing uses crimps, sweated brazes, or exothermic welds for earthing grids. Oxidation at aluminium terminations taught industry to use antioxidant pastes and torque discipline — a reminder that contact physics is part of wire technology.\n\nMagnet wire for motors and transformers adds enamel films in multiple dips, cured to withstand varnish ovens without pinholes.",
+  "principles": [
+    {"name": "Skin effect", "explanation": "At AC frequencies current crowds toward outer conductor surface — litz wire and tubular busbars manage effective resistance."},
+    {"name": "Work hardening", "explanation": "Cold drawing raises tensile strength but lowers elongation; annealing trades strength for drawability in the next pass."},
+    {"name": "I²R losses", "explanation": "Loss scales with resistance and square of current — why transmission uses high voltage for the same power."},
+    {"name": "Partial discharge", "explanation": "Voids in solid insulation initiate micro-arcs that erode polymer — manufacturing seeks void-free extrusion."}
+  ],
+  "components": [
+    {"id": "rod", "name": "Cast or extruded rod feedstock", "function": "Supplies uniform cross-section for first draw", "position": "Rod breakdown machine inlet", "madeFrom": "OFHC copper"},
+    {"id": "dies", "name": "Drawing die chain", "function": "Reduces diameter in controlled steps", "position": "Inline between capstans", "madeFrom": "Polycrystalline diamond or carbide inserts"},
+    {"id": "annealer", "name": "Annealing furnace or Joule heater", "function": "Recrystallises copper between passes", "position": "Between draw blocks", "madeFrom": "Controlled atmosphere tunnel"},
+    {"id": "strander", "name": "Stranding machine", "function": "Twists wires into flexible conductors", "position": "After final draw", "madeFrom": "Planetary cages with backtwist"},
+    {"id": "extruder", "name": "Insulation extruder", "function": "Applies polymer or rubber jackets", "position": "Line after stranding", "madeFrom": "Cross-head die, cooling trough"}
+  ],
+  "rawMaterials": [
+    {"name": "Cathode copper", "purpose": "High-conductivity feedstock", "earthLocations": ["Chilean porphyry mines", "Zambian copperbelt", "Indonesian Grasberg region"], "spaceAlternatives": "Metallic meteoritic iron is a poor substitute — electrolytic copper from sulphide ores remains the model", "processingRequired": "Fire refine then electrolytic refine to 99.99%"},
+    {"name": "Polymer pellets", "purpose": "XLPE or PVC insulation", "earthLocations": ["Petrochemical complexes"], "spaceAlternatives": "Ceramic insulators on bare buswork until polymers exist", "processingRequired": "Dry pellets; extrude with cross-linking peroxide or e-beam for XLPE"},
+    {"name": "Drawing lubricants", "purpose": "Reduces die wear and overheating", "earthLocations": ["Synthetic ester and soap suppliers"], "spaceAlternatives": "Tallow and soap historically", "processingRequired": "Filter to remove grit that scores wire"}
+  ],
+  "buildSteps": [
+    {"order": 1, "title": "Break down rod to intermediate sizes", "description": "Sequence die reductions under 20% area reduction per pass early; monitor temperature; capture scrap for remelt.", "prerequisiteTools": ["micrometres", "capstan drive"], "warningNote": "Hot short tears from over-speed draw"},
+    {"order": 2, "title": "Anneal between passes", "description": "Hold at temperature-time product that recrystallises without grain growth runaway; protect from oxidation if bright wire required.", "prerequisiteTools": ["pyrometry"], "warningNote": "Over-anneal softens excessively — next die snaps wire"},
+    {"order": 3, "title": "Strand and compact", "description": "Choose lay length for flexibility versus diameter; fill centres in large cables to avoid collapse.", "prerequisiteTools": ["lay length gauges"], "warningNote": "Backtwist imbalance kinks during payoff"},
+    {"order": 4, "title": "Extrude insulation", "description": "Centre conductor in cross-head; control melt temperature to avoid scorch; spark-test for pinholes.", "prerequisiteTools": ["spark tester", "OD gauges"], "warningNote": "Wet XLPE pellets cause steam voids — predry"},
+    {"order": 5, "title": "Test and tag", "description": "Hi-pot test jackets; measure DC resistance per kilometre; print gauge and temperature rating.", "prerequisiteTools": ["Kelvin bridge"], "warningNote": "Mis-labelled ampacity causes fires decades later"}
+  ],
+  "history": [
+    {"year": 1830, "event": "Wire drawing industrialises for telegraph and textile machinery drive shafts.", "location": "Europe"},
+    {"year": 1850, "event": "Gutta-percha submarine cables prove long insulated conductors feasible.", "location": "Atlantic"},
+    {"year": 1876, "event": "Electrolytic refining scales cathode copper purity for electrical grades.", "location": "United States and Europe"}
+  ],
+  "inventors": [],
+  "impact": "Copper wire turned electricity into infrastructure — motors, lights, telegraphs, and later data all ride on refined stranding and insulation craft.\n\nRecovery must preserve drawing die mathematics and spark-testing culture, not only smelter output.",
+  "images": [],
+  "videos": [{"id": "wire-draw", "title": "Wire drawing process", "description": "Industrial manufacturing videos on rod breakdown and annealing (select reputable sources).", "durationSeconds": 600}],
+  "externalLinks": [
+    {"id": "iec-cables", "title": "IEC — international electrical standards directory", "url": "https://www.iec.ch/"},
+    {"id": "copper-org", "title": "Copper Development Association — electrical copper", "url": "https://www.copper.org/"}
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

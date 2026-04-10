@@ -1,0 +1,194 @@
+{
+  "id": "communication-satellites",
+  "name": "Communication Satellites",
+  "tagline": "Microwave repeaters in orbit — global footprints, transponders, and the geometry of delay",
+  "category": "communication",
+  "era": "mid-20th",
+  "difficulty": 5,
+  "prerequisites": [
+    "radio-broadcast-and-receiver",
+    "transistor",
+    "fixed-wing-aircraft"
+  ],
+  "unlocks": [
+    "optical-fiber-communications"
+  ],
+  "problem": "HF skywave is moody; submarine cables are expensive to lay across all oceans. Satellites sit line-of-sight to enormous ground swaths — one transponder hop replaces chains of microwave towers. The catch is rocketry, radiation, and orbital mechanics: launch costs, station-keeping fuel, and handoffs between beams as Earth rotates.\n\nGeostationary orbit simplifies antennas but injects quarter-second echo on voice — TCP misreads as congestion unless engineered. Low Earth orbit constellations trade latency for handover complexity.\n\nSpace environment kills electronics: total ionising dose, single-event upsets, and atomic oxygen in LEO — satellite engineering is rad-hard packaging plus redundancy.",
+  "overview": "A bus provides power from solar arrays and batteries, thermal control via heat pipes and radiators, attitude control with reaction wheels and thrusters, and command telemetry via S-band links. Payload is C/Ku/Ka-band transponders: LNA, channelised filters, TWTA or SSPA amplifiers, output multiplexers. Ground segment uses large parabolic dishes with tracking servos and low-noise cryogenic amplifiers for deep space budgets.\n\nFrequency plans avoid intermodulation; polarisation reuse doubles capacity. Digital carriers pack many carriers per transponder with MCPC; beam shaping limits interference footprints.\n\nEnd-of-life graveyard orbits mitigate debris; regulatory filings at ITU coordinate slot assignments — orbital slots became property-like.\n\nSatellite phones and GPS ride related technologies — navigation is communication with math differentials.",
+  "principles": [
+    {
+      "name": "Link budget",
+      "explanation": "C/N0 integrates EIRP, path loss, G/T, and losses — closes whether a modem can lock."
+    },
+    {
+      "name": "Shannon limit on transponder",
+      "explanation": "Operating back-off from saturation trades linearity for capacity — multicarrier needs linear amps."
+    },
+    {
+      "name": "Doppler in LEO",
+      "explanation": "Fast satellites shift carrier — receivers track with PLL bandwidth."
+    },
+    {
+      "name": "Radiation hardness",
+      "explanation": "Shielding, RHBD logic, and EDAC mitigate SEUs — watchdogs reboot gracefully."
+    }
+  ],
+  "components": [
+    {
+      "id": "bus",
+      "name": "Satellite bus",
+      "function": "Power, thermal, ADCS, propulsion",
+      "position": "Structure",
+      "madeFrom": "Al honeycomb, carbon composite"
+    },
+    {
+      "id": "payload",
+      "name": "Payload transponder",
+      "function": "Amplifies and translates frequency",
+      "position": "Deck",
+      "madeFrom": "TWTA chains or SSPAs"
+    },
+    {
+      "id": "antenna",
+      "name": "Payload antennas",
+      "function": "Shapes coverage",
+      "position": "Earth-facing deck",
+      "madeFrom": "Feed horns, reflectors, phased arrays"
+    },
+    {
+      "id": "ground",
+      "name": "Earth station",
+      "function": "Large aperture and tracking",
+      "position": "Teleports",
+      "madeFrom": "Parabolic reflector, radome"
+    },
+    {
+      "id": "ttc",
+      "name": "Telemetry, tracking, command",
+      "function": "Housekeeping comms",
+      "position": "Omni antennas",
+      "madeFrom": "S-band transceivers"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "GaAs and GaN MMICs",
+      "purpose": "Payload amplification",
+      "earthLocations": [
+        "Compound semiconductor fabs"
+      ],
+      "spaceAlternatives": "Import dies; rad screen",
+      "processingRequired": "Burn-in, hermetic packaging"
+    },
+    {
+      "name": "Xenon or hydrazine",
+      "purpose": "Electric or chemical propulsion",
+      "earthLocations": [
+        "Chemical suppliers"
+      ],
+      "spaceAlternatives": "Water electrolysis propellant concepts",
+      "processingRequired": "High-pressure loading"
+    },
+    {
+      "name": "Solar cells",
+      "purpose": "Primary power",
+      "earthLocations": [
+        "III-V multi-junction fabs"
+      ],
+      "spaceAlternatives": "Deployable arrays",
+      "processingRequired": "Coverglass radiation shield"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Define service area and ITU filing",
+      "description": "Coordination with neighbouring satellites; PFD masks.",
+      "prerequisiteTools": [
+        "link budget spreadsheets"
+      ],
+      "warningNote": "Violations cause intentional jamming diplomatic incidents"
+    },
+    {
+      "order": 2,
+      "title": "Qualify parts to radiation",
+      "description": "TID testing; SEE cross-section; latch-up screening.",
+      "prerequisiteTools": [
+        "cyclotron access"
+      ],
+      "warningNote": "Commercial COTS without test dies in weeks"
+    },
+    {
+      "order": 3,
+      "title": "Integrate and vibration test",
+      "description": "Random vibration on shaker; sine burst; modal survey.",
+      "prerequisiteTools": [
+        "vibration lab"
+      ],
+      "warningNote": "Undetected solder cracks wake in orbit"
+    },
+    {
+      "order": 4,
+      "title": "Thermal vacuum cycling",
+      "description": "Bakeout; eclipse simulation; deployables release.",
+      "prerequisiteTools": [
+        "TVAC chamber"
+      ],
+      "warningNote": "Outgassing contaminates optics"
+    },
+    {
+      "order": 5,
+      "title": "Launch and LEOP",
+      "description": "Acquire signal; deploy solar arrays; raise orbit; drift to slot.",
+      "prerequisiteTools": [
+        "ground network"
+      ],
+      "warningNote": "Single-command error can fuel vent — redundancy"
+    }
+  ],
+  "history": [
+    {
+      "year": 1960,
+      "event": "Echo 1 passive reflector; Telstar active relay follows.",
+      "location": "USA/Europe"
+    },
+    {
+      "year": 1965,
+      "event": "Intelsat I Early Bird commercial geostationary service.",
+      "location": "Atlantic",
+      "person": "Harold Rosen (concept lineage)"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "Arthur C. Clarke",
+      "contribution": "Geostationary relay concept article 1945",
+      "years": "1917-2008",
+      "nationality": "British"
+    }
+  ],
+  "impact": "Satellites made live global television and intercontinental telephony routine — and turned orbital slots into strategic assets.\n\nCollapse without launch cadence still benefits from understanding link budgets for terrestrial relays.",
+  "images": [],
+  "videos": [
+    {
+      "id": "link-budget",
+      "title": "Satellite link budgets",
+      "description": "Accredited satellite communications courses.",
+      "durationSeconds": 1200
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "itu-sat",
+      "title": "ITU — satellite filings",
+      "url": "https://www.itu.int/en/ITU-R/space/Pages/default.aspx"
+    },
+    {
+      "id": "nasa-deep-space",
+      "title": "NASA — Deep Space Network",
+      "url": "https://www.nasa.gov/directorates/heo/scan/services/networks/deep_space_network/about"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

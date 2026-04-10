@@ -1,0 +1,197 @@
+{
+  "id": "paper-and-ink-media",
+  "name": "Paper and Ink Media",
+  "tagline": "Thin cellulose sheets and fluid pigments that make writing lightweight, foldable, and mass-producible",
+  "category": "communication",
+  "era": "ancient",
+  "difficulty": 2,
+  "prerequisites": [
+    "writing-early-systems",
+    "cooking"
+  ],
+  "unlocks": [
+    "printing-press-movable-type"
+  ],
+  "problem": "Clay is heavy; parchment is expensive; bamboo slips shuffle apart. Paper — fibrillated cellulose matted into sheets — offers a portable, cuttable substrate that accepts ink without immediate bleed-through if sized.\n\nManufacturing must beat pests: silverfish, mould, and acidic lignin that embrittles sheets. Inks must not fade instantly nor corrode fibres — iron gall ink taught archivists about acidity centuries before pH meters.\n\nPaper made bureaucracy portable enough for empires and later for printed broadsides — a logistics revolution disguised as stationery.",
+  "overview": "Traditional paper pulps rags or wood, beats fibres in water, forms sheets on moulds, presses, and dries. Sizing with gelatin or starch reduces feathering. East Asian papers used mulberry and rice straw; Islamic mills refined rag paper; European industrialisation added Hollander beaters and Fourdrinier machines.\n\nInks span carbon soot binders, iron gall, and later aniline dyes. Fountain pens demanded controlled surface tension; ballpoints needed quick-drying oils.\n\nArchival practice deacidifies; stores in climate control; digitises as insurance — paper is mortal.\n\nFor recovery, rag supply chains and clear water matter as much as presses.",
+  "principles": [
+    {
+      "name": "Hydrogen bonding network",
+      "explanation": "Cellulose fibres mat through hydrogen bonds when drained — strength scales with beating energy and fibre length."
+    },
+    {
+      "name": "Sizing chemistry",
+      "explanation": "Fill pores partially so ink sits atop; oversizing repels ink — balance is empirical."
+    },
+    {
+      "name": "Lignin yellowing",
+      "explanation": "Mechanical wood pulp retains lignin that oxidises — newsprint is ephemeral by chemistry."
+    },
+    {
+      "name": "Capillary wicking",
+      "explanation": "Porosity and fibre orientation set anisotropic spread — grain direction matters for folding and printing."
+    }
+  ],
+  "components": [
+    {
+      "id": "pulp",
+      "name": "Pulp slurry",
+      "function": "Suspends separated fibres",
+      "position": "Vat or machine chest",
+      "madeFrom": "Rag or wood chips after cook"
+    },
+    {
+      "id": "mould",
+      "name": "Mould and deckle",
+      "function": "Forms sheet area and edge",
+      "position": "Hand papermaking",
+      "madeFrom": "Woven brass or plastic screens"
+    },
+    {
+      "id": "press",
+      "name": "Press section",
+      "function": "Removes water mechanically",
+      "position": "Fourdrinier line",
+      "madeFrom": "Felt belts, rollers"
+    },
+    {
+      "id": "size",
+      "name": "Size bath",
+      "function": "Treats sheet surface",
+      "position": "Post-formation",
+      "madeFrom": "Starch or AKD emulsion modern"
+    },
+    {
+      "id": "ink",
+      "name": "Ink formulation",
+      "function": "Provides stable pigment dispersion",
+      "position": "Printer or pen",
+      "madeFrom": "Pigment, vehicle, surfactants"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Cellulosic fibre",
+      "purpose": "Paper body",
+      "earthLocations": [
+        "Cotton and linen rags historically",
+        "softwood kraft pulp modern"
+      ],
+      "spaceAlternatives": "Recycled fibre loops",
+      "processingRequired": "Cook, bleach selectively, beat"
+    },
+    {
+      "name": "Water",
+      "purpose": "Slurry medium and washing",
+      "earthLocations": [
+        "River mills"
+      ],
+      "spaceAlternatives": "Closed-loop treatment",
+      "processingRequired": "Clarify to avoid spots"
+    },
+    {
+      "name": "Pigments",
+      "purpose": "Ink colour",
+      "earthLocations": [
+        "Carbon black",
+        "organic dyes"
+      ],
+      "spaceAlternatives": "Mineral pigments",
+      "processingRequired": "Disperse to submicron to avoid clogging"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Fibre preparation",
+      "description": "Sort rags; remove buttons; cook with lime if needed; beat to fibrillation target.",
+      "prerequisiteTools": [
+        "Hollander beater or stamp mill"
+      ],
+      "warningNote": "Metallic fasteners destroy beaters"
+    },
+    {
+      "order": 2,
+      "title": "Sheet formation",
+      "description": "Vat dip or machine lay; control basis weight with consistency loop.",
+      "prerequisiteTools": [
+        "scales",
+        "micrometres"
+      ],
+      "warningNote": "Uneven couching tears on printing press"
+    },
+    {
+      "order": 3,
+      "title": "Press and dry",
+      "description": "Gradual drying prevents cockling; restraint drying for flatness.",
+      "prerequisiteTools": [
+        "screw press",
+        "loft"
+      ],
+      "warningNote": "Too-fast drying case-hardens surfaces"
+    },
+    {
+      "order": 4,
+      "title": "Size and polish",
+      "description": "Brush gelatin size; calendar if high gloss needed.",
+      "prerequisiteTools": [
+        "brushes"
+      ],
+      "warningNote": "Acidic alum size ages poorly — track pH"
+    },
+    {
+      "order": 5,
+      "title": "Test print",
+      "description": "Proof with intended ink and press pressure; adjust absorbency.",
+      "prerequisiteTools": [
+        "proof press"
+      ],
+      "warningNote": "Coated paper needs different inks than offset stock"
+    }
+  ],
+  "history": [
+    {
+      "year": "105 CE (traditional)",
+      "event": "Cai Lun associated with papermaking improvement in Chinese tradition.",
+      "location": "China",
+      "person": "Cai Lun"
+    },
+    {
+      "year": 1150,
+      "event": "Paper mill established in Xàtiva region — spreads in Islamic world and Europe.",
+      "location": "Al-Andalus"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "Cai Lun",
+      "contribution": "Traditional attribution for Han-era papermaking improvements",
+      "years": "c. 50-121 CE",
+      "nationality": "Chinese"
+    }
+  ],
+  "impact": "Paper lowered the mass-per-word of bureaucracy and scholarship — prerequisite for printing’s economics and for modern notebooks that think alongside engineers.",
+  "images": [],
+  "videos": [
+    {
+      "id": "hand-paper",
+      "title": "Hand papermaking",
+      "description": "Craft demonstrations of mould and deckle technique.",
+      "durationSeconds": 480
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "getty-paper",
+      "title": "Getty — paper conservation",
+      "url": "https://www.getty.edu/conservation/publications_resources/pdf_publications/paper.pdf"
+    },
+    {
+      "id": "iapaper",
+      "title": "International Association of Paper Historians",
+      "url": "http://www.paperhistory.org/"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

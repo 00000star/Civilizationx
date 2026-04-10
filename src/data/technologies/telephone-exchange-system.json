@@ -1,0 +1,194 @@
+{
+  "id": "telephone-exchange-system",
+  "name": "Telephone Exchange System",
+  "tagline": "Switched analogue speech networks — circuit establishment, ringing, billing, and human-scale switching fabrics",
+  "category": "communication",
+  "era": "industrial",
+  "difficulty": 4,
+  "prerequisites": [
+    "electrical-telegraph",
+    "copper-wire-and-cable",
+    "electrical-power-grid"
+  ],
+  "unlocks": [],
+  "problem": "Telegraphy sends bursts; telephony sends continuous waveforms that must arrive recognisably at the other ear. The exchange problem is switching: connecting any subscriber to any other without dedicated pairwise wires between every home — a full mesh is N² madness.\n\nEarly manual boards used cord circuits and ringing generators; Strowger and crossbar switches automated selection; digital switches later sample audio into time slots. Transmission needed loading coils and repeaters to preserve voice band across miles.\n\nPower for carbon microphones and signalling rode the same copper in creative phantom configurations — a reminder that telephony is power electronics wearing a conversation.",
+  "overview": "A subscriber goes off-hook; DC current flows; exchange detects seizure. Dial pulses or DTMF tones convey destination digits; switches hunt an idle path through trunks; supervisory tones communicate progress — ringback, busy, reorder. Billing gear counts pulses or samples call detail records.\n\nTransmission plant uses twisted pairs to reject common-mode noise; carrier systems multiplex many voice channels on coax or microwave before fibre. Echo cancellers fight delay in satellite links.\n\nModern PSTN interworks with cellular and VoIP via gateways — SS7 signalling historically, SIP later — but the human expectation of dialling a number and hearing a ring tone is a century-old interface contract.\n\nStorm resilience, central office battery backup, and craft dispatch are operational technologies as important as schematics.",
+  "principles": [
+    {
+      "name": "Twisted pair balance",
+      "explanation": "Equal and opposite currents cancel radiated pickup — why untwisted house wire hums on audio."
+    },
+    {
+      "name": "4 kHz channel spacing",
+      "explanation": "Legacy FDM stacks 300–3400 Hz voice channels — defines digital sampling at 8 kHz after Nyquist guard."
+    },
+    {
+      "name": "Blocking probability",
+      "explanation": "Erlang models size trunk groups — insufficient trunks yield post-dial busy flashes."
+    },
+    {
+      "name": "Signalling separation",
+      "explanation": "Out-of-band SS7 decouples call setup from voice path — enables mobility and fraud if not authenticated."
+    }
+  ],
+  "components": [
+    {
+      "id": "switch",
+      "name": "Switching fabric",
+      "function": "Connects lines to trunks",
+      "position": "Central office",
+      "madeFrom": "Electromechanical selectors or digital TDM buses"
+    },
+    {
+      "id": "line-card",
+      "name": "Line circuit card",
+      "function": "Battery feed, overvoltage protection, ringing relay",
+      "position": "Main distribution frame",
+      "madeFrom": "SLIC chips modern; relays historically"
+    },
+    {
+      "id": "trunk",
+      "name": "Trunk multiplex equipment",
+      "function": "Aggregates channels",
+      "position": "Tandem offices",
+      "madeFrom": "PDH/SDH muxes historically"
+    },
+    {
+      "id": "mdf",
+      "name": "Main distribution frame",
+      "function": "Cross-connect field copper to equipment",
+      "position": "CO vault",
+      "madeFrom": "Punchdown blocks, lightning protectors"
+    },
+    {
+      "id": "power",
+      "name": "Office -48 V plant",
+      "function": "Feeds subscriber loops during outages",
+      "position": "Battery room",
+      "madeFrom": "Lead-acid strings, rectifiers"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "PE-insulated copper pairs",
+      "purpose": "Outside plant cable",
+      "earthLocations": [
+        "Cable factories globally"
+      ],
+      "spaceAlternatives": "Fibre backhaul later",
+      "processingRequired": "Colour code pairs; fill gel against moisture"
+    },
+    {
+      "name": "Central office steel",
+      "purpose": "Racks and frames",
+      "earthLocations": [
+        "Rolling mills"
+      ],
+      "spaceAlternatives": "Aluminium frames",
+      "processingRequired": "Bonding and grounding"
+    },
+    {
+      "name": "Rare metals in relays",
+      "purpose": "Wiping contacts",
+      "earthLocations": [
+        "Silver cadmium oxide contacts"
+      ],
+      "spaceAlternatives": "Solid-state relays",
+      "processingRequired": "Reflow assembly"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Engineer outside plant",
+      "description": "Gauge pairs for loop length; place loading coils; calculate lightning exposure.",
+      "prerequisiteTools": [
+        "cable gauges",
+        "TDR"
+      ],
+      "warningNote": "Pair swaps mislabel MDNs — database reconciliation"
+    },
+    {
+      "order": 2,
+      "title": "Install MDF and protectors",
+      "description": "Grounding per telcordia/IEC; fuse coordination.",
+      "prerequisiteTools": [
+        "megger"
+      ],
+      "warningNote": "Ground loops cause hum — single-point earth"
+    },
+    {
+      "order": 3,
+      "title": "Commission switch translations",
+      "description": "Digit maps; routing tables; toll fraud filters.",
+      "prerequisiteTools": [
+        "test calls"
+      ],
+      "warningNote": "Misrouted international prefixes bankrupt small carriers"
+    },
+    {
+      "order": 4,
+      "title": "Load-test trunk groups",
+      "description": "Generate Erlang traffic; measure blocking; tune alternate routes.",
+      "prerequisiteTools": [
+        "traffic simulators"
+      ],
+      "warningNote": "Mother’s Day spikes need seasonal margins"
+    },
+    {
+      "order": 5,
+      "title": "Document craft procedures",
+      "description": "Night shift playbooks for card swaps; E911 database updates.",
+      "prerequisiteTools": [
+        "ticketing system"
+      ],
+      "warningNote": "Stale 911 address data kills people"
+    }
+  ],
+  "history": [
+    {
+      "year": 1876,
+      "event": "Bell patents telephone; first exchanges follow within years.",
+      "location": "USA",
+      "person": "Alexander Graham Bell"
+    },
+    {
+      "year": 1892,
+      "event": "Automatic Strowger switch reduces operator labour for small cities.",
+      "location": "USA",
+      "person": "Almon Brown Strowger"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "Alexander Graham Bell",
+      "contribution": "Patent for harmonic telegraph leading to telephone",
+      "years": "1847-1922",
+      "nationality": "Scottish-Canadian-American"
+    }
+  ],
+  "impact": "Telephony put voices in real time across cities — reshaping business, intimacy, and emergency response. Exchanges were the first large-scale connection-oriented networks computers later mimicked.\n\nRecovery must preserve craft knowledge of copper plant, not only VoIP overlays.",
+  "images": [],
+  "videos": [
+    {
+      "id": "pstn-arch",
+      "title": "PSTN architecture overview",
+      "description": "Telecommunications engineering lectures on CO functions.",
+      "durationSeconds": 900
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "itu-t",
+      "title": "ITU-T — telecommunication standardization",
+      "url": "https://www.itu.int/en/ITU-T/about/"
+    },
+    {
+      "id": "fcc-voip",
+      "title": "FCC — voice services context (USA)",
+      "url": "https://www.fcc.gov/consumers/guides/voice-over-internet-protocol-voip"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

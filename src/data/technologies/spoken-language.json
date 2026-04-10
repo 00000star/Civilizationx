@@ -1,0 +1,158 @@
+{
+  "id": "spoken-language",
+  "name": "Spoken Language",
+  "tagline": "Shared sound patterns that coordinate teaching, planning, and culture faster than gesture alone",
+  "category": "communication",
+  "era": "prehistoric",
+  "difficulty": 1,
+  "prerequisites": [],
+  "unlocks": [
+    "writing-early-systems"
+  ],
+  "problem": "Without speech, knowledge is bound to immediate demonstration. Multi-step plans — hunting drives, bridge building, negotiating truce — collapse when participants cannot serialise intentions into compact symbols others correct. Sound crosses brush and dark; it frees hands; it enables children to download centuries in years.\n\nThe obstacle is not vocal cords alone but social agreement: stable meanings, norms of truthfulness, and institutions that correct drift. Oral societies preserve technique in metre and story — beautiful but lossy across bottlenecks.\n\nEvery later communication technology is compression of speech: writing freezes word order; telegraph pays per character; codecs predict phonemes.",
+  "overview": "Spoken language combines a finite phoneme inventory with compositional grammar. Prosody layers intent and affect. Acquisition in children couples statistical learning with caregiver feedback; adults learn second languages with more effort but the same combinatorial core.\n\nOral corpora — law, medicine, navigation — rely on rhythm and redundancy for fidelity. Writing partially replaces those affordances with external error correction.\n\nFor recovery, preserving fluent expert dialogue alongside books rebuilds tacit motor skills faster than silent reading alone.",
+  "principles": [
+    {
+      "name": "Compositionality",
+      "explanation": "Finite means, infinite use — new sentences remain interpretable if grammar is shared."
+    },
+    {
+      "name": "Pragmatic enrichment",
+      "explanation": "Context disambiguates reference; without shared ground, even perfect syntax miscommunicates."
+    },
+    {
+      "name": "Sound change",
+      "explanation": "Pronunciation drifts; orthography lags — literacy partially freezes phonology."
+    },
+    {
+      "name": "Displacement",
+      "explanation": "Language references absent objects and times — prerequisite for planning and history."
+    }
+  ],
+  "components": [
+    {
+      "id": "phonology",
+      "name": "Phonological inventory",
+      "function": "Contrasts meaningful sounds",
+      "position": "Learned early",
+      "madeFrom": "Neural maps shaped by exposure"
+    },
+    {
+      "id": "lexicon",
+      "name": "Lexicon",
+      "function": "Stores form-meaning mappings",
+      "position": "Long-term memory",
+      "madeFrom": "Distributed cortical traces"
+    },
+    {
+      "id": "grammar",
+      "name": "Grammar",
+      "function": "Combines morphemes into interpretable utterances",
+      "position": "Real-time production and parsing",
+      "madeFrom": "Rule-like regularities or constraint interactions"
+    },
+    {
+      "id": "pragmatics",
+      "name": "Pragmatics",
+      "function": "Manages implicature, politeness, turn-taking",
+      "position": "Every utterance",
+      "madeFrom": "Social norms"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Living speech community",
+      "purpose": "Maintains and negotiates the code",
+      "earthLocations": [
+        "Everywhere humans congregate"
+      ],
+      "spaceAlternatives": "Scheduled social bandwidth; latency harms prosody cues",
+      "processingRequired": "Intergenerational teaching institutions"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Anchor joint attention",
+      "description": "Pair words with salient objects and actions until learners expect labels.",
+      "prerequisiteTools": [
+        "caregivers",
+        "stable routines"
+      ],
+      "warningNote": "Coercion without meaning produces mimicry only"
+    },
+    {
+      "order": 2,
+      "title": "Expand core vocabulary",
+      "description": "Prioritise hazards, tools, kinship, and directions observable in environment.",
+      "prerequisiteTools": [
+        "naming games"
+      ],
+      "warningNote": "Homonyms across dialects confuse rebuild teams — document senses"
+    },
+    {
+      "order": 3,
+      "title": "Teach narrative and argument",
+      "description": "Use stories with false-belief tasks; train correction culture.",
+      "prerequisiteTools": [
+        "council meetings"
+      ],
+      "warningNote": "Gossip can destroy trust faster than fire"
+    },
+    {
+      "order": 4,
+      "title": "Drill noisy-channel resilience",
+      "description": "Practice high wind, long distance, and interrupted turns — maritime and steppe cultures preserved such drills.",
+      "prerequisiteTools": [
+        "whistles optional"
+      ],
+      "warningNote": "Homophones become dangerous in aviation-style readbacks"
+    },
+    {
+      "order": 5,
+      "title": "Record oral corpus when possible",
+      "description": "Even before writing, cyclic festivals audit technical terms for drift.",
+      "prerequisiteTools": [
+        "memory techniques"
+      ],
+      "warningNote": "Power hierarchies distort transcripts — rotate scribes"
+    }
+  ],
+  "history": [
+    {
+      "year": "300000+ years ago",
+      "event": "Debate continues on timing of full language; anatomical proxies suggest long evolution.",
+      "location": "Africa"
+    },
+    {
+      "year": "Upper Palaeolithic",
+      "event": "Symbolic behaviour and trade imply complex proposition exchange.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Speech is the substrate of law, science, and love letters yet unwritten. Lose fluent communities and you lose more than accent — you lose debugging bandwidth.",
+  "images": [],
+  "videos": [
+    {
+      "id": "lang-acq",
+      "title": "Language acquisition overview",
+      "description": "Accredited linguistics lectures on child-directed speech.",
+      "durationSeconds": 600
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "wals",
+      "title": "World Atlas of Language Structures",
+      "url": "https://wals.info/"
+    },
+    {
+      "id": "plato-lang",
+      "title": "Stanford Encyclopedia — philosophy of language",
+      "url": "https://plato.stanford.edu/entries/language/"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}
