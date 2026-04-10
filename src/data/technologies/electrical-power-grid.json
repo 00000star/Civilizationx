@@ -1,0 +1,54 @@
+{
+  "id": "electrical-power-grid",
+  "name": "Electrical Power Grid",
+  "tagline": "Synchronised generation, transmission, and distribution that move gigawatts across continents with second-level control",
+  "category": "energy",
+  "era": "industrial",
+  "difficulty": 4,
+  "prerequisites": ["steam-turbine-electric-generation", "steel-production", "copper-wire-and-cable", "electrical-transformer"],
+  "unlocks": ["electric-motor"],
+  "problem": "Local dynamos can light one mill, but civilisation wanted power where rivers were absent. The grid problem is moving electrical energy with acceptable loss, preserving voltage for end users, and keeping thousands of generators phase-locked so clocks stay honest and motors do not fight each other.\n\nFaults propagate at light speed in conductors; trees touch lines; storms trip relays. Without protection coordination, a neighbourhood short can black out a province. Stability is a coupled control problem: mechanical inertia, excitation systems, tap changers, and human dispatchers trading frequency against fuel cost.\n\nThe grid is therefore not wires alone but standards: frequency, earthing practices, harmonic limits, and markets that incentivise reserves.",
+  "overview": "Generators produce three-phase sinusoidal voltages stepped up by transformers for long-distance transmission at hundreds of kilovolts. Bundle conductors reduce corona; series compensation and FACTS devices manage reactive power and oscillations. Substations break and reconfigure paths; distribution feeders step down to customer voltage classes.\n\nProtection uses relays measuring current differentials, distance, and frequency-rate-of-change. SCADA overlays human visibility; automatic generation control nudges power setpoints to restore scheduled interchanges. Inverter-based resources (solar, batteries, wind) change classical inertia assumptions — new grid-forming controls emulate stability services.\n\nEarthing practices manage touch potentials during faults. Insulation coordination selects BIL levels for lightning. Underground urban networks trade capacitance and cost against aesthetics.\n\nOperationally, the grid is one of civilisation’s largest real-time control loops — imperfect, political, and indispensable.",
+  "principles": [
+    {"name": "AC versus DC trade-offs", "explanation": "Transformers make AC trivial to step in voltage; HVDC wins on very long submarine links and asynchronous interties where phase is incompatible."},
+    {"name": "Reactive power", "explanation": "Inductive loads need vars; capacitors, reactors, and generator excitation supply them — neglecting vars collapses voltage locally."},
+    {"name": "Symmetrical components", "explanation": "Unbalanced faults decompose into positive, negative, and zero sequences — the algebra protection engineers live in."},
+    {"name": "Stability margin", "explanation": "Rotor angle swings after a fault must decay; insufficient synchronising torque leads to pole slipping and separation."}
+  ],
+  "components": [
+    {"id": "transmission", "name": "Transmission lines and towers", "function": "Carries bulk power with minimal I²R loss", "position": "Inter-city corridors", "madeFrom": "ACSR conductors, steel lattice, porcelain or composite insulators"},
+    {"id": "transformer", "name": "Power transformers", "function": "Steps voltage between transmission, sub-transmission, and distribution", "position": "Substations", "madeFrom": "Laminated core, copper windings, mineral or ester oil", "criticalNote": "Buchholz relays detect internal arcing gas"},
+    {"id": "breaker", "name": "Circuit breakers", "function": "Interrupts fault current; isolates equipment", "position": "Substations and feeders", "madeFrom": "SF6 or vacuum interrupters modern"},
+    {"id": "relay", "name": "Protective relays and IEDs", "function": "Detects faults and trips breakers selectively", "position": "Control houses", "madeFrom": "Microprocessor relays with fibre time sync"},
+    {"id": "scada", "name": "SCADA and EMS", "function": "Supervises topology, alarms, and economic dispatch", "position": "Control centres", "madeFrom": "Servers, secure networks, human operators"}
+  ],
+  "rawMaterials": [
+    {"name": "Aluminium and steel conductors", "purpose": "Low-resistance lines and structural towers", "earthLocations": ["Bauxite belts", "iron ore ranges"], "spaceAlternatives": "Copper heavier — launch-cost sensitive", "processingRequired": "Stranding, annealing, galvanising"},
+    {"name": "Transformer core steel", "purpose": "Low-hysteresis magnetic circuits", "earthLocations": ["Speciality rolling mills in Japan, USA, EU"], "spaceAlternatives": "Import until cold-rolling exists", "processingRequired": "Grain-oriented silicon steel"},
+    {"name": "Insulating oil or gas", "purpose": "Cooling and insulation in switchgear", "earthLocations": ["Refineries for mineral oil", "fluorochemical plants for SF6"], "spaceAlternatives": "Dry-type transformers trade size for maintenance", "processingRequired": "Degas and dry before energisation"}
+  ],
+  "buildSteps": [
+    {"order": 1, "title": "Load-flow and short-circuit studies", "description": "Model N-1 contingencies; verify thermal ratings; coordinate relay curves.", "prerequisiteTools": ["power flow software"], "warningNote": "Underestimating motor starting current causes nuisance trips"},
+    {"order": 2, "title": "Erect structures and string conductors", "description": "Maintain sags and clearances; install armour grounding; anti-climb where public access exists.", "prerequisiteTools": ["tensioners", "hot sticks"], "warningNote": "Induction from parallel lines can energise de-energised spans — always verify"},
+    {"order": 3, "title": "Commission substations", "description": "Apply vacuum to transformers; measure partial discharge; phasing checks before closing rings.", "prerequisiteTools": ["dissipation factor test set"], "warningNote": "Incorrect polarity on VTs mis-aims relays"},
+    {"order": 4, "title": "Protective relay testing", "description": "Secondary inject currents and voltages; verify trip times; document settings versions.", "prerequisiteTools": ["relay test set"], "warningNote": "Firmware updates invalidate old setting sheets"},
+    {"order": 5, "title": "Energise and monitor stability", "description": "Start with radial feeds; close loops after phase checks; tune AGC and damping controllers.", "prerequisiteTools": ["PMU data"], "warningNote": "Closing out-of-phase ties explodes equipment"}
+  ],
+  "history": [
+    {"year": 1886, "event": "Great Barrington demonstration transmits AC power — early argument for polyphase systems.", "location": "Massachusetts, USA"},
+    {"year": 1896, "event": "Niagara Falls Adams Plant sends long-distance AC transmission to Buffalo.", "location": "USA"},
+    {"year": 1954, "event": "HVDC link connects Gotland — submarine DC interties mature.", "location": "Sweden"}
+  ],
+  "inventors": [
+    {"name": "Nikola Tesla", "contribution": "Polyphase AC systems enabling practical long-distance transmission", "years": "1856-1943", "nationality": "Serbian-American"}
+  ],
+  "impact": "Grids synchronised industry to a clock of electrons — enabling motors, lighting, and later computing at arbitrary distance from fuel piles. They also created blackout risk as a political fact.\n\nOff-world, microgrids precede continents of copper; the same physics applies at smaller perimeters.",
+  "images": [],
+  "videos": [{"id": "grid-101", "title": "Power system basics", "description": "Accredited electrical engineering introductions to load flow and protection zones.", "durationSeconds": 1200}],
+  "externalLinks": [
+    {"id": "nerc", "title": "NERC — reliability standards (context)", "url": "https://www.nerc.com/"},
+    {"id": "eia-grid", "title": "EIA — electricity delivery and reliability", "url": "https://www.eia.gov/energyexplained/electricity/delivery-to-consumers.php"}
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

@@ -1,0 +1,182 @@
+{
+  "id": "writing-early-systems",
+  "name": "Writing (Early Systems)",
+  "tagline": "Visible marks that store language across time — from tokens to cuneiform and hieroglyphs",
+  "category": "communication",
+  "era": "ancient",
+  "difficulty": 2,
+  "prerequisites": [
+    "spoken-language",
+    "ceramics-and-pottery"
+  ],
+  "unlocks": [
+    "paper-and-ink-media"
+  ],
+  "problem": "Speech fades when the breath stops. Accounting for granaries, tithes, and loans needed tallies that survived seasons. Early writing solves external memory: marks on clay, stone, or papyrus that rehydrate meaning in competent readers.\n\nThe obstacle shifts from air to material: durable substrates, standardised signs, and scribal training. Pictographic and syllabic systems trade learnability for compactness; mastering thousands of signs is a profession.\n\nWriting also enables law codes and propaganda — power concentrates around literate castes until literacy spreads.",
+  "overview": "Proto-writing used clay tokens then impressed tablets; cuneiform pressed wedge strokes into wet clay; Egyptian hieroglyphs mixed logographic and phonetic signs. Rebus principle maps sound of pictured word to unrelated homonyms — bridge to syllabaries.\n\nScribes used styluses, palettes, and firing kilns for tablets. Copying errors become manuscript traditions; commentaries fossilise readings.\n\nLiteracy rates stayed tiny for millennia; still, writing let empires administer distance — orders could outlive couriers if sealed and authenticated.\n\nDecipherment today uses bilinguals like Rosetta parallels — a warning to archive dictionaries, not just texts.",
+  "principles": [
+    {
+      "name": "Rebus and phonetisation",
+      "explanation": "Pictures of things whose names sound like abstract words bootstrap syllabic spelling."
+    },
+    {
+      "name": "Determinatives",
+      "explanation": "Silent classifiers disambiguate homographic logograms — early error correction."
+    },
+    {
+      "name": "Material constraints",
+      "explanation": "Clay encourages wedge strokes; papyrus encourages ink flows — script shape is partly substrate physics."
+    },
+    {
+      "name": "Orthographic depth",
+      "explanation": "Mapping from graphemes to phonemes can be opaque — reading becomes partially memorised lexicon even in alphabets."
+    }
+  ],
+  "components": [
+    {
+      "id": "substrate",
+      "name": "Tablet or scroll substrate",
+      "function": "Carries marks physically",
+      "position": "Archive or messenger tube",
+      "madeFrom": "Clay, papyrus, stone"
+    },
+    {
+      "id": "stylus",
+      "name": "Stylus, brush, or chisel",
+      "function": "Applies marks with repeatable strokes",
+      "position": "Scribe hand",
+      "madeFrom": "Reed, bone, metal"
+    },
+    {
+      "id": "signary",
+      "name": "Sign inventory",
+      "function": "Encodes morphemes, syllables, or words",
+      "position": "Pedagogical curriculum",
+      "madeFrom": "Curated tradition"
+    },
+    {
+      "id": "seal",
+      "name": "Seal and authentication",
+      "function": "Binds identity to document",
+      "position": "Clay envelope or tag",
+      "madeFrom": "Stone cylinder seals"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Clay and temper",
+      "purpose": "Tablet medium",
+      "earthLocations": [
+        "Mesopotamian alluvium",
+        "Nile mud"
+      ],
+      "spaceAlternatives": "Sintered regolith tablets if humour permits",
+      "processingRequired": "Levigate; wedge while leather-hard; fire optional"
+    },
+    {
+      "name": "Carbon black and gum",
+      "purpose": "Ink precursors on papyrus",
+      "earthLocations": [
+        "Lampblack production",
+        "acacia gum"
+      ],
+      "spaceAlternatives": "Synthetic pigments later",
+      "processingRequired": "Mulling into binder"
+    },
+    {
+      "name": "Papyrus or parchment",
+      "purpose": "Flexible scrolls",
+      "earthLocations": [
+        "Nile delta papyrus",
+        "sheep economies for parchment"
+      ],
+      "spaceAlternatives": "Paper replaces when available",
+      "processingRequired": "Layering, pressing, polishing"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Standardise sign list",
+      "description": "Choose finite repertory; document stroke order; forbid idiosyncratic squiggles in official tablets.",
+      "prerequisiteTools": [
+        "master scribe"
+      ],
+      "warningNote": "Sign multiplication defeats pedagogy"
+    },
+    {
+      "order": 2,
+      "title": "Prepare tablets",
+      "description": "Uniform thickness; smooth face; control drying rate to avoid curling.",
+      "prerequisiteTools": [
+        "wooden battens"
+      ],
+      "warningNote": "Air bubbles pop during firing — inspect leather-hard"
+    },
+    {
+      "order": 3,
+      "title": "Teach copying cycles",
+      "description": "Dictation then independent composition; peer marking reduces drift.",
+      "prerequisiteTools": [
+        "schoolroom"
+      ],
+      "warningNote": "Dyslexia analogues exist — rotate teaching methods"
+    },
+    {
+      "order": 4,
+      "title": "Archive with indexes",
+      "description": "Edge marks, tags, and shelved orientation speed retrieval.",
+      "prerequisiteTools": [
+        "shelves",
+        "catalogue tablets"
+      ],
+      "warningNote": "Flood and fire are symmetric threats — duplicate sites"
+    },
+    {
+      "order": 5,
+      "title": "Publish law and ritual corpora",
+      "description": "Visible stelae synchronise public meaning; reduces elite-only drift.",
+      "prerequisiteTools": [
+        "stone masons"
+      ],
+      "warningNote": "Propaganda risk — pair with critique institutions"
+    }
+  ],
+  "history": [
+    {
+      "year": "3400-3100 BCE",
+      "event": "Proto-cuneiform accounting tablets in Uruk.",
+      "location": "Mesopotamia"
+    },
+    {
+      "year": "3200 BCE",
+      "event": "Early hieroglyphic inscription on labels in Abydos contexts.",
+      "location": "Egypt"
+    }
+  ],
+  "inventors": [],
+  "impact": "Writing turned speech into inventory — law, recipe, and insult alike. It also created scribal power until alphabets and printing widened access.",
+  "images": [],
+  "videos": [
+    {
+      "id": "cuneiform",
+      "title": "Cuneiform and early writing",
+      "description": "Museum educator videos on clay tablet production.",
+      "durationSeconds": 720
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "met-writing",
+      "title": "The Met — origins of writing",
+      "url": "https://www.metmuseum.org/toah/hd/writing/hd_writing.htm"
+    },
+    {
+      "id": "britannica-cuneiform",
+      "title": "Britannica — cuneiform",
+      "url": "https://www.britannica.com/topic/cuneiform"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

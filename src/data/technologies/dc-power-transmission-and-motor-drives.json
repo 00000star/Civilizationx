@@ -1,0 +1,189 @@
+{
+  "id": "dc-power-transmission-and-motor-drives",
+  "name": "DC Power Transmission and Motor Drives",
+  "tagline": "Rectifiers, inverters, and choppers that move or motor power when AC alone is insufficient",
+  "category": "energy",
+  "era": "mid-20th",
+  "difficulty": 4,
+  "prerequisites": [
+    "electrical-power-grid",
+    "electric-motor",
+    "copper-wire-and-cable"
+  ],
+  "unlocks": [],
+  "problem": "AC won distribution because transformers are simple, but long submarine cables look like enormous capacitors — charging current can exceed useful load. HVDC links move power as DC with converters at ends, decoupling grids that cannot synchronise. Urban traction and battery vehicles need controlled DC buses; variable-speed drives need frequency synthesis AC from fixed grid.\n\nThe obstacle is power electronics: mercury-arc valves historically, thyristors, GTOs, IGBTs, and now SiC MOSFETs — each step raises switching frequency and efficiency but demands protection against shoot-through and voltage transients.\n\nHarmonics pollute the AC side; filters and PWM strategies are part of the civic duty of converters.",
+  "overview": "Line-commutated converters use thyristor bridges with AC grid commutation; weak grids struggle — voltage-source converters with IGBTs and PWM self-commutate and support black-start services. MMC topologies stack submodules for smooth waveforms. Motor drives rectify incoming AC, buffer on DC link, then invert to variable frequency for induction or PM motors.\n\nProtection includes DC breakers (harder than AC zero-cross interruption), metallic return electrodes for monopolar operation, and coordination with AC-side relays. Control systems run real-time models to damp subsynchronous oscillations on series-compensated lines feeding converters.\n\nSubmarine HVDC ties land offshore wind; overhead HVDC appears where right-of-way width must shrink for the same power.\n\nThe technology is the diplomatic interface between incompatible grids — and between chemical batteries and rotating masses.",
+  "principles": [
+    {
+      "name": "Line versus self commutation",
+      "explanation": "LCC needs strong AC voltage to commutate current; VSC can form its own sinusoids with PWM."
+    },
+    {
+      "name": "DC cable ampacity",
+      "explanation": "No skin effect at DC — conductor used more uniformly than AC at same size, helping submarine economics."
+    },
+    {
+      "name": "PWM harmonic spectrum",
+      "explanation": "Carrier frequency and modulation index set harmonic amplitudes filtered by LCL networks."
+    },
+    {
+      "name": "Four-quadrant operation",
+      "explanation": "Drives can motor or regenerate — braking energy returns to grid or burns in resistors if infrastructure forbids."
+    }
+  ],
+  "components": [
+    {
+      "id": "thyristor-bridge",
+      "name": "Thyristor or IGBT valves",
+      "function": "Rectifies or inverts power",
+      "position": "Converter hall",
+      "madeFrom": "Series-connected devices with snubbers"
+    },
+    {
+      "id": "dc-reactor",
+      "name": "DC smoothing reactor",
+      "function": "Limits fault di/dt; smooths current in LCC",
+      "position": "DC bus",
+      "madeFrom": "Air-core or iron-core inductors"
+    },
+    {
+      "id": "ac-filter",
+      "name": "AC harmonic filters",
+      "function": "Shunts characteristic harmonics",
+      "position": "Converter AC bus",
+      "madeFrom": "L-C branches tuned to 11th, 13th, etc."
+    },
+    {
+      "id": "cooling",
+      "name": "Deionised water cooling",
+      "function": "Removes heat from valve towers",
+      "position": "Indoor converter",
+      "madeFrom": "Stainless plate heat exchangers"
+    },
+    {
+      "id": "control",
+      "name": "Real-time controller",
+      "function": "Executes vector control or MMC balancing",
+      "position": "Redundant CPUs",
+      "madeFrom": "FPGA + DSP platforms"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Silicon or SiC dies",
+      "purpose": "Switching devices",
+      "earthLocations": [
+        "Wafer fabs globally"
+      ],
+      "spaceAlternatives": "Import modules until fabs exist",
+      "processingRequired": "Wire bond, solder, void-free attach"
+    },
+    {
+      "name": "Copper buswork",
+      "purpose": "Low inductance interconnections",
+      "earthLocations": [
+        "Refined copper"
+      ],
+      "spaceAlternatives": "Aluminium bus for weight",
+      "processingRequired": "Silver plating contacts"
+    },
+    {
+      "name": "Mica or polymer films",
+      "purpose": "DC bus capacitors",
+      "earthLocations": [
+        "Film capacitor plants"
+      ],
+      "spaceAlternatives": "Electrolytics for cost at low voltage",
+      "processingRequired": "Self-healing metallisation"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Load flow and dynamic studies",
+      "description": "Model LCC versus VSC; check SCR of receiving AC system; tune PLL gains.",
+      "prerequisiteTools": [
+        "EMTDC/PSCAD class tools"
+      ],
+      "warningNote": "Undamped SSR can wreck turbine shafts"
+    },
+    {
+      "order": 2,
+      "title": "Assemble valve stacks",
+      "description": "Series connect devices with grading resistors; torque bus to spec; hi-pot each level.",
+      "prerequisiteTools": [
+        "partial discharge meter"
+      ],
+      "warningNote": "Static discharge kills gate oxides"
+    },
+    {
+      "order": 3,
+      "title": "Commission controls",
+      "description": "Verify firing order; test fault ride-through scripts; black-start drills if applicable.",
+      "prerequisiteTools": [
+        "oscilloscope with isolated probes"
+      ],
+      "warningNote": "Ground loops corrupt measurements — use fibre-isolated front ends"
+    },
+    {
+      "order": 4,
+      "title": "Energise at reduced DC voltage",
+      "description": "Ramp power; monitor valve temperatures; scan harmonics at POC.",
+      "prerequisiteTools": [
+        "PQ analyser"
+      ],
+      "warningNote": "Filter detuning from temperature shifts passbands"
+    },
+    {
+      "order": 5,
+      "title": "Handover with spares policy",
+      "description": "Stock redundant submodule cards; train operators on alarm trees.",
+      "prerequisiteTools": [
+        "asset management software"
+      ],
+      "warningNote": "Firmware version drift across spares causes mysterious trips"
+    }
+  ],
+  "history": [
+    {
+      "year": 1954,
+      "event": "Gotland HVDC link demonstrates commercial submarine DC transmission.",
+      "location": "Sweden"
+    },
+    {
+      "year": 1972,
+      "event": "Eel River back-to-back LCC ties asynchronous eastern and western North American grids.",
+      "location": "Canada"
+    },
+    {
+      "year": 2010,
+      "event": "Modular multilevel converters proliferate in offshore wind and city infeed projects.",
+      "location": "Europe and China"
+    }
+  ],
+  "inventors": [],
+  "impact": "HVDC and drives are the duct tape of modern power — stitching asynchronous regions and spinning motors at arbitrary speed without mechanical gears.\n\nThey are also harmonic pollution sources if designed without civic filters.",
+  "images": [],
+  "videos": [
+    {
+      "id": "hvdc-basics",
+      "title": "HVDC converter concepts",
+      "description": "University lectures comparing LCC and VSC topologies.",
+      "durationSeconds": 1200
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "abb-hvdc",
+      "title": "Hitachi Energy — HVDC reference projects (industry)",
+      "url": "https://www.hitachienergy.com/us/en/offers/product-system/high-voltage-direct-current-hvdc"
+    },
+    {
+      "id": "iea-hvdc",
+      "title": "IEA — grid integration reports",
+      "url": "https://www.iea.org/"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

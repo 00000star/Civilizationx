@@ -1,0 +1,194 @@
+{
+  "id": "optical-fiber-communications",
+  "name": "Optical Fiber Communications",
+  "tagline": "Dielectric waveguides carrying terabits on photons — low loss, high bandwidth, immunity to copper theft",
+  "category": "communication",
+  "era": "late-20th",
+  "difficulty": 5,
+  "prerequisites": [
+    "communication-satellites",
+    "transistor",
+    "glass-making"
+  ],
+  "unlocks": [
+    "internet-protocols-and-web"
+  ],
+  "problem": "Copper pairs attenuate and pick up EMI; coax thickens with distance. Glass fibres guide infrared light in total internal reflection with losses below 0.2 dB/km — enabling transoceanic routes without repeaters every kilometre. The problem is purity: ppm metal ions quench transparency; splices must align cores sub-micron; lasers must modulate GHz without chirp smearing pulses.\n\nDWDM stacks dozens of lambdas on one fibre — turning spectrum economics into optical physics. Dispersion and nonlinearities limit reach; Raman amplification and coherent detection push thousands of kilometres.\n\nFibre is fragile — macrobends and dirty connectors dominate field faults more than cable theft.",
+  "overview": "Preforms are deposited with MCVD or OVD; drawn into fibre; coated with UV acrylate; cabled with strength members and gel. Lasers (DFB, tunable) launch into single-mode fibre at 1310/1550 nm windows. EDFA amplifiers boost WDM combes en route. Receivers use PIN or APD photodiodes then TIAs and DSPs in coherent systems.\n\nPON access splits one feeder to hundreds of homes with passive splitters — GPON/XGS-PON standards govern bursts upstream.\n\nSplicing uses fusion arcs; OTDR reflects locate breaks; cleaning sticks fix most ‘mysterious’ outages.\n\nDark fibre leases became financial instruments — idle strands as options on future bandwidth.",
+  "principles": [
+    {
+      "name": "V-number and modes",
+      "explanation": "Single-mode cutoff ensures one spatial mode — avoids modal dispersion."
+    },
+    {
+      "name": "Material and waveguide dispersion",
+      "explanation": "Chromatic dispersion broadens pulses; dispersion-shifted fibre trades against nonlinear penalties."
+    },
+    {
+      "name": "WDM crosstalk",
+      "explanation": "Imperfect filters leak neighbours; guard bands cost capacity."
+    },
+    {
+      "name": "Shot noise limit",
+      "explanation": "Photons arrive Poisson — sensitivity floors for given BER."
+    }
+  ],
+  "components": [
+    {
+      "id": "laser",
+      "name": "Laser transmitter",
+      "function": "Intensity or phase modulates carrier",
+      "position": "Transponder",
+      "madeFrom": "InP DFB laser, driver IC"
+    },
+    {
+      "id": "fiber",
+      "name": "Single-mode fibre span",
+      "function": "Low-loss medium",
+      "position": "Duct or submarine",
+      "madeFrom": "Fused silica core, cladding"
+    },
+    {
+      "id": "edfa",
+      "name": "Erbium-doped fibre amplifier",
+      "function": "Optical gain inline",
+      "position": "Repeater hut",
+      "madeFrom": "EDF, pump lasers at 980/1480 nm"
+    },
+    {
+      "id": "mux",
+      "name": "WDM multiplexer",
+      "function": "Combines lambdas",
+      "position": "Terminal",
+      "madeFrom": "AWG or thin-film filters"
+    },
+    {
+      "id": "coherent-dsp",
+      "name": "Coherent receiver DSP",
+      "function": "Equalises CD and PMD digitally",
+      "position": "Line card",
+      "madeFrom": "ASIC FEC and carrier recovery"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Silicon tetrachloride",
+      "purpose": "MCVD glass precursor",
+      "earthLocations": [
+        "Chlor-alkali industry"
+      ],
+      "spaceAlternatives": "Import preforms",
+      "processingRequired": "Ultra-dry delivery lines"
+    },
+    {
+      "name": "Germanium dopant",
+      "purpose": "Core index raising",
+      "earthLocations": [
+        "ZnO smelter byproduct streams"
+      ],
+      "spaceAlternatives": "Alternative dopants",
+      "processingRequired": "Controlled partial pressure in preform"
+    },
+    {
+      "name": "Indium phosphide wafers",
+      "purpose": "Laser chips",
+      "earthLocations": [
+        "III-V fabs"
+      ],
+      "spaceAlternatives": "Silicon photonics hybrid",
+      "processingRequired": "Facet coating anti-reflection"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Design span budget",
+      "description": "Choose launch power, amplifier spacing, and FEC overhead; verify nonlinear SNI limit.",
+      "prerequisiteTools": [
+        "simulation tools"
+      ],
+      "warningNote": "Too high launch worsens FWM"
+    },
+    {
+      "order": 2,
+      "title": "Install cable with bend radius",
+      "description": "Mandrel tests; tensile during pull; splice trailers climate controlled.",
+      "prerequisiteTools": [
+        "OTDR"
+      ],
+      "warningNote": "Tight bends add permanent attenuation"
+    },
+    {
+      "order": 3,
+      "title": "Fusion splice and proof test",
+      "description": "Core alignment; tensile proof; heat-shrink protectors.",
+      "prerequisiteTools": [
+        "fusion splicer"
+      ],
+      "warningNote": "Dirty fibres arc and pit"
+    },
+    {
+      "order": 4,
+      "title": "Characterise PMD and CD",
+      "description": "Field measurements for coherent provisioning; update DSP presets.",
+      "prerequisiteTools": [
+        "PMD analyser"
+      ],
+      "warningNote": "Old fibre plant surprises new gear"
+    },
+    {
+      "order": 5,
+      "title": "Turn-up with loopbacks",
+      "description": "BER tests; optical spectrum snapshots; alarm integration to NOC.",
+      "prerequisiteTools": [
+        "BER tester"
+      ],
+      "warningNote": "Wrong wavelength channel wipes wrong customer"
+    }
+  ],
+  "history": [
+    {
+      "year": 1970,
+      "event": "Low-loss fused silica fibre breakthrough at Corning.",
+      "location": "USA",
+      "person": "Robert Maurer, Donald Keck, Peter Schultz"
+    },
+    {
+      "year": 1988,
+      "event": "TAT-8 first transatlantic submarine fibre cable.",
+      "location": "Atlantic"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "Charles K. Kao",
+      "contribution": "Pioneering work on fibre communications feasibility",
+      "years": "1933-2018",
+      "nationality": "British-American"
+    }
+  ],
+  "impact": "Fibre carries the bulk backbone of the internet — satellites and radio are edges; glass is the spine.\n\nUnderstanding OTDR is understanding archaeology for light.",
+  "images": [],
+  "videos": [
+    {
+      "id": "fiber-drawing",
+      "title": "Fibre drawing tower",
+      "description": "Factory tours of preform to fibre.",
+      "durationSeconds": 600
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "itu-t-fiber",
+      "title": "ITU-T — optical transport standards",
+      "url": "https://www.itu.int/en/ITU-T/about/"
+    },
+    {
+      "id": "ofc",
+      "title": "OFC — optical fibre communication conference",
+      "url": "https://www.ofcconference.org/"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

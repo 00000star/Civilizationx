@@ -1,0 +1,224 @@
+{
+  "id": "internet-protocols-and-web",
+  "name": "Internet Protocols and the World Wide Web",
+  "tagline": "TCP/IP internetworking plus HTTP, HTML, TLS, and DNS — packets, names, and documents on one stack",
+  "category": "communication",
+  "era": "21st-century",
+  "difficulty": 5,
+  "prerequisites": [
+    "transistor",
+    "telephone-exchange-system",
+    "radio-broadcast-and-receiver",
+    "optical-fiber-communications"
+  ],
+  "unlocks": [],
+  "problem": "Circuit-switched telephony ties bandwidth whether you speak or not; bursty data needs statistical multiplexing. Packet networks slice information into self-describing datagrams routed independently; TCP adds reliability and congestion control at the ends while IP provides best-effort delivery — the substrate on which everything else sits.\n\nAbove transport, humans need documents and services addressed by names, fetched with caching, and protected against tampering on untrusted paths. The web stacks HTTP semantics on TLS on DNS on BGP-routed IP — each layer a failure mode: certificate authorities, cache poisoning, mixed content, and tracking economies.\n\nScaling required hierarchical addressing, CIDR aggregation, CDNs, anycast, and eventual consistency databases — latency engineering disguised as sociology (where you place caches shapes who loads faster).\n\nThe political problem equals the technical: centralised platforms, censorship, and misinformation ride the same protocols that host scientific collaboration and disaster coordination.",
+  "overview": "Hosts encapsulate TCP or UDP segments into IP packets; routers longest-prefix match tables updated by IGPs internally and BGP between autonomous systems. Ethernet MAC frames carry IP on LANs; MPLS labels speed carrier cores; VPNs tunnel across untrusted paths. TCP’s AIMD congestion control reacts to loss; QUIC merges encryption with UDP-based transport for the web.\n\nBrowsers resolve names via DNS (often over HTTPS), open TCP or QUIC connections, negotiate TLS certificates, then request resources with HTTP verbs. HTML structures documents; CSS styles; JavaScript executes client-side logic. MIME types teach parsers how to interpret bytes. REST and GraphQL pattern APIs beyond pages.\n\nSearch engines crawl links; robots.txt expresses politeness; sitemaps assist discovery. Email and calendaring are parallel application stacks — SMTP, IMAP, CalDAV — showing the internet is families of protocols, not only the web.\n\nAccessibility (ARIA), internationalisation (Unicode), and performance budgets (Core Web Vitals) encode engineering ethics as metrics. Archiving fights link rot — the web forgets by default.",
+  "principles": [
+    {
+      "name": "End-to-end argument",
+      "explanation": "Smart edges, dumb network — reliability and semantics belong where application knowledge lives unless performance forces middlebox exceptions."
+    },
+    {
+      "name": "Longest-prefix routing",
+      "explanation": "Aggregating routes shrinks tables but can blackhole if summaries are wrong — operations risk as much as code risk."
+    },
+    {
+      "name": "Layered security",
+      "explanation": "TLS authenticates and encrypts transport; CSP restricts content sources; each layer assumes the below may be malicious."
+    },
+    {
+      "name": "Same-origin policy",
+      "explanation": "Isolates scripts unless explicitly relaxed — cornerstone of browser security against cross-site data theft."
+    }
+  ],
+  "components": [
+    {
+      "id": "router",
+      "name": "Internet router",
+      "function": "Forwards IP packets using longest-prefix match and queueing",
+      "position": "POP and backbone",
+      "madeFrom": "TCAM ASICs, buffer memory, optics"
+    },
+    {
+      "id": "browser",
+      "name": "Web browser engine",
+      "function": "Parses, renders, executes",
+      "position": "Client",
+      "madeFrom": "HTML/CSS/JS engines, sandbox"
+    },
+    {
+      "id": "server",
+      "name": "Origin server",
+      "function": "Authoritative content",
+      "position": "Data centre",
+      "madeFrom": "HTTP daemons, app runtimes"
+    },
+    {
+      "id": "cdn",
+      "name": "CDN edge PoPs",
+      "function": "Caches static assets near users",
+      "position": "Global cities",
+      "madeFrom": "Reverse proxies, SSD tiers"
+    },
+    {
+      "id": "ca",
+      "name": "Certificate authority ecosystem",
+      "function": "Issues trust anchors",
+      "position": "Global",
+      "madeFrom": "HSM-backed signing infrastructure"
+    },
+    {
+      "id": "resolver",
+      "name": "Public DNS resolver",
+      "function": "Resolves names with caching and filtering options",
+      "position": "Anycast network",
+      "madeFrom": "Unbound/BIND clusters"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "TCAM and NPU silicon",
+      "purpose": "Router forwarding at line rate",
+      "earthLocations": [
+        "Network silicon vendors"
+      ],
+      "spaceAlternatives": "Software routers for low speeds",
+      "processingRequired": "Thermal design for datacentre racks"
+    },
+    {
+      "name": "Server CPUs and DRAM",
+      "purpose": "Web and DNS serving",
+      "earthLocations": [
+        "Foundry fabs"
+      ],
+      "spaceAlternatives": "ARM cloud instances",
+      "processingRequired": "ECC RAM for silent error mitigation"
+    },
+    {
+      "name": "SSD NAND",
+      "purpose": "Durable storage for sites",
+      "earthLocations": [
+        "Flash fabs"
+      ],
+      "spaceAlternatives": "Tape archives cold tier",
+      "processingRequired": "Wear levelling firmware"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Address plan and BGP policy",
+      "description": "Allocate aggregates; document RIR justification; peer with prefix filters and RPKI ROV.",
+      "prerequisiteTools": [
+        "IPAM",
+        "IRR tools"
+      ],
+      "warningNote": "Fat-finger exports leak internal routes"
+    },
+    {
+      "order": 2,
+      "title": "Operate IGP and monitoring",
+      "description": "OSPF/IS-IS areas; BFD; sFlow to telemetry stack.",
+      "prerequisiteTools": [
+        "NOC dashboards"
+      ],
+      "warningNote": "Area0 partitions blackhole regions"
+    },
+    {
+      "order": 3,
+      "title": "Threat model the web service",
+      "description": "STRIDE analysis; TLS and key management; CSP headers.",
+      "prerequisiteTools": [
+        "security review template"
+      ],
+      "warningNote": "Mixed content silently downgrades security"
+    },
+    {
+      "order": 4,
+      "title": "Performance and accessibility budget",
+      "description": "Lighthouse for LCP/CLS/INP; axe for WCAG contrast and keyboard paths.",
+      "prerequisiteTools": [
+        "CI checks"
+      ],
+      "warningNote": "Third-party scripts veto your budget"
+    },
+    {
+      "order": 5,
+      "title": "Archive and license content",
+      "description": "Creative Commons where possible; sitemaps; permalinks to Internet Archive.",
+      "prerequisiteTools": [
+        "crawler tooling"
+      ],
+      "warningNote": "Robots.txt cannot revoke legal obligations"
+    }
+  ],
+  "history": [
+    {
+      "year": 1974,
+      "event": "Cerf and Kahn publish foundational internetworking ideas leading to TCP/IP.",
+      "location": "USA",
+      "person": "Vint Cerf, Bob Kahn"
+    },
+    {
+      "year": 1983,
+      "event": "ARPANET flag day transitions hosts to TCP/IP.",
+      "location": "USA"
+    },
+    {
+      "year": 1989,
+      "event": "Tim Berners-Lee proposes the World Wide Web at CERN.",
+      "location": "Switzerland",
+      "person": "Tim Berners-Lee"
+    },
+    {
+      "year": 1993,
+      "event": "Mosaic browser popularises the graphical web.",
+      "location": "USA"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "Vint Cerf",
+      "contribution": "Co-design of TCP/IP protocols",
+      "years": "1943-",
+      "nationality": "American"
+    },
+    {
+      "name": "Bob Kahn",
+      "contribution": "Co-design of TCP/IP protocols",
+      "years": "1938-",
+      "nationality": "American"
+    },
+    {
+      "name": "Tim Berners-Lee",
+      "contribution": "World Wide Web (HTTP, HTML, URI concepts)",
+      "years": "1955-",
+      "nationality": "British"
+    }
+  ],
+  "impact": "The web made the internet legible to billions — and concentrated attention economics into a few dashboards. It is simultaneously library, marketplace, and battleground.\n\nPreserving it requires archiving, open standards, and constant security patching — eternal maintenance, not a finished monument.",
+  "images": [],
+  "videos": [
+    {
+      "id": "how-web-works",
+      "title": "How the web works",
+      "description": "Accredited web development courses on DNS-TLS-HTTP stack.",
+      "durationSeconds": 720
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "w3c",
+      "title": "W3C — web standards",
+      "url": "https://www.w3.org/"
+    },
+    {
+      "id": "mozilla-mdn",
+      "title": "MDN Web Docs",
+      "url": "https://developer.mozilla.org/"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

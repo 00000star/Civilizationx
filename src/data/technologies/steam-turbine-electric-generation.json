@@ -1,0 +1,55 @@
+{
+  "id": "steam-turbine-electric-generation",
+  "name": "Steam Turbine Electric Generation",
+  "tagline": "High-speed rotary steam expanders driving alternators — the thermal bridge to grid-scale electricity",
+  "category": "energy",
+  "era": "industrial",
+  "difficulty": 4,
+  "prerequisites": ["steam-engine", "steel-production", "boiler-feedwater-treatment"],
+  "unlocks": ["electrical-power-grid"],
+  "problem": "Reciprocating engines excel at variable torque for workshops but fight vibration, valve maintenance, and rpm ceilings when enormous powers must spin compact electrical machines. Central stations needed smooth, high-speed shafts that could sit in line with multi-pole alternators. The steam turbine answers by letting working fluid accelerate through fixed and moving airfoils in stages, extracting enthalpy without reciprocation.\n\nThe obstacle is materials and aerodynamics: wet steam erodes last-stage buckets; long rotors walk through critical bending speeds; glands leak live steam and admit air at vacuum exhaust. Chemistry and condensers become part of the thermodynamic bottom of the cycle — efficiency is not only temperature at the throttle but pressure at the exhaust.\n\nWithout turbines, electrification still happens — but more expensively, with more floor space and more moving parts per kilowatt.",
+  "overview": "Steam enters throttle valves, expands through high-pressure impulse or reaction stages, then continues through intermediate and low-pressure sections as specific volume rises. Shaft power couples to a synchronous generator; excitation current controls reactive power; governors hold speed as load changes. Exhaust steam condenses under vacuum maintained by cooling water or air-cooled condensers, returning feedwater through heaters.\n\nPlant types diverge: fossil boilers, nuclear steam generators, and concentrated solar steam all meet the turbine stop valve. Cogeneration taps extraction steam for district heat or process plants before condensing the remainder.\n\nControls evolved from mechanical governors to digital turbine controllers coordinating valve arcs, stress limits, and grid frequency regulation. Protective systems trip on overspeed, vibration, differential expansion, and loss of lubrication — each failure mode learned from historical wrecks.\n\nThe turbine hall is acoustically dominated by screaming last stages; hearing conservation becomes part of the technology’s social envelope.",
+  "principles": [
+    {"name": "Stage matching", "explanation": "Each stage is sized so blade speeds stay near optimum for the local Mach number — mismatch wastes available enthalpy as turbulence."},
+    {"name": "Reheat and regeneration", "explanation": "Reheat raises average temperature of heat addition; feedwater heating steals extraction steam but cuts boiler heat input — both lift real-cycle efficiency."},
+    {"name": "Condenser vacuum", "explanation": "Lowering exhaust pressure expands the cycle area on a Mollier diagram; air in-leakage is the silent vacuum killer."},
+    {"name": "Synchronous grid", "explanation": "Generators lock to system frequency; inertial energy stored in rotating masses buys seconds for governors during imbalances."}
+  ],
+  "components": [
+    {"id": "hp-section", "name": "High-pressure turbine section", "function": "Accepts live steam and performs first large enthalpy drops", "position": "Turbine front", "madeFrom": "CrMo rotor forging, stainless shrouds"},
+    {"id": "lp-section", "name": "Low-pressure section and last buckets", "function": "Finishes expansion near saturation; largest blades", "position": "Exhaust end", "madeFrom": "Titanium or stainless buckets in wet zones", "criticalNote": "Last-stage flutter and erosion set maintenance intervals"},
+    {"id": "glands", "name": "Gland steam and seals", "function": "Reduces live steam leakage and air ingress along shaft", "position": "Casing penetrations", "madeFrom": "Labyrinth strips, carbon brushes in some designs"},
+    {"id": "condenser", "name": "Surface condenser", "function": "Condenses exhaust at sub-atmospheric pressure", "position": "Below LP exhaust hood", "madeFrom": "Titanium tubes in seawater service"},
+    {"id": "generator", "name": "Alternator", "function": "Converts torque to three-phase electricity", "position": "Common shaft or gearbox", "madeFrom": "Copper bars, laminated core, hydrogen cooling in large units"},
+    {"id": "governor", "name": "Governor and trip system", "function": "Controls admission and protects overspeed", "position": "Hydraulic rack or digital actuator", "madeFrom": "Fire-resistant hydraulic fluid historically"}
+  ],
+  "rawMaterials": [
+    {"name": "Rotor forgings", "purpose": "Creep-resistant discs", "earthLocations": ["Japan Steel Works class suppliers", "European forges"], "spaceAlternatives": "Terrestrial import", "processingRequired": "Ultrasonic inspection; rough turn; final balance"},
+    {"name": "Copper or aluminium conductors", "purpose": "Generator windings", "earthLocations": ["Major smelters globally"], "spaceAlternatives": "Conductor choice trades mass versus loss", "processingRequired": "Vacuum impregnation of insulation"},
+    {"name": "Cooling water", "purpose": "Rejects low-grade heat at condenser", "earthLocations": ["Rivers, seas, cooling towers on land"], "spaceAlternatives": "Dry cooling adds parasitic fans and hot-climate penalties", "processingRequired": "Biocide and screens for fouling control"}
+  ],
+  "buildSteps": [
+    {"order": 1, "title": "Thermodynamic sizing", "description": "Select inlet and reheat conditions, condenser pressure, and number of extractions for feed heaters. Check moisture fraction at exhaust.", "prerequisiteTools": ["heat balance software or tables"], "warningNote": "Ignoring cooling water temperature swing underestimates summer derate"},
+    {"order": 2, "title": "Rotor assembly and balance", "description": "Install blades per clocking pattern; verify root fits; perform low-speed then high-speed balance.", "prerequisiteTools": ["balance bunker"], "warningNote": "Foreign objects during closure are catastrophic at rpm"},
+    {"order": 3, "title": "Casing close and alignment", "description": "Torque cross-pattern on horizontal joints; check catenary sag on long shafts; align generator.", "prerequisiteTools": ["hydraulic tensioners"], "warningNote": "Uneven casing bolt-up warps steam paths — rub risk"},
+    {"order": 4, "title": "Steam blow and rolling", "description": "Blow steam to clean piping; roll turbine slowly through criticals; verify vibration probes.", "prerequisiteTools": ["proximity probes", "spectrum analyser"], "warningNote": "Trip tests with overspeed device must be witnessed per code"},
+    {"order": 5, "title": "Synchronise", "description": "Match voltage, frequency, and phase; close breaker; load ramp per thermal stress limits.", "prerequisiteTools": ["synchroscope"], "warningNote": "Out-of-phase close bends shafts"}
+  ],
+  "history": [
+    {"year": 1884, "event": "Charles Parsons demonstrates a practical steam turbine driving electrical generation.", "location": "United Kingdom", "person": "Charles Parsons"},
+    {"year": 1896, "event": "Curtis impulse stages popularise high-velocity staging in American utilities.", "location": "United States", "person": "Charles Curtis"},
+    {"year": 1957, "event": "Commercial nuclear plants export steam to turbines — thermal side mirrors fossil stations.", "location": "Shippingport, USA"}
+  ],
+  "inventors": [
+    {"name": "Charles Parsons", "contribution": "Reaction steam turbine for power generation", "years": "1854-1931", "nationality": "Anglo-Irish"}
+  ],
+  "impact": "Turbo-alternators made electricity cheap enough for trams, factories, and eventually homes. They remain the heart of thermal and nuclear fleets; understanding them explains why gas turbines and wind turbines are different animals despite sharing the word turbine.\n\nRecovery without precision machining and chemistry cannot reproduce grid-scale steam — but the conceptual chain is still teachable.",
+  "images": [],
+  "videos": [{"id": "turbine-basics", "title": "Steam turbine staging", "description": "Accredited mechanical engineering lectures on impulse, reaction, and reheating.", "durationSeconds": 900}],
+  "externalLinks": [
+    {"id": "energy-gov-steam", "title": "U.S. DOE — how steam turbines work", "url": "https://www.energy.gov/eere/wind/how-do-wind-turbines-work"},
+    {"id": "iea-power", "title": "IEA — electricity and power sector context", "url": "https://www.iea.org/energy-system/electricity"}
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

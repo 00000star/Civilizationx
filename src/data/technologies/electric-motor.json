@@ -1,0 +1,54 @@
+{
+  "id": "electric-motor",
+  "name": "Electric Motor",
+  "tagline": "Magnetic fields and current-carrying conductors producing continuous rotary torque without on-site combustion",
+  "category": "energy",
+  "era": "industrial",
+  "difficulty": 3,
+  "prerequisites": ["electrical-power-grid", "steel-production", "copper-wire-and-cable"],
+  "unlocks": ["electric-lighting-systems", "semiconductor-crystal-growing-doping"],
+  "problem": "Every factory wanted shafts that spun without line belts snaking through ceilings. Steam engines at each machine were loud, hot, and fuel-hungry. The electric motor solves local motion by importing power through wires — decoupling the fire from the tool.\n\nDesign challenges span magnetic circuit design, conductor insulation in slots, bearing currents from PWM drives, and thermal paths in enclosed frames. Starting inrush can collapse weak feeders; variable speed historically required expensive secondary resistors until electronics arrived.\n\nWithout motors, there is no pump hall, no elevator, no subway — only mechanical shafting or animals.",
+  "overview": "DC motors commutate coil segments so torque stays aligned with field; universal motors run on AC for small appliances at cost of brush wear. Induction motors — the workhorse of industry — use a squirrel-cage rotor whose bars see slip-frequency currents induced by the stator’s rotating field. Synchronous machines lock to grid frequency via damper windings during pull-in.\n\nWindings are inserted in laminated steel slots to guide flux and reduce eddy losses; insulation classes (B, F, H) set temperature ceilings. Cooling may be TEFC fins, open drip-proof, or forced air through internal ducts. Large motors use sleeve bearings with oil rings; small ones use ball bearings.\n\nModern drives add VFDs that synthesise variable frequency — returning us to variable speed without resistive waste, but introducing harmonics and bearing EDM from capacitive coupling.\n\nNameplate data — efficiency, power factor, NEMA design letters — encode starting behaviour as surely as stall torque on a steam piston.",
+  "principles": [
+    {"name": "Lorentz force", "explanation": "Current crossing magnetic field experiences force — the microscopic origin of motor torque."},
+    {"name": "Slip in induction machines", "explanation": "Rotor must lag synchronous speed to induce rotor current; at synchronous speed torque collapses to zero."},
+    {"name": "Back-EMF", "explanation": "Spinning conductors generate voltage opposing applied voltage — limits no-load current and sets constant-speed behaviour on stiff grids."},
+    {"name": "Thermal class", "explanation": "Insulation life halves roughly every 10°C over rated — derating altitude and ambient is mandatory."}
+  ],
+  "components": [
+    {"id": "stator", "name": "Stator core and windings", "function": "Creates rotating magnetomotive force", "position": "Stationary shell", "madeFrom": "Silicon steel laminations, magnet wire, varnish"},
+    {"id": "rotor", "name": "Rotor and shaft", "function": "Converts magnetic torque to mechanical output", "position": "Centreline", "madeFrom": "Aluminium or copper cage, steel shaft"},
+    {"id": "bearings", "name": "Bearings and end bells", "function": "Supports rotor; seals windings from environment", "position": "Both ends", "madeFrom": "Ball or sleeve bearings; cast aluminium bells"},
+    {"id": "terminal", "name": "Terminal box", "function": "Connects supply to windings; may include star-delta links", "position": "Top or side", "madeFrom": "Insulated blocks, compression lugs"},
+    {"id": "fan", "name": "Fan and cooling path", "function": "Removes copper and iron losses as heat", "position": "Non-drive end often", "madeFrom": "Aluminium impeller"}
+  ],
+  "rawMaterials": [
+    {"name": "Electrical steel", "purpose": "Low-loss magnetic circuit", "earthLocations": ["Grain-oriented sheet mills"], "spaceAlternatives": "Import until rolling exists", "processingRequired": "Stamp laminations; anneal; varnish"},
+    {"name": "Magnet wire", "purpose": "Slot conductors", "earthLocations": ["Copper + enamel plants"], "spaceAlternatives": "Aluminium magnet wire in large machines", "processingRequired": "Random wound or form wound coils"},
+    {"name": "Aluminium for rotors", "purpose": "Die-cast cage low cost", "earthLocations": ["Smelters globally"], "spaceAlternatives": "Copper cage for efficiency", "processingRequired": "Die casting under vacuum to reduce porosity"}
+  ],
+  "buildSteps": [
+    {"order": 1, "title": "Stack and weld core", "description": "Interleave laminations; weld or cleat back iron; insulate slots with liners.", "prerequisiteTools": ["stacking fixture"], "warningNote": "Burrs short laminations — edge deburr"},
+    {"order": 2, "title": "Wind or insert coils", "description": "Maintain wire tension; tie cords; varnish dip or VPI for void fill.", "prerequisiteTools": ["winding machine"], "warningNote": "Nick insulation — turn-turn failure"},
+    {"order": 3, "title": "Assemble rotor and balance", "description": "Cast or fabricate cage; machine OD; balance to ISO grade for speed.", "prerequisiteTools": ["dynamic balancer"], "warningNote": "Unbalance walks bearings out"},
+    {"order": 4, "title": "Fit bearings and align load", "description": "Soft foot checks on base; coupling alignment to driven machine.", "prerequisiteTools": ["dial indicators"], "warningNote": "Thermal growth shifts alignment — hot check"},
+    {"order": 5, "title": "Test run and measure", "description": "Megger windings; no-load current; vibration spectrum; bearing temperature rise.", "prerequisiteTools": ["megohmmeter", "clamp meter"], "warningNote": "VFD-fed motors need cable reflection checks"}
+  ],
+  "history": [
+    {"year": 1834, "event": "First practical rotating electric motors demonstrated in laboratory contexts.", "location": "Europe"},
+    {"year": 1888, "event": "Tesla polyphase induction motor patents underpin modern cage motors.", "location": "United States", "person": "Nikola Tesla"},
+    {"year": 1891, "event": "Three-phase transmission in Frankfurt links motors to remote generation.", "location": "Germany"}
+  ],
+  "inventors": [
+    {"name": "Nikola Tesla", "contribution": "Polyphase induction and AC motor concepts", "years": "1856-1943", "nationality": "Serbian-American"}
+  ],
+  "impact": "Motors made electricity actionable at every machine scale — from dental drills to ship propulsion. They are the distributed muscle of electrification.\n\nRecovery must preserve lamination stamping and varnish impregnation, not only copper.",
+  "images": [],
+  "videos": [{"id": "induction-motor", "title": "Induction motor principles", "description": "Accredited electrical engineering animations of rotating fields and slip.", "durationSeconds": 600}],
+  "externalLinks": [
+    {"id": "ieee-motor", "title": "IEEE — electric machines technical community", "url": "https://ieee-pes.org/"},
+    {"id": "energy-motors", "title": "DOE — electric motor systems", "url": "https://www.energy.gov/eere/amo/electric-motors"}
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

@@ -1,0 +1,196 @@
+{
+  "id": "electrical-telegraph",
+  "name": "Electrical Telegraph",
+  "tagline": "Pulses on wires encoding letters at light-speed — shrinking command-and-control latency across continents",
+  "category": "communication",
+  "era": "industrial",
+  "difficulty": 3,
+  "prerequisites": [
+    "printing-press-movable-type",
+    "copper-wire-and-cable",
+    "glass-making",
+    "steel-production"
+  ],
+  "unlocks": [
+    "telephone-exchange-system",
+    "radio-broadcast-and-receiver"
+  ],
+  "problem": "Horse couriers and semaphore chains could not keep pace with rail timetables, naval logistics, or commodity prices. The telegraph encodes language into electrical events — closing circuits for dots and dashes — so operators transcribe at human speed while propagation delay is negligible on land.\n\nChallenges include insulation on long buried or submarine cables, lightning induction burning instruments, and synchronising clocks for train safety. Codebooks compress proprietary business messages; cryptography appears immediately.\n\nEconomically, telegraphy priced information like freight — but by the bit, not the ton.",
+  "overview": "A battery keys a line; an electromagnet pulls a sounder or marks a paper tape. Repeater stations regenerate weak signals. Insulators of glass or porcelain separate wires from earth; lightning arrestors sacrifice paths to protect offices.\n\nSubmarine cables add gutta-percha or polyethylene jackets, armouring, and repeaters in fibre era — but copper coax ancestors carried telegraphy across oceans first with heroic thickness and regretful engineering guesses about capacitance.\n\nMorse code standardises timing; continental variants tweak alphabet mappings. Training schools produce operators with rhythmic ears — a craft killed by telephone speech then resurrected as CW ham radio.\n\nTelegraph offices became nodes in graphs; stock tickers and train order offices were clients — infrastructure thinking we now call networking.",
+  "principles": [
+    {
+      "name": "Ohm’s law on long lines",
+      "explanation": "Leakage conductance and capacitance smear pulses — Heaviside’s loading coils and later repeaters fight distortion."
+    },
+    {
+      "name": "Signal-to-noise in wet insulation",
+      "explanation": "Moisture raises conductance — maintenance crews walk lines with megohmmeters."
+    },
+    {
+      "name": "Human baud rate",
+      "explanation": "Skilled Morse beats naive typing for skinny channels — ergonomics of rhythm."
+    },
+    {
+      "name": "Common versus metallic circuit",
+      "explanation": "Early earth returns save copper; interference teaches symmetric pairs."
+    }
+  ],
+  "components": [
+    {
+      "id": "key",
+      "name": "Morse key and sounder",
+      "function": "Human I/O for code",
+      "position": "Operator desk",
+      "madeFrom": "Brass contacts, electromagnet"
+    },
+    {
+      "id": "battery",
+      "name": "Grove or Daniell cells historically",
+      "function": "Supplies line current",
+      "position": "Office",
+      "madeFrom": "Zinc, copper, acid"
+    },
+    {
+      "id": "line",
+      "name": "Iron or copper line wire",
+      "function": "Propagates pulses",
+      "position": "Poles or buried",
+      "madeFrom": "Galvanised iron then copper"
+    },
+    {
+      "id": "insulator",
+      "name": "Glass insulator",
+      "function": "Supports wire electrically",
+      "position": "Crossarm pins",
+      "madeFrom": "Porcelain or glass"
+    },
+    {
+      "id": "relay",
+      "name": "Telegraph relay",
+      "function": "Regenerates weak currents",
+      "position": "Repeater huts",
+      "madeFrom": "Sensitive coil, local battery"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Copper wire",
+      "purpose": "Low resistance long lines",
+      "earthLocations": [
+        "Telegraph boom districts 19c"
+      ],
+      "spaceAlternatives": "Optical later",
+      "processingRequired": "Annealed soft draw for wrapping"
+    },
+    {
+      "name": "Lead-acid batteries",
+      "purpose": "Station power",
+      "earthLocations": [
+        "Lead smelters"
+      ],
+      "spaceAlternatives": "Dynamos later",
+      "processingRequired": "Form plates and activate"
+    },
+    {
+      "name": "Gutta-percha",
+      "purpose": "Submarine insulation historically",
+      "earthLocations": [
+        "Southeast Asia latex historically"
+      ],
+      "spaceAlternatives": "PE jackets modern",
+      "processingRequired": "Extrusion"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Survey right-of-way",
+      "description": "Negotiate poles with landowners; map river crossings.",
+      "prerequisiteTools": [
+        "transits"
+      ],
+      "warningNote": "Induced liability from fallen wires — tension engineering"
+    },
+    {
+      "order": 2,
+      "title": "String and sag",
+      "description": "Match mechanical tension to wind and ice load; bond grounds.",
+      "prerequisiteTools": [
+        "dynamometers"
+      ],
+      "warningNote": "Ground potential differences shock animals tied to wet earth returns"
+    },
+    {
+      "order": 3,
+      "title": "Install protection",
+      "description": "Lightning horns; fuses; office grounding mats.",
+      "prerequisiteTools": [
+        "megger"
+      ],
+      "warningNote": "Nearby lightning magnetises sounders — false clicks"
+    },
+    {
+      "order": 4,
+      "title": "Train operators",
+      "description": "Copy qualification tests; procedural language for train orders.",
+      "prerequisiteTools": [
+        "practice sets"
+      ],
+      "warningNote": "Ambiguous prosigns cause collisions"
+    },
+    {
+      "order": 5,
+      "title": "Maintain repeaters",
+      "description": "Log battery voltages; clean relay contacts; document drift.",
+      "prerequisiteTools": [
+        "contact burnishers"
+      ],
+      "warningNote": "Pitting raises minimum operating current"
+    }
+  ],
+  "history": [
+    {
+      "year": 1837,
+      "event": "Patent demonstrations of practical electromagnetic telegraphs in UK and USA.",
+      "location": "UK/USA",
+      "person": "William Fothergill Cooke, Charles Wheatstone, Samuel Morse"
+    },
+    {
+      "year": 1866,
+      "event": "Successful transatlantic telegraph cable after earlier failures.",
+      "location": "Atlantic Ocean"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "Samuel Morse",
+      "contribution": "Practical telegraph instrument and Morse code co-development",
+      "years": "1791-1872",
+      "nationality": "American"
+    }
+  ],
+  "impact": "Telegraphy coordinated empires and markets in real time — shrinking strategic surprise while raising the tempo of war and finance.\n\nIt is the ancestor of every packet — meaning encoded as physical state on a wire.",
+  "images": [],
+  "videos": [
+    {
+      "id": "morse-code",
+      "title": "Morse code and telegraphy",
+      "description": "Amateur radio society training materials.",
+      "durationSeconds": 480
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "itu-history",
+      "title": "ITU — history of telecommunications",
+      "url": "https://www.itu.int/en/history/Pages/default.aspx"
+    },
+    {
+      "id": "smithsonian-telegraph",
+      "title": "Smithsonian — telegraph collections",
+      "url": "https://americanhistory.si.edu/collections/object-groups/telegraph"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

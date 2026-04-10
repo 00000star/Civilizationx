@@ -1,0 +1,55 @@
+{
+  "id": "electric-lighting-systems",
+  "name": "Electric Lighting Systems",
+  "tagline": "Controlled conversion of electricity into visible radiation — from carbon arcs to solid-state diodes",
+  "category": "energy",
+  "era": "industrial",
+  "difficulty": 3,
+  "prerequisites": ["electric-motor", "electrical-transformer", "glass-making"],
+  "unlocks": [],
+  "problem": "Fire and gaslight stain ceilings, demand ventilation, and start urban fires. Electric lighting promises instant ignition, directional beams, and — once grids stabilised — pricing per lumen that scales with industry rather than whale oil.\n\nEarly technologies fought efficiency and lifetime: resistive bulbs trade much power as heat; arcs roar and sputter; discharge tubes need ballasts. The systems problem includes fixtures, grounding, circuit protection, and voltage drop on long feeders — lighting design is secretly distribution engineering.\n\nSpectral quality matters for factories, surgery, and circadian health — metrics moved from candlepower to lumens, colour temperature, and colour rendering index.",
+  "overview": "Incandescent lamps pass current through a refractory filament in inert gas or vacuum, heating to incandescence. Tungsten replaced carbon for melting point and efficacy. Halogen cycles redeposit evaporated tungsten, extending life in compact envelopes.\n\nFluorescent and HID sources excite gas discharges; phosphors down-convert UV to white. Ballasts limit current — historically inductors, today electronic high-frequency inverters. LEDs use semiconductor junctions emitting narrow bands combined with phosphors for white; drivers regulate current tightly because diode light output tracks current while voltage is sharp-kneed.\n\nDimming historically chopped voltage; LEDs need compatible dimmers that understand PWM or trailing-edge waveforms to avoid flicker and colour shift.\n\nStreet and stadium lighting added photocells, time clocks, and now mesh controls — cybersecurity joins the stack as lights become IoT nodes.",
+  "principles": [
+    {"name": "Wien displacement", "explanation": "Blackbody spectrum peak shifts with temperature — higher filament temperature yields whiter light but accelerates evaporation."},
+    {"name": "Luminous efficacy", "explanation": "Lumens per watt weights human eye sensitivity — UV and IR watts do not count equally."},
+    {"name": "Power factor in ballasts", "explanation": "Inductive ballasts draw reactive power; capacitors correct; electronic ballasts can approach unity PF."},
+    {"name": "Thermal resistance in LEDs", "explanation": "Junction temperature sets lumen depreciation — heatsinking is optical engineering."}
+  ],
+  "components": [
+    {"id": "lamp", "name": "Lamp or module", "function": "Converts electricity to light", "position": "Fixture optical centre", "madeFrom": "Tungsten, mercury vapour tube, or LED COB"},
+    {"id": "fixture", "name": "Luminaire housing", "function": "Directs photometric distribution; removes heat", "position": "Ceiling, pole, or track", "madeFrom": "Stamped steel, aluminium die cast, polymer optics"},
+    {"id": "driver", "name": "Ballast or LED driver", "function": "Limits current; may provide dimming interface", "position": "Integral or remote", "madeFrom": "SMPS with PFC front end"},
+    {"id": "wiring", "name": "Branch wiring and protection", "function": "Supplies rated voltage; clears faults", "position": "Building circuits", "madeFrom": "Copper THHN, breakers, RCDs where required"},
+    {"id": "control", "name": "Switches and controls", "function": "Human or automated actuation", "position": "Wall boxes or DALI networks", "madeFrom": "Relays, MOSFET dimmers, occupancy sensors"}
+  ],
+  "rawMaterials": [
+    {"name": "Tungsten wire", "purpose": "Incandescent filaments", "earthLocations": ["Wolframite mines in China, Portugal, Rwanda"], "spaceAlternatives": "LEDs preferred off-world where waste heat is costly", "processingRequired": "Doping and drawing to controlled cold resistance"},
+    {"name": "Glass envelopes", "purpose": "Hermetic bulb", "earthLocations": ["Float glass plants"], "spaceAlternatives": "Sapphire windows for extreme LEDs", "processingRequired": "Sealing stems to lead wires"},
+    {"name": "Phosphors and rare earths", "purpose": "Fluorescent and LED colour mixing", "earthLocations": ["Bayan Obo rare earths historically dominant"], "spaceAlternatives": "Import concentrates until separation exists", "processingRequired": "Milling to controlled particle size"}
+  ],
+  "buildSteps": [
+    {"order": 1, "title": "Design photometric layout", "description": "Target illuminance per task; choose spacing criterion; model glare angles.", "prerequisiteTools": ["photometric software or lumen method tables"], "warningNote": "Overlighting wastes power and contrast"},
+    {"order": 2, "title": "Size feeders for voltage drop", "description": "Keep drop within code; account for inrush on HID; segregate dimmed noise-sensitive circuits.", "prerequisiteTools": ["NEC or IEC ampacity tables"], "warningNote": "Undervoltage kills LED drivers slowly"},
+    {"order": 3, "title": "Install protection and earthing", "description": "RCDs for wet zones; equipotential bonding; surge protection on LED outdoor strings.", "prerequisiteTools": ["megger", "earth loop tester"], "warningNote": "Shared neutrals with smart switches can energise shells"},
+    {"order": 4, "title": "Commission drivers", "description": "Set DIP switches for current; verify flicker percent with meter; log temperatures at heat sinks.", "prerequisiteTools": ["oscilloscope, thermal camera"], "warningNote": "PWM incompatibilities with phone cameras reveal bad drivers"},
+    {"order": 5, "title": "Maintain lumen depreciation records", "description": "Group relamp schedules; clean optics; track dirt depreciation on street optics.", "prerequisiteTools": ["illuminance meter"], "warningNote": "LED catastrophic failures cluster if batch is bad — keep spare modules"}
+  ],
+  "history": [
+    {"year": 1879, "event": "Edison demonstrates practical incandescent lamp with carbonised filament and parallel distribution vision.", "location": "Menlo Park, USA", "person": "Thomas Edison"},
+    {"year": 1938, "event": "Mercury vapour street lighting spreads in Europe and America.", "location": "Global"},
+    {"year": 1962, "event": "First practical visible-spectrum LED (red) demonstrated at GE.", "location": "USA", "person": "Nick Holonyak Jr."}
+  ],
+  "inventors": [
+    {"name": "Thomas Edison", "contribution": "Incandescent lamp commercialisation and electrical utility model", "years": "1847-1931", "nationality": "American"},
+    {"name": "Nick Holonyak Jr.", "contribution": "Practical visible LED", "years": "1928-2022", "nationality": "American"}
+  ],
+  "impact": "Electric light extended civil time into night — reshaping labour shifts, crime patterns, and education. It also became a load that justified baseload generators.\n\nSolid-state lighting finally bent the lumen-per-watt curve enough to matter for climate-forced grids.",
+  "images": [],
+  "videos": [{"id": "led-physics", "title": "LED and phosphor white", "description": "Accredited solid-state lighting short courses on efficacy and thermal design.", "durationSeconds": 480}],
+  "externalLinks": [
+    {"id": "doe-lighting", "title": "DOE — solid-state lighting program", "url": "https://www.energy.gov/eere/solid-state-lighting"},
+    {"id": "ies-lighting", "title": "Illuminating Engineering Society", "url": "https://www.ies.org/"}
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

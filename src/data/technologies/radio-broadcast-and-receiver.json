@@ -1,0 +1,194 @@
+{
+  "id": "radio-broadcast-and-receiver",
+  "name": "Radio Broadcast and Receiver",
+  "tagline": "Modulated electromagnetic waves carrying voice and music — spectrum, antennas, and detectors at civilisation scale",
+  "category": "communication",
+  "era": "early-20th",
+  "difficulty": 4,
+  "prerequisites": [
+    "vacuum-tube-electronics",
+    "electrical-telegraph",
+    "electrical-power-grid"
+  ],
+  "unlocks": [
+    "communication-satellites"
+  ],
+  "problem": "Wires cannot follow ships at sea or cars at speed without ruinous cost. Radio encodes information on sinusoidal carriers — amplitude or frequency modulation early, single-sideband for spectrum efficiency later. The obstacle is physics: antennas must be significant fractions of wavelength; receivers must select one station among megahertz of chaos; transmitters must not deafen neighbours with harmonics.\n\nRegulatory technology matters as much as hardware: ITU allocations, licensing exams, and enforcement against spark-gap villains who jam distress frequencies.\n\nBroadcasting created simultaneous audiences — politics, music, and emergency alerts share one-to-many topology unlike telephony’s mesh.",
+  "overview": "A transmitter chain oscillates carrier, modulates with audio or digital symbols, amplifies through tuned stages, and feeds an antenna with correct impedance match. Receivers superheterodyne to a fixed IF for stable filtering; AGC rides fading; detectors recover baseband. FM trades bandwidth for noise immunity on VHF.\n\nStudio-to-transmitter links moved from leased lines to microwave STL; RDS embeds metadata on FM subcarriers. Digital modes (DRM, HD Radio, DAB) squeeze more bits per hertz with error correction — coexistence with analogue legacy is a regulatory negotiation.\n\nAntenna farms pattern energy toward population centres; skywave HF reaches continents at night with ionospheric refraction — delightful until solar storms erase paths.\n\nEmergency systems (EPIRB, weather radio) embed radio into survival kits — collapse-relevant even after cellular primacy.",
+  "principles": [
+    {
+      "name": "Antenna reciprocity",
+      "explanation": "Transmit and receive patterns match for passive antennas — design once, use both ways."
+    },
+    {
+      "name": "Superheterodyne image rejection",
+      "explanation": "Mixing creates sum and difference frequencies — front-end filtering must kill the image band."
+    },
+    {
+      "name": "Capture effect in FM",
+      "explanation": "Stronger station captures demodulator — blessing and curse in overlapping markets."
+    },
+    {
+      "name": "Shannon-Hartley limit",
+      "explanation": "Channel capacity grows with bandwidth and SNR — guides digital rollouts."
+    }
+  ],
+  "components": [
+    {
+      "id": "oscillator",
+      "name": "Master oscillator and PLL",
+      "function": "Sets carrier frequency stability",
+      "position": "Exciter",
+      "madeFrom": "Crystal reference, varactor tuning"
+    },
+    {
+      "id": "pa",
+      "name": "Power amplifier",
+      "function": "Boosts signal to legal ERP",
+      "position": "Transmitter chain",
+      "madeFrom": "Tube or solid-state pallets with combiners"
+    },
+    {
+      "id": "antenna",
+      "name": "Antenna and transmission line",
+      "function": "Radiates with desired pattern",
+      "position": "Tower",
+      "madeFrom": "Aluminium yagi or panel arrays"
+    },
+    {
+      "id": "receiver-front",
+      "name": "Receiver RF front end",
+      "function": "Selects and amplifies weak signals",
+      "position": "Handset or car radio",
+      "madeFrom": "SAW filters, LNA, mixer"
+    },
+    {
+      "id": "detector",
+      "name": "Detector and audio chain",
+      "function": "Recovers audio or I/Q baseband",
+      "position": "IF strip",
+      "madeFrom": "Diode envelope, quadrature demod"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Aluminium tower sections",
+      "purpose": "Elevated radiators",
+      "earthLocations": [
+        "Extrusion mills"
+      ],
+      "spaceAlternatives": "Deployable antennas",
+      "processingRequired": "Galvanising or anodising"
+    },
+    {
+      "name": "Coaxial cable",
+      "purpose": "Low-loss feedlines at UHF",
+      "earthLocations": [
+        "Cable plants"
+      ],
+      "spaceAlternatives": "Waveguide at microwave",
+      "processingRequired": "Foam dielectric extrusion"
+    },
+    {
+      "name": "Ferrite cores",
+      "purpose": "IF transformers",
+      "earthLocations": [
+        "Mn-Zn ferrite factories"
+      ],
+      "spaceAlternatives": "Air-core at VHF",
+      "processingRequired": "Sintering and gapping"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Frequency coordination",
+      "description": "Apply for allocation; measure existing noise floor; avoid radar bands.",
+      "prerequisiteTools": [
+        "spectrum analyser"
+      ],
+      "warningNote": "Illegal harmonics into aviation band is criminal"
+    },
+    {
+      "order": 2,
+      "title": "Install antenna and grounding",
+      "description": "Lightning protection; tower climbing safety; VSWR trim.",
+      "prerequisiteTools": [
+        "vector network analyser"
+      ],
+      "warningNote": "High RF burns without contact — respect ERP"
+    },
+    {
+      "order": 3,
+      "title": "Align transmitter chain",
+      "description": "Bias PA; neutralise if tube; intermodulation test two-tone.",
+      "prerequisiteTools": [
+        "two-tone generator"
+      ],
+      "warningNote": "Splatter triggers neighbour complaints"
+    },
+    {
+      "order": 4,
+      "title": "Certify spurious emissions",
+      "description": "Mask compliance to FCC/ETSI masks; notch harmonics.",
+      "prerequisiteTools": [
+        "EMI receiver"
+      ],
+      "warningNote": "Failed certification cannot legally air"
+    },
+    {
+      "order": 5,
+      "title": "Receiver field tests",
+      "description": "Drive tests for multipath; audio loudness standards; RDS verification.",
+      "prerequisiteTools": [
+        "mobile logging"
+      ],
+      "warningNote": "Tunnel dead zones need translators"
+    }
+  ],
+  "history": [
+    {
+      "year": 1895,
+      "event": "Marconi experiments with wireless telegraphy; transatlantic spark follows.",
+      "location": "Italy/UK",
+      "person": "Guglielmo Marconi"
+    },
+    {
+      "year": 1920,
+      "event": "Scheduled audio broadcasting begins in multiple countries.",
+      "location": "USA, Europe"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "Guglielmo Marconi",
+      "contribution": "Practical wireless telegraphy and early radio systems",
+      "years": "1874-1937",
+      "nationality": "Italian"
+    }
+  ],
+  "impact": "Radio created national simultaneity — coronations, wars, and jazz in every kitchen. It also taught spectrum as finite commons — a tragedy-of-the-commons problem solved imperfectly by law.",
+  "images": [],
+  "videos": [
+    {
+      "id": "superhet",
+      "title": "Superheterodyne receiver",
+      "description": "Ham radio licence training on mixing and IF.",
+      "durationSeconds": 720
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "itu-r",
+      "title": "ITU-R — radiocommunication sector",
+      "url": "https://www.itu.int/en/ITU-R/Pages/default.aspx"
+    },
+    {
+      "id": "arrl",
+      "title": "ARRL — amateur radio handbook context",
+      "url": "https://www.arrl.org/"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}
