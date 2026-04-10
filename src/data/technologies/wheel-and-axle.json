@@ -1,0 +1,157 @@
+{
+  "id": "wheel-and-axle",
+  "name": "The Wheel and Axle",
+  "tagline": "Rotary motion that reduces effective friction for moving loads across land",
+  "category": "transport",
+  "era": "ancient",
+  "difficulty": 2,
+  "prerequisites": ["basic-hand-tools"],
+  "unlocks": ["pulley", "cart-and-wagon"],
+  "problem": "Dragging a sled ploughs a trench, wasting work against soil deformation. The wheel problem is replacing sliding friction with rolling resistance — still imperfect due to deformation at the contact patch, but orders of magnitude better on firm ground for heavy loads. A separate problem is rotation itself: static structures carry compression; rotating assemblies must bear bending while staying round, stay aligned on an axle, and not split along grain or crystal planes.\n\nThe wheel is not obvious archaeologically — potter's wheels and spindle whorls show rotation earlier than heavy transport wheels in some regions. Heavy transport needs roads or hard ground, bearings that do not seize, and materials that survive shock.\n\nOnce solved, the wheel becomes a modular machine element: it composes into pulleys, gears, lathes, mills, and vehicles — one of civilisation's most reused inventions.",
+  "overview": "A wheel is a disk or spoked structure that turns about an axle. Ideally the axle is fixed to the chassis and the wheel rotates on it (or the wheel is fixed and axle rotates — both exist). Early solid wheels are planks or three planks glued and rounded; spoked wheels reduce mass while preserving hoop strength through tensioned rims and compressive spokes.\n\nBearings historically are plain: wood on wood lubricated with fat, later bronze sleeves, later ball bearings. Lubrication and alignment dominate service life. Flanges or shoulders keep the wheel from walking off the axle.\n\nWheel diameter trades obstacle climbing for packaging — larger wheels roll over ruts more easily but raise centre of mass. Width changes ground pressure — soft ground needs broader contact.\n\nManufacturing sequence typically: bore hub, shape rim, true roundness on a simple lathe or by compass scribing, mount tyre (iron tyre shrunk on in later eras).",
+  "principles": [
+    {
+      "name": "Rolling resistance",
+      "explanation": "Energy is lost in hysteresis of tyre and soil deformation and micro-slip at contact; still usually far less than kinetic sliding friction for dense surfaces."
+    },
+    {
+      "name": "Moment of inertia",
+      "explanation": "Heavier rims store rotational kinetic energy — smoother ride but harder acceleration — critical when animal or engine power is limited."
+    },
+    {
+      "name": "Bearing PV limit",
+      "explanation": "Pressure times velocity at the bearing interface drives heating and wear; misalignment concentrates load on edges."
+    },
+    {
+      "name": "Hoop stress in tyres",
+      "explanation": "A tight iron tyre places the wooden rim in compression, increasing buckling resistance — prestressed composite behaviour."
+    }
+  ],
+  "components": [
+    {
+      "id": "hub",
+      "name": "Hub",
+      "function": "Transfers load between axle and spokes or solid web",
+      "position": "Centre of wheel",
+      "madeFrom": "Hardwood, later cast hub",
+      "criticalNote": "Bore must be square to the wheel plane — wobble destroys bearings"
+    },
+    {
+      "id": "rim",
+      "name": "Rim / felloe",
+      "function": "Contacts ground or tyre; defines rolling circle",
+      "position": "Outer circumference",
+      "madeFrom": "Wood segments, steel later",
+      "criticalNote": "Join quality sets out-of-round limits"
+    },
+    {
+      "id": "spokes",
+      "name": "Spokes (if spoked)",
+      "function": "Support rim in compression/tension hybrid depending on design",
+      "position": "Radial between hub and rim",
+      "madeFrom": "Straight grain hardwood",
+      "criticalNote": "Drive wheels may use dished geometry for lateral strength"
+    },
+    {
+      "id": "axle",
+      "name": "Axle",
+      "function": "Carries vertical load and transmits torque if driven",
+      "position": "Through hub bore",
+      "madeFrom": "Wrought iron or steel later; wood in toys/light carts historically",
+      "criticalNote": "Avoid sharp corners at shoulder fillets — stress risers snap axles"
+    },
+    {
+      "id": "bearing-surface",
+      "name": "Bearing interface",
+      "function": "Allows low-friction rotation",
+      "position": "Hub bore versus axle journal",
+      "madeFrom": "Bronze bush, lignum vitae, later rolling bearings",
+      "criticalNote": "Grit ingress is the silent killer — seals and greases matter"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Hardwood lumber",
+      "purpose": "Rim, hub, spokes in wood-wheel eras",
+      "earthLocations": ["Oak, ash, teak depending on region"],
+      "spaceAlternatives": "Aluminium or composite rims when industry permits",
+      "processingRequired": "Seasoned wood, split billet stock for straight grain"
+    },
+    {
+      "name": "Iron tyre bar",
+      "purpose": "Hoop reinforcement and wear surface",
+      "earthLocations": ["Bloomery iron rolled later", "wrought bar stock"],
+      "spaceAlternatives": "Steel strip",
+      "processingRequired": "Forge weld ring; heat shrink onto rim"
+    },
+    {
+      "name": "Lubricant",
+      "purpose": "Reduces journal wear",
+      "earthLocations": ["Tallow", "pine pitch blends"],
+      "spaceAlternatives": "Synthetic grease",
+      "processingRequired": "Clarify to remove abrasive grit"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Lay out diameter and hub",
+      "description": "Choose diameter from obstacle profile. Turn or plane a hub block; bore pilot hole undersize for final reaming.",
+      "prerequisiteTools": ["compass", "brace and bit", "plane"],
+      "warningNote": "Knots at hub are unacceptable — move hub centre"
+    },
+    {
+      "order": 2,
+      "title": "Build rim segments",
+      "description": "Steam-bend or cut felloes with mitred joints; glue and peg; true outer circle with plane and travisher.",
+      "prerequisiteTools": ["saw", "drawknife", "clamps"],
+      "warningNote": "Green wood moves — final truing after drying"
+    },
+    {
+      "order": 3,
+      "title": "Install spokes",
+      "description": "Mortise hub and rim; drive spokes with tension sequence like lug nuts — progressive star pattern to avoid egg-shaped rim.",
+      "prerequisiteTools": ["chisel", "mallet", "spoke shave"],
+      "warningNote": "Over-tension splits rim"
+    },
+    {
+      "order": 4,
+      "title": "Fit axle and bearings",
+      "description": "Cut journals with slight crown; ream hub to slip fit hot that becomes running fit cold. Add grease leather packings historically.",
+      "prerequisiteTools": ["lathe or careful filing", "reamer"],
+      "warningNote": "Metal swarf in hub acts as lap — clean obsessively"
+    },
+    {
+      "order": 5,
+      "title": "Shrink tyre if used",
+      "description": "Measure cold tyre circumference slightly smaller than rim; heat tyre uniformly; seat quickly; quench? (depends on alloy) — traditional iron shrinks on cooling, compressing rim.",
+      "prerequisiteTools": ["forge", "tongs", "clamps"],
+      "warningNote": "Burns and steam flashes — full PPE"
+    }
+  ],
+  "history": [
+    {
+      "year": "4th millennium BCE",
+      "event": "Earliest plausible wagon wheels appear in the archaeological record of the North Caucasus — solid wooden construction.",
+      "location": "Russia (Maykop culture context)"
+    },
+    {
+      "year": "2nd millennium BCE",
+      "event": "Spoked chariot wheels spread across steppe and Near Eastern warfare.",
+      "location": "Eurasian steppe"
+    }
+  ],
+  "inventors": [],
+  "impact": "The wheel is infrastructure for motion. It couples to roads, bearings, power transmission, and measurement (odometers). Societies without suitable draft animals or terrain still benefit wheels in machines even if road freight is limited.\n\nFor recovery, wheelwrighting is a teachable stack: measure roundness, manage wood grain, understand bearing lubrication.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "britannica-wheel",
+      "title": "Encyclopaedia Britannica — wheel",
+      "url": "https://www.britannica.com/technology/wheel"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

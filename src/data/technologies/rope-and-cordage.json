@@ -1,0 +1,159 @@
+{
+  "id": "rope-and-cordage",
+  "name": "Rope and Cordage",
+  "tagline": "Twisted and braided fibres that turn tension into reliable force transmission, binding, and lifting",
+  "category": "tools",
+  "era": "prehistoric",
+  "difficulty": 1,
+  "prerequisites": [],
+  "unlocks": ["fishing-net-and-line", "cart-and-wagon", "pulley"],
+  "problem": "Many critical tasks require pulling forces larger than a bare hand can apply, or holding forces steady for long periods: dragging carcasses, hoisting bundles, lashing loads to frames, making nets, climbing safely, and binding tool heads to handles. Vines snap unpredictably; green bark slips; short grass bundles fatigue. The problem is scalable tensile members: materials that share load across many parallel fibres locked together by twist or braid so partial breaks do not instantly cascade.\n\nCordage also stores technique: a well-made rope is a composite whose strength emerges from friction between plies and the helix angle distributing strain. Without understanding twist direction (S and Z) and balance, ropes untwist under load or kink into useless hockles.\n\nIn recovery contexts, cordage is a universal adapter: it connects almost every other primitive technology — shelters, traps, boats, packs, and later pulleys and machines.",
+  "overview": "Traditional cordage begins with harvesting fibres: bast from inner bark (lime, willow, nettle, paper mulberry), leaf fibres (agave, yucca), animal sinew, rawhide strips, or hair. Fibres are retted or scraped clean, dried, then split to consistent width. Short fibres are spun into continuous yarn by adding twist — twist traps fibre ends against neighbours via friction.\n\nYarns are combined into cord by plying: two or more yarns twisted together in the opposite direction from their spin, locking the structure. Three-strand rope is made by twisting three plies into a larger helix. Braids distribute abrasion and reduce twist-induced torque on suspended loads.\n\nStrength scales with cross-sectional area of load-bearing fibres and quality of processing. Kinks, sharp bends over small radii, and UV degradation are dominant failure modes. Storage dry prevents rot; natural ropes stretch when wet and may shrink drying — important when building tension structures.\n\nMechanically, rope is a flexible tensile element in machines: with a wheel it becomes a belt drive ancestor; with a grooved wheel it becomes a pulley line; with capstans it multiplies human pulling power through friction wraps.",
+  "principles": [
+    {
+      "name": "Twist balance",
+      "explanation": "Each twist introduces torque. Opposing ply directions cancel net rotation under load, stabilising the structure."
+    },
+    {
+      "name": "Friction sharing",
+      "explanation": "In twisted rope, fibres press together; load transfers between fibres by friction, so local breaks do not immediately unload the whole cross section."
+    },
+    {
+      "name": "Bend radius and strength",
+      "explanation": "Fibre outer paths stretch more around tight bends; undersized sheaves cut strength dramatically — a rule pulleys must respect."
+    },
+    {
+      "name": "Creep and relaxation",
+      "explanation": "Natural fibres elongate under sustained load; knots slip microscopically. Tensioned assemblies need retightening."
+    }
+  ],
+  "components": [
+    {
+      "id": "fibre-source",
+      "name": "Fibre stock",
+      "function": "Provides long-chain cellulosic or protein strands bearing tension",
+      "position": "Processed into consistent ribbon or bundles before spinning",
+      "madeFrom": "Bast, leaf, sinew, hair, or later cotton and hemp",
+      "criticalNote": "Identify plants correctly — some families have irritant or toxic sap"
+    },
+    {
+      "id": "spindle",
+      "name": "Spindle or thigh spindle",
+      "function": "Adds controlled twist while drafting fibres into yarn",
+      "position": "Hand-held or rolled along thigh with distaff holding fibre supply",
+      "madeFrom": "Wood, bone, or fired clay whorl weight"
+    },
+    {
+      "id": "plied-cord",
+      "name": "Plied cord or rope",
+      "function": "Bears load in tension; ties, lifts, and wraps",
+      "position": "Finished product or input to nets and lashings",
+      "madeFrom": "Multiple spun yarns twisted together"
+    },
+    {
+      "id": "splice-or-knot",
+      "name": "Splice or knot interface",
+      "function": "Terminates rope or joins lengths without sharp cutting if possible",
+      "position": "Eyes around posts, bends around timber, hitches to rings",
+      "madeFrom": "Same cordage; wooden fid for thick laid rope later",
+      "criticalNote": "Knots reduce rated strength — engineer margins accordingly"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Bast fibre plants",
+      "purpose": "High tensile vegetable cordage without metal tools",
+      "earthLocations": ["Lime family (Tilia) in temperate Eurasia", "Nettle (Urtica) globally", "Paper mulberry and paperbark in Asia-Pacific"],
+      "spaceAlternatives": "Microbial cellulose or processed biomass fibres from controlled agriculture",
+      "processingRequired": "Retting (microbial loosening of gums), rinsing, stripping ribbons, drying"
+    },
+    {
+      "name": "Leaf fibres",
+      "purpose": "Hard-wearing cord for nets and dragging tasks",
+      "earthLocations": ["Agave in Americas", "New Zealand flax (Phormium)", "Sisal plantations historically"],
+      "spaceAlternatives": "Glass or aramid fibres when industry exists — not primitive",
+      "processingRequired": "Scraping pulp, sun drying, sometimes beating to separate strands"
+    },
+    {
+      "name": "Animal sinew",
+      "purpose": "Extremely strong fine cord for traps and backing",
+      "earthLocations": ["Grassland and arctic megafauna processing sites"],
+      "spaceAlternatives": "Cultured collagen fibres in advanced biofabrication",
+      "processingRequired": "Clean tendons, dry, split into ribbons, twist wet then dry under tension"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Harvest and rett bast",
+      "description": "Cut stems, soak or dew-ret until inner bark separates, strip ribbons, rinse to remove rot byproducts. Dry partially — too dry splits, too wet rots.",
+      "prerequisiteTools": ["stone flake or shell scraper", "containers for water"],
+      "warningNote": "Stagnant retting water is biologically hazardous — work ventilated downstream"
+    },
+    {
+      "order": 2,
+      "title": "Split and align fibres",
+      "description": "Divide ribbons to uniform width. Comb or hand-align into a fan held on distaff or pinched between fingers for drafting.",
+      "prerequisiteTools": ["wooden comb optional"],
+      "warningNote": "Silica dust from some grasses — minimise inhalation"
+    },
+    {
+      "order": 3,
+      "title": "Spin singles with Z-twist",
+      "description": "Add twist while thinning the ribbon — the yarn should feel hard and round, not spongy. Wind onto spindle.",
+      "prerequisiteTools": ["spindle"],
+      "warningNote": "Overspinning weakens yarn by fibre cutting on micro-scales"
+    },
+    {
+      "order": 4,
+      "title": "Ply into balanced cord",
+      "description": "Twist two or three Z singles together under S twist (or reverse) to lock structure. For rope, repeat at larger scale — rope-making walks help long lengths.",
+      "prerequisiteTools": ["spindle or rope jack"],
+      "warningNote": "Unbalanced plying untwists under load — test with body-weight hang"
+    },
+    {
+      "order": 5,
+      "title": "Condition and store",
+      "description": "Dry thoroughly; wax or tallow dressing improves water resistance on natural fibre. Store off ground, rodent-proof, away from UV.",
+      "prerequisiteTools": ["ventilated rack"],
+      "warningNote": "Wet storage rots quickly — mildew reduces strength silently"
+    }
+  ],
+  "history": [
+    {
+      "year": "Upper Palaeolithic",
+      "event": "Impressions of twisted fibres on artefacts suggest advanced cordage predates preserved rope in many regions.",
+      "location": "Europe"
+    },
+    {
+      "year": "Mesolithic",
+      "event": "Fishing implements and net fragments document specialised cordage for aquatic extraction.",
+      "location": "Global coasts and rivers"
+    },
+    {
+      "year": "Neolithic",
+      "event": "Domesticated fibre crops (flax, hemp) scale cordage production for agriculture and transport.",
+      "location": "Eurasia"
+    }
+  ],
+  "inventors": [],
+  "impact": "Cordage is infrastructure in string form: it makes packs, nets, traps, sails, and hoists possible. It couples human force to loads and couples components into assemblies — lashings precede nails economically in many environments.\n\nIn later engineering, the same tensile logic underlies cables, wire rope, and fibre-reinforced composites. Understanding twist, bend radius, and termination is still how bridges and cranes are kept safe.\n\nFor off-world bases, lightweight high-strength cable may be among the first complex products once polymer or carbon fibre processes exist — but early settlements still benefit from vegetable fibre for filters, ties, and soft interfaces.",
+  "images": [],
+  "videos": [
+    {
+      "id": "nettle-cordage",
+      "title": "Plant fibre cordage demonstrations",
+      "description": "Educational videos on nettle or lime bast processing — verify plant ID with local experts.",
+      "durationSeconds": 720
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "iwcs-cordage",
+      "title": "International Guild of Knot Tyers — knotting resources",
+      "url": "https://igkt.net/"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

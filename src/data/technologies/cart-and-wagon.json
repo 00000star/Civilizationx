@@ -1,0 +1,157 @@
+{
+  "id": "cart-and-wagon",
+  "name": "Cart and Wagon",
+  "tagline": "Four-wheeled and two-wheeled vehicles that multiply land freight using wheels, axles, and draft animals or humans",
+  "category": "transport",
+  "era": "ancient",
+  "difficulty": 2,
+  "prerequisites": ["wheel-and-axle", "rope-and-cordage"],
+  "unlocks": ["road-construction"],
+  "problem": "Human backs scale poorly with grain surpluses, timber lengths, and stone blocks. Sledges work but waste energy ploughing soil; pack animals cap out at modest loads per animal. The wheeled vehicle problem is distributing weight across multiple rolling contacts, steering a front axle or pivot, and braking descent without destroying wheels.\n\nTwo-wheeled carts tip easily but track narrow paths; four-wheeled wagons need steering geometry — either pivoting front axle or turntable — or they scrub tires and break on turns. Suspension is historically minimal; road quality dominates ride.\n\nWithout standardised hubs, axle sizes, and repairable parts, vehicle fleets cannot be maintained at civilisation scale. Thus carts are not only carpentry but logistics standards.",
+  "overview": "A basic cart pairs a chassis (bed) with an undercarriage: axles, wheels, and often a drawbar for animal harness. Wheels may be fixed to the axle (both rotate) or rotate on fixed axles with pins — the latter wears journals and needs grease.\n\nSteering for four-wheelers historically uses a pivoting front assembly or side-by-side animals with a flexible pole. Braking uses drag shoes, rope wraps on wheel rims, or later band brakes — absent brakes, loads control descent with chocks and human ropes.\n\nMaterials: hardwood frames, iron tyres shrunk on rims, steel leaf springs later. Tyre contact patch and ground pressure determine whether the vehicle ruts mud or floats on grass.\n\nHuman traction variants exist — handcarts — obeying the same load paths with different ergonomic constraints.",
+  "principles": [
+    {
+      "name": "Ground pressure",
+      "explanation": "Load divided by contact area predicts sinkage in soft soils — wider rims or more wheels reduce rutting."
+    },
+    {
+      "name": "Scrub and Ackermann (conceptual)",
+      "explanation": "Turning geometry ideally arcs concentric circles for each wheel; rigid axles without differential scrub on tight turns, increasing wear and draft effort."
+    },
+    {
+      "name": "Centre of mass height",
+      "explanation": "High stacks reduce rollover stability on cambered roads — lateral acceleration limits scale with track width over height."
+    },
+    {
+      "name": "Draft line alignment",
+      "explanation": "Harness attachment height changes animal biomechanics and tongue loading on the chassis — misalignment causes chronic animal injury and frame fatigue."
+    }
+  ],
+  "components": [
+    {
+      "id": "bed",
+      "name": "Bed / platform",
+      "function": "Supports cargo; may include removable side boards",
+      "position": "Above axles",
+      "madeFrom": "Planked hardwood, bolted or pegged",
+      "criticalNote": "Grain direction across span resists bending better than along short dimension"
+    },
+    {
+      "id": "axle-assembly",
+      "name": "Axle assembly",
+      "function": "Transfers load to wheels; may transmit brake torque",
+      "position": "Under bed",
+      "madeFrom": "Wrought iron or steel later; wood in light carts",
+      "criticalNote": "Bending moment peaks at centre — avoid midspan welds without reinforcement"
+    },
+    {
+      "id": "wheels",
+      "name": "Wheels",
+      "function": "Rolling support",
+      "position": "Outboard of chassis",
+      "madeFrom": "Wood with iron tyre historically",
+      "criticalNote": "Nut retention on axles — castellated nuts and cotter pins after metal age"
+    },
+    {
+      "id": "steering-pivot",
+      "name": "Steering pivot (four-wheel)",
+      "function": "Allows front axle to turn relative to frame",
+      "position": "Front undercarriage",
+      "madeFrom": "Iron kingpin, bronze bush",
+      "criticalNote": "Grease schedule — dry pins ovalise under shock"
+    },
+    {
+      "id": "drawbar",
+      "name": "Drawbar and harness attachment",
+      "function": "Applies tractive force without twisting frame",
+      "position": "Forward of front axle or centre pivot",
+      "madeFrom": "Forged iron with safety chain secondaries",
+      "criticalNote": "Safety chain prevents runaway if primary coupling fails"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Hardwood timber",
+      "purpose": "Frame and bed",
+      "earthLocations": ["Oak, ash in temperate zones"],
+      "spaceAlternatives": "Aluminium extrusions when mills exist",
+      "processingRequired": "Seasoned, inspected for shakes"
+    },
+    {
+      "name": "Iron fastenings",
+      "purpose": "Bolts, tyres, reinforcement straps",
+      "earthLocations": ["Bloomery iron forged to strap"],
+      "spaceAlternatives": "Imported hardware",
+      "processingRequired": "Hot rivet or forge weld straps"
+    },
+    {
+      "name": "Grease",
+      "purpose": "Journal lubrication",
+      "earthLocations": ["Tallow", "pine tar blends"],
+      "spaceAlternatives": "Synthetic grease",
+      "processingRequired": "Keep grit-free"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Engineer load case",
+      "description": "Estimate worst-case mass and terrain camber. Choose wheel count and track width from ground pressure targets.",
+      "prerequisiteTools": ["measuring rope", "scale if available"],
+      "warningNote": "Dynamic loads from potholes exceed static weight — use safety factor ≥2 for rural roads"
+    },
+    {
+      "order": 2,
+      "title": "Fabricate bed and crossmembers",
+      "description": "Mortise and tenon or bolted joints; install cross sills directly over axle seats to transfer load vertically.",
+      "prerequisiteTools": ["saw", "chisel", "brace and bit"],
+      "warningNote": "End-grain bearing on bolts crushes — use washers and hardwood"
+    },
+    {
+      "order": 3,
+      "title": "Mount axles and wheels",
+      "description": "Set caster and toe for steerable front if applicable; ream bearing bores; retain with cotters.",
+      "prerequisiteTools": ["reamer", "wrenches"],
+      "warningNote": "Spin test — listen for rub; shim cheek plates square"
+    },
+    {
+      "order": 4,
+      "title": "Attach drawgear",
+      "description": "Align tongue height to expected harness; install safety chains with correct working angle — not so long they drag, not so short they bind turns.",
+      "prerequisiteTools": ["forge or blacksmith"],
+      "warningNote": "Never stand in line with chain recoil path during first pulls"
+    },
+    {
+      "order": 5,
+      "title": "Load test and document",
+      "description": "Progressive loading with known masses; inspect axle deflection. Paint load limit on bed rail.",
+      "prerequisiteTools": ["chalk", "weights"],
+      "warningNote": "Brake test on mild slope before mountain use"
+    }
+  ],
+  "history": [
+    {
+      "year": "4th millennium BCE",
+      "event": "Early wagon burials and models document four-wheeled transport in Old World contexts.",
+      "location": "Eurasian steppe / Caucasus region"
+    },
+    {
+      "year": "Roman Empire",
+      "event": "Standardised vehicle components and road networks synergise long-distance bulk movement.",
+      "location": "Mediterranean basin"
+    }
+  ],
+  "inventors": [],
+  "impact": "Carts convert agricultural surplus into mobile calories — enabling markets, armies, and migrations. They also damage roads without maintenance, creating co-evolution with road engineering.\n\nModern descendants include trailers and container chassis — same load path thinking at megatonne scale.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "britannica-wagon",
+      "title": "Encyclopaedia Britannica — wagon",
+      "url": "https://www.britannica.com/technology/wagon"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

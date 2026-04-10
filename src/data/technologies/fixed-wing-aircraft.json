@@ -1,0 +1,186 @@
+{
+  "id": "fixed-wing-aircraft",
+  "name": "Fixed-Wing Aircraft",
+  "tagline": "Heavier-than-air flight using wings to generate lift and engines to overcome drag",
+  "category": "transport",
+  "era": "early-20th",
+  "difficulty": 5,
+  "prerequisites": ["internal-combustion-engine", "steel-production", "glass-making"],
+  "unlocks": [],
+  "problem": "Humans are not born with wings. Balloons drift; dirigibles carry large envelopes and hydrogen risks. Fixed-wing aircraft solve directed, rapid travel over obstacles by generating aerodynamic lift with wings moving through air — trading fuel for speed and access.\n\nThe obstacles are simultaneous: structures must be light yet strong; engines must produce power at altitude with thinning air; controls must keep the craft stable and controllable across flight regimes; and manufacturing must hold airfoil and incidence tolerances or stall characteristics become lethal.\n\nWeather adds a systems layer: icing destroys lift and blocks pitot probes; turbulence couples structural fatigue. Pilot training and instrumentation (where glassmaking and optics feed in) are inseparable from the machine.",
+  "overview": "A conventional aeroplane includes wings with airfoil sections tuned for cruise lift-to-drag ratio; a fuselage housing payload, fuel, and systems; empennage surfaces providing pitch (elevator/stabiliser) and yaw (rudder) stability and control; and roll control via ailerons or spoilers. Propulsion may be tractor or pusher propellers, turboprops, or jet engines — this entry emphasises propeller-driven IC-engine lineage for continuity with prior nodes.\n\nPrimary structure uses aluminium alloys or composites; flight loads path from wings through spars into fuselage frames. Control surfaces actuate via cables, pushrods, or fly-by-wire. Fuel tanks are baffled to prevent slosh shifting centre of gravity dangerously.\n\nAirspeed measurement uses pitot-static systems feeding instruments (mechanical or glass-faced). Stall warning devices alert when angle of attack approaches critical values where flow separation collapses lift.\n\nCertification concepts (where civil aviation authorities exist) encode crashworthiness, fire protection, and maintenance schedules — the technology is legally coupled to governance.",
+  "principles": [
+    {
+      "name": "Lift generation",
+      "explanation": "Wings deflect airflow and sustain lower upper-surface pressure in subsonic flight via circulation and boundary-layer physics — angle of attack trades lift for proximity to stall."
+    },
+    {
+      "name": "Thrust required equals drag",
+      "explanation": "Level flight equilibrium requires engine thrust to match total drag (parasitic plus induced); climb adds potential energy rate term."
+    },
+    {
+      "name": "Centre of gravity envelope",
+      "explanation": "Longitudinal stability requires CG within limits relative to neutral point; out-of-envelope loading makes recovery from stalls or spins improbable."
+    },
+    {
+      "name": "V-n diagram (conceptual)",
+      "explanation": "Structural strength is certified across airspeed and gust combinations — exceeding limits risks aileron reversal or wing failure."
+    }
+  ],
+  "components": [
+    {
+      "id": "wing",
+      "name": "Wing structure",
+      "function": "Generates lift; carries fuel in many designs",
+      "position": "Low, mid, or high wing configuration",
+      "madeFrom": "Aluminium ribs/spars, skins, rivets; composites modern",
+      "criticalNote": "Leading-edge contamination (ice, bugs) changes stall speed upward"
+    },
+    {
+      "id": "fuselage",
+      "name": "Fuselage",
+      "function": "Carries occupants, payload, and integrates systems",
+      "position": "Centre body",
+      "madeFrom": "Semi-monocoque aluminium, composite barrels modern",
+      "criticalNote": "Pressurisation cycles fatigue fuselage — inspection programs exist for a reason"
+    },
+    {
+      "id": "empennage",
+      "name": "Tail surfaces",
+      "function": "Stability and pitch/yaw control",
+      "position": "Aft",
+      "madeFrom": "Aluminium structure, control horns, hinges",
+      "criticalNote": "Rudder hardover from rigging errors causes ground loops on takeoff"
+    },
+    {
+      "id": "powerplant",
+      "name": "Engine and propeller",
+      "function": "Produces thrust",
+      "position": "Nose or wing-mounted nacelles",
+      "madeFrom": "IC engine or turbine; constant-speed propeller governor",
+      "criticalNote": "Torque and P-factor demand rudder input on climb — training issue"
+    },
+    {
+      "id": "landing-gear",
+      "name": "Landing gear",
+      "function": "Supports ground loads; retracts to reduce drag on some types",
+      "position": "Tricycle or tailwheel",
+      "madeFrom": "Steel struts, oleo shocks, tyres",
+      "criticalNote": "Ground resonance in helicopters differs — fixed-wing risks include shimmy if caster geometry wrong"
+    },
+    {
+      "id": "instruments",
+      "name": "Flight instruments and glazing",
+      "function": "Provides attitude, airspeed, altitude references",
+      "position": "Panel and windscreen",
+      "madeFrom": "Glass or polycarbonate windscreen; mechanical or glass cockpit displays",
+      "criticalNote": "Bird strikes test glazing — lamination improves post-impact vision retention"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Aluminium alloys",
+      "purpose": "Primary airframe weight efficiency",
+      "earthLocations": ["Global smelters near cheap electricity"],
+      "spaceAlternatives": "Not applicable to Earth atmosphere craft — launch vehicles overlap materials science differently",
+      "processingRequired": "Solution treat, quench, age; alclad corrosion protection"
+    },
+    {
+      "name": "Aviation fuel",
+      "purpose": "Energy density for range",
+      "earthLocations": ["Refineries producing AVGAS or Jet-A depending on engine"],
+      "spaceAlternatives": "Synthetic fuels — drop-in testing required per engine STC",
+      "processingRequired": "Strict water exclusion; filtration at wing tanks"
+    },
+    {
+      "name": "Glass or polycarbonate",
+      "purpose": "Transparency with impact and pressure requirements",
+      "earthLocations": ["Speciality glassmakers", "polycarbonate sheet plants"],
+      "spaceAlternatives": "Sapphire for extreme environments — niche",
+      "processingRequired": "Tempering, lamination, anti-ice coatings"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Design loads and flutter margins",
+      "description": "Compute limit loads, apply factors of safety, plan mass distribution for CG envelope. Flutter analysis for high-speed designs is mandatory before first flight.",
+      "prerequisiteTools": ["structural analysis software or scaled testing"],
+      "warningNote": "Homebuilders skipping flutter analysis die — non-negotiable engineering step"
+    },
+    {
+      "order": 2,
+      "title": "Fabricate wing spar and ribs",
+      "description": "Jig-build to wing twist design; drill rivet lines with ream/fit discipline; seal fuel tanks if integral — leak test with safe fluid.",
+      "prerequisiteTools": ["rivet gun", "jig frames"],
+      "warningNote": "Choked vent lines collapse tanks in climb — vent sizing is safety"
+    },
+    {
+      "order": 3,
+      "title": "Integrate controls and balance surfaces",
+      "description": "Set hinge lines; mass-balance tabs if anti-flutter required; rig travel limits; verify cable tension temperature compensation.",
+      "prerequisiteTools": ["tensiometer", "protractor"],
+      "warningNote": "Reversed aileron cables discovered only at rotation — checklist culture prevents"
+    },
+    {
+      "order": 4,
+      "title": "Engine mount and firewall",
+      "description": "Isolate vibration; fireproof firewall forward; route fuel lines with crashworthy breakaway logic where regulated.",
+      "prerequisiteTools": ["torque wrench", "fireproof sealants"],
+      "warningNote": "Exhaust leaks near cowl — CO in cabin; test with detectors"
+    },
+    {
+      "order": 5,
+      "title": "Ground runs, taxi tests, first flight plan",
+      "description": "Progressive envelope expansion with chase plane/ground spotters; defined abort criteria; recorded IAS/V-speeds.",
+      "prerequisiteTools": ["radio", "flight test cards"],
+      "warningNote": "Spin recovery training before intentional spins — historically lethal for untrained"
+    }
+  ],
+  "history": [
+    {
+      "year": 1903,
+      "event": "Wright Flyer demonstrates powered, controlled, heavier-than-air flight at Kitty Hawk.",
+      "location": "North Carolina, USA",
+      "person": "Wilbur and Orville Wright"
+    },
+    {
+      "year": 1919,
+      "event": "Alcock and Brown complete the first non-stop transatlantic flight in a modified Vickers Vimy — proving long-range potential.",
+      "location": "Atlantic Ocean",
+      "person": "John Alcock, Arthur Brown"
+    },
+    {
+      "year": 1939,
+      "event": "Jet engine ground tests accelerate a new propulsion branch; propeller craft still dominate fleets for years.",
+      "location": "Germany and United Kingdom",
+      "person": "Hans von Ohain, Frank Whittle (parallel development)"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "Orville Wright",
+      "contribution": "Controlled flight with three-axis control integration",
+      "years": "1871-1948",
+      "nationality": "American"
+    },
+    {
+      "name": "Wilbur Wright",
+      "contribution": "Wind tunnel testing and stability insights enabling controlled flight",
+      "years": "1867-1912",
+      "nationality": "American"
+    }
+  ],
+  "impact": "Aviation shrank perceived distance, enabled global tourism and cargo, and transformed warfare reconnaissance and logistics. It also threaded noise contours around airports and contrail radiative effects into climate discussions — technologies have planetary footprints.\n\nFor recovery, aircraft are late-stack: you need light alloys, precise machining, fuels, and institutional flight test discipline.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "faa-handbooks",
+      "title": "FAA — Pilot's Handbook of Aeronautical Knowledge",
+      "url": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

@@ -1,0 +1,30 @@
+{
+  "version": "1",
+  "nodes": [
+    { "id": "fire" },
+    { "id": "stone-knapping" },
+    { "id": "rope-and-cordage" },
+    { "id": "bone-tools" },
+    { "id": "charcoal" },
+    { "id": "ceramics-and-pottery" },
+    { "id": "shelter-construction-basic" },
+    { "id": "cooking" },
+    { "id": "fishing-net-and-line" },
+    { "id": "smelting-bronze-age" },
+    { "id": "iron-smelting" },
+    { "id": "steel-production" },
+    { "id": "glass-making" },
+    { "id": "wheel-and-axle" },
+    { "id": "pulley" },
+    { "id": "lever-system" },
+    { "id": "basic-hand-tools" },
+    { "id": "cart-and-wagon" },
+    { "id": "road-construction" },
+    { "id": "bicycle" },
+    { "id": "steam-engine" },
+    { "id": "internal-combustion-engine" },
+    { "id": "automobile" },
+    { "id": "steam-locomotive" },
+    { "id": "fixed-wing-aircraft" }
+  ]
+}

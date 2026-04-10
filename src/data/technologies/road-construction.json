@@ -1,0 +1,156 @@
+{
+  "id": "road-construction",
+  "name": "Road Construction",
+  "tagline": "Engineered surfaces and drainage that make wheeled transport reliable in wet seasons and heavy freight",
+  "category": "construction",
+  "era": "ancient",
+  "difficulty": 3,
+  "prerequisites": ["cart-and-wagon", "shelter-construction-basic"],
+  "unlocks": ["automobile"],
+  "problem": "Soil turns to mud under wheel loads; ruts trap vehicles; slopes erode under rain. Paths sufficient for feet fail under tonnes. The road problem is distributing wheel pressure into subgrade without pumping fines upward, shedding water sideways before it softens the foundation, and maintaining crossfall for drainage.\n\nRoads are also social technology: width standards, right-of-way law, tolls, and maintenance labour allocation determine whether a route stays passable across political seasons.\n\nStone Roman roads and modern asphalt differ in materials but share layering logic: subgrade, base, wearing course — each layer sized for grain distribution and compaction.",
+  "overview": "A durable unpaved road begins with clearing organics, cutting a bench into hillside for positive drainage, and installing a crown — high centre, low edges — so water runs off. Aggregate layers use graded stone: large stones at bottom, smaller toward top, fines to lock mechanically when compacted. Corduroy logs bridge bogs historically.\n\nPaved roads add a bound surface: Roman concrete with pozzolan, later macadam with angular crushed stone locked by compaction, later tar macadam, later hot-mix asphalt on prepared base. Each step improves impermeability and ride but increases maintenance tooling needs.\n\nDrainage structures — culverts, ditches, retaining walls — often matter more than surface quality. Plugged culverts destroy paved roads from underneath.\n\nSurveying aligns grades: too steep exhausts draft animals and trucks; too flat ponds water. Transition curves reduce jerk for fast traffic later.",
+  "principles": [
+    {
+      "name": "Subgrade bearing capacity",
+      "explanation": "Weak subgrades fail by shear; road thickness spreads load over wider footprint — structural number concepts formalise this in modern pavement engineering."
+    },
+    {
+      "name": "Frost heave and capillary rise",
+      "explanation": "In cold climates, water wicks into base, freezes, lifts surface — requiring drainage layers and cut depth below frost line when possible."
+    },
+    {
+      "name": "Compaction and optimum moisture",
+      "explanation": "Soils compact best at specific moisture contents; too dry lacks lubrication, too wet pumps under roller loads."
+    },
+    {
+      "name": "Erosion on slopes",
+      "explanation": "Sheet flow velocity scours shoulders — energy dissipators and vegetation stabilise cuts."
+    }
+  ],
+  "components": [
+    {
+      "id": "subgrade",
+      "name": "Subgrade",
+      "function": "Founding soil or rock prepared to design modulus",
+      "position": "Bottom of section",
+      "madeFrom": "Native soil stabilised or replaced",
+      "criticalNote": "Proof-roll with loaded cart to find soft spots before surfacing"
+    },
+    {
+      "id": "base-course",
+      "name": "Base course",
+      "function": "Distributes wheel loads; drains water laterally in permeable designs",
+      "position": "Above subgrade",
+      "madeFrom": "Crushed stone graded for interlock",
+      "criticalNote": "Segregation during placement ruins grading — mix in lifts"
+    },
+    {
+      "id": "wearing-course",
+      "name": "Wearing course",
+      "function": "Smooth, durable surface resisting abrasion",
+      "position": "Top",
+      "madeFrom": "Asphalt concrete, stone pavers, or compacted gravel",
+      "criticalNote": "Crossfall 1–2% typical for drainage — too steep discomforts slow traffic"
+    },
+    {
+      "id": "drainage",
+      "name": "Ditches and culverts",
+      "function": "Removes water from structure before saturation",
+      "position": "Parallel to alignment and at low points",
+      "madeFrom": "Stone, tile, corrugated metal later",
+      "criticalNote": "Maintenance access — if culverts cannot be cleaned, they will fail"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Crushed stone",
+      "purpose": "Structural aggregate",
+      "earthLocations": ["Quarries near transport corridors globally"],
+      "spaceAlternatives": "Sintered regolith aggregate",
+      "processingRequired": "Crush-screen to gradation; wash if clay-coated"
+    },
+    {
+      "name": "Binder (asphalt era)",
+      "purpose": "Coats aggregate in flexible pavement",
+      "earthLocations": ["Petroleum refining districts"],
+      "spaceAlternatives": "Sulphur binder research materials — nonstandard",
+      "processingRequired": "Heat mix plants; compaction before cool"
+    },
+    {
+      "name": "Geotextile (modern optional)",
+      "purpose": "Separates fines from base, reducing pumping",
+      "earthLocations": ["Industrial textiles"],
+      "spaceAlternatives": "Woven polymer from in-situ chemical plants",
+      "processingRequired": "Proper overlap and anchoring"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Survey centreline and grades",
+      "description": "Stake alignment; compute cuts and fills; locate drainage outlets that do not flood downstream users.",
+      "prerequisiteTools": ["line level or transit", "measuring chain"],
+      "warningNote": "Working near roads — visibility vests even in premodern reenactment contexts with modern traffic nearby"
+    },
+    {
+      "order": 2,
+      "title": "Strip topsoil and compact subgrade",
+      "description": "Remove organics that decay into voids. Moisture-condition and compact in lifts with rollers or ramming.",
+      "prerequisiteTools": ["shovels", "rammer", "cart"],
+      "warningNote": "Trench collapse in deep cuts — bench slopes"
+    },
+    {
+      "order": 3,
+      "title": "Place base in lifts",
+      "description": "Spread aggregate in thin layers; compact each until refusal; check crown with straightedge.",
+      "prerequisiteTools": ["rake", "roller"],
+      "warningNote": "Overthick lifts do not compact internally — false economy"
+    },
+    {
+      "order": 4,
+      "title": "Install drainage structures before surfacing",
+      "description": "Bed culverts on firm foundation; backfill symmetrically; test flow before paving over.",
+      "prerequisiteTools": ["levels", "masonry tools"],
+      "warningNote": "Plugged culverts are the fastest road destroyer"
+    },
+    {
+      "order": 5,
+      "title": "Surface and edge protect",
+      "description": "Lay wearing course; compact; stabilise shoulders with grass or stone to prevent undermining.",
+      "prerequisiteTools": ["pavers or asphalt crew if modern"],
+      "warningNote": "Hot asphalt burns — PPE and escape routes"
+    }
+  ],
+  "history": [
+    {
+      "year": "Roman Republic and Empire",
+      "event": "Engineered multi-layer roads with drainage and milestones enable administrative and military mobility across Europe and the Mediterranean.",
+      "location": "Europe, North Africa, Near East"
+    },
+    {
+      "year": 1820,
+      "event": "Macadamised roads spread widely as industrial stone-crushing makes graded broken stone affordable; later centuries add petroleum binders to create modern flexible asphalt pavements.",
+      "location": "United Kingdom and United States"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "John Loudon McAdam",
+      "contribution": "Promoted crushed-stone road surfacing with drainage discipline — 'macadamisation'",
+      "years": "1756-1836",
+      "nationality": "Scottish"
+    }
+  ],
+  "impact": "Roads are the physical API between vehicles and territory. Their quality determines energy cost of logistics — shaping cities, empires, and famine relief reach.\n\nMaintenance is the hidden half of road technology; building without a maintenance cadence is performative infrastructure.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "fhwa-pavement",
+      "title": "FHWA — pavement engineering basics (modern reference)",
+      "url": "https://www.fhwa.dot.gov/pavement/"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-codex-bg text-codex-text font-sans antialiased;
+  margin: 0;
+  min-height: 100dvh;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+.codex-edge path {
+  stroke: #4a7fbd;
+  stroke-width: 1.5;
+}
+
+.codex-edge.animated path {
+  stroke-dasharray: 5 8;
+  animation: codex-flow 1.2s linear infinite;
+}
+
+@keyframes codex-flow {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -26;
+  }
+}
+
+.codex-node-selected .codex-node-ring {
+  animation: codex-pulse 2s ease-in-out infinite;
+}
+
+@keyframes codex-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(201, 168, 76, 0.35);
+  }
+}
+
+/* React Flow attribution minimal contrast */
+.react-flow__attribution {
+  background: rgba(18, 18, 26, 0.85) !important;
+  color: #5a5848 !important;
+}
+
+.react-flow__controls {
+  @apply overflow-hidden rounded border border-codex-border bg-codex-surface shadow-lg;
+}
+
+.react-flow__controls-button {
+  @apply border-codex-border bg-codex-surface fill-codex-secondary;
+}
+
+.react-flow__controls-button:hover {
+  @apply bg-codex-card fill-codex-text;
+}
+
+.react-flow__minimap {
+  @apply rounded border border-codex-border bg-codex-surface;
+}
+
+.prose-codex p {
+  @apply text-codex-secondary;
+}
