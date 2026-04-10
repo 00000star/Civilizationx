@@ -1,0 +1,178 @@
+{
+  "id": "steam-engine",
+  "name": "Steam Engine",
+  "tagline": "External combustion machine that expands steam against pistons or turbines to produce rotary or reciprocating work",
+  "category": "energy",
+  "era": "industrial",
+  "difficulty": 4,
+  "prerequisites": ["iron-smelting", "pulley", "steel-production", "charcoal"],
+  "unlocks": ["internal-combustion-engine", "steam-locomotive"],
+  "problem": "Waterwheels need rivers; horses need hay. Industrial tasks — pumping mines, driving forge bellows, spinning mills — needed concentrated, schedulable power decoupled from muscle and weather. The steam engine solves this by a closed loop: boil water, expand vapour against moving boundaries, exhaust lower-pressure steam, condense or vent, and repeat.\n\nEarly engines were thermally inefficient and mechanically crude; Newcomen atmospheric engines pumped water using vacuum after steam condensation. Watt's separate condenser and later high-pressure expansions improved efficiency enough for widespread stationary power and eventually self-propelled locomotion.\n\nThe engineering obstacles are materials and safety: pressure vessels fail catastrophically; sloppy valve timing wastes steam; lubricants must survive heat and water contamination.",
+  "overview": "A reciprocating steam engine includes a boiler producing high-pressure steam, throttle and governor controlling admission, a slide or piston valve timing steam admission and exhaust to a cylinder, a piston converting pressure to linear motion, and a crankshaft with flywheel smoothing torque pulsations. Exhaust routes to a condenser (vacuum engines) or atmosphere.\n\nBoilers are riveted or welded shells with tubes passing hot gases through water (fire-tube) or water through hot gas paths (water-tube). Feedwater must be treated to reduce scale — scale insulates tubes leading to hot spots and rupture.\n\nTurbine steam engines (later industrial dominance for large power) use staged nozzles accelerating steam onto blades — higher speeds, fewer reciprocating parts, different bearing challenges.\n\nStationary engines transmitted power via flat belts on stepped pulleys to line shafts — linking to our pulley entry. The locomotive variant rigidly couples engine to wheels on rails — see steam-locomotive entry.",
+  "principles": [
+    {
+      "name": "Rankine cycle (idealised)",
+      "explanation": "Steam engines realise a heat-work cycle: heat in during boiling/superheat, work out during expansion, heat rejection during condensation — second law limits efficiency below Carnot bound set by temperature extremes."
+    },
+    {
+      "name": "Cut-off and expansion",
+      "explanation": "Stopping steam admission early lets expanding steam do additional work — compound engines stage expansion across cylinders for efficiency."
+    },
+    {
+      "name": "Boiler stress and hoop tension",
+      "explanation": "Pressure vessel walls see tensile hoop stress scaling with radius over thickness — why inspections and relief valves are moral necessities."
+    },
+    {
+      "name": "Lubrication in wet steam",
+      "explanation": "Cylinder oils must resist washout; poor lubrication scores cylinders, causing blow-by and unbalanced loads."
+    }
+  ],
+  "components": [
+    {
+      "id": "boiler",
+      "name": "Boiler",
+      "function": "Generates steam at pressure",
+      "position": "Firebox below or adjacent to water shell",
+      "madeFrom": "Riveted iron plates historically; steel later",
+      "criticalNote": "Relief valves, water level glass, blowdown — non-negotiable"
+    },
+    {
+      "id": "cylinder",
+      "name": "Cylinder and piston",
+      "function": "Converts steam pressure to linear force",
+      "position": "Bolted to frame inline with crank throw",
+      "madeFrom": "Cast iron cylinder, steel piston with rings",
+      "criticalNote": "Keep condensate from hydraulic locking cylinder — drain cocks before start"
+    },
+    {
+      "id": "valve-gear",
+      "name": "Valve gear",
+      "function": "Times admission and exhaust",
+      "position": "Driven from eccentric or link motion",
+      "madeFrom": "Steel links, brass bushings",
+      "criticalNote": "Maladjusted valves cause knocking and wasted steam"
+    },
+    {
+      "id": "crankshaft-flywheel",
+      "name": "Crankshaft and flywheel",
+      "function": "Converts reciprocation to rotation; stores kinetic energy",
+      "position": "Main bearings on bedplate",
+      "madeFrom": "Forged steel shaft, cast iron flywheel",
+      "criticalNote": "Flywheel keying must be perfect — loose keys are lethal projectiles"
+    },
+    {
+      "id": "governor",
+      "name": "Governor",
+      "function": "Limits overspeed by throttling steam or adjusting cut-off",
+      "position": "Driven from crankshaft",
+      "madeFrom": "Weighted arms, linkage to throttle",
+      "criticalNote": "Governor failure on unloaded engine causes runaway — engineering ethics demand redundant safeguards"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Boiler plate steel",
+      "purpose": "Pressure containment",
+      "earthLocations": ["Industrial steelworks"],
+      "spaceAlternatives": "Imported stock until mills exist",
+      "processingRequired": "Riveting/welding to code; nondestructive testing modern"
+    },
+    {
+      "name": "Fuel",
+      "purpose": "Boiler heat",
+      "earthLocations": ["Coal historically dominant", "wood in frontier contexts"],
+      "spaceAlternatives": "Solar heat for small boilers in vacuum-adjacent demos — niche",
+      "processingRequired": "Stoker sizing, ash removal"
+    },
+    {
+      "name": "Feedwater",
+      "purpose": "Steam supply continuity",
+      "earthLocations": ["River water treated", "well water"],
+      "spaceAlternatives": "Recycled condensate loops",
+      "processingRequired": "Softening and oxygen scavenging when chemistry available"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Design to pressure code",
+      "description": "Compute wall thickness from pressure, diameter, and allowable stress; include corrosion allowance; place relief valves sized to boiler output.",
+      "prerequisiteTools": ["design tables", "competent inspector"],
+      "warningNote": "Amateur boilers kill — this step is legally regulated in modern nations"
+    },
+    {
+      "order": 2,
+      "title": "Fabricate and hydrotest boiler",
+      "description": "Rivet or weld seams; X-ray or dye penetrant critical welds; hydrostatic test above working pressure with remote barriers.",
+      "prerequisiteTools": ["hydraulic pump", "gauges calibrated"],
+      "warningNote": "During test, assume lethal energy — no one in plane of shell seams"
+    },
+    {
+      "order": 3,
+      "title": "Machine cylinder and fit rings",
+      "description": "Bore cylinder to roundness; lap if needed; cut ring gaps to allow thermal expansion without butt-scuffing.",
+      "prerequisiteTools": ["boring bar", "micrometer"],
+      "warningNote": "Tight rings seize when hot"
+    },
+    {
+      "order": 4,
+      "title": "Assemble valve gear timed to crank",
+      "description": "Set eccentric throw relative to dead centres; verify admission edge does not occur before dead centre beyond design lead angle.",
+      "prerequisiteTools": ["degree wheel", "dial indicator"],
+      "warningNote": "Incorrect timing can slam piston into head"
+    },
+    {
+      "order": 5,
+      "title": "Steam trial with warm-up discipline",
+      "description": "Gradually warm piping; crack drains; spin by hand; engage load slowly; monitor water level and bearing temperatures.",
+      "prerequisiteTools": ["insulated gloves", "infrared thermometer modern"],
+      "warningNote": "Entanglement with belts — machine guarding is not optional ethically"
+    }
+  ],
+  "history": [
+    {
+      "year": 1712,
+      "event": "Thomas Newcomen's atmospheric engine pumps water from mines using steam condensation vacuum.",
+      "location": "England",
+      "person": "Thomas Newcomen"
+    },
+    {
+      "year": 1769,
+      "event": "James Watt patents improvements including a separate condenser, launching the efficiency trajectory toward industrial power.",
+      "location": "Scotland",
+      "person": "James Watt"
+    },
+    {
+      "year": 1800,
+      "event": "High-pressure engines by Richard Trevithick enable compact locomotive prototypes.",
+      "location": "England",
+      "person": "Richard Trevithick"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "James Watt",
+      "contribution": "Separate condenser and foundational improvements to steam engine efficiency",
+      "years": "1736-1819",
+      "nationality": "Scottish"
+    },
+    {
+      "name": "Thomas Newcomen",
+      "contribution": "Practical atmospheric steam engine for pumping",
+      "years": "1664-1729",
+      "nationality": "British"
+    }
+  ],
+  "impact": "Steam power industrialised textiles, mills, shipping (steamships), and railways. It taught thermodynamics to engineers and created the safety culture around pressure vessels.\n\nModern grids still use steam turbines — the working fluid changed scale, not conceptual role.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "asme-boiler",
+      "title": "ASME — boiler and pressure vessel code context",
+      "url": "https://www.asme.org/topics-resources/content/history-of-boilers"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

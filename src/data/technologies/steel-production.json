@@ -1,0 +1,169 @@
+{
+  "id": "steel-production",
+  "name": "Steel Production (Carburised Bloom to Crucible and Bessemer Lineages)",
+  "tagline": "Controlling carbon in iron to balance hardness and toughness — the material behind machines",
+  "category": "materials",
+  "era": "medieval",
+  "difficulty": 4,
+  "prerequisites": ["iron-smelting", "charcoal"],
+  "unlocks": ["internal-combustion-engine", "bicycle", "steam-locomotive"],
+  "problem": "Bloomery iron is variable: soft in some regions, glassy in others, never quite the same batch to batch. Tools that must keep edges need higher carbon; structural beams need toughness. The steel problem is reproducible control of iron–carbon chemistry and microstructure: enough carbon to harden, not so much that blades chip, with processes to refine inclusions and adjust properties after forging.\n\nHistorically, multiple lineages converged: pack carburisation of wrought iron bars, crucible melting of blister steel, finery/puddling converting pig iron, and eventually Bessemer and open-hearth bulk decarburisation. The Codex unifies them under one entry because the user-facing outcome is the same material class — steel — even though industrial paths differ.\n\nFor civilisation restart, the earliest accessible path is often forge carburisation plus quench-and-temper heuristics on wrought iron, scaling toward crucible steel once refractories and temperature measurement improve.",
+  "overview": "Steel is iron alloyed with roughly 0.2–2.1% carbon in modern definitions of steels (above that enters cast iron territory, though historical language blurs). Carbon in interstitial solid solution and as iron carbide changes hardness and hardenability. Heat treatment — austenitising, quenching to form martensite, tempering to reduce brittleness — is as important as composition.\n\nPack carburisation packs iron bars in charcoal powder inside sealed clay boxes heated for hours to days; carbon diffuses inward producing a gradient — shear surfaces can be ground to high-carbon while core stays tough. Quenching in water or oil locks a hard surface.\n\nCrucible steel (e.g., historical wootz/ulibar traditions) melts a selected charge in sealed crucibles, enabling more homogeneous alloy distribution before forging. This demands higher temperatures and excellent refractories.\n\nIndustrial revolution paths start from pig iron rich in carbon and silicon; oxygen or air oxidation lowers carbon under controlled conditions (Bessemer converter), or puddling stirs molten iron in a reverberatory furnace to expose it to oxidising slag. These are civilisation-scale technologies requiring large capital.\n\nRegardless of path, slag inclusion control, phosphorus/sulphur limits, and consistent forging practice separate ornamental metal from reliable machine steel.",
+  "principles": [
+    {
+      "name": "Iron–carbon phase diagram",
+      "explanation": "Austenite can dissolve more carbon than ferrite; cooling paths determine pearlite, martensite, or graphite precipitation depending on rate and composition."
+    },
+    {
+      "name": "Diffusion carburisation",
+      "explanation": "Carbon moves into solid iron over time and temperature; case depth scales with sqrt(time) approximately — thick cases need long soaks."
+    },
+    {
+      "name": "Martensite formation",
+      "explanation": "Rapid quench traps carbon in a distorted lattice — very hard and brittle until tempered to allow carbide precipitation control."
+    },
+    {
+      "name": "Hardenability and quench severity",
+      "explanation": "Alloy elements and section thickness determine whether a quench fully hardens the interior or only the surface."
+    }
+  ],
+  "components": [
+    {
+      "id": "carburising-box",
+      "name": "Carburising pack or atmosphere furnace",
+      "function": "Supplies carbon at elevated temperature",
+      "position": "Within forge or muffle",
+      "madeFrom": "Sealed clay, later steel retorts",
+      "criticalNote": "Seals must exclude excess oxygen or you decarburise instead"
+    },
+    {
+      "id": "quench-medium",
+      "name": "Quench bath",
+      "function": "Sets cooling rate for hardening",
+      "position": "Adjacent to forge",
+      "madeFrom": "Water, brine, oil",
+      "criticalNote": "Oils can ignite — fire protocol mandatory"
+    },
+    {
+      "id": "tempering-hearth",
+      "name": "Tempering hearth",
+      "function": "Reheats hardened steel to trade hardness for toughness",
+      "position": "Lower temperature zone than welding heat",
+      "madeFrom": "Forge with temperature judgement or oven",
+      "criticalNote": "Over-temper softens excessively — colour charts help historically"
+    },
+    {
+      "id": "crucible",
+      "name": "Crucible (advanced path)",
+      "function": "Melts alloyed charges homogeneously",
+      "position": "Charcoal cupola or dedicated melt",
+      "madeFrom": "Graphite-clay crucibles historically",
+      "criticalNote": "Liquid steel dissolves refractories — contamination path"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Wrought iron or bloom stock",
+      "purpose": "Low-carbon starting matrix for carburisation or puddled iron for refining",
+      "earthLocations": ["Any bloomery tradition output"],
+      "spaceAlternatives": "Electrolytic iron powder sintered — advanced",
+      "processingRequired": "Forge consolidate before carburising to reduce slag stringers"
+    },
+    {
+      "name": "Charcoal powder",
+      "purpose": "Carbon source for pack carburising",
+      "earthLocations": ["Charcoal production sites"],
+      "spaceAlternatives": "Graphite powder if available",
+      "processingRequired": "Sift fines; keep dry"
+    },
+    {
+      "name": "Alloying elements (optional)",
+      "purpose": "Improves hardenability, corrosion resistance (later stainless lineages)",
+      "earthLocations": ["Nickel lateritic ores", "chromite", "manganese ores"],
+      "spaceAlternatives": "Imported pure elements in advanced industry",
+      "processingRequired": "Metallurgical knowledge to avoid embrittling phases"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Normalise starting iron",
+      "description": "Heat to bright orange and air cool to refine grain from prior forging. Test hardness with file — should cut easily if low carbon.",
+      "prerequisiteTools": ["forge", "tongs", "file"],
+      "warningNote": "Scale flies — eye protection"
+    },
+    {
+      "order": 2,
+      "title": "Pack carburise",
+      "description": "Embed bars in charcoal fines with small carbonate addition if slag control is needed. Seal box, heat 850–950 °C range for many hours depending on case depth target.",
+      "prerequisiteTools": ["pyrometric judgement", "sealed boxes"],
+      "warningNote": "CO-rich atmosphere — outdoor furnace only with ventilation planning"
+    },
+    {
+      "order": 3,
+      "title": "Quench",
+      "description": "Heat to non-magnetic point (Curie check with magnet) for simple carbon steels as a historic heuristic, then quench perpendicular entry to reduce distortion.",
+      "prerequisiteTools": ["quench tank", "tongs"],
+      "warningNote": "Steam jacket can delay quench — agitate safely"
+    },
+    {
+      "order": 4,
+      "title": "Temper",
+      "description": "Polish a face to observe oxide colours; temper until straw to blue depending on desired hardness for tool role.",
+      "prerequisiteTools": ["abrasive", "even heat source"],
+      "warningNote": "Uneven temper creates hard spots that chip"
+    },
+    {
+      "order": 5,
+      "title": "Test and iterate",
+      "description": "Break sample coupons if possible; check grain with etched macroetch later when acids exist. Document heat colours and timings — this is your future standard.",
+      "prerequisiteTools": ["vise", "hammer"],
+      "warningNote": "Snap tests of high-carbon pieces are sharp — gloves"
+    }
+  ],
+  "history": [
+    {
+      "year": "1st millennium BCE",
+      "event": "Pattern-welded and carburised blades demonstrate empirical mastery of heterogeneous steel structures.",
+      "location": "Europe, Middle East"
+    },
+    {
+      "year": 1740,
+      "event": "Benjamin Huntsman's crucible steel process in Sheffield improves homogeneity for tools.",
+      "location": "England",
+      "person": "Benjamin Huntsman"
+    },
+    {
+      "year": 1856,
+      "event": "Bessemer converter enables mass decarburisation of molten pig iron, launching cheap structural steel.",
+      "location": "United Kingdom",
+      "person": "Henry Bessemer"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "Henry Bessemer",
+      "contribution": "Pneumatic steelmaking from molten pig iron",
+      "years": "1813-1898",
+      "nationality": "British"
+    },
+    {
+      "name": "Benjamin Huntsman",
+      "contribution": "Crucible melting for homogeneous tool steel",
+      "years": "1704-1776",
+      "nationality": "British"
+    }
+  ],
+  "impact": "Steel is the skeleton of industrial machines: shafts, gears, rails, boilers, and engines. Reliable steel changes what is worth building — bridges expand, railways span continents, turbines spin.\n\nFor recovery, steelmaking is a knowledge bottleneck: you can have iron and still fail for decades without carbon control lore. This entry is the conceptual bridge from 'metal' to 'machine metal'.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "worldsteel",
+      "title": "World Steel Association — steel production facts",
+      "url": "https://worldsteel.org/steel-facts/statistics/"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

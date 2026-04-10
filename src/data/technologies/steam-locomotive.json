@@ -1,0 +1,170 @@
+{
+  "id": "steam-locomotive",
+  "name": "Steam Locomotive (Railway Engine)",
+  "tagline": "A mobile steam plant on flanged wheels, drawing adhesion traction from steel rails to haul trains at low rolling resistance",
+  "category": "transport",
+  "era": "industrial",
+  "difficulty": 4,
+  "prerequisites": ["steam-engine", "steel-production", "wheel-and-axle", "road-construction"],
+  "unlocks": [],
+  "problem": "Canal boats are slow; roads consume tractive effort ploughing dirt even with good wheels. Railways solve friction by running flanged steel wheels on steel rails — hard, small contact patches with low rolling resistance — enabling a locomotive to tow many times its own weight on level track. The steam locomotive packages a boiler, firebox, and reciprocating engine into a vehicle that carries its own fuel and water (or tenders them).\n\nChallenges are adhesion limits (coefficient of friction between wheel and rail), grueling thermal cycles on boilers, and maintenance of valve timing at varying cut-off for efficiency. Civil engineering must provide gentle grades, stable embankments, and drainage — track is not merely rails but a structure.\n\nSocially, railways synchronised time zones and markets; they are infrastructure that outlives any single engine class.",
+  "overview": "A classical steam locomotive integrates a firebox burning coal or oil, a boiler generating steam, a steam chest distributing steam to cylinders via valve gear (e.g., Stephenson, Walschaerts), pistons driving side rods to coupled driving wheels, and a pilot truck or trailing truck supporting weight distribution. Exhaust steam blasts up the stack to enhance draft through the fire tubes — a self-stoking thermodynamic coupling.\n\nThe boiler is a pressure vessel with a water level maintained by injectors or feedwater pumps; blowdown manages dissolved solids. Lubrication includes mechanical lubricators for cylinder oil and journal oils for bearings running under heavy side loads from connecting rods.\n\nTraction is adhesion-limited: drivers must not slip under starting torque — sanders drop grit to raise friction temporarily. Dynamic augment from rotating masses and rod geometry sets speed limits on light track.\n\nBraking historically included hand brakes, steam brakes, and later air brakes (Westinghouse) that revolutionised train safety — the locomotive is one node in a train-wide pneumatic system.",
+  "principles": [
+    {
+      "name": "Adhesion traction",
+      "explanation": "Tractive effort at the rail is capped by normal force on drivers times friction coefficient — extra power beyond slip simply burns wheel steel."
+    },
+    {
+      "name": "Cut-off and expansive working",
+      "explanation": "Engineers reduce steam admission late in the stroke to let steam expand — saving steam and coal on long runs when skillfully managed."
+    },
+    {
+      "name": "Boiler circulation and priming",
+      "explanation": "Carryover of water into steam lines (priming) causes dangerous cylinder hydraulic lock — water level and water chemistry management are operational skills."
+    },
+    {
+      "name": "Con rod geometry and balancing",
+      "explanation": "Reciprocating masses create hammer blow on track; balance weights on wheels partially compensate but cannot eliminate dynamic effects at speed."
+    }
+  ],
+  "components": [
+    {
+      "id": "boiler-shell",
+      "name": "Boiler and firebox",
+      "function": "Generates steam at working pressure",
+      "position": "Centreline of locomotive",
+      "madeFrom": "Riveted or welded steel, staybolts, firebrick arch",
+      "criticalNote": "Annual inspections and hydrotests — statutory for good reason"
+    },
+    {
+      "id": "cylinders",
+      "name": "Steam cylinders",
+      "function": "Convert steam pressure to reciprocating force",
+      "position": "Ahead of or alongside boiler depending on design",
+      "madeFrom": "Cast steel cylinders, steel piston rods, packing glands",
+      "criticalNote": "Rod packing leaks waste steam and obscure sight glasses"
+    },
+    {
+      "id": "valve-gear",
+      "name": "Valve gear",
+      "function": "Controls admission and exhaust timing; reverser sets direction",
+      "position": "Linked from cab",
+      "madeFrom": "Steel links, pins, bushings",
+      "criticalNote": "Lost motion makes engines misfire — frequent adjustment"
+    },
+    {
+      "id": "driving-wheels",
+      "name": "Driving wheelsets",
+      "function": "Convert rod torque to rail traction",
+      "position": "Coupled drivers with side rods",
+      "madeFrom": "Steel tyres shrunk on spoked centres historically",
+      "criticalNote": "Tyre slippage on rim is catastrophic — maintain tyre bolts and keys"
+    },
+    {
+      "id": "tender",
+      "name": "Tender (if separate)",
+      "function": "Carries coal and water for long runs",
+      "position": "Coupled behind cab",
+      "madeFrom": "Steel tank, hopper",
+      "criticalNote": "Water chemistry affects boiler scale — treat or blow down"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Boiler-grade steel",
+      "purpose": "Pressure containment",
+      "earthLocations": ["Industrial steel suppliers"],
+      "spaceAlternatives": "Imported stock",
+      "processingRequired": "Riveting/welding to railway codes"
+    },
+    {
+      "name": "Rail steel",
+      "purpose": "Track structure",
+      "earthLocations": ["Specialised rolling mills"],
+      "spaceAlternatives": "Welded wear-resistant alloys",
+      "processingRequired": "Heat treatment for head hardness"
+    },
+    {
+      "name": "Coal or oil fuel",
+      "purpose": "Boiler heat",
+      "earthLocations": ["Coalfields globally", "oil fields for oil-fired engines"],
+      "spaceAlternatives": "Biomass pellets in heritage contexts — chemistry affects ash fouling",
+      "processingRequired": "Sizing for stoker or hand firing"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Fabricate frames and cylinders",
+      "description": "Machine cylinder bores co-planar with frame to keep rod alignment true. Install crank pins with interference fits and locking plates.",
+      "prerequisiteTools": ["boring mill", "surface plate"],
+      "warningNote": "Misaligned rods side-load pistons, destroying rings quickly"
+    },
+    {
+      "order": 2,
+      "title": "Build and hydrotest boiler",
+      "description": "Install stays and fusible plugs; hydrotest beyond working pressure; stamp registration per jurisdiction.",
+      "prerequisiteTools": ["hydro pump", "inspector sign-off"],
+      "warningNote": "Boiler explosions historically level stations — never skip codes"
+    },
+    {
+      "order": 3,
+      "title": "Assemble rod drive",
+      "description": "Time side rods; set quartering on multi-cylinder designs; verify equalised spring rigging loads wheel sets evenly.",
+      "prerequisiteTools": ["jacks", "dial indicators"],
+      "warningNote": "Finger crush zones under rods during rotation — bar out personnel"
+    },
+    {
+      "order": 4,
+      "title": "Install valve gear and timing",
+      "description": "Set valve events relative to dead centres using templates; adjust lap and lead per designer; test both forward and reverse.",
+      "prerequisiteTools": ["timing diagrams", "feeler gauges"],
+      "warningNote": "Hot tests require clear exhaust paths — steam scald risk"
+    },
+    {
+      "order": 5,
+      "title": "Light fire and steam gently",
+      "description": "Warm boiler evenly; blow down; test injectors; sand rail head on first moves; record pressures and temperatures in logbook culture.",
+      "prerequisiteTools": ["gauges", "blowdown valves"],
+      "warningNote": "Entanglement with clothing near rods — strict crew discipline"
+    }
+  ],
+  "history": [
+    {
+      "year": 1804,
+      "event": "Richard Trevithick runs a steam locomotive on rails at Penydarren — early proof of rail adhesion traction.",
+      "location": "Wales",
+      "person": "Richard Trevithick"
+    },
+    {
+      "year": 1825,
+      "event": "Stockton and Darlington Railway opens with steam haulage for freight, expanding railway economics.",
+      "location": "England"
+    },
+    {
+      "year": 1869,
+      "event": "Completion of the First Transcontinental Railroad links the United States by rail.",
+      "location": "United States"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "George Stephenson",
+      "contribution": "Railway locomotive engineering and early standardisation efforts",
+      "years": "1781-1848",
+      "nationality": "British"
+    }
+  ],
+  "impact": "Steam railways moved grain, coal, and troops at scales that reshaped empires and famine relief. They accelerated industrial specialisation by enlarging markets.\n\nHeritage railways today preserve tacit knowledge of steam operation — important because thermodynamic intuition is hard to recover from textbooks alone.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "smithsonian-rail",
+      "title": "Smithsonian — America on the Move (rail history)",
+      "url": "https://americanhistory.si.edu/america-on-the-move"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

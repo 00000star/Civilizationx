@@ -1,0 +1,155 @@
+{
+  "id": "fishing-net-and-line",
+  "name": "Fishing (Net and Line)",
+  "tagline": "Capturing aquatic protein using cordage, hooks, and mesh structures",
+  "category": "food",
+  "era": "prehistoric",
+  "difficulty": 2,
+  "prerequisites": ["rope-and-cordage", "bone-tools"],
+  "unlocks": [],
+  "problem": "Rivers, lakes, and coasts concentrate protein in forms humans cannot outrun or easily spear without tools. Hand-catching works for small shallow species only. The fishing problem is projecting human reach into water: suspending bait at depth, entangling fish in mesh, or gorging swallow hooks — each method trades materials, skill, and bycatch risk.\n\nFishing also solves seasonality: when terrestrial game is scarce, aquatic resources often remain. Preserved fish (drying, smoking — enabled by cordage racks and fire) becomes a storable amino acid source.\n\nThe constraint is tensile reliability underwater: fibres swell, knots slip when wet unless designed correctly, and biofouling weakens lines. Net making is combinatorics: many repeated knots must be uniform or mesh tears propagate.",
+  "overview": "Line fishing uses a cord with a terminal hook — historically bone, shell, cactus spine, later metal. Bait or lure triggers swallowing; hook geometry sets jaw penetration angle. Floats and sinkers tune presentation depth using buoyancy and mass along the line.\n\nNets are textiles in two dimensions: seine nets surround schools; gill nets entangle by mesh size matched to target species; cast nets spread radially from weights at periphery. Knots include sheet bend variants for joining meshes; finger gauges maintain uniform openings.\n\nTraps and weirs channel fish into enclosures — sometimes more fuel-efficient than active netting when streams are reliable. They couple civil engineering (stone walls, woven fences) with ichthyology knowledge.\n\nEcologically, fishing scales into depletion. Sustainable practice is part of the technology: mesh regulations, seasonal closures, and habitat protection — not optional cultural garnish.",
+  "principles": [
+    {
+      "name": "Buoyancy and drag",
+      "explanation": "Floats must support terminal tackle weight; currents add drag that straightens lines and moves baits — design accounts for stream velocity."
+    },
+    {
+      "name": "Mesh selectivity",
+      "explanation": "Fish attempt passage through openings; correctly sized mesh catches target girth while reducing juvenile take — a mechanical conservation lever."
+    },
+    {
+      "name": "Wet strength of fibres",
+      "explanation": "Cellulose fibres weaken and swell in water; protein fibres like sinew behave differently. Preservatives (tannins, oils) mitigate rot."
+    },
+    {
+      "name": "Hook mechanics",
+      "explanation": "Point angle and barb geometry balance penetration versus release; circle hooks reduce deep gut hooking in some fisheries."
+    }
+  ],
+  "components": [
+    {
+      "id": "line",
+      "name": "Line / twine",
+      "function": "Transmits setting force and retrieves catch",
+      "position": "Main tensile member from hand or rod to hook",
+      "madeFrom": "Plant cordage, hair, sinew, later silk and nylon",
+      "criticalNote": "Inspect for abrasion before each session"
+    },
+    {
+      "id": "hook",
+      "name": "Hook",
+      "function": "Engages fish mouth or gut depending on design",
+      "position": "Terminal end",
+      "madeFrom": "Bone, shell, forged metal later",
+      "criticalNote": "Keep points sharp — dull hooks injure fish without securing catch"
+    },
+    {
+      "id": "net-panel",
+      "name": "Net panel",
+      "function": "Entangles or encloses fish",
+      "position": "Deployed in water column or across channel",
+      "madeFrom": "Knotted mesh of cordage",
+      "criticalNote": "Repair tears immediately — propagates under load"
+    },
+    {
+      "id": "float-sinker",
+      "name": "Floats and sinkers",
+      "function": "Positions gear vertically",
+      "position": "Along line or net headrope/footrope",
+      "madeFrom": "Cork, wood, fired clay, stone, lead later",
+      "warningNote": "Lead is toxic — avoid handling residues near food; modern regulations restrict lead tackle in many regions"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Cordage fibres",
+      "purpose": "Lines and nets",
+      "earthLocations": ["Nettle, lime bast, sisal analogues per biome"],
+      "spaceAlternatives": "Synthetic monofilament when chemical industry exists",
+      "processingRequired": "Spin and ply as rope entry; oil dressing for water resistance"
+    },
+    {
+      "name": "Hook blanks",
+      "purpose": "Terminal engagement",
+      "earthLocations": ["Bone splinters, shells, thorns"],
+      "spaceAlternatives": "Wire formed from drawn metal",
+      "processingRequired": "Grind point and barb; polish to reduce corrosion pits"
+    },
+    {
+      "name": "Weights",
+      "purpose": "Sink nets and lines",
+      "earthLocations": ["Stone, clay", "lead ore where smelted"],
+      "spaceAlternatives": "Steel weights",
+      "processingRequired": "Shape to reduce snagging on bottom"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Select target species and method",
+      "description": "Mesh size, hook size, and bait follow biology — consult local ecological knowledge. Start with abundant small species to calibrate fibres and knots before scaling mesh.",
+      "prerequisiteTools": ["measuring gauge stick"],
+      "warningNote": "Protected species and seasonal closures are legal in most jurisdictions"
+    },
+    {
+      "order": 2,
+      "title": "Fabricate hooks and line",
+      "description": "Carve bone hooks with barb geometry appropriate to jaw strength of target fish. Attach line via snelled whipping or knotted eye. Test dry break strength, then wet soak retest.",
+      "prerequisiteTools": ["bone awl", "abrasive stone", "knife"],
+      "warningNote": "Bone hooks snap under shock — smooth fighting reduces losses"
+    },
+    {
+      "order": 3,
+      "title": "Knit net mesh",
+      "description": "Tie rows of uniform meshes using a netting needle to shuttle twine. Use gauge stick for opening width. Join panels with strong bends.",
+      "prerequisiteTools": ["netting needle", "gauge stick"],
+      "warningNote": "Uniformity matters — one tight mesh becomes failure nucleus"
+    },
+    {
+      "order": 4,
+      "title": "Rig floats and weights",
+      "description": "For gill nets, space floats on headrope and weights on footrope to achieve vertical hang. Adjust for current — too light rides surface; too heavy snags.",
+      "prerequisiteTools": ["awl for threading", "knife"],
+      "warningNote": "Entanglement hazard — never wrap line around limbs"
+    },
+    {
+      "order": 5,
+      "title": "Deploy, retrieve, maintain",
+      "description": "Dry nets after use to prevent rot; remove debris; mend holes. Record catch rates to avoid overharvest.",
+      "prerequisiteTools": ["net repair fid"],
+      "warningNote": "Cold water immersion risk — wear flotation in boats"
+    }
+  ],
+  "history": [
+    {
+      "year": "Mesolithic",
+      "event": "Fine barbed bone points and net sinkers proliferate in lacustrine sites.",
+      "location": "Northern Europe"
+    },
+    {
+      "year": "Neolithic",
+      "event": "Fish weirs leave large wooden post patterns in anaerobic sediments.",
+      "location": "Northwest Europe, North America"
+    },
+    {
+      "year": "1937",
+      "event": "Commercial production of nylon enables synthetic fishing lines and nets that resist rot — dramatically changing industrial fisheries' economics and ecological impact.",
+      "location": "United States",
+      "person": "Wallace Carothers (nylon invention context)"
+    }
+  ],
+  "inventors": [],
+  "impact": "Fishing supported riverside and coastal sedentism and trade — dried fish is lightweight calories. It also drove boat technologies and navigation later.\n\nModern industrial fishing is a cautionary lesson: technology without governance collapses stocks. The Codex encodes that governance is a subsystem of extraction tech.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "fao-fisheries",
+      "title": "FAO — fisheries and aquaculture overview",
+      "url": "https://www.fao.org/fishery/en"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}

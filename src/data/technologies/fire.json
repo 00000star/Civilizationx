@@ -1,0 +1,183 @@
+{
+  "id": "fire",
+  "name": "Controlled Fire",
+  "tagline": "Heat, light, and chemical transformation on demand — the foundation of cooked food, warmth, and high-temperature processes",
+  "category": "energy",
+  "era": "prehistoric",
+  "difficulty": 1,
+  "prerequisites": [],
+  "unlocks": ["charcoal", "ceramics-and-pottery", "cooking"],
+  "problem": "Without controlled fire, humans could not reliably warm themselves through ice ages, drive away predators at night, or make food safer and more digestible. Raw meat spoils quickly; many plant foods are tough, toxic unless processed, or nutritionally locked away behind indigestible fibres. Night limited productive hours to daylight. Cold climates imposed severe calorie costs just to maintain body temperature.\n\nFire solves a deeper problem: access to concentrated, portable energy in chemical form. Wood, dung, and other fuels store solar energy captured by photosynthesis. Burning releases that energy as heat and light at a rate humans can direct. That directed heat becomes the gateway to drying, smoking, hardening, and eventually melting and smelting — the entire cascade of pyrotechnology.\n\nThe challenge is not merely making a flame once, but sustaining it, transporting it, and learning which fuels, geometries, and airflows produce useful temperatures without constant danger. Mastering fire is mastering a controlled chain reaction between fuel, oxygen, and ignition.",
+  "overview": "Fire is the rapid oxidation of fuel — combining fuel with oxygen from the air in an exothermic reaction that releases heat and light. In a typical wood fire, heat first drives off moisture, then pyrolyses complex organic molecules into flammable gases that mix with air and ignite above the fuel bed. Glowing char remains where oxygen reaches the solid surface more slowly.\n\nHumans create fire by raising a small amount of fuel to its ignition temperature while maintaining sufficient airflow. Friction methods convert muscle work into heat at a contact point; percussion methods create hot sparks from stone-on-stone or stone-on-iron; compression methods can ignite tinder in some fire pistons. Once an ember exists, it is nurtured in easily ignited tinder (dry grass, shredded bark, fungi) and then transferred to progressively larger kindling and fuel.\n\nA sustainable fire pit or hearth uses a balance of fuel size, stacking pattern, and draft. Too little air smothers the fire; too much scatters heat or burns fuel quickly without useful warmth. Containment with rocks or clay reduces wind variability and reflects heat. Ash insulation slows heat loss into the ground.\n\nBeyond warmth, fire enables cooking: denaturing proteins, gelatinising starches, and destroying many pathogens and heat-labile toxins. It enables light for tool-making and social coordination after dark. It is the prerequisite for charcoal making, pottery firing, glassworking, and metallurgy — all of which require sustained high temperatures in controlled environments.",
+  "principles": [
+    {
+      "name": "Combustion triangle",
+      "explanation": "Fire needs heat, fuel, and an oxidiser (usually oxygen). Remove any leg and the fire stops. This is why smothering with earth or blankets works, and why wet fuel fails — water removes heat and blocks air."
+    },
+    {
+      "name": "Pyrolysis and char gasification",
+      "explanation": "Solid organic fuels do not burn as a block. Heat decomposes them into volatile gases that burn in flames, leaving char that can glow-oxidise. Managing this separation is how you build a clean, hot fire versus a smoky one."
+    },
+    {
+      "name": "Heat transfer",
+      "explanation": "Cooking and material processing use conduction (contact), convection (hot gases and liquids), and radiation (infrared from glowing fuel). Effective hearth design uses all three deliberately."
+    },
+    {
+      "name": "Thermal runaway in tinder",
+      "explanation": "A tiny ember grows when heat generation exceeds losses to surroundings. Insulating a coal in a tinder bundle traps heat, raises local temperature, and drives the transition from smoulder to flame."
+    }
+  ],
+  "components": [
+    {
+      "id": "fuel",
+      "name": "Fuel (wood, dung, peat, charcoal)",
+      "function": "Stores chemical energy released as heat and light when oxidised",
+      "position": "Fed into the combustion zone according to burn rate needed",
+      "madeFrom": "Biomass: dead wood, dried herbivore dung, peat layers, or processed charcoal",
+      "criticalNote": "Dry fuel ignites and burns predictably; wet fuel wastes heat on evaporation and produces smoke"
+    },
+    {
+      "id": "oxidiser",
+      "name": "Airflow / oxygen supply",
+      "function": "Provides oxygen to sustain oxidation once kindling is lit",
+      "position": "Enters through gaps in fuel stacking, blow tubes, or natural draft",
+      "madeFrom": "Atmospheric air (~21% oxygen)",
+      "criticalNote": "Enclosed spaces need ventilation — combustion consumes oxygen and produces carbon monoxide"
+    },
+    {
+      "id": "ignition",
+      "name": "Ignition source",
+      "function": "Supplies initial activation energy to start self-sustaining combustion",
+      "position": "Applied to tinder, then withdrawn or consumed as flame spreads",
+      "madeFrom": "Friction kit, flint and steel, matches (later), or preserved ember from previous fire"
+    },
+    {
+      "id": "hearth",
+      "name": "Hearth or fire pit",
+      "function": "Contains fuel, reflects heat, reduces wind gusts, and limits spread",
+      "position": "Ground depression, rock ring, or clay-lined basin",
+      "madeFrom": "Stone, clay, or compacted earth",
+      "criticalNote": "Clear vegetation downslope and overhead; sparks can travel surprisingly far"
+    },
+    {
+      "id": "cooking-surface",
+      "name": "Cooking support (grate, stones, skewer)",
+      "function": "Holds food in the useful heat zone above coals",
+      "position": "Above radiant char or beside convective flame",
+      "madeFrom": "Green wood sticks, flat stones (non-explosive quartz-free types), later metal"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Dry tinder and kindling",
+      "purpose": "Bridge from ember to sustained flame",
+      "earthLocations": ["Any temperate or tropical landscape with grasses, inner bark fibres, or fungi such as amadou"],
+      "spaceAlternatives": "In a habitat, paper-like cellulose from hydroponic biomass or lint from textiles; always paired with oxygen control",
+      "processingRequired": "Thorough drying; mechanical shredding increases surface area for ignition"
+    },
+    {
+      "name": "Cordwood or biomass fuel",
+      "purpose": "Sustained heat release for warmth, cooking, and process heat",
+      "earthLocations": ["Forests, savannas, peat bogs, grasslands (dung)", "Driftwood on coasts"],
+      "spaceAlternatives": "Methane/oxygen burners or electrolysis-derived hydrogen combustion — different hardware, same thermodynamic role",
+      "processingRequired": "Seasoning wood reduces moisture; splitting increases surface area for clean combustion"
+    },
+    {
+      "name": "Stone or clay for containment",
+      "purpose": "Thermal mass, wind shielding, and spark containment",
+      "earthLocations": ["River cobbles, fractured bedrock, clayey soils globally"],
+      "spaceAlternatives": "Regolith bricks sintered by concentrated solar or electric heat",
+      "processingRequired": "Dry clay before firing if making permanent hearths; select rocks that do not spall explosively when heated"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Prepare a safe site",
+      "description": "Clear a circle of all flammable material to mineral soil or rock. Remove low branches overhead. In windy conditions, dig a shallow pit or build a windbreak with non-flammable material. Keep water, sand, or loose earth ready to smother escape.",
+      "prerequisiteTools": ["digging stick or hands", "container for water or sand"],
+      "warningNote": "Never leave fire unattended; coals remain hot for many hours"
+    },
+    {
+      "order": 2,
+      "title": "Lay tinder and kindling",
+      "description": "Form a loose bundle of fine, dry tinder. Above it, build a tipi or log-cabin of pencil-thick to thumb-thick dry sticks with air gaps. Stage wrist-thick fuel nearby but not smothering the structure.",
+      "prerequisiteTools": ["knife or sharp stone optional"],
+      "warningNote": "Tight bundles suffocate; airflow is as important as dryness"
+    },
+    {
+      "order": 3,
+      "title": "Create an ember or flame",
+      "description": "Using your ignition method, concentrate heat in the tinder until it chars, smokes, and then glows. Blow gently to increase temperature, bringing volatiles off-gas until they ignite. Transfer the burning bundle under the kindling structure without crushing airflow.",
+      "prerequisiteTools": ["bow drill, hand drill, flint and steel, or matches"],
+      "warningNote": "Blow tubes focus oxygen — sudden gusts can scatter burning material"
+    },
+    {
+      "order": 4,
+      "title": "Establish a coal bed",
+      "description": "Once kindling is alight, add progressively larger fuel. Push collapsing material together to form a bed of glowing char. This bed provides steady radiant heat for cooking and warmth with less flame than fresh wood.",
+      "prerequisiteTools": ["green stick poker", "rocks or tongs later"],
+      "warningNote": "Do not use river rocks with trapped moisture — they can fracture violently when heated"
+    },
+    {
+      "order": 5,
+      "title": "Maintain and bank the fire",
+      "description": "For long burns, add fuel on a schedule matching heat demand. To preserve overnight coals, bury with ash, cover with insulating material, or partially smother to reduce consumption while keeping ember cores.",
+      "prerequisiteTools": ["shovel or improvised scoop"],
+      "warningNote": "Carbon monoxide can accumulate in shelters without ventilation — maintain airflow"
+    }
+  ],
+  "history": [
+    {
+      "year": "Before 400000 BCE",
+      "event": "Evidence of hominin use of fire becomes debated but increasingly documented at sites with heated sediments and burned bone.",
+      "location": "Africa and Eurasia (multiple sites)"
+    },
+    {
+      "year": "125000+ years ago",
+      "event": "Hearth-like features and repeated burning suggest habitual fire control rather than opportunistic use at some Middle Palaeolithic sites.",
+      "location": "Europe and the Levant"
+    },
+    {
+      "year": "Holocene",
+      "event": "Fire becomes central to cooking, land management, pottery, and eventually metallurgy as pyrotechnology intensifies.",
+      "location": "Worldwide"
+    }
+  ],
+  "inventors": [],
+  "impact": "Fire reshaped human anatomy and society. Cooked food reduces chewing and digestive costs, enabling smaller guts and larger brains over evolutionary time scales debated by anthropologists but widely linked to dietary change. Culturally, the hearth became a centre of safety, storytelling, and craft — extending the productive day into darkness.\n\nTechnologically, fire is the root of the high-temperature branch of civilisation: charcoal, ceramics, glass, lime burning, and metal smelting all depend on controlling heat, atmosphere, and time. Without fire, metallurgy does not exist; without metallurgy, most later machines do not exist.\n\nEcologically, fire is double-edged: it enabled clearing for agriculture and hunting drives, but also long-term landscape transformation. Understanding fire remains a civilisational skill — from campcraft to industrial furnaces.",
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Schematic campfire showing radiant heat and convective flame above a coal bed",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [
+    {
+      "id": "bow-drill",
+      "title": "Friction fire — bow drill overview",
+      "description": "Search for accredited outdoor-skills instruction on bow-drill and hand-drill fire; match content to your climate, fuel types, and local regulations.",
+      "durationSeconds": 600
+    }
+  ],
+  "externalLinks": [
+    {
+      "id": "smithsonian-fire",
+      "title": "Smithsonian — evidence and context for early fire use",
+      "url": "https://www.si.edu/stories/how-did-we-discover-fire",
+      "note": "Popular science summary with references to archaeological debate"
+    },
+    {
+      "id": "nfpa-safety",
+      "title": "Fire safety fundamentals (campfires and outdoor burning)",
+      "url": "https://www.nfpa.org/education-and-research/home-safety/outdoor-safety",
+      "note": "Modern safety framing; adapt to local regulations"
+    }
+  ],
+  "lastUpdated": "2026-04-10",
+  "verified": false
+}
