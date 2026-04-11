@@ -13,8 +13,8 @@
   "unlocks": [
     "communication-satellites"
   ],
-  "problem": "Wires cannot follow ships at sea or cars at speed without ruinous cost. Radio encodes information on sinusoidal carriers — amplitude or frequency modulation early, single-sideband for spectrum efficiency later. The obstacle is physics: antennas must be significant fractions of wavelength; receivers must select one station among megahertz of chaos; transmitters must not deafen neighbours with harmonics.\n\nRegulatory technology matters as much as hardware: ITU allocations, licensing exams, and enforcement against spark-gap villains who jam distress frequencies.\n\nBroadcasting created simultaneous audiences — politics, music, and emergency alerts share one-to-many topology unlike telephony’s mesh.",
-  "overview": "A transmitter chain oscillates carrier, modulates with audio or digital symbols, amplifies through tuned stages, and feeds an antenna with correct impedance match. Receivers superheterodyne to a fixed IF for stable filtering; AGC rides fading; detectors recover baseband. FM trades bandwidth for noise immunity on VHF.\n\nStudio-to-transmitter links moved from leased lines to microwave STL; RDS embeds metadata on FM subcarriers. Digital modes (DRM, HD Radio, DAB) squeeze more bits per hertz with error correction — coexistence with analogue legacy is a regulatory negotiation.\n\nAntenna farms pattern energy toward population centres; skywave HF reaches continents at night with ionospheric refraction — delightful until solar storms erase paths.\n\nEmergency systems (EPIRB, weather radio) embed radio into survival kits — collapse-relevant even after cellular primacy.",
+  "problem": "Copper follows ships until it cannot; armies and orchestras want audiences beyond earshot. Radio encodes information on high-frequency carriers — amplitude or frequency modulation early, digital modes later — so one transmitter can serve many receivers without stringing private wires to each listener.\n\nPhysics intrudes: antennas want sizes comparable to wavelength; the ether is crowded; harmonics from sloppy transmitters jam distress frequencies. Receivers must select one story among megahertz of noise without deafening the operator.\n\nRegulation becomes technology: licences, exams, band plans, and enforcement against spark-gap villains are as important as oscillator stability. Broadcasting reshaped politics and music — simultaneous audiences are a new social geometry.\n\nEmergency services and marine distress remind us radio remains collapse-relevant even when phones feel universal — towers fall; skywave sometimes still answers.",
+  "overview": "Transmitters generate a stable carrier, modulate it with audio or symbols, amplify through linearised stages, and match impedance to an antenna so power leaves as radiation instead of reflected heat. Receivers heterodyne signals to a fixed intermediate frequency for easier filtering, apply automatic gain control for fading, and demodulate to baseband.\n\nFM trades bandwidth for noise immunity; single-sideband squeezes spectrum for voice on crowded HF. Digital voice and data add error correction — intelligible speech where analogue would dissolve into hiss.\n\nAntenna farms pattern energy toward cities; ionospheric HF reaches continents at night with moods set by solar weather. Studio-to-transmitter links moved from phone pairs to microwave STL; RDS embeds metadata on FM subcarriers.\n\nEvery link budget is a story of watts, antenna gain, path loss, and acceptable noise — engineering as accounting.",
   "principles": [
     {
       "name": "Antenna reciprocity",
@@ -77,7 +77,7 @@
       "earthLocations": [
         "Extrusion mills"
       ],
-      "spaceAlternatives": "Deployable antennas",
+      "spaceAlternatives": "Copper and aluminium for antennas and radials; PTFE coax where low loss matters — keep connectors weatherproofed",
       "processingRequired": "Galvanising or anodising"
     },
     {
@@ -86,7 +86,7 @@
       "earthLocations": [
         "Cable plants"
       ],
-      "spaceAlternatives": "Waveguide at microwave",
+      "spaceAlternatives": "High-permeability cores for IF transformers; air-core where Q must be high and stable",
       "processingRequired": "Foam dielectric extrusion"
     },
     {
@@ -95,55 +95,60 @@
       "earthLocations": [
         "Mn-Zn ferrite factories"
       ],
-      "spaceAlternatives": "Air-core at VHF",
+      "spaceAlternatives": "Quartz crystals or ceramic resonators for stable oscillators; rubidium references where budgets allow",
       "processingRequired": "Sintering and gapping"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Frequency coordination",
-      "description": "Apply for allocation; measure existing noise floor; avoid radar bands.",
+      "title": "Learn your national band plan before soldering",
+      "description": "Print the allowed frequencies, power limits, and emission types for your licence class. Mark harmonics of your oscillator that must be suppressed — neighbours will not forgive interference to aeronautical bands.",
       "prerequisiteTools": [
-        "spectrum analyser"
+        "regulatory booklet",
+        "highlighter"
       ],
-      "warningNote": "Illegal harmonics into aviation band is criminal"
+      "warningNote": "Transmitting illegally can cost lives as well as fines"
     },
     {
       "order": 2,
-      "title": "Install antenna and grounding",
-      "description": "Lightning protection; tower climbing safety; VSWR trim.",
+      "title": "Build or buy an antenna matched to your chosen wavelength",
+      "description": "Measure SWR with a meter or bridge; trim elements patiently. Install lightning arrestors and proper earth bonds before first TX tests.",
       "prerequisiteTools": [
-        "vector network analyser"
+        "SWR meter",
+        "cutting tools"
       ],
-      "warningNote": "High RF burns without contact — respect ERP"
+      "warningNote": "RF burns are insidious — assume feedline is live"
     },
     {
       "order": 3,
-      "title": "Align transmitter chain",
-      "description": "Bias PA; neutralise if tube; intermodulation test two-tone.",
+      "title": "Assemble a superhet receiver with stable local oscillator",
+      "description": "Shield oscillator stages; verify image rejection with a signal generator if available. Set AGC time constants so fading does not pump audio obnoxiously.",
       "prerequisiteTools": [
-        "two-tone generator"
+        "signal generator optional",
+        "oscilloscope"
       ],
-      "warningNote": "Splatter triggers neighbour complaints"
+      "warningNote": "Microphonics in coils sound like percussion"
     },
     {
       "order": 4,
-      "title": "Certify spurious emissions",
-      "description": "Mask compliance to FCC/ETSI masks; notch harmonics.",
+      "title": "Align IF filters and demodulator for intended mode",
+      "description": "For AM, check diode detector bias; for FM, verify discriminator symmetry; for SSB, set carrier insertion carefully. Log alignment screws touched — future alignment starts from known state.",
       "prerequisiteTools": [
-        "EMI receiver"
+        "alignment tools",
+        "notebook"
       ],
-      "warningNote": "Failed certification cannot legally air"
+      "warningNote": "Wide IF sounds exciting until adjacent channels arrive"
     },
     {
       "order": 5,
-      "title": "Receiver field tests",
-      "description": "Drive tests for multipath; audio loudness standards; RDS verification.",
+      "title": "On-air tests with a mentor",
+      "description": "Make short legal test transmissions; request signal reports; iterate antenna height and grounding. Keep a station log — it disciplines troubleshooting and proves good citizenship.",
       "prerequisiteTools": [
-        "mobile logging"
+        "logbook",
+        "mentor on frequency"
       ],
-      "warningNote": "Tunnel dead zones need translators"
+      "warningNote": "Never test alone inside shielded rooms without external verification"
     }
   ],
   "history": [

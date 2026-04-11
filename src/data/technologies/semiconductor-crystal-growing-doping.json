@@ -5,49 +5,197 @@
   "category": "communication",
   "era": "mid-20th",
   "difficulty": 5,
-  "prerequisites": ["electric-motor", "steel-production", "glass-making"],
-  "unlocks": ["transistor"],
-  "problem": "Bulk polycrystalline silicon is useful for alloys and ceramics but useless for reproducible carrier lifetimes and junction depths. Transistors need monocrystalline regions where dopant atoms sit on known lattice sites at predictable concentrations across wafers measured in millimetres then centimetres then three hundred millimetres.\n\nThe manufacturing problem couples thermodynamics and cleanliness: melts dissolve crucibles; oxygen precipitates kill yields; metallic contamination creates killer centres. Crystal defects — dislocations, stacking faults — scatter carriers and nucleate breakdown paths.\n\nWithout crystal science, solid-state electronics remains a curiosity in germanium whiskers; with it, planetary-scale fabs etch billions of identical features.",
-  "overview": "Electronic-grade polysilicon is refined from chlorosilanes in Siemens-type reactors, then melted in quartz crucibles for Czochralski pulling: a seed crystal rotates and withdraws slowly from melt, freezing a single crystal behind it. Float-zone refining can further purify without crucible contact. Wafers are sliced, lapped, polished, and cleaned in particle-free chemistry.\n\nDoping introduces phosphorus or boron via ion implantation, diffusion, or epitaxy. Ion implanters accelerate ions through scanned beams; annealing activates dopants and repairs lattice damage. Epitaxial reactors grow thin monocrystalline films of controlled doping atop wafers — essential for bipolar and many CMOS stacks.\n\nCharacterisation spans resistivity maps, minority-carrier lifetime, and X-ray topography for dislocations. Gettering moves metals to harmless backside damage regions.\n\nThe output is a substrate that lithography will later mistake for perfectly flat even though atomic steps still exist.",
+  "prerequisites": [
+    "electric-motor",
+    "steel-production",
+    "glass-making"
+  ],
+  "unlocks": [
+    "transistor"
+  ],
+  "problem": "Polycrystalline silicon is fine for soup pots and alloys; transistors demand monocrystals where atoms line up for micrometres without grain boundaries stealing carriers. The manufacturing problem couples heat, chemistry, and paranoia: melts attack crucibles; oxygen sneaks in at parts per billion and becomes precipitates; a single dislocation line can nucleate breakdown.\n\nDoping is dosage medicine for crystals — a few parts per million phosphorus shifts resistivity dramatically. Ion implantation shoots ions to controllable depths; annealing repairs lattice damage while activating dopants — thermal budgets fight each other.\n\nWafers must be flatter than intuition allows so lithography later pretends the world is Euclidean. Without crystal discipline, solid-state devices remain germanium whisker curiosities; with it, fabs etch billions of identical features.\n\nRecovery means protecting not only pullers but the trace labs that prove purity — ignorance is measured in yield loss.",
+  "overview": "Electronic-grade polysilicon comes from distilled chlorosilanes reduced on slim rods in bell jars. Czochralski pullers melt charge in quartz crucibles under inert gas, dip a seed crystal, neck to dislocate-out, shoulder to diameter, then pull slowly while rotating — freezing a single crystal behind the meniscus. Float-zone refining can further purify without crucible contact.\n\nSlicing with diamond wire saws, lapping, and chemical-mechanical polishing yields mirror wafers; RCA cleans strip organics and metals. Ion implanters accelerate dopant beams through photoresist masks; rapid thermal anneals activate without excessive diffusion spread.\n\nEpitaxial reactors grow thin doped films atop wafers for controlled junction stacks. Characterisation maps resistivity, lifetime, and defects — swirls in CZ crystals show as yield patterns later.\n\nGettering strategies move metals to harmless regions so active devices never see them — crystal growth is also impurity traffic management.",
   "principles": [
-    {"name": "Czochralski interface stability", "explanation": "Pull rate and thermal gradient set crystal diameter; oscillations in meniscus freeze as diameter striations in dopant incorporation."},
-    {"name": "Solid solubility of dopants", "explanation": "Equilibrium concentration limits active dopant; supersaturation from implant needs anneal schedules."},
-    {"name": "Point defects and getters", "explanation": "Vacancies and interstitials mediate diffusion; oxygen precipitates can getter Fe near wafer bulk if engineered."},
-    {"name": "Epitaxial lattice match", "explanation": "Misfit strain beyond critical thickness generates misfit dislocations — fatal for thin junctions."}
+    {
+      "name": "Czochralski interface stability",
+      "explanation": "Pull rate and thermal gradient set crystal diameter; oscillations in meniscus freeze as diameter striations in dopant incorporation."
+    },
+    {
+      "name": "Solid solubility of dopants",
+      "explanation": "Equilibrium concentration limits active dopant; supersaturation from implant needs anneal schedules."
+    },
+    {
+      "name": "Point defects and getters",
+      "explanation": "Vacancies and interstitials mediate diffusion; oxygen precipitates can getter Fe near wafer bulk if engineered."
+    },
+    {
+      "name": "Epitaxial lattice match",
+      "explanation": "Misfit strain beyond critical thickness generates misfit dislocations — fatal for thin junctions."
+    }
   ],
   "components": [
-    {"id": "cz-furnace", "name": "CZ puller furnace", "function": "Melts charge and pulls boule under inert atmosphere", "position": "Cleanroom-adjacent fab", "madeFrom": "Graphite heaters, quartz crucible, steel vessel"},
-    {"id": "seed-rod", "name": "Seed crystal and chuck", "function": "Initiates lattice orientation", "position": "Dipping into melt", "madeFrom": "Perfected silicon seed"},
-    {"id": "implanter", "name": "Ion implanter", "function": "Introduces precise dopant depth profiles", "position": "Fab ion beam line", "madeFrom": "RF sources, analysing magnets, electrostatic scan"},
-    {"id": "epi-reactor", "name": "Epitaxial reactor", "function": "Grows doped epi layers", "position": "Front end of line", "madeFrom": "Susceptor, gas panel, RF induction"},
-    {"id": "wafer-saw", "name": "Wire saw and polish", "function": "Slices boules to wafers; achieves CMP flatness", "position": "Wafer manufacturing", "madeFrom": "Diamond wire, slurry polishers"}
+    {
+      "id": "cz-furnace",
+      "name": "CZ puller furnace",
+      "function": "Melts charge and pulls boule under inert atmosphere",
+      "position": "Cleanroom-adjacent fab",
+      "madeFrom": "Graphite heaters, quartz crucible, steel vessel"
+    },
+    {
+      "id": "seed-rod",
+      "name": "Seed crystal and chuck",
+      "function": "Initiates lattice orientation",
+      "position": "Dipping into melt",
+      "madeFrom": "Perfected silicon seed"
+    },
+    {
+      "id": "implanter",
+      "name": "Ion implanter",
+      "function": "Introduces precise dopant depth profiles",
+      "position": "Fab ion beam line",
+      "madeFrom": "RF sources, analysing magnets, electrostatic scan"
+    },
+    {
+      "id": "epi-reactor",
+      "name": "Epitaxial reactor",
+      "function": "Grows doped epi layers",
+      "position": "Front end of line",
+      "madeFrom": "Susceptor, gas panel, RF induction"
+    },
+    {
+      "id": "wafer-saw",
+      "name": "Wire saw and polish",
+      "function": "Slices boules to wafers; achieves CMP flatness",
+      "position": "Wafer manufacturing",
+      "madeFrom": "Diamond wire, slurry polishers"
+    }
   ],
   "rawMaterials": [
-    {"name": "Trichlorosilane feedstock", "purpose": "Electronic-grade silicon precursor", "earthLocations": ["Industrial chlorosilane plants in China, Germany, USA"], "spaceAlternatives": "Import until chlor-alkali and metallurgical silicon chains exist", "processingRequired": "Distillation to semiconductor purity"},
-    {"name": "Dopant gases", "purpose": "PH₃, B₂H₆, AsH₃ for implant and CVD", "earthLocations": ["Speciality gas fabs"], "spaceAlternatives": "Solid-source diffusion cruder but possible", "processingRequired": "Cylinder dilution and abatement scrubbers — arsine is lethal"},
-    {"name": "Quartz crucibles", "purpose": "Non-contaminating melt container short term", "earthLocations": ["Fused quartz manufacturers"], "spaceAlternatives": "Synthetic quartz", "processingRequired": "Bake-out before first charge"}
+    {
+      "name": "Trichlorosilane feedstock",
+      "purpose": "Electronic-grade silicon precursor",
+      "earthLocations": [
+        "Industrial chlorosilane plants in China, Germany, USA"
+      ],
+      "spaceAlternatives": "Terrestrial chlorosilane distillation chains feeding Siemens reactors; off-world fabs likely import polysilicon nuggets until local chlor-alkali and hydrogen plants close the loop safely",
+      "processingRequired": "Distillation to semiconductor purity"
+    },
+    {
+      "name": "Dopant gases",
+      "purpose": "PH₃, B₂H₆, AsH₃ for implant and CVD",
+      "earthLocations": [
+        "Speciality gas fabs"
+      ],
+      "spaceAlternatives": "Diluted phosphine, diborane, and arsine in cylinders with scrubbed exhaust — treat cylinders like living creatures with valves pointed safe directions",
+      "processingRequired": "Cylinder dilution and abatement scrubbers — arsine is lethal"
+    },
+    {
+      "name": "Quartz crucibles",
+      "purpose": "Non-contaminating melt container short term",
+      "earthLocations": [
+        "Fused quartz manufacturers"
+      ],
+      "spaceAlternatives": "Synthetic fused quartz crucibles baked before first charge; monitor dissolved oxygen trends versus crucible age",
+      "processingRequired": "Bake-out before first charge"
+    }
   ],
   "buildSteps": [
-    {"order": 1, "title": "Refine electronic-grade polysilicon", "description": "Close mass balance on chlorosilane distillation; measure resistivity of reference ingots.", "prerequisiteTools": ["ICP-MS trace lab"], "warningNote": "Silane and chlorosilanes are pyrophoric — inerted plumbing"},
-    {"order": 2, "title": "Charge and melt under argon", "description": "Degas melt; dip seed; establish necking to dislocate-out; grow shoulder to target diameter.", "prerequisiteTools": ["CCD diameter camera"], "warningNote": "Power loss during pull freezes neck — lost boule"},
-    {"order": 3, "title": "Slice and edge-round", "description": "Reduce edge chipping in downstream handling; laser mark IDs.", "prerequisiteTools": ["wire saw"], "warningNote": "Slurry silicon dust — respiratory hazard"},
-    {"order": 4, "title": "CMP and clean", "description": "Achieve global flatness; RCA clean organic and metallic contaminants; dry in IPA marangoni.", "prerequisiteTools": ["particle counters"], "warningNote": "Recontamination from PVC gloves — nitrile only"},
-    {"order": 5, "title": "Qualify lifetime and resistivity maps", "description": "SPV or μ-PCD lifetime maps; reject wafers with swirls or slip lines.", "prerequisiteTools": ["lifetime mapper"], "warningNote": "Localised Fe spots show as donut patterns"}
+    {
+      "order": 1,
+      "title": "Establish trace chemistry before touching expensive charge",
+      "description": "Measure metals in polysilicon feedstock at ppb sensitivity if possible; track chlorosilane mass balance in closed systems. Pyrophoric silane and chlorosilanes demand inerted plumbing and trained standby.",
+      "prerequisiteTools": [
+        "ICP-MS lab access if possible"
+      ],
+      "warningNote": "Ventilation mistakes become explosions, not warnings"
+    },
+    {
+      "order": 2,
+      "title": "Charge melt, dip seed, and practise necking on scrap",
+      "description": "Watch diameter cameras; respond to power disturbances quickly — a freeze event loses the boule. Log crucible hours — dissolved oxygen rises with time.",
+      "prerequisiteTools": [
+        "CZ puller controls",
+        "training operator"
+      ],
+      "warningNote": "Power glitches during shoulder growth snap crystals"
+    },
+    {
+      "order": 3,
+      "title": "Slice, edge-round, and clean without recontaminating",
+      "description": "Round wafer edges to reduce chipping; clean with sequenced baths; dry without water spots. Particle counts belong in notebooks, not memories.",
+      "prerequisiteTools": [
+        "wire saw",
+        "particle counter"
+      ],
+      "warningNote": "PVC gloves shed chloride — use nitrile in clean steps"
+    },
+    {
+      "order": 4,
+      "title": "Plan implant and anneal as one recipe",
+      "description": "Simulate if you can; otherwise bracket energies in small coupons before full wafers. Measure sheet resistance after each anneal tweak.",
+      "prerequisiteTools": [
+        "four-point probe"
+      ],
+      "warningNote": "Channeling during implant skews depth — tilt and twist wafers deliberately"
+    },
+    {
+      "order": 5,
+      "title": "Map lifetime and resistivity before shipping wafers",
+      "description": "Reject wafers with slip lines or swirl patterns beyond spec; file maps with boule IDs so fabs can correlate yield later.",
+      "prerequisiteTools": [
+        "lifetime mapper"
+      ],
+      "warningNote": "Local Fe spots show donut patterns — trace handling"
+    }
   ],
   "history": [
-    {"year": 1916, "event": "Czochralski method published — later adapted to silicon boules.", "location": "Poland/Germany", "person": "Jan Czochralski"},
-    {"year": 1950, "event": "Zone refining demonstrates ultrapure germanium and silicon for early transistors.", "location": "USA", "person": "William Shockley context / Pfann zone refining"},
-    {"year": 1960, "event": "Cz silicon dominates as planar process matures.", "location": "Global"}
+    {
+      "year": 1916,
+      "event": "Czochralski method published — later adapted to silicon boules.",
+      "location": "Poland/Germany",
+      "person": "Jan Czochralski"
+    },
+    {
+      "year": 1950,
+      "event": "Zone refining demonstrates ultrapure germanium and silicon for early transistors.",
+      "location": "USA",
+      "person": "William Shockley context / Pfann zone refining"
+    },
+    {
+      "year": 1960,
+      "event": "Cz silicon dominates as planar process matures.",
+      "location": "Global"
+    }
   ],
   "inventors": [
-    {"name": "William G. Pfann", "contribution": "Zone refining for ultrapure semiconductors", "years": "1917-2004", "nationality": "American"}
+    {
+      "name": "William G. Pfann",
+      "contribution": "Zone refining for ultrapure semiconductors",
+      "years": "1917-2004",
+      "nationality": "American"
+    }
   ],
   "impact": "Crystal growth and doping turned quantum band diagrams into inventory — fabs are chemistry plants that output geometry substrates.\n\nNo monocrystal, no planetary-scale computation.",
   "images": [],
-  "videos": [{"id": "cz-pull", "title": "Czochralski silicon growth", "description": "Manufacturing tours from reputable universities or industry associations.", "durationSeconds": 720}],
+  "videos": [
+    {
+      "id": "cz-pull",
+      "title": "Czochralski silicon growth",
+      "description": "Manufacturing tours from reputable universities or industry associations.",
+      "durationSeconds": 720
+    }
+  ],
   "externalLinks": [
-    {"id": "semiconductor-industry", "title": "SEMI — semiconductor materials overview", "url": "https://www.semi.org/"},
-    {"id": "nist-si", "title": "NIST — silicon material properties reference", "url": "https://www.nist.gov/"}
+    {
+      "id": "semiconductor-industry",
+      "title": "SEMI — semiconductor materials overview",
+      "url": "https://www.semi.org/"
+    },
+    {
+      "id": "nist-si",
+      "title": "NIST — silicon material properties reference",
+      "url": "https://www.nist.gov/"
+    }
   ],
   "lastUpdated": "2026-04-10",
   "verified": false

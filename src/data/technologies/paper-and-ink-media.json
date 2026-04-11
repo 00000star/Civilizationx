@@ -12,8 +12,8 @@
   "unlocks": [
     "printing-press-movable-type"
   ],
-  "problem": "Clay is heavy; parchment is expensive; bamboo slips shuffle apart. Paper — fibrillated cellulose matted into sheets — offers a portable, cuttable substrate that accepts ink without immediate bleed-through if sized.\n\nManufacturing must beat pests: silverfish, mould, and acidic lignin that embrittles sheets. Inks must not fade instantly nor corrode fibres — iron gall ink taught archivists about acidity centuries before pH meters.\n\nPaper made bureaucracy portable enough for empires and later for printed broadsides — a logistics revolution disguised as stationery.",
-  "overview": "Traditional paper pulps rags or wood, beats fibres in water, forms sheets on moulds, presses, and dries. Sizing with gelatin or starch reduces feathering. East Asian papers used mulberry and rice straw; Islamic mills refined rag paper; European industrialisation added Hollander beaters and Fourdrinier machines.\n\nInks span carbon soot binders, iron gall, and later aniline dyes. Fountain pens demanded controlled surface tension; ballpoints needed quick-drying oils.\n\nArchival practice deacidifies; stores in climate control; digitises as insurance — paper is mortal.\n\nFor recovery, rag supply chains and clear water matter as much as presses.",
+  "problem": "Writing on stone or clay is durable but heavy; carrying a library on your back demands something thinner. Paper — interlocked plant fibres matted into sheets — trades archival perfection for portability and speed. That bargain creates new anxieties: mould in humid climates, acid that yellows pages, and fires that erase cities in an afternoon.\n\nInk is not decoration; it is colloidal chemistry. Pigments must disperse finely enough not to clog quills yet stay suspended; binders must fix to fibres without feathering uncontrollably. Watercolour skies and legal contracts ask different recipes from the same word ‘ink’.\n\nPaper also democratised bureaucracy: forms, receipts, and textbooks scale when sheets become cheap. With scale came forgery, watermark arms races, and the quiet politics of who owns a mill upstream of a city.\n\nFor recovery, protect rag supply chains and sizing recipes as carefully as you protect forges — a papermaker is a chemist with a vat, not a woodcutter with a whim.",
+  "overview": "Traditional rag paper pulps linen and cotton cloth to long fibres, beats them in water, forms sheets on a wire mould, presses, dries, and often sizes with gelatin or starch so ink sits on the surface instead of blotting sideways. Wood pulp later lowered cost but introduced lignin that ages unless removed or buffered.\n\nCarbon black inks soot in gum arabic are forgiving for scribes; iron-gall inks bite into fibres permanently but need disciplined chemistry — excess acid consumes paper from within. Printing inks add drying oils and modifiers for tack across metal type.\n\nWatermarks and chain lines become security features and dating clues. Archival storage fights relative humidity swings that stress bindings and encourages alkaline buffering where budgets allow.\n\nPaper’s fragility pushed redundancy: duplicate scriptoria, dispersed copies, and eventually digitisation — each layer inherits paper’s affordances while trying to escape fire.",
   "principles": [
     {
       "name": "Hydrogen bonding network",
@@ -77,7 +77,7 @@
         "Cotton and linen rags historically",
         "softwood kraft pulp modern"
       ],
-      "spaceAlternatives": "Recycled fibre loops",
+      "spaceAlternatives": "Cotton and linen rag historically; softwood kraft pulp today; in closed habitats recycle textile trim and agricultural straw pulps with careful lignin control",
       "processingRequired": "Cook, bleach selectively, beat"
     },
     {
@@ -86,7 +86,7 @@
       "earthLocations": [
         "River mills"
       ],
-      "spaceAlternatives": "Closed-loop treatment",
+      "spaceAlternatives": "River or RO-purified process water on Earth; closed-loop filtration and settling tanks where discharge is constrained",
       "processingRequired": "Clarify to avoid spots"
     },
     {
@@ -96,57 +96,61 @@
         "Carbon black",
         "organic dyes"
       ],
-      "spaceAlternatives": "Mineral pigments",
+      "spaceAlternatives": "Carbon black and organic dyes; mineral pigments like ochre where particle size is controlled — always pair pigment choice with intended pen or brush",
       "processingRequired": "Disperse to submicron to avoid clogging"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Fibre preparation",
-      "description": "Sort rags; remove buttons; cook with lime if needed; beat to fibrillation target.",
+      "title": "Source long clean fibres",
+      "description": "Collect white linen or cotton rags free of buttons, elastic, and synthetic blends. Cut small and soak until fibres separate easily when rubbed. Note seasonal water hardness — minerals affect colour and sizing.",
       "prerequisiteTools": [
-        "Hollander beater or stamp mill"
+        "scissors",
+        "soaking vats"
       ],
       "warningNote": "Metallic fasteners destroy beaters"
     },
     {
       "order": 2,
-      "title": "Sheet formation",
-      "description": "Vat dip or machine lay; control basis weight with consistency loop.",
+      "title": "Beat to controlled fibrillation",
+      "description": "Move from stamp mill or Hollander beater in timed passes; pull test sheets often. Stop when fibres knit on a wire but do not yet dust apart when dry — over-beating weakens sheets.",
       "prerequisiteTools": [
-        "scales",
-        "micrometres"
+        "beater",
+        "test mould"
       ],
-      "warningNote": "Uneven couching tears on printing press"
+      "warningNote": "Dust masks for fine cellulose"
     },
     {
       "order": 3,
-      "title": "Press and dry",
-      "description": "Gradual drying prevents cockling; restraint drying for flatness.",
+      "title": "Sheet formation and couching",
+      "description": "Dip a mould and deckle, shake to interlock fibres evenly, drain, couch onto felts, press gradually. Keep vat temperature steady — cold slows drainage; heat grows bacteria.",
       "prerequisiteTools": [
-        "screw press",
-        "loft"
+        "mould and deckle",
+        "felts",
+        "press"
       ],
-      "warningNote": "Too-fast drying case-hardens surfaces"
+      "warningNote": "Uneven shaking makes thin patches that tear"
     },
     {
       "order": 4,
-      "title": "Size and polish",
-      "description": "Brush gelatin size; calendar if high gloss needed.",
+      "title": "Dry under tension",
+      "description": "Air-dry on lines or in loft spaces with gentle airflow; restrain edges if cockling appears. For writing-grade, apply size after partial drying per local recipe.",
       "prerequisiteTools": [
-        "brushes"
+        "loft space",
+        "clothespins or weights"
       ],
-      "warningNote": "Acidic alum size ages poorly — track pH"
+      "warningNote": "Rushing drying curls sheets unpredictably"
     },
     {
       "order": 5,
-      "title": "Test print",
-      "description": "Proof with intended ink and press pressure; adjust absorbency.",
+      "title": "Mill ink and test on scraps",
+      "description": "Disperse pigment with muller or professional disperser; record binder ratios. Test feathering, drying time, and bleed-through on your actual paper — not on modern coated stock.",
       "prerequisiteTools": [
-        "proof press"
+        "muller",
+        "glass slab"
       ],
-      "warningNote": "Coated paper needs different inks than offset stock"
+      "warningNote": "Iron-gall needs dated labels — it evolves acidity over decades"
     }
   ],
   "history": [

@@ -13,8 +13,8 @@
   "unlocks": [
     "electrical-telegraph"
   ],
-  "problem": "Scriptoria copied manuscripts slowly; errors compounded; cost limited books to institutions. Movable type cuts marginal cost per page after the first composition: each character is a durable punch, cast in alloy, arranged into a forme, inked, and pressed uniformly.\n\nThe engineering problems are mechanical: even impression across a wide platen, ink viscosity that neither dries on type nor bleeds on paper, and alloy hardness that survives millions of impacts. The information problem is workflow: justification, proofing, and distribution of corrected editions.\n\nPrinting did not invent text — it industrialised fidelity and speed, enabling law, science, and heresy to travel faster than censors could rewrite by hand.",
-  "overview": "Punches cut in steel are struck into copper matrices; type is cast in lead-tin-antimony alloy with a shoulder for locking. Compositors set lines in composing sticks; furniture and quoins lock the chase. The press supplies gradual pressure via screw or later lever and toggle mechanisms; platen or cylinder designs evolve toward rotary newspaper presses.\n\nOil-based inks coat metal type better than water-based on greasy fingers — formulation becomes chemistry. Paper must withstand squeeze without embossing through; dampening helps some processes.\n\nPost-Gutenberg evolution added stereotype plates, linotype slug casting, and offset lithography — but movable type is the conceptual fork between copying and manufacturing text.\n\nDigital fonts are coordinate lists — intellectual descendants of the punchcutter’s file.",
+  "problem": "A scriptorium can duplicate a book beautifully, but each copy ties up a scribe for months. Ideas spread at the speed of handwriting — fine for liturgy, lethal for science and navigation when printers multiply faster than wars. Movable type attacks the bottleneck: cast many identical letters once, arrange them into any page, print, break apart, reuse.\n\nThe obstacle is precision economics: type must be hard enough to survive thousands of impressions yet soft enough to file; height must match within microns or impressions ghost and ink floods. Paper supply and ink tack must agree with metal and press speed.\n\nPrinting also amplifies error: a wrong letter becomes a thousand wrong letters. Editorial workflows — proof sheets, stop-press corrections — become technologies alongside the press itself.\n\nPolitically, cheap text rearranges who may read law, scripture, and sedition. The press is not only gears; it is an argument about who controls reproduction.",
+  "overview": "Punchcutters carve master letters in steel, strike them into copper matrices, and cast many type pieces in lead-antimony-tin alloys that solidify sharp and wear slowly. Compositors set lines in composing sticks, justify with spaces, lock the forme into a chase, and ink evenly with composition rollers or balls.\n\nScrew presses apply firm even pressure across the platen; later cylinder presses raise speed. Paper grain direction aligns with pull to reduce tearing; dampening relaxes fibres for deeper impressions.\n\nTypography encodes readability: x-height, contrast, and ligatures are ergonomic choices. Colour printing layers separate formes — registration becomes mathematics.\n\nDigital printers inherited the same questions with different physics — toner fusion and inkjet drops — but the social shape remains: cheap copies change regimes.",
   "principles": [
     {
       "name": "Viscosity and tack",
@@ -78,7 +78,7 @@
         "Lead smelters",
         "tin trade routes"
       ],
-      "spaceAlternatives": "3D-printed polymer type for short runs — wears fast",
+      "spaceAlternatives": "Lead-antimony-tin type metal from smelter chains; short-run polymer or wood type where metal casting is unavailable — expect faster wear",
       "processingRequired": "Remelt with antimony adjustment"
     },
     {
@@ -87,7 +87,7 @@
       "earthLocations": [
         "Tool steel supply"
       ],
-      "spaceAlternatives": "Electrical discharge machining later",
+      "spaceAlternatives": "High-carbon punch steel; later EDM for fine repairs where electrical gear exists",
       "processingRequired": "Harden and temper; polish striking face"
     },
     {
@@ -96,56 +96,61 @@
       "earthLocations": [
         "Paper mills"
       ],
-      "spaceAlternatives": "Rag paper historically",
+      "spaceAlternatives": "Rag or chemical pulp sheets with grain aligned to press pull; avoid glossy coated stock until inks match",
       "processingRequired": "Grain direction aligned to press"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Cut and justify punches",
-      "description": "File counters; proof on smoke-blackened paper; strike matrix.",
+      "title": "Cut one perfect letter punch before casting anything",
+      "description": "Work a single letter in tool steel under magnification; proof it on smoke-blackened paper until curves are true. Only then strike the matrix — a bad punch multiplies misery.",
       "prerequisiteTools": [
-        "punch vise",
-        "10x loupe"
+        "files",
+        "magnifier",
+        "hardening equipment"
       ],
-      "warningNote": "Lead dust — ventilation and hygiene"
+      "warningNote": "Overhard steel snaps; overtempered steel dents"
     },
     {
       "order": 2,
-      "title": "Cast type to height",
-      "description": "Measure type height to press standard; shave feet if needed.",
+      "title": "Cast a few sorts and test height",
+      "description": "Pour type metal into a hand mould; file feet until the letter matches your gauge block exactly. Print trial lines — if some letters shine while others fade, height is wrong.",
       "prerequisiteTools": [
-        "type height gauge"
+        "mould",
+        "gauge block"
       ],
-      "warningNote": "Mixed heights crack formes under pressure"
+      "warningNote": "Lead splash burns — leather apron and face shield"
     },
     {
       "order": 3,
-      "title": "Compose and lock",
-      "description": "Insert leads; lock with quoins; proof on waste sheets.",
+      "title": "Build a rigid chase and furniture system",
+      "description": "Cut reglet and furniture from seasoned wood or metal; learn locking patterns that resist spread under pressure. Label cases with readable diagrams so novices do not resort letters.",
       "prerequisiteTools": [
-        "composing stick"
+        "saw",
+        "chisel"
       ],
-      "warningNote": "Bruised sorts print grey — replace"
+      "warningNote": "Loose lockup drops spaces mid-run"
     },
     {
       "order": 4,
-      "title": "Ink and pull",
-      "description": "Charge rollers evenly; two-pull habit for solids; inspect register.",
+      "title": "Mix ink to the press you actually own",
+      "description": "Start stiff, add varnish drops until the ink threads cleanly from roller to type without filling counters. Record room temperature — tack changes with heat.",
       "prerequisiteTools": [
-        "composition rollers"
+        "ink knife",
+        "glass slab"
       ],
-      "warningNote": "Over-ink fills counters"
+      "warningNote": "Too loose ink fills counters and looks muddy"
     },
     {
       "order": 5,
-      "title": "Distribute and maintain",
-      "description": "Return sorts to cases; melt worn type; document font inventory.",
+      "title": "Print progressively, correcting once per forme",
+      "description": "Pull a single proof, mark faults with standard proofreader marks, fix type, re-lock, proof again. Only then run edition sheets, stacking with dry interleaving paper.",
       "prerequisiteTools": [
-        "melting pot"
+        "proof paper",
+        "drying racks"
       ],
-      "warningNote": "Antimony fumes — respirators"
+      "warningNote": "Wet stacks set off ink offset — rotate boards"
     }
   ],
   "history": [

@@ -5,49 +5,206 @@
   "category": "energy",
   "era": "industrial",
   "difficulty": 3,
-  "prerequisites": ["electrical-power-grid", "steel-production", "copper-wire-and-cable"],
-  "unlocks": ["electric-lighting-systems", "semiconductor-crystal-growing-doping"],
-  "problem": "Every factory wanted shafts that spun without line belts snaking through ceilings. Steam engines at each machine were loud, hot, and fuel-hungry. The electric motor solves local motion by importing power through wires — decoupling the fire from the tool.\n\nDesign challenges span magnetic circuit design, conductor insulation in slots, bearing currents from PWM drives, and thermal paths in enclosed frames. Starting inrush can collapse weak feeders; variable speed historically required expensive secondary resistors until electronics arrived.\n\nWithout motors, there is no pump hall, no elevator, no subway — only mechanical shafting or animals.",
-  "overview": "DC motors commutate coil segments so torque stays aligned with field; universal motors run on AC for small appliances at cost of brush wear. Induction motors — the workhorse of industry — use a squirrel-cage rotor whose bars see slip-frequency currents induced by the stator’s rotating field. Synchronous machines lock to grid frequency via damper windings during pull-in.\n\nWindings are inserted in laminated steel slots to guide flux and reduce eddy losses; insulation classes (B, F, H) set temperature ceilings. Cooling may be TEFC fins, open drip-proof, or forced air through internal ducts. Large motors use sleeve bearings with oil rings; small ones use ball bearings.\n\nModern drives add VFDs that synthesise variable frequency — returning us to variable speed without resistive waste, but introducing harmonics and bearing EDM from capacitive coupling.\n\nNameplate data — efficiency, power factor, NEMA design letters — encode starting behaviour as surely as stall torque on a steam piston.",
+  "prerequisites": [
+    "electrical-power-grid",
+    "steel-production",
+    "copper-wire-and-cable"
+  ],
+  "unlocks": [
+    "electric-lighting-systems",
+    "semiconductor-crystal-growing-doping"
+  ],
+  "problem": "Before electricity, motive power in a workshop meant leather belts snaking from a ceiling shaft, or a small steam engine hissing beside each heavy machine. Belts slip, alignments drift, and every new tool demands another hole in the ceiling. An electric motor replaces that tangle with a compact drum of copper and iron that pulls power through a wire — the fire stays at the power station while the work happens where it is needed.\n\nMotors are not magic rotation boxes; they are heat machines that happen to spin. Current in the windings meets resistance; iron reverses magnetisation sixty times a second; bearings rub. Neglect cooling and the insulation class becomes a countdown. Start a large motor on a weak line and the whole village’s lights dip — inrush currents can be many times running current until the rotor catches up with the magnetic field.\n\nVariable speed was historically expensive: rheostats turned excess energy into smoke. Modern drives synthesise new frequencies electronically, but introduce harmonics that can pit bearing races through tiny capacitive currents. The motor problem is therefore electrical, mechanical, and thermal at once.\n\nFor civilisation recovery, motors are precious because they couple precision metallurgy (laminations), chemistry (varnish and enamel), and craft (winding) into one dependable worker that never sleeps.",
+  "overview": "Most industrial motors you meet are induction machines: the stator’s three-phase windings create a magnetic field that appears to rotate around the rotor. Conductors in the rotor — often aluminium bars cast into a steel stack — see that motion as a changing field and develop currents of their own. Those currents create their own field that tries to catch the stator’s field, producing torque. The rotor must slip slightly behind synchronous speed; at perfect synchronism induction would stop and torque would vanish.\n\nLaminated silicon steel in the stator guides flux while limiting eddy currents. Slots hold insulated copper or aluminium conductors; the slot shape trades ease of manufacture against stray loss. The frame and fan path move heat from windings to air; larger machines may use water jackets or external blowers.\n\nSynchronous motors lock to grid frequency once running; they can also behave as generators. DC motors still appear where fine torque control predates cheap electronics — brushes wear but the physics is transparent. Universal motors in power tools accept AC or DC at the cost of sparking brushes and shorter life.\n\nNameplate letters and efficiency bands encode starting behaviour: some rotor designs prioritise high starting torque for compressors; others prioritise low inrush for weak grids. Reading the nameplate is as important as reading a steam plate’s pressure rating.",
   "principles": [
-    {"name": "Lorentz force", "explanation": "Current crossing magnetic field experiences force — the microscopic origin of motor torque."},
-    {"name": "Slip in induction machines", "explanation": "Rotor must lag synchronous speed to induce rotor current; at synchronous speed torque collapses to zero."},
-    {"name": "Back-EMF", "explanation": "Spinning conductors generate voltage opposing applied voltage — limits no-load current and sets constant-speed behaviour on stiff grids."},
-    {"name": "Thermal class", "explanation": "Insulation life halves roughly every 10°C over rated — derating altitude and ambient is mandatory."}
+    {
+      "name": "Lorentz force",
+      "explanation": "Current crossing magnetic field experiences force — the microscopic origin of motor torque."
+    },
+    {
+      "name": "Slip in induction machines",
+      "explanation": "Rotor must lag synchronous speed to induce rotor current; at synchronous speed torque collapses to zero."
+    },
+    {
+      "name": "Back-EMF",
+      "explanation": "Spinning conductors generate voltage opposing applied voltage — limits no-load current and sets constant-speed behaviour on stiff grids."
+    },
+    {
+      "name": "Thermal class",
+      "explanation": "Insulation life halves roughly every 10°C over rated — derating altitude and ambient is mandatory."
+    }
   ],
   "components": [
-    {"id": "stator", "name": "Stator core and windings", "function": "Creates rotating magnetomotive force", "position": "Stationary shell", "madeFrom": "Silicon steel laminations, magnet wire, varnish"},
-    {"id": "rotor", "name": "Rotor and shaft", "function": "Converts magnetic torque to mechanical output", "position": "Centreline", "madeFrom": "Aluminium or copper cage, steel shaft"},
-    {"id": "bearings", "name": "Bearings and end bells", "function": "Supports rotor; seals windings from environment", "position": "Both ends", "madeFrom": "Ball or sleeve bearings; cast aluminium bells"},
-    {"id": "terminal", "name": "Terminal box", "function": "Connects supply to windings; may include star-delta links", "position": "Top or side", "madeFrom": "Insulated blocks, compression lugs"},
-    {"id": "fan", "name": "Fan and cooling path", "function": "Removes copper and iron losses as heat", "position": "Non-drive end often", "madeFrom": "Aluminium impeller"}
+    {
+      "id": "stator",
+      "name": "Stator core and windings",
+      "function": "Creates rotating magnetomotive force",
+      "position": "Stationary shell",
+      "madeFrom": "Silicon steel laminations, magnet wire, varnish"
+    },
+    {
+      "id": "rotor",
+      "name": "Rotor and shaft",
+      "function": "Converts magnetic torque to mechanical output",
+      "position": "Centreline",
+      "madeFrom": "Aluminium or copper cage, steel shaft"
+    },
+    {
+      "id": "bearings",
+      "name": "Bearings and end bells",
+      "function": "Supports rotor; seals windings from environment",
+      "position": "Both ends",
+      "madeFrom": "Ball or sleeve bearings; cast aluminium bells"
+    },
+    {
+      "id": "terminal",
+      "name": "Terminal box",
+      "function": "Connects supply to windings; may include star-delta links",
+      "position": "Top or side",
+      "madeFrom": "Insulated blocks, compression lugs"
+    },
+    {
+      "id": "fan",
+      "name": "Fan and cooling path",
+      "function": "Removes copper and iron losses as heat",
+      "position": "Non-drive end often",
+      "madeFrom": "Aluminium impeller"
+    }
   ],
   "rawMaterials": [
-    {"name": "Electrical steel", "purpose": "Low-loss magnetic circuit", "earthLocations": ["Grain-oriented sheet mills"], "spaceAlternatives": "Import until rolling exists", "processingRequired": "Stamp laminations; anneal; varnish"},
-    {"name": "Magnet wire", "purpose": "Slot conductors", "earthLocations": ["Copper + enamel plants"], "spaceAlternatives": "Aluminium magnet wire in large machines", "processingRequired": "Random wound or form wound coils"},
-    {"name": "Aluminium for rotors", "purpose": "Die-cast cage low cost", "earthLocations": ["Smelters globally"], "spaceAlternatives": "Copper cage for efficiency", "processingRequired": "Die casting under vacuum to reduce porosity"}
+    {
+      "name": "Electrical steel",
+      "purpose": "Low-loss magnetic circuit",
+      "earthLocations": [
+        "Grain-oriented sheet mills"
+      ],
+      "spaceAlternatives": "Ferrite or powdered-iron cores at high frequency for small actuators; lower-flux-density silicon stacks where grain-oriented sheet is unavailable; import lamination stacks from surviving terrestrial mills until local rolling lines return",
+      "processingRequired": "Stamp laminations; anneal; varnish"
+    },
+    {
+      "name": "Magnet wire",
+      "purpose": "Slot conductors",
+      "earthLocations": [
+        "Copper + enamel plants"
+      ],
+      "spaceAlternatives": "Silver-plated copper in cryogenic motors; aluminium magnet wire in large machines where slot fill and cost dominate",
+      "processingRequired": "Random wound or form wound coils"
+    },
+    {
+      "name": "Aluminium for rotors",
+      "purpose": "Die-cast cage low cost",
+      "earthLocations": [
+        "Smelters globally"
+      ],
+      "spaceAlternatives": "Copper cage bars for higher efficiency when aluminium casting equipment is missing; hand-fabricated copper rings for repair of legacy rotors",
+      "processingRequired": "Die casting under vacuum to reduce porosity"
+    }
   ],
   "buildSteps": [
-    {"order": 1, "title": "Stack and weld core", "description": "Interleave laminations; weld or cleat back iron; insulate slots with liners.", "prerequisiteTools": ["stacking fixture"], "warningNote": "Burrs short laminations — edge deburr"},
-    {"order": 2, "title": "Wind or insert coils", "description": "Maintain wire tension; tie cords; varnish dip or VPI for void fill.", "prerequisiteTools": ["winding machine"], "warningNote": "Nick insulation — turn-turn failure"},
-    {"order": 3, "title": "Assemble rotor and balance", "description": "Cast or fabricate cage; machine OD; balance to ISO grade for speed.", "prerequisiteTools": ["dynamic balancer"], "warningNote": "Unbalance walks bearings out"},
-    {"order": 4, "title": "Fit bearings and align load", "description": "Soft foot checks on base; coupling alignment to driven machine.", "prerequisiteTools": ["dial indicators"], "warningNote": "Thermal growth shifts alignment — hot check"},
-    {"order": 5, "title": "Test run and measure", "description": "Megger windings; no-load current; vibration spectrum; bearing temperature rise.", "prerequisiteTools": ["megohmmeter", "clamp meter"], "warningNote": "VFD-fed motors need cable reflection checks"}
+    {
+      "order": 1,
+      "title": "Choose the motor type to match your supply and job",
+      "description": "If you have stable three-phase AC, a squirrel-cage induction motor is the default workhorse. If you only have single-phase domestic supply, look for split-phase or capacitor-start designs — understand that starting capacitors are not interchangeable decoration. If you need speed control, plan for a variable-frequency drive and shielded cable suitable for fast switching edges.",
+      "prerequisiteTools": [
+        "multimeter",
+        "motor nameplate or datasheet"
+      ],
+      "warningNote": "A motor rated for delta on 400 V will misbehave if you star-connect it without reading the plate"
+    },
+    {
+      "order": 2,
+      "title": "Stack laminations and insert slot liners without burrs",
+      "description": "Interleave stator laminations and weld or cleat the back iron per your design. Slide slot liners in so conductors never touch steel directly. Deburr every lamination tooth — a burr is a short waiting to happen. Blow out grit before windings enter; grit abrades enamel during vibration.",
+      "prerequisiteTools": [
+        "compressed air or brush",
+        "slot liners",
+        "deburring tool"
+      ],
+      "warningNote": "Steel edges after punching are razor sharp"
+    },
+    {
+      "order": 3,
+      "title": "Wind or insert coils, then varnish or vacuum-pressure impregnate",
+      "description": "Maintain even tension while winding magnet wire, or press pre-formed coils into slots if using form-wound construction. Tie coils at the end turns so magnetic forces cannot move them. After winding, varnish dip or VPI fills voids so moisture cannot creep along strands.",
+      "prerequisiteTools": [
+        "winding jig",
+        "varnish or epoxy",
+        "oven"
+      ],
+      "warningNote": "Solvent vapours are flammable — ventilate and kill ignition sources"
+    },
+    {
+      "order": 4,
+      "title": "Assemble rotor, balance, and align to the driven machine",
+      "description": "For fabricated rotors, verify cage integrity and skew. Machine the outside diameter if casting left ovality. Balance dynamically to the ISO grade appropriate for speed — an unbalanced rotor walks bearings out in weeks. Bolt the motor to a flat base; check soft foot with feeler gauges under each foot while tightening in a cross pattern. Align coupling to load within a few hundredths of a millimetre; repeat hot if thermal growth matters.",
+      "prerequisiteTools": [
+        "dynamic balancer if available",
+        "dial indicators",
+        "shims",
+        "torque wrench"
+      ],
+      "warningNote": "Coupling guard removed for alignment must be replaced before first spin"
+    },
+    {
+      "order": 5,
+      "title": "Megger, spin no-load, then load-test thermally",
+      "description": "Measure insulation resistance phase-to-phase and phase-to-ground with a megohmmeter at a voltage appropriate to the machine class. Spin at no load listening for rubs; measure current — wildly high no-load current means shorted turns or wrong connections. Apply load gradually; watch bearing temperature rise for an hour; capture vibration if you have a phone app or accelerometer. Document baseline numbers for the next maintainer.",
+      "prerequisiteTools": [
+        "megohmmeter",
+        "clamp meter",
+        "infrared thermometer",
+        "notebook"
+      ],
+      "warningNote": "Shafts and fan blades remain dangerous above idle speed — guard before energising"
+    }
   ],
   "history": [
-    {"year": 1834, "event": "First practical rotating electric motors demonstrated in laboratory contexts.", "location": "Europe"},
-    {"year": 1888, "event": "Tesla polyphase induction motor patents underpin modern cage motors.", "location": "United States", "person": "Nikola Tesla"},
-    {"year": 1891, "event": "Three-phase transmission in Frankfurt links motors to remote generation.", "location": "Germany"}
+    {
+      "year": 1834,
+      "event": "First practical rotating electric motors demonstrated in laboratory contexts.",
+      "location": "Europe"
+    },
+    {
+      "year": 1888,
+      "event": "Tesla polyphase induction motor patents underpin modern cage motors.",
+      "location": "United States",
+      "person": "Nikola Tesla"
+    },
+    {
+      "year": 1891,
+      "event": "Three-phase transmission in Frankfurt links motors to remote generation.",
+      "location": "Germany"
+    }
   ],
   "inventors": [
-    {"name": "Nikola Tesla", "contribution": "Polyphase induction and AC motor concepts", "years": "1856-1943", "nationality": "Serbian-American"}
+    {
+      "name": "Nikola Tesla",
+      "contribution": "Polyphase induction and AC motor concepts",
+      "years": "1856-1943",
+      "nationality": "Serbian-American"
+    }
   ],
   "impact": "Motors made electricity actionable at every machine scale — from dental drills to ship propulsion. They are the distributed muscle of electrification.\n\nRecovery must preserve lamination stamping and varnish impregnation, not only copper.",
   "images": [],
-  "videos": [{"id": "induction-motor", "title": "Induction motor principles", "description": "Accredited electrical engineering animations of rotating fields and slip.", "durationSeconds": 600}],
+  "videos": [
+    {
+      "id": "induction-motor",
+      "title": "Induction motor principles",
+      "description": "Accredited electrical engineering animations of rotating fields and slip.",
+      "durationSeconds": 600
+    }
+  ],
   "externalLinks": [
-    {"id": "ieee-motor", "title": "IEEE — electric machines technical community", "url": "https://ieee-pes.org/"},
-    {"id": "energy-motors", "title": "DOE — electric motor systems", "url": "https://www.energy.gov/eere/amo/electric-motors"}
+    {
+      "id": "ieee-motor",
+      "title": "IEEE — electric machines technical community",
+      "url": "https://ieee-pes.org/"
+    },
+    {
+      "id": "energy-motors",
+      "title": "DOE — electric motor systems",
+      "url": "https://www.energy.gov/eere/amo/electric-motors"
+    }
   ],
   "lastUpdated": "2026-04-10",
   "verified": false

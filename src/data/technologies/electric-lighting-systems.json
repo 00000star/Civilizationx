@@ -5,50 +5,203 @@
   "category": "energy",
   "era": "industrial",
   "difficulty": 3,
-  "prerequisites": ["electric-motor", "electrical-transformer", "glass-making"],
+  "prerequisites": [
+    "electric-motor",
+    "electrical-transformer",
+    "glass-making"
+  ],
   "unlocks": [],
-  "problem": "Fire and gaslight stain ceilings, demand ventilation, and start urban fires. Electric lighting promises instant ignition, directional beams, and — once grids stabilised — pricing per lumen that scales with industry rather than whale oil.\n\nEarly technologies fought efficiency and lifetime: resistive bulbs trade much power as heat; arcs roar and sputter; discharge tubes need ballasts. The systems problem includes fixtures, grounding, circuit protection, and voltage drop on long feeders — lighting design is secretly distribution engineering.\n\nSpectral quality matters for factories, surgery, and circadian health — metrics moved from candlepower to lumens, colour temperature, and colour rendering index.",
-  "overview": "Incandescent lamps pass current through a refractory filament in inert gas or vacuum, heating to incandescence. Tungsten replaced carbon for melting point and efficacy. Halogen cycles redeposit evaporated tungsten, extending life in compact envelopes.\n\nFluorescent and HID sources excite gas discharges; phosphors down-convert UV to white. Ballasts limit current — historically inductors, today electronic high-frequency inverters. LEDs use semiconductor junctions emitting narrow bands combined with phosphors for white; drivers regulate current tightly because diode light output tracks current while voltage is sharp-kneed.\n\nDimming historically chopped voltage; LEDs need compatible dimmers that understand PWM or trailing-edge waveforms to avoid flicker and colour shift.\n\nStreet and stadium lighting added photocells, time clocks, and now mesh controls — cybersecurity joins the stack as lights become IoT nodes.",
+  "problem": "Gaslight and open flame solved night, but they blackened ceilings, demanded constant tending, and turned crowded cities into tinderboxes. Electric lighting promised something stranger: brightness without a flame in the room, instant on-and-off, and the possibility of scaling light the way factories scale thread — by standard parts and measured voltages.\n\nThe catch is that a lamp is not only a bulb. It is a branch circuit, a breaker, a transformer tap, and a human habit of never thinking about what happens when insulation ages in a wall cavity. Early systems fought efficiency and lifetime: incandescent filaments trade most watts as heat; arc lamps roared; discharge tubes needed something to limit current so they did not run away.\n\nSpectral quality is not vanity. A weaver distinguishing thread colours, a surgeon tracing vessels, and a reader avoiding eyestrain are solving different physics problems with the same wall switch. Metrics moved from candlepower to lumens, then to colour temperature and rendering indices — each step an admission that human eyes are part of the circuit.\n\nFor recovery, lighting is often the first friendly face of electrification: people forgive a wobbly frequency if the room feels safe. It is also where amateur wiring kills — respect the difference between a demonstration and an installation.",
+  "overview": "An incandescent lamp pushes current through a thin refractory filament in vacuum or inert gas until the wire glows. Tungsten won over carbon because it survives higher temperature before evaporating; halogen chemistry catches some evaporated metal and returns it to the filament, stretching life in compact envelopes.\n\nFluorescent and high-intensity discharge lamps drive current through a gas; phosphors convert ultraviolet to white we recognise indoors. Those plasmas want a controlled current, not a fixed voltage — historically an iron-core ballast, today often a small switched-mode supply that runs the tube at high frequency so we stop hearing the old buzz.\n\nLight-emitting diodes are chips that emit narrow bands of colour; phosphor coatings or mixed dies build white. Their brightness tracks current closely while voltage stays awkwardly sharp — drivers therefore regulate current and protect against thermal runaway. Good fixtures treat the LED module as a heat source first and a light source second.\n\nAt building scale, lighting design is secretly distribution engineering: voltage drop, inrush on banks of HID lamps, harmonic currents from cheap dimmers, and surge protection on outdoor strings. Controls — clocks, photocells, occupancy sensors — now join cybersecurity as lights become networked nodes.",
   "principles": [
-    {"name": "Wien displacement", "explanation": "Blackbody spectrum peak shifts with temperature — higher filament temperature yields whiter light but accelerates evaporation."},
-    {"name": "Luminous efficacy", "explanation": "Lumens per watt weights human eye sensitivity — UV and IR watts do not count equally."},
-    {"name": "Power factor in ballasts", "explanation": "Inductive ballasts draw reactive power; capacitors correct; electronic ballasts can approach unity PF."},
-    {"name": "Thermal resistance in LEDs", "explanation": "Junction temperature sets lumen depreciation — heatsinking is optical engineering."}
+    {
+      "name": "Wien displacement",
+      "explanation": "Blackbody spectrum peak shifts with temperature — higher filament temperature yields whiter light but accelerates evaporation."
+    },
+    {
+      "name": "Luminous efficacy",
+      "explanation": "Lumens per watt weights human eye sensitivity — UV and IR watts do not count equally."
+    },
+    {
+      "name": "Power factor in ballasts",
+      "explanation": "Inductive ballasts draw reactive power; capacitors correct; electronic ballasts can approach unity PF."
+    },
+    {
+      "name": "Thermal resistance in LEDs",
+      "explanation": "Junction temperature sets lumen depreciation — heatsinking is optical engineering."
+    }
   ],
   "components": [
-    {"id": "lamp", "name": "Lamp or module", "function": "Converts electricity to light", "position": "Fixture optical centre", "madeFrom": "Tungsten, mercury vapour tube, or LED COB"},
-    {"id": "fixture", "name": "Luminaire housing", "function": "Directs photometric distribution; removes heat", "position": "Ceiling, pole, or track", "madeFrom": "Stamped steel, aluminium die cast, polymer optics"},
-    {"id": "driver", "name": "Ballast or LED driver", "function": "Limits current; may provide dimming interface", "position": "Integral or remote", "madeFrom": "SMPS with PFC front end"},
-    {"id": "wiring", "name": "Branch wiring and protection", "function": "Supplies rated voltage; clears faults", "position": "Building circuits", "madeFrom": "Copper THHN, breakers, RCDs where required"},
-    {"id": "control", "name": "Switches and controls", "function": "Human or automated actuation", "position": "Wall boxes or DALI networks", "madeFrom": "Relays, MOSFET dimmers, occupancy sensors"}
+    {
+      "id": "lamp",
+      "name": "Lamp or module",
+      "function": "Converts electricity to light",
+      "position": "Fixture optical centre",
+      "madeFrom": "Tungsten, mercury vapour tube, or LED COB"
+    },
+    {
+      "id": "fixture",
+      "name": "Luminaire housing",
+      "function": "Directs photometric distribution; removes heat",
+      "position": "Ceiling, pole, or track",
+      "madeFrom": "Stamped steel, aluminium die cast, polymer optics"
+    },
+    {
+      "id": "driver",
+      "name": "Ballast or LED driver",
+      "function": "Limits current; may provide dimming interface",
+      "position": "Integral or remote",
+      "madeFrom": "SMPS with PFC front end"
+    },
+    {
+      "id": "wiring",
+      "name": "Branch wiring and protection",
+      "function": "Supplies rated voltage; clears faults",
+      "position": "Building circuits",
+      "madeFrom": "Copper THHN, breakers, RCDs where required"
+    },
+    {
+      "id": "control",
+      "name": "Switches and controls",
+      "function": "Human or automated actuation",
+      "position": "Wall boxes or DALI networks",
+      "madeFrom": "Relays, MOSFET dimmers, occupancy sensors"
+    }
   ],
   "rawMaterials": [
-    {"name": "Tungsten wire", "purpose": "Incandescent filaments", "earthLocations": ["Wolframite mines in China, Portugal, Rwanda"], "spaceAlternatives": "LEDs preferred off-world where waste heat is costly", "processingRequired": "Doping and drawing to controlled cold resistance"},
-    {"name": "Glass envelopes", "purpose": "Hermetic bulb", "earthLocations": ["Float glass plants"], "spaceAlternatives": "Sapphire windows for extreme LEDs", "processingRequired": "Sealing stems to lead wires"},
-    {"name": "Phosphors and rare earths", "purpose": "Fluorescent and LED colour mixing", "earthLocations": ["Bayan Obo rare earths historically dominant"], "spaceAlternatives": "Import concentrates until separation exists", "processingRequired": "Milling to controlled particle size"}
+    {
+      "name": "Tungsten wire",
+      "purpose": "Incandescent filaments",
+      "earthLocations": [
+        "Wolframite mines in China, Portugal, Rwanda"
+      ],
+      "spaceAlternatives": "Tungsten remains ideal for incandescent filaments where simple supplies beat complexity; in spacecraft and stations, LED lighting dominates because waste heat must be routed to radiators — keep tungsten as precision instrument filaments and specialty halogen work lights",
+      "processingRequired": "Doping and drawing to controlled cold resistance"
+    },
+    {
+      "name": "Glass envelopes",
+      "purpose": "Hermetic bulb",
+      "earthLocations": [
+        "Float glass plants"
+      ],
+      "spaceAlternatives": "Borosilicate envelopes from terrestrial float lines; sapphire windows for harsh LED packages; sealed metal-ceramic heads where glass vibration risk matters",
+      "processingRequired": "Sealing stems to lead wires"
+    },
+    {
+      "name": "Phosphors and rare earths",
+      "purpose": "Fluorescent and LED colour mixing",
+      "earthLocations": [
+        "Bayan Obo rare earths historically dominant"
+      ],
+      "spaceAlternatives": "Terrestrial rare-earth separation for narrow-band phosphors; early recovery may blend broader-spectrum phosphors with slightly lower efficacy, or use indium gallium nitride blue pumps with mature phosphor recipes traded as packaged powders",
+      "processingRequired": "Milling to controlled particle size"
+    }
   ],
   "buildSteps": [
-    {"order": 1, "title": "Design photometric layout", "description": "Target illuminance per task; choose spacing criterion; model glare angles.", "prerequisiteTools": ["photometric software or lumen method tables"], "warningNote": "Overlighting wastes power and contrast"},
-    {"order": 2, "title": "Size feeders for voltage drop", "description": "Keep drop within code; account for inrush on HID; segregate dimmed noise-sensitive circuits.", "prerequisiteTools": ["NEC or IEC ampacity tables"], "warningNote": "Undervoltage kills LED drivers slowly"},
-    {"order": 3, "title": "Install protection and earthing", "description": "RCDs for wet zones; equipotential bonding; surge protection on LED outdoor strings.", "prerequisiteTools": ["megger", "earth loop tester"], "warningNote": "Shared neutrals with smart switches can energise shells"},
-    {"order": 4, "title": "Commission drivers", "description": "Set DIP switches for current; verify flicker percent with meter; log temperatures at heat sinks.", "prerequisiteTools": ["oscilloscope, thermal camera"], "warningNote": "PWM incompatibilities with phone cameras reveal bad drivers"},
-    {"order": 5, "title": "Maintain lumen depreciation records", "description": "Group relamp schedules; clean optics; track dirt depreciation on street optics.", "prerequisiteTools": ["illuminance meter"], "warningNote": "LED catastrophic failures cluster if batch is bad — keep spare modules"}
+    {
+      "order": 1,
+      "title": "Decide how much light you need where",
+      "description": "Walk the space at night with a temporary lamp and a notebook. For each task area, write what someone must see clearly (reading, cooking, machine inspection). Use simple rules of thumb if you lack photometric software: start with modest power, add more only where shadows block work. Mark switches so a stranger knows what each controls.",
+      "prerequisiteTools": [
+        "notebook"
+      ],
+      "warningNote": "Over-bright glare wastes power and hides contrast — especially on polished metal"
+    },
+    {
+      "order": 2,
+      "title": "Size wires for current and length, not for hope",
+      "description": "From each circuit’s lamp count and type, estimate steady current and any starting surge. Look up ampacity for your cable type and installation (open air versus insulation in a wall). If a run is long, calculate voltage drop; undervoltage kills some electronic drivers slowly while they still ‘work’.",
+      "prerequisiteTools": [
+        "ampacity table",
+        "calculator",
+        "tape measure"
+      ],
+      "warningNote": "Undersized neutrals in three-phase setups can overheat while phase currents look normal"
+    },
+    {
+      "order": 3,
+      "title": "Install protection and earthing like a civic duty",
+      "description": "Place breakers or fuses so a fault in one branch cannot silence an entire hospital wing. In wet rooms, use residual-current protection where codes require it. Bond metal parts that could become energised so a fault trips protection instead of waiting for a human to complete the path to earth.",
+      "prerequisiteTools": [
+        "earth tester",
+        "insulation tester"
+      ],
+      "warningNote": "Never assume paint or rust counts as a reliable earth bond"
+    },
+    {
+      "order": 4,
+      "title": "Commission drivers and dimmers together",
+      "description": "If you dim LEDs, verify the dimmer model matches the driver’s method (trailing-edge, 0–10 V, DALI). Listen for buzz; watch a phone camera for rolling-band flicker that eyes miss. Log driver temperatures at full output for an hour — a hot driver in a sealed ceiling is a delayed fire.",
+      "prerequisiteTools": [
+        "infrared thermometer",
+        "oscilloscope if available"
+      ],
+      "warningNote": "Mixed-content upgrades can leave old incandescent dimmers on incompatible loads"
+    },
+    {
+      "order": 5,
+      "title": "Keep maintenance records like a ship’s log",
+      "description": "Note relamp dates, cleaning of optics, and any colour shift. For streets and factories, dirt depreciation dominates — a cleaned reflector can double useful light without new watts. Store spare modules where humidity and rodents cannot ruin them.",
+      "prerequisiteTools": [
+        "notebook"
+      ],
+      "warningNote": "LED batches fail in clusters — keep modest spares of the same lot if possible"
+    }
   ],
   "history": [
-    {"year": 1879, "event": "Edison demonstrates practical incandescent lamp with carbonised filament and parallel distribution vision.", "location": "Menlo Park, USA", "person": "Thomas Edison"},
-    {"year": 1938, "event": "Mercury vapour street lighting spreads in Europe and America.", "location": "Global"},
-    {"year": 1962, "event": "First practical visible-spectrum LED (red) demonstrated at GE.", "location": "USA", "person": "Nick Holonyak Jr."}
+    {
+      "year": 1879,
+      "event": "Edison demonstrates practical incandescent lamp with carbonised filament and parallel distribution vision.",
+      "location": "Menlo Park, USA",
+      "person": "Thomas Edison"
+    },
+    {
+      "year": 1938,
+      "event": "Mercury vapour street lighting spreads in Europe and America.",
+      "location": "Global"
+    },
+    {
+      "year": 1962,
+      "event": "First practical visible-spectrum LED (red) demonstrated at GE.",
+      "location": "USA",
+      "person": "Nick Holonyak Jr."
+    }
   ],
   "inventors": [
-    {"name": "Thomas Edison", "contribution": "Incandescent lamp commercialisation and electrical utility model", "years": "1847-1931", "nationality": "American"},
-    {"name": "Nick Holonyak Jr.", "contribution": "Practical visible LED", "years": "1928-2022", "nationality": "American"}
+    {
+      "name": "Thomas Edison",
+      "contribution": "Incandescent lamp commercialisation and electrical utility model",
+      "years": "1847-1931",
+      "nationality": "American"
+    },
+    {
+      "name": "Nick Holonyak Jr.",
+      "contribution": "Practical visible LED",
+      "years": "1928-2022",
+      "nationality": "American"
+    }
   ],
   "impact": "Electric light extended civil time into night — reshaping labour shifts, crime patterns, and education. It also became a load that justified baseload generators.\n\nSolid-state lighting finally bent the lumen-per-watt curve enough to matter for climate-forced grids.",
   "images": [],
-  "videos": [{"id": "led-physics", "title": "LED and phosphor white", "description": "Accredited solid-state lighting short courses on efficacy and thermal design.", "durationSeconds": 480}],
+  "videos": [
+    {
+      "id": "led-physics",
+      "title": "LED and phosphor white",
+      "description": "Accredited solid-state lighting short courses on efficacy and thermal design.",
+      "durationSeconds": 480
+    }
+  ],
   "externalLinks": [
-    {"id": "doe-lighting", "title": "DOE — solid-state lighting program", "url": "https://www.energy.gov/eere/solid-state-lighting"},
-    {"id": "ies-lighting", "title": "Illuminating Engineering Society", "url": "https://www.ies.org/"}
+    {
+      "id": "doe-lighting",
+      "title": "DOE — solid-state lighting program",
+      "url": "https://www.energy.gov/eere/solid-state-lighting"
+    },
+    {
+      "id": "ies-lighting",
+      "title": "Illuminating Engineering Society",
+      "url": "https://www.ies.org/"
+    }
   ],
   "lastUpdated": "2026-04-10",
   "verified": false
