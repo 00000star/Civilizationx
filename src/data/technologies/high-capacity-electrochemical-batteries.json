@@ -12,8 +12,8 @@
     "electric-motor"
   ],
   "unlocks": [],
-  "problem": "Electricity is notoriously hard to inventory as electricity — without rotation or chemistry it vanishes in milliseconds of mismatch. Batteries store energy as compositional gradients across electrodes and electrolyte, releasing it when ions shuffle back under controlled electron flow through external circuits.\n\nScaling requires managing dendrites, thermal runaway, gas venting, and state-of-charge estimation across thousands of series cells. Recycling demands separation of cobalt, nickel, lithium, and fluorinated salts without poisoning workers.\n\nLead-acid taught industry about stratification and sulfation; lithium-ion taught it about nail penetration tests and shipping regulations — each chemistry has its moral syllabus.",
-  "overview": "Primary cells are single-use; secondary cells intercalate ions reversibly. Lead-acid uses Pb and PbO₂ in sulphuric acid — heavy but recyclable. Lithium-ion inserts Li⁺ into graphite and metal oxide cathodes with carbonate electrolytes; solid-state variants promise safer electrolytes at manufacturing pain cost. Flow batteries shunt energy into dissolved redox couples in tanks, decoupling power from energy capacity.\n\nBattery management systems monitor cell voltages and temperatures, balance series strings, and isolate faults. Thermal systems use cold plates or refrigerant loops for fast charge.\n\nGrid-scale containers integrate inverters, transformers, and fire suppression — codes are evolving as incidents teach what 'thermal propagation' means in a packed aisle.\n\nSecond-life EV packs for stationary storage extend useful life before recycling — if state-of-health algorithms are honest.",
+  "problem": "A spinning reserve turbine answers the grid in seconds but wants fuel and maintenance; a reservoir answers in minutes but needs geography. Batteries answer in milliseconds — they are the fastest negotiators between variable sun and impatient motors — but they store energy in reactive chemistry that ages with every cycle and every hot afternoon.\n\nLithium-ion families intercalate ions between graphite-like anodes and oxide cathodes through an electrolyte and a separator thinner than a hair. That thinness is performance and peril: dendrites, contamination, and overcharge can puncture separation; thermal runaway can cascade through packs if spacing and cooling lie.\n\nA battery management system is therefore not an accessory; it is the organ that measures each cell’s voltage and temperature, balances state of charge, limits current, and opens contactors when sanity fails. Without it, a pretty stack of pouches is a sculpture awaiting ignition.\n\nRecycling and mining ethics follow batteries into headlines — cobalt geography, brine water use, and firefighter training for warehouse fires are part of the technology now, not footnotes.",
+  "overview": "Industrial packs series-parallel cells to reach hundreds of volts; contactors and fuses protect both directions. Thermal management may be air, liquid cold plates, or refrigerant loops depending on C-rate and calendar life targets. Inverters bidirectionally convert DC to grid AC with harmonic controls similar to solar.\n\nCathode chemistries trade energy density, cobalt content, cycle life, and thermal stability — lithium iron phosphate is kinder on many axes at cost of volumetric density. Silicon-blended anodes promise more capacity if swelling can be engineered around.\n\nGrid services include frequency regulation, peak shaving, transmission deferral, and black-start support when paired with inverters that can form voltage. Behind-the-meter systems shave demand charges if tariffs reward them honestly.\n\nSecond-life reuse of vehicle packs into stationary storage extends value but demands recharacterisation — aged cells are not fresh cells with a discount sticker.",
   "principles": [
     {
       "name": "Nernst voltage",
@@ -76,7 +76,7 @@
       "earthLocations": [
         "Atacama brines, Australian spodumene"
       ],
-      "spaceAlternatives": "Import until brine processing exists",
+      "spaceAlternatives": "Lithium salts from South American brines, Australian spodumene, or clay-hosted resources on Earth; off-world batteries initially ship as packaged cells until local brines or pegmatite zones justify in-situ chemical plants with closed water loops",
       "processingRequired": "Dry rooms during cell fill"
     },
     {
@@ -85,7 +85,7 @@
       "earthLocations": [
         "New Caledonia, Indonesia nickel laterites"
       ],
-      "spaceAlternatives": "LFP cathodes reduce cobalt dependence",
+      "spaceAlternatives": "NMC cathodes for energy density; LFP where cobalt supply and thermal kindness dominate trade-offs",
       "processingRequired": "Hydrothermal co-precipitation, lithiation calcine"
     },
     {
@@ -94,56 +94,60 @@
       "earthLocations": [
         "China synthetic graphite dominant"
       ],
-      "spaceAlternatives": "Silicon blends for higher capacity — swelling challenges",
+      "spaceAlternatives": "Natural or synthetic graphite anodes; silicon oxide blends where energy density justifies swelling management",
       "processingRequired": "Spheroidisation and carbon coating"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Electrode coating and calendering",
-      "description": "Slurry coat foils; dry; compress to target porosity; slit widths.",
+      "title": "Choose chemistry to match duty cycle, safety culture, and temperature",
+      "description": "Read datasheets for allowed voltage and temperature windows. If your site cannot guarantee aircon, favour chemistries with wider thermal tolerance. Write the maximum continuous charge and discharge power you truly need — oversizing C-rate wastes money and shortens life.",
       "prerequisiteTools": [
-        "coating lines",
-        "beta gauges"
+        "notebook",
+        "utility tariff if grid-tied"
       ],
-      "warningNote": "Humidity spikes gel slurries — dew point control"
+      "warningNote": "Mismatched chemistry voids warranties and insurance"
     },
     {
       "order": 2,
-      "title": "Stack and fill",
-      "description": "Wind jelly rolls or stack prismatic layers; electrolyte fill under vacuum; seal.",
+      "title": "Mechanically cage modules with non-combustible spacing and venting thought through",
+      "description": "Follow manufacturer spacing for air channels; do not pack foamed plastic around cells for aesthetics. Route DC cables in separate conduits from AC; label polarities at both ends.",
       "prerequisiteTools": [
-        "leak testers"
+        "metal racking",
+        "fire-rated barriers"
       ],
-      "warningNote": "Contaminant ppm levels shift cycle life by double digits"
+      "warningNote": "Gas from one cell can ignite neighbours if vents aim wrong"
     },
     {
       "order": 3,
-      "title": "Formation cycling",
-      "description": "Slow charge cycles grow SEI; sort cells by capacity.",
+      "title": "Install fuses and contactors so a single cell fault cannot feed unlimited current",
+      "description": "Size fuses per string; use contactors rated for DC interruption — AC ratings lie. Precharge resistors limit inrush when closing onto capacitive inverters.",
       "prerequisiteTools": [
-        "cycler farms"
+        "DC-rated fuses",
+        "precharge schematic"
       ],
-      "warningNote": "Gas generation during formation needs vent paths"
+      "warningNote": "Arcs on DC do not self-extinguish like AC arcs"
     },
     {
       "order": 4,
-      "title": "Pack integration and abuse testing",
-      "description": "Nail crush, overcharge, external fire protocols for certification.",
+      "title": "Commission the BMS before trusting any automation",
+      "description": "Verify cell balance at top and bottom of charge; calibrate current sensors; test emergency stop and manual disconnect paths. Set conservative limits first; widen only after soak testing.",
       "prerequisiteTools": [
-        "calorimeter"
+        "BMS laptop tool",
+        "insulation tester"
       ],
-      "warningNote": "Propagation tests must be witnessed remotely"
+      "warningNote": "Never parallel strings without understanding circulating currents"
     },
     {
       "order": 5,
-      "title": "Deploy with EMS integration",
-      "description": "Ancillary service schedules; SOC guard bands for warranty; recycling contracts.",
+      "title": "Log state of health and plan replacement economics",
+      "description": "Export cycle counts and temperature histograms quarterly. Train firefighters where disconnects live and what hazards remain after disconnect — some faults smoulder inside pouches.",
       "prerequisiteTools": [
-        "grid SCADA APIs"
+        "logbook",
+        "site diagram for fire service"
       ],
-      "warningNote": "Cycling to 100% daily voids warranties fast"
+      "warningNote": "Thermal runaway can release toxic HF — respirators matter"
     }
   ],
   "history": [

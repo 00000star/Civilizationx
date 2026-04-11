@@ -11,8 +11,8 @@
     "copper-wire-and-cable"
   ],
   "unlocks": [],
-  "problem": "AC won distribution because transformers are simple, but long submarine cables look like enormous capacitors — charging current can exceed useful load. HVDC links move power as DC with converters at ends, decoupling grids that cannot synchronise. Urban traction and battery vehicles need controlled DC buses; variable-speed drives need frequency synthesis AC from fixed grid.\n\nThe obstacle is power electronics: mercury-arc valves historically, thyristors, GTOs, IGBTs, and now SiC MOSFETs — each step raises switching frequency and efficiency but demands protection against shoot-through and voltage transients.\n\nHarmonics pollute the AC side; filters and PWM strategies are part of the civic duty of converters.",
-  "overview": "Line-commutated converters use thyristor bridges with AC grid commutation; weak grids struggle — voltage-source converters with IGBTs and PWM self-commutate and support black-start services. MMC topologies stack submodules for smooth waveforms. Motor drives rectify incoming AC, buffer on DC link, then invert to variable frequency for induction or PM motors.\n\nProtection includes DC breakers (harder than AC zero-cross interruption), metallic return electrodes for monopolar operation, and coordination with AC-side relays. Control systems run real-time models to damp subsynchronous oscillations on series-compensated lines feeding converters.\n\nSubmarine HVDC ties land offshore wind; overhead HVDC appears where right-of-way width must shrink for the same power.\n\nThe technology is the diplomatic interface between incompatible grids — and between chemical batteries and rotating masses.",
+  "problem": "Alternating current won cities because a transformer is a simple, reliable impedance translator. But physics punishes AC on very long submarine cables: the cable itself behaves like a giant capacitor, and charging current can eat the ampacity you thought you bought. High-voltage direct current links move energy as DC between converter stations, letting asynchronous grids shake hands without synchronising every generator.\n\nThe same semiconductor families that rescue cables also reinvent the workshop: a motor no longer needs to locked to line frequency if an inverter synthesises whatever Hz the load wants. Braking energy can return to the grid instead of smoking in a resistor bank — when regulations and hardware allow.\n\nPower electronics trade old problems for new ones. Switching devices must not shoot through; snubbers and layout fight voltage spikes; harmonics on the AC side can overheat neutrals and nuisance-trip upstream protection. A drive cabinet is therefore both liberator and neighbour: done well it is whisper-quiet; done poorly it is a radio jammer and a fire starter.\n\nInterruption is harder on DC than AC — there is no natural current zero every half-cycle — so breaker technology, fault detection, and coordination remain active engineering frontiers, not solved textbook trivia.",
+  "overview": "Historically, mercury-arc valves and later thyristor bridges rectified and inverted bulk power; today IGBT and silicon-carbide stacks PWM approximate sine waves with self-commutation, helping weak grids and enabling black-start services modular converters can provide. Modular multilevel converters stack many small cells so waveforms are smooth and filters shrink.\n\nMotor drives typically rectify AC to a DC link, filter briefly, then invert to variable frequency for induction or permanent-magnet motors. Four-quadrant drives can motor or regenerate; ship propulsion and elevators exploit that daily. Cable and motor must be matched to fast edges — reflections from impedance mismatch can overvoltage windings.\n\nHVDC overlays connect offshore wind fields, cross mountain ranges with narrower right-of-way than AC for the same power, and tie islands to continents. Metallic return electrodes handle monopolar schemes; insulation coordination on DC bushings borrows from AC craft but is not identical.\n\nHarmonic filters and PWM strategies are civic infrastructure: they keep your drive from being the reason a hospital’s imaging suite ghosts artifacts. Standards encode emission limits; compliance is part of the product, not an afterthought.",
   "principles": [
     {
       "name": "Line versus self commutation",
@@ -75,7 +75,7 @@
       "earthLocations": [
         "Wafer fabs globally"
       ],
-      "spaceAlternatives": "Import modules until fabs exist",
+      "spaceAlternatives": "Silicon IGBTs from power-module fabs; silicon carbide for higher frequency and efficiency where heat sinking allows; keep spare modules sealed dry until installation",
       "processingRequired": "Wire bond, solder, void-free attach"
     },
     {
@@ -84,7 +84,7 @@
       "earthLocations": [
         "Refined copper"
       ],
-      "spaceAlternatives": "Aluminium bus for weight",
+      "spaceAlternatives": "Low-inductance film capacitors for DC link; electrolytics for bulk energy where ripple current ratings match service life targets",
       "processingRequired": "Silver plating contacts"
     },
     {
@@ -93,55 +93,59 @@
       "earthLocations": [
         "Film capacitor plants"
       ],
-      "spaceAlternatives": "Electrolytics for cost at low voltage",
+      "spaceAlternatives": "Laminated buswork or thick copper foil; aluminium bus with plated interfaces where weight dominates launch cost",
       "processingRequired": "Self-healing metallisation"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Load flow and dynamic studies",
-      "description": "Model LCC versus VSC; check SCR of receiving AC system; tune PLL gains.",
+      "title": "Write the electrical story on one page before ordering semiconductors",
+      "description": "State input voltage class, DC bus target, switching frequency, maximum load current, and whether you must regenerate to the grid. Sketch the path from grid terminals through precharge, DC link, inverter, and motor. Note ambient temperature and altitude — semiconductors derate sharply when air is thin or hot.",
       "prerequisiteTools": [
-        "EMTDC/PSCAD class tools"
+        "notebook",
+        "multimeter"
       ],
-      "warningNote": "Undamped SSR can wreck turbine shafts"
+      "warningNote": "Skipping precharge dumps inrush into capacitors and welds contacts"
     },
     {
       "order": 2,
-      "title": "Assemble valve stacks",
-      "description": "Series connect devices with grading resistors; torque bus to spec; hi-pot each level.",
+      "title": "Lay out busbars and gate drives for short, low-inductance loops",
+      "description": "Follow manufacturer layout guides for module placement; keep gate-drive twisted pairs away from switching nodes. Add RC or TVS snubbers where datasheets hint at ringing. Torque semiconductor packages evenly so heatsinks mate flat.",
       "prerequisiteTools": [
-        "partial discharge meter"
+        "torque screwdriver",
+        "thermal paste or pads"
       ],
-      "warningNote": "Static discharge kills gate oxides"
+      "warningNote": "Uneven clamp pressure creates hot spots that fail silently then suddenly"
     },
     {
       "order": 3,
-      "title": "Commission controls",
-      "description": "Verify firing order; test fault ride-through scripts; black-start drills if applicable.",
+      "title": "Install line reactors, DC chokes, and filters where the design calls for them",
+      "description": "Reactors soften di/dt and help compliance with harmonic limits; DC chokes limit fault rise rates in some topologies. Label each inductor with its function — future you will forget why it sat there.",
       "prerequisiteTools": [
-        "oscilloscope with isolated probes"
+        "LCR meter if available"
       ],
-      "warningNote": "Ground loops corrupt measurements — use fibre-isolated front ends"
+      "warningNote": "Undersized DC-link capacitors let voltage sag trip undervoltage faults during acceleration"
     },
     {
       "order": 4,
-      "title": "Energise at reduced DC voltage",
-      "description": "Ramp power; monitor valve temperatures; scan harmonics at POC.",
+      "title": "Program protections before connecting the motor",
+      "description": "Set overcurrent, overvoltage, earth-fault, and thermal models conservatively. Verify encoder or resolver direction matches motor rotation command — a wrong sign can run away until mechanical limits stop it. Test emergency stop paths independently of software.",
       "prerequisiteTools": [
-        "PQ analyser"
+        "laptop with vendor tool",
+        "isolated scope probe"
       ],
-      "warningNote": "Filter detuning from temperature shifts passbands"
+      "warningNote": "Never defeat interlocks for a quick test"
     },
     {
       "order": 5,
-      "title": "Handover with spares policy",
-      "description": "Stock redundant submodule cards; train operators on alarm trees.",
+      "title": "Ramp from crawl speed with a mechanical guard, then tune control",
+      "description": "Start with current limit low enough to stop safely if wiring is wrong. Listen for bearing whine; watch DC bus ripple. Only after stability at low speed raise limits and enable regeneration if permitted. Log versions of firmware and parameters with dates.",
       "prerequisiteTools": [
-        "asset management software"
+        "infrared thermometer",
+        "notebook"
       ],
-      "warningNote": "Firmware version drift across spares causes mysterious trips"
+      "warningNote": "Regeneration into a grid segment that cannot absorb it raises DC voltage until something trips destructively"
     }
   ],
   "history": [

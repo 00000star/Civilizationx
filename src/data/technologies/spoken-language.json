@@ -9,8 +9,8 @@
   "unlocks": [
     "writing-early-systems"
   ],
-  "problem": "Without speech, knowledge is bound to immediate demonstration. Multi-step plans — hunting drives, bridge building, negotiating truce — collapse when participants cannot serialise intentions into compact symbols others correct. Sound crosses brush and dark; it frees hands; it enables children to download centuries in years.\n\nThe obstacle is not vocal cords alone but social agreement: stable meanings, norms of truthfulness, and institutions that correct drift. Oral societies preserve technique in metre and story — beautiful but lossy across bottlenecks.\n\nEvery later communication technology is compression of speech: writing freezes word order; telegraph pays per character; codecs predict phonemes.",
-  "overview": "Spoken language combines a finite phoneme inventory with compositional grammar. Prosody layers intent and affect. Acquisition in children couples statistical learning with caregiver feedback; adults learn second languages with more effort but the same combinatorial core.\n\nOral corpora — law, medicine, navigation — rely on rhythm and redundancy for fidelity. Writing partially replaces those affordances with external error correction.\n\nFor recovery, preserving fluent expert dialogue alongside books rebuilds tacit motor skills faster than silent reading alone.",
+  "problem": "Speech is the oldest wide-area network humans run without installing firmware. It crosses a workshop faster than a chalk line, carries tone that signals intent or irony, and lets a child ask ‘why’ until the adult admits the limit of their own knowledge. Without it, complex coordination collapses into gesture chains that do not survive interruption — you cannot revise a pointing sequence mid-sentence the way you can repair a spoken plan.\n\nThe obstacle is not only anatomy — lungs, larynx, ears — but agreement. A sound becomes a word only when a community treats it as one, corrects misuse, and punishes lies often enough that truthfulness stays cheaper than chaos. Oral cultures store technique in metre and story because rhythm and redundancy survive noisy transmission better than bare lists.\n\nEvery later medium is a compression of speech: writing freezes word order; telegraph prices by character; codecs predict phonemes. Lose fluent dialogue and you lose the fastest path to transfer tacit motor skill — the way a master potter’s hands explain what a book cannot.\n\nRecovery is therefore partly sociological: protect elders, apprenticeships, and councils where correction is kind. A language dies when children stop playing in it, not when dictionaries stop printing.",
+  "overview": "Spoken languages combine a small inventory of meaningless sounds with rules that build unlimited meaningful sentences — compositionality with pragmatic glue. Prosody — rise and fall, pause, stress — layers intent on top of grammar; the same sentence read flat can insult or apologise depending on tune.\n\nChildren acquire speech by statistical listening plus caregiver feedback; adults learn second languages with more effort but the same combinatorial core. Bilingualism is normal globally; diglossia — different languages for home and market — shapes who can access which institution.\n\nOral law, medicine, and navigation rely on memorable forms: parallelism, rhyme, and narrative embedding. Writing later partially replaces those affordances with external error correction, but courtrooms and hangars still run on live question-and-answer.\n\nFor rebuilders, record fluent experts on durable media, but never mistake recordings for communities — playback cannot negotiate new words for new tools the way a living room can.",
   "principles": [
     {
       "name": "Compositionality",
@@ -66,56 +66,58 @@
       "earthLocations": [
         "Everywhere humans congregate"
       ],
-      "spaceAlternatives": "Scheduled social bandwidth; latency harms prosody cues",
+      "spaceAlternatives": "Living communities on Earth; isolated crews rely on scheduled high-bandwidth calls, in-person rotations, and written backups because interplanetary latency removes real-time prosody for months",
       "processingRequired": "Intergenerational teaching institutions"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Anchor joint attention",
-      "description": "Pair words with salient objects and actions until learners expect labels.",
+      "title": "Anchor words to shared attention",
+      "description": "Point at a visible object, say a short label, do the action, repeat. Wait for the learner’s eyes to follow before naming — joint attention is the handshake of meaning. Use the same word for the same object until it sticks; avoid cute synonyms early.",
       "prerequisiteTools": [
-        "caregivers",
-        "stable routines"
+        "patient speakers",
+        "stable daily routines"
       ],
-      "warningNote": "Coercion without meaning produces mimicry only"
+      "warningNote": "Forced repetition without joy produces mimicry, not language"
     },
     {
       "order": 2,
-      "title": "Expand core vocabulary",
-      "description": "Prioritise hazards, tools, kinship, and directions observable in environment.",
+      "title": "Teach a survival core before poetry",
+      "description": "Prioritise fire, water, tools, kin names, directions, numbers to ten, and honest refusal words. Drill short sentences in real contexts: ‘Stop — hot — back up.’ Role-play injuries and arguments so learners hear tone under stress.",
       "prerequisiteTools": [
-        "naming games"
+        "real tasks",
+        "clear props"
       ],
-      "warningNote": "Homonyms across dialects confuse rebuild teams — document senses"
+      "warningNote": "Homonyms across dialects confuse rebuild teams — keep a sense dictionary"
     },
     {
       "order": 3,
-      "title": "Teach narrative and argument",
-      "description": "Use stories with false-belief tasks; train correction culture.",
+      "title": "Practice stories that carry procedural truth",
+      "description": "Embed sequences inside narratives humans remember: how to find fresh water, how to temper steel, how to navigate by stars. Invite listeners to interrupt with questions; correct mistakes immediately in speech, not hours later on paper.",
       "prerequisiteTools": [
-        "council meetings"
+        "evening fire or shared meal"
       ],
-      "warningNote": "Gossip can destroy trust faster than fire"
+      "warningNote": "Gossip destroys trust faster than fire — teach norms for verification"
     },
     {
       "order": 4,
-      "title": "Drill noisy-channel resilience",
-      "description": "Practice high wind, long distance, and interrupted turns — maritime and steppe cultures preserved such drills.",
+      "title": "Train noisy-channel resilience",
+      "description": "Hold drills at distance, through wind, across water — any channel that strips consonants. Teach repetition protocols (‘say again’, ‘confirm word three’) borrowed from aviation and boats. Practice turn-taking with timers so shy speakers get airtime.",
       "prerequisiteTools": [
-        "whistles optional"
+        "whistle or drum optional"
       ],
-      "warningNote": "Homophones become dangerous in aviation-style readbacks"
+      "warningNote": "Shouting permanently damages young voices — use instruments for far signals when possible"
     },
     {
       "order": 5,
-      "title": "Record oral corpus when possible",
-      "description": "Even before writing, cyclic festivals audit technical terms for drift.",
+      "title": "Institutionalise teaching without killing play",
+      "description": "Pair every novice craft with a named mentor and weekly review. Rotate mentors so dialect features mix deliberately. Archive new coinages for tools with definitions spoken aloud into recordings plus example sentences.",
       "prerequisiteTools": [
-        "memory techniques"
+        "mentor roster",
+        "recording device if available"
       ],
-      "warningNote": "Power hierarchies distort transcripts — rotate scribes"
+      "warningNote": "Recording elders without consent breaks trust — negotiate purpose and copies"
     }
   ],
   "history": [

@@ -12,8 +12,8 @@
     "optical-fiber-communications"
   ],
   "unlocks": [],
-  "problem": "Circuit-switched telephony ties bandwidth whether you speak or not; bursty data needs statistical multiplexing. Packet networks slice information into self-describing datagrams routed independently; TCP adds reliability and congestion control at the ends while IP provides best-effort delivery — the substrate on which everything else sits.\n\nAbove transport, humans need documents and services addressed by names, fetched with caching, and protected against tampering on untrusted paths. The web stacks HTTP semantics on TLS on DNS on BGP-routed IP — each layer a failure mode: certificate authorities, cache poisoning, mixed content, and tracking economies.\n\nScaling required hierarchical addressing, CIDR aggregation, CDNs, anycast, and eventual consistency databases — latency engineering disguised as sociology (where you place caches shapes who loads faster).\n\nThe political problem equals the technical: centralised platforms, censorship, and misinformation ride the same protocols that host scientific collaboration and disaster coordination.",
-  "overview": "Hosts encapsulate TCP or UDP segments into IP packets; routers longest-prefix match tables updated by IGPs internally and BGP between autonomous systems. Ethernet MAC frames carry IP on LANs; MPLS labels speed carrier cores; VPNs tunnel across untrusted paths. TCP’s AIMD congestion control reacts to loss; QUIC merges encryption with UDP-based transport for the web.\n\nBrowsers resolve names via DNS (often over HTTPS), open TCP or QUIC connections, negotiate TLS certificates, then request resources with HTTP verbs. HTML structures documents; CSS styles; JavaScript executes client-side logic. MIME types teach parsers how to interpret bytes. REST and GraphQL pattern APIs beyond pages.\n\nSearch engines crawl links; robots.txt expresses politeness; sitemaps assist discovery. Email and calendaring are parallel application stacks — SMTP, IMAP, CalDAV — showing the internet is families of protocols, not only the web.\n\nAccessibility (ARIA), internationalisation (Unicode), and performance budgets (Core Web Vitals) encode engineering ethics as metrics. Archiving fights link rot — the web forgets by default.",
+  "problem": "Circuit-switched telephony reserves a wire’s capacity whether you speak or not; data traffic is bursty — silence on a video call should not consume a dedicated copper pair across a continent. Packet networks chop information into self-describing chunks routers forward independently; TCP adds reliability and congestion control at the ends while IP provides best-effort delivery — a deliberately dumb network with smart edges.\n\nHumans still need names, not only numbers; documents, not only bytes; trust on hostile paths. The web stacks HTTP on TLS on DNS on BGP-routed IP — each layer introduces failure modes: poisoned caches, forged certificates, mixed content, and economies that monetise attention.\n\nScaling demanded hierarchical addressing, content delivery networks, and databases that admit eventual consistency — latency engineering disguised as sociology because where you place a cache shapes who loads faster during crises.\n\nThe political problem equals the technical: centralised platforms, censorship, and misinformation ride the same protocols that host scientific collaboration and disaster coordination — neutrality is a design stance, not a default law of nature.",
+  "overview": "Hosts wrap segments in IP packets; routers longest-prefix-match destinations updated by interior and exterior routing protocols. Ethernet carries frames on LANs; MPLS labels speed carrier cores; VPNs tunnel across untrusted coffee-shop Wi-Fi. TCP’s congestion control backs off when loss signals overload; QUIC merges encryption with UDP-based transport for the web’s dominant flows.\n\nBrowsers resolve names (often over encrypted DNS), negotiate TLS with certificate chains, then request objects with HTTP verbs and cache semantics. HTML structures documents; CSS styles; JavaScript executes client-side logic in sandboxes. CDNs cache static assets near users; origin servers remain authoritative.\n\nParallel stacks run email (SMTP/IMAP), calendars, and voice — the internet is families of protocols, not only the web. Accessibility and internationalisation encode ethics as measurable constraints; archiving fights link rot because the web forgets by default.\n\nOperations teams live in dashboards of latency, error budgets, and certificate expiry — maintenance never ended when dial-up died.",
   "principles": [
     {
       "name": "End-to-end argument",
@@ -83,7 +83,7 @@
       "earthLocations": [
         "Network silicon vendors"
       ],
-      "spaceAlternatives": "Software routers for low speeds",
+      "spaceAlternatives": "Merchant silicon switching ASICs for routers; until fabs exist off-world, ship ruggedised routers and treat them as critical spares with configuration backups",
       "processingRequired": "Thermal design for datacentre racks"
     },
     {
@@ -92,7 +92,7 @@
       "earthLocations": [
         "Foundry fabs"
       ],
-      "spaceAlternatives": "ARM cloud instances",
+      "spaceAlternatives": "ECC DRAM and server CPUs from established supply chains; ARM servers trade software compatibility for power if your stack permits",
       "processingRequired": "ECC RAM for silent error mitigation"
     },
     {
@@ -101,56 +101,59 @@
       "earthLocations": [
         "Flash fabs"
       ],
-      "spaceAlternatives": "Tape archives cold tier",
+      "spaceAlternatives": "Enterprise SSDs with power-loss protection for databases; cold tape or object storage for archives where latency tolerates hours",
       "processingRequired": "Wear levelling firmware"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Address plan and BGP policy",
-      "description": "Allocate aggregates; document RIR justification; peer with prefix filters and RPKI ROV.",
+      "title": "Draw your site’s trust boundaries on one whiteboard",
+      "description": "List users, browsers, TLS terminators, application servers, databases, and admin laptops. Mark where secrets live and who may touch them. If the drawing looks hairy, simplify topology before buying hardware.",
       "prerequisiteTools": [
-        "IPAM",
-        "IRR tools"
+        "whiteboard",
+        "markers"
       ],
-      "warningNote": "Fat-finger exports leak internal routes"
+      "warningNote": "Mixed HTTP/HTTPS pages leak cookies — draw redirects explicitly"
     },
     {
       "order": 2,
-      "title": "Operate IGP and monitoring",
-      "description": "OSPF/IS-IS areas; BFD; sFlow to telemetry stack.",
+      "title": "Register names and certificates before you depend on them",
+      "description": "Automate renewal with alerts to humans; document who owns registrar accounts. Publish CAA records to limit which CAs may issue for your domain.",
       "prerequisiteTools": [
-        "NOC dashboards"
+        "DNS hosting",
+        "ACME client"
       ],
-      "warningNote": "Area0 partitions blackhole regions"
+      "warningNote": "Expired certificates become public outages with countdown timers"
     },
     {
       "order": 3,
-      "title": "Threat model the web service",
-      "description": "STRIDE analysis; TLS and key management; CSP headers.",
+      "title": "Serve a minimal working site over TLS first",
+      "description": "Static HTML proves DNS, TLS, and CDN paths. Add application complexity only after observability exists — logs, metrics, traces — so regressions surface as graphs, not angry emails.",
       "prerequisiteTools": [
-        "security review template"
+        "web server",
+        "log aggregation"
       ],
-      "warningNote": "Mixed content silently downgrades security"
+      "warningNote": "Premature microservices multiply failure modes"
     },
     {
       "order": 4,
-      "title": "Performance and accessibility budget",
-      "description": "Lighthouse for LCP/CLS/INP; axe for WCAG contrast and keyboard paths.",
+      "title": "Threat-model realistic adversaries",
+      "description": "Ask what a bored teenager, a thief with a stolen laptop, and a nation-state each gain from attacking you — implement TLS, secure headers, dependency updates, and backups proportional to actual assets.",
       "prerequisiteTools": [
-        "CI checks"
+        "security checklist"
       ],
-      "warningNote": "Third-party scripts veto your budget"
+      "warningNote": "Backups nobody tests are decorative"
     },
     {
       "order": 5,
-      "title": "Archive and license content",
-      "description": "Creative Commons where possible; sitemaps; permalinks to Internet Archive.",
+      "title": "Measure performance and accessibility with budgets",
+      "description": "Pick Largest Contentful Paint and interaction targets; run keyboard-only navigation tests; add alt text as part of review, not as an afterthought. Archive outbound links to reputable mirrors where licensing allows.",
       "prerequisiteTools": [
-        "crawler tooling"
+        "Lighthouse or similar",
+        "axe DevTools"
       ],
-      "warningNote": "Robots.txt cannot revoke legal obligations"
+      "warningNote": "Third-party widgets veto your performance budget"
     }
   ],
   "history": [

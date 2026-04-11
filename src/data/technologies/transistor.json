@@ -5,50 +5,204 @@
   "category": "communication",
   "era": "mid-20th",
   "difficulty": 5,
-  "prerequisites": ["vacuum-tube-electronics", "semiconductor-crystal-growing-doping"],
-  "unlocks": ["internet-protocols-and-web"],
-  "problem": "Vacuum tubes scale poorly in power, size, and lifetime for portable and planetary-scale logic. A cold switch that modulates conductivity with a third terminal enables dense, reliable circuits if materials science can produce clean junctions and surface passivation.\n\nThe bipolar junction transistor uses emitter injection and base transport; the MOSFET uses an electric field through oxide to induce channel charge. Each family trades speed, voltage handling, and fabrication complexity.\n\nWithout surface passivation, silicon devices drift and leak; without photolithography at micron scale, integration stalls — but the transistor is the atomic actuator of the information age.",
-  "overview": "Planar silicon process grows thermal oxide, patterns windows photolithographically, diffuses or implants boron and phosphorus, metallises aluminium contacts, and passivates surfaces. Bipolar devices optimise beta and Early voltage; CMOS pairs nMOS and pMOS for static power near zero except during switching.\n\nPackaging bonds wires from die pads to lead frames, moulds epoxy, and trims tested units. Failure modes include electromigration in narrow aluminium, hot-carrier injection in short channels, and latch-up in CMOS bulk.\n\nDiscrete power transistors parallel thousands of cells; IGBTs merge MOS gates with bipolar conductivity modulation for traction inverters.\n\nCharacterisation uses curve tracers, S-parameters, and reliability ovens — Arrhenius acceleration predicts decadelong wear in weeks.",
+  "prerequisites": [
+    "vacuum-tube-electronics",
+    "semiconductor-crystal-growing-doping"
+  ],
+  "unlocks": [
+    "internet-protocols-and-web"
+  ],
+  "problem": "Vacuum tubes gave the world amplification, but they also gave it heat, fragility, and maintenance marathons — a computer should not consume more power than its city block. The transistor promises the same controlled current modulation with a cold junction inside a crystal: no heated cathode, no glass envelope, paths toward micrometre scale if surfaces can be passivated and junction depths controlled.\n\nBipolar devices inject carriers across a thin base; field-effect devices steer charge with an electric field through an oxide — each family trades speed, voltage tolerance, and fabrication complexity. The obstacle is cleanliness at atomic levels: a stray sodium ion in oxide shifts threshold voltage; a pinhole in passivation lets humidity drift parameters.\n\nLithography scaled junctions from millimetres to nanometres, but the transistor’s cultural lesson predates fabs: small reliable switches compose universality — logic is geology built from sand if you can pattern dopants honestly.\n\nFor recovery, protect not only crystal pullers but also the tacit craft of diffusion furnaces, implanter tuning, and wire-bond ergonomics.",
+  "overview": "Planar silicon processing grows thermal oxide, patterns windows in photoresist, introduces dopants by diffusion or implant, metallises contacts, and passivates surfaces so junctions stay stable in humid air. CMOS pairs n-channel and p-channel MOSFETs so static power stays tiny except during switching — enabling chips with billions of gates.\n\nPackaging bonds aluminium or copper wires from die pads to lead frames, moulds epoxy, and trims legs before burn-in screens infant failures. Power discretes parallel thousands of cells; IGBTs merge MOS gates with bipolar conductivity for traction inverters.\n\nCharacterisation — curve tracers, S-parameters, reliability ovens — translates physics into datasheets designers trust. Electromigration and hot-carrier wear appear as accelerated ageing curves.\n\nDiscrete transistors remain teaching instruments: you can still see a TO-220 tab and imagine heat leaving the junction.",
   "principles": [
-    {"name": "PN junction physics", "explanation": "Diffusion and drift balance set built-in potential; bias modulates depletion width and injection currents exponentially with voltage in ideal diode law."},
-    {"name": "Field effect in MOS", "explanation": "Vertical field inverts surface from p to n (or inverse), forming conductive channel whose sheet resistance gate voltage modulates."},
-    {"name": "Carrier mobility", "explanation": "Electrons move faster than holes in silicon — nMOS tends faster in equal geometry; strain silicon boosts mobility in advanced nodes."},
-    {"name": "Scaling constant-field", "explanation": "Shrink dimensions while adjusting doping and oxide thickness to preserve internal fields — until quantum tunnelling ends Dennard scaling."}
+    {
+      "name": "PN junction physics",
+      "explanation": "Diffusion and drift balance set built-in potential; bias modulates depletion width and injection currents exponentially with voltage in ideal diode law."
+    },
+    {
+      "name": "Field effect in MOS",
+      "explanation": "Vertical field inverts surface from p to n (or inverse), forming conductive channel whose sheet resistance gate voltage modulates."
+    },
+    {
+      "name": "Carrier mobility",
+      "explanation": "Electrons move faster than holes in silicon — nMOS tends faster in equal geometry; strain silicon boosts mobility in advanced nodes."
+    },
+    {
+      "name": "Scaling constant-field",
+      "explanation": "Shrink dimensions while adjusting doping and oxide thickness to preserve internal fields — until quantum tunnelling ends Dennard scaling."
+    }
   ],
   "components": [
-    {"id": "emitter-base-collector", "name": "Emitter, base, collector regions", "function": "Defines bipolar gain and breakdown", "position": "Implanted or diffused mesas then planar", "madeFrom": "Silicon with arsenic, phosphorus, boron profiles"},
-    {"id": "gate-stack", "name": "Gate oxide and polysilicon gate", "function": "Controls channel in MOSFET", "position": "Above channel", "madeFrom": "SiO₂ historically; high-k HfO₂ in advanced nodes"},
-    {"id": "contacts", "name": "Silicide and metal contacts", "function": "Lowers contact resistance to silicon", "position": "Active areas", "madeFrom": "TiSi₂ or CoSi₂ then copper dual damascene in fabs"},
-    {"id": "package", "name": "Package and heatsink", "function": "Removes junction heat; isolates electrically", "position": "Outside die", "madeFrom": "TO-220 epoxy, Cu base plates in power modules"}
+    {
+      "id": "emitter-base-collector",
+      "name": "Emitter, base, collector regions",
+      "function": "Defines bipolar gain and breakdown",
+      "position": "Implanted or diffused mesas then planar",
+      "madeFrom": "Silicon with arsenic, phosphorus, boron profiles"
+    },
+    {
+      "id": "gate-stack",
+      "name": "Gate oxide and polysilicon gate",
+      "function": "Controls channel in MOSFET",
+      "position": "Above channel",
+      "madeFrom": "SiO₂ historically; high-k HfO₂ in advanced nodes"
+    },
+    {
+      "id": "contacts",
+      "name": "Silicide and metal contacts",
+      "function": "Lowers contact resistance to silicon",
+      "position": "Active areas",
+      "madeFrom": "TiSi₂ or CoSi₂ then copper dual damascene in fabs"
+    },
+    {
+      "id": "package",
+      "name": "Package and heatsink",
+      "function": "Removes junction heat; isolates electrically",
+      "position": "Outside die",
+      "madeFrom": "TO-220 epoxy, Cu base plates in power modules"
+    }
   ],
   "rawMaterials": [
-    {"name": "Silicon wafers", "purpose": "Substrate", "earthLocations": ["Shin-Etsu, SUMCO class suppliers"], "spaceAlternatives": "Import until local crystal pullers exist", "processingRequired": "Epitaxy, polish, clean"},
-    {"name": "Dopant species", "purpose": "N and P regions", "earthLocations": ["Ion implantation gases"], "spaceAlternatives": "Spin-on dopants crude", "processingRequired": "RTA anneal activation"},
-    {"name": "Photoresists and acids", "purpose": "Pattern transfer", "earthLocations": ["Electronic chemical majors"], "spaceAlternatives": "Wet bench chemistry is import-heavy early", "processingRequired": "Controlled waste neutralisation"}
+    {
+      "name": "Silicon wafers",
+      "purpose": "Substrate",
+      "earthLocations": [
+        "Shin-Etsu, SUMCO class suppliers"
+      ],
+      "spaceAlternatives": "Czochralski silicon wafers from established suppliers; early off-world electronics imports packaged discretes until local crystal pullers and clean chemistry justify wafer fabs",
+      "processingRequired": "Epitaxy, polish, clean"
+    },
+    {
+      "name": "Dopant species",
+      "purpose": "N and P regions",
+      "earthLocations": [
+        "Ion implantation gases"
+      ],
+      "spaceAlternatives": "Arsine, phosphine, and diborane diluted for implant sources — exhaust abatement is non-negotiable",
+      "processingRequired": "RTA anneal activation"
+    },
+    {
+      "name": "Photoresists and acids",
+      "purpose": "Pattern transfer",
+      "earthLocations": [
+        "Electronic chemical majors"
+      ],
+      "spaceAlternatives": "Electronic-grade photoresists, developers, and HF-containing wet benches — neutralise wastes deliberately, not down the drain",
+      "processingRequired": "Controlled waste neutralisation"
+    }
   ],
   "buildSteps": [
-    {"order": 1, "title": "Simulate process TCAD", "description": "Predict junction depths, thresholds, and breakdown; iterate implant energies.", "prerequisiteTools": ["Sentaurus or similar"], "warningNote": "Models without calibration to fab data mis-predict short-channel effects"},
-    {"order": 2, "title": "Fabricate test structures", "description": "PCM dice with ring oscillators, Van der Pauw sheets, and chain FETs.", "prerequisiteTools": ["probe station"], "warningNote": "Misaligned masks show as leaky junctions everywhere"},
-    {"order": 3, "title": "Wire-bond and mould", "description": "Ultrasonic wedge bonds; transfer mould; trim/form leads.", "prerequisiteTools": ["bond pull tester"], "warningNote": "Epoxy outgassing can corrode bonds in hermetic failures"},
-    {"order": 4, "title": "Burn-in screen", "description": "Accelerate infant mortality with voltage-temperature stress.", "prerequisiteTools": ["burn-in ovens"], "warningNote": "Overstress destroys good parts if recipe wrong"},
-    {"order": 5, "title": "Datasheet and SPICE model", "description": "Publish safe operating area curves; release compact models for circuit designers.", "prerequisiteTools": ["curve tracer, network analyser"], "warningNote": "Missing thermal derating invites field fires"}
+    {
+      "order": 1,
+      "title": "Start from wafers you can measure, not mystery bags",
+      "description": "Map resistivity and crystal orientation; clean with validated RCA or piranha sequences appropriate to your safety kit. Always know oxide thickness targets before dopant steps — they couple.",
+      "prerequisiteTools": [
+        "four-point probe",
+        "ellipsometer if available"
+      ],
+      "warningNote": "Skip cleaning once and weeks of work become archaeology"
+    },
+    {
+      "order": 2,
+      "title": "Pattern a test die of simple structures",
+      "description": "Include Van der Pauw sheets, ring oscillators, and long serpentines to catch shorts. Align photomasks under microscope before exposing whole wafers — misalignment shows as uniform leakage, maddeningly symmetric.",
+      "prerequisiteTools": [
+        "mask aligner",
+        "microscope"
+      ],
+      "warningNote": "Photoresist underbake causes scumming"
+    },
+    {
+      "order": 3,
+      "title": "Implant or diffuse, then anneal with documented ramps",
+      "description": "Record peak temperature and soak time on charts tied to wafer IDs. Measure junction depth indirectly via sheet resistance and CV if you lack SIMS.",
+      "prerequisiteTools": [
+        "furnace logs",
+        "CV meter"
+      ],
+      "warningNote": "Channeling skews profiles — tilt wafers per recipe"
+    },
+    {
+      "order": 4,
+      "title": "Metallise, bond, and package without smothering heat",
+      "description": "Choose wire gauge and loop height for inductance limits; attach heatsinks before power tests. Pull-test bonds on sacrificial units.",
+      "prerequisiteTools": [
+        "wire bonder",
+        "pull tester"
+      ],
+      "warningNote": "Epoxy outgassing corrodes bonds in hermetic failures"
+    },
+    {
+      "order": 5,
+      "title": "Screen parts and publish honest limits",
+      "description": "Burn-in at modest overstress catches early deaths; curve-trace safe operating area including temperature derating. A datasheet lie becomes a field fire — mark secondary breakdown regions clearly.",
+      "prerequisiteTools": [
+        "burn-in oven",
+        "curve tracer"
+      ],
+      "warningNote": "Never ship without thermal resistance numbers"
+    }
   ],
   "history": [
-    {"year": 1947, "event": "Point-contact transistor demonstrated at Bell Labs.", "location": "USA", "person": "John Bardeen, Walter Brattain"},
-    {"year": 1948, "event": "Bipolar junction transistor theory by Shockley.", "location": "USA", "person": "William Shockley"},
-    {"year": 1960, "event": "MOSFET commercialisation begins as planar oxide quality improves.", "location": "Global"}
+    {
+      "year": 1947,
+      "event": "Point-contact transistor demonstrated at Bell Labs.",
+      "location": "USA",
+      "person": "John Bardeen, Walter Brattain"
+    },
+    {
+      "year": 1948,
+      "event": "Bipolar junction transistor theory by Shockley.",
+      "location": "USA",
+      "person": "William Shockley"
+    },
+    {
+      "year": 1960,
+      "event": "MOSFET commercialisation begins as planar oxide quality improves.",
+      "location": "Global"
+    }
   ],
   "inventors": [
-    {"name": "John Bardeen", "contribution": "Co-invention of point-contact transistor", "years": "1908-1991", "nationality": "American"},
-    {"name": "Walter Brattain", "contribution": "Co-invention of point-contact transistor", "years": "1902-1987", "nationality": "American"},
-    {"name": "William Shockley", "contribution": "Junction transistor and semiconductor theory leadership", "years": "1910-1989", "nationality": "American"}
+    {
+      "name": "John Bardeen",
+      "contribution": "Co-invention of point-contact transistor",
+      "years": "1908-1991",
+      "nationality": "American"
+    },
+    {
+      "name": "Walter Brattain",
+      "contribution": "Co-invention of point-contact transistor",
+      "years": "1902-1987",
+      "nationality": "American"
+    },
+    {
+      "name": "William Shockley",
+      "contribution": "Junction transistor and semiconductor theory leadership",
+      "years": "1910-1989",
+      "nationality": "American"
+    }
   ],
   "impact": "Transistors shrank radios to pockets and later put billions of switches on one die — the hinge between industrial electricity and planetary computation.\n\nUnderstanding them is prerequisite to reading any modern datasheet.",
   "images": [],
-  "videos": [{"id": "mosfet-basics", "title": "MOSFET operation", "description": "Solid-state electronics courses on threshold, saturation, and body effect.", "durationSeconds": 900}],
+  "videos": [
+    {
+      "id": "mosfet-basics",
+      "title": "MOSFET operation",
+      "description": "Solid-state electronics courses on threshold, saturation, and body effect.",
+      "durationSeconds": 900
+    }
+  ],
   "externalLinks": [
-    {"id": "nobel-transistor", "title": "Nobel Prize — transistor physics background", "url": "https://www.nobelprize.org/prizes/physics/1956/summary/"},
-    {"id": "ieee-sscs", "title": "IEEE Solid-State Circuits Society", "url": "https://sscs.ieee.org/"}
+    {
+      "id": "nobel-transistor",
+      "title": "Nobel Prize — transistor physics background",
+      "url": "https://www.nobelprize.org/prizes/physics/1956/summary/"
+    },
+    {
+      "id": "ieee-sscs",
+      "title": "IEEE Solid-State Circuits Society",
+      "url": "https://sscs.ieee.org/"
+    }
   ],
   "lastUpdated": "2026-04-10",
   "verified": false

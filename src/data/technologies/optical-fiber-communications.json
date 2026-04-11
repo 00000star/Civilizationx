@@ -13,8 +13,8 @@
   "unlocks": [
     "internet-protocols-and-web"
   ],
-  "problem": "Copper pairs attenuate and pick up EMI; coax thickens with distance. Glass fibres guide infrared light in total internal reflection with losses below 0.2 dB/km — enabling transoceanic routes without repeaters every kilometre. The problem is purity: ppm metal ions quench transparency; splices must align cores sub-micron; lasers must modulate GHz without chirp smearing pulses.\n\nDWDM stacks dozens of lambdas on one fibre — turning spectrum economics into optical physics. Dispersion and nonlinearities limit reach; Raman amplification and coherent detection push thousands of kilometres.\n\nFibre is fragile — macrobends and dirty connectors dominate field faults more than cable theft.",
-  "overview": "Preforms are deposited with MCVD or OVD; drawn into fibre; coated with UV acrylate; cabled with strength members and gel. Lasers (DFB, tunable) launch into single-mode fibre at 1310/1550 nm windows. EDFA amplifiers boost WDM combes en route. Receivers use PIN or APD photodiodes then TIAs and DSPs in coherent systems.\n\nPON access splits one feeder to hundreds of homes with passive splitters — GPON/XGS-PON standards govern bursts upstream.\n\nSplicing uses fusion arcs; OTDR reflects locate breaks; cleaning sticks fix most ‘mysterious’ outages.\n\nDark fibre leases became financial instruments — idle strands as options on future bandwidth.",
+  "problem": "Copper bandwidth fatigues with distance: high frequencies attenuate, crosstalk whispers between pairs, and repeaters multiply noise. Optical fibre guides infrared light in a glass core so pure that transoceanic links need fewer regenerations than coax ever could — if splices are clean, bends gentle, and lasers stable.\n\nNonlinear optics punishes hubris: high launch powers create four-wave mixing and self-phase modulation that smear pulses across dense wavelength-division multiplexing systems. Chromatic dispersion spreads short pulses unless fibres, lasers, and compensators conspire.\n\nLast-mile economics fought trenches and rights-of-way until demand for bits exceeded dislike of construction dust. Inside data centres, fibre is the quiet workhorse tying top-of-rack switches to spine fabrics.\n\nCollapse recovery still values fibre craft: cleave angles, fusion splicer calibration, and cleaning sticks are small tools that gate gigabits.",
+  "overview": "Single-mode fibre confines light to one propagating mode with a tiny core; lasers launch narrow linewidths that survive long haul. Multimode fibre serves short reaches with cheaper optics inside buildings. Preforms are built by MCVD or outside vapour deposition, drawn to kilometres of hair-fine glass, coated in acrylate, and cabled with strength members.\n\nErbium-doped fibre amplifiers boost C-band signals without optical-electrical-optical conversion; Raman amplification uses the fibre itself as gain medium. Coherent detection treats light like RF — DSP recovers phase and polarisation.\n\nConnectors (SC, LC, MPO) trade loss against convenience; angled polish reduces reflections that destabilise lasers. OTDR sends pulses to map faults versus distance — indispensable storytelling for crews.\n\nSubmarine cables add armour, power feed to repeaters, and branching units — geography with amplifiers every few dozen kilometres.",
   "principles": [
     {
       "name": "V-number and modes",
@@ -77,7 +77,7 @@
       "earthLocations": [
         "Chlor-alkali industry"
       ],
-      "spaceAlternatives": "Import preforms",
+      "spaceAlternatives": "Ultra-pure silicon tetrachloride and germanium dopants for preforms on Earth; ship spooled single-mode fibre off-world until local draw towers and dry gas chemistry justify on-site manufacture",
       "processingRequired": "Ultra-dry delivery lines"
     },
     {
@@ -86,7 +86,7 @@
       "earthLocations": [
         "ZnO smelter byproduct streams"
       ],
-      "spaceAlternatives": "Alternative dopants",
+      "spaceAlternatives": "Germanium tetrachloride or alternative index dopants tuned to your process — document refractive index profiles, not only supplier names",
       "processingRequired": "Controlled partial pressure in preform"
     },
     {
@@ -95,55 +95,61 @@
       "earthLocations": [
         "III-V fabs"
       ],
-      "spaceAlternatives": "Silicon photonics hybrid",
+      "spaceAlternatives": "Indium phosphide wafers for long-haul lasers; silicon photonics where integration beats raw laser wall-plug efficiency",
       "processingRequired": "Facet coating anti-reflection"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Design span budget",
-      "description": "Choose launch power, amplifier spacing, and FEC overhead; verify nonlinear SNI limit.",
+      "title": "Design span loss and dispersion budgets before ordering reels",
+      "description": "Sum connector losses, splice losses, fibre attenuation per km, splitter penalties, and system margin. Pick laser wavelength and fibre type together — they are not independent.",
       "prerequisiteTools": [
-        "simulation tools"
+        "OTDR calculator",
+        "datasheets"
       ],
-      "warningNote": "Too high launch worsens FWM"
+      "warningNote": "Optimistic budgets die in the first rain"
     },
     {
       "order": 2,
-      "title": "Install cable with bend radius",
-      "description": "Mandrel tests; tensile during pull; splice trailers climate controlled.",
+      "title": "Prepare workspace cleaner than you think necessary",
+      "description": "Close HVAC vents that blow dust; lint-free wipes only; inspect cleavers under magnification. Label every patch cord directionally — chaos grows exponentially in dense racks.",
       "prerequisiteTools": [
-        "OTDR"
+        "microscope",
+        "cleaver"
       ],
-      "warningNote": "Tight bends add permanent attenuation"
+      "warningNote": "One fingerprint on a ferrule can cost a day"
     },
     {
       "order": 3,
-      "title": "Fusion splice and proof test",
-      "description": "Core alignment; tensile proof; heat-shrink protectors.",
+      "title": "Cleave and fusion-splice on a stable table",
+      "description": "Strip gently; clean with approved fluid; cleave once confidently. Archive OTDR traces after each splice event with GPS or rack coordinates.",
       "prerequisiteTools": [
-        "fusion splicer"
+        "fusion splicer",
+        "OTDR"
       ],
-      "warningNote": "Dirty fibres arc and pit"
+      "warningNote": "Re-cleaving too many times shortens fibre to unusable stubs"
     },
     {
       "order": 4,
-      "title": "Characterise PMD and CD",
-      "description": "Field measurements for coherent provisioning; update DSP presets.",
+      "title": "Test bidirectionally at planned wavelength",
+      "description": "Swap OTDR ends to catch reflective faults hidden one-way. Verify polarisation extinction if using coherent gear.",
       "prerequisiteTools": [
-        "PMD analyser"
+        "OTDR",
+        "light source",
+        "power meter"
       ],
-      "warningNote": "Old fibre plant surprises new gear"
+      "warningNote": "Mismatched test wavelength lies about loss"
     },
     {
       "order": 5,
-      "title": "Turn-up with loopbacks",
-      "description": "BER tests; optical spectrum snapshots; alarm integration to NOC.",
+      "title": "Document as-built and train handlers",
+      "description": "Print diagrams with cable IDs; teach bend-radius discipline and trunk strain relief. Schedule re-OTDR after building moves — forklifts murder trays.",
       "prerequisiteTools": [
-        "BER tester"
+        "labels",
+        "zip ties rated for temperature"
       ],
-      "warningNote": "Wrong wavelength channel wipes wrong customer"
+      "warningNote": "Macro-bends raise loss slowly — temperature shifts unmask them"
     }
   ],
   "history": [

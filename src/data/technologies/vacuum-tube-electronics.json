@@ -5,49 +5,199 @@
   "category": "communication",
   "era": "early-20th",
   "difficulty": 4,
-  "prerequisites": ["electric-motor", "glass-making", "copper-wire-and-cable"],
-  "unlocks": ["transistor"],
-  "problem": "Early radio detectors used crystals but lacked stable gain; long-distance telephony needed repeaters; radar needed microsecond switching. Vacuum tubes provide gain by accelerating thermionic electrons across vacuum where space-charge laws let grids modulate current — a macroscopic valve analogous to modern transistors.\n\nObstacles include pump technology to reach hard vacuum, gettering to absorb residual gas, heater burnouts, microphonics from mechanical vibration, and kilowatt plate dissipation in transmitters. Tubes age as cathode emission drops and gas ionises.\n\nThey are heavy, hot, and fragile — but teach the control-grid concepts that solid-state devices inherit in different physics.",
-  "overview": "A heated cathode emits electrons; a positive plate collects them; intermediate grids accelerate or repel the cloud to modulate plate current. Triodes amplify; tetrodes and pentodes reduce Miller capacitance for RF. Cathode-ray tubes steer beams with electric and magnetic fields for oscilloscopes and television displays.\n\nManufacturing glass-to-metal seals join leads; getters flash to bind stray gas; mica or ceramic spacers locate grids with micron precision. Pump trains use rotary roughing pumps plus diffusion or turbomolecular high vacuum.\n\nPower tubes need graphite or metal anodes that radiate heat; forced air or water jackets prevent glass softening. Bias supplies and screen grids set operating points on load lines — design is graphical and empirical before SPICE.\n\nMilitary radar and early computers consumed tube populations measured in tens of thousands per machine — logistics rivalling ammunition.",
+  "prerequisites": [
+    "electric-motor",
+    "glass-making",
+    "copper-wire-and-cable"
+  ],
+  "unlocks": [
+    "transistor"
+  ],
+  "problem": "Crystals could detect radio waves, but stable amplification eluded early builders until thermionic valves appeared: heat a cathode until it boils electrons, pull them across vacuum with a positive plate, and modulate the flow with a grid that demands almost no power — gain from geometry and temperature, not from microscopic junctions yet.\n\nVacuum is the unsung hero and villain. Residual gas ionises under high fields; getters swallow molecules after seal-off; pumps must reach hard vacuum before the oxide cathode dies from poisoning. Tubes are hot, fragile, and microphonic — mechanical vibration becomes signal.\n\nStill, tubes taught entire generations how amplifiers think: bias points, load lines, and screen grids are portable metaphors even after silicon arrives. High-power radio and radar kept tubes relevant where semiconductors struggled with voltage and heat.\n\nFor recovery, glassblowing, pump science, and getter flashing are crafts as essential as winding transformers — lose them and you lose long-distance voice until someone relearns them painfully.",
+  "overview": "A triode stacks a control grid between cathode and plate; small grid voltage swings large plate current. Add screen and suppressor grids to tame capacitance and secondary emission — tetrodes and pentodes stabilise RF performance. Cathode-ray tubes steer electron beams for oscilloscopes and television with electric and magnetic fields.\n\nManufacturing joins glass to kovar pins, winds molybdenum grids on jigs, and flashes barium getters that bind stray gas. Pump trains rough with rotary pumps, finish with diffusion or turbomolecular stacks, bake envelopes to drive water out of glass.\n\nPower tubes dissipate kilowatts on graphite or metal anodes cooled by air, water, or vapor phases; bias supplies set operating points on plate curves chosen graphically before SPICE.\n\nLogistics once measured tube counts like ammunition — ENIAC-scale computers were maintenance marathons as much as mathematical marvels.",
   "principles": [
-    {"name": "Child–Langmuir law", "explanation": "Space-charge-limited current scales as three-halves power of plate voltage in planar diode idealisations."},
-    {"name": "Transconductance", "explanation": "Small-signal plate current change per grid voltage change sets gain with chosen plate load resistance."},
-    {"name": "Miller effect", "explanation": "Plate-to-grid capacitance multiplies effective input capacitance — motivates tetrode/pentode and later neutralisation in RF amps."},
-    {"name": "Secondary emission", "explanation": "High-energy electrons knock secondaries from grids — causes negative resistance regions exploited in dynodes but parasitic in tetrodes without suppressor grids."}
+    {
+      "name": "Child–Langmuir law",
+      "explanation": "Space-charge-limited current scales as three-halves power of plate voltage in planar diode idealisations."
+    },
+    {
+      "name": "Transconductance",
+      "explanation": "Small-signal plate current change per grid voltage change sets gain with chosen plate load resistance."
+    },
+    {
+      "name": "Miller effect",
+      "explanation": "Plate-to-grid capacitance multiplies effective input capacitance — motivates tetrode/pentode and later neutralisation in RF amps."
+    },
+    {
+      "name": "Secondary emission",
+      "explanation": "High-energy electrons knock secondaries from grids — causes negative resistance regions exploited in dynodes but parasitic in tetrodes without suppressor grids."
+    }
   ],
   "components": [
-    {"id": "envelope", "name": "Glass or metal envelope", "function": "Maintains vacuum; insulates potentials", "position": "Hermetic shell", "madeFrom": "Borosilicate glass or kovar-sealed steel"},
-    {"id": "cathode", "name": "Heated cathode", "function": "Thermionic emitter coated with oxides for low work function", "position": "Internal centre stack", "madeFrom": "Nickel sleeve, barium-strontium carbonate coat"},
-    {"id": "grids", "name": "Control and screen grids", "function": "Modulate field at cathode", "position": "Between cathode and plate", "madeFrom": "Molybdenum wire wound on notched rods"},
-    {"id": "plate", "name": "Anode plate", "function": "Collects electrons; dissipates heat", "position": "Opposite cathode", "madeFrom": "Nickel or graphite with radiation fins in power tubes"},
-    {"id": "getter", "name": "Getter ring", "function": "Chemically pumps residual gas after seal-off", "position": "Internal shiny spot after flash", "madeFrom": "Barium evaporant"}
+    {
+      "id": "envelope",
+      "name": "Glass or metal envelope",
+      "function": "Maintains vacuum; insulates potentials",
+      "position": "Hermetic shell",
+      "madeFrom": "Borosilicate glass or kovar-sealed steel"
+    },
+    {
+      "id": "cathode",
+      "name": "Heated cathode",
+      "function": "Thermionic emitter coated with oxides for low work function",
+      "position": "Internal centre stack",
+      "madeFrom": "Nickel sleeve, barium-strontium carbonate coat"
+    },
+    {
+      "id": "grids",
+      "name": "Control and screen grids",
+      "function": "Modulate field at cathode",
+      "position": "Between cathode and plate",
+      "madeFrom": "Molybdenum wire wound on notched rods"
+    },
+    {
+      "id": "plate",
+      "name": "Anode plate",
+      "function": "Collects electrons; dissipates heat",
+      "position": "Opposite cathode",
+      "madeFrom": "Nickel or graphite with radiation fins in power tubes"
+    },
+    {
+      "id": "getter",
+      "name": "Getter ring",
+      "function": "Chemically pumps residual gas after seal-off",
+      "position": "Internal shiny spot after flash",
+      "madeFrom": "Barium evaporant"
+    }
   ],
   "rawMaterials": [
-    {"name": "Glass tubing and press", "purpose": "Envelope forming", "earthLocations": ["Glassworks with lathe seal skills"], "spaceAlternatives": "Metal-ceramic packages", "processingRequired": "Anneal to relieve stress"},
-    {"name": "Nickel and molybdenum", "purpose": "Electrodes and grids", "earthLocations": ["Sulphide ore refining"], "spaceAlternatives": "Import wire", "processingRequired": "Hydrogen firing for cleanliness"},
-    {"name": "Pump oils and mercury historically", "purpose": "Evacuation", "earthLocations": ["Vacuum industry suppliers"], "spaceAlternatives": "Dry pumps preferred environmentally", "processingRequired": "Trap hydrocarbon backstreaming"}
+    {
+      "name": "Glass tubing and press",
+      "purpose": "Envelope forming",
+      "earthLocations": [
+        "Glassworks with lathe seal skills"
+      ],
+      "spaceAlternatives": "Borosilicate glass tubing from lampworking supply; metal-ceramic packages for rugged military tubes",
+      "processingRequired": "Anneal to relieve stress"
+    },
+    {
+      "name": "Nickel and molybdenum",
+      "purpose": "Electrodes and grids",
+      "earthLocations": [
+        "Sulphide ore refining"
+      ],
+      "spaceAlternatives": "Nickel sleeves and molybdenum grid wire from refined sulphide ores; hydrogen-fired cleanliness before assembly",
+      "processingRequired": "Hydrogen firing for cleanliness"
+    },
+    {
+      "name": "Pump oils and mercury historically",
+      "purpose": "Evacuation",
+      "earthLocations": [
+        "Vacuum industry suppliers"
+      ],
+      "spaceAlternatives": "Dry roughing pumps plus high-vacuum pumps; avoid mercury where environmental rules forbid it — use turbomolecular stacks when power allows",
+      "processingRequired": "Trap hydrocarbon backstreaming"
+    }
   ],
   "buildSteps": [
-    {"order": 1, "title": "Fabricate electrode stack", "description": "Wind grids with uniform pitch; align coaxially; spot-weld supports; coat cathode and carbonate.", "prerequisiteTools": ["microscope alignment fixtures"], "warningNote": "Finger oils poison emissive coatings"},
-    {"order": 2, "title": "Seal envelope", "description": "Flame or induction seal glass; leak-check with He mass spectrometer; electrical hi-pot inside oil bath.", "prerequisiteTools": ["leak detector"], "warningNote": "Pinholes flash over at high voltage — operator hazard"},
-    {"order": 3, "title": "Pump and bake", "description": "Bake-out drives water from glass; reach high vacuum; flash getter.", "prerequisiteTools": ["ion gauge"], "warningNote": "Implosion hazard — use safety shields during evacuation tests"},
-    {"order": 4, "title": "Age and match", "description": "Run cathode at over-temperature briefly to stabilise emission; pair tubes for push-pull if needed.", "prerequisiteTools": ["curve tracer"], "warningNote": "Red-plate glow means runaway dissipation"},
-    {"order": 5, "title": "Mark and bin", "description": "Print type numbers; sort by gm and noise for audio; log lot for warranty.", "prerequisiteTools": ["automated tester in factory era"], "warningNote": "Microphonics test for VHF stages"}
+    {
+      "order": 1,
+      "title": "Machine electrode stacks with obsessive cleanliness",
+      "description": "Wind grids with even pitch; align coaxially under magnification; spot-weld supports without splatter. Coat cathodes in controlled carbonate slurries; bake schedules matter.",
+      "prerequisiteTools": [
+        "microscope",
+        "fine tweezers"
+      ],
+      "warningNote": "Skin oils poison emissive surfaces"
+    },
+    {
+      "order": 2,
+      "title": "Seal glass envelopes with leak-check discipline",
+      "description": "Use graded glass-to-metal seals; anneal to relieve stress. Helium leak-check before pumping investment — a pinhole wastes days.",
+      "prerequisiteTools": [
+        "torch or induction sealer",
+        "leak detector"
+      ],
+      "warningNote": "Implosion shards are real — shield during tests"
+    },
+    {
+      "order": 3,
+      "title": "Pump, bake, and flash getters on schedule",
+      "description": "Bake-out drives moisture from mica and glass; ion gauges tell truth about vacuum. Flash getter when pressure is right — too early wastes capacity.",
+      "prerequisiteTools": [
+        "vacuum manifold",
+        "ion gauge"
+      ],
+      "warningNote": "Mercury diffusion pumps need cold traps or they poison tubes"
+    },
+    {
+      "order": 4,
+      "title": "Age cathodes and plot curves",
+      "description": "Run at prescribed over-temperature briefly to stabilise emission; trace plate curves on a graph, marking bias and dissipation limits in red.",
+      "prerequisiteTools": [
+        "curve tracer or manual meters"
+      ],
+      "warningNote": "Red-plate glow means runaway — cut power"
+    },
+    {
+      "order": 5,
+      "title": "Bin tubes by gm and noise for intended service",
+      "description": "Audio pairs need matched transconductance; RF stages need low microphonics. Print type numbers legibly; store upright to avoid cathode sag in large bottles.",
+      "prerequisiteTools": [
+        "test jig",
+        "labels"
+      ],
+      "warningNote": "Dropping a power tube can bend grids internally — invisible until power applied"
+    }
   ],
   "history": [
-    {"year": 1904, "event": "Fleming valve diode enables rectification for early radio.", "location": "United Kingdom", "person": "John Ambrose Fleming"},
-    {"year": 1906, "event": "De Forest Audion triode introduces grid control.", "location": "USA", "person": "Lee de Forest"},
-    {"year": 1946, "event": "ENIAC-class machines deploy thousands of tubes for digital switching.", "location": "USA"}
+    {
+      "year": 1904,
+      "event": "Fleming valve diode enables rectification for early radio.",
+      "location": "United Kingdom",
+      "person": "John Ambrose Fleming"
+    },
+    {
+      "year": 1906,
+      "event": "De Forest Audion triode introduces grid control.",
+      "location": "USA",
+      "person": "Lee de Forest"
+    },
+    {
+      "year": 1946,
+      "event": "ENIAC-class machines deploy thousands of tubes for digital switching.",
+      "location": "USA"
+    }
   ],
   "inventors": [
-    {"name": "Lee de Forest", "contribution": "Triode Audion — foundational amplifying tube", "years": "1873-1961", "nationality": "American"}
+    {
+      "name": "Lee de Forest",
+      "contribution": "Triode Audion — foundational amplifying tube",
+      "years": "1873-1961",
+      "nationality": "American"
+    }
   ],
   "impact": "Tubes carried voice across continents, lit radar screens, and ran first computers. Their obsolescence in consumer gear does not erase their pedagogical clarity: visible electrodes, measurable potentials.\n\nHigh-power RF transmitters still use descendants (klystrons, magnetrons) in niche roles.",
   "images": [],
-  "videos": [{"id": "tube-amp", "title": "Vacuum tube operation", "description": "Physics lectures on thermionic emission and triode curves.", "durationSeconds": 600}],
+  "videos": [
+    {
+      "id": "tube-amp",
+      "title": "Vacuum tube operation",
+      "description": "Physics lectures on thermionic emission and triode curves.",
+      "durationSeconds": 600
+    }
+  ],
   "externalLinks": [
-    {"id": "ieee-electron-devices", "title": "IEEE Electron Devices Society", "url": "https://eds.ieee.org/"},
-    {"id": "smithsonian-computing", "title": "Smithsonian — computing history context", "url": "https://americanhistory.si.edu/comphist"}
+    {
+      "id": "ieee-electron-devices",
+      "title": "IEEE Electron Devices Society",
+      "url": "https://eds.ieee.org/"
+    },
+    {
+      "id": "smithsonian-computing",
+      "title": "Smithsonian — computing history context",
+      "url": "https://americanhistory.si.edu/comphist"
+    }
   ],
   "lastUpdated": "2026-04-10",
   "verified": false

@@ -12,8 +12,8 @@
   "unlocks": [
     "paper-and-ink-media"
   ],
-  "problem": "Speech fades when the breath stops. Accounting for granaries, tithes, and loans needed tallies that survived seasons. Early writing solves external memory: marks on clay, stone, or papyrus that rehydrate meaning in competent readers.\n\nThe obstacle shifts from air to material: durable substrates, standardised signs, and scribal training. Pictographic and syllabic systems trade learnability for compactness; mastering thousands of signs is a profession.\n\nWriting also enables law codes and propaganda — power concentrates around literate castes until literacy spreads.",
-  "overview": "Proto-writing used clay tokens then impressed tablets; cuneiform pressed wedge strokes into wet clay; Egyptian hieroglyphs mixed logographic and phonetic signs. Rebus principle maps sound of pictured word to unrelated homonyms — bridge to syllabaries.\n\nScribes used styluses, palettes, and firing kilns for tablets. Copying errors become manuscript traditions; commentaries fossilise readings.\n\nLiteracy rates stayed tiny for millennia; still, writing let empires administer distance — orders could outlive couriers if sealed and authenticated.\n\nDecipherment today uses bilinguals like Rosetta parallels — a warning to archive dictionaries, not just texts.",
+  "problem": "Speech is a river — beautiful, immediate, and gone when the breath stops. Administrating a granary across seasons, collecting tithes, or promising repayment across harvests needs marks that survive the speaker. Early writing answers external memory: visible signs that rehydrate meaning when a trained reader returns with fresh eyes.\n\nThe obstacle shifts from air to stuff: clay that cracks if dried wrong, ink that fades, stone that weathers. It also shifts to labour: mastering thousands of signs was a profession; literacy rates stayed tiny for millennia while still reshaping who could command armies.\n\nWriting encodes power — law codes, propaganda, contracts — and creates new failure modes: forged seals, ambiguous clauses, copied errors that become tradition. Decipherment centuries later needs bilinguals and luck; archive dictionaries, not only heroic texts.\n\nFor recovery, treat writing as infrastructure: standardise signs, train scribes, and protect fired tablets from rain as carefully as you protect grain.",
+  "overview": "Proto-writing begins with tokens and impressions counting discrete goods; full systems map language more directly. Cuneiform presses wedges into wet clay; Egyptian hieroglyphs mix logograms with phonetic complements; alphabets shrink the sign inventory by letting letters stand mostly for sounds.\n\nThe rebus principle — using the sound of a pictured word for an unrelated homophone — bridges pictographs toward syllabaries. Determinatives act like silent classifiers disambiguating homographs.\n\nMaterial shapes script: clay invites wedge strokes; papyrus invites flowing ink; bamboo slips encourage vertical columns. Copyists introduce errors that become manuscript families; commentaries freeze readings.\n\nLiteracy’s spread is uneven, but even small literate cadres let empires administer distance — orders can outlive couriers if sealed and authenticated.",
   "principles": [
     {
       "name": "Rebus and phonetisation",
@@ -70,7 +70,7 @@
         "Mesopotamian alluvium",
         "Nile mud"
       ],
-      "spaceAlternatives": "Sintered regolith tablets if humour permits",
+      "spaceAlternatives": "Clay and reeds along alluvial rivers; wax tablets for drafts in Mediterranean climates; slate pencils in schools where wood pulp is scarce",
       "processingRequired": "Levigate; wedge while leather-hard; fire optional"
     },
     {
@@ -80,7 +80,7 @@
         "Lampblack production",
         "acacia gum"
       ],
-      "spaceAlternatives": "Synthetic pigments later",
+      "spaceAlternatives": "Soot-based carbon ink from lampblack; iron-gall ink where tannin and vitriol exist — both need recipes filed with scribes",
       "processingRequired": "Mulling into binder"
     },
     {
@@ -90,56 +90,58 @@
         "Nile delta papyrus",
         "sheep economies for parchment"
       ],
-      "spaceAlternatives": "Paper replaces when available",
+      "spaceAlternatives": "Stylus copper or bone for clay; reed pens for ink; brushes where silk or paper traditions dominate",
       "processingRequired": "Layering, pressing, polishing"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Standardise sign list",
-      "description": "Choose finite repertory; document stroke order; forbid idiosyncratic squiggles in official tablets.",
+      "title": "Decide what you must remember across seasons",
+      "description": "List transactions, inventories, laws, or prayers that fail when oral memory bottlenecks. Pick a substrate you can reliably obtain — clay if you have riverbanks, bark if your forest yields it, parchment if herds exist. Match ambition to material cost.",
       "prerequisiteTools": [
-        "master scribe"
+        "notebook for planning"
       ],
-      "warningNote": "Sign multiplication defeats pedagogy"
+      "warningNote": "Over-ambitious sign inventories stall learners — start with numbers and nouns"
     },
     {
       "order": 2,
-      "title": "Prepare tablets",
-      "description": "Uniform thickness; smooth face; control drying rate to avoid curling.",
+      "title": "Invent or borrow a small stable sign set",
+      "description": "Begin with pictographs for concrete nouns; add rebuses for abstract words by sound. Write each sign’s name spoken aloud next to early tablets so future readers have a Rosetta edge. Keep stroke order simple — complexity is a tax forever.",
       "prerequisiteTools": [
-        "wooden battens"
+        "stylus",
+        "straight edge"
       ],
-      "warningNote": "Air bubbles pop during firing — inspect leather-hard"
+      "warningNote": "Homophones multiply fast — introduce determinatives early"
     },
     {
       "order": 3,
-      "title": "Teach copying cycles",
-      "description": "Dictation then independent composition; peer marking reduces drift.",
+      "title": "Train scribes with correction culture",
+      "description": "Pair novices with masters who mark errors in red ochre or marginal ticks. Drill copying the same tablet until hand cramps yield consistent wedges or strokes. Schedule public readings so mistakes surface quickly.",
       "prerequisiteTools": [
-        "schoolroom"
+        "master scribe",
+        "correction ink"
       ],
-      "warningNote": "Dyslexia analogues exist — rotate teaching methods"
+      "warningNote": "Secret scripts invite elite capture — publish learner tablets for community audit"
     },
     {
       "order": 4,
-      "title": "Archive with indexes",
-      "description": "Edge marks, tags, and shelved orientation speed retrieval.",
+      "title": "Fire or dry clay tablets on a schedule",
+      "description": "If using clay, learn controlled drying to avoid curling; fire tablets you intend to keep centuries. Store unfired drafts separately from archives — water is the enemy twice.",
       "prerequisiteTools": [
-        "shelves",
-        "catalogue tablets"
+        "kiln or pit fire",
+        "shelving off ground"
       ],
-      "warningNote": "Flood and fire are symmetric threats — duplicate sites"
+      "warningNote": "Rushed firing explodes wet cores"
     },
     {
       "order": 5,
-      "title": "Publish law and ritual corpora",
-      "description": "Visible stelae synchronise public meaning; reduces elite-only drift.",
+      "title": "Archive dictionaries beside heroic texts",
+      "description": "Maintain synonym lists, pronunciation notes, and measure tables — the boring pages future decipherers need. Duplicate archives geographically if politics allows.",
       "prerequisiteTools": [
-        "stone masons"
+        "duplicate storage"
       ],
-      "warningNote": "Propaganda risk — pair with critique institutions"
+      "warningNote": "Single-site archives die to one fire"
     }
   ],
   "history": [
