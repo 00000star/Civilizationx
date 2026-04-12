@@ -5,8 +5,13 @@
   "category": "transport",
   "era": "ancient",
   "difficulty": 2,
-  "prerequisites": ["basic-hand-tools"],
-  "unlocks": ["pulley", "cart-and-wagon"],
+  "prerequisites": [
+    "basic-hand-tools"
+  ],
+  "unlocks": [
+    "pulley",
+    "cart-and-wagon"
+  ],
   "problem": "Dragging a sled ploughs a trench, wasting work against soil deformation. The wheel problem is replacing sliding friction with rolling resistance — still imperfect due to deformation at the contact patch, but orders of magnitude better on firm ground for heavy loads. A separate problem is rotation itself: static structures carry compression; rotating assemblies must bear bending while staying round, stay aligned on an axle, and not split along grain or crystal planes.\n\nThe wheel is not obvious archaeologically — potter's wheels and spindle whorls show rotation earlier than heavy transport wheels in some regions. Heavy transport needs roads or hard ground, bearings that do not seize, and materials that survive shock.\n\nOnce solved, the wheel becomes a modular machine element: it composes into pulleys, gears, lathes, mills, and vehicles — one of civilisation's most reused inventions.",
   "overview": "A wheel is a disk or spoked structure that turns about an axle. Ideally the axle is fixed to the chassis and the wheel rotates on it (or the wheel is fixed and axle rotates — both exist). Early solid wheels are planks or three planks glued and rounded; spoked wheels reduce mass while preserving hoop strength through tensioned rims and compressive spokes.\n\nBearings historically are plain: wood on wood lubricated with fat, later bronze sleeves, later ball bearings. Lubrication and alignment dominate service life. Flanges or shoulders keep the wheel from walking off the axle.\n\nWheel diameter trades obstacle climbing for packaging — larger wheels roll over ruts more easily but raise centre of mass. Width changes ground pressure — soft ground needs broader contact.\n\nManufacturing sequence typically: bore hub, shape rim, true roundness on a simple lathe or by compass scribing, mount tyre (iron tyre shrunk on in later eras).",
   "principles": [
@@ -73,21 +78,29 @@
     {
       "name": "Hardwood lumber",
       "purpose": "Rim, hub, spokes in wood-wheel eras",
-      "earthLocations": ["Oak, ash, teak depending on region"],
+      "earthLocations": [
+        "Oak, ash, teak depending on region"
+      ],
       "spaceAlternatives": "Aluminium or composite rims when industry permits",
       "processingRequired": "Seasoned wood, split billet stock for straight grain"
     },
     {
       "name": "Iron tyre bar",
       "purpose": "Hoop reinforcement and wear surface",
-      "earthLocations": ["Bloomery iron rolled later", "wrought bar stock"],
+      "earthLocations": [
+        "Bloomery iron rolled later",
+        "wrought bar stock"
+      ],
       "spaceAlternatives": "Steel strip",
       "processingRequired": "Forge weld ring; heat shrink onto rim"
     },
     {
       "name": "Lubricant",
       "purpose": "Reduces journal wear",
-      "earthLocations": ["Tallow", "pine pitch blends"],
+      "earthLocations": [
+        "Tallow",
+        "pine pitch blends"
+      ],
       "spaceAlternatives": "Synthetic grease",
       "processingRequired": "Clarify to remove abrasive grit"
     }
@@ -97,35 +110,54 @@
       "order": 1,
       "title": "Lay out diameter and hub",
       "description": "Choose diameter from obstacle profile. Turn or plane a hub block; bore pilot hole undersize for final reaming.",
-      "prerequisiteTools": ["compass", "brace and bit", "plane"],
+      "prerequisiteTools": [
+        "compass",
+        "brace and bit",
+        "plane"
+      ],
       "warningNote": "Knots at hub are unacceptable — move hub centre"
     },
     {
       "order": 2,
       "title": "Build rim segments",
       "description": "Steam-bend or cut felloes with mitred joints; glue and peg; true outer circle with plane and travisher.",
-      "prerequisiteTools": ["saw", "drawknife", "clamps"],
+      "prerequisiteTools": [
+        "saw",
+        "drawknife",
+        "clamps"
+      ],
       "warningNote": "Green wood moves — final truing after drying"
     },
     {
       "order": 3,
       "title": "Install spokes",
       "description": "Mortise hub and rim; drive spokes with tension sequence like lug nuts — progressive star pattern to avoid egg-shaped rim.",
-      "prerequisiteTools": ["chisel", "mallet", "spoke shave"],
+      "prerequisiteTools": [
+        "chisel",
+        "mallet",
+        "spoke shave"
+      ],
       "warningNote": "Over-tension splits rim"
     },
     {
       "order": 4,
       "title": "Fit axle and bearings",
       "description": "Cut journals with slight crown; ream hub to slip fit hot that becomes running fit cold. Add grease leather packings historically.",
-      "prerequisiteTools": ["lathe or careful filing", "reamer"],
+      "prerequisiteTools": [
+        "lathe or careful filing",
+        "reamer"
+      ],
       "warningNote": "Metal swarf in hub acts as lap — clean obsessively"
     },
     {
       "order": 5,
       "title": "Shrink tyre if used",
       "description": "Measure cold tyre circumference slightly smaller than rim; heat tyre uniformly; seat quickly; quench? (depends on alloy) — traditional iron shrinks on cooling, compressing rim.",
-      "prerequisiteTools": ["forge", "tongs", "clamps"],
+      "prerequisiteTools": [
+        "forge",
+        "tongs",
+        "clamps"
+      ],
       "warningNote": "Burns and steam flashes — full PPE"
     }
   ],
@@ -158,6 +190,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-nasa-science",
+        "title": "NASA Science — Solar system exploration portal",
+        "url": "https://science.nasa.gov/solar-system/",
+        "type": "institution",
+        "note": "NASA public science communication; rotational dynamics and mobility are central to planetary robotics"
+      },
+      {
+        "id": "src-wiki-wheel",
+        "title": "Wikipedia — Wheel",
+        "url": "https://en.wikipedia.org/wiki/Wheel",
+        "type": "wikipedia",
+        "note": "Mechanical advantage, history, and citations"
+      },
+      {
+        "id": "src-nist-si",
+        "title": "NIST — SI Redefinition",
+        "url": "https://www.nist.gov/si-redefinition",
+        "type": "standard",
+        "note": "Metrology for torque and force calibration in mechanical teaching labs"
+      }
+    ]
   }
 }

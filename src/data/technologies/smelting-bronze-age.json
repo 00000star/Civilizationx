@@ -5,8 +5,14 @@
   "category": "materials",
   "era": "ancient",
   "difficulty": 3,
-  "prerequisites": ["charcoal", "ceramics-and-pottery"],
-  "unlocks": ["iron-smelting", "copper-wire-and-cable"],
+  "prerequisites": [
+    "charcoal",
+    "ceramics-and-pottery"
+  ],
+  "unlocks": [
+    "iron-smelting",
+    "copper-wire-and-cable"
+  ],
   "problem": "Native copper exists but is geologically rare compared with oxidised copper minerals. Humans needed a reliable path from colourful rocks to metal that could be hammered, cast, and resharpened. Bronze — typically copper alloyed with tin — extends hardness and lowers melting range compared with pure copper, improving casting yield and edge performance for tools and weapons.\n\nThe obstacle is chemistry: metal oxides do not melt into metal in open wood fires. You need a reducing atmosphere where carbon monoxide strips oxygen from ore, and you need temperatures high enough for slag formation and metal pooling, held in refractory vessels.\n\nBronze also created long-distance trade incentives: tin is scarce relative to copper in many regions, linking economies across seas. That social coupling is as much part of the technology as furnaces.",
   "overview": "Copper smelting begins with roasting sulphide ores if present — driving off sulphur as oxides — then charging oxide ores with charcoal in a shaft or bowl furnace with forced air (bellows or natural draft). Carbon burns to CO, which reduces CuO to Cu and CO2. Iron-rich gangue fluxes with silica to form slag that floats on metal.\n\nTin can be smelted similarly and alloyed, or cassiterite may be reduced directly in the copper melt. Typical bronze might range roughly 5–12% tin by weight depending on desired properties — higher tin increases hardness but brittleness.\n\nCasting uses piece-moulds of clay or stone, later lost-wax for complexity. Work-hardening of hammered bronze increases surface hardness; annealing resets grain structure for further shaping.\n\nSafety and materials limits matter: arsenical copper phases exist in early metal — toxic fumes from roasting require ventilation. Furnace refractories fail if slag is too fluid or iron content too high for a copper slag system.",
   "principles": [
@@ -65,21 +71,33 @@
     {
       "name": "Copper ore (malachite, chalcopyrite after roasting)",
       "purpose": "Copper source",
-      "earthLocations": ["Cyprus historical fame", "Timna Valley", "Great Lakes native copper region", "Andean deposits"],
+      "earthLocations": [
+        "Cyprus historical fame",
+        "Timna Valley",
+        "Great Lakes native copper region",
+        "Andean deposits"
+      ],
       "spaceAlternatives": "Metallic asteroids for native metals — different process chain",
       "processingRequired": "Crushing, roasting sulphides, beneficiation by hand sorting"
     },
     {
       "name": "Tin ore (cassiterite)",
       "purpose": "Alloying element",
-      "earthLocations": ["Cornwall, UK", "Bohemia", "Malaysia historically", "Central Asian ranges"],
+      "earthLocations": [
+        "Cornwall, UK",
+        "Bohemia",
+        "Malaysia historically",
+        "Central Asian ranges"
+      ],
       "spaceAlternatives": "Rare in homogeneous form — substitution with arsenic historically (toxic) avoided in modern ethics",
       "processingRequired": "Washing placer gravels; reduction in furnace"
     },
     {
       "name": "Charcoal",
       "purpose": "Heat and chemical reductant",
-      "earthLocations": ["Forestry regions near smelting sites"],
+      "earthLocations": [
+        "Forestry regions near smelting sites"
+      ],
       "spaceAlternatives": "Electrolytic copper wins before charcoal logistics replicate off-world",
       "processingRequired": "Sized lumps for consistent bed permeability"
     }
@@ -89,35 +107,50 @@
       "order": 1,
       "title": "Roast sulphide ores if needed",
       "description": "Open roast beds drive off sulphur as SO2 — extremely hazardous without understanding plume direction. Oxide ores may skip roasting.",
-      "prerequisiteTools": ["shovel", "screens"],
+      "prerequisiteTools": [
+        "shovel",
+        "screens"
+      ],
       "warningNote": "SO2 damages lungs; arsenic-bearing ores are deadly — avoid unknown ores"
     },
     {
       "order": 2,
       "title": "Build furnace and preheat",
       "description": "Dry out clay lining slowly. Establish charcoal bed with steady blast until refractory is hot.",
-      "prerequisiteTools": ["bellows", "tongs"],
+      "prerequisiteTools": [
+        "bellows",
+        "tongs"
+      ],
       "warningNote": "Water in lining flashes to steam — explosive spalling"
     },
     {
       "order": 3,
       "title": "Charge ore and charcoal in layers",
       "description": "Alternate to maintain permeability. Watch for colour of flame and slag drip — experience-guided.",
-      "prerequisiteTools": ["charging tools"],
+      "prerequisiteTools": [
+        "charging tools"
+      ],
       "warningNote": "Metal drip can explode on wet ground"
     },
     {
       "order": 4,
       "title": "Tap metal and refine",
       "description": "Let slag run off; collect copper metal into crucible for tin addition. Skim oxide skins.",
-      "prerequisiteTools": ["pokers", "crucible tongs"],
+      "prerequisiteTools": [
+        "pokers",
+        "crucible tongs"
+      ],
       "warningNote": "Molten metal splash causes severe burns — leather aprons insufficient; prefer full coverage plan"
     },
     {
       "order": 5,
       "title": "Cast or forge",
       "description": "Pour into moulds or hammer while hot. Anneal when cracks appear from overwork.",
-      "prerequisiteTools": ["moulds", "hammers", "anvil stone"],
+      "prerequisiteTools": [
+        "moulds",
+        "hammers",
+        "anvil stone"
+      ],
       "warningNote": "Hot shortness varies by composition — test small samples"
     }
   ],
@@ -150,6 +183,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-unesco-ich",
+        "title": "UNESCO — Lists of Intangible Cultural Heritage",
+        "url": "https://ich.unesco.org/en/lists",
+        "type": "institution",
+        "note": "Documentation model for traditional craft and metallurgical heritage"
+      },
+      {
+        "id": "src-wiki-bronze",
+        "title": "Wikipedia — Bronze",
+        "url": "https://en.wikipedia.org/wiki/Bronze",
+        "type": "wikipedia",
+        "note": "Alloys, history, and metallurgical references"
+      },
+      {
+        "id": "src-nist-materials",
+        "title": "NIST — Materials Measurement Science portal",
+        "url": "https://www.nist.gov/mml",
+        "type": "institution",
+        "note": "Materials characterization methods relevant to alloy analysis"
+      }
+    ]
   }
 }

@@ -5,8 +5,14 @@
   "category": "energy",
   "era": "prehistoric",
   "difficulty": 2,
-  "prerequisites": ["fire"],
-  "unlocks": ["smelting-bronze-age", "glass-making"],
+  "prerequisites": [
+    "fire"
+  ],
+  "unlocks": [
+    "smelting-bronze-age",
+    "glass-making",
+    "soap-making"
+  ],
   "problem": "Raw wood fires are limited by moisture, volatile smoke, and the chemistry of burning whole biomass. For pottery glazes, glass melts, and especially metal smelting, you need sustained high temperature in a reducing or controllable atmosphere. Wood directly in a furnace introduces too much ash, fluctuating airflow through char structure, and heat wasted driving off water and pyrolysing large chunks.\n\nCharcoal solves this by preprocessing wood: driving off water and most volatiles in the absence of oxygen, leaving a porous carbon matrix that burns with a concentrated, relatively pure carbon-oxygen reaction. The result is higher attainable temperatures in smaller volumes and more predictable control — critical when a few degrees or the wrong oxidation state ruins a metal batch.\n\nTransport matters too: charcoal is lighter than green wood per unit energy for high-temperature tasks and stacks efficiently. Preindustrial metallurgy scaled on charcoal logistics: forests, kilns, and transport to furnaces.",
   "overview": "Charcoal is produced by pyrolysis — heating wood in an oxygen-limited environment until non-carbon gases and tars leave, leaving fixed carbon and mineral ash. Practically, this is done in a mound kiln or brick kiln where combustion of a portion of the charge heats the rest while smoke exits through vents, and air ingress is restricted enough to carbonise rather than fully burn the load.\n\nA simple earth mound covers stacked billets; a central chimney or flue path is created; kindling at the base is lit; as the fire establishes, the outer soil or turf seals cracks. Operators monitor smoke colour and smell — stages shift from white steam to blue volatiles to thinning smoke as carbonisation completes. Water quench or airtight smothering stops the burn at charcoal stage.\n\nQuality depends on wood species (density and ash chemistry), uniformity of piece size, and peak temperature profile. Hardwoods historically preferred in many regions for metallurgical charcoal because of structural strength of pieces and favourable ash chemistry, though conifers can work with process adjustments.\n\nChemically, charcoal is mostly carbon with micropores left by removed cellulose and lignin. Those pores accelerate ignition and surface area for oxidation in furnaces — why charcoal catches easily and burns hot when blown.",
   "principles": [
@@ -64,21 +70,28 @@
     {
       "name": "Cordwood",
       "purpose": "Carbon feedstock",
-      "earthLocations": ["Temperate hardwood forests historically dominant for European metallurgy", "Tropical hardwoods in other traditions"],
+      "earthLocations": [
+        "Temperate hardwood forests historically dominant for European metallurgy",
+        "Tropical hardwoods in other traditions"
+      ],
       "spaceAlternatives": "Any lignocellulosic biomass from hydroponic forestry",
       "processingRequired": "Cut, split, season to <20% moisture ideally"
     },
     {
       "name": "Clay or turf",
       "purpose": "Seals mound kilns",
-      "earthLocations": ["River clays, sod"],
+      "earthLocations": [
+        "River clays, sod"
+      ],
       "spaceAlternatives": "Regolith binders sintered into bricks",
       "processingRequired": "Plastic clay kneaded; turf cut in blocks"
     },
     {
       "name": "Ignition tinder",
       "purpose": "Starts base burn",
-      "earthLocations": ["Dry grass, bark, small kindling"],
+      "earthLocations": [
+        "Dry grass, bark, small kindling"
+      ],
       "spaceAlternatives": "Methane torch in advanced habitats",
       "processingRequired": "Dry thoroughly"
     }
@@ -88,35 +101,49 @@
       "order": 1,
       "title": "Prepare a level kiln pad",
       "description": "Clear vegetation to mineral soil. For a mound kiln, slightly dome the base for drainage. Lay a draft grate of green poles if available to keep bottom airflow.",
-      "prerequisiteTools": ["shovel", "rake"],
+      "prerequisiteTools": [
+        "shovel",
+        "rake"
+      ],
       "warningNote": "Choose sites away from structures; sparks travel"
     },
     {
       "order": 2,
       "title": "Stack wood with a central flue",
       "description": "Stand billets vertically around a central chimney space of kindling. Tight outer perimeter, looser centre for ignition. Cover with thinner sticks then sealing layer.",
-      "prerequisiteTools": ["axe", "wedges"],
+      "prerequisiteTools": [
+        "axe",
+        "wedges"
+      ],
       "warningNote": "Unstable stacks collapse during burn — brace if tall"
     },
     {
       "order": 3,
       "title": "Seal with turf or clay",
       "description": "Pack soil/turf into cracks; leave top vent until smoke establishes white steam phase, then throttle vents to slow oxygen. Monitor for days depending on scale.",
-      "prerequisiteTools": ["gloves", "shovel"],
+      "prerequisiteTools": [
+        "gloves",
+        "shovel"
+      ],
       "warningNote": "Carbon monoxide risk — do not lean into vents"
     },
     {
       "order": 4,
       "title": "Judge endpoint",
       "description": "When smoke thins and blue haze diminishes, inner zones are likely carbonised. Probe colour through a test port — black, ringing pieces indicate charcoal.",
-      "prerequisiteTools": ["iron rod probe"],
+      "prerequisiteTools": [
+        "iron rod probe"
+      ],
       "warningNote": "Opening kiln admits oxygen — partial burns can flash"
     },
     {
       "order": 5,
       "title": "Quench and grade",
       "description": "Smother with earth or sprinkle water carefully. Sort out brands, ash-heavy ends, and fines for separate uses — fines useful as powder, lumps for furnace.",
-      "prerequisiteTools": ["screens optional", "containers"],
+      "prerequisiteTools": [
+        "screens optional",
+        "containers"
+      ],
       "warningNote": "Hot charcoal ignites when dry — store cooled"
     }
   ],
@@ -155,6 +182,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-epa",
+        "title": "U.S. EPA — Environmental topics portal",
+        "url": "https://www.epa.gov/",
+        "type": "institution",
+        "note": "Air quality, emissions, and environmental chemistry relevant to pyrolysis and charcoal production"
+      },
+      {
+        "id": "src-wiki-charcoal",
+        "title": "Wikipedia — Charcoal",
+        "url": "https://en.wikipedia.org/wiki/Charcoal",
+        "type": "wikipedia",
+        "note": "Manufacturing routes, chemistry overview, and references"
+      },
+      {
+        "id": "src-nps-campfire",
+        "title": "U.S. National Park Service — Campfires article",
+        "url": "https://www.nps.gov/articles/campfires.htm",
+        "type": "institution",
+        "note": "Outdoor fire safety and responsible burning practices"
+      }
+    ]
   }
 }

@@ -5,7 +5,11 @@
   "category": "transport",
   "era": "early-20th",
   "difficulty": 5,
-  "prerequisites": ["internal-combustion-engine", "steel-production", "glass-making"],
+  "prerequisites": [
+    "internal-combustion-engine",
+    "steel-production",
+    "glass-making"
+  ],
   "unlocks": [],
   "problem": "Humans are not born with wings. Balloons drift; dirigibles carry large envelopes and hydrogen risks. Fixed-wing aircraft solve directed, rapid travel over obstacles by generating aerodynamic lift with wings moving through air — trading fuel for speed and access.\n\nThe obstacles are simultaneous: structures must be light yet strong; engines must produce power at altitude with thinning air; controls must keep the craft stable and controllable across flight regimes; and manufacturing must hold airfoil and incidence tolerances or stall characteristics become lethal.\n\nWeather adds a systems layer: icing destroys lift and blocks pitot probes; turbulence couples structural fatigue. Pilot training and instrumentation (where glassmaking and optics feed in) are inseparable from the machine.",
   "overview": "A conventional aeroplane includes wings with airfoil sections tuned for cruise lift-to-drag ratio; a fuselage housing payload, fuel, and systems; empennage surfaces providing pitch (elevator/stabiliser) and yaw (rudder) stability and control; and roll control via ailerons or spoilers. Propulsion may be tractor or pusher propellers, turboprops, or jet engines — this entry emphasises propeller-driven IC-engine lineage for continuity with prior nodes.\n\nPrimary structure uses aluminium alloys or composites; flight loads path from wings through spars into fuselage frames. Control surfaces actuate via cables, pushrods, or fly-by-wire. Fuel tanks are baffled to prevent slosh shifting centre of gravity dangerously.\n\nAirspeed measurement uses pitot-static systems feeding instruments (mechanical or glass-faced). Stall warning devices alert when angle of attack approaches critical values where flow separation collapses lift.\n\nCertification concepts (where civil aviation authorities exist) encode crashworthiness, fire protection, and maintenance schedules — the technology is legally coupled to governance.",
@@ -81,21 +85,28 @@
     {
       "name": "Aluminium alloys",
       "purpose": "Primary airframe weight efficiency",
-      "earthLocations": ["Global smelters near cheap electricity"],
+      "earthLocations": [
+        "Global smelters near cheap electricity"
+      ],
       "spaceAlternatives": "Not applicable to Earth atmosphere craft — launch vehicles overlap materials science differently",
       "processingRequired": "Solution treat, quench, age; alclad corrosion protection"
     },
     {
       "name": "Aviation fuel",
       "purpose": "Energy density for range",
-      "earthLocations": ["Refineries producing AVGAS or Jet-A depending on engine"],
+      "earthLocations": [
+        "Refineries producing AVGAS or Jet-A depending on engine"
+      ],
       "spaceAlternatives": "Synthetic fuels — drop-in testing required per engine STC",
       "processingRequired": "Strict water exclusion; filtration at wing tanks"
     },
     {
       "name": "Glass or polycarbonate",
       "purpose": "Transparency with impact and pressure requirements",
-      "earthLocations": ["Speciality glassmakers", "polycarbonate sheet plants"],
+      "earthLocations": [
+        "Speciality glassmakers",
+        "polycarbonate sheet plants"
+      ],
       "spaceAlternatives": "Sapphire for extreme environments — niche",
       "processingRequired": "Tempering, lamination, anti-ice coatings"
     }
@@ -105,35 +116,49 @@
       "order": 1,
       "title": "Design loads and flutter margins",
       "description": "Compute limit loads, apply factors of safety, plan mass distribution for CG envelope. Flutter analysis for high-speed designs is mandatory before first flight.",
-      "prerequisiteTools": ["structural analysis software or scaled testing"],
+      "prerequisiteTools": [
+        "structural analysis software or scaled testing"
+      ],
       "warningNote": "Homebuilders skipping flutter analysis die — non-negotiable engineering step"
     },
     {
       "order": 2,
       "title": "Fabricate wing spar and ribs",
       "description": "Jig-build to wing twist design; drill rivet lines with ream/fit discipline; seal fuel tanks if integral — leak test with safe fluid.",
-      "prerequisiteTools": ["rivet gun", "jig frames"],
+      "prerequisiteTools": [
+        "rivet gun",
+        "jig frames"
+      ],
       "warningNote": "Choked vent lines collapse tanks in climb — vent sizing is safety"
     },
     {
       "order": 3,
       "title": "Integrate controls and balance surfaces",
       "description": "Set hinge lines; mass-balance tabs if anti-flutter required; rig travel limits; verify cable tension temperature compensation.",
-      "prerequisiteTools": ["tensiometer", "protractor"],
+      "prerequisiteTools": [
+        "tensiometer",
+        "protractor"
+      ],
       "warningNote": "Reversed aileron cables discovered only at rotation — checklist culture prevents"
     },
     {
       "order": 4,
       "title": "Engine mount and firewall",
       "description": "Isolate vibration; fireproof firewall forward; route fuel lines with crashworthy breakaway logic where regulated.",
-      "prerequisiteTools": ["torque wrench", "fireproof sealants"],
+      "prerequisiteTools": [
+        "torque wrench",
+        "fireproof sealants"
+      ],
       "warningNote": "Exhaust leaks near cowl — CO in cabin; test with detectors"
     },
     {
       "order": 5,
       "title": "Ground runs, taxi tests, first flight plan",
       "description": "Progressive envelope expansion with chase plane/ground spotters; defined abort criteria; recorded IAS/V-speeds.",
-      "prerequisiteTools": ["radio", "flight test cards"],
+      "prerequisiteTools": [
+        "radio",
+        "flight test cards"
+      ],
       "warningNote": "Spin recovery training before intentional spins — historically lethal for untrained"
     }
   ],
@@ -187,6 +212,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-nasa-science-flight",
+        "title": "NASA Science",
+        "url": "https://science.nasa.gov/solar-system/",
+        "type": "institution",
+        "note": "NASA public STEM portal; follow NASA aeronautics publications for flight physics"
+      },
+      {
+        "id": "src-wiki-aircraft",
+        "title": "Wikipedia — Fixed-wing aircraft",
+        "url": "https://en.wikipedia.org/wiki/Fixed-wing_aircraft",
+        "type": "wikipedia",
+        "note": "Aerodynamics and structures introduction"
+      },
+      {
+        "id": "src-itu-r",
+        "title": "ITU-R",
+        "url": "https://www.itu.int/en/ITU-R/Pages/default.aspx",
+        "type": "institution",
+        "note": "Radiocommunication standards for aviation spectrum and safety services"
+      }
+    ]
   }
 }

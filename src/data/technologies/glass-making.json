@@ -5,8 +5,13 @@
   "category": "materials",
   "era": "ancient",
   "difficulty": 3,
-  "prerequisites": ["charcoal", "ceramics-and-pottery"],
-  "unlocks": ["fixed-wing-aircraft"],
+  "prerequisites": [
+    "charcoal",
+    "ceramics-and-pottery"
+  ],
+  "unlocks": [
+    "fixed-wing-aircraft"
+  ],
   "problem": "Clay becomes opaque pottery; humans wanted translucency — to see liquids inside containers, to transmit light for windows, and eventually to shape lenses that extend vision. Silica alone melts at a temperature difficult for early furnaces; the glass problem is fluxing: adding soda, potash, or lime to break up the silica network, lowering viscosity and working range.\n\nGlass also demands thermal patience: rapid cooling shatters due to internal stresses. Annealing — holding near the glass transition then cooling slowly — converts a museum of internal stresses into a durable object.\n\nChemically, glass is a frozen liquid: disordered network. That makes it corrosive-resistant compared with metals in many contexts, but brittle — shock and scratch concentration limit structural roles until tempered and laminated technologies appear millennia later.",
   "overview": "Soda-lime glass, the bulk of modern windows and bottles, combines silica sand, sodium carbonate (historically from natron or ashes), and calcium oxide (from limestone) to stabilise against water attack. In a furnace at roughly 1000–1200 °C batch reactions form melt; working occurs at lower temperatures on the glory hole or punty iron.\n\nColour comes from transition metal oxides: iron greens, cobalt blues, manganese purples. Decolourisers and oxidising/reducing flames interact subtly — glass chemistry is visibly readable to the trained eye.\n\nForming methods evolve from core-formed vessels to blown glass — a inflation process that uses surface tension to create thin, even walls. Flat glass historically was cast or crown-blown; modern float glass rides on molten tin — outside primitive scope but noted as descendant.\n\nRecycling cullet lowers melt energy — an ancient and modern efficiency lever.",
   "principles": [
@@ -65,21 +70,30 @@
     {
       "name": "Silica sand",
       "purpose": "Primary network former",
-      "earthLocations": ["Desert dunes", "riverbeds", "quartzose sandstone crushed"],
+      "earthLocations": [
+        "Desert dunes",
+        "riverbeds",
+        "quartzose sandstone crushed"
+      ],
       "spaceAlternatives": "Lunar regolith high in SiO2 after beneficiation",
       "processingRequired": "Wash to remove organics; screen grain size"
     },
     {
       "name": "Soda ash (natron or ash)",
       "purpose": "Flux",
-      "earthLocations": ["Wadi Natrun historically", "wood ash leached for potash"],
+      "earthLocations": [
+        "Wadi Natrun historically",
+        "wood ash leached for potash"
+      ],
       "spaceAlternatives": "Imported soda when trade exists",
       "processingRequired": "Leach, boil, crystallise if making ash soda"
     },
     {
       "name": "Limestone",
       "purpose": "Stabiliser (lime)",
-      "earthLocations": ["Marine limestone outcrops globally"],
+      "earthLocations": [
+        "Marine limestone outcrops globally"
+      ],
       "spaceAlternatives": "Calcined shells",
       "processingRequired": "Calcine to quicklime if needed before batching"
     }
@@ -89,35 +103,50 @@
       "order": 1,
       "title": "Batch and mix",
       "description": "Weigh silica, soda, and lime to target composition. Dry mix thoroughly. Small colour tests in crucibles before large melts.",
-      "prerequisiteTools": ["scales", "screens"],
+      "prerequisiteTools": [
+        "scales",
+        "screens"
+      ],
       "warningNote": "Fine silica dust — respiratory protection"
     },
     {
       "order": 2,
       "title": "Initial melt",
       "description": "Ramp furnace slowly to drive off carbonates as CO2 — foaming stage needs headspace. Hold until bubbles refine.",
-      "prerequisiteTools": ["crucible tongs", "pyrometric judgement"],
+      "prerequisiteTools": [
+        "crucible tongs",
+        "pyrometric judgement"
+      ],
       "warningNote": "Hot glass looks like cold glass — assume everything in the shop is hot"
     },
     {
       "order": 3,
       "title": "Gather and marver",
       "description": "Coat blowpipe with glass paste on first dip, reheat, gather uniform mass. Roll on marver to cone symmetry.",
-      "prerequisiteTools": ["blowpipe", "marver"],
+      "prerequisiteTools": [
+        "blowpipe",
+        "marver"
+      ],
       "warningNote": "Drips cause foot burns — leather shoes insufficient"
     },
     {
       "order": 4,
       "title": "Blow and tool",
       "description": "Inflate with steady breath, reheat often, use jacks and blocks to shape. Transfer to punty for opening vessel mouth.",
-      "prerequisiteTools": ["jacks", "wood blocks", "shears"],
+      "prerequisiteTools": [
+        "jacks",
+        "wood blocks",
+        "shears"
+      ],
       "warningNote": "Implosion risk if wall too thin — wear safety glasses"
     },
     {
       "order": 5,
       "title": "Anneal",
       "description": "Place in kiln at annealing soak temperature for glass type; ramp down over hours to days by thickness.",
-      "prerequisiteTools": ["annealing kiln"],
+      "prerequisiteTools": [
+        "annealing kiln"
+      ],
       "warningNote": "Skipping anneal guarantees delayed spontaneous breakage"
     }
   ],
@@ -150,6 +179,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-nist-sp811-glass",
+        "title": "NIST SP 811 — SI Guide",
+        "url": "https://www.nist.gov/pml/special-publication-811",
+        "type": "standard",
+        "note": "Thermal unit consistency for furnace engineering calculations"
+      },
+      {
+        "id": "src-wiki-glass",
+        "title": "Wikipedia — Glass",
+        "url": "https://en.wikipedia.org/wiki/Glass",
+        "type": "wikipedia",
+        "note": "Composition, viscosity, and manufacturing overview"
+      },
+      {
+        "id": "src-unesco-comm",
+        "title": "UNESCO — Communication and information",
+        "url": "https://www.unesco.org/en/communication-information",
+        "type": "institution",
+        "note": "Institutional context for scientific and technical information preservation"
+      }
+    ]
   }
 }

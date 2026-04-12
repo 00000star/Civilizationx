@@ -228,6 +228,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-rfc9293",
+        "title": "IETF RFC 9293 — Transmission Control Protocol (TCP)",
+        "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
+        "type": "standard",
+        "note": "Authoritative standards-track specification"
+      },
+      {
+        "id": "src-rfc793",
+        "title": "IETF RFC 793 — TCP (historic)",
+        "url": "https://www.rfc-editor.org/info/rfc793",
+        "type": "standard",
+        "note": "Classic reference retained for historical comparison"
+      },
+      {
+        "id": "src-wiki-internet",
+        "title": "Wikipedia — Internet",
+        "url": "https://en.wikipedia.org/wiki/Internet",
+        "type": "wikipedia",
+        "note": "Architecture survey with citations to standards bodies"
+      }
+    ]
   }
 }

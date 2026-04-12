@@ -212,6 +212,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-ieee-standards",
+        "title": "IEEE Standards Association",
+        "url": "https://standards.ieee.org/",
+        "type": "standard",
+        "note": "IEEE C57 transformer family and related power standards"
+      },
+      {
+        "id": "src-wiki-transformer",
+        "title": "Wikipedia — Transformer",
+        "url": "https://en.wikipedia.org/wiki/Transformer",
+        "type": "wikipedia",
+        "note": "Magnetics, equivalent circuits, and safety notes"
+      },
+      {
+        "id": "src-nist-sp811",
+        "title": "NIST SP 811",
+        "url": "https://www.nist.gov/pml/special-publication-811",
+        "type": "standard",
+        "note": "SI coherence for magnetic flux, voltage, and power"
+      }
+    ]
   }
 }

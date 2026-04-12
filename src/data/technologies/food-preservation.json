@@ -1,0 +1,63 @@
+{
+  "id": "food-preservation",
+  "name": "Food Preservation",
+  "tagline": "Drying, salting, smoking, fermenting, and storing calories so labour is not wasted on repeated hunting and gathering",
+  "category": "food",
+  "era": "prehistoric",
+  "difficulty": 2,
+  "prerequisites": ["fire", "rope-and-cordage", "cooking"],
+  "unlocks": [],
+  "problem": "Fresh food spoils on a clock measured in hours for meat, days for many vegetables, and weeks at best for dry grain unless protected from moisture and pests. A civilisation cannot store labour — every calorie someone hunts, digs, or harvests must either be eaten soon, preserved, or lost. Loss is not merely hunger tomorrow; it is the inability to fund specialists who do anything other than finding the next meal.\n\nPreservation is also a public-health problem. Clostridium botulinum and other anaerobes love sealed jars of low-acid food; salt concentration must be high enough in brines; pH must be low enough in ferments; smoke deposits must actually carry antimicrobial compounds, not merely smell nice. Ignorance does not produce mild food — it produces corpses.\n\nGeography changes what works: humid tropics fight drying; cold dry winters favour freeze-drying on racks; coasts offer salt; inland peoples lean on smoke, fermentation, and tight grain discipline. Any guide that pretends one recipe fits all climates is dangerous.\n\nFinally, preservation interacts with justice: who controls the granary controls survival. Building transparent rules for weighing, sealing, and distributing stored food is political technology wrapped around chemistry.",
+  "overview": "Heat preservation removes water or kills surface microbes. Sun drying and wind drying work when relative humidity cooperates; thin slices and good airflow beat thick slabs left in shade. Smoking combines heat with deposited phenols and other compounds that inhibit bacterial growth on meat surfaces — the craft is draft, temperature, and time, not colour alone.\n\nSalt and sugar osmotically bind water away from microbes; heavy brines preserve fish and meat for months if kept cool enough that fat does not go rancid. Fat sealing — confit — uses anaerobic layers of rendered fat over cooked meat as a barrier when cellar temperatures stay low.\n\nFermentation partners with desirable microbes: lactobacilli acidify vegetables, dropping pH below the comfort zone of pathogens while producing vitamins and digestibility gains. The art is cleanliness in the first days, salt level, and exclusion of oxygen where moulds would win.\n\nCold storage without electricity uses earth coupling: root cellars, ice houses, and deep pits leverage stable ground temperatures. Rodent-proofing with tight doors and raised platforms is non-negotiable — a mouse can undo a winter of potatoes in a week.\n\nCalorie accounting is simple arithmetic: preserved inventory equals deferred labour. A month of grain for ten adults is civilisation-level slack; without it, every rainstorm is a crisis.",
+  "principles": [
+    {"name": "Water activity", "explanation": "Microbes need available moisture; drying, salt, and sugar lower water activity."},
+    {"name": "pH and anaerobia", "explanation": "Acid and salt select microbial communities; sealed low-acid jars are botulism risk without modern pressure canning."},
+    {"name": "Smoke chemistry", "explanation": "Wood species and smoulder temperature change deposited compounds; creosote-heavy smoke tastes bitter and can be unhealthy in excess."},
+    {"name": "Rodent exclusion", "explanation": "Stored calories attract competitors; physical barriers beat poison in collapse ethics."}
+  ],
+  "components": [
+    {"id": "rack", "name": "Drying rack", "function": "Exposes thin food layers to sun and wind", "position": "Open yard or roof", "madeFrom": "Wood lattice, cordage, food-safe mesh", "criticalNote": "Turn pieces for even drying"},
+    {"id": "smoker", "name": "Smoke chamber", "function": "Deposits antimicrobial smoke while gently heating meat", "position": "Downwind of shelter", "madeFrom": "Earth trench, barrel, or timber box", "criticalNote": "Fire must smoulder, not flame-roast"},
+    {"id": "brine", "name": "Brine vat", "function": "High-salt solution for fish and meat", "position": "Cool cellar", "madeFrom": "Ceramic or wood lined with pitch if needed", "criticalNote": "Weigh salt per water volume; taste is a poor meter"},
+    {"id": "ferment", "name": "Fermentation crock", "function": "Anaerobic vegetable fermentation under brine", "position": "Stable temperature corner", "madeFrom": "Crock, stone weight, water seal", "criticalNote": "Keep vegetables submerged"},
+    {"id": "cellar", "name": "Root cellar", "function": "Uses earth temperature stability", "position": "Hillside or buried bin", "madeFrom": "Stone walls, vent pipes, insulated hatch", "criticalNote": "Condensation promotes rot — ventilate judiciously"},
+    {"id": "seal", "name": "Fat seal or wax cap", "function": "Blocks oxygen on stored foods", "position": "On jar or pot surface", "madeFrom": "Rendered fat or beeswax", "criticalNote": "Break seal only with clean tools"}
+  ],
+  "rawMaterials": [
+    {"name": "Salt", "purpose": "Osmotic preservation and fermentation control", "earthLocations": ["Coastal evaporation pans", "Rock salt mines (Himalayas, Alps)"], "spaceAlternatives": "Imported terrestrial salt until brine evaporation or electrolysis by-products exist in situ", "processingRequired": "Dissolve and filter brine if gritty; measure density for reliable fish cures"},
+    {"name": "Wood fuel", "purpose": "Heat for drying and smoke generation", "earthLocations": ["Hardwood forests for mild smoke"], "spaceAlternatives": "Electric dehydrators or resistive ovens in habitats; no open combustion in oxygen-limited modules", "processingRequired": "Season wood; split small for controlled smoulder"},
+    {"name": "Food-grade vessels", "purpose": "Brine, pickle, and dry storage", "earthLocations": ["Pottery workshops", "Barrels where cooperage exists"], "spaceAlternatives": "Stainless vessels with microbially clean welds", "processingRequired": "Glaze food-safe; boil new crocks before first acid fill"}
+  ],
+  "buildSteps": [
+    {"order": 1, "title": "Survey climate and pick two primary methods", "description": "If humidity is high, plan smoking and fermentation before sun-only drying. If winters are hard, prioritise cellar and freezing on racks.", "prerequisiteTools": ["hygrometer or local knowledge"], "warningNote": "Open flame near drying meat ignites fat drips — keep drip trays and clearance"},
+    {"order": 2, "title": "Build drying infrastructure before harvest peak", "description": "Lattice racks, bird netting, and cordage take days. Test load with inedible sacrificial slices to learn airflow.", "prerequisiteTools": ["saw or axe", "rope"], "warningNote": "Falls from roof-mounted racks are common — ladder discipline"},
+    {"order": 3, "title": "Run a measured brine trial on small fish", "description": "Record salt mass, water volume, and soak time. Taste for saltiness after soak; adjust before scaling.", "prerequisiteTools": ["scale or balance", "measuring jug"], "warningNote": "Under-salted fish can host Clostridium botulinum in sealed jars — never home-can low-acid foods like modern pressure canners without equivalent equipment"},
+    {"order": 4, "title": "Smoke a training batch with thermometry", "description": "Hold chamber between roughly 50–80 °C for long smokes depending on recipe tradition; vent smoke away from sleeping areas.", "prerequisiteTools": ["thermometer", "metal baffles"], "warningNote": "Carbon monoxide from smouldering fires kills in enclosed sheds — ventilate"},
+    {"order": 5, "title": "Rodent-proof the store", "description": "Stone thresholds, metal flashing, tight doors, and cat discipline. Inspect weekly with lamps for droppings.", "prerequisiteTools": ["chisel", "lamp"], "warningNote": "Rat bites transmit disease — wear gloves during cleanup"}
+  ],
+  "history": [
+    {"year": "Neolithic onward", "event": "Granaries and salting enable cities and standing armies.", "location": "Global"},
+    {"year": "19th century", "event": "Canning and refrigeration industrialise preservation.", "location": "Europe and North America"},
+    {"year": "20th century", "event": "Freeze drying and controlled atmosphere storage reshape supply chains.", "location": "Global"}
+  ],
+  "inventors": [],
+  "impact": "Preserved food turns seasonal glut into political stability: tax grain, feed garrisons, survive siege. Without it, every society lives hand-to-mouth literally.\n\nSpace colonies depend on the same mathematics with better seals.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {"id": "who-food", "title": "WHO — Food safety", "url": "https://www.who.int/news-room/fact-sheets/detail/food-safety"},
+    {"id": "cdc-botulism", "title": "CDC — Botulism", "url": "https://www.cdc.gov/botulism/index.html"}
+  ],
+  "lastUpdated": "2026-04-12",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {"id": "who-food", "title": "WHO — Food safety fact sheet", "url": "https://www.who.int/news-room/fact-sheets/detail/food-safety", "type": "institution", "note": ""},
+      {"id": "cdc-botulism", "title": "CDC — Botulism", "url": "https://www.cdc.gov/botulism/index.html", "type": "institution", "note": "Home preservation risks"},
+      {"id": "wiki-food-pres", "title": "Wikipedia — Food preservation", "url": "https://en.wikipedia.org/wiki/Food_preservation", "type": "wikipedia", "note": ""}
+    ]
+  }
+}

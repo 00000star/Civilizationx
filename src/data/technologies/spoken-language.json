@@ -161,6 +161,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-unesco-ich-lang",
+        "title": "UNESCO — Intangible Cultural Heritage lists",
+        "url": "https://ich.unesco.org/en/lists",
+        "type": "institution",
+        "note": "Documentation of living language and oral tradition practices"
+      },
+      {
+        "id": "src-wiki-language",
+        "title": "Wikipedia — Language",
+        "url": "https://en.wikipedia.org/wiki/Language",
+        "type": "wikipedia",
+        "note": "Linguistics overview with extensive references"
+      },
+      {
+        "id": "src-who-comm",
+        "title": "WHO — Health topics portal",
+        "url": "https://www.who.int/health-topics",
+        "type": "institution",
+        "note": "Health communication and community engagement context"
+      }
+    ]
   }
 }

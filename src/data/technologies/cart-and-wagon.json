@@ -5,8 +5,13 @@
   "category": "transport",
   "era": "ancient",
   "difficulty": 2,
-  "prerequisites": ["wheel-and-axle", "rope-and-cordage"],
-  "unlocks": ["road-construction"],
+  "prerequisites": [
+    "wheel-and-axle",
+    "rope-and-cordage"
+  ],
+  "unlocks": [
+    "road-construction"
+  ],
   "problem": "Human backs scale poorly with grain surpluses, timber lengths, and stone blocks. Sledges work but waste energy ploughing soil; pack animals cap out at modest loads per animal. The wheeled vehicle problem is distributing weight across multiple rolling contacts, steering a front axle or pivot, and braking descent without destroying wheels.\n\nTwo-wheeled carts tip easily but track narrow paths; four-wheeled wagons need steering geometry — either pivoting front axle or turntable — or they scrub tires and break on turns. Suspension is historically minimal; road quality dominates ride.\n\nWithout standardised hubs, axle sizes, and repairable parts, vehicle fleets cannot be maintained at civilisation scale. Thus carts are not only carpentry but logistics standards.",
   "overview": "A basic cart pairs a chassis (bed) with an undercarriage: axles, wheels, and often a drawbar for animal harness. Wheels may be fixed to the axle (both rotate) or rotate on fixed axles with pins — the latter wears journals and needs grease.\n\nSteering for four-wheelers historically uses a pivoting front assembly or side-by-side animals with a flexible pole. Braking uses drag shoes, rope wraps on wheel rims, or later band brakes — absent brakes, loads control descent with chocks and human ropes.\n\nMaterials: hardwood frames, iron tyres shrunk on rims, steel leaf springs later. Tyre contact patch and ground pressure determine whether the vehicle ruts mud or floats on grass.\n\nHuman traction variants exist — handcarts — obeying the same load paths with different ergonomic constraints.",
   "principles": [
@@ -73,21 +78,28 @@
     {
       "name": "Hardwood timber",
       "purpose": "Frame and bed",
-      "earthLocations": ["Oak, ash in temperate zones"],
+      "earthLocations": [
+        "Oak, ash in temperate zones"
+      ],
       "spaceAlternatives": "Aluminium extrusions when mills exist",
       "processingRequired": "Seasoned, inspected for shakes"
     },
     {
       "name": "Iron fastenings",
       "purpose": "Bolts, tyres, reinforcement straps",
-      "earthLocations": ["Bloomery iron forged to strap"],
+      "earthLocations": [
+        "Bloomery iron forged to strap"
+      ],
       "spaceAlternatives": "Imported hardware",
       "processingRequired": "Hot rivet or forge weld straps"
     },
     {
       "name": "Grease",
       "purpose": "Journal lubrication",
-      "earthLocations": ["Tallow", "pine tar blends"],
+      "earthLocations": [
+        "Tallow",
+        "pine tar blends"
+      ],
       "spaceAlternatives": "Synthetic grease",
       "processingRequired": "Keep grit-free"
     }
@@ -97,35 +109,50 @@
       "order": 1,
       "title": "Engineer load case",
       "description": "Estimate worst-case mass and terrain camber. Choose wheel count and track width from ground pressure targets.",
-      "prerequisiteTools": ["measuring rope", "scale if available"],
+      "prerequisiteTools": [
+        "measuring rope",
+        "scale if available"
+      ],
       "warningNote": "Dynamic loads from potholes exceed static weight — use safety factor ≥2 for rural roads"
     },
     {
       "order": 2,
       "title": "Fabricate bed and crossmembers",
       "description": "Mortise and tenon or bolted joints; install cross sills directly over axle seats to transfer load vertically.",
-      "prerequisiteTools": ["saw", "chisel", "brace and bit"],
+      "prerequisiteTools": [
+        "saw",
+        "chisel",
+        "brace and bit"
+      ],
       "warningNote": "End-grain bearing on bolts crushes — use washers and hardwood"
     },
     {
       "order": 3,
       "title": "Mount axles and wheels",
       "description": "Set caster and toe for steerable front if applicable; ream bearing bores; retain with cotters.",
-      "prerequisiteTools": ["reamer", "wrenches"],
+      "prerequisiteTools": [
+        "reamer",
+        "wrenches"
+      ],
       "warningNote": "Spin test — listen for rub; shim cheek plates square"
     },
     {
       "order": 4,
       "title": "Attach drawgear",
       "description": "Align tongue height to expected harness; install safety chains with correct working angle — not so long they drag, not so short they bind turns.",
-      "prerequisiteTools": ["forge or blacksmith"],
+      "prerequisiteTools": [
+        "forge or blacksmith"
+      ],
       "warningNote": "Never stand in line with chain recoil path during first pulls"
     },
     {
       "order": 5,
       "title": "Load test and document",
       "description": "Progressive loading with known masses; inspect axle deflection. Paint load limit on bed rail.",
-      "prerequisiteTools": ["chalk", "weights"],
+      "prerequisiteTools": [
+        "chalk",
+        "weights"
+      ],
       "warningNote": "Brake test on mild slope before mountain use"
     }
   ],
@@ -158,6 +185,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-nyc-dot",
+        "title": "NYC DOT — Brooklyn Bridge (historic infrastructure case study)",
+        "url": "https://www1.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+        "type": "institution",
+        "note": "Public works engineering and load-carrying infrastructure context"
+      },
+      {
+        "id": "src-wiki-wagon",
+        "title": "Wikipedia — Wagon",
+        "url": "https://en.wikipedia.org/wiki/Wagon",
+        "type": "wikipedia",
+        "note": "Vehicle history and mechanics references"
+      },
+      {
+        "id": "src-fao",
+        "title": "FAO — Home",
+        "url": "https://www.fao.org/home/en",
+        "type": "institution",
+        "note": "Draught animal welfare, rural transport, and agricultural logistics (verify regional guidance)"
+      }
+    ]
   }
 }

@@ -6,7 +6,11 @@
   "era": "prehistoric",
   "difficulty": 1,
   "prerequisites": [],
-  "unlocks": ["shelter-construction-basic", "lever-system", "basic-hand-tools"],
+  "unlocks": [
+    "shelter-construction-basic",
+    "lever-system",
+    "basic-hand-tools"
+  ],
   "problem": "Human hands and teeth are poor at cutting hide, butchering carcasses, and shaping wood compared with carnivores or beavers. Before metal, the sharpest durable edges came from certain rocks broken in controlled ways. The problem was not strength but geometry: a wedge-shaped edge concentrates force onto a line, enabling slicing and scraping.\n\nNatural sharp stones are rare and fragile. Knapping solves reproducibility: a skilled worker can detach flakes of predictable size from a core, renew a dull edge by removing a small flake, and stockpile blanks for transport. Without knapping, woodworking, butchery, and many textile steps remain painfully slow.\n\nKnapping is also conceptual training: it teaches that materials have grain, that fractures follow rules, and that small controlled failures (flakes) are how you shape the whole. Those abstractions transfer to later chiselling, sawing, and machining.",
   "overview": "Stone knapping uses conchoidal fracture — the curved, shell-like breakage pattern seen in glass and fine-grained cryptocrystalline rocks such as flint, chert, obsidian, and some quartzites. When a sharp impact or pressure exceeds the material's strength, a crack initiates and propagates as a Hertzian cone under the contact point. By striking the core at correct angles and supporting it properly, a knapper detaches flakes whose ventral surfaces are smooth and whose edges can be razor sharp.\n\nTwo families of technique dominate: percussion (direct and indirect) and pressure flaking. Percussion removes large flakes quickly for roughing out shapes. Pressure flaking uses a bone or antler tip to apply inward force near an edge, trimming and sharpening with high control. Platforms — prepared surfaces where force enters — must be strong enough not to crush and oriented so force travels into the core.\n\nCores are reduced until exhausted; flakes become scrapers, knives, drills, or arrowheads depending on retouch. Retouch is small-scale flaking along an edge to strengthen, blunt (for gripping), or resharpen.\n\nNot all stone knaps well; coarse granites fracture unevenly. cryptocrystalline silicates are prized for predictable fracture and edge quality. Heat treatment of some cherts alters microstructure, improving workability — an early materials science.",
   "principles": [
@@ -70,21 +74,31 @@
     {
       "name": "Knappable cryptocrystalline silica",
       "purpose": "Predictable fracture and sharp edges",
-      "earthLocations": ["Chalk flint beds in Western Europe", "Limestone-hosted chert in North America", "Obsidian flows in Anatolia, Armenia, East Africa, Americas", "Australian silcrete"],
+      "earthLocations": [
+        "Chalk flint beds in Western Europe",
+        "Limestone-hosted chert in North America",
+        "Obsidian flows in Anatolia, Armenia, East Africa, Americas",
+        "Australian silcrete"
+      ],
       "spaceAlternatives": "Manufactured glass from regolith silica could be knapped similarly once produced — extremely hazardous without training",
       "processingRequired": "Heat treatment for some cherts (controlled heating and slow cooling) improves flakeability"
     },
     {
       "name": "Abrasive for platform preparation",
       "purpose": "Strengthens platform edge to prevent crushing on impact",
-      "earthLocations": ["Sandstone cobbles globally", "Loose quartz-rich grit"],
+      "earthLocations": [
+        "Sandstone cobbles globally",
+        "Loose quartz-rich grit"
+      ],
       "spaceAlternatives": "Crushed regolith sieved to coarse grit",
       "processingRequired": "None beyond washing grit if muddy"
     },
     {
       "name": "Organic padding",
       "purpose": "Protects thighs and palms during pressure flaking",
-      "earthLocations": ["Hide, bark, woven fibre from local plants"],
+      "earthLocations": [
+        "Hide, bark, woven fibre from local plants"
+      ],
       "spaceAlternatives": "Woven polymer textiles or rubber sheet",
       "processingRequired": "Cut to size; multiple layers for blood containment if flakes pierce"
     }
@@ -94,35 +108,50 @@
       "order": 1,
       "title": "Select and test raw material",
       "description": "Choose homogeneous, fine-grained pieces without internal frost cracks. Tap lightly — a clear ring suggests sound structure. For beginners, obsidian and high-quality flint teach fracture reading fastest.",
-      "prerequisiteTools": ["hammerstone"],
+      "prerequisiteTools": [
+        "hammerstone"
+      ],
       "warningNote": "Stone flakes are sharper than scalpels — cut-resistant gloves help but reduce dexterity"
     },
     {
       "order": 2,
       "title": "Establish a platform and remove first flakes",
       "description": "Rest the core so the blow travels into mass you intend to remove. Strike decisively but not wildly; follow the cone of force. Examine each scar — hinges and step fractures signal incorrect angles or weak platforms.",
-      "prerequisiteTools": ["hammerstone", "leather pad"],
+      "prerequisiteTools": [
+        "hammerstone",
+        "leather pad"
+      ],
       "warningNote": "Eye protection is mandatory — chips travel at high velocity"
     },
     {
       "order": 3,
       "title": "Shape the piece by sequenced removals",
       "description": "Plan a reduction sequence: rough out with hard hammer, thin with soft hammer, finish edges with pressure. Rotate the piece mentally — each flake should set up the next platform.",
-      "prerequisiteTools": ["hammerstone", "antler billet", "pressure flaker"],
+      "prerequisiteTools": [
+        "hammerstone",
+        "antler billet",
+        "pressure flaker"
+      ],
       "warningNote": "Over-thinning causes snapping under later loads"
     },
     {
       "order": 4,
       "title": "Retouch for task-specific edges",
       "description": "Scrapers need sturdy steep edges; cutting tools need acute edges; drills need convergent distal points. Apply small pressure flakes along margins, inspecting edge symmetry.",
-      "prerequisiteTools": ["pressure flaker"],
+      "prerequisiteTools": [
+        "pressure flaker"
+      ],
       "warningNote": "Dull edges often need only a few removals — avoid grinding the edge away"
     },
     {
       "order": 5,
       "title": "Haft if required",
       "description": "Slot a flake or biface into a wood or antler handle using pitch, resin, or cordage bindings. Hafting converts a sharp but fragile hand-held piece into a lever with mechanical advantage.",
-      "prerequisiteTools": ["awls from bone", "rope-and-cordage", "natural adhesive"],
+      "prerequisiteTools": [
+        "awls from bone",
+        "rope-and-cordage",
+        "natural adhesive"
+      ],
       "warningNote": "Poor hafting alignment causes dangerous glances during use"
     }
   ],
@@ -172,6 +201,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-humanorigins-behaviour",
+        "title": "Smithsonian Human Origins — Behaviour evidence",
+        "url": "https://humanorigins.si.edu/evidence/behavior",
+        "type": "institution",
+        "note": "Behavioural archaeology including tool use"
+      },
+      {
+        "id": "src-wiki-lithic",
+        "title": "Wikipedia — Lithic reduction",
+        "url": "https://en.wikipedia.org/wiki/Lithic_reduction",
+        "type": "wikipedia",
+        "note": "Core concepts and terminology for knapping; follow references for lithic analysis"
+      },
+      {
+        "id": "src-nist-si",
+        "title": "NIST — SI Redefinition (metrology context)",
+        "url": "https://www.nist.gov/si-redefinition",
+        "type": "standard",
+        "note": "Precision measurement standards relevant to experimental archaeology instrumentation"
+      }
+    ]
   }
 }

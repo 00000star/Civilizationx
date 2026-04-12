@@ -5,8 +5,14 @@
   "category": "materials",
   "era": "ancient",
   "difficulty": 4,
-  "prerequisites": ["smelting-bronze-age", "charcoal"],
-  "unlocks": ["steel-production", "steam-engine"],
+  "prerequisites": [
+    "smelting-bronze-age",
+    "charcoal"
+  ],
+  "unlocks": [
+    "steel-production",
+    "steam-engine"
+  ],
   "problem": "Bronze is excellent but constrained by tin availability and cost gradients. Iron oxide is extraordinarily common — banded formations, bog ores, laterites — promising a metal for populations far from tin trade routes. The problem is thermodynamics and kinetics: iron melts far hotter than copper under simple charcoal furnaces, so early ironmaking produces a spongy solid bloom of iron and slag rather than a clean pourable puddle like bronze.\n\nSeparating iron metal from glassy slag inclusions requires prolonged hammering and folding — labour-intensive but doable at village scale. Controlling carbon uptake distinguishes soft wrought iron from harder steely regions within the same bloom.\n\nIron also changes warfare and agriculture: ploughshares, axes, and nails scale with ore proximity. The technology is not 'better bronze' — it is a different process chain with different failure modes (corrosion, brittleness if carburised wrong).",
   "overview": "A bloomery furnace stacks charcoal and iron ore with forced air through a tuyère. Carbon monoxide reduces hematite (Fe2O3) or magnetite (Fe3O4) to metallic iron in the solid state, while silica-rich gangue melts into slag that trickles downward and is tapped or drains. Operating temperature stays below the melting point of pure iron under these conditions, so metal accumulates as a pasty mass — the bloom.\n\nThe smelt ends when the operator judges from flame colour, slag viscosity, and time. The bloom is extracted hot and compacted under hammering, expelling liquid slag and welding iron fibres together. Repeated heats and folds align inclusions and homogenise composition somewhat.\n\nOre preparation matters: roasting drives off hydrate water and converts carbonates; sizing ore pieces balances reaction rate against furnace permeability. Too fine chokes airflow; too coarse under-reacts.\n\nThis entry describes the bloomery lineage — ancestor to later finery processes and, in a different branch, blast furnaces producing pig iron. The Codex separates those because the tooling, fuels, and products diverge strongly.",
   "principles": [
@@ -65,21 +71,30 @@
     {
       "name": "Iron ore",
       "purpose": "Iron source",
-      "earthLocations": ["Bog iron in northern Europe", "Goa and Bellary in India historically", "Hematite ranges in Australia", "Magnetite in Sweden"],
+      "earthLocations": [
+        "Bog iron in northern Europe",
+        "Goa and Bellary in India historically",
+        "Hematite ranges in Australia",
+        "Magnetite in Sweden"
+      ],
       "spaceAlternatives": "Martian regolith contains iron oxides reducible with CO/H2 at high temperature",
       "processingRequired": "Roasting, crushing to walnut size typical"
     },
     {
       "name": "Charcoal",
       "purpose": "Heat and reductant",
-      "earthLocations": ["Forested regions"],
+      "earthLocations": [
+        "Forested regions"
+      ],
       "spaceAlternatives": "Electrowinning supersedes when power is cheap",
       "processingRequired": "Sized for permeability"
     },
     {
       "name": "Flux (optional)",
       "purpose": "Fluidises slag",
-      "earthLocations": ["Limestone, seashells"],
+      "earthLocations": [
+        "Limestone, seashells"
+      ],
       "spaceAlternatives": "Imported flux or slag recycling",
       "processingRequired": "Calcined lime reacts in furnace"
     }
@@ -89,35 +104,50 @@
       "order": 1,
       "title": "Prepare ore and charcoal",
       "description": "Roast carbonates and hydrates; crush to consistent size. Charcoal should be metallurgical grade — rings when struck, few fines.",
-      "prerequisiteTools": ["screens", "tongs"],
+      "prerequisiteTools": [
+        "screens",
+        "tongs"
+      ],
       "warningNote": "Silica dust from crushing — respiratory hazard"
     },
     {
       "order": 2,
       "title": "Dry out and preheat furnace",
       "description": "Slow wood fire first; convert to charcoal bed. Seal cracks with clay slurry.",
-      "prerequisiteTools": ["clay slip", "trowel"],
+      "prerequisiteTools": [
+        "clay slip",
+        "trowel"
+      ],
       "warningNote": "Steam spalls wet linings"
     },
     {
       "order": 3,
       "title": "Run the smelt",
       "description": "Layer charcoal and ore while maintaining blast. Tap slag when it appears at eye port. Record time — learning curve is steep.",
-      "prerequisiteTools": ["charging tools", "slag hook"],
+      "prerequisiteTools": [
+        "charging tools",
+        "slag hook"
+      ],
       "warningNote": "CO exposure — work upwind; ventilated apron not optional ethically"
     },
     {
       "order": 4,
       "title": "Extract bloom",
       "description": "Break furnace top or pull bloom through front. Move to anvil while hot enough to weld under blows.",
-      "prerequisiteTools": ["hooks", "tongs"],
+      "prerequisiteTools": [
+        "hooks",
+        "tongs"
+      ],
       "warningNote": "Slag spray from hammering — face shield"
     },
     {
       "order": 5,
       "title": "Consolidate and split samples",
       "description": "Forge fold to drive out glassy stringers. Break test bars to check toughness versus brittleness.",
-      "prerequisiteTools": ["hammer", "chisel"],
+      "prerequisiteTools": [
+        "hammer",
+        "chisel"
+      ],
       "warningNote": "High-carbon regions may shatter — normalise by extended soak if you have controlled hearth later"
     }
   ],
@@ -150,6 +180,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-osha-heat",
+        "title": "OSHA — Heat illness prevention",
+        "url": "https://www.osha.gov/heat",
+        "type": "institution",
+        "note": "Thermal stress and industrial hygiene for furnace work"
+      },
+      {
+        "id": "src-wiki-smelting",
+        "title": "Wikipedia — Smelting",
+        "url": "https://en.wikipedia.org/wiki/Smelting",
+        "type": "wikipedia",
+        "note": "Pyrometallurgical principles and historical development"
+      },
+      {
+        "id": "src-epa-sustainability",
+        "title": "U.S. EPA — Sustainability",
+        "url": "https://www.epa.gov/sustainability",
+        "type": "institution",
+        "note": "Environmental management framing for emissions and waste from smelting"
+      }
+    ]
   }
 }

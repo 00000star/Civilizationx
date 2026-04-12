@@ -209,6 +209,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-who-air-light",
+        "title": "WHO — Household air pollution and health",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/household-air-pollution-and-health",
+        "type": "institution",
+        "note": "Indoor air quality and combustion products from lighting fuels where relevant"
+      },
+      {
+        "id": "src-wiki-lighting",
+        "title": "Wikipedia — Electric lighting",
+        "url": "https://en.wikipedia.org/wiki/Electric_lighting",
+        "type": "wikipedia",
+        "note": "Lamp technologies and history"
+      },
+      {
+        "id": "src-energy",
+        "title": "U.S. Department of Energy",
+        "url": "https://www.energy.gov/",
+        "type": "institution",
+        "note": "Lighting efficiency programs and solid-state lighting R&D"
+      }
+    ]
   }
 }

@@ -203,6 +203,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-loc",
+        "title": "Library of Congress",
+        "url": "https://www.loc.gov/",
+        "type": "institution",
+        "note": "Rare books, incunabula, and printing history collections"
+      },
+      {
+        "id": "src-wiki-press",
+        "title": "Wikipedia — Printing press",
+        "url": "https://en.wikipedia.org/wiki/Printing_press",
+        "type": "wikipedia",
+        "note": "Gutenberg-era technology and dissemination effects"
+      },
+      {
+        "id": "src-unesco-comm",
+        "title": "UNESCO — Communication and information",
+        "url": "https://www.unesco.org/en/communication-information",
+        "type": "institution",
+        "note": "Freedom of expression and documentary heritage"
+      }
+    ]
   }
 }

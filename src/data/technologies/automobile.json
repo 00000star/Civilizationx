@@ -5,7 +5,12 @@
   "category": "transport",
   "era": "industrial",
   "difficulty": 4,
-  "prerequisites": ["internal-combustion-engine", "steel-production", "road-construction", "cart-and-wagon"],
+  "prerequisites": [
+    "internal-combustion-engine",
+    "steel-production",
+    "road-construction",
+    "cart-and-wagon"
+  ],
   "unlocks": [],
   "problem": "Before the automobile, humans depended on horses, oxen, or their own legs for most land travel. Horses require feed, rest, stabling, and veterinary care. They are expensive to maintain at household scale, slow over long distances compared with later motor speeds, and impractical for on-demand heavy errands without a wagon. Cities were constrained in daily reach because commuting beyond a few kilometres consumed hours.\n\nThe fundamental problem was converting stored chemical energy into reliable mechanical motion on demand, without a living engine. Steam carriages existed but carried boiler inertia and fire risk perceptions. The automobile wins by packaging internal combustion (or later alternatives) into a chassis with controlled cooling, lubrication, and transmissions suited to variable road load.\n\nRoads matter as much as engines: soft surfaces waste tractive effort; crowned pavements shed water; signalling and rules reduce kinetic-energy conflicts between vehicles.",
   "overview": "A typical petrol automobile couples a multi-cylinder four-stroke engine to a transmission that multiplies torque for acceleration and reduces engine speed for efficient cruising. The engine's crankshaft torque passes through a clutch (manual) or torque converter (automatic), then a gearbox, then a final drive and differential that splits torque to driven wheels while allowing different wheel speeds in corners.\n\nThe chassis or unitised body provides structural paths for suspension, crash loads, and noise isolation. Suspension links control wheel motion relative to the body, keeping tyres in contact for grip. Steering uses a rack-and-pinion or recirculating ball system translating wheel rotation to toe changes at the front axle (most layouts). Brakes convert kinetic energy to heat via friction at discs or drums, hydraulically actuated with vacuum or electric boost.\n\nTyres are pneumatic composites: fabric or steel plies, rubber tread and sidewall, bead seated on the rim, inflated to tune contact patch pressure. The electrical system starts the engine, powers sensors, and runs safety lighting. Emissions controls (where present) add catalytic conversion and precise fuel metering.\n\nManufacturing integrates stamping, welding, painting, and assembly lines — the automobile is as much logistics and quality systems as mechanical design.",
@@ -97,28 +102,40 @@
     {
       "name": "Steel sheet and bar",
       "purpose": "Body, engine internals, suspension",
-      "earthLocations": ["Integrated steelworks near iron ore and coal historically", "global minimills modern"],
+      "earthLocations": [
+        "Integrated steelworks near iron ore and coal historically",
+        "global minimills modern"
+      ],
       "spaceAlternatives": "Meteoritic iron is irrelevant at scale — electrolytic iron and alloying",
       "processingRequired": "Continuous casting, hot rolling, stamping, heat treatment"
     },
     {
       "name": "Aluminium",
       "purpose": "Lightweight powertrain and body panels in many designs",
-      "earthLocations": ["Bauxite belts (Guinea, Australia, Brazil)"],
+      "earthLocations": [
+        "Bauxite belts (Guinea, Australia, Brazil)"
+      ],
       "spaceAlternatives": "Lunar anorthite routes to aluminium are studied but heavy energy",
       "processingRequired": "Hall-Héroult electrolysis, rolling, age hardening"
     },
     {
       "name": "Hydrocarbon fuels and rubber",
       "purpose": "Energy storage and compliant tyres/seals",
-      "earthLocations": ["Petroleum provinces globally", "natural rubber plantations", "synthetic rubber plants"],
+      "earthLocations": [
+        "Petroleum provinces globally",
+        "natural rubber plantations",
+        "synthetic rubber plants"
+      ],
       "spaceAlternatives": "Electrification or hydrogen carriers change subsystem designs",
       "processingRequired": "Refining; polymerisation for synthetic elastomers"
     },
     {
       "name": "Copper",
       "purpose": "Windings and harness conductors",
-      "earthLocations": ["Chilean porphyry deposits", "African copperbelt"],
+      "earthLocations": [
+        "Chilean porphyry deposits",
+        "African copperbelt"
+      ],
       "spaceAlternatives": "Aluminium conductors for some high-current paths with larger gauge",
       "processingRequired": "Electrorefining to conductivity grades"
     }
@@ -128,42 +145,62 @@
       "order": 1,
       "title": "Build or source a verified chassis",
       "description": "For restart contexts, begin from a ladder frame or monocoque designed with crush zones and hard passenger cell. Verify weld penetration and corrosion protection at seams.",
-      "prerequisiteTools": ["welder", "alignment jig", "gauges"],
+      "prerequisiteTools": [
+        "welder",
+        "alignment jig",
+        "gauges"
+      ],
       "warningNote": "Monocoque alignment is safety-critical — use manufacturer dimensions"
     },
     {
       "order": 2,
       "title": "Install suspension and brakes",
       "description": "Torque fasteners to spec; bleed brakes; bed pads according to friction compound instructions. Set alignment after suspension settles.",
-      "prerequisiteTools": ["torque wrench", "bleed kit", "alignment rack"],
+      "prerequisiteTools": [
+        "torque wrench",
+        "bleed kit",
+        "alignment rack"
+      ],
       "warningNote": "Split pin or cotter retention on ball joints — never reuse single-use nuts where specified"
     },
     {
       "order": 3,
       "title": "Mount powertrain",
       "description": "Align engine mounts and drivetrain angles within manufacturer limits for CV joint phase and U-joint fatigue. Fill fluids with correct specifications.",
-      "prerequisiteTools": ["engine hoist", "dial indicator"],
+      "prerequisiteTools": [
+        "engine hoist",
+        "dial indicator"
+      ],
       "warningNote": "Excessive driveline angle causes vibration and joint failure"
     },
     {
       "order": 4,
       "title": "Route fuel, cooling, and exhaust",
       "description": "Maintain clearance to moving parts and heat shields. Seal exhaust to prevent CO intrusion into cabin. Pressure-test cooling system.",
-      "prerequisiteTools": ["tube bender", "pressure tester"],
+      "prerequisiteTools": [
+        "tube bender",
+        "pressure tester"
+      ],
       "warningNote": "Carbon monoxide is odourless — verify exhaust integrity before enclosed operation"
     },
     {
       "order": 5,
       "title": "Wire and validate safety systems",
       "description": "Fuse every circuit; route away from sharp edges; verify ground straps for EMI-sensitive sensors. Test ABS/stability systems on closed course if equipped.",
-      "prerequisiteTools": ["multimeter", "wiring diagrams"],
+      "prerequisiteTools": [
+        "multimeter",
+        "wiring diagrams"
+      ],
       "warningNote": "Airbag systems require de-energising procedures — accidental deployment injures"
     },
     {
       "order": 6,
       "title": "Road test protocol",
       "description": "Progressive speed build; check brake fade; monitor temperatures; scan for leaks. Document maintenance intervals before releasing to daily use.",
-      "prerequisiteTools": ["OBD scanner modern", "tyre pressure gauge"],
+      "prerequisiteTools": [
+        "OBD scanner modern",
+        "tyre pressure gauge"
+      ],
       "warningNote": "First high-speed tests belong on closed courses with safety crew"
     }
   ],
@@ -221,6 +258,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-wiki-auto",
+        "title": "Wikipedia — Automobile",
+        "url": "https://en.wikipedia.org/wiki/Automobile",
+        "type": "wikipedia",
+        "note": "Systems overview; pair with national vehicle safety agency materials for your jurisdiction"
+      },
+      {
+        "id": "src-epa-transport",
+        "title": "U.S. EPA — Transportation and climate change portal",
+        "url": "https://www.epa.gov/transportation-air-pollution-and-climate-change",
+        "type": "institution",
+        "note": "Emissions and fuels context"
+      },
+      {
+        "id": "src-energy",
+        "title": "U.S. Department of Energy",
+        "url": "https://www.energy.gov/",
+        "type": "institution",
+        "note": "Vehicle fuels, efficiency, and research programs"
+      }
+    ]
   }
 }

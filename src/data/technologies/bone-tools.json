@@ -6,7 +6,9 @@
   "era": "prehistoric",
   "difficulty": 1,
   "prerequisites": [],
-  "unlocks": ["fishing-net-and-line"],
+  "unlocks": [
+    "fishing-net-and-line"
+  ],
   "problem": "Stone flakes cut and scrape, but many tasks need slender stiffness: piercing hide without huge tears, guiding cord through mesh, picking apart fibres, or spreading pressure in pressure flaking. Wood can work but dulls and splits across grain. Bone and antler occupy a middle hardness: tougher than wood along long axes, easier to shape than stone in elongate forms, and available wherever large animals are processed.\n\nThe problem bone solves is manufacturability of slender tools before metal wire drawing. A bone needle enables sewn clothing — a thermal technology multiplier. An awl enables consistent holes for lashings and later rivets conceptually.\n\nBone is also information-dense waste: if you already process animals for meat, converting metapodials and ribs into tools extracts value from refuse.",
   "overview": "Bone tools are made by sawing, grooving, snapping, and grinding. Long bones yield splinters with natural stiffness; metapodials yield rods; ribs yield flat strips. Splintering follows collagen-apatite composite structure — sharp stone saws score a groove, then bending snaps along the weak plane. Points are shaped by abrasion on sandstone or fine-grained stone; polishing reduces friction when piercing.\n\nNeedles require an eye — drilled with a stone point in a bow drill or pushed through with gradual enlargement. Eyes weaken cross-section; design balances length and thickness so bending does not snap the web.\n\nAntler differs: it is remodelled bone grown as weapon and tool stock. Tines detach or are sectioned; antler billet is the classic soft hammer for knapping. Dense antler resists shock and spreads impact.\n\nPreservation bias makes bone tools look rarer than they were — many contexts destroy organic artefacts. Where preserved, bone harpoons, spear straighteners, and weaving tools show deep integration with fishing and textiles.",
   "principles": [
@@ -63,21 +65,30 @@
     {
       "name": "Long bones and antler",
       "purpose": "Rigid blanks for points and billets",
-      "earthLocations": ["Archaeological and modern butchery sites worldwide", "Shed antler in temperate forests"],
+      "earthLocations": [
+        "Archaeological and modern butchery sites worldwide",
+        "Shed antler in temperate forests"
+      ],
       "spaceAlternatives": "Any cultured animal agriculture; synthetic polymers replace function when available",
       "processingRequired": "Deflesh, degrease optionally by boiling, dry slowly to reduce cracking"
     },
     {
       "name": "Abrasive stone",
       "purpose": "Shapes and sharpens tips",
-      "earthLocations": ["Sandstone slabs, fine quartzite"],
+      "earthLocations": [
+        "Sandstone slabs, fine quartzite"
+      ],
       "spaceAlternatives": "Diamond abrasive later; early — silica-rich regolith pressed into blocks",
       "processingRequired": "Flatten working surface by grinding mutually"
     },
     {
       "name": "Drill and bow-drill hearth",
       "purpose": "Creates eyes and small holes",
-      "earthLocations": ["Hard wood spindles", "stone drill points", "cordage for bow"],
+      "earthLocations": [
+        "Hard wood spindles",
+        "stone drill points",
+        "cordage for bow"
+      ],
       "spaceAlternatives": "Same pattern with imported metals or electric tools",
       "processingRequired": "Maintain sharp drill tip; clear swarf to reduce heat"
     }
@@ -87,35 +98,48 @@
       "order": 1,
       "title": "Select bone element",
       "description": "For needles, choose bird long bones or mammal metapodials with straight shafts. For awls, use splinters from long bones. For soft hammers, use antler crown or dense beam sections.",
-      "prerequisiteTools": ["stone saw or grooving flake"],
+      "prerequisiteTools": [
+        "stone saw or grooving flake"
+      ],
       "warningNote": "Zoonoses from fresh bone handling — wash hands; heat-treat if culturally appropriate"
     },
     {
       "order": 2,
       "title": "Rough out by grooving and snapping",
       "description": "Score a deep groove around the shaft, then flex-break. Refine with coarse abrasion to remove splinters.",
-      "prerequisiteTools": ["abrasive slab", "stone flake"],
+      "prerequisiteTools": [
+        "abrasive slab",
+        "stone flake"
+      ],
       "warningNote": "Bone shards are sharp — eye protection"
     },
     {
       "order": 3,
       "title": "Grind point geometry",
       "description": "Work tip to a gradual taper for needles; steeper for awls. Check symmetry by rolling on flat stone.",
-      "prerequisiteTools": ["coarse then fine abrasives"],
+      "prerequisiteTools": [
+        "coarse then fine abrasives"
+      ],
       "warningNote": "Overheating from dry grinding can crack bone — use water"
     },
     {
       "order": 4,
       "title": "Drill eye (needles)",
       "description": "Start dimple with graver, drill with bow drill using stone bit, enlarge with tapered bone pin. Polish eye rim.",
-      "prerequisiteTools": ["bow drill", "stone drill bit"],
+      "prerequisiteTools": [
+        "bow drill",
+        "stone drill bit"
+      ],
       "warningNote": "Thin web breaks last — stop enlarging early and finish by pulling abrasive cord through"
     },
     {
       "order": 5,
       "title": "Polish and temper use",
       "description": "Final polish with fine grit or leather. Test on scrap hide — smooth draw indicates success.",
-      "prerequisiteTools": ["fine abrasive", "hide scrap"],
+      "prerequisiteTools": [
+        "fine abrasive",
+        "hide scrap"
+      ],
       "warningNote": "Needles snap if used as levers — bend radius matters"
     }
   ],
@@ -153,6 +177,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-nmnh",
+        "title": "Smithsonian National Museum of Natural History",
+        "url": "https://naturalhistory.si.edu/",
+        "type": "institution",
+        "note": "Institutional context for osteology, comparative anatomy, and archaeological collections"
+      },
+      {
+        "id": "src-wiki-bone-tool",
+        "title": "Wikipedia — Bone tool",
+        "url": "https://en.wikipedia.org/wiki/Bone_tool",
+        "type": "wikipedia",
+        "note": "Typology and archaeological examples"
+      },
+      {
+        "id": "src-who-nutrition",
+        "title": "WHO — Nutrition health topic",
+        "url": "https://www.who.int/health-topics/nutrition",
+        "type": "institution",
+        "note": "Human nutritional context when discussing food processing tools (cross-disciplinary anchor)"
+      }
+    ]
   }
 }

@@ -201,6 +201,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-itu-t-fiber",
+        "title": "ITU-T — Publications",
+        "url": "https://www.itu.int/en/ITU-T/publications/Pages/default.aspx",
+        "type": "institution",
+        "note": "G.652/G.653 fibre recommendations and related optical transport standards"
+      },
+      {
+        "id": "src-wiki-fiber",
+        "title": "Wikipedia — Optical fiber",
+        "url": "https://en.wikipedia.org/wiki/Optical_fiber",
+        "type": "wikipedia",
+        "note": "Waveguides, attenuation, and dispersion"
+      },
+      {
+        "id": "src-rfc-internet",
+        "title": "IETF — TCP/IP overview (RFC 9293)",
+        "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
+        "type": "standard",
+        "note": "Packet networking stack carried over modern optical backbones"
+      }
+    ]
   }
 }

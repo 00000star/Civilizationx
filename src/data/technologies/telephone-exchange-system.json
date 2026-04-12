@@ -199,6 +199,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-itu-t-tel",
+        "title": "ITU-T — Publications",
+        "url": "https://www.itu.int/en/ITU-T/publications/Pages/default.aspx",
+        "type": "institution",
+        "note": "PSTN signalling and digital telephony standards"
+      },
+      {
+        "id": "src-wiki-telephone",
+        "title": "Wikipedia — Telephone",
+        "url": "https://en.wikipedia.org/wiki/Telephone",
+        "type": "wikipedia",
+        "note": "Switching, transmission, and history"
+      },
+      {
+        "id": "src-rfc-sip",
+        "title": "IETF RFC Editor — SIP (example modern telephony signalling)",
+        "url": "https://www.rfc-editor.org/info/rfc3261",
+        "type": "standard",
+        "note": "Contemporary packet voice; compare to legacy circuit switching"
+      }
+    ]
   }
 }

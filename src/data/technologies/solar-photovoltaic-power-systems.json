@@ -205,6 +205,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-energy-solar-office",
+        "title": "U.S. DOE — Solar Energy Technologies Office",
+        "url": "https://www.energy.gov/eere/solar/solar-energy-technologies-office",
+        "type": "institution",
+        "note": "PV performance, grid integration, and manufacturing R&D"
+      },
+      {
+        "id": "src-wiki-pv",
+        "title": "Wikipedia — Photovoltaic system",
+        "url": "https://en.wikipedia.org/wiki/Photovoltaic_system",
+        "type": "wikipedia",
+        "note": "Array wiring, inverters, and safety disconnect requirements overview"
+      },
+      {
+        "id": "src-nist-pml",
+        "title": "NIST — PML",
+        "url": "https://www.nist.gov/pml",
+        "type": "institution",
+        "note": "Metrology for irradiance sensors and electrical efficiency measurements"
+      }
+    ]
   }
 }

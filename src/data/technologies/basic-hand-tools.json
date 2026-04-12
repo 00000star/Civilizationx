@@ -5,8 +5,14 @@
   "category": "tools",
   "era": "prehistoric",
   "difficulty": 2,
-  "prerequisites": ["lever-system", "stone-knapping"],
-  "unlocks": ["wheel-and-axle"],
+  "prerequisites": [
+    "lever-system",
+    "stone-knapping"
+  ],
+  "unlocks": [
+    "wheel-and-axle",
+    "navigation-celestial"
+  ],
   "problem": "Finger pressure cannot split a log, mortise a joint, or cut plate steel. Humans need hardened working edges and mass delivery systems — hammers for impulse, chisels for controlled splitting along weak planes, saws for kerf removal through abrasion and chip clearance. Without this triad, carpentry, joinery, and rough metal forming remain painfully slow.\n\nThe design problem is not only sharpness but durability: edges chip, handles split, heat ruins temper. Each tool is a system: head mass, handle compliance, grip geometry, and maintenance ritual (peening handles, filing teeth, jointing saw plates).\n\nThese tools are also safety-critical: glancing blows, tooth kickback, and flying chips define workshop epidemiology. Technique is inseparable from hardware.",
   "overview": "A hammer stores kinetic energy in a moving head and transfers it through a small contact patch. Hard faces elastically drive nails; soft faces drive chisels without marring steel. Mass and handle length set impact velocity trade space — heavy heads accelerate slowly but deliver momentum.\n\nChisels are wedges with controlled bevel angles: steep bevels for mortising tough wood; shallow bevels for paring across grain. Metal chisels add heat treatment — hard martensitic edge, softer tough back.\n\nSaws are rows of cutting teeth with rake and set: set widens kerf so the plate does not bind; rake and gullet shape control chip formation in rip versus crosscut profiles. Sharpening is jointing (uniform height), shaping (filing angles), and setting (bending alternately).\n\nBronze and iron ages swap materials but not functions: the biomechanics of swing, stance, and sightlines remain. Machine tools later automate these motions, but hand tools remain repair instruments when power fails.",
   "principles": [
@@ -65,21 +71,29 @@
     {
       "name": "Tool steel or shear steel",
       "purpose": "Hardened edges",
-      "earthLocations": ["Historical shear steel from refined blister iron", "modern O1/A2 steels industrially"],
+      "earthLocations": [
+        "Historical shear steel from refined blister iron",
+        "modern O1/A2 steels industrially"
+      ],
       "spaceAlternatives": "Imported stock until rolling mills exist",
       "processingRequired": "Forge, harden, temper to straw/blue per role"
     },
     {
       "name": "Handle wood",
       "purpose": "Impact toughness and grip comfort",
-      "earthLocations": ["Hickory, ash, beech"],
+      "earthLocations": [
+        "Hickory, ash, beech"
+      ],
       "spaceAlternatives": "Composite handles",
       "processingRequired": "Air dry to 8–12% moisture before fitting"
     },
     {
       "name": "Wedge and pin stock",
       "purpose": "Secures heads to handles",
-      "earthLocations": ["Wood wedges", "steel drive wedges"],
+      "earthLocations": [
+        "Wood wedges",
+        "steel drive wedges"
+      ],
       "spaceAlternatives": "Epoxy secondary — not primary structural early",
       "processingRequired": "Orient wedge across grain lock"
     }
@@ -89,35 +103,52 @@
       "order": 1,
       "title": "Forge or grind hammer head blank",
       "description": "Upset stock to mass; punch eye hot; drift to final eye size parallel to striking face. Dress faces flat and perpendicular to eye axis.",
-      "prerequisiteTools": ["forge", "anvil", "tongs"],
+      "prerequisiteTools": [
+        "forge",
+        "anvil",
+        "tongs"
+      ],
       "warningNote": "Scale flies — eye protection mandatory"
     },
     {
       "order": 2,
       "title": "Fit handle with interference and wedge",
       "description": "Burn handle in slightly oversize eye; trim shoulder seat; drive wooden wedge across grain; add steel wedge if needed.",
-      "prerequisiteTools": ["drawknife", "saw", "mallet"],
+      "prerequisiteTools": [
+        "drawknife",
+        "saw",
+        "mallet"
+      ],
       "warningNote": "Loose handle after first day of use — re-wedge before next swing"
     },
     {
       "order": 3,
       "title": "Grind and heat-treat chisel",
       "description": "Normalize, harden edge zone, temper back for toughness. Flatten back; hone bevel at consistent angle.",
-      "prerequisiteTools": ["quench oil", "stones"],
+      "prerequisiteTools": [
+        "quench oil",
+        "stones"
+      ],
       "warningNote": "Overhard chisels chip on knot impacts"
     },
     {
       "order": 4,
       "title": "Shape and sharpen saw teeth",
       "description": "Joint teeth level; file rip or crosscut profiles; set teeth with saw set tool; test cut in scrap matching work species.",
-      "prerequisiteTools": ["saw vise", "joiner gauge", "files"],
+      "prerequisiteTools": [
+        "saw vise",
+        "joiner gauge",
+        "files"
+      ],
       "warningNote": "Dull saws require excess force — primary kickback cause"
     },
     {
       "order": 5,
       "title": "Proof and maintain",
       "description": "Strike cold chisels only with appropriate hammer faces; peen hammer handle swell if loose; store saws dry and lightly oiled.",
-      "prerequisiteTools": ["maintenance stones"],
+      "prerequisiteTools": [
+        "maintenance stones"
+      ],
       "warningNote": "Never use a claw hammer on hardened steel tools — face chips become shrapnel"
     }
   ],
@@ -155,6 +186,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-osha-tools",
+        "title": "OSHA — Standards",
+        "url": "https://www.osha.gov/laws-regs/standards",
+        "type": "institution",
+        "note": "Guarding, PPE, and hand-tool injury prevention"
+      },
+      {
+        "id": "src-wiki-hand-tool",
+        "title": "Wikipedia — Hand tool",
+        "url": "https://en.wikipedia.org/wiki/Hand_tool",
+        "type": "wikipedia",
+        "note": "Categories and safe use overview"
+      },
+      {
+        "id": "src-cdc",
+        "title": "CDC — Agency home",
+        "url": "https://www.cdc.gov/",
+        "type": "institution",
+        "note": "First aid and wound infection prevention when cuts occur in workshop settings"
+      }
+    ]
   }
 }

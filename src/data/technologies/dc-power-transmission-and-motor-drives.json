@@ -194,6 +194,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-ieee-standards",
+        "title": "IEEE Standards Association",
+        "url": "https://standards.ieee.org/",
+        "type": "standard",
+        "note": "Power electronics and motor drives standards"
+      },
+      {
+        "id": "src-wiki-dc",
+        "title": "Wikipedia — High-voltage direct current",
+        "url": "https://en.wikipedia.org/wiki/High-voltage_direct_current",
+        "type": "wikipedia",
+        "note": "HVDC links and converter stations (subset of DC power transmission topic)"
+      },
+      {
+        "id": "src-energy",
+        "title": "U.S. Department of Energy",
+        "url": "https://www.energy.gov/",
+        "type": "institution",
+        "note": "Grid modernisation and industrial efficiency programs"
+      }
+    ]
   }
 }

@@ -205,6 +205,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-nist-sp811-tube",
+        "title": "NIST SP 811",
+        "url": "https://www.nist.gov/pml/special-publication-811",
+        "type": "standard",
+        "note": "Electrical units for vacuum-tube circuit analysis teaching"
+      },
+      {
+        "id": "src-wiki-vacuum-tube",
+        "title": "Wikipedia — Vacuum tube",
+        "url": "https://en.wikipedia.org/wiki/Vacuum_tube",
+        "type": "wikipedia",
+        "note": "Thermionic emission, triodes, and applications"
+      },
+      {
+        "id": "src-doi-transistor-nature",
+        "title": "Nature (1953) — Physical realization of amplification via DOI",
+        "url": "https://doi.org/10.1038/171740a0",
+        "type": "paper",
+        "note": "Historic peer-reviewed letter on semiconductor junction devices; contextualises tube-to-solid-state transition"
+      }
+    ]
   }
 }

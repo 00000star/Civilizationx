@@ -212,6 +212,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-itu-d",
+        "title": "ITU — Development Sector (ICT for resilient infrastructure)",
+        "url": "https://www.itu.int/en/ITU-D/Pages/default.aspx",
+        "type": "institution",
+        "note": "Telecommunications resilience alongside grid modernisation"
+      },
+      {
+        "id": "src-wiki-grid",
+        "title": "Wikipedia — Electrical grid",
+        "url": "https://en.wikipedia.org/wiki/Electrical_grid",
+        "type": "wikipedia",
+        "note": "Topology, frequency control, and reliability references"
+      },
+      {
+        "id": "src-energy",
+        "title": "U.S. Department of Energy",
+        "url": "https://www.energy.gov/",
+        "type": "institution",
+        "note": "National electricity policy and R&D entry point (compare local regulators)"
+      }
+    ]
   }
 }

@@ -5,7 +5,11 @@
   "category": "transport",
   "era": "industrial",
   "difficulty": 3,
-  "prerequisites": ["wheel-and-axle", "basic-hand-tools", "steel-production"],
+  "prerequisites": [
+    "wheel-and-axle",
+    "basic-hand-tools",
+    "steel-production"
+  ],
   "unlocks": [],
   "problem": "Walking scales poorly with distance for time-sensitive tasks; horses cost feed and care. Mid-industrial societies needed a personal vehicle that uses human food calories directly without animal overhead. Early velocipedes were heavy and bone-shaking; the safety bicycle with similar-size wheels and chain drive solved stability and gearing, enabling mass adoption.\n\nThe bicycle problem is lightweight structure plus reliable rolling bearings plus a drivetrain that tolerates grit. It couples ergonomics (crank length, saddle height) with materials (thin-walled steel tubing) and manufacturing precision (interchangeable threads).\n\nBicycles also democratised mobility for working classes and reshaped women's clothing and urban geography — social effects as large as engineering ones.",
   "overview": "A modern bicycle couples a diamond or compact frame for triangular rigidity with two wheels on axles containing ball bearings. The crankset drives a chainring; a roller chain transmits torque to a rear sprocket on a hub that may include a freewheel allowing coasting. Steering uses a fork with rake and trail geometry that provides self-centering tendency at speed.\n\nBrakes evolved from spoon brakes on tyres to calliper rim brakes and disc brakes; each trades complexity for wet-weather performance. Tyres are pneumatic for low rolling resistance and bump absorption; they require airtight rims and valves.\n\nGearing uses derailleurs or internal hubs to match human cadence to terrain. Tensioners and limit screws prevent chain drop; alignment of hanger faces matters to sub-millimetre scales.\n\nManufacturing depends on steel tubing, lugged or welded joints, and heat-treated cranks — the bicycle is an early triumph of thin-walled metal and precision threads.",
@@ -73,21 +77,29 @@
     {
       "name": "Steel tubing",
       "purpose": "Light strong frame",
-      "earthLocations": ["Industrial mill towns globally"],
+      "earthLocations": [
+        "Industrial mill towns globally"
+      ],
       "spaceAlternatives": "Aluminium from electrolysis once power exists",
       "processingRequired": "Butted drawing, mitering, welding or brazing"
     },
     {
       "name": "Rubber (natural or synthetic)",
       "purpose": "Tyres and grips",
-      "earthLocations": ["Southeast Asian plantations historically", "petrochemical synthetics modern"],
+      "earthLocations": [
+        "Southeast Asian plantations historically",
+        "petrochemical synthetics modern"
+      ],
       "spaceAlternatives": "Silicone or polyurethane variants in advanced labs",
       "processingRequired": "Vulcanisation for durability"
     },
     {
       "name": "Lubricants",
       "purpose": "Chain and bearing life",
-      "earthLocations": ["Petroleum oils", "plant oils short-term"],
+      "earthLocations": [
+        "Petroleum oils",
+        "plant oils short-term"
+      ],
       "spaceAlternatives": "PFPE greases for vacuum-adjacent weird environments",
       "processingRequired": "Clean before relube — solvent risks to seals"
     }
@@ -97,35 +109,50 @@
       "order": 1,
       "title": "Miter and tack-weld frame",
       "description": "Cut tubes to angles from jig; tack in sequence to control distortion; verify head tube and bottom bracket alignment on surface plate if possible.",
-      "prerequisiteTools": ["frame jig", "TIG welder or oxy torch for brazing"],
+      "prerequisiteTools": [
+        "frame jig",
+        "TIG welder or oxy torch for brazing"
+      ],
       "warningNote": "Welding fumes — ventilation; UV eye damage"
     },
     {
       "order": 2,
       "title": "Face and chase interfaces",
       "description": "Machine head tube faces and bottom bracket threads square to axis; ream seat tube for correct seat post fit.",
-      "prerequisiteTools": ["facing tools", "taps"],
+      "prerequisiteTools": [
+        "facing tools",
+        "taps"
+      ],
       "warningNote": "Skewed BB shell ruins chainline permanently"
     },
     {
       "order": 3,
       "title": "Build wheels",
       "description": "Lace spokes in pattern; tension evenly to target deflection; dish rim centred to hub; stress-relieve by squeezing pairs.",
-      "prerequisiteTools": ["truing stand", "tensiometer"],
+      "prerequisiteTools": [
+        "truing stand",
+        "tensiometer"
+      ],
       "warningNote": "Undertensioned spokes fatigue and break in clusters"
     },
     {
       "order": 4,
       "title": "Assemble drivetrain and align derailleur",
       "description": "Set hanger parallel; limit screws to prevent overshift; set B-gap per manufacturer; index shifter clicks.",
-      "prerequisiteTools": ["alignment gauge", "cable cutters"],
+      "prerequisiteTools": [
+        "alignment gauge",
+        "cable cutters"
+      ],
       "warningNote": "Front derailleur can throw chain into spokes — set limits conservatively"
     },
     {
       "order": 5,
       "title": "Safety check and test ride",
       "description": "Verify torque on stem, bars, seat post, thru-axles; brake hard walk test; rolling jump test off curb at low speed listening for creaks.",
-      "prerequisiteTools": ["torque wrench", "multitool"],
+      "prerequisiteTools": [
+        "torque wrench",
+        "multitool"
+      ],
       "warningNote": "Always wear helmet on public roads — modern injury data is unambiguous"
     }
   ],
@@ -172,6 +199,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-cdc-active",
+        "title": "CDC — Physical activity basics",
+        "url": "https://www.cdc.gov/physical-activity-basics/about/index.html",
+        "type": "institution",
+        "note": "Health framing for human-powered transport"
+      },
+      {
+        "id": "src-wiki-bicycle",
+        "title": "Wikipedia — Bicycle",
+        "url": "https://en.wikipedia.org/wiki/Bicycle",
+        "type": "wikipedia",
+        "note": "Mechanics, history, and safety culture references"
+      },
+      {
+        "id": "src-osha",
+        "title": "OSHA",
+        "url": "https://www.osha.gov/",
+        "type": "institution",
+        "note": "Workshop safety for fabrication and repair of cycle components"
+      }
+    ]
   }
 }

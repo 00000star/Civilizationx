@@ -205,6 +205,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-iaea-home",
+        "title": "International Atomic Energy Agency",
+        "url": "https://www.iaea.org/",
+        "type": "institution",
+        "note": "Nuclear safety, safeguards, and technical publications (navigate by topic)"
+      },
+      {
+        "id": "src-nrc",
+        "title": "U.S. Nuclear Regulatory Commission",
+        "url": "https://www.nrc.gov/",
+        "type": "institution",
+        "note": "Reactor licensing, radiation protection, and public reading room"
+      },
+      {
+        "id": "src-wiki-nuclear",
+        "title": "Wikipedia — Nuclear power",
+        "url": "https://en.wikipedia.org/wiki/Nuclear_power",
+        "type": "wikipedia",
+        "note": "Survey article; always cross-check operational limits with licensed procedures"
+      }
+    ]
   }
 }

@@ -1,12 +1,17 @@
-import { useMemo, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { SearchBar } from "../components/ui/SearchBar";
 import { CategoryFilter } from "../components/ui/CategoryFilter";
 import { TechTree } from "../components/tree/TechTree";
+import { StarfieldCanvas } from "../components/tree/StarfieldCanvas";
+import { TreeWelcomeBanner } from "../components/tree/TreeWelcomeBanner";
 import { useTechTree } from "../hooks/useTechTree";
 import type { TechCategory, TechEra } from "../types/technology";
 import { loadAllTechnologies } from "../data/loadTechnologies";
 import { TECH_TREE_ERAS as ERAS } from "../utils/eras";
+
+const TREE_WELCOME_KEY = "codex-tree-welcome-dismissed";
 
 export function TreePage() {
   const [params, setParams] = useSearchParams();
@@ -40,6 +45,27 @@ export function TreePage() {
     return ERAS.filter((e) => s.has(e.id));
   }, [all]);
 
+  const [showWelcome, setShowWelcome] = useState(false);
+
+  useEffect(() => {
+    try {
+      if (sessionStorage.getItem(TREE_WELCOME_KEY) === "1") return;
+    } catch {
+      /* ignore */
+    }
+    const id = requestAnimationFrame(() => setShowWelcome(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
+
+  const dismissWelcome = useCallback(() => {
+    setShowWelcome(false);
+    try {
+      sessionStorage.setItem(TREE_WELCOME_KEY, "1");
+    } catch {
+      /* ignore */
+    }
+  }, []);
+
   return (
     <div className="flex min-h-0 flex-1 flex-col">
       <div className="border-b border-codex-border bg-codex-surface/80 px-3 py-3 backdrop-blur md:px-6">
@@ -62,7 +88,15 @@ export function TreePage() {
         </div>
       </div>
 
-      <TechTree technologies={filtered} positions={positions} />
+      <div className="relative min-h-0 flex-1">
+        <StarfieldCanvas />
+        <AnimatePresence>
+          {showWelcome ? <TreeWelcomeBanner onDismiss={dismissWelcome} /> : null}
+        </AnimatePresence>
+        <div className="relative z-[1] min-h-0 flex-1">
+          <TechTree technologies={filtered} positions={positions} />
+        </div>
+      </div>
 
       <div className="pointer-events-auto fixed bottom-4 right-4 z-20 hidden w-56 rounded-lg border border-codex-border bg-codex-surface/95 p-3 shadow-xl backdrop-blur md:block">
         <label
