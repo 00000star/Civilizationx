@@ -200,6 +200,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-itu-r-radio",
+        "title": "ITU-R",
+        "url": "https://www.itu.int/en/ITU-R/Pages/default.aspx",
+        "type": "institution",
+        "note": "Spectrum management and broadcasting standards"
+      },
+      {
+        "id": "src-wiki-radio",
+        "title": "Wikipedia — Radio",
+        "url": "https://en.wikipedia.org/wiki/Radio",
+        "type": "wikipedia",
+        "note": "Modulation, receivers, and regulation overview"
+      },
+      {
+        "id": "src-nasa-communications",
+        "title": "NASA — Communications and navigation (entry via nasa.gov)",
+        "url": "https://www.nasa.gov/",
+        "type": "institution",
+        "note": "Deep-space communications engineering; navigate to mission directorate pages for technical reports"
+      }
+    ]
   }
 }

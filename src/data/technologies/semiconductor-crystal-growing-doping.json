@@ -203,6 +203,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-nist-mml",
+        "title": "NIST — Material Measurement Laboratory",
+        "url": "https://www.nist.gov/mml",
+        "type": "institution",
+        "note": "Semiconductor materials metrology and reference materials"
+      },
+      {
+        "id": "src-wiki-cz",
+        "title": "Wikipedia — Czochralski process",
+        "url": "https://en.wikipedia.org/wiki/Czochralski_process",
+        "type": "wikipedia",
+        "note": "Crystal pulling and defect control references"
+      },
+      {
+        "id": "src-doi-transistor-nature",
+        "title": "Nature (1953) via DOI",
+        "url": "https://doi.org/10.1038/171740a0",
+        "type": "paper",
+        "note": "Early semiconductor device physics in peer-reviewed literature"
+      }
+    ]
   }
 }

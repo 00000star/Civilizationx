@@ -5,8 +5,13 @@
   "category": "tools",
   "era": "ancient",
   "difficulty": 2,
-  "prerequisites": ["rope-and-cordage", "wheel-and-axle"],
-  "unlocks": ["steam-engine"],
+  "prerequisites": [
+    "rope-and-cordage",
+    "wheel-and-axle"
+  ],
+  "unlocks": [
+    "steam-engine"
+  ],
   "problem": "Lifting stone for construction, drawing water from wells, and tensioning ship rigging all require applying large forces along directions human posture cannot sustain. Rope alone cuts hands and wastes friction over edges; sharp edges abrade fibres. The pulley problem is providing a low-friction curved support that preserves rope integrity while changing force direction — and, in block-and-tackle systems, multiplying force at the expense of rope travel.\n\nPulleys also appear in power transmission: leather belts on stepped cone pulleys change speed ratios between shafts before geared heads dominate machine tools.\n\nMisunderstanding pulleys leads to dangerous false security — mechanical advantage never removes the need to anchor frames against reaction forces.",
   "overview": "A fixed pulley redirects tension ideally without changing magnitude (neglecting friction). A movable pulley attached to the load halves the required pull force in ideal 1:2 systems because two rope segments support the load. Compounding with multiple sheaves creates tackle rove to trade rope pull distance for force.\n\nReal sheaves have bearing friction, rope bending hysteresis, and efficiency losses that accumulate in long tackles. Sheave diameter should be large relative to rope diameter to preserve rope strength — small diameters fatigue fibres.\n\nMaterials progress from grooved wood discs on wooden pins, to bronze bearings, to ball-bearing sheaves in modern lifting. Frames (blocks) must be closed shapes that cannot spit the rope under side loading.\n\nAlignment matters: fleet angles on multi-wrap drums must stay within manufacturer limits — historical analogues still fail if rope piles on one flange.",
   "principles": [
@@ -65,21 +70,30 @@
     {
       "name": "Rope",
       "purpose": "Flexible tensile member",
-      "earthLocations": ["Hemp, manila historically", "nylon/polyester modern"],
+      "earthLocations": [
+        "Hemp, manila historically",
+        "nylon/polyester modern"
+      ],
       "spaceAlternatives": "UHMWPE cable",
       "processingRequired": "Splice eyes with full strength methods — knots derate"
     },
     {
       "name": "Hardwood or metal for sheave",
       "purpose": "Wear-resistant groove",
-      "earthLocations": ["Lignum vitae, bronze foundries"],
+      "earthLocations": [
+        "Lignum vitae, bronze foundries"
+      ],
       "spaceAlternatives": "Ceramic-coated metals",
       "processingRequired": "Turn groove concentric to bore"
     },
     {
       "name": "Lubricant",
       "purpose": "Journal friction reduction",
-      "earthLocations": ["Tallow", "graphite", "modern greases"],
+      "earthLocations": [
+        "Tallow",
+        "graphite",
+        "modern greases"
+      ],
       "spaceAlternatives": "Dry PTFE bushings",
       "processingRequired": "Match lubricant to load and temperature"
     }
@@ -89,35 +103,50 @@
       "order": 1,
       "title": "Size sheave for rope",
       "description": "Choose sheave diameter at least ~10× rope diameter for natural fibre; modern wire rope charts stricter. Mark groove profile to match rope crown.",
-      "prerequisiteTools": ["calipers", "compass"],
+      "prerequisiteTools": [
+        "calipers",
+        "compass"
+      ],
       "warningNote": "Undersized sheaves are a silent overload mechanism"
     },
     {
       "order": 2,
       "title": "Turn sheave and bore",
       "description": "Lathe turn or pole lathe equivalent; bore for pin with reamed fit. Balance for high-speed belt use if applicable.",
-      "prerequisiteTools": ["lathe", "reamer"],
+      "prerequisiteTools": [
+        "lathe",
+        "reamer"
+      ],
       "warningNote": "Off-centre groove walks rope off edge"
     },
     {
       "order": 3,
       "title": "Fabricate cheeks and assemble",
       "description": "Bolt or strap cheeks with correct spacing — rope must not pinch between cheek and sheave edge.",
-      "prerequisiteTools": ["drill", "wrenches"],
+      "prerequisiteTools": [
+        "drill",
+        "wrenches"
+      ],
       "warningNote": "Cheek bolts projecting into rope path are cutting hazards"
     },
     {
       "order": 4,
       "title": "Rove tackle and proof test",
       "description": "Rig fall line from planned direction; hoist known test mass ≥1.25× working load if possible. Listen for bearing grind.",
-      "prerequisiteTools": ["test weights", "tag lines"],
+      "prerequisiteTools": [
+        "test weights",
+        "tag lines"
+      ],
       "warningNote": "Stay clear of bight — recoil if rope breaks is lethal"
     },
     {
       "order": 5,
       "title": "Mark SWL and inspect schedule",
       "description": "Paint or tag safe working load and date. Document bend radius and rope type pairing — future users depend on labels.",
-      "prerequisiteTools": ["paint", "metal stamp"],
+      "prerequisiteTools": [
+        "paint",
+        "metal stamp"
+      ],
       "warningNote": "Never exceed SWL because 'it felt fine last time'"
     }
   ],
@@ -157,6 +186,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-nist-pml-pulley",
+        "title": "NIST — Physical Measurement Laboratory",
+        "url": "https://www.nist.gov/pml",
+        "type": "institution",
+        "note": "Force and mass standards context for rigging calculations"
+      },
+      {
+        "id": "src-wiki-pulley",
+        "title": "Wikipedia — Pulley",
+        "url": "https://en.wikipedia.org/wiki/Pulley",
+        "type": "wikipedia",
+        "note": "Mechanical advantage and block-and-tackle theory"
+      },
+      {
+        "id": "src-osha",
+        "title": "OSHA — Agency home",
+        "url": "https://www.osha.gov/",
+        "type": "institution",
+        "note": "Crane, hoist, and rigging safety regulations (U.S.; compare local codes)"
+      }
+    ]
   }
 }

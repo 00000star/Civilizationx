@@ -5,8 +5,15 @@
   "category": "energy",
   "era": "industrial",
   "difficulty": 4,
-  "prerequisites": ["steam-engine", "steel-production", "basic-hand-tools"],
-  "unlocks": ["automobile", "fixed-wing-aircraft"],
+  "prerequisites": [
+    "steam-engine",
+    "steel-production",
+    "basic-hand-tools"
+  ],
+  "unlocks": [
+    "automobile",
+    "fixed-wing-aircraft"
+  ],
   "problem": "Steam engines are powerful but carry boiler inertia: slow start, heavy plant, and continuous need for water treatment and fire-tending. Many mobile applications wanted power dense enough to fit into a carriage or airframe: quick start, high rpm, and mechanical output without a separate boiler building.\n\nInternal combustion answers by oxidising fuel inside the working cylinders themselves. The chemical reaction products become the working fluid that pushes pistons directly. That raises power-to-weight and enables minutes-to-full-power — critical for vehicles and small workshops.\n\nThe obstacles are precision and control: fuel must meter correctly with air; ignition must time near top dead centre; materials must survive pressure peaks and thermal cycling; lubrication must work while combustion byproducts contaminate oil. Each subsystem is a failure mode: lean knock, rich fouling, valve float, bearing wipe.",
   "overview": "A four-stroke petrol engine repeats: intake (draw air-fuel), compression, power (spark ignites mixture, expansion pushes piston), exhaust (scavenge burnt gas). The crankshaft converts reciprocation to rotation; a flywheel stores energy between power strokes; a camshaft times valve opening via lifters and springs or overhead mechanisms.\n\nFuel systems evolved from surface carburettors to venturi carburettors to port fuel injection to direct injection — each improves metering, emissions, or knock resistance. Ignition moved from flame gaps to magnetos to battery-coil distributor to electronic coil-on-plug. Lubrication is pressure-fed from a pump through galleries, with splash for some components; oil filters extend life.\n\nCooling removes heat that does not become shaft work — liquid jackets with radiator or air-cooled fins. Exhaust systems route hot gases safely and attenuate noise; catalytic converters oxidise pollutants when supported by oxygen sensors and three-way chemistry.\n\nDiesel variants compress air until hot, then inject fuel to self-ignite — higher compression, different injection pressures, no spark plug — sharing many mechanical subsystems with petrol engines.",
   "principles": [
@@ -97,21 +104,27 @@
     {
       "name": "Alloy steels",
       "purpose": "Crankshafts, valves, fasteners",
-      "earthLocations": ["Industrial alloy supply chains"],
+      "earthLocations": [
+        "Industrial alloy supply chains"
+      ],
       "spaceAlternatives": "Imported stock until rolling and heat treat exist",
       "processingRequired": "Forging, heat treatment, nondestructive test"
     },
     {
       "name": "Aluminium",
       "purpose": "Lightweight heads and pistons in many designs",
-      "earthLocations": ["Bauxite belts refined by Hall-Héroult where electricity exists"],
+      "earthLocations": [
+        "Bauxite belts refined by Hall-Héroult where electricity exists"
+      ],
       "spaceAlternatives": "Regolith-derived alumina electrolysis",
       "processingRequired": "Casting, solution heat treat, aging"
     },
     {
       "name": "Petrol or diesel",
       "purpose": "Chemical energy store",
-      "earthLocations": ["Oil fields and refineries globally"],
+      "earthLocations": [
+        "Oil fields and refineries globally"
+      ],
       "spaceAlternatives": "Methanol, ethanol, hydrogen carriers — require engine/fuel-system matching",
       "processingRequired": "Refining, desulphurisation modern"
     }
@@ -121,35 +134,51 @@
       "order": 1,
       "title": "Blueprint and tolerance stack",
       "description": "Define bore, stroke, compression ratio, bearing clearances, valve timing diagram. Stack tolerances for worst-case valve-to-piston and head gasket crush.",
-      "prerequisiteTools": ["CAD or drafting instruments"],
+      "prerequisiteTools": [
+        "CAD or drafting instruments"
+      ],
       "warningNote": "Amateur high-compression builds without knock sensing are destructive"
     },
     {
       "order": 2,
       "title": "Machine block and crank",
       "description": "Bore/hone cylinders to roundness with crosshatch for ring bedding; grind crank journals to size; balance rotating assembly.",
-      "prerequisiteTools": ["boring bar", "crank grinder", "balancer"],
+      "prerequisiteTools": [
+        "boring bar",
+        "crank grinder",
+        "balancer"
+      ],
       "warningNote": "Cast iron dust is hazardous — ventilation"
     },
     {
       "order": 3,
       "title": "Assemble bottom end",
       "description": "Install mains with specified crush and clearance; torque in stages; verify crank spins freely; check end float.",
-      "prerequisiteTools": ["micrometer", "plastigage", "torque wrench"],
+      "prerequisiteTools": [
+        "micrometer",
+        "plastigage",
+        "torque wrench"
+      ],
       "warningNote": "Over-torque distorts mains — binds crank"
     },
     {
       "order": 4,
       "title": "Assemble top end and time valvetrain",
       "description": "Set cam timing per marks; verify interference clearance; adjust valve lash if solid lifters; torque head in spiral pattern.",
-      "prerequisiteTools": ["dial indicator", "degree wheel"],
+      "prerequisiteTools": [
+        "dial indicator",
+        "degree wheel"
+      ],
       "warningNote": "Reused head bolts may yield — replace if torque-to-yield design"
     },
     {
       "order": 5,
       "title": "Prime oil, first start, break-in",
       "description": "Pre-lube galleries; disable fuel/spark for initial crank; establish oil pressure; start with conservative load and varying rpm per cam/bore finish requirements.",
-      "prerequisiteTools": ["gauge set", "fire extinguisher"],
+      "prerequisiteTools": [
+        "gauge set",
+        "fire extinguisher"
+      ],
       "warningNote": "Fuel leaks plus hot exhaust ignite — keep extinguisher aimed"
     }
   ],
@@ -203,6 +232,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-epa-mobile",
+        "title": "U.S. EPA — Transportation and air quality program index",
+        "url": "https://www.epa.gov/transportation-air-pollution-and-climate-change",
+        "type": "institution",
+        "note": "Emissions science and regulatory context for ICE vehicles"
+      },
+      {
+        "id": "src-wiki-ice",
+        "title": "Wikipedia — Internal combustion engine",
+        "url": "https://en.wikipedia.org/wiki/Internal_combustion_engine",
+        "type": "wikipedia",
+        "note": "Cycles, fuels, and engineering references"
+      },
+      {
+        "id": "src-nist-sp811",
+        "title": "NIST SP 811",
+        "url": "https://www.nist.gov/pml/special-publication-811",
+        "type": "standard",
+        "note": "SI units for power, energy, and efficiency calculations"
+      }
+    ]
   }
 }

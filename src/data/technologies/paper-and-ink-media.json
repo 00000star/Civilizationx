@@ -202,6 +202,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-loc-preservation-paper",
+        "title": "Library of Congress — Preservation Directorate",
+        "url": "https://www.loc.gov/preservation/",
+        "type": "institution",
+        "note": "Paper conservation, inks, and stabilisation for library collections"
+      },
+      {
+        "id": "src-wiki-paper",
+        "title": "Wikipedia — Paper",
+        "url": "https://en.wikipedia.org/wiki/Paper",
+        "type": "wikipedia",
+        "note": "Pulp chemistry and manufacturing history"
+      },
+      {
+        "id": "src-unesco-culture",
+        "title": "UNESCO — Culture",
+        "url": "https://www.unesco.org/en/culture",
+        "type": "institution",
+        "note": "Heritage crafts and artisanal knowledge"
+      }
+    ]
   }
 }

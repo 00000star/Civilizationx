@@ -210,6 +210,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-doi-transistor",
+        "title": "Nature (1953) — semiconductor junction devices (DOI)",
+        "url": "https://doi.org/10.1038/171740a0",
+        "type": "paper",
+        "note": "Peer-reviewed primary literature anchor for solid-state amplification history"
+      },
+      {
+        "id": "src-wiki-transistor",
+        "title": "Wikipedia — Transistor",
+        "url": "https://en.wikipedia.org/wiki/Transistor",
+        "type": "wikipedia",
+        "note": "BJT/MOSFET overview with citations"
+      },
+      {
+        "id": "src-ieee-standards",
+        "title": "IEEE Standards Association",
+        "url": "https://standards.ieee.org/",
+        "type": "standard",
+        "note": "Solid-state devices and integrated circuit standards"
+      }
+    ]
   }
 }

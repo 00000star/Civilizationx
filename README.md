@@ -51,6 +51,15 @@ npm run fetch-media -- <technology-id>
 
 Creates `public/images/<technology-id>/` and documents how filenames map into each entry’s `images` array.
 
+## Bulk verification sources
+
+Curated `verification.sources` (minimum three per entry) live in `scripts/verification_sources_by_id.json`. To re-apply them after editing that file:
+
+```bash
+npm run merge-verification-sources
+npm run validate-data
+```
+
 ## Verification
 
 Each entry has a `verification` object: `status`, `reviewedBy`, `reviewDate`, `warnings[]`, and `sources[]`. New content starts as `unverified`. **Expert-verified** entries require a named reviewer and ISO review date. The UI shows status banners on technology pages and coloured dots on tree nodes. Medical or high-risk keywords trigger a full-screen **DangerGate** before content loads (once per entry per browser session).

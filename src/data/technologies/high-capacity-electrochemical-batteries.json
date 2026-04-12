@@ -204,6 +204,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-doi-battery-review",
+        "title": "Peer-reviewed article (Elsevier) — lithium-ion battery topics via DOI resolver",
+        "url": "https://doi.org/10.1016/j.jpowsour.2016.07.100",
+        "type": "paper",
+        "note": "Example contemporary review article reachable via DOI; library access may be required for full text"
+      },
+      {
+        "id": "src-energy-storage",
+        "title": "U.S. Department of Energy — EERE",
+        "url": "https://www.energy.gov/eere/renewable-energy",
+        "type": "institution",
+        "note": "Grid storage and battery research programs entry point"
+      },
+      {
+        "id": "src-wiki-li",
+        "title": "Wikipedia — Lithium-ion battery",
+        "url": "https://en.wikipedia.org/wiki/Lithium-ion_battery",
+        "type": "wikipedia",
+        "note": "Cell chemistry, thermal runaway, and safety references"
+      }
+    ]
   }
 }

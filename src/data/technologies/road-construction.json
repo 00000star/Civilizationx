@@ -5,8 +5,13 @@
   "category": "construction",
   "era": "ancient",
   "difficulty": 3,
-  "prerequisites": ["cart-and-wagon", "shelter-construction-basic"],
-  "unlocks": ["automobile"],
+  "prerequisites": [
+    "cart-and-wagon",
+    "shelter-construction-basic"
+  ],
+  "unlocks": [
+    "automobile"
+  ],
   "problem": "Soil turns to mud under wheel loads; ruts trap vehicles; slopes erode under rain. Paths sufficient for feet fail under tonnes. The road problem is distributing wheel pressure into subgrade without pumping fines upward, shedding water sideways before it softens the foundation, and maintaining crossfall for drainage.\n\nRoads are also social technology: width standards, right-of-way law, tolls, and maintenance labour allocation determine whether a route stays passable across political seasons.\n\nStone Roman roads and modern asphalt differ in materials but share layering logic: subgrade, base, wearing course — each layer sized for grain distribution and compaction.",
   "overview": "A durable unpaved road begins with clearing organics, cutting a bench into hillside for positive drainage, and installing a crown — high centre, low edges — so water runs off. Aggregate layers use graded stone: large stones at bottom, smaller toward top, fines to lock mechanically when compacted. Corduroy logs bridge bogs historically.\n\nPaved roads add a bound surface: Roman concrete with pozzolan, later macadam with angular crushed stone locked by compaction, later tar macadam, later hot-mix asphalt on prepared base. Each step improves impermeability and ride but increases maintenance tooling needs.\n\nDrainage structures — culverts, ditches, retaining walls — often matter more than surface quality. Plugged culverts destroy paved roads from underneath.\n\nSurveying aligns grades: too steep exhausts draft animals and trucks; too flat ponds water. Transition curves reduce jerk for fast traffic later.",
   "principles": [
@@ -65,21 +70,27 @@
     {
       "name": "Crushed stone",
       "purpose": "Structural aggregate",
-      "earthLocations": ["Quarries near transport corridors globally"],
+      "earthLocations": [
+        "Quarries near transport corridors globally"
+      ],
       "spaceAlternatives": "Sintered regolith aggregate",
       "processingRequired": "Crush-screen to gradation; wash if clay-coated"
     },
     {
       "name": "Binder (asphalt era)",
       "purpose": "Coats aggregate in flexible pavement",
-      "earthLocations": ["Petroleum refining districts"],
+      "earthLocations": [
+        "Petroleum refining districts"
+      ],
       "spaceAlternatives": "Sulphur binder research materials — nonstandard",
       "processingRequired": "Heat mix plants; compaction before cool"
     },
     {
       "name": "Geotextile (modern optional)",
       "purpose": "Separates fines from base, reducing pumping",
-      "earthLocations": ["Industrial textiles"],
+      "earthLocations": [
+        "Industrial textiles"
+      ],
       "spaceAlternatives": "Woven polymer from in-situ chemical plants",
       "processingRequired": "Proper overlap and anchoring"
     }
@@ -89,35 +100,50 @@
       "order": 1,
       "title": "Survey centreline and grades",
       "description": "Stake alignment; compute cuts and fills; locate drainage outlets that do not flood downstream users.",
-      "prerequisiteTools": ["line level or transit", "measuring chain"],
+      "prerequisiteTools": [
+        "line level or transit",
+        "measuring chain"
+      ],
       "warningNote": "Working near roads — visibility vests even in premodern reenactment contexts with modern traffic nearby"
     },
     {
       "order": 2,
       "title": "Strip topsoil and compact subgrade",
       "description": "Remove organics that decay into voids. Moisture-condition and compact in lifts with rollers or ramming.",
-      "prerequisiteTools": ["shovels", "rammer", "cart"],
+      "prerequisiteTools": [
+        "shovels",
+        "rammer",
+        "cart"
+      ],
       "warningNote": "Trench collapse in deep cuts — bench slopes"
     },
     {
       "order": 3,
       "title": "Place base in lifts",
       "description": "Spread aggregate in thin layers; compact each until refusal; check crown with straightedge.",
-      "prerequisiteTools": ["rake", "roller"],
+      "prerequisiteTools": [
+        "rake",
+        "roller"
+      ],
       "warningNote": "Overthick lifts do not compact internally — false economy"
     },
     {
       "order": 4,
       "title": "Install drainage structures before surfacing",
       "description": "Bed culverts on firm foundation; backfill symmetrically; test flow before paving over.",
-      "prerequisiteTools": ["levels", "masonry tools"],
+      "prerequisiteTools": [
+        "levels",
+        "masonry tools"
+      ],
       "warningNote": "Plugged culverts are the fastest road destroyer"
     },
     {
       "order": 5,
       "title": "Surface and edge protect",
       "description": "Lay wearing course; compact; stabilise shoulders with grass or stone to prevent undermining.",
-      "prerequisiteTools": ["pavers or asphalt crew if modern"],
+      "prerequisiteTools": [
+        "pavers or asphalt crew if modern"
+      ],
       "warningNote": "Hot asphalt burns — PPE and escape routes"
     }
   ],
@@ -157,6 +183,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-nyc-dot-road",
+        "title": "NYC DOT — Infrastructure portal (Brooklyn Bridge example)",
+        "url": "https://www1.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+        "type": "institution",
+        "note": "Municipal civil engineering documentation style"
+      },
+      {
+        "id": "src-wiki-road",
+        "title": "Wikipedia — Road",
+        "url": "https://en.wikipedia.org/wiki/Road",
+        "type": "wikipedia",
+        "note": "Pavement types, drainage, and standards references"
+      },
+      {
+        "id": "src-epa",
+        "title": "U.S. EPA",
+        "url": "https://www.epa.gov/",
+        "type": "institution",
+        "note": "Stormwater, dust control, and environmental compliance for earthworks"
+      }
+    ]
   }
 }

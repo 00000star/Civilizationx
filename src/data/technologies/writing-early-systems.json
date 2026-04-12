@@ -185,6 +185,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-unesco-comm",
+        "title": "UNESCO — Communication and information",
+        "url": "https://www.unesco.org/en/communication-information",
+        "type": "institution",
+        "note": "Memory of the World and documentary heritage programmes"
+      },
+      {
+        "id": "src-wiki-writing",
+        "title": "Wikipedia — Writing",
+        "url": "https://en.wikipedia.org/wiki/Writing",
+        "type": "wikipedia",
+        "note": "Origins, scripts, and archaeology references"
+      },
+      {
+        "id": "src-loc-preservation",
+        "title": "Library of Congress — Preservation Directorate",
+        "url": "https://www.loc.gov/preservation/",
+        "type": "institution",
+        "note": "Manuscript care, inks, and conservation science"
+      }
+    ]
   }
 }

@@ -5,8 +5,12 @@
   "category": "construction",
   "era": "prehistoric",
   "difficulty": 1,
-  "prerequisites": ["stone-knapping"],
-  "unlocks": ["road-construction"],
+  "prerequisites": [
+    "stone-knapping"
+  ],
+  "unlocks": [
+    "road-construction"
+  ],
   "problem": "Humans tolerate a narrow comfort band without clothing and fire support. Wind strips convective heat; rain destroys insulation; sun causes dehydration; predators exploit sleeping vulnerability. The basic shelter problem is creating a bounded microclimate: reducing wind speed, shedding precipitation, reflecting radiant heat from fire, and separating occupants from damp ground.\n\nThis is not aesthetics — it is thermodynamics and hygiene. Raised sleeping platforms reduce parasitic insect contact; overhangs keep fuel dry; smoke holes balance ventilation versus heat retention. In cold climates, small enclosed volumes around a fire are dramatically easier to heat than open camps.\n\nShelter also protects technology: cordage rots faster when constantly wet; clay dries unevenly in gusts; charcoal kilns need wind shields. A civilisation rebuilding needs the very first week to include reliable nightly shelter, not only because of comfort but because cognitive work (tool repair, planning) requires dry hands and stable light.",
   "overview": "Basic shelters combine structural members, covering, and anchoring. Structural members are poles harvested green or dry, lashed into tripods, A-frames, or ridge-pole configurations. Coverings include thatch, bark sheets, hides, woven mats, and snow blocks in polar contexts. Anchoring uses stakes, rocks, and tensioned cordage in guy lines.\n\nSite selection dominates performance: avoid drainage channels, look for natural windbreaks, position openings away from prevailing storms, and place fire where smoke vents without filling the sleeping volume. In forest, dead standing timber is often straighter than ground-fall that has begun to rot.\n\nLashing is the joining technology: square lashings resist shear, diagonal lashings grip crossing poles, shear lashings bundle parallel members. Friction wraps must be seated under tension — slip knots fail in wind gusts.\n\nThermal upgrades include reflective fire walls (stones, clay), partial burrows, and insulating layers of leaves or grass between inner and outer skins. These are low-tech but map directly to later principles of insulation, vapour barriers, and ventilation in permanent architecture.",
   "principles": [
@@ -72,21 +76,29 @@
     {
       "name": "Poles and stakes",
       "purpose": "Primary structure",
-      "earthLocations": ["Forests, riparian corridors, shrublands with straight stems"],
+      "earthLocations": [
+        "Forests, riparian corridors, shrublands with straight stems"
+      ],
       "spaceAlternatives": "Metal or composite framing when industry permits",
       "processingRequired": "De-bark where insects hide; sharpen stake tips for driving"
     },
     {
       "name": "Thatch vegetation",
       "purpose": "Water-shedding roof",
-      "earthLocations": ["Water reed (Phragmites) in wetlands", "palm thatch in tropics", "bunch grasses in steppe"],
+      "earthLocations": [
+        "Water reed (Phragmites) in wetlands",
+        "palm thatch in tropics",
+        "bunch grasses in steppe"
+      ],
       "spaceAlternatives": "Regolith-bonded panels with sealed membranes",
       "processingRequired": "Harvest dry if possible; bundle in courses; replace seasonally"
     },
     {
       "name": "Cordage",
       "purpose": "Joints and guy lines",
-      "earthLocations": ["Local fibre as in rope-and-cordage entry"],
+      "earthLocations": [
+        "Local fibre as in rope-and-cordage entry"
+      ],
       "spaceAlternatives": "UHMWPE or wire rope later",
       "processingRequired": "Pre-stretch and dry before final tensioning"
     }
@@ -96,35 +108,48 @@
       "order": 1,
       "title": "Survey site and wind rose",
       "description": "Observe daytime breeze and local terrain funneling. Mark drainage during a rain if possible. Clear only what you must — vegetation is also camouflage and fuel.",
-      "prerequisiteTools": ["stone-knapping flakes for cutting cord"],
+      "prerequisiteTools": [
+        "stone-knapping flakes for cutting cord"
+      ],
       "warningNote": "Deadfalls can shift — do not build under hung-up trees"
     },
     {
       "order": 2,
       "title": "Frame primary structure",
       "description": "Raise ridge on tripods or lean ridge pole against living tree (use bark spacers to avoid girdling if long-term). Seat poles in shallow depressions or on flat stones to reduce sink.",
-      "prerequisiteTools": ["mallet from wood", "digging stick"],
+      "prerequisiteTools": [
+        "mallet from wood",
+        "digging stick"
+      ],
       "warningNote": "Heavy lean-to loads transfer to anchors — brace against shear"
     },
     {
       "order": 3,
       "title": "Install lattice and first cover layer",
       "description": "Lay horizontal purlins for thatch attachment. Begin shingling from eaves upward so upper layers sheds over lower. Overlap hides like roof tiles if using skins.",
-      "prerequisiteTools": ["bone awl", "cordage"],
+      "prerequisiteTools": [
+        "bone awl",
+        "cordage"
+      ],
       "warningNote": "Gaps at eaves destroy comfort — pack first course tightly"
     },
     {
       "order": 4,
       "title": "Add vent and adjustable door",
       "description": "Cut high vent opposite door low slot for draft. Use hide flap or woven mat door you can partially open for smoke management.",
-      "prerequisiteTools": ["knife or stone flake"],
+      "prerequisiteTools": [
+        "knife or stone flake"
+      ],
       "warningNote": "Fully sealed small shelters with open fire risk CO buildup — keep controlled leakage"
     },
     {
       "order": 5,
       "title": "Tension and storm guy",
       "description": "Add guy lines to windward corners anchored to buried deadmen logs. Retension after wood shrinkage.",
-      "prerequisiteTools": ["stakes", "mallet"],
+      "prerequisiteTools": [
+        "stakes",
+        "mallet"
+      ],
       "warningNote": "Flying stakes under tension are hazardous — wear eye protection if using modern cordage under high load"
     }
   ],
@@ -162,6 +187,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-osha",
+        "title": "OSHA — Agency home",
+        "url": "https://www.osha.gov/",
+        "type": "institution",
+        "note": "Fall protection, scaffolding, excavation, and construction safety rules (jurisdiction-specific)"
+      },
+      {
+        "id": "src-wiki-housing",
+        "title": "Wikipedia — Housing",
+        "url": "https://en.wikipedia.org/wiki/Housing",
+        "type": "wikipedia",
+        "note": "Shelter typology and environmental design references"
+      },
+      {
+        "id": "src-cdc-healthy-homes",
+        "title": "CDC — Healthy housing and environmental health portal",
+        "url": "https://www.cdc.gov/nceh/",
+        "type": "institution",
+        "note": "Indoor environmental hazards, ventilation, and community health links"
+      }
+    ]
   }
 }

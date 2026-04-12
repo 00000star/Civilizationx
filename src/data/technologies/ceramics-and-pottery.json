@@ -5,8 +5,13 @@
   "category": "materials",
   "era": "prehistoric",
   "difficulty": 2,
-  "prerequisites": ["fire"],
-  "unlocks": ["glass-making", "smelting-bronze-age"],
+  "prerequisites": [
+    "fire"
+  ],
+  "unlocks": [
+    "glass-making",
+    "smelting-bronze-age"
+  ],
   "problem": "Organic containers rot; stone bowls are heavy and hard to shape; baskets leak. Storing water, fermenting foods, cooking stews, and transporting liquids requires impermeable, heat-tolerant vessels. Sun-dried clay holds shape but dissolves in water. The problem ceramics solve is irreversible hardening: transform mouldable earth into glassy-bonded solids that resist water and heat.\n\nBeyond vessels, fired clay becomes brick — modular construction units that stack into granaries, kilns, and furnaces. Refractory ceramics line smelting furnaces where steel would slump. The same underlying sintering principle scales from cups to city walls.\n\nThe difficulty is process control: clay must be worked without laminations that become cracks; drying must be slow enough to avoid differential shrinkage; firing must climb through quartz inversion and sintering ranges without exploding trapped water or carbonaceous cores.",
   "overview": "Pottery begins with clay — sheet silicates with adsorbed water and often fluxing impurities like iron, potassium, and calcium. Temper (sand, crushed shell, grog) is added to reduce shrinkage cracking. Wedging homogenises clay and aligns particles. Throwing, coiling, or pressing forms the piece; leather-hard trimming refines geometry.\n\nDrying removes free water; at the kiln, chemically bound water drives off first — the critical stage where rapid heating causes steam pressure that pops pieces. Carbon burns out next; then vitrification begins as particle surfaces melt slightly and fuse — the boundary between earthenware, stoneware, and porcelain depends on peak temperature, atmosphere, and body recipe.\n\nGlazes are glassy coatings: silica plus fluxes (alkali, alkaline earth) plus stabilisers (alumina) melted onto the body, often coloured by transition metal oxides. Glazes must thermal-expansion-match the body or craze or shiver.\n\nBricks are low-precision pottery optimised for stacking and thermal mass; refractory bricks use high-alumina or silica recipes to survive furnace linings. All share sintering: solid-state bonding plus partial liquid phase formation at high temperature.",
   "principles": [
@@ -63,21 +68,33 @@
     {
       "name": "Plastic clay",
       "purpose": "Formable ceramic body",
-      "earthLocations": ["Alluvial plains globally", "Marine clays", "Kaolin deposits (China clay) for whiter bodies"],
+      "earthLocations": [
+        "Alluvial plains globally",
+        "Marine clays",
+        "Kaolin deposits (China clay) for whiter bodies"
+      ],
       "spaceAlternatives": "Processed regolith fines plus flux additives once characterised",
       "processingRequired": "Levigation to remove rocks; wedging; possibly ageing in anaerobic pits"
     },
     {
       "name": "Temper",
       "purpose": "Controls shrinkage and thermal shock resistance",
-      "earthLocations": ["Sand", "crushed fired pottery (grog)", "crushed shell in calcareous traditions"],
+      "earthLocations": [
+        "Sand",
+        "crushed fired pottery (grog)",
+        "crushed shell in calcareous traditions"
+      ],
       "spaceAlternatives": "Crushed sintered regolith as grog analogue",
       "processingRequired": "Screening to size fractions"
     },
     {
       "name": "Fuel",
       "purpose": "Kiln heat",
-      "earthLocations": ["Wood", "charcoal", "dung depending on tradition"],
+      "earthLocations": [
+        "Wood",
+        "charcoal",
+        "dung depending on tradition"
+      ],
       "spaceAlternatives": "Electric resistance elements",
       "processingRequired": "Charcoal preferred for high-fire with fewer ash incidents"
     }
@@ -87,42 +104,62 @@
       "order": 1,
       "title": "Prospect and test clay",
       "description": "Roll coils and bend — good plasticity without crumbling indicates workable clay. Fire test briquettes through a stepped series to learn maturity temperature.",
-      "prerequisiteTools": ["sieve", "bucket"],
+      "prerequisiteTools": [
+        "sieve",
+        "bucket"
+      ],
       "warningNote": "Some clays contain soluble salts that bloom as efflorescence — note for food use"
     },
     {
       "order": 2,
       "title": "Prepare body",
       "description": "Levigate or dry process to remove organics if needed. Add temper at 10–30% by mass typical; wedge thoroughly.",
-      "prerequisiteTools": ["wedging table", "scale optional"],
+      "prerequisiteTools": [
+        "wedging table",
+        "scale optional"
+      ],
       "warningNote": "Air bubbles in thick walls explode — compress corners"
     },
     {
       "order": 3,
       "title": "Form and finish leather hard",
       "description": "Build by coil, press into moulds, or throw on a wheel if available. Trim feet and join handles with slip scoring.",
-      "prerequisiteTools": ["coiling paddle", "rib tool", "knife", "scraping stone"],
+      "prerequisiteTools": [
+        "coiling paddle",
+        "rib tool",
+        "knife",
+        "scraping stone"
+      ],
       "warningNote": "Join surfaces must be scored and slipped — butt joints fail"
     },
     {
       "order": 4,
       "title": "Controlled dry",
       "description": "Cover loosely to equalise moisture; invert bowls when rims stiffen. Target slow loss through critical shrinkage zone.",
-      "prerequisiteTools": ["cloth covers", "sticks for spacers"],
+      "prerequisiteTools": [
+        "cloth covers",
+        "sticks for spacers"
+      ],
       "warningNote": "Sun drying thin rims against thick bases causes S-cracks"
     },
     {
       "order": 5,
       "title": "Bisque fire",
       "description": "Slow ramp through water smoking zone; peak around 900–1000 °C for earthenware bisque depending on body. Cool closed to prevent thermal shock.",
-      "prerequisiteTools": ["kiln", "pyrometric cones optional"],
+      "prerequisiteTools": [
+        "kiln",
+        "pyrometric cones optional"
+      ],
       "warningNote": "Never open a hot kiln — radiant heat injures eyes and skin"
     },
     {
       "order": 6,
       "title": "Glaze and high fire (if used)",
       "description": "Apply glaze by dip or brush; wipe feet clean. Fire to glaze maturity; vent kiln appropriately for desired atmosphere.",
-      "prerequisiteTools": ["brushes", "tongs"],
+      "prerequisiteTools": [
+        "brushes",
+        "tongs"
+      ],
       "warningNote": "Lead-bearing folk glazes are toxic — avoid without modern safety"
     }
   ],
@@ -160,6 +197,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-unesco-culture",
+        "title": "UNESCO — Culture sector",
+        "url": "https://www.unesco.org/en/culture",
+        "type": "institution",
+        "note": "Living heritage, craft traditions, and documentation of ceramic arts in cultural context"
+      },
+      {
+        "id": "src-wiki-pottery",
+        "title": "Wikipedia — Pottery",
+        "url": "https://en.wikipedia.org/wiki/Pottery",
+        "type": "wikipedia",
+        "note": "Materials science and kiln-process overview with citations"
+      },
+      {
+        "id": "src-nist-pml",
+        "title": "NIST — Physical Measurement Laboratory",
+        "url": "https://www.nist.gov/pml",
+        "type": "institution",
+        "note": "High-temperature metrology and materials characterization context"
+      }
+    ]
   }
 }

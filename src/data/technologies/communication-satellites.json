@@ -197,6 +197,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-nasa-home",
+        "title": "NASA",
+        "url": "https://www.nasa.gov/",
+        "type": "institution",
+        "note": "Satellite missions and technology public portal"
+      },
+      {
+        "id": "src-wiki-satellite",
+        "title": "Wikipedia — Satellite",
+        "url": "https://en.wikipedia.org/wiki/Satellite",
+        "type": "wikipedia",
+        "note": "Orbits, bus subsystems, and link budgets introduction"
+      },
+      {
+        "id": "src-itu-r-sat",
+        "title": "ITU-R",
+        "url": "https://www.itu.int/en/ITU-R/Pages/default.aspx",
+        "type": "institution",
+        "note": "Satellite frequency coordination and interference management"
+      }
+    ]
   }
 }

@@ -212,6 +212,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-ieee-standards",
+        "title": "IEEE Standards Association",
+        "url": "https://standards.ieee.org/",
+        "type": "standard",
+        "note": "Rotating machinery and power electronics standards"
+      },
+      {
+        "id": "src-wiki-motor",
+        "title": "Wikipedia — Electric motor",
+        "url": "https://en.wikipedia.org/wiki/Electric_motor",
+        "type": "wikipedia",
+        "note": "Induction, synchronous, and DC motor theory"
+      },
+      {
+        "id": "src-nist-pml",
+        "title": "NIST — PML",
+        "url": "https://www.nist.gov/pml",
+        "type": "institution",
+        "note": "Precision electrical measurements for efficiency testing"
+      }
+    ]
   }
 }

@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "validate-data": "node scripts/validate-technology-data.mjs",
     "generate-technologies": "node scripts/generate-technologies.mjs",
-    "fetch-media": "node scripts/fetch-media.mjs"
+    "fetch-media": "node scripts/fetch-media.mjs",
+    "merge-verification-sources": "node scripts/merge-verification-sources.mjs"
   },
   "dependencies": {
     "@xyflow/react": "^12.3.6",

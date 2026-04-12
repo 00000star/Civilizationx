@@ -5,8 +5,17 @@
   "category": "energy",
   "era": "industrial",
   "difficulty": 4,
-  "prerequisites": ["iron-smelting", "pulley", "steel-production", "charcoal"],
-  "unlocks": ["internal-combustion-engine", "steam-locomotive", "boiler-feedwater-treatment"],
+  "prerequisites": [
+    "iron-smelting",
+    "pulley",
+    "steel-production",
+    "charcoal"
+  ],
+  "unlocks": [
+    "internal-combustion-engine",
+    "steam-locomotive",
+    "boiler-feedwater-treatment"
+  ],
   "problem": "Waterwheels need rivers; horses need hay. Industrial tasks — pumping mines, driving forge bellows, spinning mills — needed concentrated, schedulable power decoupled from muscle and weather. The steam engine solves this by a closed loop: boil water, expand vapour against moving boundaries, exhaust lower-pressure steam, condense or vent, and repeat.\n\nEarly engines were thermally inefficient and mechanically crude; Newcomen atmospheric engines pumped water using vacuum after steam condensation. Watt's separate condenser and later high-pressure expansions improved efficiency enough for widespread stationary power and eventually self-propelled locomotion.\n\nThe engineering obstacles are materials and safety: pressure vessels fail catastrophically; sloppy valve timing wastes steam; lubricants must survive heat and water contamination.",
   "overview": "A reciprocating steam engine includes a boiler producing high-pressure steam, throttle and governor controlling admission, a slide or piston valve timing steam admission and exhaust to a cylinder, a piston converting pressure to linear motion, and a crankshaft with flywheel smoothing torque pulsations. Exhaust routes to a condenser (vacuum engines) or atmosphere.\n\nBoilers are riveted or welded shells with tubes passing hot gases through water (fire-tube) or water through hot gas paths (water-tube). Feedwater must be treated to reduce scale — scale insulates tubes leading to hot spots and rupture.\n\nTurbine steam engines (later industrial dominance for large power) use staged nozzles accelerating steam onto blades — higher speeds, fewer reciprocating parts, different bearing challenges.\n\nStationary engines transmitted power via flat belts on stepped pulleys to line shafts — linking to our pulley entry. The locomotive variant rigidly couples engine to wheels on rails — see steam-locomotive entry.",
   "principles": [
@@ -73,21 +82,29 @@
     {
       "name": "Boiler plate steel",
       "purpose": "Pressure containment",
-      "earthLocations": ["Industrial steelworks"],
+      "earthLocations": [
+        "Industrial steelworks"
+      ],
       "spaceAlternatives": "Imported stock until mills exist",
       "processingRequired": "Riveting/welding to code; nondestructive testing modern"
     },
     {
       "name": "Fuel",
       "purpose": "Boiler heat",
-      "earthLocations": ["Coal historically dominant", "wood in frontier contexts"],
+      "earthLocations": [
+        "Coal historically dominant",
+        "wood in frontier contexts"
+      ],
       "spaceAlternatives": "Solar heat for small boilers in vacuum-adjacent demos — niche",
       "processingRequired": "Stoker sizing, ash removal"
     },
     {
       "name": "Feedwater",
       "purpose": "Steam supply continuity",
-      "earthLocations": ["River water treated", "well water"],
+      "earthLocations": [
+        "River water treated",
+        "well water"
+      ],
       "spaceAlternatives": "Recycled condensate loops",
       "processingRequired": "Softening and oxygen scavenging when chemistry available"
     }
@@ -97,35 +114,50 @@
       "order": 1,
       "title": "Design to pressure code",
       "description": "Compute wall thickness from pressure, diameter, and allowable stress; include corrosion allowance; place relief valves sized to boiler output.",
-      "prerequisiteTools": ["design tables", "competent inspector"],
+      "prerequisiteTools": [
+        "design tables",
+        "competent inspector"
+      ],
       "warningNote": "Amateur boilers kill — this step is legally regulated in modern nations"
     },
     {
       "order": 2,
       "title": "Fabricate and hydrotest boiler",
       "description": "Rivet or weld seams; X-ray or dye penetrant critical welds; hydrostatic test above working pressure with remote barriers.",
-      "prerequisiteTools": ["hydraulic pump", "gauges calibrated"],
+      "prerequisiteTools": [
+        "hydraulic pump",
+        "gauges calibrated"
+      ],
       "warningNote": "During test, assume lethal energy — no one in plane of shell seams"
     },
     {
       "order": 3,
       "title": "Machine cylinder and fit rings",
       "description": "Bore cylinder to roundness; lap if needed; cut ring gaps to allow thermal expansion without butt-scuffing.",
-      "prerequisiteTools": ["boring bar", "micrometer"],
+      "prerequisiteTools": [
+        "boring bar",
+        "micrometer"
+      ],
       "warningNote": "Tight rings seize when hot"
     },
     {
       "order": 4,
       "title": "Assemble valve gear timed to crank",
       "description": "Set eccentric throw relative to dead centres; verify admission edge does not occur before dead centre beyond design lead angle.",
-      "prerequisiteTools": ["degree wheel", "dial indicator"],
+      "prerequisiteTools": [
+        "degree wheel",
+        "dial indicator"
+      ],
       "warningNote": "Incorrect timing can slam piston into head"
     },
     {
       "order": 5,
       "title": "Steam trial with warm-up discipline",
       "description": "Gradually warm piping; crack drains; spin by hand; engage load slowly; monitor water level and bearing temperatures.",
-      "prerequisiteTools": ["insulated gloves", "infrared thermometer modern"],
+      "prerequisiteTools": [
+        "insulated gloves",
+        "infrared thermometer modern"
+      ],
       "warningNote": "Entanglement with belts — machine guarding is not optional ethically"
     }
   ],
@@ -179,6 +211,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-energy-steam",
+        "title": "U.S. Department of Energy — EERE",
+        "url": "https://www.energy.gov/eere/renewable-energy",
+        "type": "institution",
+        "note": "Industrial energy systems and efficiency context"
+      },
+      {
+        "id": "src-wiki-steam-engine",
+        "title": "Wikipedia — Steam engine",
+        "url": "https://en.wikipedia.org/wiki/Steam_engine",
+        "type": "wikipedia",
+        "note": "Thermodynamic cycles and historical development"
+      },
+      {
+        "id": "src-nrc-public",
+        "title": "U.S. NRC — Public document collections FAQ",
+        "url": "https://www.nrc.gov/reading-rm/doc-collections/faq/",
+        "type": "institution",
+        "note": "High-reliability engineering documentation culture (analogous rigour for pressure systems)"
+      }
+    ]
   }
 }

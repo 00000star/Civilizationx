@@ -202,6 +202,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-itu-d-history",
+        "title": "ITU — Development Sector (telecommunications development and history resources)",
+        "url": "https://www.itu.int/en/ITU-D/Pages/default.aspx",
+        "type": "institution",
+        "note": "International telecommunication development; use ITU library for telegraph-era treaty history"
+      },
+      {
+        "id": "src-wiki-telegraph",
+        "title": "Wikipedia — Electrical telegraph",
+        "url": "https://en.wikipedia.org/wiki/Electrical_telegraph",
+        "type": "wikipedia",
+        "note": "Morse systems and submarine cables references"
+      },
+      {
+        "id": "src-ieee-standards",
+        "title": "IEEE Standards Association",
+        "url": "https://standards.ieee.org/",
+        "type": "standard",
+        "note": "Modern telecommunications standards lineage"
+      }
+    ]
   }
 }

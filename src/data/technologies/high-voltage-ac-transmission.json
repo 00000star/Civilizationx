@@ -199,6 +199,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-itu-t",
+        "title": "ITU — Telecommunication standardisation (publications)",
+        "url": "https://www.itu.int/en/ITU-T/publications/Pages/default.aspx",
+        "type": "institution",
+        "note": "International standards culture parallel to grid code harmonisation"
+      },
+      {
+        "id": "src-wiki-hv",
+        "title": "Wikipedia — High-voltage transmission",
+        "url": "https://en.wikipedia.org/wiki/High-voltage_transmission",
+        "type": "wikipedia",
+        "note": "EHV concepts and references"
+      },
+      {
+        "id": "src-ieee-standards",
+        "title": "IEEE Standards Association",
+        "url": "https://standards.ieee.org/",
+        "type": "standard",
+        "note": "Power engineering standards for substations and apparatus"
+      }
+    ]
   }
 }

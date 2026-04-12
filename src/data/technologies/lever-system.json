@@ -5,8 +5,12 @@
   "category": "science",
   "era": "prehistoric",
   "difficulty": 1,
-  "prerequisites": ["stone-knapping"],
-  "unlocks": ["basic-hand-tools"],
+  "prerequisites": [
+    "stone-knapping"
+  ],
+  "unlocks": [
+    "basic-hand-tools"
+  ],
   "problem": "Human muscle output is limited and joints fatigue. Many tasks require forces beyond comfortable grip: lifting stone blocks, extracting roots, holding a split log while binding it, or applying controlled pressure to flake stone. The lever problem is redirecting and amplifying force through a rigid body rotating about a pivot so a small effort over a long arc moves a large resistance over a short arc.\n\nLevers also enable fine control: a long handle on a small cutting edge turns wrist motion into high contact pressure — the functional heart of axes, adzes, and chisels even before the classification is named.\n\nWithout explicit lever thinking, tools remain inefficient: short handles waste backs; wrong pivot placement damages edges. Making the lever explicit is prerequisite to later machines built from lever, wheel, and screw families.",
   "overview": "A lever system has a fulcrum, an effort arm, and a load arm. Class I places the fulcrum between load and effort (crowbar). Class II places the load between fulcrum and effort (wheelbarrow conceptually). Class III places effort between fulcrum and load (tongs, fishing rod) — trading force for speed and range.\n\nMechanical advantage in the ideal model equals the ratio of effort arm to load arm. Real systems lose efficiency to friction at the fulcrum, deformation of the bar, and off-axis loading that introduces bending.\n\nStone-age fulcrums are rock edges or logs; effort and load contacts are rounded to reduce stress concentrations. Metal ages add hardened pivots and bushings, but geometry remains king.\n\nLevers compose: compound levers in nail clippers and bolt cutters cascade small motions into huge forces. The Codex conserves the root pattern: rigid bar, pivot, two moments in equilibrium (approximately).",
   "principles": [
@@ -65,21 +69,29 @@
     {
       "name": "Straight-grained hardwood",
       "purpose": "High bending strength beam stock",
-      "earthLocations": ["Oak, ash, hickory in temperate zones", "ironwood in tropics"],
+      "earthLocations": [
+        "Oak, ash, hickory in temperate zones",
+        "ironwood in tropics"
+      ],
       "spaceAlternatives": "Aluminium extrusion when available",
       "processingRequired": "Season wood; split rather than saw when possible for long fibres"
     },
     {
       "name": "Hard stone fulcrum",
       "purpose": "Resists crushing at pivot",
-      "earthLocations": ["Granite corners, dense basalt"],
+      "earthLocations": [
+        "Granite corners, dense basalt"
+      ],
       "spaceAlternatives": "Metal blocks",
       "processingRequired": "Dress a flat seat to reduce rocking"
     },
     {
       "name": "Lubricants",
       "purpose": "Reduce pivot friction",
-      "earthLocations": ["Animal fat", "plant oils"],
+      "earthLocations": [
+        "Animal fat",
+        "plant oils"
+      ],
       "spaceAlternatives": "Synthetic greases",
       "processingRequired": "Clarify by heating and settling if gritty"
     }
@@ -89,35 +101,49 @@
       "order": 1,
       "title": "Define mechanical goal",
       "description": "Decide whether you need force multiplication (short load arm) or range of motion (long load arm). Sketch class I/II/III geometry before cutting wood.",
-      "prerequisiteTools": ["measuring cord", "charcoal marker"],
+      "prerequisiteTools": [
+        "measuring cord",
+        "charcoal marker"
+      ],
       "warningNote": "Wrong class selection cannot be fixed by 'pulling harder'"
     },
     {
       "order": 2,
       "title": "Select and shape the beam",
       "description": "Split billet along grain. Taper handle for comfort; leave thickness at maximum bending moment region (often near fulcrum for class I).",
-      "prerequisiteTools": ["axe", "drawknife"],
+      "prerequisiteTools": [
+        "axe",
+        "drawknife"
+      ],
       "warningNote": "Shavings ignite easily near fire — clear workspace"
     },
     {
       "order": 3,
       "title": "Seat the fulcrum",
       "description": "Carve a shallow saddle into beam or use separate block with anti-slip footing. Test rocking under body weight before applying peak loads.",
-      "prerequisiteTools": ["chisel", "mallet"],
+      "prerequisiteTools": [
+        "chisel",
+        "mallet"
+      ],
       "warningNote": "Fulcrum slip under load can throw operator"
     },
     {
       "order": 4,
       "title": "Attach load interface",
       "description": "For pry bars, forge or grind a flat claw; for lifting pads, add cross pins to prevent slip. Secure with wedges or metal straps if needed.",
-      "prerequisiteTools": ["drill or awl", "wedges"],
+      "prerequisiteTools": [
+        "drill or awl",
+        "wedges"
+      ],
       "warningNote": "Pinned joints under tension can eject pins — use shoulders"
     },
     {
       "order": 5,
       "title": "Proof test progressively",
       "description": "Load to 1.25× working load with known masses if possible. Listen for fibre cracks. Shorten lever arm if creep appears.",
-      "prerequisiteTools": ["known weights or water barrels"],
+      "prerequisiteTools": [
+        "known weights or water barrels"
+      ],
       "warningNote": "Use body posture that keeps load path within base of support — levers amplify kickback too"
     }
   ],
@@ -158,6 +184,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-nist-pml-lever",
+        "title": "NIST — PML",
+        "url": "https://www.nist.gov/pml",
+        "type": "institution",
+        "note": "Force metrology for lever and machine experiments"
+      },
+      {
+        "id": "src-wiki-lever",
+        "title": "Wikipedia — Lever",
+        "url": "https://en.wikipedia.org/wiki/Lever",
+        "type": "wikipedia",
+        "note": "Class I–III levers, torque, and equilibrium"
+      },
+      {
+        "id": "src-osha-heat",
+        "title": "OSHA — Heat",
+        "url": "https://www.osha.gov/heat",
+        "type": "institution",
+        "note": "Industrial hygiene when lifting outdoors in heat (field archaeology parallels)"
+      }
+    ]
   }
 }

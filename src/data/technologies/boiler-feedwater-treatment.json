@@ -199,6 +199,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-nrc-steam-culture",
+        "title": "U.S. NRC — Public information FAQ",
+        "url": "https://www.nrc.gov/reading-rm/doc-collections/faq/",
+        "type": "institution",
+        "note": "High-reliability documentation practices for steam plants (nuclear context)"
+      },
+      {
+        "id": "src-wiki-boiler",
+        "title": "Wikipedia — Boiler",
+        "url": "https://en.wikipedia.org/wiki/Boiler",
+        "type": "wikipedia",
+        "note": "Steam generation and water treatment overview"
+      },
+      {
+        "id": "src-who-air",
+        "title": "WHO — Household air pollution and health",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/household-air-pollution-and-health",
+        "type": "institution",
+        "note": "Combustion-related health risks when boilers are misapplied in enclosed spaces"
+      }
+    ]
   }
 }

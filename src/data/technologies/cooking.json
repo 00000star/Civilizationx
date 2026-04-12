@@ -5,7 +5,9 @@
   "category": "food",
   "era": "prehistoric",
   "difficulty": 1,
-  "prerequisites": ["fire"],
+  "prerequisites": [
+    "fire"
+  ],
   "unlocks": [],
   "problem": "Many foods are marginal without heat: proteins can harbour pathogens; some plants contain heat-labile toxins or enzyme inhibitors; starches in tubers and grains are less accessible raw. Chewing and digestion are metabolically expensive — heat denatures proteins, gelatinises starches, and breaks down cell walls, changing what calories a human gut can absorb per hour.\n\nCooking also concentrates flavours and enables combining ingredients into stews that homogenise nutrients across a group — a social technology as much as a chemical one.\n\nThe engineering problem is not merely temperature peaks but controlled heat transfer without burning, efficient fuel use, and containers that survive repeated thermal cycling. That couples cooking tightly to ceramics and later metals.",
   "overview": "Cooking methods map to heat transfer modes. Direct radiation from coals or flame sears surfaces — good for Maillard browning, easy to overcook interiors. Conduction through stones (hot-rock boiling) heats liquids in organic containers that would burn in flame. Convection in earth ovens and steam pits circulates moist heat evenly. Immersion boiling in pottery is the gateway to grains and legumes at scale.\n\nTemperature bands matter: pasteurisation concepts (time at temperature) reduce pathogen risk though premodern cooks used heuristics — foam, colour, smell. For plant toxins, specific knowledge replaces thermometers: slow simmering versus rapid boil changes outcomes for some cyanogenic or lectin-rich foods.\n\nFuel efficiency is a design variable: insulated pits reuse heat; lids reduce evaporative losses; stacking pots saves charcoal. Ash and soot management affects food taste and long-term respiratory health — another reason ventilation design belongs with cooking.\n\nNutritionally, cooking can reduce some heat-sensitive vitamins while increasing bioavailability of others; the net depends on diet composition. The civilisational net effect has been overwhelmingly enabling for population density.",
@@ -65,21 +67,27 @@
     {
       "name": "Water",
       "purpose": "Boiling, steaming, cleaning",
-      "earthLocations": ["Rivers, springs, collected rain"],
+      "earthLocations": [
+        "Rivers, springs, collected rain"
+      ],
       "spaceAlternatives": "Recovered humidity condensate — must be purified",
       "processingRequired": "Clarify and boil if biological risk"
     },
     {
       "name": "Fuel",
       "purpose": "Heat",
-      "earthLocations": ["As fire entry"],
+      "earthLocations": [
+        "As fire entry"
+      ],
       "spaceAlternatives": "Electric resistance",
       "processingRequired": "Dry storage"
     },
     {
       "name": "Food ingredients",
       "purpose": "Nutrition",
-      "earthLocations": ["Hunted, gathered, cultivated sources"],
+      "earthLocations": [
+        "Hunted, gathered, cultivated sources"
+      ],
       "spaceAlternatives": "Hydroponic biomass",
       "processingRequired": "Knowledge of local toxins is mandatory preprocessing"
     }
@@ -89,35 +97,48 @@
       "order": 1,
       "title": "Establish a cooking fire layout",
       "description": "Rake a bed of coals; place adjustable pot support (stones, trivet) for air access. Keep a separate small flame zone for searing if needed.",
-      "prerequisiteTools": ["fire tongs from green wood", "stones"],
+      "prerequisiteTools": [
+        "fire tongs from green wood",
+        "stones"
+      ],
       "warningNote": "River stones with trapped moisture can explode — use dry dense stones"
     },
     {
       "order": 2,
       "title": "Pre-treat hazardous foods",
       "description": "Soak, ferment, or multiple-change boiling for known toxic plants per regional ethnobotany. When uncertain, do not eat — this step is knowledge-gated.",
-      "prerequisiteTools": ["containers", "water"],
+      "prerequisiteTools": [
+        "containers",
+        "water"
+      ],
       "warningNote": "Wild mushroom misidentification is not fixable by cooking"
     },
     {
       "order": 3,
       "title": "Bring to heat using appropriate mode",
       "description": "For grains/legumes, simmer until tender — hardness of water and altitude change times. For meats, ensure time-at-temperature heuristics your culture trusts.",
-      "prerequisiteTools": ["pottery or metal pot when available"],
+      "prerequisiteTools": [
+        "pottery or metal pot when available"
+      ],
       "warningNote": "Undercooked pork and wild game carry parasite risk in many regions"
     },
     {
       "order": 4,
       "title": "Hold and rest",
       "description": "Thick stews continue cooking off heat due to thermal mass; meats rest to redistribute juices in culinary terms — in survival terms, reduces immediate scald risk.",
-      "prerequisiteTools": ["insulating mat optional"],
+      "prerequisiteTools": [
+        "insulating mat optional"
+      ],
       "warningNote": "Spoilage risk remains — cool quickly if storing"
     },
     {
       "order": 5,
       "title": "Clean vessels",
       "description": "Scrape char, scour with sand, rinse hot. Residual oils go rancid; biofilms harbour pathogens.",
-      "prerequisiteTools": ["scouring sand", "water"],
+      "prerequisiteTools": [
+        "scouring sand",
+        "water"
+      ],
       "warningNote": "Thermal shock — do not plunge hot pottery into cold water"
     }
   ],
@@ -163,6 +184,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-who-food-safety",
+        "title": "WHO — Food safety fact sheet",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/food-safety",
+        "type": "institution",
+        "note": "Foodborne illness prevention and safe food handling principles"
+      },
+      {
+        "id": "src-cdc-foodsafety",
+        "title": "CDC — Food safety index",
+        "url": "https://www.cdc.gov/foodsafety/index.html",
+        "type": "institution",
+        "note": "U.S. public-health guidance complementary to WHO materials"
+      },
+      {
+        "id": "src-wiki-cooking",
+        "title": "Wikipedia — Cooking",
+        "url": "https://en.wikipedia.org/wiki/Cooking",
+        "type": "wikipedia",
+        "note": "Heat transfer, food chemistry overview, and further reading"
+      }
+    ]
   }
 }

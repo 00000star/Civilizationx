@@ -201,6 +201,28 @@
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [],
-    "sources": []
+    "sources": [
+      {
+        "id": "src-nist-conductivity",
+        "title": "NIST — Conductivity and resistivity of copper (via materials portal)",
+        "url": "https://www.nist.gov/mml",
+        "type": "institution",
+        "note": "Electrical material standards and measurement science entry point"
+      },
+      {
+        "id": "src-wiki-conductor",
+        "title": "Wikipedia — Electrical conductor",
+        "url": "https://en.wikipedia.org/wiki/Electrical_conductor",
+        "type": "wikipedia",
+        "note": "Copper conductivity, stranding, and cable design references"
+      },
+      {
+        "id": "src-ieee-standards",
+        "title": "IEEE Standards Association",
+        "url": "https://standards.ieee.org/",
+        "type": "standard",
+        "note": "Electrical power and electronics standards catalogue (subscription may apply)"
+      }
+    ]
   }
 }

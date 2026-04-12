@@ -1,0 +1,252 @@
+{
+  "fire": [
+    {"id": "src-humanorigins-fire", "title": "Smithsonian National Museum of Natural History — Human Origins Program (evidence index)", "url": "https://humanorigins.si.edu/evidence", "type": "institution", "note": "Archaeological and palaeoanthropological context for early human behaviour and fire use"},
+    {"id": "src-nist-sp811", "title": "NIST Special Publication 811 — Guide for the Use of the International System of Units (SI)", "url": "https://www.nist.gov/pml/special-publication-811", "type": "standard", "note": "Authoritative SI guidance when converting temperatures, energies, and other quantities used in combustion teaching"},
+    {"id": "src-wiki-fire-control", "title": "Wikipedia — Control of fire by early humans", "url": "https://en.wikipedia.org/wiki/Control_of_fire_by_early_humans", "type": "wikipedia", "note": "Overview with citations to primary literature; use as a map to peer-reviewed sources"}
+  ],
+  "stone-knapping": [
+    {"id": "src-humanorigins-behaviour", "title": "Smithsonian Human Origins — Behaviour evidence", "url": "https://humanorigins.si.edu/evidence/behavior", "type": "institution", "note": "Behavioural archaeology including tool use"},
+    {"id": "src-wiki-lithic", "title": "Wikipedia — Lithic reduction", "url": "https://en.wikipedia.org/wiki/Lithic_reduction", "type": "wikipedia", "note": "Core concepts and terminology for knapping; follow references for lithic analysis"},
+    {"id": "src-nist-si", "title": "NIST — SI Redefinition (metrology context)", "url": "https://www.nist.gov/si-redefinition", "type": "standard", "note": "Precision measurement standards relevant to experimental archaeology instrumentation"}
+  ],
+  "rope-and-cordage": [
+    {"id": "src-fao-forestry", "title": "FAO — Forestry and forest products", "url": "https://www.fao.org/forestry/en/", "type": "institution", "note": "Plant-fibre resources, sustainability, and rural fibre supply chains"},
+    {"id": "src-wiki-rope", "title": "Wikipedia — Rope", "url": "https://en.wikipedia.org/wiki/Rope", "type": "wikipedia", "note": "Construction, materials, and history; trace citations for cordage engineering"},
+    {"id": "src-osha-general", "title": "OSHA — Occupational Safety and Health Administration (standards portal)", "url": "https://www.osha.gov/laws-regs/standards", "type": "institution", "note": "Machine guarding, PPE, and fibre-processing hazards in workshop settings"}
+  ],
+  "bone-tools": [
+    {"id": "src-nmnh", "title": "Smithsonian National Museum of Natural History", "url": "https://naturalhistory.si.edu/", "type": "institution", "note": "Institutional context for osteology, comparative anatomy, and archaeological collections"},
+    {"id": "src-wiki-bone-tool", "title": "Wikipedia — Bone tool", "url": "https://en.wikipedia.org/wiki/Bone_tool", "type": "wikipedia", "note": "Typology and archaeological examples"},
+    {"id": "src-who-nutrition", "title": "WHO — Nutrition health topic", "url": "https://www.who.int/health-topics/nutrition", "type": "institution", "note": "Human nutritional context when discussing food processing tools (cross-disciplinary anchor)"}
+  ],
+  "charcoal": [
+    {"id": "src-epa", "title": "U.S. EPA — Environmental topics portal", "url": "https://www.epa.gov/", "type": "institution", "note": "Air quality, emissions, and environmental chemistry relevant to pyrolysis and charcoal production"},
+    {"id": "src-wiki-charcoal", "title": "Wikipedia — Charcoal", "url": "https://en.wikipedia.org/wiki/Charcoal", "type": "wikipedia", "note": "Manufacturing routes, chemistry overview, and references"},
+    {"id": "src-nps-campfire", "title": "U.S. National Park Service — Campfires article", "url": "https://www.nps.gov/articles/campfires.htm", "type": "institution", "note": "Outdoor fire safety and responsible burning practices"}
+  ],
+  "ceramics-and-pottery": [
+    {"id": "src-unesco-culture", "title": "UNESCO — Culture sector", "url": "https://www.unesco.org/en/culture", "type": "institution", "note": "Living heritage, craft traditions, and documentation of ceramic arts in cultural context"},
+    {"id": "src-wiki-pottery", "title": "Wikipedia — Pottery", "url": "https://en.wikipedia.org/wiki/Pottery", "type": "wikipedia", "note": "Materials science and kiln-process overview with citations"},
+    {"id": "src-nist-pml", "title": "NIST — Physical Measurement Laboratory", "url": "https://www.nist.gov/pml", "type": "institution", "note": "High-temperature metrology and materials characterization context"}
+  ],
+  "shelter-construction-basic": [
+    {"id": "src-osha", "title": "OSHA — Agency home", "url": "https://www.osha.gov/", "type": "institution", "note": "Fall protection, scaffolding, excavation, and construction safety rules (jurisdiction-specific)"},
+    {"id": "src-wiki-housing", "title": "Wikipedia — Housing", "url": "https://en.wikipedia.org/wiki/Housing", "type": "wikipedia", "note": "Shelter typology and environmental design references"},
+    {"id": "src-cdc-healthy-homes", "title": "CDC — Healthy housing and environmental health portal", "url": "https://www.cdc.gov/nceh/", "type": "institution", "note": "Indoor environmental hazards, ventilation, and community health links"}
+  ],
+  "cooking": [
+    {"id": "src-who-food-safety", "title": "WHO — Food safety fact sheet", "url": "https://www.who.int/news-room/fact-sheets/detail/food-safety", "type": "institution", "note": "Foodborne illness prevention and safe food handling principles"},
+    {"id": "src-cdc-foodsafety", "title": "CDC — Food safety index", "url": "https://www.cdc.gov/foodsafety/index.html", "type": "institution", "note": "U.S. public-health guidance complementary to WHO materials"},
+    {"id": "src-wiki-cooking", "title": "Wikipedia — Cooking", "url": "https://en.wikipedia.org/wiki/Cooking", "type": "wikipedia", "note": "Heat transfer, food chemistry overview, and further reading"}
+  ],
+  "fishing-net-and-line": [
+    {"id": "src-fao-fishery", "title": "FAO — Fisheries and Aquaculture", "url": "https://www.fao.org/fishery/en", "type": "institution", "note": "Gear types, fisheries management, and responsible harvesting"},
+    {"id": "src-wiki-net", "title": "Wikipedia — Fishing net", "url": "https://en.wikipedia.org/wiki/Fishing_net", "type": "wikipedia", "note": "Net-making materials and methods with citations"},
+    {"id": "src-itu-r", "title": "ITU — Radiocommunication Sector (ITU-R)", "url": "https://www.itu.int/en/ITU-R/Pages/default.aspx", "type": "institution", "note": "Radio spectrum standards context for modern electronic aids to navigation and safety communications"}
+  ],
+  "smelting-bronze-age": [
+    {"id": "src-unesco-ich", "title": "UNESCO — Lists of Intangible Cultural Heritage", "url": "https://ich.unesco.org/en/lists", "type": "institution", "note": "Documentation model for traditional craft and metallurgical heritage"},
+    {"id": "src-wiki-bronze", "title": "Wikipedia — Bronze", "url": "https://en.wikipedia.org/wiki/Bronze", "type": "wikipedia", "note": "Alloys, history, and metallurgical references"},
+    {"id": "src-nist-materials", "title": "NIST — Materials Measurement Science portal", "url": "https://www.nist.gov/mml", "type": "institution", "note": "Materials characterization methods relevant to alloy analysis"}
+  ],
+  "iron-smelting": [
+    {"id": "src-osha-heat", "title": "OSHA — Heat illness prevention", "url": "https://www.osha.gov/heat", "type": "institution", "note": "Thermal stress and industrial hygiene for furnace work"},
+    {"id": "src-wiki-smelting", "title": "Wikipedia — Smelting", "url": "https://en.wikipedia.org/wiki/Smelting", "type": "wikipedia", "note": "Pyrometallurgical principles and historical development"},
+    {"id": "src-epa-sustainability", "title": "U.S. EPA — Sustainability", "url": "https://www.epa.gov/sustainability", "type": "institution", "note": "Environmental management framing for emissions and waste from smelting"}
+  ],
+  "steel-production": [
+    {"id": "src-energy", "title": "U.S. Department of Energy — Energy efficiency and industrial technology", "url": "https://www.energy.gov/eere/renewable-energy", "type": "institution", "note": "Industrial energy use context for steelmaking and decarbonisation pathways"},
+    {"id": "src-wiki-steel", "title": "Wikipedia — Steel", "url": "https://en.wikipedia.org/wiki/Steel", "type": "wikipedia", "note": "Processes (BOF, EAF), microstructure introduction, citations"},
+    {"id": "src-nist-pml", "title": "NIST — Physical Measurement Laboratory", "url": "https://www.nist.gov/pml", "type": "institution", "note": "Metrology for temperature and composition measurements in materials processing"}
+  ],
+  "glass-making": [
+    {"id": "src-nist-sp811-glass", "title": "NIST SP 811 — SI Guide", "url": "https://www.nist.gov/pml/special-publication-811", "type": "standard", "note": "Thermal unit consistency for furnace engineering calculations"},
+    {"id": "src-wiki-glass", "title": "Wikipedia — Glass", "url": "https://en.wikipedia.org/wiki/Glass", "type": "wikipedia", "note": "Composition, viscosity, and manufacturing overview"},
+    {"id": "src-unesco-comm", "title": "UNESCO — Communication and information", "url": "https://www.unesco.org/en/communication-information", "type": "institution", "note": "Institutional context for scientific and technical information preservation"}
+  ],
+  "wheel-and-axle": [
+    {"id": "src-nasa-science", "title": "NASA Science — Solar system exploration portal", "url": "https://science.nasa.gov/solar-system/", "type": "institution", "note": "NASA public science communication; rotational dynamics and mobility are central to planetary robotics"},
+    {"id": "src-wiki-wheel", "title": "Wikipedia — Wheel", "url": "https://en.wikipedia.org/wiki/Wheel", "type": "wikipedia", "note": "Mechanical advantage, history, and citations"},
+    {"id": "src-nist-si", "title": "NIST — SI Redefinition", "url": "https://www.nist.gov/si-redefinition", "type": "standard", "note": "Metrology for torque and force calibration in mechanical teaching labs"}
+  ],
+  "pulley": [
+    {"id": "src-nist-pml-pulley", "title": "NIST — Physical Measurement Laboratory", "url": "https://www.nist.gov/pml", "type": "institution", "note": "Force and mass standards context for rigging calculations"},
+    {"id": "src-wiki-pulley", "title": "Wikipedia — Pulley", "url": "https://en.wikipedia.org/wiki/Pulley", "type": "wikipedia", "note": "Mechanical advantage and block-and-tackle theory"},
+    {"id": "src-osha", "title": "OSHA — Agency home", "url": "https://www.osha.gov/", "type": "institution", "note": "Crane, hoist, and rigging safety regulations (U.S.; compare local codes)"}
+  ],
+  "lever-system": [
+    {"id": "src-nist-pml-lever", "title": "NIST — PML", "url": "https://www.nist.gov/pml", "type": "institution", "note": "Force metrology for lever and machine experiments"},
+    {"id": "src-wiki-lever", "title": "Wikipedia — Lever", "url": "https://en.wikipedia.org/wiki/Lever", "type": "wikipedia", "note": "Class I–III levers, torque, and equilibrium"},
+    {"id": "src-osha-heat", "title": "OSHA — Heat", "url": "https://www.osha.gov/heat", "type": "institution", "note": "Industrial hygiene when lifting outdoors in heat (field archaeology parallels)"}
+  ],
+  "basic-hand-tools": [
+    {"id": "src-osha-tools", "title": "OSHA — Standards", "url": "https://www.osha.gov/laws-regs/standards", "type": "institution", "note": "Guarding, PPE, and hand-tool injury prevention"},
+    {"id": "src-wiki-hand-tool", "title": "Wikipedia — Hand tool", "url": "https://en.wikipedia.org/wiki/Hand_tool", "type": "wikipedia", "note": "Categories and safe use overview"},
+    {"id": "src-cdc", "title": "CDC — Agency home", "url": "https://www.cdc.gov/", "type": "institution", "note": "First aid and wound infection prevention when cuts occur in workshop settings"}
+  ],
+  "cart-and-wagon": [
+    {"id": "src-nyc-dot", "title": "NYC DOT — Brooklyn Bridge (historic infrastructure case study)", "url": "https://www1.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml", "type": "institution", "note": "Public works engineering and load-carrying infrastructure context"},
+    {"id": "src-wiki-wagon", "title": "Wikipedia — Wagon", "url": "https://en.wikipedia.org/wiki/Wagon", "type": "wikipedia", "note": "Vehicle history and mechanics references"},
+    {"id": "src-fao", "title": "FAO — Home", "url": "https://www.fao.org/home/en", "type": "institution", "note": "Draught animal welfare, rural transport, and agricultural logistics (verify regional guidance)"}
+  ],
+  "road-construction": [
+    {"id": "src-nyc-dot-road", "title": "NYC DOT — Infrastructure portal (Brooklyn Bridge example)", "url": "https://www1.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml", "type": "institution", "note": "Municipal civil engineering documentation style"},
+    {"id": "src-wiki-road", "title": "Wikipedia — Road", "url": "https://en.wikipedia.org/wiki/Road", "type": "wikipedia", "note": "Pavement types, drainage, and standards references"},
+    {"id": "src-epa", "title": "U.S. EPA", "url": "https://www.epa.gov/", "type": "institution", "note": "Stormwater, dust control, and environmental compliance for earthworks"}
+  ],
+  "bicycle": [
+    {"id": "src-cdc-active", "title": "CDC — Physical activity basics", "url": "https://www.cdc.gov/physical-activity-basics/about/index.html", "type": "institution", "note": "Health framing for human-powered transport"},
+    {"id": "src-wiki-bicycle", "title": "Wikipedia — Bicycle", "url": "https://en.wikipedia.org/wiki/Bicycle", "type": "wikipedia", "note": "Mechanics, history, and safety culture references"},
+    {"id": "src-osha", "title": "OSHA", "url": "https://www.osha.gov/", "type": "institution", "note": "Workshop safety for fabrication and repair of cycle components"}
+  ],
+  "steam-engine": [
+    {"id": "src-energy-steam", "title": "U.S. Department of Energy — EERE", "url": "https://www.energy.gov/eere/renewable-energy", "type": "institution", "note": "Industrial energy systems and efficiency context"},
+    {"id": "src-wiki-steam-engine", "title": "Wikipedia — Steam engine", "url": "https://en.wikipedia.org/wiki/Steam_engine", "type": "wikipedia", "note": "Thermodynamic cycles and historical development"},
+    {"id": "src-nrc-public", "title": "U.S. NRC — Public document collections FAQ", "url": "https://www.nrc.gov/reading-rm/doc-collections/faq/", "type": "institution", "note": "High-reliability engineering documentation culture (analogous rigour for pressure systems)"}
+  ],
+  "internal-combustion-engine": [
+    {"id": "src-epa-mobile", "title": "U.S. EPA — Transportation and air quality program index", "url": "https://www.epa.gov/transportation-air-pollution-and-climate-change", "type": "institution", "note": "Emissions science and regulatory context for ICE vehicles"},
+    {"id": "src-wiki-ice", "title": "Wikipedia — Internal combustion engine", "url": "https://en.wikipedia.org/wiki/Internal_combustion_engine", "type": "wikipedia", "note": "Cycles, fuels, and engineering references"},
+    {"id": "src-nist-sp811", "title": "NIST SP 811", "url": "https://www.nist.gov/pml/special-publication-811", "type": "standard", "note": "SI units for power, energy, and efficiency calculations"}
+  ],
+  "automobile": [
+    {"id": "src-wiki-auto", "title": "Wikipedia — Automobile", "url": "https://en.wikipedia.org/wiki/Automobile", "type": "wikipedia", "note": "Systems overview; pair with national vehicle safety agency materials for your jurisdiction"},
+    {"id": "src-epa-transport", "title": "U.S. EPA — Transportation and climate change portal", "url": "https://www.epa.gov/transportation-air-pollution-and-climate-change", "type": "institution", "note": "Emissions and fuels context"},
+    {"id": "src-energy", "title": "U.S. Department of Energy", "url": "https://www.energy.gov/", "type": "institution", "note": "Vehicle fuels, efficiency, and research programs"}
+  ],
+  "steam-locomotive": [
+    {"id": "src-wiki-loco", "title": "Wikipedia — Steam locomotive", "url": "https://en.wikipedia.org/wiki/Steam_locomotive", "type": "wikipedia", "note": "Boiler, valve gear, and adhesion references"},
+    {"id": "src-nist-sp811", "title": "NIST SP 811", "url": "https://www.nist.gov/pml/special-publication-811", "type": "standard", "note": "Metrology for pressure and temperature instrumentation"},
+    {"id": "src-osha", "title": "OSHA", "url": "https://www.osha.gov/", "type": "institution", "note": "Boiler house and maintenance safety"}
+  ],
+  "fixed-wing-aircraft": [
+    {"id": "src-nasa-science-flight", "title": "NASA Science", "url": "https://science.nasa.gov/solar-system/", "type": "institution", "note": "NASA public STEM portal; follow NASA aeronautics publications for flight physics"},
+    {"id": "src-wiki-aircraft", "title": "Wikipedia — Fixed-wing aircraft", "url": "https://en.wikipedia.org/wiki/Fixed-wing_aircraft", "type": "wikipedia", "note": "Aerodynamics and structures introduction"},
+    {"id": "src-itu-r", "title": "ITU-R", "url": "https://www.itu.int/en/ITU-R/Pages/default.aspx", "type": "institution", "note": "Radiocommunication standards for aviation spectrum and safety services"}
+  ],
+  "copper-wire-and-cable": [
+    {"id": "src-nist-conductivity", "title": "NIST — Conductivity and resistivity of copper (via materials portal)", "url": "https://www.nist.gov/mml", "type": "institution", "note": "Electrical material standards and measurement science entry point"},
+    {"id": "src-wiki-conductor", "title": "Wikipedia — Electrical conductor", "url": "https://en.wikipedia.org/wiki/Electrical_conductor", "type": "wikipedia", "note": "Copper conductivity, stranding, and cable design references"},
+    {"id": "src-ieee-standards", "title": "IEEE Standards Association", "url": "https://standards.ieee.org/", "type": "standard", "note": "Electrical power and electronics standards catalogue (subscription may apply)"}
+  ],
+  "boiler-feedwater-treatment": [
+    {"id": "src-nrc-steam-culture", "title": "U.S. NRC — Public information FAQ", "url": "https://www.nrc.gov/reading-rm/doc-collections/faq/", "type": "institution", "note": "High-reliability documentation practices for steam plants (nuclear context)"},
+    {"id": "src-wiki-boiler", "title": "Wikipedia — Boiler", "url": "https://en.wikipedia.org/wiki/Boiler", "type": "wikipedia", "note": "Steam generation and water treatment overview"},
+    {"id": "src-who-air", "title": "WHO — Household air pollution and health", "url": "https://www.who.int/news-room/fact-sheets/detail/household-air-pollution-and-health", "type": "institution", "note": "Combustion-related health risks when boilers are misapplied in enclosed spaces"}
+  ],
+  "steam-turbine-electric-generation": [
+    {"id": "src-energy-eere", "title": "U.S. DOE — EERE programs", "url": "https://www.energy.gov/eere/renewable-energy", "type": "institution", "note": "Industrial energy systems context"},
+    {"id": "src-wiki-steam-turbine", "title": "Wikipedia — Steam turbine", "url": "https://en.wikipedia.org/wiki/Steam_turbine", "type": "wikipedia", "note": "Thermodynamics and staging references"},
+    {"id": "src-nist-sp811", "title": "NIST SP 811", "url": "https://www.nist.gov/pml/special-publication-811", "type": "standard", "note": "SI units for enthalpy, power, and efficiency reporting"}
+  ],
+  "electrical-transformer": [
+    {"id": "src-ieee-standards", "title": "IEEE Standards Association", "url": "https://standards.ieee.org/", "type": "standard", "note": "IEEE C57 transformer family and related power standards"},
+    {"id": "src-wiki-transformer", "title": "Wikipedia — Transformer", "url": "https://en.wikipedia.org/wiki/Transformer", "type": "wikipedia", "note": "Magnetics, equivalent circuits, and safety notes"},
+    {"id": "src-nist-sp811", "title": "NIST SP 811", "url": "https://www.nist.gov/pml/special-publication-811", "type": "standard", "note": "SI coherence for magnetic flux, voltage, and power"}
+  ],
+  "electrical-power-grid": [
+    {"id": "src-itu-d", "title": "ITU — Development Sector (ICT for resilient infrastructure)", "url": "https://www.itu.int/en/ITU-D/Pages/default.aspx", "type": "institution", "note": "Telecommunications resilience alongside grid modernisation"},
+    {"id": "src-wiki-grid", "title": "Wikipedia — Electrical grid", "url": "https://en.wikipedia.org/wiki/Electrical_grid", "type": "wikipedia", "note": "Topology, frequency control, and reliability references"},
+    {"id": "src-energy", "title": "U.S. Department of Energy", "url": "https://www.energy.gov/", "type": "institution", "note": "National electricity policy and R&D entry point (compare local regulators)"}
+  ],
+  "electric-motor": [
+    {"id": "src-ieee-standards", "title": "IEEE Standards Association", "url": "https://standards.ieee.org/", "type": "standard", "note": "Rotating machinery and power electronics standards"},
+    {"id": "src-wiki-motor", "title": "Wikipedia — Electric motor", "url": "https://en.wikipedia.org/wiki/Electric_motor", "type": "wikipedia", "note": "Induction, synchronous, and DC motor theory"},
+    {"id": "src-nist-pml", "title": "NIST — PML", "url": "https://www.nist.gov/pml", "type": "institution", "note": "Precision electrical measurements for efficiency testing"}
+  ],
+  "electric-lighting-systems": [
+    {"id": "src-who-air-light", "title": "WHO — Household air pollution and health", "url": "https://www.who.int/news-room/fact-sheets/detail/household-air-pollution-and-health", "type": "institution", "note": "Indoor air quality and combustion products from lighting fuels where relevant"},
+    {"id": "src-wiki-lighting", "title": "Wikipedia — Electric lighting", "url": "https://en.wikipedia.org/wiki/Electric_lighting", "type": "wikipedia", "note": "Lamp technologies and history"},
+    {"id": "src-energy", "title": "U.S. Department of Energy", "url": "https://www.energy.gov/", "type": "institution", "note": "Lighting efficiency programs and solid-state lighting R&D"}
+  ],
+  "high-voltage-ac-transmission": [
+    {"id": "src-itu-t", "title": "ITU — Telecommunication standardisation (publications)", "url": "https://www.itu.int/en/ITU-T/publications/Pages/default.aspx", "type": "institution", "note": "International standards culture parallel to grid code harmonisation"},
+    {"id": "src-wiki-hv", "title": "Wikipedia — High-voltage transmission", "url": "https://en.wikipedia.org/wiki/High-voltage_transmission", "type": "wikipedia", "note": "EHV concepts and references"},
+    {"id": "src-ieee-standards", "title": "IEEE Standards Association", "url": "https://standards.ieee.org/", "type": "standard", "note": "Power engineering standards for substations and apparatus"}
+  ],
+  "dc-power-transmission-and-motor-drives": [
+    {"id": "src-ieee-standards", "title": "IEEE Standards Association", "url": "https://standards.ieee.org/", "type": "standard", "note": "Power electronics and motor drives standards"},
+    {"id": "src-wiki-dc", "title": "Wikipedia — High-voltage direct current", "url": "https://en.wikipedia.org/wiki/High-voltage_direct_current", "type": "wikipedia", "note": "HVDC links and converter stations (subset of DC power transmission topic)"},
+    {"id": "src-energy", "title": "U.S. Department of Energy", "url": "https://www.energy.gov/", "type": "institution", "note": "Grid modernisation and industrial efficiency programs"}
+  ],
+  "nuclear-fission-power-plant": [
+    {"id": "src-iaea-home", "title": "International Atomic Energy Agency", "url": "https://www.iaea.org/", "type": "institution", "note": "Nuclear safety, safeguards, and technical publications (navigate by topic)"},
+    {"id": "src-nrc", "title": "U.S. Nuclear Regulatory Commission", "url": "https://www.nrc.gov/", "type": "institution", "note": "Reactor licensing, radiation protection, and public reading room"},
+    {"id": "src-wiki-nuclear", "title": "Wikipedia — Nuclear power", "url": "https://en.wikipedia.org/wiki/Nuclear_power", "type": "wikipedia", "note": "Survey article; always cross-check operational limits with licensed procedures"}
+  ],
+  "solar-photovoltaic-power-systems": [
+    {"id": "src-energy-solar-office", "title": "U.S. DOE — Solar Energy Technologies Office", "url": "https://www.energy.gov/eere/solar/solar-energy-technologies-office", "type": "institution", "note": "PV performance, grid integration, and manufacturing R&D"},
+    {"id": "src-wiki-pv", "title": "Wikipedia — Photovoltaic system", "url": "https://en.wikipedia.org/wiki/Photovoltaic_system", "type": "wikipedia", "note": "Array wiring, inverters, and safety disconnect requirements overview"},
+    {"id": "src-nist-pml", "title": "NIST — PML", "url": "https://www.nist.gov/pml", "type": "institution", "note": "Metrology for irradiance sensors and electrical efficiency measurements"}
+  ],
+  "high-capacity-electrochemical-batteries": [
+    {"id": "src-doi-battery-review", "title": "Peer-reviewed article (Elsevier) — lithium-ion battery topics via DOI resolver", "url": "https://doi.org/10.1016/j.jpowsour.2016.07.100", "type": "paper", "note": "Example contemporary review article reachable via DOI; library access may be required for full text"},
+    {"id": "src-energy-storage", "title": "U.S. Department of Energy — EERE", "url": "https://www.energy.gov/eere/renewable-energy", "type": "institution", "note": "Grid storage and battery research programs entry point"},
+    {"id": "src-wiki-li", "title": "Wikipedia — Lithium-ion battery", "url": "https://en.wikipedia.org/wiki/Lithium-ion_battery", "type": "wikipedia", "note": "Cell chemistry, thermal runaway, and safety references"}
+  ],
+  "spoken-language": [
+    {"id": "src-unesco-ich-lang", "title": "UNESCO — Intangible Cultural Heritage lists", "url": "https://ich.unesco.org/en/lists", "type": "institution", "note": "Documentation of living language and oral tradition practices"},
+    {"id": "src-wiki-language", "title": "Wikipedia — Language", "url": "https://en.wikipedia.org/wiki/Language", "type": "wikipedia", "note": "Linguistics overview with extensive references"},
+    {"id": "src-who-comm", "title": "WHO — Health topics portal", "url": "https://www.who.int/health-topics", "type": "institution", "note": "Health communication and community engagement context"}
+  ],
+  "writing-early-systems": [
+    {"id": "src-unesco-comm", "title": "UNESCO — Communication and information", "url": "https://www.unesco.org/en/communication-information", "type": "institution", "note": "Memory of the World and documentary heritage programmes"},
+    {"id": "src-wiki-writing", "title": "Wikipedia — Writing", "url": "https://en.wikipedia.org/wiki/Writing", "type": "wikipedia", "note": "Origins, scripts, and archaeology references"},
+    {"id": "src-loc-preservation", "title": "Library of Congress — Preservation Directorate", "url": "https://www.loc.gov/preservation/", "type": "institution", "note": "Manuscript care, inks, and conservation science"}
+  ],
+  "paper-and-ink-media": [
+    {"id": "src-loc-preservation-paper", "title": "Library of Congress — Preservation Directorate", "url": "https://www.loc.gov/preservation/", "type": "institution", "note": "Paper conservation, inks, and stabilisation for library collections"},
+    {"id": "src-wiki-paper", "title": "Wikipedia — Paper", "url": "https://en.wikipedia.org/wiki/Paper", "type": "wikipedia", "note": "Pulp chemistry and manufacturing history"},
+    {"id": "src-unesco-culture", "title": "UNESCO — Culture", "url": "https://www.unesco.org/en/culture", "type": "institution", "note": "Heritage crafts and artisanal knowledge"}
+  ],
+  "printing-press-movable-type": [
+    {"id": "src-loc", "title": "Library of Congress", "url": "https://www.loc.gov/", "type": "institution", "note": "Rare books, incunabula, and printing history collections"},
+    {"id": "src-wiki-press", "title": "Wikipedia — Printing press", "url": "https://en.wikipedia.org/wiki/Printing_press", "type": "wikipedia", "note": "Gutenberg-era technology and dissemination effects"},
+    {"id": "src-unesco-comm", "title": "UNESCO — Communication and information", "url": "https://www.unesco.org/en/communication-information", "type": "institution", "note": "Freedom of expression and documentary heritage"}
+  ],
+  "electrical-telegraph": [
+    {"id": "src-itu-d-history", "title": "ITU — Development Sector (telecommunications development and history resources)", "url": "https://www.itu.int/en/ITU-D/Pages/default.aspx", "type": "institution", "note": "International telecommunication development; use ITU library for telegraph-era treaty history"},
+    {"id": "src-wiki-telegraph", "title": "Wikipedia — Electrical telegraph", "url": "https://en.wikipedia.org/wiki/Electrical_telegraph", "type": "wikipedia", "note": "Morse systems and submarine cables references"},
+    {"id": "src-ieee-standards", "title": "IEEE Standards Association", "url": "https://standards.ieee.org/", "type": "standard", "note": "Modern telecommunications standards lineage"}
+  ],
+  "telephone-exchange-system": [
+    {"id": "src-itu-t-tel", "title": "ITU-T — Publications", "url": "https://www.itu.int/en/ITU-T/publications/Pages/default.aspx", "type": "institution", "note": "PSTN signalling and digital telephony standards"},
+    {"id": "src-wiki-telephone", "title": "Wikipedia — Telephone", "url": "https://en.wikipedia.org/wiki/Telephone", "type": "wikipedia", "note": "Switching, transmission, and history"},
+    {"id": "src-rfc-sip", "title": "IETF RFC Editor — SIP (example modern telephony signalling)", "url": "https://www.rfc-editor.org/info/rfc3261", "type": "standard", "note": "Contemporary packet voice; compare to legacy circuit switching"}
+  ],
+  "vacuum-tube-electronics": [
+    {"id": "src-nist-sp811-tube", "title": "NIST SP 811", "url": "https://www.nist.gov/pml/special-publication-811", "type": "standard", "note": "Electrical units for vacuum-tube circuit analysis teaching"},
+    {"id": "src-wiki-vacuum-tube", "title": "Wikipedia — Vacuum tube", "url": "https://en.wikipedia.org/wiki/Vacuum_tube", "type": "wikipedia", "note": "Thermionic emission, triodes, and applications"},
+    {"id": "src-doi-transistor-nature", "title": "Nature (1953) — Physical realization of amplification via DOI", "url": "https://doi.org/10.1038/171740a0", "type": "paper", "note": "Historic peer-reviewed letter on semiconductor junction devices; contextualises tube-to-solid-state transition"}
+  ],
+  "radio-broadcast-and-receiver": [
+    {"id": "src-itu-r-radio", "title": "ITU-R", "url": "https://www.itu.int/en/ITU-R/Pages/default.aspx", "type": "institution", "note": "Spectrum management and broadcasting standards"},
+    {"id": "src-wiki-radio", "title": "Wikipedia — Radio", "url": "https://en.wikipedia.org/wiki/Radio", "type": "wikipedia", "note": "Modulation, receivers, and regulation overview"},
+    {"id": "src-nasa-communications", "title": "NASA — Communications and navigation (entry via nasa.gov)", "url": "https://www.nasa.gov/", "type": "institution", "note": "Deep-space communications engineering; navigate to mission directorate pages for technical reports"}
+  ],
+  "communication-satellites": [
+    {"id": "src-nasa-home", "title": "NASA", "url": "https://www.nasa.gov/", "type": "institution", "note": "Satellite missions and technology public portal"},
+    {"id": "src-wiki-satellite", "title": "Wikipedia — Satellite", "url": "https://en.wikipedia.org/wiki/Satellite", "type": "wikipedia", "note": "Orbits, bus subsystems, and link budgets introduction"},
+    {"id": "src-itu-r-sat", "title": "ITU-R", "url": "https://www.itu.int/en/ITU-R/Pages/default.aspx", "type": "institution", "note": "Satellite frequency coordination and interference management"}
+  ],
+  "optical-fiber-communications": [
+    {"id": "src-itu-t-fiber", "title": "ITU-T — Publications", "url": "https://www.itu.int/en/ITU-T/publications/Pages/default.aspx", "type": "institution", "note": "G.652/G.653 fibre recommendations and related optical transport standards"},
+    {"id": "src-wiki-fiber", "title": "Wikipedia — Optical fiber", "url": "https://en.wikipedia.org/wiki/Optical_fiber", "type": "wikipedia", "note": "Waveguides, attenuation, and dispersion"},
+    {"id": "src-rfc-internet", "title": "IETF — TCP/IP overview (RFC 9293)", "url": "https://www.rfc-editor.org/rfc/rfc9293.html", "type": "standard", "note": "Packet networking stack carried over modern optical backbones"}
+  ],
+  "semiconductor-crystal-growing-doping": [
+    {"id": "src-nist-mml", "title": "NIST — Material Measurement Laboratory", "url": "https://www.nist.gov/mml", "type": "institution", "note": "Semiconductor materials metrology and reference materials"},
+    {"id": "src-wiki-cz", "title": "Wikipedia — Czochralski process", "url": "https://en.wikipedia.org/wiki/Czochralski_process", "type": "wikipedia", "note": "Crystal pulling and defect control references"},
+    {"id": "src-doi-transistor-nature", "title": "Nature (1953) via DOI", "url": "https://doi.org/10.1038/171740a0", "type": "paper", "note": "Early semiconductor device physics in peer-reviewed literature"}
+  ],
+  "transistor": [
+    {"id": "src-doi-transistor", "title": "Nature (1953) — semiconductor junction devices (DOI)", "url": "https://doi.org/10.1038/171740a0", "type": "paper", "note": "Peer-reviewed primary literature anchor for solid-state amplification history"},
+    {"id": "src-wiki-transistor", "title": "Wikipedia — Transistor", "url": "https://en.wikipedia.org/wiki/Transistor", "type": "wikipedia", "note": "BJT/MOSFET overview with citations"},
+    {"id": "src-ieee-standards", "title": "IEEE Standards Association", "url": "https://standards.ieee.org/", "type": "standard", "note": "Solid-state devices and integrated circuit standards"}
+  ],
+  "internet-protocols-and-web": [
+    {"id": "src-rfc9293", "title": "IETF RFC 9293 — Transmission Control Protocol (TCP)", "url": "https://www.rfc-editor.org/rfc/rfc9293.html", "type": "standard", "note": "Authoritative standards-track specification"},
+    {"id": "src-rfc793", "title": "IETF RFC 793 — TCP (historic)", "url": "https://www.rfc-editor.org/info/rfc793", "type": "standard", "note": "Classic reference retained for historical comparison"},
+    {"id": "src-wiki-internet", "title": "Wikipedia — Internet", "url": "https://en.wikipedia.org/wiki/Internet", "type": "wikipedia", "note": "Architecture survey with citations to standards bodies"}
+  ]
+}
