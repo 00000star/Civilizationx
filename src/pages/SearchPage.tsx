@@ -1,13 +1,9 @@
 import { useMemo, useState, useCallback } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { SearchBar } from "../components/ui/SearchBar";
-import {
-  searchTechnologies,
-  fieldLabel,
-  type SearchResult,
-} from "../utils/search";
+import { searchTechnologies } from "../utils/search";
+import { VirtualizedSearchResults } from "../components/search/VirtualizedSearchResults";
 import { loadAllTechnologies } from "../data/loadTechnologies";
-import { CATEGORY_LABEL } from "../utils/categoryMeta";
 import { TECH_TREE_ERAS } from "../utils/eras";
 import type { TechEra } from "../types/technology";
 
@@ -227,41 +223,8 @@ export function SearchPage() {
           ) : null}
         </div>
       ) : (
-        <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-          {filtered.map((r) => (
-            <SearchResultCard key={r.tech.id} result={r} query={q} />
-          ))}
-        </ul>
+        <VirtualizedSearchResults results={filtered} query={q} />
       )}
     </div>
-  );
-}
-
-function SearchResultCard({ result, query }: { result: SearchResult; query: string }) {
-  const { tech, matchedFields } = result;
-  const fieldsText =
-    query.trim() && matchedFields.length
-      ? matchedFields.map(fieldLabel).join(", ")
-      : null;
-
-  return (
-    <li>
-      <Link
-        to={`/tech/${tech.id}`}
-        className="block h-full rounded-lg border border-codex-border bg-codex-card p-4 hover:border-codex-gold/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-codex-blue"
-      >
-        <p className="font-display text-lg font-semibold text-codex-text">{tech.name}</p>
-        <p className="mt-1 text-sm text-codex-secondary">{tech.tagline}</p>
-        {fieldsText ? (
-          <p className="mt-2 text-[11px] text-codex-muted">
-            Found in: {fieldsText}
-          </p>
-        ) : null}
-        <p className="mt-2 font-mono text-[10px] uppercase tracking-wide text-codex-muted">
-          {CATEGORY_LABEL[tech.category]} · {tech.era.replaceAll("-", " ")} · D
-          {tech.difficulty} · {tech.verification.status.replaceAll("-", " ")}
-        </p>
-      </Link>
-    </li>
   );
 }

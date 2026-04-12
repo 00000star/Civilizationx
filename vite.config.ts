@@ -1,17 +1,30 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
+import { execSync } from "node:child_process";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { readdirSync } from "node:fs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+function codexBuildId(): string {
+  if (process.env.VITE_CODEX_BUILD_ID?.trim()) return process.env.VITE_CODEX_BUILD_ID.trim();
+  try {
+    return execSync("git rev-parse --short HEAD", { encoding: "utf8" }).trim();
+  } catch {
+    return "dev";
+  }
+}
+
 const techJsonUrls = readdirSync(resolve(__dirname, "src/data/technologies"))
   .filter((f) => f.endsWith(".json"))
   .map((f) => `src/data/technologies/${f}`);
 
 export default defineConfig({
+  define: {
+    "import.meta.env.VITE_CODEX_BUILD_ID": JSON.stringify(codexBuildId()),
+  },
   plugins: [
     react(),
     VitePWA({

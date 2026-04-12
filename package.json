@@ -14,6 +14,7 @@
     "merge-verification-sources": "node scripts/merge-verification-sources.mjs"
   },
   "dependencies": {
+    "@tanstack/react-virtual": "^3.13.23",
     "@xyflow/react": "^12.3.6",
     "framer-motion": "^11.15.0",
     "qrcode": "^1.5.4",

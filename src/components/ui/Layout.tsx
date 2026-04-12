@@ -2,6 +2,7 @@ import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
 import { useCodexMode } from "../../context/useCodexMode";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
+import { CodexCacheBadge } from "./CodexCacheBadge";
 
 const INSTALL_DISMISS_KEY = "codex-pwa-install-dismissed";
 
@@ -153,10 +154,11 @@ export function Layout() {
               </NavLink>
             </nav>
             <div
-              className="ml-auto flex items-center gap-2 text-xs text-codex-muted lg:ml-0"
+              className="ml-auto flex flex-wrap items-center justify-end gap-2 text-xs text-codex-muted lg:ml-0"
               role="status"
               aria-live="polite"
             >
+              <CodexCacheBadge />
               <span
                 className={`inline-block h-2 w-2 rounded-full ${online ? "bg-emerald-500" : "bg-amber-500"}`}
                 aria-hidden

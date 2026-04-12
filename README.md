@@ -11,7 +11,7 @@ Wrong information in this tool can injure or kill people. Entries carry a **veri
 
 ## Current scope
 
-- **50** technology entries across survival, materials, energy, tools, transport, construction, communication, and related domains (see `src/data/index.json`).
+- **56** indexed technology entries across survival, materials, energy, tools, transport, construction, communication, medicine, agriculture, and related domains (see `src/data/index.json`), including focused survival nodes (water, preservation, sanitation, navigation, soil, first aid).
 - **Energy** and **communication** branches include grid-scale power, semiconductors, radio, fibre, satellites, and the web stack, among others.
 
 ## Tech stack

@@ -224,7 +224,7 @@ export function TechTree({ technologies, positions }: Props) {
     >
       {!treeReady ? (
         <div
-          className="absolute inset-0 z-10 flex items-center justify-center bg-codex-bg/90"
+          className="absolute inset-0 z-10 flex items-center justify-center bg-codex-bg/55 backdrop-blur-sm"
           aria-busy="true"
           aria-label="Loading technology tree"
         >
@@ -246,13 +246,13 @@ export function TechTree({ technologies, positions }: Props) {
         onPaneClick={onPaneClick}
         nodesDraggable={false}
         elevateEdgesOnSelect
-        className="!bg-codex-bg"
+        className="!bg-transparent"
       >
         <Background
           variant={BackgroundVariant.Dots}
           gap={28}
           size={1}
-          color="rgba(154,152,136,0.2)"
+          color="rgba(154,152,136,0.14)"
         />
         <TreeControls technologies={technologies} isSpace={isSpace} />
       </ReactFlow>
