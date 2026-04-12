@@ -36,7 +36,6 @@ def main():
         data = json.loads(path.read_text(encoding="utf-8"))
         apply_spec(data, spec)
         data["lastUpdated"] = ISO
-        data["verified"] = False
         path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         print("patched", tid)
 

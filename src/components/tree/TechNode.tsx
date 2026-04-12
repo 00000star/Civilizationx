@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import type { Technology } from "../../types/technology";
 import { CategoryIcon } from "../ui/CategoryIcon";
 import { CATEGORY_GLOW, CATEGORY_LABEL } from "../../utils/categoryMeta";
+import { verificationDotClass } from "../../utils/verificationUi";
 
 export type TechNodeData = {
   tech: Technology;
@@ -36,8 +37,15 @@ function TechNodeInner({ data }: NodeProps) {
       ? "border-codex-gold shadow-node-selected codex-node-selected"
       : "border-codex-gold/70 shadow-node-glow";
 
+  const vDot = verificationDotClass(tech.verification.status);
+
   return (
     <div className="relative">
+      <span
+        className={`absolute -right-0.5 -top-0.5 z-10 h-2.5 w-2.5 rounded-full border border-codex-bg ${vDot}`}
+        title={`Verification: ${tech.verification.status.replaceAll("-", " ")}`}
+        aria-hidden
+      />
       <Handle
         type="target"
         position={Position.Top}

@@ -34,7 +34,7 @@ const schema = {
     "videos",
     "externalLinks",
     "lastUpdated",
-    "verified",
+    "verification",
   ],
   properties: {
     id: { type: "string", minLength: 1 },
@@ -138,7 +138,40 @@ const schema = {
       },
     },
     lastUpdated: { type: "string", format: "date" },
-    verified: { type: "boolean" },
+    verification: {
+      type: "object",
+      additionalProperties: false,
+      required: ["status", "reviewedBy", "reviewDate", "warnings", "sources"],
+      properties: {
+        status: {
+          type: "string",
+          enum: ["unverified", "community-reviewed", "expert-verified"],
+        },
+        reviewedBy: { type: ["string", "null"] },
+        reviewDate: {
+          anyOf: [{ type: "null" }, { type: "string", format: "date" }],
+        },
+        warnings: { type: "array", items: { type: "string" } },
+        sources: {
+          type: "array",
+          items: {
+            type: "object",
+            additionalProperties: false,
+            required: ["id", "title", "type"],
+            properties: {
+              id: { type: "string", minLength: 1 },
+              title: { type: "string", minLength: 1 },
+              url: { type: "string" },
+              type: {
+                type: "string",
+                enum: ["book", "paper", "standard", "institution", "wikipedia"],
+              },
+              note: { type: "string" },
+            },
+          },
+        },
+      },
+    },
   },
 };
 

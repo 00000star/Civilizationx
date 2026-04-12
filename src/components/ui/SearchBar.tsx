@@ -1,4 +1,4 @@
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface Props {
@@ -9,6 +9,10 @@ interface Props {
 export function SearchBar({ initial = "", compact }: Props) {
   const [q, setQ] = useState(initial);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setQ(initial);
+  }, [initial]);
 
   const submit = (e: FormEvent) => {
     e.preventDefault();
@@ -32,8 +36,9 @@ export function SearchBar({ initial = "", compact }: Props) {
           type="search"
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="Search name, tagline, or id…"
-          className="min-w-0 flex-1 rounded-md border border-codex-border bg-codex-surface px-3 py-2 text-sm text-codex-text placeholder:text-codex-muted focus:border-codex-gold focus:outline-none focus:ring-1 focus:ring-codex-gold"
+          placeholder=""
+          className="min-w-0 flex-1 rounded-md border border-codex-border bg-codex-surface px-3 py-2 text-sm text-codex-text focus:border-codex-gold focus:outline-none focus:ring-1 focus:ring-codex-gold"
+          autoComplete="off"
         />
         <button
           type="submit"

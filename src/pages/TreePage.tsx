@@ -6,18 +6,7 @@ import { TechTree } from "../components/tree/TechTree";
 import { useTechTree } from "../hooks/useTechTree";
 import type { TechCategory, TechEra } from "../types/technology";
 import { loadAllTechnologies } from "../data/loadTechnologies";
-
-const ERAS: { id: TechEra; label: string }[] = [
-  { id: "prehistoric", label: "Prehistoric" },
-  { id: "ancient", label: "Ancient" },
-  { id: "medieval", label: "Medieval" },
-  { id: "early-modern", label: "Early modern" },
-  { id: "industrial", label: "Industrial" },
-  { id: "early-20th", label: "Early 20th" },
-  { id: "mid-20th", label: "Mid 20th" },
-  { id: "late-20th", label: "Late 20th" },
-  { id: "21st-century", label: "21st c." },
-];
+import { TECH_TREE_ERAS as ERAS } from "../utils/eras";
 
 export function TreePage() {
   const [params, setParams] = useSearchParams();

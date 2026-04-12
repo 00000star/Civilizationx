@@ -74,3 +74,97 @@ body {
 .prose-codex p {
   @apply text-codex-secondary;
 }
+
+/* Paged-media running header (supported in Chromium print preview) */
+.print-header-running {
+  display: none;
+}
+
+@media print {
+  .print-header-running {
+    display: block;
+    position: running(codexHeader);
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 10pt;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+  }
+
+  @page {
+    margin: 14mm 12mm 18mm 12mm;
+    @top-center {
+      content: element(codexHeader);
+    }
+    @bottom-center {
+      content: counter(page) " / " counter(pages);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 9pt;
+      color: #000;
+    }
+  }
+
+  html,
+  body,
+  #root {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  body {
+    font-family: Georgia, "Times New Roman", serif !important;
+  }
+
+  .codex-tech-detail,
+  .codex-tech-detail * {
+    color: #000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .codex-tech-detail .border-codex-border,
+  .codex-tech-detail .border-codex-gold,
+  .codex-tech-detail .border-emerald-600\/80,
+  .codex-tech-detail [class*="border-"] {
+    border-color: #000 !important;
+  }
+
+  .codex-tech-detail .bg-codex-card,
+  .codex-tech-detail .bg-codex-surface,
+  .codex-tech-detail .bg-codex-bg,
+  .codex-tech-detail .bg-emerald-950\/40,
+  .codex-tech-detail [class*="bg-codex"] {
+    background: #fff !important;
+  }
+
+  img,
+  svg {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+  }
+
+  .print-doc-footer {
+    display: flex !important;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12pt;
+    margin-top: 16pt;
+    padding-top: 8pt;
+    border-top: 1pt solid #000;
+    page-break-before: always;
+    break-inside: avoid;
+  }
+
+  .codex-app-shell > header,
+  .codex-app-shell > footer {
+    display: none !important;
+  }
+
+  .react-flow__renderer,
+  .react-flow__controls,
+  .react-flow__minimap,
+  .react-flow__attribution {
+    display: none !important;
+  }
+}
