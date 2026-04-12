@@ -24,6 +24,34 @@ export type TechEra =
   | "late-20th"
   | "21st-century";
 
+export type VerificationStatus =
+  | "unverified"
+  | "community-reviewed"
+  | "expert-verified";
+
+export type SourceType =
+  | "book"
+  | "paper"
+  | "standard"
+  | "institution"
+  | "wikipedia";
+
+export interface Source {
+  id: string;
+  title: string;
+  url?: string;
+  type: SourceType;
+  note?: string;
+}
+
+export interface Verification {
+  status: VerificationStatus;
+  reviewedBy: string | null;
+  reviewDate: string | null;
+  warnings: string[];
+  sources: Source[];
+}
+
 export interface Component {
   id: string;
   name: string;
@@ -118,7 +146,7 @@ export interface Technology {
   videos: Video[];
   externalLinks: ExternalLink[];
   lastUpdated: string;
-  verified: boolean;
+  verification: Verification;
 }
 
 export interface IndexNode {

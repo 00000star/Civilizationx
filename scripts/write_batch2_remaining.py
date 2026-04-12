@@ -7,7 +7,17 @@ OUT = Path(__file__).resolve().parent.parent / "src/data/technologies"
 ISO = "2026-04-10"
 
 def W(obj):
-    obj = {**obj, "lastUpdated": ISO, "verified": False}
+    obj = {
+        **obj,
+        "lastUpdated": ISO,
+        "verification": {
+            "status": "unverified",
+            "reviewedBy": None,
+            "reviewDate": None,
+            "warnings": [],
+            "sources": [],
+        },
+    }
     (OUT / f"{obj['id']}.json").write_text(
         json.dumps(obj, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )

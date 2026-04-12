@@ -51,5 +51,11 @@
     {"id": "iea-power", "title": "IEA — electricity and power sector context", "url": "https://www.iea.org/energy-system/electricity"}
   ],
   "lastUpdated": "2026-04-10",
-  "verified": false
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": []
+  }
 }

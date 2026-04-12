@@ -8,17 +8,21 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "validate-data": "node scripts/validate-technology-data.mjs"
+    "validate-data": "node scripts/validate-technology-data.mjs",
+    "generate-technologies": "node scripts/generate-technologies.mjs",
+    "fetch-media": "node scripts/fetch-media.mjs"
   },
   "dependencies": {
     "@xyflow/react": "^12.3.6",
     "framer-motion": "^11.15.0",
+    "qrcode": "^1.5.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "@types/qrcode": "^1.5.6",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",

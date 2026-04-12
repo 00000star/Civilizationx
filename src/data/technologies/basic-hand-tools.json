@@ -150,5 +150,11 @@
     }
   ],
   "lastUpdated": "2026-04-10",
-  "verified": false
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": []
+  }
 }

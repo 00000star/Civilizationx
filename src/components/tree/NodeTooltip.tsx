@@ -27,6 +27,10 @@ export function NodeTooltip({ tech, locked }: Props) {
           {tech.difficulty} of 5
           {locked ? " · locked" : ""}
         </dd>
+        <dt className="font-mono uppercase tracking-wide">Verification</dt>
+        <dd className="text-codex-secondary">
+          {tech.verification.status.replaceAll("-", " ")}
+        </dd>
       </dl>
     </div>
   );

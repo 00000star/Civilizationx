@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useTechnology } from "../hooks/useTechnology";
 import { BreadcrumbNav } from "../components/ui/BreadcrumbNav";
 import { TechDetail } from "../components/documentary/TechDetail";
+import { DangerGate } from "../components/ui/DangerGate";
 import { CATEGORY_LABEL } from "../utils/categoryMeta";
 
 export function TechDetailPage() {
@@ -39,7 +40,7 @@ export function TechDetailPage() {
 
   return (
     <div>
-      <div className="border-b border-codex-border bg-codex-surface/80 px-3 py-3 backdrop-blur md:px-6">
+      <div className="print:hidden border-b border-codex-border bg-codex-surface/80 px-3 py-3 backdrop-blur md:px-6">
         <div className="mx-auto flex max-w-5xl flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <BreadcrumbNav
             items={[
@@ -56,7 +57,9 @@ export function TechDetailPage() {
           </Link>
         </div>
       </div>
-      <TechDetail tech={tech} />
+      <DangerGate tech={tech}>
+        <TechDetail tech={tech} />
+      </DangerGate>
     </div>
   );
 }
