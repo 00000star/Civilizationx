@@ -10,6 +10,7 @@ export default {
           card: "#1A1A26",
           border: "#2A2A3E",
           gold: "#C9A84C",
+          space: "#00D4FF",
           blue: "#4A7FBD",
           text: "#E8E6E0",
           secondary: "#9A9888",

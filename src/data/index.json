@@ -50,6 +50,12 @@
     { "id": "optical-fiber-communications" },
     { "id": "semiconductor-crystal-growing-doping" },
     { "id": "transistor" },
-    { "id": "internet-protocols-and-web" }
+    { "id": "internet-protocols-and-web" },
+    { "id": "sanitation-and-clean-water" },
+    { "id": "food-preservation" },
+    { "id": "soap-making" },
+    { "id": "navigation-celestial" },
+    { "id": "soil-science-and-composting" },
+    { "id": "first-aid-and-wound-care" }
   ]
 }

@@ -16,6 +16,9 @@ import { TechNode, type TechNodeData } from "./TechNode";
 import { NodeTooltip } from "./NodeTooltip";
 import { TreeControls } from "./TreeControls";
 import { useUnlockedIds } from "../../hooks/useProgression";
+import { useCodexMode } from "../../context/CodexModeContext";
+import { techHasEarthOnlyMaterial, techHasFullSpaceAlternatives } from "../../utils/spaceMaterials";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 const nodeTypes = { tech: TechNode };
 
@@ -29,15 +32,16 @@ export function TechTree({ technologies, positions }: Props) {
   const [params] = useSearchParams();
   const highlightId = params.get("node");
   const unlocked = useUnlockedIds();
+  const { isSpace } = useCodexMode();
+  const isMobile = useMediaQuery("(max-width: 767px)");
+  const [treeReady, setTreeReady] = useState(false);
 
   const [rf, setRf] = useState<ReactFlowInstance<
     Node<TechNodeData>,
     Edge
   > | null>(null);
   const [hoverId, setHoverId] = useState<string | null>(null);
-  const [hoverPt, setHoverPt] = useState<{ x: number; y: number } | null>(
-    null
-  );
+  const [hoverPt, setHoverPt] = useState<{ x: number; y: number } | null>(null);
   const [preview, setPreview] = useState<Technology | null>(null);
 
   const posMap = useMemo(() => {
@@ -51,11 +55,56 @@ export function TechTree({ technologies, positions }: Props) {
     [technologies]
   );
 
+  const techById = useMemo(() => {
+    const m = new Map<string, Technology>();
+    for (const t of technologies) m.set(t.id, t);
+    return m;
+  }, [technologies]);
+
+  const hoverBright = useMemo(() => {
+    const s = new Set<string>();
+    if (!hoverId) return s;
+    s.add(hoverId);
+    const h = techById.get(hoverId);
+    if (!h) return s;
+    for (const p of h.prerequisites) {
+      if (inSet.has(p)) s.add(p);
+    }
+    for (const u of h.unlocks) {
+      if (inSet.has(u)) s.add(u);
+    }
+    return s;
+  }, [hoverId, techById, inSet]);
+
   const nodes: Node<TechNodeData>[] = useMemo(
     () =>
       technologies.map((tech) => {
         const p = posMap.get(tech.id) ?? { x: 0, y: 0 };
         const locked = !unlocked.has(tech.id);
+        const dimmed = Boolean(hoverId && !hoverBright.has(tech.id));
+        const accent = isSpace ? "space" : "gold";
+
+        const incomingEdgeActive =
+          Boolean(hoverId) &&
+          tech.prerequisites.some((pid) => {
+            if (!inSet.has(pid)) return false;
+            const parent = techById.get(pid);
+            return (
+              hoverId === tech.id ||
+              (hoverId === pid && (parent?.unlocks.includes(tech.id) ?? false))
+            );
+          });
+        const outgoingEdgeActive =
+          Boolean(hoverId) &&
+          tech.unlocks.some((uid) => {
+            if (!inSet.has(uid)) return false;
+            return (
+              hoverId === uid ||
+              (hoverId === tech.id && tech.unlocks.includes(uid))
+            );
+          });
+        const edgeActive = incomingEdgeActive || outgoingEdgeActive;
+
         return {
           id: tech.id,
           type: "tech",
@@ -65,12 +114,27 @@ export function TechTree({ technologies, positions }: Props) {
             tech,
             locked,
             selected: tech.id === highlightId,
+            dimmed,
+            edgeActive,
+            spaceGlow: isSpace && techHasFullSpaceAlternatives(tech),
+            earthOnly: isSpace && techHasEarthOnlyMaterial(tech),
+            accent,
           },
           draggable: false,
           selectable: false,
         };
       }),
-    [technologies, posMap, unlocked, highlightId]
+    [
+      technologies,
+      posMap,
+      unlocked,
+      highlightId,
+      hoverId,
+      hoverBright,
+      isSpace,
+      inSet,
+      techById,
+    ]
   );
 
   const edges: Edge[] = useMemo(() => {
@@ -78,16 +142,21 @@ export function TechTree({ technologies, positions }: Props) {
     for (const t of technologies) {
       for (const p of t.prerequisites) {
         if (!inSet.has(p)) continue;
+        const parent = techById.get(p);
+        const active =
+          Boolean(hoverId) &&
+          (hoverId === t.id || (hoverId === p && (parent?.unlocks.includes(t.id) ?? false)));
+        const stroke = active ? "#00D4FF" : "#4A7FBD";
         e.push({
           id: `${p}->${t.id}`,
           source: p,
           target: t.id,
           animated: true,
-          className: "codex-edge animated",
-          style: { stroke: "#4A7FBD", strokeWidth: 1.5 },
+          className: active ? "codex-edge animated" : "codex-edge animated",
+          style: { stroke, strokeWidth: active ? 2.2 : 1.5 },
           markerEnd: {
             type: MarkerType.ArrowClosed,
-            color: "#4A7FBD",
+            color: stroke,
             width: 18,
             height: 18,
           },
@@ -95,13 +164,7 @@ export function TechTree({ technologies, positions }: Props) {
       }
     }
     return e;
-  }, [technologies, inSet]);
-
-  const techById = useMemo(() => {
-    const m = new Map<string, Technology>();
-    for (const t of technologies) m.set(t.id, t);
-    return m;
-  }, [technologies]);
+  }, [technologies, inSet, hoverId, techById]);
 
   const hoverTech = hoverId ? techById.get(hoverId) : undefined;
 
@@ -143,9 +206,15 @@ export function TechTree({ technologies, positions }: Props) {
   const onInit = useCallback(
     (instance: ReactFlowInstance<Node<TechNodeData>, Edge>) => {
       setRf(instance);
-      instance.fitView({ padding: 0.2, duration: 200 });
+      setTreeReady(true);
+      instance.fitView({
+        padding: 0.2,
+        duration: 200,
+        maxZoom: isMobile ? 0.42 : 1.2,
+        minZoom: isMobile ? 0.25 : 0.15,
+      });
     },
-    []
+    [isMobile]
   );
 
   return (
@@ -153,13 +222,22 @@ export function TechTree({ technologies, positions }: Props) {
       className="relative h-[calc(100dvh-4.5rem)] min-h-[420px] w-full md:h-[calc(100dvh-5rem)]"
       onMouseMove={onPointerMove}
     >
+      {!treeReady ? (
+        <div
+          className="absolute inset-0 z-10 flex items-center justify-center bg-codex-bg/90"
+          aria-busy="true"
+          aria-label="Loading technology tree"
+        >
+          <div className="h-10 w-10 animate-pulse rounded-full border-2 border-codex-gold border-t-transparent" />
+        </div>
+      ) : null}
       <ReactFlow
         nodes={nodes}
         edges={edges}
         nodeTypes={nodeTypes}
         onInit={onInit}
         fitView
-        minZoom={0.15}
+        minZoom={0.12}
         maxZoom={1.8}
         proOptions={{ hideAttribution: true }}
         onNodeMouseEnter={onNodeMouseEnter}
@@ -176,7 +254,7 @@ export function TechTree({ technologies, positions }: Props) {
           size={1}
           color="rgba(154,152,136,0.2)"
         />
-        <TreeControls />
+        <TreeControls technologies={technologies} isSpace={isSpace} />
       </ReactFlow>
 
       {hoverTech && hoverPt ? (
@@ -230,10 +308,9 @@ export function TechTree({ technologies, positions }: Props) {
         ) : null}
       </AnimatePresence>
 
-      {/* Hidden utility for keyboard users: focus canvas then use tab to nodes — nodes are buttons inside */}
       <span className="sr-only" aria-live="polite">
         {rf
-          ? "Tree loaded. Use mouse to pan, scroll to zoom. Nodes are buttons — Tab into the canvas in supporting browsers."
+          ? "Tree loaded. Use mouse to pan, scroll to zoom. On small screens, double-tap a node to open."
           : ""}
       </span>
     </div>

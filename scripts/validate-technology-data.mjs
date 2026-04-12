@@ -209,6 +209,11 @@ for (const f of files) {
       errors.push(`${f}: prerequisite "${p}" not listed in index.json`);
     }
   }
+  for (const u of data.unlocks || []) {
+    if (!expectedIds.has(u)) {
+      errors.push(`${f}: unlock "${u}" not listed in index.json`);
+    }
+  }
 }
 
 for (const id of expectedIds) {

@@ -9,7 +9,10 @@
   "unlocks": [
     "fishing-net-and-line",
     "cart-and-wagon",
-    "pulley"
+    "pulley",
+    "soil-science-and-composting",
+    "navigation-celestial",
+    "first-aid-and-wound-care"
   ],
   "problem": "Many critical tasks require pulling forces larger than a bare hand can apply, or holding forces steady for long periods: dragging carcasses, hoisting bundles, lashing loads to frames, making nets, climbing safely, and binding tool heads to handles. Vines snap unpredictably; green bark slips; short grass bundles fatigue. The problem is scalable tensile members: materials that share load across many parallel fibres locked together by twist or braid so partial breaks do not instantly cascade.\n\nCordage also stores technique: a well-made rope is a composite whose strength emerges from friction between plies and the helix angle distributing strain. Without understanding twist direction (S and Z) and balance, ropes untwist under load or kink into useless hockles.\n\nIn recovery contexts, cordage is a universal adapter: it connects almost every other primitive technology — shelters, traps, boats, packs, and later pulleys and machines.",
   "overview": "Traditional cordage begins with harvesting fibres: bast from inner bark (lime, willow, nettle, paper mulberry), leaf fibres (agave, yucca), animal sinew, rawhide strips, or hair. Fibres are retted or scraped clean, dried, then split to consistent width. Short fibres are spun into continuous yarn by adding twist — twist traps fibre ends against neighbours via friction.\n\nYarns are combined into cord by plying: two or more yarns twisted together in the opposite direction from their spin, locking the structure. Three-strand rope is made by twisting three plies into a larger helix. Braids distribute abrasion and reduce twist-induced torque on suspended loads.\n\nStrength scales with cross-sectional area of load-bearing fibres and quality of processing. Kinks, sharp bends over small radii, and UV degradation are dominant failure modes. Storage dry prevents rot; natural ropes stretch when wet and may shrink drying — important when building tension structures.\n\nMechanically, rope is a flexible tensile element in machines: with a wheel it becomes a belt drive ancestor; with a grooved wheel it becomes a pulley line; with capstans it multiplies human pulling power through friction wraps.",

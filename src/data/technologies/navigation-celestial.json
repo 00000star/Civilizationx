@@ -1,0 +1,63 @@
+{
+  "id": "navigation-celestial",
+  "name": "Celestial Navigation",
+  "tagline": "Finding direction, latitude, and local time from the sun and stars when maps, GPS, and radio are gone",
+  "category": "science",
+  "era": "ancient",
+  "difficulty": 3,
+  "prerequisites": ["rope-and-cordage", "basic-hand-tools"],
+  "unlocks": [],
+  "problem": "Humans navigate because getting lost wastes calories and invites conflict with strangers whose territory you did not mean to cross. Before magnetic compasses were reliable, and long after they fail in bulk ferrous environments or when batteries die, the sky remains a public clock and compass — if you know how to read it. The problem is not mysticism but geometry: local vertical, local horizon, and celestial reference directions must be established consistently enough that a canoe crew or a refugee column agrees which way is north and how far dawn is.\n\nThe second problem is latitude without instruments: measuring the angle of Polaris above the northern horizon approximates latitude in the northern hemisphere; near the equator, other stars replace Polaris and the mathematics shifts. Without calibrated arcs, you build crude quadrants from plumb lines, sighting sticks, and water levels — each introduces error that compounds over long ocean passages.\n\nThe third problem is time: longitude historically required accurate clocks; for collapse survivors, local solar time and star culminations may be enough to coordinate watches and planting calendars even if global longitude is unknowable. Teaching crews to agree on hour angles from simple gnomon shadows prevents arguments at dusk.\n\nFinally, weather and sea state hide the sky; navigation knowledge must pair with dead reckoning and coastal pilotage — celestial skill is one layer, not a miracle.",
+  "overview": "Begin with the local meridian: the great circle through zenith and celestial pole. The altitude of Polaris above the northern horizon approximates observer latitude when refraction and height of eye are small compared to desired accuracy. For the sun, local noon occurs when the sun crosses the meridian; a stick shadow shortest points true north in northern temperate latitudes with caveats near tropics.\n\nA simple quadrant uses a plumb bob and a sighting vane along a graded arc — even a protractor glued to wood beats guessing. Measure the angle from horizontal to Polaris repeatedly and average to reduce jitter from hand shake.\n\nStar identification uses constellation patterns anchored by bright stars: Cassiopeia and the Big Dipper bracket Polaris; Orion rises east and sets west with predictable timing. Recording rising and setting azimuths for a season builds a local almanac without printing presses.\n\nFor teaching, run nightly drills: predict where a star will be at a given hour, then check. Errors shrink when crews share vocabulary and sketchbooks.\n\nOn Mars, Earth-trained celestial tricks do not transfer without a new planetarium model — thin atmosphere and different rotation still reward disciplined angle measurement for rover orientation when inertial units drift.",
+  "principles": [
+    {"name": "Celestial sphere model", "explanation": "Treat stars as on an infinite sphere with observer at centre — angles on the sky are distances along that sphere."},
+    {"name": "Refraction", "explanation": "Low-altitude objects appear lifted; corrections matter for sunrise tables."},
+    {"name": "Latitude from altitude", "explanation": "Polar altitude approximates latitude on meridian; declination tables extend method to other bodies."},
+    {"name": "Dead reckoning coupling", "explanation": "Celestial fixes intermittently reset drift from currents and wind."}
+  ],
+  "components": [
+    {"id": "gnomon", "name": "Gnomon or shadow stick", "function": "Marks solar meridian passage and local hours", "position": "Level sand or flat stone", "madeFrom": "Vertical rod, plumb bob for verticality", "criticalNote": "Level base or systematic error"},
+    {"id": "quadrant", "name": "Quadrant or sextant surrogate", "function": "Measures angle from horizon to star", "position": "Hand-held", "madeFrom": "Wood arc, straw sight, plumb line", "criticalNote": "Calibrate against known roof height first"},
+    {"id": "compass", "name": "Magnetic compass if available", "function": "Checks drift when sky hidden briefly", "position": "Pocket", "madeFrom": "Magnetised needle on leaf water", "criticalNote": "Local iron ore and steel ships deflect needles"},
+    {"id": "log", "name": "Navigation logbook", "function": "Records bearings, speeds, and fixes", "position": "Waterproof wrap", "madeFrom": "Waxed cloth, charcoal pencil", "criticalNote": "Ink runs in salt spray"},
+    {"id": "charts", "name": "Coastal sketch maps", "function": "Correlates celestial fixes with landforms", "position": "Chart table", "madeFrom": "Bark or rag paper", "criticalNote": "Update after storms change bars"},
+    {"id": "timekeeper", "name": "Hourglass or pulse count", "function": "Bridges between sky sights", "position": "Watch station", "madeFrom": "Sand, knotted cord", "criticalNote": "Sand humidity changes rate"}
+  ],
+  "rawMaterials": [
+    {"name": "Straight timber and cord", "purpose": "Instrument frames and plumb lines", "earthLocations": ["Temperate forests"], "spaceAlternatives": "Machined aluminium struts from habitat scrap; printed PLA for classroom models only", "processingRequired": "Season wood; check straightness against string line"},
+    {"name": "Clear skies", "purpose": "Observations", "earthLocations": ["Deserts", "High plateaus", "Open ocean"], "spaceAlternatives": "Mars: thin air, more stars visible but suit logistics dominate", "processingRequired": "Schedule sights at civil twilight windows"},
+    {"name": "Almanac data", "purpose": "Declination and hour angle", "earthLocations": ["Printed tables", "memorised patterns"], "spaceAlternatives": "Pre-loaded ephemeris chips while power lasts", "processingRequired": "Copy critical tables redundantly"}
+  ],
+  "buildSteps": [
+    {"order": 1, "title": "Establish true vertical and a level horizon reference", "description": "Plumb three independent bobs; average. For sea, use fluid horizon in a tray shielded from wind.", "prerequisiteTools": ["cord", "weight"], "warningNote": "Working at cliff edge for horizon view — tie off"},
+    {"order": 2, "title": "Build and calibrate a shadow stick for local noon", "description": "Mark tip shadow positions morning to afternoon; shortest shadow line points north in many mid-latitudes — verify with Polaris at night before trusting life to it.", "prerequisiteTools": ["vertical rod", "compass check optional"], "warningNote": "Sun burns and snow blindness — use indirect projection onto board"},
+    {"order": 3, "title": "Construct a quadrant with graded degrees", "description": "Use protractor template or chord geometry; test against known roof angle.", "prerequisiteTools": ["protractor", "glue"], "warningNote": "Knife slips cutting wood — cut away from body"},
+    {"order": 4, "title": "Run Polaris latitude drills on three clear nights", "description": "Average altitudes; compare to map latitude if any map survives; record height-of-eye correction heuristics.", "prerequisiteTools": ["quadrant", "notebook"], "warningNote": "Night movement near campfires — tripping hazard"},
+    {"order": 5, "title": "Teach crew star identification with sketches", "description": "Each member draws Orion and Ursa Major from memory until matches; schedule culminations.", "prerequisiteTools": ["charcoal", "flat boards"], "warningNote": "Cold nights — hypothermia while standing still — rotate observers"}
+  ],
+  "history": [
+    {"year": "Ancient", "event": "Polynesian stick charts and star paths navigate Pacific.", "location": "Pacific Ocean"},
+    {"year": 1730, "event": "Longitude problem drives chronometer development.", "location": "Europe", "person": "John Harrison"},
+    {"year": "20th century", "event": "GPS replaces civilian practice but celestial remains backup at sea.", "location": "Global"}
+  ],
+  "inventors": [],
+  "impact": "Navigation turns oceans and deserts from walls into corridors. It synchronises trade, war, and knowledge transfer.\n\nSpacecraft still carry star trackers when autonomy matters.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {"id": "nasa-home-nav", "title": "NASA — Home", "url": "https://www.nasa.gov/"},
+    {"id": "wiki-polaris", "title": "Wikipedia — Polaris", "url": "https://en.wikipedia.org/wiki/Polaris"}
+  ],
+  "lastUpdated": "2026-04-12",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {"id": "wiki-celestial", "title": "Wikipedia — Celestial navigation", "url": "https://en.wikipedia.org/wiki/Celestial_navigation", "type": "wikipedia", "note": "Overview with references to almanacs and instruments"},
+      {"id": "nist-time", "title": "NIST — Time and frequency", "url": "https://www.nist.gov/pml/time-and-frequency-division", "type": "institution", "note": "Timekeeping science context for longitude and navigation"},
+      {"id": "nasa-home", "title": "NASA", "url": "https://www.nasa.gov/", "type": "institution", "note": "STEM portal; see mission directorates for Earth observation and space navigation context"}
+    ]
+  }
+}
