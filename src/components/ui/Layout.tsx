@@ -1,6 +1,6 @@
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
-import { useCodexMode } from "../../context/CodexModeContext";
+import { useCodexMode } from "../../context/useCodexMode";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 const INSTALL_DISMISS_KEY = "codex-pwa-install-dismissed";

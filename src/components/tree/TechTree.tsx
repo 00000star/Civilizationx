@@ -16,7 +16,7 @@ import { TechNode, type TechNodeData } from "./TechNode";
 import { NodeTooltip } from "./NodeTooltip";
 import { TreeControls } from "./TreeControls";
 import { useUnlockedIds } from "../../hooks/useProgression";
-import { useCodexMode } from "../../context/CodexModeContext";
+import { useCodexMode } from "../../context/useCodexMode";
 import { techHasEarthOnlyMaterial, techHasFullSpaceAlternatives } from "../../utils/spaceMaterials";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 

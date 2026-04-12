@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { useCodexMode } from "../context/CodexModeContext";
+import { useCodexMode } from "../context/useCodexMode";
 
 type PhaseItem = { id: string; label: string; href?: string };
 

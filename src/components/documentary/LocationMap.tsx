@@ -1,5 +1,5 @@
 import type { RawMaterial } from "../../types/technology";
-import { useCodexMode } from "../../context/CodexModeContext";
+import { useCodexMode } from "../../context/useCodexMode";
 
 interface Props {
   materials: RawMaterial[];
