@@ -15,8 +15,8 @@
     "telephone-exchange-system",
     "radio-broadcast-and-receiver"
   ],
-  "problem": "Horse couriers and semaphore chains could not keep pace with rail timetables, naval logistics, or commodity prices. The telegraph encodes language into electrical events — closing circuits for dots and dashes — so operators transcribe at human speed while propagation delay is negligible on land.\n\nChallenges include insulation on long buried or submarine cables, lightning induction burning instruments, and synchronising clocks for train safety. Codebooks compress proprietary business messages; cryptography appears immediately.\n\nEconomically, telegraphy priced information like freight — but by the bit, not the ton.",
-  "overview": "A battery keys a line; an electromagnet pulls a sounder or marks a paper tape. Repeater stations regenerate weak signals. Insulators of glass or porcelain separate wires from earth; lightning arrestors sacrifice paths to protect offices.\n\nSubmarine cables add gutta-percha or polyethylene jackets, armouring, and repeaters in fibre era — but copper coax ancestors carried telegraphy across oceans first with heroic thickness and regretful engineering guesses about capacitance.\n\nMorse code standardises timing; continental variants tweak alphabet mappings. Training schools produce operators with rhythmic ears — a craft killed by telephone speech then resurrected as CW ham radio.\n\nTelegraph offices became nodes in graphs; stock tickers and train order offices were clients — infrastructure thinking we now call networking.",
+  "problem": "Horse couriers and semaphore chains carry news faster than walking, but they tire, sleep, and mishear flags in rain. The telegraph promises near-instant coordination along a wire — if you can detect feeble currents at the far end, if insulation survives miles underground or underwater, and if operators share protocols honest enough to prevent garble.\n\nEarly systems experimented with needles, numbered codes, and clicks; Morse class codes won simplicity of hardware at the cost of trained ears and wrists. Geography becomes code tables: which office relays which message, how billing is logged, how priority disputes resolve.\n\nBusiness and empire follow: railways schedule trains; newspapers quote distant markets; military commanders acquire appetites for bandwidth they cannot always secure.\n\nCollapse recovery must remember telegraphy is teamwork: batteries, sounders, repair climbers, and polite procedure are one system.",
+  "overview": "A loop of wire with a key in series and a sounder or relay at the office forms the simplest story: closing the key completes the circuit, energising an electromagnet that clicks. Repeaters amplify weak signals on long routes; duplex schemes send both directions with clever balances.\n\nInsulation mattered historically: glass and ceramic insulators on poles, gutta-percha on submarine cores, later bitumen and polymers. Lightning arrestors sacrifice paths to save humans and instruments — another layer of civic infrastructure.\n\nTelegraph offices become data centres of their era: brass pegboards, message forms, and night shifts. Cryptography appears quickly — anyone tapping a wire learns secrets unless operators encode.\n\nRadio and fibre did not erase the telegraph’s lesson: protocols and maintenance culture matter as much as conductors.",
   "principles": [
     {
       "name": "Ohm’s law on long lines",
@@ -79,7 +79,7 @@
       "earthLocations": [
         "Telegraph boom districts 19c"
       ],
-      "spaceAlternatives": "Optical later",
+      "spaceAlternatives": "Soft-drawn copper telegraph wire on Earth; early off-world links may use aluminium with larger gauges or optical links once available — keep mechanical redundancy for dust storms",
       "processingRequired": "Annealed soft draw for wrapping"
     },
     {
@@ -88,7 +88,7 @@
       "earthLocations": [
         "Lead smelters"
       ],
-      "spaceAlternatives": "Dynamos later",
+      "spaceAlternatives": "Lead-acid cells for portable office power where dynamos are absent; later nickel-iron or lithium where maintenance culture matches chemistry",
       "processingRequired": "Form plates and activate"
     },
     {
@@ -97,55 +97,60 @@
       "earthLocations": [
         "Southeast Asia latex historically"
       ],
-      "spaceAlternatives": "PE jackets modern",
+      "spaceAlternatives": "Gutta-percha or bitumen-impregnated paper for submarine cores historically; XLPE or PE jackets on modern landlines — always test joints underwater before trusting claims",
       "processingRequired": "Extrusion"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Survey right-of-way",
-      "description": "Negotiate poles with landowners; map river crossings.",
+      "title": "Survey a right-of-way humans can maintain for decades",
+      "description": "Walk the proposed line noting river crossings, rocky ground, and trees that will grow into wires. Negotiate poles with landowners in writing. Plan spare wire drums staged every dozen miles in rough terrain.",
       "prerequisiteTools": [
-        "transits"
+        "maps",
+        "measuring rope"
       ],
-      "warningNote": "Induced liability from fallen wires — tension engineering"
+      "warningNote": "Assuming ‘we’ll fix access later’ guarantees winter outages"
     },
     {
       "order": 2,
-      "title": "String and sag",
-      "description": "Match mechanical tension to wind and ice load; bond grounds.",
+      "title": "Set poles, insulators, and earth electrodes before stringing",
+      "description": "Keep consistent height above roads and livestock. Bond earth well at offices — telegraph references are relative to local ground. Label each span for repair crews.",
       "prerequisiteTools": [
-        "dynamometers"
+        "post hole digger",
+        "climbing irons"
       ],
-      "warningNote": "Ground potential differences shock animals tied to wet earth returns"
+      "warningNote": "Induction from parallel power lines can surprise ‘dead’ wires"
     },
     {
       "order": 3,
-      "title": "Install protection",
-      "description": "Lightning horns; fuses; office grounding mats.",
+      "title": "String copper with proper sag and strain relief",
+      "description": "Tension for ice load, not just fair weather. Use dead-ends and suspension clamps appropriate to wire gauge. Avoid sharp bends that work-harden and snap copper.",
       "prerequisiteTools": [
-        "megger"
+        "come-along",
+        "wire gauge"
       ],
-      "warningNote": "Nearby lightning magnetises sounders — false clicks"
+      "warningNote": "Snapped wire whips — clear bystanders"
     },
     {
       "order": 4,
-      "title": "Train operators",
-      "description": "Copy qualification tests; procedural language for train orders.",
+      "title": "Install keys, sounders, and batteries with office discipline",
+      "description": "Teach a standard spacing for dots and dashes; practise relay retransmission until error rates drop. Log battery voltage — weak cells make marginal circuits lie.",
       "prerequisiteTools": [
-        "practice sets"
+        "practice set",
+        "logbook"
       ],
-      "warningNote": "Ambiguous prosigns cause collisions"
+      "warningNote": "High-Zap telegraph batteries need respect and ventilation"
     },
     {
       "order": 5,
-      "title": "Maintain repeaters",
-      "description": "Log battery voltages; clean relay contacts; document drift.",
+      "title": "Run acceptance tests with corrupted conditions",
+      "description": "Simulate rain leakage, partial grounds, and operator fatigue. Write procedure cards for emergencies: line down, lightning storm, unknown sparking insulator.",
       "prerequisiteTools": [
-        "contact burnishers"
+        "megger",
+        "spare insulators"
       ],
-      "warningNote": "Pitting raises minimum operating current"
+      "warningNote": "Never work elevated lines during storms"
     }
   ],
   "history": [

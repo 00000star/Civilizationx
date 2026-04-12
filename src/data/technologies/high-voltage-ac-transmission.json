@@ -13,8 +13,8 @@
   "unlocks": [
     "nuclear-fission-power-plant"
   ],
-  "problem": "Urban networks at kilovolt class cannot push power across continents — current squared times resistance devours megawatts as heat in conductors. Raising voltage lowers current for the same real power, shrinking copper tonnage and I²R loss. The problem is not only towers and wires but insulation coordination: lightning, switching surges, and contamination on insulators in fog and salt spray.\n\nStability also changes: long lines exhibit charging current, Ferranti rise, and low-frequency oscillations between regions. Series capacitors and FACTS devices become part of the physics package, not accessories.\n\nWithout EHV, remote hydro, nuclear, and wind basins cannot feed distant cities — civilisation recentralises on local fuel piles.",
-  "overview": "Transformers step generation voltage to hundreds of kilovolts; bundle conductors control corona; shield wires intercept lightning; grounding grids manage fault currents. Substations house breakers, instrument transformers, and reactive compensation banks. Protection zones overlap so only the smallest necessary segment trips for a fault.\n\nEnvironmental design addresses audible noise from corona, right-of-way vegetation, and avian collisions. Underground EHV exists in cities but trades capacitance and cost against aesthetics.\n\nOperationally, maintenance is live-line work with robots and helicopters in some grids — a reminder that infrastructure is theatre as well as steel.\n\nStandards bodies harmonise insulation levels (BIL), clearances, and testing so equipment from different factories interoperates on the same corridor.",
+  "problem": "A distribution network built for a town cannot push the same power across a continent without turning conductors into toasters. Loss grows with the square of current, so the naive fix — thicker copper — becomes its own logistics problem: every extra tonne of metal needs towers strong enough to hold it and rights-of-way wide enough to keep it from the ground.\n\nRaising voltage lowers current for the same real power, which shrinks both loss and the cross-section you must hang in the sky. That shift buys a new class of headaches: the air itself begins to glow around conductors if the electric field at the surface is too high; lightning and switching surges hunt for the weakest insulator; fog and salt spray turn porcelain into a leakage path.\n\nLong lines are not passive ropes. They store electric and magnetic energy in their length, which shows up as charging current, voltage rise at light load, and sometimes slow oscillations between distant regions. Engineers add reactors, capacitors, and controlled devices as deliberately as steam engineers add valves — not as ornaments but as stability tools.\n\nWithout extra-high-voltage corridors, civilisation must sit generation beside load again — good for resilience in one sense, bad for using distant hydro, wind, or nuclear basins. The political shape of energy follows the physics of insulation.",
+  "overview": "At a corridor scale, generation voltage is stepped up to hundreds of kilovolts, then carried on bundled conductors that split the electric field across several subwires so corona hisses less. Shield wires ride above phase conductors to intercept lightning; grounding systems give fault currents a controlled path into earth. Substations are fenced cities of steel full of breakers, instrument transformers, and banks of reactive equipment.\n\nProtection is staged like nested fences: relays try to trip only the smallest segment that contains a fault so the rest of the grid keeps serving hospitals and pumps. Operators rehearse N-1 contingencies — losing any single element without losing stability — because weather and backhoes rarely announce appointments.\n\nEnvironmental engineering matters: corona can sing loudly enough to annoy neighbours; right-of-way clearing changes fire ecology; bird flight diverters reduce collisions. Underground extra-high-voltage appears in dense cities where aesthetics and lightning immunity outweigh cost and heat.\n\nStandards bodies harmonise insulation levels and testing so a breaker from one factory closes against a disconnect from another without a negotiation in the arc gap. That interoperability is easy to forget because it works — until a supplier skips a test and a line trips on mist alone.",
   "principles": [
     {
       "name": "Surge impedance loading",
@@ -77,7 +77,7 @@
       "earthLocations": [
         "Bauxite-to-smelter chains globally"
       ],
-      "spaceAlternatives": "Copper heavier — launch-cost sensitive",
+      "spaceAlternatives": "Ship ACSR or ACCC conductor from terrestrial mills; early off-world longlines may use aluminium bus in vacuum with wider phase spacing until stranding plants exist; copper where mass matters less than simplicity",
       "processingRequired": "Continuous casting and rod breakdown"
     },
     {
@@ -86,7 +86,7 @@
       "earthLocations": [
         "Sphalerite deposits worldwide"
       ],
-      "spaceAlternatives": "Stainless steel more costly",
+      "spaceAlternatives": "Hot-dip galvanised structural steel from zinc-rich ore chains; stainless hardware in salt spray without full stainless towers",
       "processingRequired": "Hot-dip galvanising baths"
     },
     {
@@ -95,57 +95,62 @@
       "earthLocations": [
         "Ceramic districts in China, EU"
       ],
-      "spaceAlternatives": "Composite sheds lighter",
+      "spaceAlternatives": "Composite polymer insulators for weight savings on launch; porcelain where UV and tracking resistance favours mature supply",
       "processingRequired": "Glazing and proof testing"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Route selection and EMF studies",
-      "description": "Optimise corridor; model corona audible noise; consult land tenure.",
+      "title": "Pick a route humans and wildlife can live beside for decades",
+      "description": "Walk or fly the corridor before ordering steel. Note crossings of roads, rivers, forests, and houses. Mark where towers must turn, where ice loads worst, and where access roads can reach without carving unstable slopes. Document who owns or governs each segment — a perfect electrical route that ignores land tenure is a lawsuit with foundations.",
       "prerequisiteTools": [
-        "LiDAR",
-        "EMF calculators"
+        "maps",
+        "notebook",
+        "camera"
       ],
-      "warningNote": "Underestimated icing loads collapse spans"
+      "warningNote": "Underestimated icing or wind load collapses spans and kills crews"
     },
     {
       "order": 2,
-      "title": "Foundations and tower erection",
-      "description": "Geotech borings; micropiles in rock; torque bolts to spec.",
+      "title": "Pour foundations and stand towers plumb",
+      "description": "Follow geotechnical borings: some soils need micropiles, rock needs anchors. Torque structural bolts to the spec — partial tightening warps lattices. Keep lifting plans conservative; a swinging conductor near an energised line can induce lethal voltages in supposedly dead spans.",
       "prerequisiteTools": [
-        "cranes",
-        "theodolite"
+        "crane",
+        "theodolite",
+        "torque wrench"
       ],
-      "warningNote": "Guyed assembly near energized lines — induction risk"
+      "warningNote": "Work near live lines only under written permits and trained supervision"
     },
     {
       "order": 3,
-      "title": "String insulators and sag",
-      "description": "Tension versus suspension; sag at max temperature; clearance to ground.",
+      "title": "String insulators and set sag with seasons in mind",
+      "description": "Choose suspension versus tension sets per span physics. Measure sag at the hottest temperature you design for, not only at the pleasant day of construction. Verify ground clearance for vehicles, floods, and crop sprayers.",
       "prerequisiteTools": [
-        "dynamometers"
+        "dynamometer",
+        "temperature log"
       ],
-      "warningNote": "Over-tension cracks porcelain"
+      "warningNote": "Over-tension cracks porcelain; under-tension touches ground"
     },
     {
       "order": 4,
-      "title": "Commission protection",
-      "description": "End-to-end fibre differential; GPS time sync; staged fault tests.",
+      "title": "Commission protection before energising at full voltage",
+      "description": "Test fibre differential or distance schemes end-to-end; verify GPS time sync if your relays use it. Stage through reduced voltage if your procedure allows, watching corona with UV cameras at night. File setting sheets where operators can find them during storms.",
       "prerequisiteTools": [
-        "relay test sets"
+        "relay test set",
+        "labels"
       ],
-      "warningNote": "Incorrect CT polarity trips wrong breaker"
+      "warningNote": "Wrong CT polarity trips the healthy side and leaves the fault burning"
     },
     {
       "order": 5,
-      "title": "Energise at reduced voltage then full",
-      "description": "Infrared scan joints; corona camera at night; record signature.",
+      "title": "Energise, then monitor thermals and noise for a commissioning window",
+      "description": "Infrared-scan joints after load appears; listen for corona change after rain. Record baseline vibration on sensitive spans. Teach maintenance crews which spans are never to be climbed live and why.",
       "prerequisiteTools": [
-        "thermal camera"
+        "thermal camera",
+        "sound level meter"
       ],
-      "warningNote": "Corona ozone is an environmental permit item"
+      "warningNote": "Corona ozone and nitric acid can become environmental permit issues near towns"
     }
   ],
   "history": [

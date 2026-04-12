@@ -12,8 +12,8 @@
     "steel-production"
   ],
   "unlocks": [],
-  "problem": "Fossil steam ties megawatt-years to combustion chemistry and CO₂ venting. Fission concentrates energy in heavy nuclei — a teaspoon of idea-level fuel carries road-train coal energy if released in a disciplined lattice. The engineering problem is kinetics: sustain exactly one neutron per fission causing another fission; remove heat faster than meltdown; confine radioactive products across earthquakes and human error.\n\nMaterials face neutron embrittlement, helium bubbles in vessels, and boron depletion in absorbers. Chemistry faces radiolysis, crud on fuel surfaces, and iodine spike risks during transients.\n\nSocially, the technology cannot be honest without waste stewardship, proliferation safeguards, and transparent regulation — physics alone is insufficient.",
-  "overview": "Light-water reactors use low-enriched uranium oxide pellets in zirconium alloy cladding, cooled by pressurised water transferring heat to a steam generator or boiling directly in BWRs. Control rods and soluble boron shim reactivity. Pressurisers or level control maintain coolant inventory. Containment buildings resist pressure from pipe breaks and hydrogen deflagrations if mitigation fails.\n\nSecondary steam systems resemble fossil plants — turbines, condensers, feed trains — except radiation zoning demands remote maintenance and shielding mazes. Spent fuel pools cool decay heat for years before dry cask storage or reprocessing politics.\n\nAdvanced designs propose coolants from helium to liquid sodium, each trading corrosion, activation, and leak reactivity.\n\nOperation is a licence to practice applied ethics: every alarm ties to a scenario analysis written in blood or ink from prior plants.",
+  "problem": "Burning coal or gas ties megawatt-years to chemistry in the air — carbon leaves the stack whether you like the climate mathematics or not. Fission concentrates energy in heavy nuclei: a modest mass of fuel, handled with discipline, can run a turbine hall for years between refuel outages. The engineering problem is kinetic, not rhetorical: keep exactly one neutron from each fission, on average, causing another fission; remove heat faster than fuel and cladding can melt; confine radioactive products when pipes break or operators fumble.\n\nMaterials age in ways invisible to casual inspection: neutron embrittlement hardens reactor vessels; helium bubbles gather in welds; boron absorbers deplete on schedules easy to miss in a busy outage. Chemistry is equally unforgiving: radiolysis makes aggressive species; crud on fuel surfaces shifts power peaks; iodine spikes after transients demand instruments humans trust under stress.\n\nDecay heat is the moral fact reactor students learn first: after you SCRAM the chain reaction, fission products still release roughly single-digit percent of full power immediately, falling on hour and day scales but not to zero for years. Cooling must survive blackouts, sabotage scenarios, and human forgetfulness — because it will be tested by at least one of them.\n\nSocially, the plant is inseparable from safeguards, waste stewardship, and transparent regulation. Physics can be perfect on paper while institutions rot; the opposite is also true — careful people can run modest machines safely for decades if design margins and training culture align.",
+  "overview": "Light-water reactors pack low-enriched uranium oxide pellets in zirconium tubes, arranged in assemblies inside a vessel flooded with pressurised water that both moderates neutrons and carries heat. In a pressurised-water plant, steam generators transfer that heat to a secondary loop that looks like a fossil turbine island — turbines, condensers, feedwater chemistry — except every room is zoned for radiation and every valve has a training story.\n\nControl rods and boron chemistry shim reactivity; operators move in small steps because delayed neutrons buy seconds of human reaction time. Containment buildings resist pressure from pipe breaks and limit hydrogen risks if mitigation fails. Spent fuel pools glow blue with Cherenkov light while decay heat drops toward dry-cask storage politics.\n\nAdvanced concepts swap coolants and fuels — helium, sodium, molten salt — each trading corrosion, activation, and leak reactivity differently. None removes the need for heat removal ethics after shutdown.\n\nOperation is a licence to practice applied ethics: every alarm ties to a scenario analysis written in ink from prior plants. Preserving that culture across generations is as important as preserving forgings.",
   "principles": [
     {
       "name": "Six-factor formula intuition",
@@ -76,7 +76,7 @@
       "earthLocations": [
         "Kazakhstan, Canada, Australia, Namibia"
       ],
-      "spaceAlternatives": "Terrestrial import — lunar He-3 is a different reactor class",
+      "spaceAlternatives": "Uranium from sandstone, unconformity, or porphyry deposits on Earth; off-world fission would more plausibly use shipped enriched oxide or thorium-uranium cycles engineered for that environment — not lunar helium-3, which implies an entirely different fuel cycle and reactor physics",
       "processingRequired": "Conversion to UF₆, centrifuge enrichment, reduction to UO₂"
     },
     {
@@ -85,7 +85,7 @@
       "earthLocations": [
         "JSW, Creusot Loire historical"
       ],
-      "spaceAlternatives": "Import — cannot improvise",
+      "spaceAlternatives": "Monolithic reactor-vessel forgings from a handful of world-capable forges; until local heavy forging returns, store retired vessel sections as templates, cooperate with regions that retain press capacity, or downscale to smaller modular reactors designed for bolted shells with conservative margins",
       "processingRequired": "Quench and temper, UT inspection"
     },
     {
@@ -94,56 +94,61 @@
       "earthLocations": [
         "Turkey, Argentina boron sources"
       ],
-      "spaceAlternatives": "Hafnium rods alternative",
+      "spaceAlternatives": "Boron carbide or silver-indium-cadmium in clad rods for thermal reactors; metallic hafnium assemblies where chemistry favours them — both require honest metallurgy and inspection, not improvised scrap",
       "processingRequired": "Sintered pellets in stainless cladding"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Licensing and safety analysis",
-      "description": "Probabilistic risk assessment; severe accident management; emergency planning zones.",
+      "title": "Treat licensing and independent review as part of the reactor, not paperwork around it",
+      "description": "Write safety cases humans can read without a law degree: what fails, how you detect it, what power paths remain, how long until something worse happens if nobody acts. Invite external reviewers early — embarrassment in a conference room beats headlines later.",
       "prerequisiteTools": [
-        "RELAP, MELCOR class codes"
+        "regulatory guides",
+        "probabilistic risk templates"
       ],
-      "warningNote": "Skipping peer review is criminal negligence"
+      "warningNote": "Skipping peer review is not speeding up; it is gambling with cities"
     },
     {
       "order": 2,
-      "title": "Fabricate nuclear-grade components",
-      "description": "Material certificates; weld procedure qualification; clean-room assembly for internals.",
+      "title": "Forge, weld, and inspect nuclear-grade components with traceable identity",
+      "description": "Every plate and weld gets certificates; radiography and ultrasonic testing find slag and lack of fusion before water ever touches metal. Qualify welders and procedures on coupons before production joints. Store bolts in tamper-evident bins — counterfeit fasteners have killed projects and people.",
       "prerequisiteTools": [
         "radiography",
-        "eddy current"
+        "UT equipment",
+        "material certs"
       ],
-      "warningNote": "Counterfeit bolts have killed projects"
+      "warningNote": "A single wrong alloy in a steam generator tube sheet can write off years"
     },
     {
       "order": 3,
-      "title": "Fuel load and criticality benchmark",
-      "description": "Approach critical with small boron dilution steps; compare keff to predictions.",
+      "title": "Approach first criticality in measured boron steps, never by gut feel",
+      "description": "Count fuel bundles twice; compare keff predictions to instrument trends at each dilution step. Rehearse who holds authority to stop if instruments disagree. Keep redundant independent channels for neutron detection.",
       "prerequisiteTools": [
-        "startup instrumentation"
+        "startup instrumentation",
+        "written checklist"
       ],
-      "warningNote": "Mis-counted bundles have approached criticality wrong — check twice"
+      "warningNote": "Mis-counted bundles have approached criticality wrong in history — do not add your story"
     },
     {
       "order": 4,
-      "title": "Hot functional testing",
-      "description": "Run primary loops at temperature without fission power; vibration baseline pumps.",
+      "title": "Hot functional test every pump, valve, and snubber before loading fuel",
+      "description": "Run primary loops at temperature without fission power; record vibration baselines; rehearse switching from normal to emergency cooling paths with clocks running. Water hammer cracks steam generator tubes — open and close valves per procedure, not bravado.",
       "prerequisiteTools": [
-        "seismic monitors"
+        "vibration sensors",
+        "procedure manuals"
       ],
-      "warningNote": "Water hammer cracks steam generator tubes"
+      "warningNote": "A cracked tube can let primary chemistry meet secondary — a long expensive week"
     },
     {
       "order": 5,
-      "title": "Power ascension and relicensing",
-      "description": "Ramp power through xenon transients; verify radiation monitors; maintain ageing management programmes.",
+      "title": "Ascend power slowly while chemistry and health physics watch xenon and iodine",
+      "description": "Expect xenon transients after power changes; verify radiation monitors track predictions. Train shift crews on symptom-based drills, not only on knob labels. Relicense ageing equipment on evidence, not nostalgia.",
       "prerequisiteTools": [
-        "health physics lab"
+        "health physics lab support",
+        "chemistry logbooks"
       ],
-      "warningNote": "Organisational drift causes accidents — training is hardware"
+      "warningNote": "Organisational drift causes accidents — training rot is hardware failure"
     }
   ],
   "history": [

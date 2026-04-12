@@ -13,8 +13,8 @@
   "unlocks": [
     "optical-fiber-communications"
   ],
-  "problem": "HF skywave is moody; submarine cables are expensive to lay across all oceans. Satellites sit line-of-sight to enormous ground swaths — one transponder hop replaces chains of microwave towers. The catch is rocketry, radiation, and orbital mechanics: launch costs, station-keeping fuel, and handoffs between beams as Earth rotates.\n\nGeostationary orbit simplifies antennas but injects quarter-second echo on voice — TCP misreads as congestion unless engineered. Low Earth orbit constellations trade latency for handover complexity.\n\nSpace environment kills electronics: total ionising dose, single-event upsets, and atomic oxygen in LEO — satellite engineering is rad-hard packaging plus redundancy.",
-  "overview": "A bus provides power from solar arrays and batteries, thermal control via heat pipes and radiators, attitude control with reaction wheels and thrusters, and command telemetry via S-band links. Payload is C/Ku/Ka-band transponders: LNA, channelised filters, TWTA or SSPA amplifiers, output multiplexers. Ground segment uses large parabolic dishes with tracking servos and low-noise cryogenic amplifiers for deep space budgets.\n\nFrequency plans avoid intermodulation; polarisation reuse doubles capacity. Digital carriers pack many carriers per transponder with MCPC; beam shaping limits interference footprints.\n\nEnd-of-life graveyard orbits mitigate debris; regulatory filings at ITU coordinate slot assignments — orbital slots became property-like.\n\nSatellite phones and GPS ride related technologies — navigation is communication with math differentials.",
+  "problem": "Submarine cables are expensive; HF skywave is moody; microwave towers need line-of-sight chains across politics. Satellites offer a microwave repeater hundreds or thousands of kilometres up, seeing enormous ground footprints — one hop where Earth would need dozens of towers.\n\nOrbits trade gifts: geostationary dishes stay pointed but inject quarter-second echo on voice; low Earth constellations cut latency but demand handoffs and thousands of spacecraft. Launch is still violence wrapped in paperwork — mass and reliability dominate.\n\nSpace is not empty for electronics: radiation ionises gates; single-event upsets flip bits; atomic oxygen gnaws surfaces in LEO. Thermal design must survive sunside and shadowside every hour without cracking solder.\n\nRegulation treats spectrum and slots as property-like — ITU filings are diplomacy with Kepler attached.",
+  "overview": "A satellite bus supplies power from solar arrays and batteries, controls temperature with heat pipes and radiators, maintains attitude with reaction wheels and thrusters, and talks to Earth via telemetry links. Payloads amplify and translate microwave bands — LNAs at the antenna, channel filters, TWTA or solid-state power amplifiers, output multiplexers.\n\nGround stations track with parabolic dishes, cryogenic LNAs for weak signals, and modems that close link budgets against rain fade. Beam shaping and polarisation reuse squeeze capacity; digital carriers pack many signals per transponder with error correction.\n\nEnd-of-life graveyard burns and deorbit plans address debris ethics; collision avoidance manoeuvres are now routine operations, not science fiction.\n\nNavigation constellations are cousins — same buses, different maths — proving communication and timing are braided.",
   "principles": [
     {
       "name": "Link budget",
@@ -77,7 +77,7 @@
       "earthLocations": [
         "Compound semiconductor fabs"
       ],
-      "spaceAlternatives": "Import dies; rad screen",
+      "spaceAlternatives": "Triple-junction gallium arsenide solar cells from multi-junction fabs; silicon panels for cheaper missions with lower areal power",
       "processingRequired": "Burn-in, hermetic packaging"
     },
     {
@@ -86,7 +86,7 @@
       "earthLocations": [
         "Chemical suppliers"
       ],
-      "spaceAlternatives": "Water electrolysis propellant concepts",
+      "spaceAlternatives": "Aluminium honeycomb panels and carbon-fibre composites for bus structures where mass dominates launch cost",
       "processingRequired": "High-pressure loading"
     },
     {
@@ -95,55 +95,57 @@
       "earthLocations": [
         "III-V multi-junction fabs"
       ],
-      "spaceAlternatives": "Deployable arrays",
+      "spaceAlternatives": "Monopropellant hydrazine or electric propulsion xenon — propellant choice sets station-keeping life and logistics",
       "processingRequired": "Coverglass radiation shield"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Define service area and ITU filing",
-      "description": "Coordination with neighbouring satellites; PFD masks.",
+      "title": "Close a link budget on paper before CAD",
+      "description": "List transmitter EIRP, path loss, atmospheric fade margin, receive G/T, and required Eb/N0. If margin is negative, no heroics in assembly fix orbit physics.",
       "prerequisiteTools": [
-        "link budget spreadsheets"
+        "calculator",
+        "ITU rain models"
       ],
-      "warningNote": "Violations cause intentional jamming diplomatic incidents"
+      "warningNote": "Forgetting pointing loss leaves you one beamwidth from silence"
     },
     {
       "order": 2,
-      "title": "Qualify parts to radiation",
-      "description": "TID testing; SEE cross-section; latch-up screening.",
+      "title": "Qualify parts for radiation and thermal cycling",
+      "description": "Test electronics under dose and temperature swings; add shielding mass only where failure rates demand it. Redundant lanes with cross-straps beat heroic single strings.",
       "prerequisiteTools": [
-        "cyclotron access"
+        "thermal vacuum chamber access",
+        "rad test sources"
       ],
-      "warningNote": "Commercial COTS without test dies in weeks"
+      "warningNote": "Latch-up in CMOS can brick a bus — design inhibits"
     },
     {
       "order": 3,
-      "title": "Integrate and vibration test",
-      "description": "Random vibration on shaker; sine burst; modal survey.",
+      "title": "Integrate payload and bus with clean grounding",
+      "description": "Separate noisy digital returns from analogue RF references; verify antenna pattern on a range before launch. Label every coax phase and polarization.",
       "prerequisiteTools": [
-        "vibration lab"
+        "vector network analyser"
       ],
-      "warningNote": "Undetected solder cracks wake in orbit"
+      "warningNote": "PIM from corroded joints raises noise floor mysteriously"
     },
     {
       "order": 4,
-      "title": "Thermal vacuum cycling",
-      "description": "Bakeout; eclipse simulation; deployables release.",
+      "title": "Rehearse operations on simulators with injected faults",
+      "description": "Train operators for loss of attitude, battery collapse, and safe mode entry. Write command dictionaries two humans must agree on before uplinking.",
       "prerequisiteTools": [
-        "TVAC chamber"
+        "ops simulator"
       ],
-      "warningNote": "Outgassing contaminates optics"
+      "warningNote": "Fat-fingered commands cannot be ‘oops’ in orbit"
     },
     {
       "order": 5,
-      "title": "Launch and LEOP",
-      "description": "Acquire signal; deploy solar arrays; raise orbit; drift to slot.",
+      "title": "Commission on orbit with patience",
+      "description": "Unfold arrays slowly; bake out moisture; map momentum wheel saturation. Verify transponder linearity before loading many carriers — intermodulation is rude to neighbours.",
       "prerequisiteTools": [
-        "ground network"
+        "spectrum analyser on ground"
       ],
-      "warningNote": "Single-command error can fuel vent — redundancy"
+      "warningNote": "Thruster leaks re-point antennas — monitor pressure"
     }
   ],
   "history": [

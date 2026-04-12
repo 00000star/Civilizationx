@@ -5,49 +5,206 @@
   "category": "energy",
   "era": "industrial",
   "difficulty": 4,
-  "prerequisites": ["steam-turbine-electric-generation", "steel-production", "copper-wire-and-cable", "electrical-transformer"],
-  "unlocks": ["electric-motor"],
-  "problem": "Local dynamos can light one mill, but civilisation wanted power where rivers were absent. The grid problem is moving electrical energy with acceptable loss, preserving voltage for end users, and keeping thousands of generators phase-locked so clocks stay honest and motors do not fight each other.\n\nFaults propagate at light speed in conductors; trees touch lines; storms trip relays. Without protection coordination, a neighbourhood short can black out a province. Stability is a coupled control problem: mechanical inertia, excitation systems, tap changers, and human dispatchers trading frequency against fuel cost.\n\nThe grid is therefore not wires alone but standards: frequency, earthing practices, harmonic limits, and markets that incentivise reserves.",
-  "overview": "Generators produce three-phase sinusoidal voltages stepped up by transformers for long-distance transmission at hundreds of kilovolts. Bundle conductors reduce corona; series compensation and FACTS devices manage reactive power and oscillations. Substations break and reconfigure paths; distribution feeders step down to customer voltage classes.\n\nProtection uses relays measuring current differentials, distance, and frequency-rate-of-change. SCADA overlays human visibility; automatic generation control nudges power setpoints to restore scheduled interchanges. Inverter-based resources (solar, batteries, wind) change classical inertia assumptions — new grid-forming controls emulate stability services.\n\nEarthing practices manage touch potentials during faults. Insulation coordination selects BIL levels for lightning. Underground urban networks trade capacitance and cost against aesthetics.\n\nOperationally, the grid is one of civilisation’s largest real-time control loops — imperfect, political, and indispensable.",
+  "prerequisites": [
+    "steam-turbine-electric-generation",
+    "steel-production",
+    "copper-wire-and-cable",
+    "electrical-transformer"
+  ],
+  "unlocks": [
+    "electric-motor"
+  ],
+  "problem": "A single dynamo behind a wool mill is a self-contained story: the owner lights his shed and perhaps a neighbour’s lane. A city is not self-contained — factories, trams, hospitals, and pumps want power at the same instant, often far from where coal is burned or water falls. Moving that energy as electricity beats hauling fuel to every doorstep, but only if you can move it without melting conductors and only if every generator agrees on the rhythm of the alternating current.\n\nThat rhythm — the system frequency — is a shared clock. If one generator races slightly ahead and another lags, enormous currents try to flow between them through the network itself. Small imbalances are corrected every second by governors and dispatchers; large ones can split regions apart or black out millions. Weather ignores schedules: wind throws branches across lines, ice loads snap conductors, lightning ionises air into a momentary short.\n\nProtection is therefore as much a social agreement as a technical device: breakers must isolate a faulted line fast enough to save equipment, but not so greedily that a squirrel in one suburb darkens a province. Relay settings, fuse sizes, and earthing practices are negotiated standards — not natural laws — and they differ by country while obeying the same physics.\n\nThe grid is also market infrastructure: someone must be paid to spin spare capacity; someone must decide whether a rural valley gets a line at all. Rebuilding after collapse means rebuilding those agreements, not only stringing copper.",
+  "overview": "At the largest scale, power plants spin alternators that output three-phase voltages — three sine waves staggered in time so motors turn smoothly and transmission can use less metal than single-phase for the same power. Step-up transformers raise voltage for the long haul across steel towers; step-down transformers in substations peel voltage layers like an onion until neighbourhood lines are safe with reasonable insulation.\n\nConductors are often aluminium with a steel core for strength, hung from glass or polymer insulators that keep lightning and switching surges from jumping to the tower. Reactive devices — capacitors and inductors — manage the imaginary part of power flow so voltage does not sag at the end of long lines. Underground cables trade lightning immunity for cost and heat.\n\nControl rooms watch schematic diagrams light up with colours: breakers open and close; transformers tap; capacitor banks switch. Automatic schemes re-route around damage when possible. Wind and solar inverters sometimes lack the spinning mass that once buffered frequency; engineers add batteries, synthetic inertia controls, or faster markets to keep stability.\n\nTo a beginner, the grid looks like spaghetti; to an operator, it is a set of zones with boundaries you may not cross without synchronising angle and voltage. Closing a tie only when both sides match is as important as any cable gauge.",
   "principles": [
-    {"name": "AC versus DC trade-offs", "explanation": "Transformers make AC trivial to step in voltage; HVDC wins on very long submarine links and asynchronous interties where phase is incompatible."},
-    {"name": "Reactive power", "explanation": "Inductive loads need vars; capacitors, reactors, and generator excitation supply them — neglecting vars collapses voltage locally."},
-    {"name": "Symmetrical components", "explanation": "Unbalanced faults decompose into positive, negative, and zero sequences — the algebra protection engineers live in."},
-    {"name": "Stability margin", "explanation": "Rotor angle swings after a fault must decay; insufficient synchronising torque leads to pole slipping and separation."}
+    {
+      "name": "AC versus DC trade-offs",
+      "explanation": "Transformers make AC trivial to step in voltage; HVDC wins on very long submarine links and asynchronous interties where phase is incompatible."
+    },
+    {
+      "name": "Reactive power",
+      "explanation": "Inductive loads need vars; capacitors, reactors, and generator excitation supply them — neglecting vars collapses voltage locally."
+    },
+    {
+      "name": "Symmetrical components",
+      "explanation": "Unbalanced faults decompose into positive, negative, and zero sequences — the algebra protection engineers live in."
+    },
+    {
+      "name": "Stability margin",
+      "explanation": "Rotor angle swings after a fault must decay; insufficient synchronising torque leads to pole slipping and separation."
+    }
   ],
   "components": [
-    {"id": "transmission", "name": "Transmission lines and towers", "function": "Carries bulk power with minimal I²R loss", "position": "Inter-city corridors", "madeFrom": "ACSR conductors, steel lattice, porcelain or composite insulators"},
-    {"id": "transformer", "name": "Power transformers", "function": "Steps voltage between transmission, sub-transmission, and distribution", "position": "Substations", "madeFrom": "Laminated core, copper windings, mineral or ester oil", "criticalNote": "Buchholz relays detect internal arcing gas"},
-    {"id": "breaker", "name": "Circuit breakers", "function": "Interrupts fault current; isolates equipment", "position": "Substations and feeders", "madeFrom": "SF6 or vacuum interrupters modern"},
-    {"id": "relay", "name": "Protective relays and IEDs", "function": "Detects faults and trips breakers selectively", "position": "Control houses", "madeFrom": "Microprocessor relays with fibre time sync"},
-    {"id": "scada", "name": "SCADA and EMS", "function": "Supervises topology, alarms, and economic dispatch", "position": "Control centres", "madeFrom": "Servers, secure networks, human operators"}
+    {
+      "id": "transmission",
+      "name": "Transmission lines and towers",
+      "function": "Carries bulk power with minimal I²R loss",
+      "position": "Inter-city corridors",
+      "madeFrom": "ACSR conductors, steel lattice, porcelain or composite insulators"
+    },
+    {
+      "id": "transformer",
+      "name": "Power transformers",
+      "function": "Steps voltage between transmission, sub-transmission, and distribution",
+      "position": "Substations",
+      "madeFrom": "Laminated core, copper windings, mineral or ester oil",
+      "criticalNote": "Buchholz relays detect internal arcing gas"
+    },
+    {
+      "id": "breaker",
+      "name": "Circuit breakers",
+      "function": "Interrupts fault current; isolates equipment",
+      "position": "Substations and feeders",
+      "madeFrom": "SF6 or vacuum interrupters modern"
+    },
+    {
+      "id": "relay",
+      "name": "Protective relays and IEDs",
+      "function": "Detects faults and trips breakers selectively",
+      "position": "Control houses",
+      "madeFrom": "Microprocessor relays with fibre time sync"
+    },
+    {
+      "id": "scada",
+      "name": "SCADA and EMS",
+      "function": "Supervises topology, alarms, and economic dispatch",
+      "position": "Control centres",
+      "madeFrom": "Servers, secure networks, human operators"
+    }
   ],
   "rawMaterials": [
-    {"name": "Aluminium and steel conductors", "purpose": "Low-resistance lines and structural towers", "earthLocations": ["Bauxite belts", "iron ore ranges"], "spaceAlternatives": "Copper heavier — launch-cost sensitive", "processingRequired": "Stranding, annealing, galvanising"},
-    {"name": "Transformer core steel", "purpose": "Low-hysteresis magnetic circuits", "earthLocations": ["Speciality rolling mills in Japan, USA, EU"], "spaceAlternatives": "Import until cold-rolling exists", "processingRequired": "Grain-oriented silicon steel"},
-    {"name": "Insulating oil or gas", "purpose": "Cooling and insulation in switchgear", "earthLocations": ["Refineries for mineral oil", "fluorochemical plants for SF6"], "spaceAlternatives": "Dry-type transformers trade size for maintenance", "processingRequired": "Degas and dry before energisation"}
+    {
+      "name": "Aluminium and steel conductors",
+      "purpose": "Low-resistance lines and structural towers",
+      "earthLocations": [
+        "Bauxite belts",
+        "iron ore ranges"
+      ],
+      "spaceAlternatives": "Use copper stranding where launch mass dominates losses; aluminium-steel overhead equivalents for surface grids; tethered lunar grids may prefer aluminium buswork in vacuum with ceramic standoffs to avoid oxidation",
+      "processingRequired": "Stranding, annealing, galvanising"
+    },
+    {
+      "name": "Transformer core steel",
+      "purpose": "Low-hysteresis magnetic circuits",
+      "earthLocations": [
+        "Speciality rolling mills in Japan, USA, EU"
+      ],
+      "spaceAlternatives": "Amorphous-metal or lower-flux-density cores until grain-oriented rolling returns; trade efficiency for mass in early off-world microgrids",
+      "processingRequired": "Grain-oriented silicon steel"
+    },
+    {
+      "name": "Insulating oil or gas",
+      "purpose": "Cooling and insulation in switchgear",
+      "earthLocations": [
+        "Refineries for mineral oil",
+        "fluorochemical plants for SF6"
+      ],
+      "spaceAlternatives": "Dry-type cast-resin switchgear where oil is unacceptable; synthetic ester fluids where oil cooling is still desired",
+      "processingRequired": "Degas and dry before energisation"
+    }
   ],
   "buildSteps": [
-    {"order": 1, "title": "Load-flow and short-circuit studies", "description": "Model N-1 contingencies; verify thermal ratings; coordinate relay curves.", "prerequisiteTools": ["power flow software"], "warningNote": "Underestimating motor starting current causes nuisance trips"},
-    {"order": 2, "title": "Erect structures and string conductors", "description": "Maintain sags and clearances; install armour grounding; anti-climb where public access exists.", "prerequisiteTools": ["tensioners", "hot sticks"], "warningNote": "Induction from parallel lines can energise de-energised spans — always verify"},
-    {"order": 3, "title": "Commission substations", "description": "Apply vacuum to transformers; measure partial discharge; phasing checks before closing rings.", "prerequisiteTools": ["dissipation factor test set"], "warningNote": "Incorrect polarity on VTs mis-aims relays"},
-    {"order": 4, "title": "Protective relay testing", "description": "Secondary inject currents and voltages; verify trip times; document settings versions.", "prerequisiteTools": ["relay test set"], "warningNote": "Firmware updates invalidate old setting sheets"},
-    {"order": 5, "title": "Energise and monitor stability", "description": "Start with radial feeds; close loops after phase checks; tune AGC and damping controllers.", "prerequisiteTools": ["PMU data"], "warningNote": "Closing out-of-phase ties explodes equipment"}
+    {
+      "order": 1,
+      "title": "Draw your network on paper before you buy metal",
+      "description": "Mark every planned generator, major load, and junction. For each line, write its length, the power you hope to carry, and the nominal voltage. Identify a single reference frequency (50 or 60 Hz) and stick to it everywhere. This sketch becomes the checklist when someone later proposes a shortcut — if it is not on the map, it is not in the protection study.",
+      "prerequisiteTools": [
+        "large paper or chalkboard",
+        "ruler",
+        "coloured pencils"
+      ],
+      "warningNote": "Mixing frequencies without converters is not a small mistake — it is a new class of accident"
+    },
+    {
+      "order": 2,
+      "title": "Size conductors for thermal limit, not for hope",
+      "description": "For each segment, estimate maximum current including motor starting surges. Look up ampacity tables for your conductor type (ACSR, copper, underground bundle) and ambient temperature. Add margin for future load. Record ice and wind assumptions if you use overhead lines — a line that clears a tree in summer can touch in winter.",
+      "prerequisiteTools": [
+        "ampacity charts or engineering handbook",
+        "notebook"
+      ],
+      "warningNote": "Undersized neutrals in three-phase systems overheat quietly while phases look fine"
+    },
+    {
+      "order": 3,
+      "title": "Install grounding so faults have somewhere safe to go",
+      "description": "Drive or bury a grounding grid at substations and major poles. Connect neutrals according to your regional practice (TN, TT, IT). Measure earth resistance after installation — wet season and dry season if possible. Teach everyone which conductors are never safe to cut, even when ‘the power is off’, because induction from parallel lines can still bite.",
+      "prerequisiteTools": [
+        "earth tester",
+        "heavy copper strap",
+        "exothermic or compression connectors"
+      ],
+      "warningNote": "Shared earth and neutral mistakes can energise plumbing — verify with a qualified person"
+    },
+    {
+      "order": 4,
+      "title": "Commission protection before you invite customers",
+      "description": "For each breaker, write a one-page story: what it protects, what current should trip it, and how fast. Secondary-inject relays with known currents and voltages; verify trip times against curves. Label settings with dates and initials. Stage a controlled fault test only where regulations allow — otherwise use primary injection at reduced risk locations.",
+      "prerequisiteTools": [
+        "relay test set or primary injection kit",
+        "stopwatch",
+        "labels"
+      ],
+      "warningNote": "Mis-polarised current transformers can disable protection while meters still read"
+    },
+    {
+      "order": 5,
+      "title": "Energise in stages and rehearse black-start roles",
+      "description": "Start radially: one source, one feeder, a few loads. Measure voltage at the far end under load. Only then close rings or parallel ties after synchronising — match voltage, frequency, and phase sequence with lamps or a synchroscope. Document who is allowed to close which breaker. Rehearse what happens if a line trips: who calls whom, in what order.",
+      "prerequisiteTools": [
+        "synchroscope or lamp board",
+        "radios",
+        "written switching order"
+      ],
+      "warningNote": "Closing out-of-phase ties can weld breaker contacts and throw shrapnel"
+    }
   ],
   "history": [
-    {"year": 1886, "event": "Great Barrington demonstration transmits AC power — early argument for polyphase systems.", "location": "Massachusetts, USA"},
-    {"year": 1896, "event": "Niagara Falls Adams Plant sends long-distance AC transmission to Buffalo.", "location": "USA"},
-    {"year": 1954, "event": "HVDC link connects Gotland — submarine DC interties mature.", "location": "Sweden"}
+    {
+      "year": 1886,
+      "event": "Great Barrington demonstration transmits AC power — early argument for polyphase systems.",
+      "location": "Massachusetts, USA"
+    },
+    {
+      "year": 1896,
+      "event": "Niagara Falls Adams Plant sends long-distance AC transmission to Buffalo.",
+      "location": "USA"
+    },
+    {
+      "year": 1954,
+      "event": "HVDC link connects Gotland — submarine DC interties mature.",
+      "location": "Sweden"
+    }
   ],
   "inventors": [
-    {"name": "Nikola Tesla", "contribution": "Polyphase AC systems enabling practical long-distance transmission", "years": "1856-1943", "nationality": "Serbian-American"}
+    {
+      "name": "Nikola Tesla",
+      "contribution": "Polyphase AC systems enabling practical long-distance transmission",
+      "years": "1856-1943",
+      "nationality": "Serbian-American"
+    }
   ],
   "impact": "Grids synchronised industry to a clock of electrons — enabling motors, lighting, and later computing at arbitrary distance from fuel piles. They also created blackout risk as a political fact.\n\nOff-world, microgrids precede continents of copper; the same physics applies at smaller perimeters.",
   "images": [],
-  "videos": [{"id": "grid-101", "title": "Power system basics", "description": "Accredited electrical engineering introductions to load flow and protection zones.", "durationSeconds": 1200}],
+  "videos": [
+    {
+      "id": "grid-101",
+      "title": "Power system basics",
+      "description": "Accredited electrical engineering introductions to load flow and protection zones.",
+      "durationSeconds": 1200
+    }
+  ],
   "externalLinks": [
-    {"id": "nerc", "title": "NERC — reliability standards (context)", "url": "https://www.nerc.com/"},
-    {"id": "eia-grid", "title": "EIA — electricity delivery and reliability", "url": "https://www.eia.gov/energyexplained/electricity/delivery-to-consumers.php"}
+    {
+      "id": "nerc",
+      "title": "NERC — reliability standards (context)",
+      "url": "https://www.nerc.com/"
+    },
+    {
+      "id": "eia-grid",
+      "title": "EIA — electricity delivery and reliability",
+      "url": "https://www.eia.gov/energyexplained/electricity/delivery-to-consumers.php"
+    }
   ],
   "lastUpdated": "2026-04-10",
   "verified": false

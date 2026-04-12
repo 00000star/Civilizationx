@@ -12,8 +12,8 @@
     "electrical-power-grid"
   ],
   "unlocks": [],
-  "problem": "Steam plants excel at baseload but demand fuel logistics. Photovoltaics harvest radiative flux where it lands — no turbine hall, no cooling water mandate for the cell itself. The problem is intermittency and area: sun returns vary with weather and season; useful power densities are orders of magnitude below fossil chemical bonds per kilogram of hardware.\n\nCell manufacturing couples semiconductor purity with micrometre metallisation and encapsulation that survives decades of UV, humidity, and thermal cycling. Field systems add trackers, inverters, and grid integration rules for frequency and voltage ride-through.\n\nWithout power electronics literacy, solar becomes a fragile sticker on roofs rather than grid infrastructure.",
-  "overview": "Silicon cells begin as doped wafers; screen-print or plate front grid fingers; anti-reflection coat; interconnect ribbons string cells into modules laminated between glass and EVA backsheet. Modules series-parallel into strings; string inverters or central inverters convert DC to grid-synchronous AC. Maximum power point trackers adjust voltage to harvest changing irradiance.\n\nThin-film alternatives trade efficiency for manufacturing throughput on glass. Bifacial modules harvest albedo from below. Utility scales add single-axis trackers with backtracking algorithms to avoid row shading.\n\nDegradation modes include potential-induced degradation, snail trails, and solder bond fatigue — reliability engineering is outdoor weathering science.\n\nRecycling loops recover silver, silicon, and aluminium frames — emerging as gigawatts age out.",
+  "problem": "Every green leaf is a solar collector tuned by billions of years of evolution; human photovoltaic panels are a blunt industrial imitation that nonetheless works well enough to matter. The problem is not whether sunlight exists — it is whether you can turn a diffuse sky into dispatchable electrons without bankrupting yourself in glass, silver, and land.\n\nA solar cell is a thin sandwich where photons lift electrons across a junction built by painstaking crystal and dopant control. Dust, heat, and partial shading each punish output differently: dust steals photons; heat narrows the voltage window; shading can reverse-bias weak cells until bypass diodes save them — at the cost of complexity and fire risk if connectors are cheap.\n\nGrid-tied inverters must respect the same frequency and voltage contracts as steam turbines, while lacking inertia. Rapid shutdown rules exist so firefighters are not surprised by live roof conductors after a house fire. Off-grid systems add batteries whose chemistry introduces another discipline — state-of-charge estimation, thermal runaway prevention, and end-of-life recycling.\n\nScale shifts politics: utility fields compete with agriculture and habitat; rooftop arrays compete with roof structure and installer skill. The technology is honest about land and labour — ignore either and the levelised cost lies.",
+  "overview": "Modern silicon modules laminate cells between glass and polymer backsheets, edge-sealed against moisture. Cells are sliced from boules or grown as ribbons, doped to form PN junctions, contacted with fine grid fingers, and anti-reflection coated. Silver paste dominates fine-line printing today though copper-plating recipes seek to reduce noble metal.\n\nStrings of modules feed inverters that track the maximum power point as irradiance changes — an algorithmic hill climb on a curve that shifts with temperature. Central inverters serve whole fields; string inverters isolate failures; microinverters per module simplify shading at cost of electronics count.\n\nTrackers aim modules toward the sun on steel posts driven by motors, controllers, and lightning grounding that must survive decades outdoors. Transformers step up collector voltage for interconnection rules; protective devices isolate ground faults on wet mornings when insulation is worst.\n\nLife-cycle thinking includes inverter replacement cadence, module delamination, and recycling routes for silicon, glass, and frames — the industry matures as waste piles appear.",
   "principles": [
     {
       "name": "Shockley-Queisser limit",
@@ -76,7 +76,7 @@
       "earthLocations": [
         "China, Germany, USA polysilicon plants"
       ],
-      "spaceAlternatives": "Import until chlorosilane chain exists",
+      "spaceAlternatives": "Electronic-grade polysilicon from Siemens-style chlorosilane reduction on Earth; early off-world PV may rely on shipped cells/modules until metallurgical silicon can be upgraded with portable chlorination and distillation skids",
       "processingRequired": "Directional solidification ingots, wire saw"
     },
     {
@@ -85,7 +85,7 @@
       "earthLocations": [
         "Precious metals refiners"
       ],
-      "spaceAlternatives": "Copper plating under development to cut Ag",
+      "spaceAlternatives": "Silver screen-print pastes today; migrating to plated copper fingers reduces Ag but needs clean plating lines — budget for either chemistry until copper recipes mature",
       "processingRequired": "Fire-through contact firing profile"
     },
     {
@@ -94,56 +94,62 @@
       "earthLocations": [
         "Float lines near deserts"
       ],
-      "spaceAlternatives": "Thin films on flexible substrates",
+      "spaceAlternatives": "Low-iron tempered glass for transmission; thin-film cadmium telluride or CIGS on flexible substrates where mass or shatter risk dominates spacecraft surfaces",
       "processingRequired": "Tempering for mechanical load"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Site insolation and interconnection study",
-      "description": "Model shading, soil resistivity for grounding, and queue position on grid.",
+      "title": "Measure your site’s sun and shade before buying pallets of glass",
+      "description": "Log hourly shade from trees, chimneys, and future construction. Use a simple tilted sensor for a week if you lack professional data — winter sun angles surprise optimists. Decide whether trackers earn their maintenance cost or fixed tilt is wiser.",
       "prerequisiteTools": [
-        "PVsyst or equivalent"
+        "notebook",
+        "camera",
+        "cheap irradiance logger if possible"
       ],
-      "warningNote": "Transformer tap mismatch causes chronic inverter trips"
+      "warningNote": "Partial shading without bypass planning can destroy cells slowly"
     },
     {
       "order": 2,
-      "title": "Mechanical install and bonding",
-      "description": "Torque clamps; equipotential bonding; lightning protection down conductors.",
+      "title": "Mechanically design the rack like a small building, not like a garden trellis",
+      "description": "Calculate wind and snow loads for your code region; anchor footings to spec; torque stainless fasteners with anti-seize where metallurgy demands. Run equipotential bonding so lightning has a polite path.",
       "prerequisiteTools": [
-        "torque wrenches",
-        "megger"
+        "structural tables",
+        "torque wrench"
       ],
-      "warningNote": "Wind torsion cracks cells if clamps underspecified"
+      "warningNote": "Under-designed racks sail in storms and cut neighbouring roofs"
     },
     {
       "order": 3,
-      "title": "Commission inverters",
-      "description": "Set anti-islanding; verify G59/G83 class protections; harmonics scan at POC.",
+      "title": "Wire strings to voltage limits your inverter expects",
+      "description": "Read the inverter’s maximum input voltage at coldest morning — open-circuit voltage rises when silicon is cold. Use appropriate cable gauges and UV-rated jackets outdoors. Label every combiner box leg.",
       "prerequisiteTools": [
-        "PQ analyser"
+        "multimeter",
+        "temperature chart for Voc"
       ],
-      "warningNote": "Lagging power factor penalties erase revenue"
+      "warningNote": "Overvoltage on a cold dawn destroys inverter front ends"
     },
     {
       "order": 4,
-      "title": "Performance ratio monitoring",
-      "description": "Irradiance sensors versus expected kWh; identify string outages.",
+      "title": "Commission the inverter with grid rules or battery BMS limits",
+      "description": "If grid-tied, enable anti-islanding protection required locally. If off-grid, set battery voltage and current limits conservatively; verify temperature sensors on packs. Update firmware deliberately — log versions.",
       "prerequisiteTools": [
-        "SCADA"
+        "laptop",
+        "vendor manual"
       ],
-      "warningNote": "Snail trails start as warranty fights — photograph modules at handover"
+      "warningNote": "DIY battery banks without fuses have burned houses"
     },
     {
       "order": 5,
-      "title": "Plan end-of-life logistics",
-      "description": "Track serials for silver recovery; avoid landfill arsenic from thin-film panels if used.",
+      "title": "Plan cleaning, inverter replacement, and module inspection on a calendar",
+      "description": "Dust losses vary by climate; schedule a spring wash where ROI justifies water use. Infrared-scan modules annually if you can — hot spots reveal cracked cells and bad diodes before they become fires.",
       "prerequisiteTools": [
-        "recycler contracts"
+        "soft brush",
+        "hose",
+        "optional thermal camera"
       ],
-      "warningNote": "Firefighters need module hazard sheets — DC strings stay live in daylight"
+      "warningNote": "Walking on modules cracks cells even when glass looks fine"
     }
   ],
   "history": [

@@ -5,49 +5,206 @@
   "category": "energy",
   "era": "industrial",
   "difficulty": 3,
-  "prerequisites": ["copper-wire-and-cable", "steel-production"],
-  "unlocks": ["electrical-power-grid"],
-  "problem": "Transmitting megawatts at utilisation voltage would require absurd conductor cross-section; end equipment cannot insulate hundreds of kilovolts inside a home. The transformer solves impedance transformation for AC: trade voltage against current while conserving power minus losses.\n\nDesign challenges include core losses from hysteresis and eddy currents, copper losses from I²R, stray flux heating structural steel, and insulation ageing from partial discharge in paper-oil systems. Short-circuit forces between windings can crush coils if bracing is naive.\n\nDC networks cannot use classical transformers — a fact that shaped the War of Currents and later motivated power electronics for HVDC taps.",
-  "overview": "Two or more windings link through a shared core flux. Primary ampere-turns drive flux limited by core permeability and air gaps; secondary voltage scales by turns ratio. Shell or core-type constructions route flux; three-phase banks use delta and wye connections for grounding and third-harmonic management.\n\nLiquid-filled units use mineral or ester oil for cooling and insulation, with radiators or fans. Dry-type resin cast transformers suit indoor switchgear. Tap changers adjust ratio under load to regulate voltage as feeders stretch.\n\nProtection includes differential relays comparing terminal currents, sudden pressure relays on tanks, and hot-spot temperature estimates from winding resistance models.\n\nTransformer hum is magnetostriction at twice line frequency — the audible signature of cities.",
+  "prerequisites": [
+    "copper-wire-and-cable",
+    "steel-production"
+  ],
+  "unlocks": [
+    "electrical-power-grid"
+  ],
+  "problem": "Imagine trying to push a city’s worth of power through wires sized for a neighbourhood: the copper would melt long before the lights came on, or you would need cables too thick to hang from poles. The opposite problem waits inside a house — nobody wants a toaster wired for lightning-strike voltages. Alternating current has one magical property: a changing magnetic field can push energy from one coil to another through an iron bridge, without the coils touching. A transformer is that bridge: it trades voltage for current (almost) freely, so power can travel far at high voltage and arrive safe at low voltage.\n\nBuilding one is not merely wrapping wire around a nail. The iron core must change its magnetisation sixty times a second without heating itself to uselessness; laminations interrupt eddy currents the way a dam interrupts a river. The windings must survive enormous magnetic forces during faults — short circuits try to crush coils together like hands clapping. Oil or resin must keep conductors cool and free of bubbles, because a bubble is a void where voltage concentrates until something arcs.\n\nLarge grid transformers are also slow political objects: they weigh as much as a house, take months to wind and impregnate, and cannot be improvised from scrap in a weekend. After a disaster, spare transformers are as precious as generators. The design discipline — drying paper, pulling vacuum, testing insulation — is what separates a quiet substation from a fireball.\n\nDirect current cannot use this trick without rotating machinery or semiconductors. That historical fact shaped entire cities: where you can transform AC cheaply, you build one kind of grid; where you cannot, you build another.",
+  "overview": "At its heart, a transformer is two coils wrapped so they share magnetic flux inside a core of silicon steel. When AC flows in the primary, flux rises and falls; that changing flux induces a voltage in the secondary proportional to the ratio of turns. More turns on the secondary than the primary raises voltage and lowers current for the same power (minus small losses from resistance and core heating).\n\nUtility units are often filled with mineral or ester oil that both insulates and carries heat to radiators. Bushings — thick, graded insulators — bring conductors out through the grounded steel tank without letting flashover creep along surfaces. Tap changers nudge the turns ratio while the unit is live, correcting for voltage sag on long feeders the way a violinist tunes between movements.\n\nTesting a finished transformer is part craft, part mathematics: an open-circuit test maps core loss; a short-circuit test maps copper loss and impedance. Protection engineers care about those numbers because they set how much fault current will flow and how fast relays must decide. Inrush currents when first energising can look like faults — operators learn to read harmonic signatures so breakers do not trip uselessly.\n\nDry-type transformers trade oil for cast resin in buildings and tunnels; they are noisier in thermal terms but safer around people who fear spills. At every scale, the same lesson repeats: keep the insulation dry, keep the core tight, and never treat a hum as merely ambience — it is the sound of magnetostriction reporting that the grid still breathes.",
   "principles": [
-    {"name": "Faraday induction", "explanation": "Time-varying flux induces voltage proportional to turns — the basis of all AC transformation."},
-    {"name": "Ideal transformer relationships", "explanation": "Voltage ratio equals turns ratio; current ratio inversely; impedance scales as squared turns ratio referred across."},
-    {"name": "Per-unit system", "explanation": "Normalising values to base MVA and kV simplifies grid studies across many voltage levels."},
-    {"name": "Inrush current", "explanation": "Closing a breaker at voltage zero can saturate core — generating harmonic-rich magnetising currents mistaken for faults."}
+    {
+      "name": "Faraday induction",
+      "explanation": "Time-varying flux induces voltage proportional to turns — the basis of all AC transformation."
+    },
+    {
+      "name": "Ideal transformer relationships",
+      "explanation": "Voltage ratio equals turns ratio; current ratio inversely; impedance scales as squared turns ratio referred across."
+    },
+    {
+      "name": "Per-unit system",
+      "explanation": "Normalising values to base MVA and kV simplifies grid studies across many voltage levels."
+    },
+    {
+      "name": "Inrush current",
+      "explanation": "Closing a breaker at voltage zero can saturate core — generating harmonic-rich magnetising currents mistaken for faults."
+    }
   ],
   "components": [
-    {"id": "core", "name": "Laminated core", "function": "Provides low-reluctance flux path", "position": "Centre of coil window", "madeFrom": "Grain-oriented silicon steel, step-lap joints"},
-    {"id": "windings", "name": "HV and LV windings", "function": "Electromagnetic coupling; concentric or pancake layouts", "position": "Around core legs", "madeFrom": "Paper-insulated rectangular copper; transposed strands reduce eddy losses"},
-    {"id": "tank", "name": "Tank and conservator", "function": "Holds oil; accommodates thermal expansion", "position": "Surrounds core-coil assembly", "madeFrom": "Welded steel", "criticalNote": "Nitrogen blanket or bladder prevents moist air ingress"},
-    {"id": "bushings", "name": "Bushings", "function": "Brings conductors through grounded tank at high voltage", "position": "Tank roof", "madeFrom": "Porcelain or composite with capacitive grading"},
-    {"id": "oltc", "name": "On-load tap changer", "function": "Adjusts turns ratio during energisation", "position": "HV winding taps", "madeFrom": "Diverter switch, motor drive", "criticalNote": "Maintenance neglected OLTCs cause fires"}
+    {
+      "id": "core",
+      "name": "Laminated core",
+      "function": "Provides low-reluctance flux path",
+      "position": "Centre of coil window",
+      "madeFrom": "Grain-oriented silicon steel, step-lap joints"
+    },
+    {
+      "id": "windings",
+      "name": "HV and LV windings",
+      "function": "Electromagnetic coupling; concentric or pancake layouts",
+      "position": "Around core legs",
+      "madeFrom": "Paper-insulated rectangular copper; transposed strands reduce eddy losses"
+    },
+    {
+      "id": "tank",
+      "name": "Tank and conservator",
+      "function": "Holds oil; accommodates thermal expansion",
+      "position": "Surrounds core-coil assembly",
+      "madeFrom": "Welded steel",
+      "criticalNote": "Nitrogen blanket or bladder prevents moist air ingress"
+    },
+    {
+      "id": "bushings",
+      "name": "Bushings",
+      "function": "Brings conductors through grounded tank at high voltage",
+      "position": "Tank roof",
+      "madeFrom": "Porcelain or composite with capacitive grading"
+    },
+    {
+      "id": "oltc",
+      "name": "On-load tap changer",
+      "function": "Adjusts turns ratio during energisation",
+      "position": "HV winding taps",
+      "madeFrom": "Diverter switch, motor drive",
+      "criticalNote": "Maintenance neglected OLTCs cause fires"
+    }
   ],
   "rawMaterials": [
-    {"name": "GO silicon steel", "purpose": "Low core loss", "earthLocations": ["Japan, USA, EU cold rolling"], "spaceAlternatives": "Import", "processingRequired": "Cut laminations; anneal; edge insulate"},
-    {"name": "Kraft paper and cellulose", "purpose": "Conductor insulation in oil", "earthLocations": ["Pulp mills"], "spaceAlternatives": "Nomex in dry types", "processingRequired": "Dry and oil impregnate under vacuum"},
-    {"name": "Transformer oil", "purpose": "Dielectric and coolant", "earthLocations": ["Refineries"], "spaceAlternatives": "Natural esters for lower flash risk", "processingRequired": "Dry, degas, test BDV"}
+    {
+      "name": "GO silicon steel",
+      "purpose": "Low core loss",
+      "earthLocations": [
+        "Japan, USA, EU cold rolling"
+      ],
+      "spaceAlternatives": "Ship grain-oriented lamination kits from surviving terrestrial mills, or run motors at lower flux density with thicker cores of ordinary silicon steel until cold-rolling can be rebuilt; small lunar or Martian bases may prioritise dry-type cast-resin transformers to avoid flammable oil",
+      "processingRequired": "Cut laminations; anneal; edge insulate"
+    },
+    {
+      "name": "Kraft paper and cellulose",
+      "purpose": "Conductor insulation in oil",
+      "earthLocations": [
+        "Pulp mills"
+      ],
+      "spaceAlternatives": "Aramid paper (Nomex) classes in dry-type transformers where cellulose is scarce; hybrid insulation using ceramic-fibre wraps for prototype units at reduced voltage stress",
+      "processingRequired": "Dry and oil impregnate under vacuum"
+    },
+    {
+      "name": "Transformer oil",
+      "purpose": "Dielectric and coolant",
+      "earthLocations": [
+        "Refineries"
+      ],
+      "spaceAlternatives": "Synthetic ester fluids from bio-derived alcohols for lower flammability than mineral oil; in sealed habitats, SF6-free designs favour solid/epoxy insulation over pressurised gas",
+      "processingRequired": "Dry, degas, test BDV"
+    }
   ],
   "buildSteps": [
-    {"order": 1, "title": "Wind coils on mandrels", "description": "Maintain tension; add cooling ducts; transpose strands in large conductors.", "prerequisiteTools": ["foil winding machine for LV"], "warningNote": "Sharp edges cut paper — radius tools"},
-    {"order": 2, "title": "Stack core and insert coils", "description": "Interleave laminations; tighten core clamps; slide windings; install spacers.", "prerequisiteTools": ["core stacking table"], "warningNote": "Foreign metal in window shorts turns"},
-    {"order": 3, "title": "Vacuum oil impregnate", "description": "Heat and pull vacuum on windings; flood oil; soak; hold BDV test.", "prerequisiteTools": ["vacuum chamber"], "warningNote": "Moist paper fails hipot spectacularly"},
-    {"order": 4, "title": "Tank weld and leak test", "description": "Pressure test with dry air; install bushings; fill conservator.", "prerequisiteTools": ["helium sniffer optional"], "warningNote": "Weld splatter inside tank is conductive debris"},
-    {"order": 5, "title": "Energise and measure losses", "description": "Open-circuit and short-circuit tests extract equivalent circuit; compare to nameplate.", "prerequisiteTools": ["wattmeters, PTs, CTs"], "warningNote": "Short-circuit test overheats small units quickly"}
+    {
+      "order": 1,
+      "title": "Decide your voltages, power, and whether you need taps",
+      "description": "Write on paper what AC frequency you have, the RMS voltage coming in, the voltage you want going out, and the maximum power in kilovolt-amperes (not necessarily kilowatts — power factor matters). Sketch which winding will sit nearer the core (usually the lower voltage for insulation reasons). If your load varies — long rural lines, for example — plan a simple tap scheme so you can reconnect a few turns later without rewinding everything.",
+      "prerequisiteTools": [
+        "notebook",
+        "calculator",
+        "AC voltmeter"
+      ],
+      "warningNote": "Never work on windings while anything upstream can energise them — lock out breakers and verify dead with a meter"
+    },
+    {
+      "order": 2,
+      "title": "Build or buy a laminated core and clean every surface",
+      "description": "Stack silicon-steel laminations in the prescribed overlap pattern so joints do not line up into a low-resistance magnetic short. Deburr edges; burrs pierce inter-lamination insulation and create hot spots. Clamp the core gently but evenly — a twisted core makes noise and losses. If you are reusing an old core, sand rust only where needed; do not remove the factory’s oxide coating blindly.",
+      "prerequisiteTools": [
+        "deburring tool",
+        "micrometer",
+        "clean lint-free rags"
+      ],
+      "warningNote": "Silicon steel is sharp — cut gloves easily"
+    },
+    {
+      "order": 3,
+      "title": "Wind the coils with even tension and generous radii at corners",
+      "description": "Whether you hand-wind magnet wire or lay rectangular conductors, keep tension steady so turns do not loosen when oil flows later. Add layer insulation where the design calls for it; slide cooling ducts in larger conductors so heat can escape the middle of a bundle. Label starts and finishes with tags you cannot smudge — polarity mistakes explode semiconductors downstream.",
+      "prerequisiteTools": [
+        "wire tensioner or gloved hands",
+        "insulation paper",
+        "tags"
+      ],
+      "warningNote": "A single sharp edge under paper can puncture it under short-circuit forces"
+    },
+    {
+      "order": 4,
+      "title": "Assemble core and coils, then dry and impregnate if using oil",
+      "description": "Slide windings onto the core legs without nicking insulation. Tie windings to spacers so they cannot shift. Heat the assembly gently while pulling vacuum to drive moisture from paper; then let oil (or resin) fill the voids under vacuum if your design requires impregnation. Hold a breakdown test on a sample of oil before fill.",
+      "prerequisiteTools": [
+        "oven or heated space",
+        "vacuum pump",
+        "oil test kit if available"
+      ],
+      "warningNote": "Hot oil vapour is flammable — ventilate and forbid sparks"
+    },
+    {
+      "order": 5,
+      "title": "Close the tank, fill conservatively, and measure before connecting load",
+      "description": "Pressure-test the tank for leaks with dry air if specifications demand it. Install bushings using the torque pattern the manufacturer specifies. Energise first at no load: listen, smell, and measure magnetising current. Only then connect load through appropriate protection. Log temperatures and sounds for the first days — a rising oil temperature curve that never flattens means blocked cooling or circulating currents.",
+      "prerequisiteTools": [
+        "wrench set",
+        "torque wrench",
+        "clamp meter",
+        "infrared thermometer"
+      ],
+      "warningNote": "Energised bushings can look harmless — stay beyond strike distance until a qualified person confirms clearance"
+    }
   ],
   "history": [
-    {"year": 1885, "event": "Stanley and others commercialise practical AC transformers for distribution.", "location": "United States"},
-    {"year": 1891, "event": "Three-phase demonstration in Lauffen–Frankfurt proves transformer-linked transmission.", "location": "Germany"}
+    {
+      "year": 1885,
+      "event": "Stanley and others commercialise practical AC transformers for distribution.",
+      "location": "United States"
+    },
+    {
+      "year": 1891,
+      "event": "Three-phase demonstration in Lauffen–Frankfurt proves transformer-linked transmission.",
+      "location": "Germany"
+    }
   ],
   "inventors": [
-    {"name": "Lucien Gaulard", "contribution": "Early transformer prototypes in AC distribution experiments", "years": "1850-1888", "nationality": "French"},
-    {"name": "John Gibbs", "contribution": "Parallel AC transformer patent work with Gaulard", "years": "1850-1920", "nationality": "British"}
+    {
+      "name": "Lucien Gaulard",
+      "contribution": "Early transformer prototypes in AC distribution experiments",
+      "years": "1850-1888",
+      "nationality": "French"
+    },
+    {
+      "name": "John Gibbs",
+      "contribution": "Parallel AC transformer patent work with Gaulard",
+      "years": "1850-1920",
+      "nationality": "British"
+    }
   ],
   "impact": "Transformers made long-distance AC grids economical — the enabling device between generator voltage and lightning-prone transmission lines.\n\nThey remain heavy, oil-filled monuments of electromagnetic craft.",
   "images": [],
-  "videos": [{"id": "transformer-tests", "title": "Transformer equivalent circuit", "description": "Accredited labs on open-circuit and short-circuit tests.", "durationSeconds": 540}],
+  "videos": [
+    {
+      "id": "transformer-tests",
+      "title": "Transformer equivalent circuit",
+      "description": "Accredited labs on open-circuit and short-circuit tests.",
+      "durationSeconds": 540
+    }
+  ],
   "externalLinks": [
-    {"id": "ieee-transformers", "title": "IEEE C57 transformer standards committee (context)", "url": "https://standards.ieee.org/"},
-    {"id": "eia-transformers", "title": "EIA — transformers and grid equipment context", "url": "https://www.eia.gov/tools/glossary/"}
+    {
+      "id": "ieee-transformers",
+      "title": "IEEE C57 transformer standards committee (context)",
+      "url": "https://standards.ieee.org/"
+    },
+    {
+      "id": "eia-transformers",
+      "title": "EIA — transformers and grid equipment context",
+      "url": "https://www.eia.gov/tools/glossary/"
+    }
   ],
   "lastUpdated": "2026-04-10",
   "verified": false
