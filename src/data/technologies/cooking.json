@@ -9,8 +9,11 @@
     "fire"
   ],
   "unlocks": [
+    "first-aid-and-wound-care",
     "food-preservation",
-    "first-aid-and-wound-care"
+    "paper-and-ink-media",
+    "soap-making",
+    "soil-science-and-composting"
   ],
   "problem": "Many foods are marginal without heat: proteins can harbour pathogens; some plants contain heat-labile toxins or enzyme inhibitors; starches in tubers and grains are less accessible raw. Chewing and digestion are metabolically expensive — heat denatures proteins, gelatinises starches, and breaks down cell walls, changing what calories a human gut can absorb per hour.\n\nCooking also concentrates flavours and enables combining ingredients into stews that homogenise nutrients across a group — a social technology as much as a chemical one.\n\nThe engineering problem is not merely temperature peaks but controlled heat transfer without burning, efficient fuel use, and containers that survive repeated thermal cycling. That couples cooking tightly to ceramics and later metals.",
   "overview": "Cooking methods map to heat transfer modes. Direct radiation from coals or flame sears surfaces — good for Maillard browning, easy to overcook interiors. Conduction through stones (hot-rock boiling) heats liquids in organic containers that would burn in flame. Convection in earth ovens and steam pits circulates moist heat evenly. Immersion boiling in pottery is the gateway to grains and legumes at scale.\n\nTemperature bands matter: pasteurisation concepts (time at temperature) reduce pathogen risk though premodern cooks used heuristics — foam, colour, smell. For plant toxins, specific knowledge replaces thermometers: slow simmering versus rapid boil changes outcomes for some cyanogenic or lectin-rich foods.\n\nFuel efficiency is a design variable: insulated pits reuse heat; lids reduce evaporative losses; stacking pots saves charcoal. Ash and soot management affects food taste and long-term respiratory health — another reason ventilation design belongs with cooking.\n\nNutritionally, cooking can reduce some heat-sensitive vitamins while increasing bioavailability of others; the net depends on diet composition. The civilisational net effect has been overwhelmingly enabling for population density.",

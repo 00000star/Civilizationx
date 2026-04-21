@@ -10,9 +10,24 @@
     "charcoal"
   ],
   "unlocks": [
-    "internal-combustion-engine",
+    "automobile",
     "bicycle",
-    "steam-locomotive"
+    "boiler-feedwater-treatment",
+    "copper-wire-and-cable",
+    "electric-motor",
+    "electrical-power-grid",
+    "electrical-telegraph",
+    "electrical-transformer",
+    "fixed-wing-aircraft",
+    "high-capacity-electrochemical-batteries",
+    "high-voltage-ac-transmission",
+    "internal-combustion-engine",
+    "nuclear-fission-power-plant",
+    "printing-press-movable-type",
+    "semiconductor-crystal-growing-doping",
+    "steam-engine",
+    "steam-locomotive",
+    "steam-turbine-electric-generation"
   ],
   "problem": "Bloomery iron is variable: soft in some regions, glassy in others, never quite the same batch to batch. Tools that must keep edges need higher carbon; structural beams need toughness. The steel problem is reproducible control of iron–carbon chemistry and microstructure: enough carbon to harden, not so much that blades chip, with processes to refine inclusions and adjust properties after forging.\n\nHistorically, multiple lineages converged: pack carburisation of wrought iron bars, crucible melting of blister steel, finery/puddling converting pig iron, and eventually Bessemer and open-hearth bulk decarburisation. The Codex unifies them under one entry because the user-facing outcome is the same material class — steel — even though industrial paths differ.\n\nFor civilisation restart, the earliest accessible path is often forge carburisation plus quench-and-temper heuristics on wrought iron, scaling toward crucible steel once refractories and temperature measurement improve.",
   "overview": "Steel is iron alloyed with roughly 0.2–2.1% carbon in modern definitions of steels (above that enters cast iron territory, though historical language blurs). Carbon in interstitial solid solution and as iron carbide changes hardness and hardenability. Heat treatment — austenitising, quenching to form martensite, tempering to reduce brittleness — is as important as composition.\n\nPack carburisation packs iron bars in charcoal powder inside sealed clay boxes heated for hours to days; carbon diffuses inward producing a gradient — shear surfaces can be ground to high-carbon while core stays tough. Quenching in water or oil locks a hard surface.\n\nCrucible steel (e.g., historical wootz/ulibar traditions) melts a selected charge in sealed crucibles, enabling more homogeneous alloy distribution before forging. This demands higher temperatures and excellent refractories.\n\nIndustrial revolution paths start from pig iron rich in carbon and silicon; oxygen or air oxidation lowers carbon under controlled conditions (Bessemer converter), or puddling stirs molten iron in a reverberatory furnace to expose it to oxidising slag. These are civilisation-scale technologies requiring large capital.\n\nRegardless of path, slag inclusion control, phosphorus/sulphur limits, and consistent forging practice separate ornamental metal from reliable machine steel.",

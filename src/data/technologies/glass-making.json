@@ -10,7 +10,14 @@
     "ceramics-and-pottery"
   ],
   "unlocks": [
-    "fixed-wing-aircraft"
+    "boiler-feedwater-treatment",
+    "electric-lighting-systems",
+    "electrical-telegraph",
+    "fixed-wing-aircraft",
+    "optical-fiber-communications",
+    "semiconductor-crystal-growing-doping",
+    "solar-photovoltaic-power-systems",
+    "vacuum-tube-electronics"
   ],
   "problem": "Clay becomes opaque pottery; humans wanted translucency — to see liquids inside containers, to transmit light for windows, and eventually to shape lenses that extend vision. Silica alone melts at a temperature difficult for early furnaces; the glass problem is fluxing: adding soda, potash, or lime to break up the silica network, lowering viscosity and working range.\n\nGlass also demands thermal patience: rapid cooling shatters due to internal stresses. Annealing — holding near the glass transition then cooling slowly — converts a museum of internal stresses into a durable object.\n\nChemically, glass is a frozen liquid: disordered network. That makes it corrosive-resistant compared with metals in many contexts, but brittle — shock and scratch concentration limit structural roles until tempered and laminated technologies appear millennia later.",
   "overview": "Soda-lime glass, the bulk of modern windows and bottles, combines silica sand, sodium carbonate (historically from natron or ashes), and calcium oxide (from limestone) to stabilise against water attack. In a furnace at roughly 1000–1200 °C batch reactions form melt; working occurs at lower temperatures on the glory hole or punty iron.\n\nColour comes from transition metal oxides: iron greens, cobalt blues, manganese purples. Decolourisers and oxidising/reducing flames interact subtly — glass chemistry is visibly readable to the trained eye.\n\nForming methods evolve from core-formed vessels to blown glass — a inflation process that uses surface tension to create thin, even walls. Flat glass historically was cast or crown-blown; modern float glass rides on molten tin — outside primitive scope but noted as descendant.\n\nRecycling cullet lowers melt energy — an ancient and modern efficiency lever.",

@@ -10,6 +10,7 @@
     "rope-and-cordage"
   ],
   "unlocks": [
+    "automobile",
     "road-construction"
   ],
   "problem": "Human backs scale poorly with grain surpluses, timber lengths, and stone blocks. Sledges work but waste energy ploughing soil; pack animals cap out at modest loads per animal. The wheeled vehicle problem is distributing weight across multiple rolling contacts, steering a front axle or pivot, and braking descent without destroying wheels.\n\nTwo-wheeled carts tip easily but track narrow paths; four-wheeled wagons need steering geometry — either pivoting front axle or turntable — or they scrub tires and break on turns. Suspension is historically minimal; road quality dominates ride.\n\nWithout standardised hubs, axle sizes, and repairable parts, vehicle fleets cannot be maintained at civilisation scale. Thus carts are not only carpentry but logistics standards.",

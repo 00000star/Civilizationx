@@ -10,7 +10,9 @@
     "steel-production",
     "glass-making"
   ],
-  "unlocks": [],
+  "unlocks": [
+    "communication-satellites"
+  ],
   "problem": "Humans are not born with wings. Balloons drift; dirigibles carry large envelopes and hydrogen risks. Fixed-wing aircraft solve directed, rapid travel over obstacles by generating aerodynamic lift with wings moving through air — trading fuel for speed and access.\n\nThe obstacles are simultaneous: structures must be light yet strong; engines must produce power at altitude with thinning air; controls must keep the craft stable and controllable across flight regimes; and manufacturing must hold airfoil and incidence tolerances or stall characteristics become lethal.\n\nWeather adds a systems layer: icing destroys lift and blocks pitot probes; turbulence couples structural fatigue. Pilot training and instrumentation (where glassmaking and optics feed in) are inseparable from the machine.",
   "overview": "A conventional aeroplane includes wings with airfoil sections tuned for cruise lift-to-drag ratio; a fuselage housing payload, fuel, and systems; empennage surfaces providing pitch (elevator/stabiliser) and yaw (rudder) stability and control; and roll control via ailerons or spoilers. Propulsion may be tractor or pusher propellers, turboprops, or jet engines — this entry emphasises propeller-driven IC-engine lineage for continuity with prior nodes.\n\nPrimary structure uses aluminium alloys or composites; flight loads path from wings through spars into fuselage frames. Control surfaces actuate via cables, pushrods, or fly-by-wire. Fuel tanks are baffled to prevent slosh shifting centre of gravity dangerously.\n\nAirspeed measurement uses pitot-static systems feeding instruments (mechanical or glass-faced). Stall warning devices alert when angle of attack approaches critical values where flow separation collapses lift.\n\nCertification concepts (where civil aviation authorities exist) encode crashworthiness, fire protection, and maintenance schedules — the technology is legally coupled to governance.",
   "principles": [

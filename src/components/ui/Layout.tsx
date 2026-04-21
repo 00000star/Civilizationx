@@ -137,6 +137,12 @@ export function Layout() {
               <NavLink to="/survive" className={navCls}>
                 Survive
               </NavLink>
+              <NavLink to="/foundations" className={navCls}>
+                Foundations
+              </NavLink>
+              <NavLink to="/pathfinder" className={navCls}>
+                Pathfinder
+              </NavLink>
               <NavLink to="/search" className={navCls}>
                 Search
               </NavLink>
@@ -294,6 +300,24 @@ export function Layout() {
                   </button>
                 </div>
                 <ul className="space-y-2 text-sm">
+                  <li>
+                    <Link
+                      to="/foundations"
+                      onClick={() => setMoreOpen(false)}
+                      className="block rounded px-2 py-2 text-codex-text hover:bg-codex-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-codex-blue"
+                    >
+                      Foundations
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/pathfinder"
+                      onClick={() => setMoreOpen(false)}
+                      className="block rounded px-2 py-2 text-codex-text hover:bg-codex-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-codex-blue"
+                    >
+                      Pathfinder
+                    </Link>
+                  </li>
                   <li>
                     <Link
                       to="/atlas"

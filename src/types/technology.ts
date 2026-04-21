@@ -36,6 +36,19 @@ export type SourceType =
   | "institution"
   | "wikipedia";
 
+export type HazardCategory =
+  | "medical"
+  | "chemical"
+  | "electrical"
+  | "fire"
+  | "pressure"
+  | "structural"
+  | "biological"
+  | "radiation"
+  | "sharp-tools"
+  | "high-temperature"
+  | "confined-space";
+
 export interface Source {
   id: string;
   title: string;
@@ -148,6 +161,21 @@ export interface Technology {
   lastUpdated: string;
   verification: Verification;
 }
+
+export type TechnologySummary = Pick<
+  Technology,
+  | "id"
+  | "name"
+  | "tagline"
+  | "category"
+  | "era"
+  | "difficulty"
+  | "prerequisites"
+  | "unlocks"
+  | "rawMaterials"
+  | "verification"
+  | "lastUpdated"
+>;
 
 export interface IndexNode {
   id: string;

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import type { Technology } from "../../types/technology";
-import { loadAllTechnologies } from "../../data/loadTechnologies";
+import type { Technology, TechnologySummary } from "../../types/technology";
+import { loadTechnologySummaries } from "../../data/loadTechnologies";
 import { CATEGORY_LABEL } from "../../utils/categoryMeta";
 
 interface Props {
@@ -8,15 +8,15 @@ interface Props {
 }
 
 export function DependencyGraph({ tech }: Props) {
-  const all = loadAllTechnologies();
+  const all = loadTechnologySummaries();
   const byId = new Map(all.map((t) => [t.id, t]));
 
   const prereqs = tech.prerequisites
     .map((id) => byId.get(id))
-    .filter(Boolean) as Technology[];
+    .filter(Boolean) as TechnologySummary[];
   const unlocks = tech.unlocks
     .map((id) => byId.get(id))
-    .filter(Boolean) as Technology[];
+    .filter(Boolean) as TechnologySummary[];
 
   return (
     <div className="space-y-6">
@@ -105,7 +105,7 @@ function GraphNode({
   tech,
   variant,
 }: {
-  tech: Technology;
+  tech: Technology | TechnologySummary;
   variant: "prereq" | "current" | "unlock";
 }) {
   const border =

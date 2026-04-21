@@ -1,8 +1,8 @@
-import type { Technology } from "../types/technology";
+import type { TechnologySummary } from "../types/technology";
 
 /** Shortest chain from `from` to `to` following prerequisite edges (each step unlocks the next). */
 export function shortestPrerequisitePath(
-  technologies: Technology[],
+  technologies: TechnologySummary[],
   from: string,
   to: string
 ): string[] | null {
@@ -47,9 +47,9 @@ export function shortestPrerequisitePath(
 }
 
 export function directUnlocks(
-  technologies: Technology[],
+  technologies: TechnologySummary[],
   owned: Set<string>
-): Technology[] {
+): TechnologySummary[] {
   return technologies.filter((t) => {
     if (owned.has(t.id)) return false;
     return t.prerequisites.length > 0 && t.prerequisites.every((p) => owned.has(p));
@@ -57,10 +57,10 @@ export function directUnlocks(
 }
 
 export function unlocksWithinSteps(
-  technologies: Technology[],
+  technologies: TechnologySummary[],
   owned: Set<string>,
   maxSteps: number
-): { tech: Technology; steps: number }[] {
+): { tech: TechnologySummary; steps: number }[] {
   const byId = new Map(technologies.map((x) => [x.id, x]));
   const reachable = new Map<string, number>();
   for (const id of owned) reachable.set(id, 0);
@@ -85,7 +85,7 @@ export function unlocksWithinSteps(
     if (!frontier.size) break;
   }
 
-  const out: { tech: Technology; steps: number }[] = [];
+  const out: { tech: TechnologySummary; steps: number }[] = [];
   for (const t of technologies) {
     if (owned.has(t.id)) continue;
     const d = reachable.get(t.id);

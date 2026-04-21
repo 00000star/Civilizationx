@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import type { Technology } from "../../types/technology";
+import type { TechnologySummary } from "../../types/technology";
 import {
   directUnlocks,
   shortestPrerequisitePath,
@@ -8,7 +8,7 @@ import {
 } from "../../utils/pathfinder";
 
 interface Props {
-  technologies: Technology[];
+  technologies: TechnologySummary[];
 }
 
 export function PathFinderPanel({ technologies }: Props) {
@@ -40,7 +40,7 @@ export function PathFinderPanel({ technologies }: Props) {
 
   const pathTechs = useMemo(() => {
     if (!path) return [];
-    return path.map((id) => sorted.find((t) => t.id === id)).filter(Boolean) as Technology[];
+    return path.map((id) => sorted.find((t) => t.id === id)).filter(Boolean) as TechnologySummary[];
   }, [path, sorted]);
 
   const direct = useMemo(

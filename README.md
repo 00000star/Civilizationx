@@ -35,6 +35,15 @@ npm run validate-data
 
 Data lives in `src/data/technologies/*.json` with `src/data/index.json` as the manifest. Images go in `public/images/<technology-id>/`.
 
+## Project plan
+
+- Vision: `docs/VISION.md`
+- Roadmap: `docs/ROADMAP.md`
+- Master plan and idea backlog: `docs/MASTER_PLAN.md`
+- Jira import and workflow: `docs/jira/README.md`
+- Future Codex context protocol: `docs/CONTEXT_PROTOCOL.md`
+- Compact project memory: `docs/PROJECT_MEMORY.md`
+
 ## Generating new entries
 
 ```bash

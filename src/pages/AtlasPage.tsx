@@ -1,13 +1,14 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { loadAllTechnologies } from "../data/loadTechnologies";
+import { LoadingState } from "../components/ui/LoadingState";
+import { useTechnologies } from "../hooks/useTechnologies";
 import { aggregateRawMaterials, type AtlasMaterial } from "../utils/atlasAggregator";
 
 type Filter = "all" | "critical" | "hazardous" | "space" | "earth";
 type Sort = "alpha" | "used" | "critical";
 
 export function AtlasPage() {
-  const all = useMemo(() => loadAllTechnologies(), []);
+  const { technologies: all, loading } = useTechnologies();
   const materials = useMemo(() => aggregateRawMaterials(all), [all]);
   const [q, setQ] = useState("");
   const [filter, setFilter] = useState<Filter>("all");
@@ -100,11 +101,15 @@ export function AtlasPage() {
         {q ? ` matching “${q}”` : ""}
       </p>
 
-      <ul className="mt-6 space-y-4">
-        {filtered.map((m) => (
-          <AtlasCard key={m.key} m={m} />
-        ))}
-      </ul>
+      {loading ? (
+        <LoadingState label="Loading material atlas..." />
+      ) : (
+        <ul className="mt-6 space-y-4">
+          {filtered.map((m) => (
+            <AtlasCard key={m.key} m={m} />
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

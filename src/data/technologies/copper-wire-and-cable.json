@@ -10,9 +10,16 @@
     "steel-production"
   ],
   "unlocks": [
+    "dc-power-transmission-and-motor-drives",
+    "electric-motor",
     "electrical-power-grid",
     "electrical-telegraph",
-    "electrical-transformer"
+    "electrical-transformer",
+    "high-capacity-electrochemical-batteries",
+    "high-voltage-ac-transmission",
+    "solar-photovoltaic-power-systems",
+    "telephone-exchange-system",
+    "vacuum-tube-electronics"
   ],
   "problem": "Electricity without conductors is a lecture-demonstration, not a civilisation. You can see sparks jump across a gap, but you cannot power a mill or carry a telegram miles through rain unless metal behaves predictably: low resistance, enough ductility to bend around corners, and joints that stay tight after a thousand heat cycles.\n\nCopper won for most power and signal roles because it solders and welds forgivingly, work-hardens in ways wire drawers understand, and can be refined electrolytically until grain boundaries stop stealing electrons. The obstacle is geometry: a solid bar is too stiff to wind into a motor; wire must be drawn through dies in stages, annealed between passes, then stranded so cords survive flexing without snapping single crystals.\n\nInsulation is half the product. Bare copper touching steel creates faults; cloth and rubber age; modern polymers survive temperature classes inside machines. Each jacket is a compatibility puzzle with semiconducting layers in high-voltage cables to keep electric fields smooth — voids invite partial discharge that eats insulation from within.\n\nWithout agreed gauges and termination discipline, lugs loosen thermally, fires start at connections, and maintenance becomes guesswork. Wire is therefore standards and craft together — not merely metal shopping.",
   "overview": "Cathode copper is melted and cast into rod, then reduced through tungsten-carbide or diamond dies. Each pass shrinks diameter while lengthening the wire; intermediate annealing in a controlled atmosphere restores softness so the next pass does not tear. Multiple strands are twisted into rope-lay bundles so flexing shares fatigue among many small wires.\n\nInsulation systems stack functions: dielectric strength, moisture barrier, flame retardance, sunlight resistance on poles. Oil-impregnated paper still appears in some high-voltage land cables; cross-linked polyethylene dominates modern distribution because it tolerates thermal class and wet environments if manufacturing avoids voids.\n\nJointing matters as much as drawing. Compression lugs, exothermic welds for earth grids, and torque schedules for aluminium teach the same lesson: contact resistance is a device you did not intend to build. Oxidation at aluminium terminals pushed industry toward antioxidant compounds and disciplined tightening — a reminder that chemistry lives at every screw.\n\nMagnet wire for motors adds enamel films in multiple bakes, cured to survive varnish ovens without pinholes — invisible insulation is the difference between a quiet machine and a turn-to-turn short.",

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Controls, MiniMap } from "@xyflow/react";
-import type { Technology } from "../../types/technology";
+import type { TechnologySummary } from "../../types/technology";
 import { PathFinderPanel } from "./PathFinderPanel";
 
 interface Props {
-  technologies: Technology[];
+  technologies: TechnologySummary[];
   isSpace: boolean;
 }
 

@@ -8,6 +8,7 @@ import { DependencyGraph } from "./DependencyGraph";
 import { LocationMap } from "./LocationMap";
 import { MediaGallery } from "./MediaGallery";
 import { formatReviewDate } from "../../utils/verificationUi";
+import { hazardDefinition, hazardRiskLevel, inferHazards } from "../../utils/hazards";
 
 const TABS = [
   "overview",
@@ -116,6 +117,7 @@ export function TechDetail({ tech }: Props) {
       </header>
 
       <VerificationBanner tech={tech} />
+      <HazardBanner tech={tech} />
 
       <div
         className="sticky top-16 z-20 -mx-3 border-b border-codex-border bg-codex-bg/95 px-3 py-2 backdrop-blur print:hidden md:top-20"
@@ -236,6 +238,59 @@ export function TechDetail({ tech }: Props) {
         )}
       </div>
     </div>
+  );
+}
+
+function HazardBanner({ tech }: { tech: Technology }) {
+  const hazards = inferHazards(tech);
+  const risk = hazardRiskLevel(hazards);
+
+  if (!hazards.length) {
+    return null;
+  }
+
+  const border =
+    risk === "critical"
+      ? "border-red-500 bg-red-950/30"
+      : risk === "high"
+        ? "border-orange-500 bg-orange-950/30"
+        : "border-amber-500 bg-amber-950/20";
+
+  return (
+    <section
+      className={`mt-4 rounded-md border ${border} px-4 py-3 text-sm print:border-black print:bg-white`}
+      aria-label="Hazard classification"
+    >
+      <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+        <div>
+          <p className="font-mono text-[10px] uppercase tracking-wide text-codex-muted print:text-black">
+            Hazard classification
+          </p>
+          <p className="mt-1 font-display text-lg font-semibold capitalize text-codex-text print:text-black">
+            {risk} risk
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {hazards.map((hazard) => {
+            const def = hazardDefinition(hazard);
+            return (
+              <span
+                key={hazard}
+                title={def.description}
+                className="rounded-full border border-codex-border bg-codex-card px-2.5 py-1 font-mono text-[11px] text-codex-secondary print:border-black print:bg-white print:text-black"
+              >
+                {def.label}
+              </span>
+            );
+          })}
+        </div>
+      </div>
+      <p className="mt-3 text-xs leading-relaxed text-codex-secondary print:text-black">
+        Hazards are inferred from the entry text and category. Treat this as a safety prompt,
+        not a certification; cross-check high-risk procedures with authoritative sources and
+        qualified experts.
+      </p>
+    </section>
   );
 }
 

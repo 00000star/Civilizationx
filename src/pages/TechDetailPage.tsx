@@ -3,11 +3,12 @@ import { useTechnology } from "../hooks/useTechnology";
 import { BreadcrumbNav } from "../components/ui/BreadcrumbNav";
 import { TechDetail } from "../components/documentary/TechDetail";
 import { DangerGate } from "../components/ui/DangerGate";
+import { LoadingState } from "../components/ui/LoadingState";
 import { CATEGORY_LABEL } from "../utils/categoryMeta";
 
 export function TechDetailPage() {
   const { id } = useParams();
-  const tech = useTechnology(id);
+  const { technology: tech, loading } = useTechnology(id);
 
   if (!id) {
     return (
@@ -15,6 +16,10 @@ export function TechDetailPage() {
         Missing technology id.
       </div>
     );
+  }
+
+  if (loading) {
+    return <LoadingState label="Loading technology entry..." />;
   }
 
   if (!tech) {

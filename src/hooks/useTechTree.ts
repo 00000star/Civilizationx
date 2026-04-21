@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import type { TechCategory, TechEra } from "../types/technology";
-import { loadAllTechnologies } from "../data/loadTechnologies";
+import { loadTechnologySummaries } from "../data/loadTechnologies";
 import { layoutTechTree } from "../utils/treeLayout";
 
 export interface TechTreeFilters {
@@ -10,7 +10,7 @@ export interface TechTreeFilters {
 }
 
 export function useTechTree(filters: TechTreeFilters) {
-  const all = useMemo(() => loadAllTechnologies(), []);
+  const all = useMemo(() => loadTechnologySummaries(), []);
 
   const filtered = useMemo(() => {
     let list = all;

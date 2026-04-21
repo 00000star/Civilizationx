@@ -1,8 +1,10 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { loadAllTechnologies } from "../data/loadTechnologies";
+import { LoadingState } from "../components/ui/LoadingState";
+import { useTechnologies } from "../hooks/useTechnologies";
 import type { TechCategory, VerificationStatus } from "../types/technology";
 import { computeCodexScore } from "../utils/codexScore";
+import { hazardDefinition, hazardRiskLevel, inferHazards } from "../utils/hazards";
 
 const PLANNED: Record<TechCategory, number> = {
   survival: 12,
@@ -34,7 +36,7 @@ const MISSING_CRITICAL: { name: string; score: number; id?: string }[] = [
 ];
 
 export function StatusPage() {
-  const techs = useMemo(() => loadAllTechnologies(), []);
+  const { technologies: techs, loading } = useTechnologies();
   const score = useMemo(() => computeCodexScore(techs), [techs]);
 
   const byCategory = useMemo(() => {
@@ -109,12 +111,42 @@ export function StatusPage() {
     return rows;
   }, [techs]);
 
+  const hazardRows = useMemo(() => {
+    return techs
+      .map((tech) => {
+        const hazards = inferHazards(tech);
+        return {
+          tech,
+          hazards,
+          risk: hazardRiskLevel(hazards),
+        };
+      })
+      .filter((row) => row.hazards.length > 0)
+      .sort((a, b) => {
+        const rank = { critical: 0, high: 1, moderate: 2, low: 3 };
+        return rank[a.risk] - rank[b.risk] || a.tech.name.localeCompare(b.tech.name);
+      });
+  }, [techs]);
+
+  const hazardCounts = useMemo(() => {
+    const counts = {
+      critical: 0,
+      high: 0,
+      moderate: 0,
+      low: 0,
+    };
+    for (const row of hazardRows) counts[row.risk] += 1;
+    return counts;
+  }, [hazardRows]);
+
   return (
     <div className="mx-auto max-w-5xl px-3 py-8 md:px-6">
       <h1 className="font-display text-3xl font-bold text-codex-text">Codex Status</h1>
       <p className="mt-3 max-w-3xl text-sm text-codex-secondary">
         An honest account of what this project covers and what still needs to be built.
       </p>
+
+      {loading ? <LoadingState label="Loading status metrics..." /> : null}
 
       <section className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <StatCard label="Technologies documented" value={String(techs.length)} />
@@ -181,6 +213,63 @@ export function StatusPage() {
           </Link>{" "}
           and the repository CONTRIBUTING guide.
         </p>
+      </section>
+
+      <section className="mt-14">
+        <h2 className="font-display text-2xl font-semibold text-codex-text">Hazard profile</h2>
+        <p className="mt-2 max-w-3xl text-sm text-codex-secondary">
+          Hazard categories are inferred from entry content. This highlights entries that need
+          careful warnings, stronger sources, and domain review.
+        </p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-4">
+          <div className="rounded border border-red-500/50 bg-red-950/20 p-4">
+            <p className="font-mono text-xs text-red-200">Critical risk</p>
+            <p className="mt-1 text-2xl font-semibold text-codex-text">{hazardCounts.critical}</p>
+          </div>
+          <div className="rounded border border-orange-500/50 bg-orange-950/20 p-4">
+            <p className="font-mono text-xs text-orange-200">High risk</p>
+            <p className="mt-1 text-2xl font-semibold text-codex-text">{hazardCounts.high}</p>
+          </div>
+          <div className="rounded border border-amber-500/50 bg-amber-950/20 p-4">
+            <p className="font-mono text-xs text-amber-100">Moderate risk</p>
+            <p className="mt-1 text-2xl font-semibold text-codex-text">{hazardCounts.moderate}</p>
+          </div>
+          <div className="rounded border border-codex-border bg-codex-surface p-4">
+            <p className="font-mono text-xs text-codex-muted">Tagged entries</p>
+            <p className="mt-1 text-2xl font-semibold text-codex-text">{hazardRows.length}</p>
+          </div>
+        </div>
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+            <thead>
+              <tr className="border-b border-codex-border text-xs uppercase text-codex-muted">
+                <th className="py-2 pr-4">Entry</th>
+                <th className="py-2 pr-4">Risk</th>
+                <th className="py-2">Hazards</th>
+              </tr>
+            </thead>
+            <tbody>
+              {hazardRows.slice(0, 20).map((row) => (
+                <tr key={row.tech.id} className="border-b border-codex-border/60">
+                  <td className="py-2 pr-4">
+                    <Link to={`/tech/${row.tech.id}`} className="text-codex-blue hover:underline">
+                      {row.tech.name}
+                    </Link>
+                  </td>
+                  <td className="py-2 pr-4 capitalize text-codex-secondary">{row.risk}</td>
+                  <td className="py-2 text-codex-secondary">
+                    {row.hazards.map((h) => hazardDefinition(h).label).join(", ")}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {hazardRows.length > 20 ? (
+            <p className="mt-3 text-xs text-codex-muted">
+              Showing 20 of {hazardRows.length} hazard-tagged entries.
+            </p>
+          ) : null}
+        </div>
       </section>
 
       <section className="mt-14">

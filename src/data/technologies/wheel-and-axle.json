@@ -9,8 +9,10 @@
     "basic-hand-tools"
   ],
   "unlocks": [
+    "bicycle",
+    "cart-and-wagon",
     "pulley",
-    "cart-and-wagon"
+    "steam-locomotive"
   ],
   "problem": "Dragging a sled ploughs a trench, wasting work against soil deformation. The wheel problem is replacing sliding friction with rolling resistance — still imperfect due to deformation at the contact patch, but orders of magnitude better on firm ground for heavy loads. A separate problem is rotation itself: static structures carry compression; rotating assemblies must bear bending while staying round, stay aligned on an axle, and not split along grain or crystal planes.\n\nThe wheel is not obvious archaeologically — potter's wheels and spindle whorls show rotation earlier than heavy transport wheels in some regions. Heavy transport needs roads or hard ground, bearings that do not seize, and materials that survive shock.\n\nOnce solved, the wheel becomes a modular machine element: it composes into pulleys, gears, lathes, mills, and vehicles — one of civilisation's most reused inventions.",
   "overview": "A wheel is a disk or spoked structure that turns about an axle. Ideally the axle is fixed to the chassis and the wheel rotates on it (or the wheel is fixed and axle rotates — both exist). Early solid wheels are planks or three planks glued and rounded; spoked wheels reduce mass while preserving hoop strength through tensioned rims and compressive spokes.\n\nBearings historically are plain: wood on wood lubricated with fat, later bronze sleeves, later ball bearings. Lubrication and alignment dominate service life. Flanges or shoulders keep the wheel from walking off the axle.\n\nWheel diameter trades obstacle climbing for packaging — larger wheels roll over ruts more easily but raise centre of mass. Width changes ground pressure — soft ground needs broader contact.\n\nManufacturing sequence typically: bore hub, shape rim, true roundness on a simple lathe or by compass scribing, mount tyre (iron tyre shrunk on in later eras).",

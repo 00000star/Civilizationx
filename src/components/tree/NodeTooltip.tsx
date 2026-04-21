@@ -1,8 +1,8 @@
-import type { Technology } from "../../types/technology";
+import type { TechnologySummary } from "../../types/technology";
 import { CATEGORY_LABEL } from "../../utils/categoryMeta";
 
 interface Props {
-  tech: Technology;
+  tech: TechnologySummary;
   locked: boolean;
 }
 

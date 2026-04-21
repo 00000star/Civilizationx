@@ -8,7 +8,7 @@ import { StarfieldCanvas } from "../components/tree/StarfieldCanvas";
 import { TreeWelcomeBanner } from "../components/tree/TreeWelcomeBanner";
 import { useTechTree } from "../hooks/useTechTree";
 import type { TechCategory, TechEra } from "../types/technology";
-import { loadAllTechnologies } from "../data/loadTechnologies";
+import { loadTechnologySummaries } from "../data/loadTechnologies";
 import { TECH_TREE_ERAS as ERAS } from "../utils/eras";
 
 const TREE_WELCOME_KEY = "codex-tree-welcome-dismissed";
@@ -39,7 +39,7 @@ export function TreePage() {
     else setEra((ERAS[index]?.id as TechEra) ?? null);
   };
 
-  const all = loadAllTechnologies();
+  const all = loadTechnologySummaries();
   const erasPresent = useMemo(() => {
     const s = new Set(all.map((t) => t.era));
     return ERAS.filter((e) => s.has(e.id));

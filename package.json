@@ -7,8 +7,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "prebuild": "npm run generate-summaries",
     "preview": "vite preview",
     "validate-data": "node scripts/validate-technology-data.mjs",
+    "generate-summaries": "node scripts/generate-technology-summaries.mjs",
+    "sync-unlocks": "node scripts/sync-unlocks.mjs",
     "generate-technologies": "node scripts/generate-technologies.mjs",
     "fetch-media": "node scripts/fetch-media.mjs",
     "merge-verification-sources": "node scripts/merge-verification-sources.mjs"

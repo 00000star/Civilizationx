@@ -1,9 +1,10 @@
 import { useMemo, useState, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
 import { SearchBar } from "../components/ui/SearchBar";
+import { LoadingState } from "../components/ui/LoadingState";
 import { searchTechnologies } from "../utils/search";
 import { VirtualizedSearchResults } from "../components/search/VirtualizedSearchResults";
-import { loadAllTechnologies } from "../data/loadTechnologies";
+import { useTechnologies } from "../hooks/useTechnologies";
 import { TECH_TREE_ERAS } from "../utils/eras";
 import type { TechEra } from "../types/technology";
 
@@ -12,7 +13,7 @@ type VerificationFilter = "all" | "expert" | "unverified";
 export function SearchPage() {
   const [params, setParams] = useSearchParams();
   const q = params.get("q") ?? "";
-  const all = useMemo(() => loadAllTechnologies(), []);
+  const { technologies: all, loading } = useTechnologies();
 
   const [diffMin, setDiffMin] = useState(1);
   const [diffMax, setDiffMax] = useState(5);
@@ -203,7 +204,9 @@ export function SearchPage() {
               .join(", ")}`}
       </p>
 
-      {filtered.length === 0 ? (
+      {loading ? (
+        <LoadingState label="Loading searchable entries..." />
+      ) : filtered.length === 0 ? (
         <div className="mt-8 rounded-lg border border-codex-border bg-codex-surface p-6 text-sm text-codex-secondary">
           <p className="font-medium text-codex-text">
             No results for {q ? `“${q}”` : "the current filters"}.

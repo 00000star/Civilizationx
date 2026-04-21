@@ -1,14 +1,14 @@
 import { memo, useCallback, useRef } from "react";
 import { Handle, Position, type NodeProps } from "@xyflow/react";
 import { useNavigate } from "react-router-dom";
-import type { Technology } from "../../types/technology";
+import type { TechnologySummary } from "../../types/technology";
 import { CategoryIcon } from "../ui/CategoryIcon";
 import { CATEGORY_GLOW, CATEGORY_LABEL } from "../../utils/categoryMeta";
 import { verificationDotClass } from "../../utils/verificationUi";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 export type TechNodeData = {
-  tech: Technology;
+  tech: TechnologySummary;
   selected: boolean;
   locked: boolean;
   dimmed: boolean;

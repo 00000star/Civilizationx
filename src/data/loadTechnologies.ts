@@ -1,25 +1,28 @@
-import type { Technology } from "../types/technology";
+import type { Technology, TechnologySummary } from "../types/technology";
 import type { TechIndex } from "../types/technology";
 import index from "./index.json";
+import summaries from "./summaries.json";
 
 const modules = import.meta.glob<{ default: Technology }>(
-  "./technologies/*.json",
-  { eager: true }
+  "./technologies/*.json"
 );
 
-export function loadAllTechnologies(): Technology[] {
-  const list: Technology[] = [];
-  for (const path in modules) {
-    list.push(modules[path].default);
-  }
-  list.sort((a, b) => a.name.localeCompare(b.name));
-  return list;
+export function loadTechnologySummaries(): TechnologySummary[] {
+  return summaries as TechnologySummary[];
 }
 
-export function loadTechnology(id: string): Technology | undefined {
+export async function loadAllTechnologies(): Promise<Technology[]> {
+  const list = await Promise.all(
+    Object.values(modules).map(async (load) => (await load()).default)
+  );
+  return list.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+export async function loadTechnology(id: string): Promise<Technology | undefined> {
   const path = `./technologies/${id}.json`;
-  const mod = modules[path];
-  return mod?.default;
+  const load = modules[path];
+  if (!load) return undefined;
+  return (await load()).default;
 }
 
 export function getTechIndex(): TechIndex {

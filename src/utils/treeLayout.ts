@@ -1,4 +1,4 @@
-import type { Technology } from "../types/technology";
+import type { TechnologySummary } from "../types/technology";
 
 export interface PositionedNode {
   id: string;
@@ -16,7 +16,7 @@ const ORIGIN_Y = 100;
  * Layer nodes by prerequisite depth (roots at layer 0).
  * Spreads siblings horizontally for readability on large trees.
  */
-export function layoutTechTree(technologies: Technology[]): PositionedNode[] {
+export function layoutTechTree(technologies: TechnologySummary[]): PositionedNode[] {
   const byId = new Map(technologies.map((t) => [t.id, t]));
   const memo = new Map<string, number>();
 

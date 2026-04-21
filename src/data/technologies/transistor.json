@@ -10,7 +10,10 @@
     "semiconductor-crystal-growing-doping"
   ],
   "unlocks": [
-    "internet-protocols-and-web"
+    "communication-satellites",
+    "internet-protocols-and-web",
+    "optical-fiber-communications",
+    "solar-photovoltaic-power-systems"
   ],
   "problem": "Vacuum tubes gave the world amplification, but they also gave it heat, fragility, and maintenance marathons — a computer should not consume more power than its city block. The transistor promises the same controlled current modulation with a cold junction inside a crystal: no heated cathode, no glass envelope, paths toward micrometre scale if surfaces can be passivated and junction depths controlled.\n\nBipolar devices inject carriers across a thin base; field-effect devices steer charge with an electric field through an oxide — each family trades speed, voltage tolerance, and fabrication complexity. The obstacle is cleanliness at atomic levels: a stray sodium ion in oxide shifts threshold voltage; a pinhole in passivation lets humidity drift parameters.\n\nLithography scaled junctions from millimetres to nanometres, but the transistor’s cultural lesson predates fabs: small reliable switches compose universality — logic is geology built from sand if you can pattern dopants honestly.\n\nFor recovery, protect not only crystal pullers but also the tacit craft of diffusion furnaces, implanter tuning, and wire-bond ergonomics.",
   "overview": "Planar silicon processing grows thermal oxide, patterns windows in photoresist, introduces dopants by diffusion or implant, metallises contacts, and passivates surfaces so junctions stay stable in humid air. CMOS pairs n-channel and p-channel MOSFETs so static power stays tiny except during switching — enabling chips with billions of gates.\n\nPackaging bonds aluminium or copper wires from die pads to lead frames, moulds epoxy, and trims legs before burn-in screens infant failures. Power discretes parallel thousands of cells; IGBTs merge MOS gates with bipolar conductivity for traction inverters.\n\nCharacterisation — curve tracers, S-parameters, reliability ovens — translates physics into datasheets designers trust. Electromigration and hot-carrier wear appear as accelerated ageing curves.\n\nDiscrete transistors remain teaching instruments: you can still see a TO-220 tab and imagine heat leaving the junction.",

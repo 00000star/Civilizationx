@@ -1,0 +1,4311 @@
+[
+  {
+    "id": "basic-hand-tools",
+    "name": "Basic Hand Tools (Hammer, Chisel, Saw)",
+    "tagline": "Percussion, cutting, and ripping tools that convert human intent into shaped wood, stone, and metal",
+    "category": "tools",
+    "era": "prehistoric",
+    "difficulty": 2,
+    "prerequisites": [
+      "lever-system",
+      "stone-knapping"
+    ],
+    "unlocks": [
+      "bicycle",
+      "internal-combustion-engine",
+      "navigation-celestial",
+      "printing-press-movable-type",
+      "wheel-and-axle"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Tool steel or shear steel",
+        "purpose": "Hardened edges",
+        "earthLocations": [
+          "Historical shear steel from refined blister iron",
+          "modern O1/A2 steels industrially"
+        ],
+        "spaceAlternatives": "Imported stock until rolling mills exist",
+        "processingRequired": "Forge, harden, temper to straw/blue per role"
+      },
+      {
+        "name": "Handle wood",
+        "purpose": "Impact toughness and grip comfort",
+        "earthLocations": [
+          "Hickory, ash, beech"
+        ],
+        "spaceAlternatives": "Composite handles",
+        "processingRequired": "Air dry to 8–12% moisture before fitting"
+      },
+      {
+        "name": "Wedge and pin stock",
+        "purpose": "Secures heads to handles",
+        "earthLocations": [
+          "Wood wedges",
+          "steel drive wedges"
+        ],
+        "spaceAlternatives": "Epoxy secondary — not primary structural early",
+        "processingRequired": "Orient wedge across grain lock"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-osha-tools",
+          "title": "OSHA — Standards",
+          "url": "https://www.osha.gov/laws-regs/standards",
+          "type": "institution",
+          "note": "Guarding, PPE, and hand-tool injury prevention"
+        },
+        {
+          "id": "src-wiki-hand-tool",
+          "title": "Wikipedia — Hand tool",
+          "url": "https://en.wikipedia.org/wiki/Hand_tool",
+          "type": "wikipedia",
+          "note": "Categories and safe use overview"
+        },
+        {
+          "id": "src-cdc",
+          "title": "CDC — Agency home",
+          "url": "https://www.cdc.gov/",
+          "type": "institution",
+          "note": "First aid and wound infection prevention when cuts occur in workshop settings"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "boiler-feedwater-treatment",
+    "name": "Boiler Feedwater Treatment",
+    "tagline": "Chemistry and polishing that prevent scale, corrosion, and turbine damage in steam plants",
+    "category": "energy",
+    "era": "industrial",
+    "difficulty": 3,
+    "prerequisites": [
+      "steam-engine",
+      "steel-production",
+      "glass-making"
+    ],
+    "unlocks": [
+      "nuclear-fission-power-plant",
+      "steam-turbine-electric-generation"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Ion-exchange resin",
+        "purpose": "Softening and demineralisation",
+        "earthLocations": [
+          "Global chemical distributors"
+        ],
+        "spaceAlternatives": "Ship sealed ion-exchange cartridges from surviving chemical distributors, or run zeolite or greensand softeners with documented regeneration cycles until local resin synthesis and brine handling return",
+        "processingRequired": "Regenerate on schedule; avoid resin fouling with oil"
+      },
+      {
+        "name": "Treatment chemicals",
+        "purpose": "Oxygen control and pH buffering",
+        "earthLocations": [
+          "Industrial sulphite, phosphate, and amine suppliers"
+        ],
+        "spaceAlternatives": "Industrial sulphite, phosphate, and amine programmes where suppliers exist; interim programmes may use more blowdown and simpler oxygen scavengers if advanced amines are unavailable",
+        "processingRequired": "Dilute for safe skin contact during handling"
+      },
+      {
+        "name": "Makeup water",
+        "purpose": "Replaces steam exports and blowdown",
+        "earthLocations": [
+          "Surface and well sources"
+        ],
+        "spaceAlternatives": "Surface water, wells, or aggressive condensate return — pair with filtration and UV or chlorination only where compatible with downstream chemistry",
+        "processingRequired": "Filtration and disinfection if biological slime risk"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-nrc-steam-culture",
+          "title": "U.S. NRC — Public information FAQ",
+          "url": "https://www.nrc.gov/reading-rm/doc-collections/faq/",
+          "type": "institution",
+          "note": "High-reliability documentation practices for steam plants (nuclear context)"
+        },
+        {
+          "id": "src-wiki-boiler",
+          "title": "Wikipedia — Boiler",
+          "url": "https://en.wikipedia.org/wiki/Boiler",
+          "type": "wikipedia",
+          "note": "Steam generation and water treatment overview"
+        },
+        {
+          "id": "src-who-air",
+          "title": "WHO — Household air pollution and health",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/household-air-pollution-and-health",
+          "type": "institution",
+          "note": "Combustion-related health risks when boilers are misapplied in enclosed spaces"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "bone-tools",
+    "name": "Bone Tools",
+    "tagline": "Worked skeletal elements for needles, awls, points, and soft hammers",
+    "category": "tools",
+    "era": "prehistoric",
+    "difficulty": 1,
+    "prerequisites": [],
+    "unlocks": [
+      "fishing-net-and-line"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Long bones and antler",
+        "purpose": "Rigid blanks for points and billets",
+        "earthLocations": [
+          "Archaeological and modern butchery sites worldwide",
+          "Shed antler in temperate forests"
+        ],
+        "spaceAlternatives": "Any cultured animal agriculture; synthetic polymers replace function when available",
+        "processingRequired": "Deflesh, degrease optionally by boiling, dry slowly to reduce cracking"
+      },
+      {
+        "name": "Abrasive stone",
+        "purpose": "Shapes and sharpens tips",
+        "earthLocations": [
+          "Sandstone slabs, fine quartzite"
+        ],
+        "spaceAlternatives": "Diamond abrasive later; early — silica-rich regolith pressed into blocks",
+        "processingRequired": "Flatten working surface by grinding mutually"
+      },
+      {
+        "name": "Drill and bow-drill hearth",
+        "purpose": "Creates eyes and small holes",
+        "earthLocations": [
+          "Hard wood spindles",
+          "stone drill points",
+          "cordage for bow"
+        ],
+        "spaceAlternatives": "Same pattern with imported metals or electric tools",
+        "processingRequired": "Maintain sharp drill tip; clear swarf to reduce heat"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-nmnh",
+          "title": "Smithsonian National Museum of Natural History",
+          "url": "https://naturalhistory.si.edu/",
+          "type": "institution",
+          "note": "Institutional context for osteology, comparative anatomy, and archaeological collections"
+        },
+        {
+          "id": "src-wiki-bone-tool",
+          "title": "Wikipedia — Bone tool",
+          "url": "https://en.wikipedia.org/wiki/Bone_tool",
+          "type": "wikipedia",
+          "note": "Typology and archaeological examples"
+        },
+        {
+          "id": "src-who-nutrition",
+          "title": "WHO — Nutrition health topic",
+          "url": "https://www.who.int/health-topics/nutrition",
+          "type": "institution",
+          "note": "Human nutritional context when discussing food processing tools (cross-disciplinary anchor)"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "cart-and-wagon",
+    "name": "Cart and Wagon",
+    "tagline": "Four-wheeled and two-wheeled vehicles that multiply land freight using wheels, axles, and draft animals or humans",
+    "category": "transport",
+    "era": "ancient",
+    "difficulty": 2,
+    "prerequisites": [
+      "wheel-and-axle",
+      "rope-and-cordage"
+    ],
+    "unlocks": [
+      "automobile",
+      "road-construction"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Hardwood timber",
+        "purpose": "Frame and bed",
+        "earthLocations": [
+          "Oak, ash in temperate zones"
+        ],
+        "spaceAlternatives": "Aluminium extrusions when mills exist",
+        "processingRequired": "Seasoned, inspected for shakes"
+      },
+      {
+        "name": "Iron fastenings",
+        "purpose": "Bolts, tyres, reinforcement straps",
+        "earthLocations": [
+          "Bloomery iron forged to strap"
+        ],
+        "spaceAlternatives": "Imported hardware",
+        "processingRequired": "Hot rivet or forge weld straps"
+      },
+      {
+        "name": "Grease",
+        "purpose": "Journal lubrication",
+        "earthLocations": [
+          "Tallow",
+          "pine tar blends"
+        ],
+        "spaceAlternatives": "Synthetic grease",
+        "processingRequired": "Keep grit-free"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-nyc-dot",
+          "title": "NYC DOT — Brooklyn Bridge (historic infrastructure case study)",
+          "url": "https://www1.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+          "type": "institution",
+          "note": "Public works engineering and load-carrying infrastructure context"
+        },
+        {
+          "id": "src-wiki-wagon",
+          "title": "Wikipedia — Wagon",
+          "url": "https://en.wikipedia.org/wiki/Wagon",
+          "type": "wikipedia",
+          "note": "Vehicle history and mechanics references"
+        },
+        {
+          "id": "src-fao",
+          "title": "FAO — Home",
+          "url": "https://www.fao.org/home/en",
+          "type": "institution",
+          "note": "Draught animal welfare, rural transport, and agricultural logistics (verify regional guidance)"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "navigation-celestial",
+    "name": "Celestial Navigation",
+    "tagline": "Finding direction, latitude, and local time from the sun and stars when maps, GPS, and radio are gone",
+    "category": "science",
+    "era": "ancient",
+    "difficulty": 3,
+    "prerequisites": [
+      "rope-and-cordage",
+      "basic-hand-tools"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Straight timber and cord",
+        "purpose": "Instrument frames and plumb lines",
+        "earthLocations": [
+          "Temperate forests"
+        ],
+        "spaceAlternatives": "Machined aluminium struts from habitat scrap; printed PLA for classroom models only",
+        "processingRequired": "Season wood; check straightness against string line"
+      },
+      {
+        "name": "Clear skies",
+        "purpose": "Observations",
+        "earthLocations": [
+          "Deserts",
+          "High plateaus",
+          "Open ocean"
+        ],
+        "spaceAlternatives": "Mars: thin air, more stars visible but suit logistics dominate",
+        "processingRequired": "Schedule sights at civil twilight windows"
+      },
+      {
+        "name": "Almanac data",
+        "purpose": "Declination and hour angle",
+        "earthLocations": [
+          "Printed tables",
+          "memorised patterns"
+        ],
+        "spaceAlternatives": "Pre-loaded ephemeris chips while power lasts",
+        "processingRequired": "Copy critical tables redundantly"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "wiki-celestial",
+          "title": "Wikipedia — Celestial navigation",
+          "url": "https://en.wikipedia.org/wiki/Celestial_navigation",
+          "type": "wikipedia",
+          "note": "Overview with references to almanacs and instruments"
+        },
+        {
+          "id": "nist-time",
+          "title": "NIST — Time and frequency",
+          "url": "https://www.nist.gov/pml/time-and-frequency-division",
+          "type": "institution",
+          "note": "Timekeeping science context for longitude and navigation"
+        },
+        {
+          "id": "nasa-home",
+          "title": "NASA",
+          "url": "https://www.nasa.gov/",
+          "type": "institution",
+          "note": "STEM portal; see mission directorates for Earth observation and space navigation context"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-12"
+  },
+  {
+    "id": "ceramics-and-pottery",
+    "name": "Ceramics and Pottery",
+    "tagline": "Clay shaped and fired into durable vessels, bricks, and refractories — humanity's first high-temperature materials science",
+    "category": "materials",
+    "era": "prehistoric",
+    "difficulty": 2,
+    "prerequisites": [
+      "fire"
+    ],
+    "unlocks": [
+      "glass-making",
+      "sanitation-and-clean-water",
+      "smelting-bronze-age",
+      "writing-early-systems"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Plastic clay",
+        "purpose": "Formable ceramic body",
+        "earthLocations": [
+          "Alluvial plains globally",
+          "Marine clays",
+          "Kaolin deposits (China clay) for whiter bodies"
+        ],
+        "spaceAlternatives": "Processed regolith fines plus flux additives once characterised",
+        "processingRequired": "Levigation to remove rocks; wedging; possibly ageing in anaerobic pits"
+      },
+      {
+        "name": "Temper",
+        "purpose": "Controls shrinkage and thermal shock resistance",
+        "earthLocations": [
+          "Sand",
+          "crushed fired pottery (grog)",
+          "crushed shell in calcareous traditions"
+        ],
+        "spaceAlternatives": "Crushed sintered regolith as grog analogue",
+        "processingRequired": "Screening to size fractions"
+      },
+      {
+        "name": "Fuel",
+        "purpose": "Kiln heat",
+        "earthLocations": [
+          "Wood",
+          "charcoal",
+          "dung depending on tradition"
+        ],
+        "spaceAlternatives": "Electric resistance elements",
+        "processingRequired": "Charcoal preferred for high-fire with fewer ash incidents"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-unesco-culture",
+          "title": "UNESCO — Culture sector",
+          "url": "https://www.unesco.org/en/culture",
+          "type": "institution",
+          "note": "Living heritage, craft traditions, and documentation of ceramic arts in cultural context"
+        },
+        {
+          "id": "src-wiki-pottery",
+          "title": "Wikipedia — Pottery",
+          "url": "https://en.wikipedia.org/wiki/Pottery",
+          "type": "wikipedia",
+          "note": "Materials science and kiln-process overview with citations"
+        },
+        {
+          "id": "src-nist-pml",
+          "title": "NIST — Physical Measurement Laboratory",
+          "url": "https://www.nist.gov/pml",
+          "type": "institution",
+          "note": "High-temperature metrology and materials characterization context"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "charcoal",
+    "name": "Charcoal",
+    "tagline": "Carbon-rich fuel that burns hotter and cleaner than raw wood — the bridge to smelting metals and fine pyrotechnology",
+    "category": "energy",
+    "era": "prehistoric",
+    "difficulty": 2,
+    "prerequisites": [
+      "fire"
+    ],
+    "unlocks": [
+      "glass-making",
+      "iron-smelting",
+      "smelting-bronze-age",
+      "soap-making",
+      "steam-engine",
+      "steel-production"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Cordwood",
+        "purpose": "Carbon feedstock",
+        "earthLocations": [
+          "Temperate hardwood forests historically dominant for European metallurgy",
+          "Tropical hardwoods in other traditions"
+        ],
+        "spaceAlternatives": "Any lignocellulosic biomass from hydroponic forestry",
+        "processingRequired": "Cut, split, season to <20% moisture ideally"
+      },
+      {
+        "name": "Clay or turf",
+        "purpose": "Seals mound kilns",
+        "earthLocations": [
+          "River clays, sod"
+        ],
+        "spaceAlternatives": "Regolith binders sintered into bricks",
+        "processingRequired": "Plastic clay kneaded; turf cut in blocks"
+      },
+      {
+        "name": "Ignition tinder",
+        "purpose": "Starts base burn",
+        "earthLocations": [
+          "Dry grass, bark, small kindling"
+        ],
+        "spaceAlternatives": "Methane torch in advanced habitats",
+        "processingRequired": "Dry thoroughly"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-epa",
+          "title": "U.S. EPA — Environmental topics portal",
+          "url": "https://www.epa.gov/",
+          "type": "institution",
+          "note": "Air quality, emissions, and environmental chemistry relevant to pyrolysis and charcoal production"
+        },
+        {
+          "id": "src-wiki-charcoal",
+          "title": "Wikipedia — Charcoal",
+          "url": "https://en.wikipedia.org/wiki/Charcoal",
+          "type": "wikipedia",
+          "note": "Manufacturing routes, chemistry overview, and references"
+        },
+        {
+          "id": "src-nps-campfire",
+          "title": "U.S. National Park Service — Campfires article",
+          "url": "https://www.nps.gov/articles/campfires.htm",
+          "type": "institution",
+          "note": "Outdoor fire safety and responsible burning practices"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "communication-satellites",
+    "name": "Communication Satellites",
+    "tagline": "Microwave repeaters in orbit — global footprints, transponders, and the geometry of delay",
+    "category": "communication",
+    "era": "mid-20th",
+    "difficulty": 5,
+    "prerequisites": [
+      "radio-broadcast-and-receiver",
+      "transistor",
+      "fixed-wing-aircraft"
+    ],
+    "unlocks": [
+      "optical-fiber-communications"
+    ],
+    "rawMaterials": [
+      {
+        "name": "GaAs and GaN MMICs",
+        "purpose": "Payload amplification",
+        "earthLocations": [
+          "Compound semiconductor fabs"
+        ],
+        "spaceAlternatives": "Triple-junction gallium arsenide solar cells from multi-junction fabs; silicon panels for cheaper missions with lower areal power",
+        "processingRequired": "Burn-in, hermetic packaging"
+      },
+      {
+        "name": "Xenon or hydrazine",
+        "purpose": "Electric or chemical propulsion",
+        "earthLocations": [
+          "Chemical suppliers"
+        ],
+        "spaceAlternatives": "Aluminium honeycomb panels and carbon-fibre composites for bus structures where mass dominates launch cost",
+        "processingRequired": "High-pressure loading"
+      },
+      {
+        "name": "Solar cells",
+        "purpose": "Primary power",
+        "earthLocations": [
+          "III-V multi-junction fabs"
+        ],
+        "spaceAlternatives": "Monopropellant hydrazine or electric propulsion xenon — propellant choice sets station-keeping life and logistics",
+        "processingRequired": "Coverglass radiation shield"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-nasa-home",
+          "title": "NASA",
+          "url": "https://www.nasa.gov/",
+          "type": "institution",
+          "note": "Satellite missions and technology public portal"
+        },
+        {
+          "id": "src-wiki-satellite",
+          "title": "Wikipedia — Satellite",
+          "url": "https://en.wikipedia.org/wiki/Satellite",
+          "type": "wikipedia",
+          "note": "Orbits, bus subsystems, and link budgets introduction"
+        },
+        {
+          "id": "src-itu-r-sat",
+          "title": "ITU-R",
+          "url": "https://www.itu.int/en/ITU-R/Pages/default.aspx",
+          "type": "institution",
+          "note": "Satellite frequency coordination and interference management"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "fire",
+    "name": "Controlled Fire",
+    "tagline": "Heat, light, and chemical transformation on demand — the foundation of cooked food, warmth, and high-temperature processes",
+    "category": "energy",
+    "era": "prehistoric",
+    "difficulty": 1,
+    "prerequisites": [],
+    "unlocks": [
+      "ceramics-and-pottery",
+      "charcoal",
+      "cooking",
+      "first-aid-and-wound-care",
+      "food-preservation",
+      "sanitation-and-clean-water",
+      "soap-making",
+      "soil-science-and-composting"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Dry tinder and kindling",
+        "purpose": "Bridge from ember to sustained flame",
+        "earthLocations": [
+          "Any temperate or tropical landscape with grasses, inner bark fibres, or fungi such as amadou"
+        ],
+        "spaceAlternatives": "In a habitat, paper-like cellulose from hydroponic biomass or lint from textiles; always paired with oxygen control",
+        "processingRequired": "Thorough drying; mechanical shredding increases surface area for ignition"
+      },
+      {
+        "name": "Cordwood or biomass fuel",
+        "purpose": "Sustained heat release for warmth, cooking, and process heat",
+        "earthLocations": [
+          "Forests, savannas, peat bogs, grasslands (dung)",
+          "Driftwood on coasts"
+        ],
+        "spaceAlternatives": "Methane/oxygen burners or electrolysis-derived hydrogen combustion — different hardware, same thermodynamic role",
+        "processingRequired": "Seasoning wood reduces moisture; splitting increases surface area for clean combustion"
+      },
+      {
+        "name": "Stone or clay for containment",
+        "purpose": "Thermal mass, wind shielding, and spark containment",
+        "earthLocations": [
+          "River cobbles, fractured bedrock, clayey soils globally"
+        ],
+        "spaceAlternatives": "Regolith bricks sintered by concentrated solar or electric heat",
+        "processingRequired": "Dry clay before firing if making permanent hearths; select rocks that do not spall explosively when heated"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-humanorigins-fire",
+          "title": "Smithsonian National Museum of Natural History — Human Origins Program (evidence index)",
+          "url": "https://humanorigins.si.edu/evidence",
+          "type": "institution",
+          "note": "Archaeological and palaeoanthropological context for early human behaviour and fire use"
+        },
+        {
+          "id": "src-nist-sp811",
+          "title": "NIST Special Publication 811 — Guide for the Use of the International System of Units (SI)",
+          "url": "https://www.nist.gov/pml/special-publication-811",
+          "type": "standard",
+          "note": "Authoritative SI guidance when converting temperatures, energies, and other quantities used in combustion teaching"
+        },
+        {
+          "id": "src-wiki-fire-control",
+          "title": "Wikipedia — Control of fire by early humans",
+          "url": "https://en.wikipedia.org/wiki/Control_of_fire_by_early_humans",
+          "type": "wikipedia",
+          "note": "Overview with citations to primary literature; use as a map to peer-reviewed sources"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "cooking",
+    "name": "Cooking with Heat",
+    "tagline": "Applying controlled heat to food to improve safety, digestibility, and calorie extraction",
+    "category": "food",
+    "era": "prehistoric",
+    "difficulty": 1,
+    "prerequisites": [
+      "fire"
+    ],
+    "unlocks": [
+      "first-aid-and-wound-care",
+      "food-preservation",
+      "paper-and-ink-media",
+      "soap-making",
+      "soil-science-and-composting"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Water",
+        "purpose": "Boiling, steaming, cleaning",
+        "earthLocations": [
+          "Rivers, springs, collected rain"
+        ],
+        "spaceAlternatives": "Recovered humidity condensate — must be purified",
+        "processingRequired": "Clarify and boil if biological risk"
+      },
+      {
+        "name": "Fuel",
+        "purpose": "Heat",
+        "earthLocations": [
+          "As fire entry"
+        ],
+        "spaceAlternatives": "Electric resistance",
+        "processingRequired": "Dry storage"
+      },
+      {
+        "name": "Food ingredients",
+        "purpose": "Nutrition",
+        "earthLocations": [
+          "Hunted, gathered, cultivated sources"
+        ],
+        "spaceAlternatives": "Hydroponic biomass",
+        "processingRequired": "Knowledge of local toxins is mandatory preprocessing"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-who-food-safety",
+          "title": "WHO — Food safety fact sheet",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/food-safety",
+          "type": "institution",
+          "note": "Foodborne illness prevention and safe food handling principles"
+        },
+        {
+          "id": "src-cdc-foodsafety",
+          "title": "CDC — Food safety index",
+          "url": "https://www.cdc.gov/foodsafety/index.html",
+          "type": "institution",
+          "note": "U.S. public-health guidance complementary to WHO materials"
+        },
+        {
+          "id": "src-wiki-cooking",
+          "title": "Wikipedia — Cooking",
+          "url": "https://en.wikipedia.org/wiki/Cooking",
+          "type": "wikipedia",
+          "note": "Heat transfer, food chemistry overview, and further reading"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "copper-wire-and-cable",
+    "name": "Copper Wire and Cable",
+    "tagline": "Drawn and stranded conductors that carry current with low loss — the nervous system of electrification",
+    "category": "energy",
+    "era": "industrial",
+    "difficulty": 3,
+    "prerequisites": [
+      "smelting-bronze-age",
+      "steel-production"
+    ],
+    "unlocks": [
+      "dc-power-transmission-and-motor-drives",
+      "electric-motor",
+      "electrical-power-grid",
+      "electrical-telegraph",
+      "electrical-transformer",
+      "high-capacity-electrochemical-batteries",
+      "high-voltage-ac-transmission",
+      "solar-photovoltaic-power-systems",
+      "telephone-exchange-system",
+      "vacuum-tube-electronics"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Cathode copper",
+        "purpose": "High-conductivity feedstock",
+        "earthLocations": [
+          "Chilean porphyry mines",
+          "Zambian copperbelt",
+          "Indonesian Grasberg region"
+        ],
+        "spaceAlternatives": "Electrolytic cathode from porphyry or sediment-hosted mines; in early off-world camps recycle busbar and cable ends before expecting new sulphide flotation — meteoritic iron is a poor conductor for power distribution",
+        "processingRequired": "Fire refine then electrolytic refine to 99.99%"
+      },
+      {
+        "name": "Polymer pellets",
+        "purpose": "XLPE or PVC insulation",
+        "earthLocations": [
+          "Petrochemical complexes"
+        ],
+        "spaceAlternatives": "XLPE or PVC from petrochemical chains; until extruders exist, use ceramic standoffs and air as dielectric for short bus runs inside equipment",
+        "processingRequired": "Dry pellets; extrude with cross-linking peroxide or e-beam for XLPE"
+      },
+      {
+        "name": "Drawing lubricants",
+        "purpose": "Reduces die wear and overheating",
+        "earthLocations": [
+          "Synthetic ester and soap suppliers"
+        ],
+        "spaceAlternatives": "Synthetic ester or soap-based drawing soaps; historically tallow mixtures — filter aggressively so grit never scores dies or embeds in copper",
+        "processingRequired": "Filter to remove grit that scores wire"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-nist-conductivity",
+          "title": "NIST — Conductivity and resistivity of copper (via materials portal)",
+          "url": "https://www.nist.gov/mml",
+          "type": "institution",
+          "note": "Electrical material standards and measurement science entry point"
+        },
+        {
+          "id": "src-wiki-conductor",
+          "title": "Wikipedia — Electrical conductor",
+          "url": "https://en.wikipedia.org/wiki/Electrical_conductor",
+          "type": "wikipedia",
+          "note": "Copper conductivity, stranding, and cable design references"
+        },
+        {
+          "id": "src-ieee-standards",
+          "title": "IEEE Standards Association",
+          "url": "https://standards.ieee.org/",
+          "type": "standard",
+          "note": "Electrical power and electronics standards catalogue (subscription may apply)"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "dc-power-transmission-and-motor-drives",
+    "name": "DC Power Transmission and Motor Drives",
+    "tagline": "Rectifiers, inverters, and choppers that move or motor power when AC alone is insufficient",
+    "category": "energy",
+    "era": "mid-20th",
+    "difficulty": 4,
+    "prerequisites": [
+      "electrical-power-grid",
+      "electric-motor",
+      "copper-wire-and-cable"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Silicon or SiC dies",
+        "purpose": "Switching devices",
+        "earthLocations": [
+          "Wafer fabs globally"
+        ],
+        "spaceAlternatives": "Silicon IGBTs from power-module fabs; silicon carbide for higher frequency and efficiency where heat sinking allows; keep spare modules sealed dry until installation",
+        "processingRequired": "Wire bond, solder, void-free attach"
+      },
+      {
+        "name": "Copper buswork",
+        "purpose": "Low inductance interconnections",
+        "earthLocations": [
+          "Refined copper"
+        ],
+        "spaceAlternatives": "Low-inductance film capacitors for DC link; electrolytics for bulk energy where ripple current ratings match service life targets",
+        "processingRequired": "Silver plating contacts"
+      },
+      {
+        "name": "Mica or polymer films",
+        "purpose": "DC bus capacitors",
+        "earthLocations": [
+          "Film capacitor plants"
+        ],
+        "spaceAlternatives": "Laminated buswork or thick copper foil; aluminium bus with plated interfaces where weight dominates launch cost",
+        "processingRequired": "Self-healing metallisation"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-ieee-standards",
+          "title": "IEEE Standards Association",
+          "url": "https://standards.ieee.org/",
+          "type": "standard",
+          "note": "Power electronics and motor drives standards"
+        },
+        {
+          "id": "src-wiki-dc",
+          "title": "Wikipedia — High-voltage direct current",
+          "url": "https://en.wikipedia.org/wiki/High-voltage_direct_current",
+          "type": "wikipedia",
+          "note": "HVDC links and converter stations (subset of DC power transmission topic)"
+        },
+        {
+          "id": "src-energy",
+          "title": "U.S. Department of Energy",
+          "url": "https://www.energy.gov/",
+          "type": "institution",
+          "note": "Grid modernisation and industrial efficiency programs"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "electric-lighting-systems",
+    "name": "Electric Lighting Systems",
+    "tagline": "Controlled conversion of electricity into visible radiation — from carbon arcs to solid-state diodes",
+    "category": "energy",
+    "era": "industrial",
+    "difficulty": 3,
+    "prerequisites": [
+      "electric-motor",
+      "electrical-transformer",
+      "glass-making"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Tungsten wire",
+        "purpose": "Incandescent filaments",
+        "earthLocations": [
+          "Wolframite mines in China, Portugal, Rwanda"
+        ],
+        "spaceAlternatives": "Tungsten remains ideal for incandescent filaments where simple supplies beat complexity; in spacecraft and stations, LED lighting dominates because waste heat must be routed to radiators — keep tungsten as precision instrument filaments and specialty halogen work lights",
+        "processingRequired": "Doping and drawing to controlled cold resistance"
+      },
+      {
+        "name": "Glass envelopes",
+        "purpose": "Hermetic bulb",
+        "earthLocations": [
+          "Float glass plants"
+        ],
+        "spaceAlternatives": "Borosilicate envelopes from terrestrial float lines; sapphire windows for harsh LED packages; sealed metal-ceramic heads where glass vibration risk matters",
+        "processingRequired": "Sealing stems to lead wires"
+      },
+      {
+        "name": "Phosphors and rare earths",
+        "purpose": "Fluorescent and LED colour mixing",
+        "earthLocations": [
+          "Bayan Obo rare earths historically dominant"
+        ],
+        "spaceAlternatives": "Terrestrial rare-earth separation for narrow-band phosphors; early recovery may blend broader-spectrum phosphors with slightly lower efficacy, or use indium gallium nitride blue pumps with mature phosphor recipes traded as packaged powders",
+        "processingRequired": "Milling to controlled particle size"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-who-air-light",
+          "title": "WHO — Household air pollution and health",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/household-air-pollution-and-health",
+          "type": "institution",
+          "note": "Indoor air quality and combustion products from lighting fuels where relevant"
+        },
+        {
+          "id": "src-wiki-lighting",
+          "title": "Wikipedia — Electric lighting",
+          "url": "https://en.wikipedia.org/wiki/Electric_lighting",
+          "type": "wikipedia",
+          "note": "Lamp technologies and history"
+        },
+        {
+          "id": "src-energy",
+          "title": "U.S. Department of Energy",
+          "url": "https://www.energy.gov/",
+          "type": "institution",
+          "note": "Lighting efficiency programs and solid-state lighting R&D"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "electric-motor",
+    "name": "Electric Motor",
+    "tagline": "Magnetic fields and current-carrying conductors producing continuous rotary torque without on-site combustion",
+    "category": "energy",
+    "era": "industrial",
+    "difficulty": 3,
+    "prerequisites": [
+      "electrical-power-grid",
+      "steel-production",
+      "copper-wire-and-cable"
+    ],
+    "unlocks": [
+      "dc-power-transmission-and-motor-drives",
+      "electric-lighting-systems",
+      "high-capacity-electrochemical-batteries",
+      "semiconductor-crystal-growing-doping",
+      "vacuum-tube-electronics"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Electrical steel",
+        "purpose": "Low-loss magnetic circuit",
+        "earthLocations": [
+          "Grain-oriented sheet mills"
+        ],
+        "spaceAlternatives": "Ferrite or powdered-iron cores at high frequency for small actuators; lower-flux-density silicon stacks where grain-oriented sheet is unavailable; import lamination stacks from surviving terrestrial mills until local rolling lines return",
+        "processingRequired": "Stamp laminations; anneal; varnish"
+      },
+      {
+        "name": "Magnet wire",
+        "purpose": "Slot conductors",
+        "earthLocations": [
+          "Copper + enamel plants"
+        ],
+        "spaceAlternatives": "Silver-plated copper in cryogenic motors; aluminium magnet wire in large machines where slot fill and cost dominate",
+        "processingRequired": "Random wound or form wound coils"
+      },
+      {
+        "name": "Aluminium for rotors",
+        "purpose": "Die-cast cage low cost",
+        "earthLocations": [
+          "Smelters globally"
+        ],
+        "spaceAlternatives": "Copper cage bars for higher efficiency when aluminium casting equipment is missing; hand-fabricated copper rings for repair of legacy rotors",
+        "processingRequired": "Die casting under vacuum to reduce porosity"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-ieee-standards",
+          "title": "IEEE Standards Association",
+          "url": "https://standards.ieee.org/",
+          "type": "standard",
+          "note": "Rotating machinery and power electronics standards"
+        },
+        {
+          "id": "src-wiki-motor",
+          "title": "Wikipedia — Electric motor",
+          "url": "https://en.wikipedia.org/wiki/Electric_motor",
+          "type": "wikipedia",
+          "note": "Induction, synchronous, and DC motor theory"
+        },
+        {
+          "id": "src-nist-pml",
+          "title": "NIST — PML",
+          "url": "https://www.nist.gov/pml",
+          "type": "institution",
+          "note": "Precision electrical measurements for efficiency testing"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "electrical-power-grid",
+    "name": "Electrical Power Grid",
+    "tagline": "Synchronised generation, transmission, and distribution that move gigawatts across continents with second-level control",
+    "category": "energy",
+    "era": "industrial",
+    "difficulty": 4,
+    "prerequisites": [
+      "steam-turbine-electric-generation",
+      "steel-production",
+      "copper-wire-and-cable",
+      "electrical-transformer"
+    ],
+    "unlocks": [
+      "dc-power-transmission-and-motor-drives",
+      "electric-motor",
+      "high-voltage-ac-transmission",
+      "radio-broadcast-and-receiver",
+      "solar-photovoltaic-power-systems",
+      "telephone-exchange-system"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Aluminium and steel conductors",
+        "purpose": "Low-resistance lines and structural towers",
+        "earthLocations": [
+          "Bauxite belts",
+          "iron ore ranges"
+        ],
+        "spaceAlternatives": "Use copper stranding where launch mass dominates losses; aluminium-steel overhead equivalents for surface grids; tethered lunar grids may prefer aluminium buswork in vacuum with ceramic standoffs to avoid oxidation",
+        "processingRequired": "Stranding, annealing, galvanising"
+      },
+      {
+        "name": "Transformer core steel",
+        "purpose": "Low-hysteresis magnetic circuits",
+        "earthLocations": [
+          "Speciality rolling mills in Japan, USA, EU"
+        ],
+        "spaceAlternatives": "Amorphous-metal or lower-flux-density cores until grain-oriented rolling returns; trade efficiency for mass in early off-world microgrids",
+        "processingRequired": "Grain-oriented silicon steel"
+      },
+      {
+        "name": "Insulating oil or gas",
+        "purpose": "Cooling and insulation in switchgear",
+        "earthLocations": [
+          "Refineries for mineral oil",
+          "fluorochemical plants for SF6"
+        ],
+        "spaceAlternatives": "Dry-type cast-resin switchgear where oil is unacceptable; synthetic ester fluids where oil cooling is still desired",
+        "processingRequired": "Degas and dry before energisation"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-itu-d",
+          "title": "ITU — Development Sector (ICT for resilient infrastructure)",
+          "url": "https://www.itu.int/en/ITU-D/Pages/default.aspx",
+          "type": "institution",
+          "note": "Telecommunications resilience alongside grid modernisation"
+        },
+        {
+          "id": "src-wiki-grid",
+          "title": "Wikipedia — Electrical grid",
+          "url": "https://en.wikipedia.org/wiki/Electrical_grid",
+          "type": "wikipedia",
+          "note": "Topology, frequency control, and reliability references"
+        },
+        {
+          "id": "src-energy",
+          "title": "U.S. Department of Energy",
+          "url": "https://www.energy.gov/",
+          "type": "institution",
+          "note": "National electricity policy and R&D entry point (compare local regulators)"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "electrical-telegraph",
+    "name": "Electrical Telegraph",
+    "tagline": "Pulses on wires encoding letters at light-speed — shrinking command-and-control latency across continents",
+    "category": "communication",
+    "era": "industrial",
+    "difficulty": 3,
+    "prerequisites": [
+      "printing-press-movable-type",
+      "copper-wire-and-cable",
+      "glass-making",
+      "steel-production"
+    ],
+    "unlocks": [
+      "telephone-exchange-system",
+      "radio-broadcast-and-receiver"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Copper wire",
+        "purpose": "Low resistance long lines",
+        "earthLocations": [
+          "Telegraph boom districts 19c"
+        ],
+        "spaceAlternatives": "Soft-drawn copper telegraph wire on Earth; early off-world links may use aluminium with larger gauges or optical links once available — keep mechanical redundancy for dust storms",
+        "processingRequired": "Annealed soft draw for wrapping"
+      },
+      {
+        "name": "Lead-acid batteries",
+        "purpose": "Station power",
+        "earthLocations": [
+          "Lead smelters"
+        ],
+        "spaceAlternatives": "Lead-acid cells for portable office power where dynamos are absent; later nickel-iron or lithium where maintenance culture matches chemistry",
+        "processingRequired": "Form plates and activate"
+      },
+      {
+        "name": "Gutta-percha",
+        "purpose": "Submarine insulation historically",
+        "earthLocations": [
+          "Southeast Asia latex historically"
+        ],
+        "spaceAlternatives": "Gutta-percha or bitumen-impregnated paper for submarine cores historically; XLPE or PE jackets on modern landlines — always test joints underwater before trusting claims",
+        "processingRequired": "Extrusion"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-itu-d-history",
+          "title": "ITU — Development Sector (telecommunications development and history resources)",
+          "url": "https://www.itu.int/en/ITU-D/Pages/default.aspx",
+          "type": "institution",
+          "note": "International telecommunication development; use ITU library for telegraph-era treaty history"
+        },
+        {
+          "id": "src-wiki-telegraph",
+          "title": "Wikipedia — Electrical telegraph",
+          "url": "https://en.wikipedia.org/wiki/Electrical_telegraph",
+          "type": "wikipedia",
+          "note": "Morse systems and submarine cables references"
+        },
+        {
+          "id": "src-ieee-standards",
+          "title": "IEEE Standards Association",
+          "url": "https://standards.ieee.org/",
+          "type": "standard",
+          "note": "Modern telecommunications standards lineage"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "electrical-transformer",
+    "name": "Electrical Transformer",
+    "tagline": "AC magnetic coupling that steps voltage up for transmission and down for safe use — without moving parts",
+    "category": "energy",
+    "era": "industrial",
+    "difficulty": 3,
+    "prerequisites": [
+      "copper-wire-and-cable",
+      "steel-production"
+    ],
+    "unlocks": [
+      "electric-lighting-systems",
+      "electrical-power-grid"
+    ],
+    "rawMaterials": [
+      {
+        "name": "GO silicon steel",
+        "purpose": "Low core loss",
+        "earthLocations": [
+          "Japan, USA, EU cold rolling"
+        ],
+        "spaceAlternatives": "Ship grain-oriented lamination kits from surviving terrestrial mills, or run motors at lower flux density with thicker cores of ordinary silicon steel until cold-rolling can be rebuilt; small lunar or Martian bases may prioritise dry-type cast-resin transformers to avoid flammable oil",
+        "processingRequired": "Cut laminations; anneal; edge insulate"
+      },
+      {
+        "name": "Kraft paper and cellulose",
+        "purpose": "Conductor insulation in oil",
+        "earthLocations": [
+          "Pulp mills"
+        ],
+        "spaceAlternatives": "Aramid paper (Nomex) classes in dry-type transformers where cellulose is scarce; hybrid insulation using ceramic-fibre wraps for prototype units at reduced voltage stress",
+        "processingRequired": "Dry and oil impregnate under vacuum"
+      },
+      {
+        "name": "Transformer oil",
+        "purpose": "Dielectric and coolant",
+        "earthLocations": [
+          "Refineries"
+        ],
+        "spaceAlternatives": "Synthetic ester fluids from bio-derived alcohols for lower flammability than mineral oil; in sealed habitats, SF6-free designs favour solid/epoxy insulation over pressurised gas",
+        "processingRequired": "Dry, degas, test BDV"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-ieee-standards",
+          "title": "IEEE Standards Association",
+          "url": "https://standards.ieee.org/",
+          "type": "standard",
+          "note": "IEEE C57 transformer family and related power standards"
+        },
+        {
+          "id": "src-wiki-transformer",
+          "title": "Wikipedia — Transformer",
+          "url": "https://en.wikipedia.org/wiki/Transformer",
+          "type": "wikipedia",
+          "note": "Magnetics, equivalent circuits, and safety notes"
+        },
+        {
+          "id": "src-nist-sp811",
+          "title": "NIST SP 811",
+          "url": "https://www.nist.gov/pml/special-publication-811",
+          "type": "standard",
+          "note": "SI coherence for magnetic flux, voltage, and power"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "first-aid-and-wound-care",
+    "name": "First Aid and Wound Care",
+    "tagline": "Stopping bleeding, cleaning wounds, splinting injuries, and preventing infection when hospitals and pharmacies are gone",
+    "category": "medicine",
+    "era": "prehistoric",
+    "difficulty": 2,
+    "prerequisites": [
+      "fire",
+      "rope-and-cordage",
+      "cooking"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Clean water",
+        "purpose": "Irrigation and hydration",
+        "earthLocations": [
+          "Boiled rainwater",
+          "Filtered spring"
+        ],
+        "spaceAlternatives": "Recovered potable loop water per habitat protocol only",
+        "processingRequired": "Boil for irrigation if biological contamination possible"
+      },
+      {
+        "name": "Cloth",
+        "purpose": "Dressings and slings",
+        "earthLocations": [
+          "Boiled woven cotton or linen"
+        ],
+        "spaceAlternatives": "Sterile gauze from medical cargo until laundry sterilisers exist",
+        "processingRequired": "Cut squares; store in metal tin baked dry"
+      },
+      {
+        "name": "Structural splint stock",
+        "purpose": "Immobilisation",
+        "earthLocations": [
+          "Straight branches",
+          "scrap lumber"
+        ],
+        "spaceAlternatives": "Carbon fibre strips from equipment repair kits",
+        "processingRequired": "Sand splinters away"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [
+        "Contraindications: suspected spinal injury with neuro deficit — immobilise spine before movement; crush injury compartments — do not apply tight circumferential wraps without monitoring.",
+        "Overdose risk: minimal for non-drug interventions; if using any stocked analgesic, follow printed dosing — never double-dose children by adult scales.",
+        "Sterility: field dressings are cleaner than dirt, not sterile — deep penetrating wounds need professional care when available.",
+        "Professional verification is required before use on a human being. This is especially important for any procedure beyond basic first aid, public-health triage, and non-invasive wound cleaning."
+      ],
+      "sources": [
+        {
+          "id": "who-injuries",
+          "title": "WHO — Injuries",
+          "url": "https://www.who.int/health-topics/injuries",
+          "type": "institution",
+          "note": "Global injury prevention and care context"
+        },
+        {
+          "id": "who-burns",
+          "title": "WHO — Burns",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/burns",
+          "type": "institution",
+          "note": "Burn first aid and prevention"
+        },
+        {
+          "id": "icrc-health",
+          "title": "ICRC — Health",
+          "url": "https://www.icrc.org/en/what-we-do/health",
+          "type": "institution",
+          "note": "International Red Cross and Red Crescent Movement health programmes and standards context"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-12"
+  },
+  {
+    "id": "fishing-net-and-line",
+    "name": "Fishing (Net and Line)",
+    "tagline": "Capturing aquatic protein using cordage, hooks, and mesh structures",
+    "category": "food",
+    "era": "prehistoric",
+    "difficulty": 2,
+    "prerequisites": [
+      "rope-and-cordage",
+      "bone-tools"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Cordage fibres",
+        "purpose": "Lines and nets",
+        "earthLocations": [
+          "Nettle, lime bast, sisal analogues per biome"
+        ],
+        "spaceAlternatives": "Synthetic monofilament when chemical industry exists",
+        "processingRequired": "Spin and ply as rope entry; oil dressing for water resistance"
+      },
+      {
+        "name": "Hook blanks",
+        "purpose": "Terminal engagement",
+        "earthLocations": [
+          "Bone splinters, shells, thorns"
+        ],
+        "spaceAlternatives": "Wire formed from drawn metal",
+        "processingRequired": "Grind point and barb; polish to reduce corrosion pits"
+      },
+      {
+        "name": "Weights",
+        "purpose": "Sink nets and lines",
+        "earthLocations": [
+          "Stone, clay",
+          "lead ore where smelted"
+        ],
+        "spaceAlternatives": "Steel weights",
+        "processingRequired": "Shape to reduce snagging on bottom"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-fao-fishery",
+          "title": "FAO — Fisheries and Aquaculture",
+          "url": "https://www.fao.org/fishery/en",
+          "type": "institution",
+          "note": "Gear types, fisheries management, and responsible harvesting"
+        },
+        {
+          "id": "src-wiki-net",
+          "title": "Wikipedia — Fishing net",
+          "url": "https://en.wikipedia.org/wiki/Fishing_net",
+          "type": "wikipedia",
+          "note": "Net-making materials and methods with citations"
+        },
+        {
+          "id": "src-itu-r",
+          "title": "ITU — Radiocommunication Sector (ITU-R)",
+          "url": "https://www.itu.int/en/ITU-R/Pages/default.aspx",
+          "type": "institution",
+          "note": "Radio spectrum standards context for modern electronic aids to navigation and safety communications"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "fixed-wing-aircraft",
+    "name": "Fixed-Wing Aircraft",
+    "tagline": "Heavier-than-air flight using wings to generate lift and engines to overcome drag",
+    "category": "transport",
+    "era": "early-20th",
+    "difficulty": 5,
+    "prerequisites": [
+      "internal-combustion-engine",
+      "steel-production",
+      "glass-making"
+    ],
+    "unlocks": [
+      "communication-satellites"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Aluminium alloys",
+        "purpose": "Primary airframe weight efficiency",
+        "earthLocations": [
+          "Global smelters near cheap electricity"
+        ],
+        "spaceAlternatives": "Not applicable to Earth atmosphere craft — launch vehicles overlap materials science differently",
+        "processingRequired": "Solution treat, quench, age; alclad corrosion protection"
+      },
+      {
+        "name": "Aviation fuel",
+        "purpose": "Energy density for range",
+        "earthLocations": [
+          "Refineries producing AVGAS or Jet-A depending on engine"
+        ],
+        "spaceAlternatives": "Synthetic fuels — drop-in testing required per engine STC",
+        "processingRequired": "Strict water exclusion; filtration at wing tanks"
+      },
+      {
+        "name": "Glass or polycarbonate",
+        "purpose": "Transparency with impact and pressure requirements",
+        "earthLocations": [
+          "Speciality glassmakers",
+          "polycarbonate sheet plants"
+        ],
+        "spaceAlternatives": "Sapphire for extreme environments — niche",
+        "processingRequired": "Tempering, lamination, anti-ice coatings"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-nasa-science-flight",
+          "title": "NASA Science",
+          "url": "https://science.nasa.gov/solar-system/",
+          "type": "institution",
+          "note": "NASA public STEM portal; follow NASA aeronautics publications for flight physics"
+        },
+        {
+          "id": "src-wiki-aircraft",
+          "title": "Wikipedia — Fixed-wing aircraft",
+          "url": "https://en.wikipedia.org/wiki/Fixed-wing_aircraft",
+          "type": "wikipedia",
+          "note": "Aerodynamics and structures introduction"
+        },
+        {
+          "id": "src-itu-r",
+          "title": "ITU-R",
+          "url": "https://www.itu.int/en/ITU-R/Pages/default.aspx",
+          "type": "institution",
+          "note": "Radiocommunication standards for aviation spectrum and safety services"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "food-preservation",
+    "name": "Food Preservation",
+    "tagline": "Drying, salting, smoking, fermenting, and storing calories so labour is not wasted on repeated hunting and gathering",
+    "category": "food",
+    "era": "prehistoric",
+    "difficulty": 2,
+    "prerequisites": [
+      "fire",
+      "rope-and-cordage",
+      "cooking"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Salt",
+        "purpose": "Osmotic preservation and fermentation control",
+        "earthLocations": [
+          "Coastal evaporation pans",
+          "Rock salt mines (Himalayas, Alps)"
+        ],
+        "spaceAlternatives": "Imported terrestrial salt until brine evaporation or electrolysis by-products exist in situ",
+        "processingRequired": "Dissolve and filter brine if gritty; measure density for reliable fish cures"
+      },
+      {
+        "name": "Wood fuel",
+        "purpose": "Heat for drying and smoke generation",
+        "earthLocations": [
+          "Hardwood forests for mild smoke"
+        ],
+        "spaceAlternatives": "Electric dehydrators or resistive ovens in habitats; no open combustion in oxygen-limited modules",
+        "processingRequired": "Season wood; split small for controlled smoulder"
+      },
+      {
+        "name": "Food-grade vessels",
+        "purpose": "Brine, pickle, and dry storage",
+        "earthLocations": [
+          "Pottery workshops",
+          "Barrels where cooperage exists"
+        ],
+        "spaceAlternatives": "Stainless vessels with microbially clean welds",
+        "processingRequired": "Glaze food-safe; boil new crocks before first acid fill"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "who-food",
+          "title": "WHO — Food safety fact sheet",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/food-safety",
+          "type": "institution",
+          "note": ""
+        },
+        {
+          "id": "cdc-botulism",
+          "title": "CDC — Botulism",
+          "url": "https://www.cdc.gov/botulism/index.html",
+          "type": "institution",
+          "note": "Home preservation risks"
+        },
+        {
+          "id": "wiki-food-pres",
+          "title": "Wikipedia — Food preservation",
+          "url": "https://en.wikipedia.org/wiki/Food_preservation",
+          "type": "wikipedia",
+          "note": ""
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-12"
+  },
+  {
+    "id": "glass-making",
+    "name": "Glass Making",
+    "tagline": "Melting silica with fluxes into an amorphous solid — transparent ceramic for vessels, lenses, and fibres",
+    "category": "materials",
+    "era": "ancient",
+    "difficulty": 3,
+    "prerequisites": [
+      "charcoal",
+      "ceramics-and-pottery"
+    ],
+    "unlocks": [
+      "boiler-feedwater-treatment",
+      "electric-lighting-systems",
+      "electrical-telegraph",
+      "fixed-wing-aircraft",
+      "optical-fiber-communications",
+      "semiconductor-crystal-growing-doping",
+      "solar-photovoltaic-power-systems",
+      "vacuum-tube-electronics"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Silica sand",
+        "purpose": "Primary network former",
+        "earthLocations": [
+          "Desert dunes",
+          "riverbeds",
+          "quartzose sandstone crushed"
+        ],
+        "spaceAlternatives": "Lunar regolith high in SiO2 after beneficiation",
+        "processingRequired": "Wash to remove organics; screen grain size"
+      },
+      {
+        "name": "Soda ash (natron or ash)",
+        "purpose": "Flux",
+        "earthLocations": [
+          "Wadi Natrun historically",
+          "wood ash leached for potash"
+        ],
+        "spaceAlternatives": "Imported soda when trade exists",
+        "processingRequired": "Leach, boil, crystallise if making ash soda"
+      },
+      {
+        "name": "Limestone",
+        "purpose": "Stabiliser (lime)",
+        "earthLocations": [
+          "Marine limestone outcrops globally"
+        ],
+        "spaceAlternatives": "Calcined shells",
+        "processingRequired": "Calcine to quicklime if needed before batching"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-nist-sp811-glass",
+          "title": "NIST SP 811 — SI Guide",
+          "url": "https://www.nist.gov/pml/special-publication-811",
+          "type": "standard",
+          "note": "Thermal unit consistency for furnace engineering calculations"
+        },
+        {
+          "id": "src-wiki-glass",
+          "title": "Wikipedia — Glass",
+          "url": "https://en.wikipedia.org/wiki/Glass",
+          "type": "wikipedia",
+          "note": "Composition, viscosity, and manufacturing overview"
+        },
+        {
+          "id": "src-unesco-comm",
+          "title": "UNESCO — Communication and information",
+          "url": "https://www.unesco.org/en/communication-information",
+          "type": "institution",
+          "note": "Institutional context for scientific and technical information preservation"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "high-capacity-electrochemical-batteries",
+    "name": "High-Capacity Electrochemical Batteries",
+    "tagline": "Reversible electron transfer cells that store grid and mobility energy as chemical potential — hours to days of buffer",
+    "category": "energy",
+    "era": "late-20th",
+    "difficulty": 4,
+    "prerequisites": [
+      "copper-wire-and-cable",
+      "steel-production",
+      "smelting-bronze-age",
+      "electric-motor"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Lithium salts",
+        "purpose": "Electrolyte LiPF₆ etc.",
+        "earthLocations": [
+          "Atacama brines, Australian spodumene"
+        ],
+        "spaceAlternatives": "Lithium salts from South American brines, Australian spodumene, or clay-hosted resources on Earth; off-world batteries initially ship as packaged cells until local brines or pegmatite zones justify in-situ chemical plants with closed water loops",
+        "processingRequired": "Dry rooms during cell fill"
+      },
+      {
+        "name": "Nickel cobalt manganese oxides",
+        "purpose": "Cathode active material",
+        "earthLocations": [
+          "New Caledonia, Indonesia nickel laterites"
+        ],
+        "spaceAlternatives": "NMC cathodes for energy density; LFP where cobalt supply and thermal kindness dominate trade-offs",
+        "processingRequired": "Hydrothermal co-precipitation, lithiation calcine"
+      },
+      {
+        "name": "Graphite anodes",
+        "purpose": "Intercalation host",
+        "earthLocations": [
+          "China synthetic graphite dominant"
+        ],
+        "spaceAlternatives": "Natural or synthetic graphite anodes; silicon oxide blends where energy density justifies swelling management",
+        "processingRequired": "Spheroidisation and carbon coating"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-doi-battery-review",
+          "title": "Peer-reviewed article (Elsevier) — lithium-ion battery topics via DOI resolver",
+          "url": "https://doi.org/10.1016/j.jpowsour.2016.07.100",
+          "type": "paper",
+          "note": "Example contemporary review article reachable via DOI; library access may be required for full text"
+        },
+        {
+          "id": "src-energy-storage",
+          "title": "U.S. Department of Energy — EERE",
+          "url": "https://www.energy.gov/eere/renewable-energy",
+          "type": "institution",
+          "note": "Grid storage and battery research programs entry point"
+        },
+        {
+          "id": "src-wiki-li",
+          "title": "Wikipedia — Lithium-ion battery",
+          "url": "https://en.wikipedia.org/wiki/Lithium-ion_battery",
+          "type": "wikipedia",
+          "note": "Cell chemistry, thermal runaway, and safety references"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "high-voltage-ac-transmission",
+    "name": "High-Voltage AC Transmission",
+    "tagline": "Extra-high-voltage lines and substations that move gigawatts thousands of kilometres with controlled losses",
+    "category": "energy",
+    "era": "industrial",
+    "difficulty": 4,
+    "prerequisites": [
+      "electrical-power-grid",
+      "copper-wire-and-cable",
+      "steel-production"
+    ],
+    "unlocks": [
+      "nuclear-fission-power-plant"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Aluminium rod for stranding",
+        "purpose": "Lightweight conductor with steel core for strength",
+        "earthLocations": [
+          "Bauxite-to-smelter chains globally"
+        ],
+        "spaceAlternatives": "Ship ACSR or ACCC conductor from terrestrial mills; early off-world longlines may use aluminium bus in vacuum with wider phase spacing until stranding plants exist; copper where mass matters less than simplicity",
+        "processingRequired": "Continuous casting and rod breakdown"
+      },
+      {
+        "name": "Zinc for galvanising",
+        "purpose": "Corrosion protection on towers",
+        "earthLocations": [
+          "Sphalerite deposits worldwide"
+        ],
+        "spaceAlternatives": "Hot-dip galvanised structural steel from zinc-rich ore chains; stainless hardware in salt spray without full stainless towers",
+        "processingRequired": "Hot-dip galvanising baths"
+      },
+      {
+        "name": "Porcelain or epoxy insulators",
+        "purpose": "Dielectric support",
+        "earthLocations": [
+          "Ceramic districts in China, EU"
+        ],
+        "spaceAlternatives": "Composite polymer insulators for weight savings on launch; porcelain where UV and tracking resistance favours mature supply",
+        "processingRequired": "Glazing and proof testing"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-itu-t",
+          "title": "ITU — Telecommunication standardisation (publications)",
+          "url": "https://www.itu.int/en/ITU-T/publications/Pages/default.aspx",
+          "type": "institution",
+          "note": "International standards culture parallel to grid code harmonisation"
+        },
+        {
+          "id": "src-wiki-hv",
+          "title": "Wikipedia — High-voltage transmission",
+          "url": "https://en.wikipedia.org/wiki/High-voltage_transmission",
+          "type": "wikipedia",
+          "note": "EHV concepts and references"
+        },
+        {
+          "id": "src-ieee-standards",
+          "title": "IEEE Standards Association",
+          "url": "https://standards.ieee.org/",
+          "type": "standard",
+          "note": "Power engineering standards for substations and apparatus"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "internal-combustion-engine",
+    "name": "Internal Combustion Engine",
+    "tagline": "Chemical energy released inside cylinders, pushing pistons that turn a crankshaft into useful rotary power",
+    "category": "energy",
+    "era": "industrial",
+    "difficulty": 4,
+    "prerequisites": [
+      "steam-engine",
+      "steel-production",
+      "basic-hand-tools"
+    ],
+    "unlocks": [
+      "automobile",
+      "fixed-wing-aircraft"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Alloy steels",
+        "purpose": "Crankshafts, valves, fasteners",
+        "earthLocations": [
+          "Industrial alloy supply chains"
+        ],
+        "spaceAlternatives": "Imported stock until rolling and heat treat exist",
+        "processingRequired": "Forging, heat treatment, nondestructive test"
+      },
+      {
+        "name": "Aluminium",
+        "purpose": "Lightweight heads and pistons in many designs",
+        "earthLocations": [
+          "Bauxite belts refined by Hall-Héroult where electricity exists"
+        ],
+        "spaceAlternatives": "Regolith-derived alumina electrolysis",
+        "processingRequired": "Casting, solution heat treat, aging"
+      },
+      {
+        "name": "Petrol or diesel",
+        "purpose": "Chemical energy store",
+        "earthLocations": [
+          "Oil fields and refineries globally"
+        ],
+        "spaceAlternatives": "Methanol, ethanol, hydrogen carriers — require engine/fuel-system matching",
+        "processingRequired": "Refining, desulphurisation modern"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-epa-mobile",
+          "title": "U.S. EPA — Transportation and air quality program index",
+          "url": "https://www.epa.gov/transportation-air-pollution-and-climate-change",
+          "type": "institution",
+          "note": "Emissions science and regulatory context for ICE vehicles"
+        },
+        {
+          "id": "src-wiki-ice",
+          "title": "Wikipedia — Internal combustion engine",
+          "url": "https://en.wikipedia.org/wiki/Internal_combustion_engine",
+          "type": "wikipedia",
+          "note": "Cycles, fuels, and engineering references"
+        },
+        {
+          "id": "src-nist-sp811",
+          "title": "NIST SP 811",
+          "url": "https://www.nist.gov/pml/special-publication-811",
+          "type": "standard",
+          "note": "SI units for power, energy, and efficiency calculations"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "internet-protocols-and-web",
+    "name": "Internet Protocols and the World Wide Web",
+    "tagline": "TCP/IP internetworking plus HTTP, HTML, TLS, and DNS — packets, names, and documents on one stack",
+    "category": "communication",
+    "era": "21st-century",
+    "difficulty": 5,
+    "prerequisites": [
+      "transistor",
+      "telephone-exchange-system",
+      "radio-broadcast-and-receiver",
+      "optical-fiber-communications"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "TCAM and NPU silicon",
+        "purpose": "Router forwarding at line rate",
+        "earthLocations": [
+          "Network silicon vendors"
+        ],
+        "spaceAlternatives": "Merchant silicon switching ASICs for routers; until fabs exist off-world, ship ruggedised routers and treat them as critical spares with configuration backups",
+        "processingRequired": "Thermal design for datacentre racks"
+      },
+      {
+        "name": "Server CPUs and DRAM",
+        "purpose": "Web and DNS serving",
+        "earthLocations": [
+          "Foundry fabs"
+        ],
+        "spaceAlternatives": "ECC DRAM and server CPUs from established supply chains; ARM servers trade software compatibility for power if your stack permits",
+        "processingRequired": "ECC RAM for silent error mitigation"
+      },
+      {
+        "name": "SSD NAND",
+        "purpose": "Durable storage for sites",
+        "earthLocations": [
+          "Flash fabs"
+        ],
+        "spaceAlternatives": "Enterprise SSDs with power-loss protection for databases; cold tape or object storage for archives where latency tolerates hours",
+        "processingRequired": "Wear levelling firmware"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-rfc9293",
+          "title": "IETF RFC 9293 — Transmission Control Protocol (TCP)",
+          "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
+          "type": "standard",
+          "note": "Authoritative standards-track specification"
+        },
+        {
+          "id": "src-rfc793",
+          "title": "IETF RFC 793 — TCP (historic)",
+          "url": "https://www.rfc-editor.org/info/rfc793",
+          "type": "standard",
+          "note": "Classic reference retained for historical comparison"
+        },
+        {
+          "id": "src-wiki-internet",
+          "title": "Wikipedia — Internet",
+          "url": "https://en.wikipedia.org/wiki/Internet",
+          "type": "wikipedia",
+          "note": "Architecture survey with citations to standards bodies"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "iron-smelting",
+    "name": "Iron Smelting (Bloomery Tradition)",
+    "tagline": "Reducing iron ore in a solid-state bloomery to produce wrought iron for tools and weapons",
+    "category": "materials",
+    "era": "ancient",
+    "difficulty": 4,
+    "prerequisites": [
+      "smelting-bronze-age",
+      "charcoal"
+    ],
+    "unlocks": [
+      "steel-production",
+      "steam-engine"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Iron ore",
+        "purpose": "Iron source",
+        "earthLocations": [
+          "Bog iron in northern Europe",
+          "Goa and Bellary in India historically",
+          "Hematite ranges in Australia",
+          "Magnetite in Sweden"
+        ],
+        "spaceAlternatives": "Martian regolith contains iron oxides reducible with CO/H2 at high temperature",
+        "processingRequired": "Roasting, crushing to walnut size typical"
+      },
+      {
+        "name": "Charcoal",
+        "purpose": "Heat and reductant",
+        "earthLocations": [
+          "Forested regions"
+        ],
+        "spaceAlternatives": "Electrowinning supersedes when power is cheap",
+        "processingRequired": "Sized for permeability"
+      },
+      {
+        "name": "Flux (optional)",
+        "purpose": "Fluidises slag",
+        "earthLocations": [
+          "Limestone, seashells"
+        ],
+        "spaceAlternatives": "Imported flux or slag recycling",
+        "processingRequired": "Calcined lime reacts in furnace"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-osha-heat",
+          "title": "OSHA — Heat illness prevention",
+          "url": "https://www.osha.gov/heat",
+          "type": "institution",
+          "note": "Thermal stress and industrial hygiene for furnace work"
+        },
+        {
+          "id": "src-wiki-smelting",
+          "title": "Wikipedia — Smelting",
+          "url": "https://en.wikipedia.org/wiki/Smelting",
+          "type": "wikipedia",
+          "note": "Pyrometallurgical principles and historical development"
+        },
+        {
+          "id": "src-epa-sustainability",
+          "title": "U.S. EPA — Sustainability",
+          "url": "https://www.epa.gov/sustainability",
+          "type": "institution",
+          "note": "Environmental management framing for emissions and waste from smelting"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "nuclear-fission-power-plant",
+    "name": "Nuclear Fission Power Plant",
+    "tagline": "Controlled chain reaction steam supply that decouples electricity from chemical fuel oxidation for years per refuelling",
+    "category": "energy",
+    "era": "mid-20th",
+    "difficulty": 5,
+    "prerequisites": [
+      "steam-turbine-electric-generation",
+      "boiler-feedwater-treatment",
+      "high-voltage-ac-transmission",
+      "steel-production"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Uranium concentrate",
+        "purpose": "Fuel feed after conversion and enrichment",
+        "earthLocations": [
+          "Kazakhstan, Canada, Australia, Namibia"
+        ],
+        "spaceAlternatives": "Uranium from sandstone, unconformity, or porphyry deposits on Earth; off-world fission would more plausibly use shipped enriched oxide or thorium-uranium cycles engineered for that environment — not lunar helium-3, which implies an entirely different fuel cycle and reactor physics",
+        "processingRequired": "Conversion to UF₆, centrifuge enrichment, reduction to UO₂"
+      },
+      {
+        "name": "Heavy forgings",
+        "purpose": "RPV shell monolithic integrity",
+        "earthLocations": [
+          "JSW, Creusot Loire historical"
+        ],
+        "spaceAlternatives": "Monolithic reactor-vessel forgings from a handful of world-capable forges; until local heavy forging returns, store retired vessel sections as templates, cooperate with regions that retain press capacity, or downscale to smaller modular reactors designed for bolted shells with conservative margins",
+        "processingRequired": "Quench and temper, UT inspection"
+      },
+      {
+        "name": "Boron carbide",
+        "purpose": "Control rod poison",
+        "earthLocations": [
+          "Turkey, Argentina boron sources"
+        ],
+        "spaceAlternatives": "Boron carbide or silver-indium-cadmium in clad rods for thermal reactors; metallic hafnium assemblies where chemistry favours them — both require honest metallurgy and inspection, not improvised scrap",
+        "processingRequired": "Sintered pellets in stainless cladding"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-iaea-home",
+          "title": "International Atomic Energy Agency",
+          "url": "https://www.iaea.org/",
+          "type": "institution",
+          "note": "Nuclear safety, safeguards, and technical publications (navigate by topic)"
+        },
+        {
+          "id": "src-nrc",
+          "title": "U.S. Nuclear Regulatory Commission",
+          "url": "https://www.nrc.gov/",
+          "type": "institution",
+          "note": "Reactor licensing, radiation protection, and public reading room"
+        },
+        {
+          "id": "src-wiki-nuclear",
+          "title": "Wikipedia — Nuclear power",
+          "url": "https://en.wikipedia.org/wiki/Nuclear_power",
+          "type": "wikipedia",
+          "note": "Survey article; always cross-check operational limits with licensed procedures"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "optical-fiber-communications",
+    "name": "Optical Fiber Communications",
+    "tagline": "Dielectric waveguides carrying terabits on photons — low loss, high bandwidth, immunity to copper theft",
+    "category": "communication",
+    "era": "late-20th",
+    "difficulty": 5,
+    "prerequisites": [
+      "communication-satellites",
+      "transistor",
+      "glass-making"
+    ],
+    "unlocks": [
+      "internet-protocols-and-web"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Silicon tetrachloride",
+        "purpose": "MCVD glass precursor",
+        "earthLocations": [
+          "Chlor-alkali industry"
+        ],
+        "spaceAlternatives": "Ultra-pure silicon tetrachloride and germanium dopants for preforms on Earth; ship spooled single-mode fibre off-world until local draw towers and dry gas chemistry justify on-site manufacture",
+        "processingRequired": "Ultra-dry delivery lines"
+      },
+      {
+        "name": "Germanium dopant",
+        "purpose": "Core index raising",
+        "earthLocations": [
+          "ZnO smelter byproduct streams"
+        ],
+        "spaceAlternatives": "Germanium tetrachloride or alternative index dopants tuned to your process — document refractive index profiles, not only supplier names",
+        "processingRequired": "Controlled partial pressure in preform"
+      },
+      {
+        "name": "Indium phosphide wafers",
+        "purpose": "Laser chips",
+        "earthLocations": [
+          "III-V fabs"
+        ],
+        "spaceAlternatives": "Indium phosphide wafers for long-haul lasers; silicon photonics where integration beats raw laser wall-plug efficiency",
+        "processingRequired": "Facet coating anti-reflection"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-itu-t-fiber",
+          "title": "ITU-T — Publications",
+          "url": "https://www.itu.int/en/ITU-T/publications/Pages/default.aspx",
+          "type": "institution",
+          "note": "G.652/G.653 fibre recommendations and related optical transport standards"
+        },
+        {
+          "id": "src-wiki-fiber",
+          "title": "Wikipedia — Optical fiber",
+          "url": "https://en.wikipedia.org/wiki/Optical_fiber",
+          "type": "wikipedia",
+          "note": "Waveguides, attenuation, and dispersion"
+        },
+        {
+          "id": "src-rfc-internet",
+          "title": "IETF — TCP/IP overview (RFC 9293)",
+          "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
+          "type": "standard",
+          "note": "Packet networking stack carried over modern optical backbones"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "paper-and-ink-media",
+    "name": "Paper and Ink Media",
+    "tagline": "Thin cellulose sheets and fluid pigments that make writing lightweight, foldable, and mass-producible",
+    "category": "communication",
+    "era": "ancient",
+    "difficulty": 2,
+    "prerequisites": [
+      "writing-early-systems",
+      "cooking"
+    ],
+    "unlocks": [
+      "printing-press-movable-type"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Cellulosic fibre",
+        "purpose": "Paper body",
+        "earthLocations": [
+          "Cotton and linen rags historically",
+          "softwood kraft pulp modern"
+        ],
+        "spaceAlternatives": "Cotton and linen rag historically; softwood kraft pulp today; in closed habitats recycle textile trim and agricultural straw pulps with careful lignin control",
+        "processingRequired": "Cook, bleach selectively, beat"
+      },
+      {
+        "name": "Water",
+        "purpose": "Slurry medium and washing",
+        "earthLocations": [
+          "River mills"
+        ],
+        "spaceAlternatives": "River or RO-purified process water on Earth; closed-loop filtration and settling tanks where discharge is constrained",
+        "processingRequired": "Clarify to avoid spots"
+      },
+      {
+        "name": "Pigments",
+        "purpose": "Ink colour",
+        "earthLocations": [
+          "Carbon black",
+          "organic dyes"
+        ],
+        "spaceAlternatives": "Carbon black and organic dyes; mineral pigments like ochre where particle size is controlled — always pair pigment choice with intended pen or brush",
+        "processingRequired": "Disperse to submicron to avoid clogging"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-loc-preservation-paper",
+          "title": "Library of Congress — Preservation Directorate",
+          "url": "https://www.loc.gov/preservation/",
+          "type": "institution",
+          "note": "Paper conservation, inks, and stabilisation for library collections"
+        },
+        {
+          "id": "src-wiki-paper",
+          "title": "Wikipedia — Paper",
+          "url": "https://en.wikipedia.org/wiki/Paper",
+          "type": "wikipedia",
+          "note": "Pulp chemistry and manufacturing history"
+        },
+        {
+          "id": "src-unesco-culture",
+          "title": "UNESCO — Culture",
+          "url": "https://www.unesco.org/en/culture",
+          "type": "institution",
+          "note": "Heritage crafts and artisanal knowledge"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "printing-press-movable-type",
+    "name": "Printing Press (Movable Type)",
+    "tagline": "Mechanised impression of reusable type — mass duplication of text with repeatable fidelity",
+    "category": "communication",
+    "era": "medieval",
+    "difficulty": 3,
+    "prerequisites": [
+      "paper-and-ink-media",
+      "steel-production",
+      "basic-hand-tools"
+    ],
+    "unlocks": [
+      "electrical-telegraph"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Type metal",
+        "purpose": "Casts sharp yet tough type",
+        "earthLocations": [
+          "Lead smelters",
+          "tin trade routes"
+        ],
+        "spaceAlternatives": "Lead-antimony-tin type metal from smelter chains; short-run polymer or wood type where metal casting is unavailable — expect faster wear",
+        "processingRequired": "Remelt with antimony adjustment"
+      },
+      {
+        "name": "Punch steel",
+        "purpose": "Cut master letters",
+        "earthLocations": [
+          "Tool steel supply"
+        ],
+        "spaceAlternatives": "High-carbon punch steel; later EDM for fine repairs where electrical gear exists",
+        "processingRequired": "Harden and temper; polish striking face"
+      },
+      {
+        "name": "Paper stock",
+        "purpose": "Receives impression",
+        "earthLocations": [
+          "Paper mills"
+        ],
+        "spaceAlternatives": "Rag or chemical pulp sheets with grain aligned to press pull; avoid glossy coated stock until inks match",
+        "processingRequired": "Grain direction aligned to press"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-loc",
+          "title": "Library of Congress",
+          "url": "https://www.loc.gov/",
+          "type": "institution",
+          "note": "Rare books, incunabula, and printing history collections"
+        },
+        {
+          "id": "src-wiki-press",
+          "title": "Wikipedia — Printing press",
+          "url": "https://en.wikipedia.org/wiki/Printing_press",
+          "type": "wikipedia",
+          "note": "Gutenberg-era technology and dissemination effects"
+        },
+        {
+          "id": "src-unesco-comm",
+          "title": "UNESCO — Communication and information",
+          "url": "https://www.unesco.org/en/communication-information",
+          "type": "institution",
+          "note": "Freedom of expression and documentary heritage"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "radio-broadcast-and-receiver",
+    "name": "Radio Broadcast and Receiver",
+    "tagline": "Modulated electromagnetic waves carrying voice and music — spectrum, antennas, and detectors at civilisation scale",
+    "category": "communication",
+    "era": "early-20th",
+    "difficulty": 4,
+    "prerequisites": [
+      "vacuum-tube-electronics",
+      "electrical-telegraph",
+      "electrical-power-grid"
+    ],
+    "unlocks": [
+      "communication-satellites",
+      "internet-protocols-and-web"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Aluminium tower sections",
+        "purpose": "Elevated radiators",
+        "earthLocations": [
+          "Extrusion mills"
+        ],
+        "spaceAlternatives": "Copper and aluminium for antennas and radials; PTFE coax where low loss matters — keep connectors weatherproofed",
+        "processingRequired": "Galvanising or anodising"
+      },
+      {
+        "name": "Coaxial cable",
+        "purpose": "Low-loss feedlines at UHF",
+        "earthLocations": [
+          "Cable plants"
+        ],
+        "spaceAlternatives": "High-permeability cores for IF transformers; air-core where Q must be high and stable",
+        "processingRequired": "Foam dielectric extrusion"
+      },
+      {
+        "name": "Ferrite cores",
+        "purpose": "IF transformers",
+        "earthLocations": [
+          "Mn-Zn ferrite factories"
+        ],
+        "spaceAlternatives": "Quartz crystals or ceramic resonators for stable oscillators; rubidium references where budgets allow",
+        "processingRequired": "Sintering and gapping"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-itu-r-radio",
+          "title": "ITU-R",
+          "url": "https://www.itu.int/en/ITU-R/Pages/default.aspx",
+          "type": "institution",
+          "note": "Spectrum management and broadcasting standards"
+        },
+        {
+          "id": "src-wiki-radio",
+          "title": "Wikipedia — Radio",
+          "url": "https://en.wikipedia.org/wiki/Radio",
+          "type": "wikipedia",
+          "note": "Modulation, receivers, and regulation overview"
+        },
+        {
+          "id": "src-nasa-communications",
+          "title": "NASA — Communications and navigation (entry via nasa.gov)",
+          "url": "https://www.nasa.gov/",
+          "type": "institution",
+          "note": "Deep-space communications engineering; navigate to mission directorate pages for technical reports"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "road-construction",
+    "name": "Road Construction",
+    "tagline": "Engineered surfaces and drainage that make wheeled transport reliable in wet seasons and heavy freight",
+    "category": "construction",
+    "era": "ancient",
+    "difficulty": 3,
+    "prerequisites": [
+      "cart-and-wagon",
+      "shelter-construction-basic"
+    ],
+    "unlocks": [
+      "automobile",
+      "steam-locomotive"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Crushed stone",
+        "purpose": "Structural aggregate",
+        "earthLocations": [
+          "Quarries near transport corridors globally"
+        ],
+        "spaceAlternatives": "Sintered regolith aggregate",
+        "processingRequired": "Crush-screen to gradation; wash if clay-coated"
+      },
+      {
+        "name": "Binder (asphalt era)",
+        "purpose": "Coats aggregate in flexible pavement",
+        "earthLocations": [
+          "Petroleum refining districts"
+        ],
+        "spaceAlternatives": "Sulphur binder research materials — nonstandard",
+        "processingRequired": "Heat mix plants; compaction before cool"
+      },
+      {
+        "name": "Geotextile (modern optional)",
+        "purpose": "Separates fines from base, reducing pumping",
+        "earthLocations": [
+          "Industrial textiles"
+        ],
+        "spaceAlternatives": "Woven polymer from in-situ chemical plants",
+        "processingRequired": "Proper overlap and anchoring"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-nyc-dot-road",
+          "title": "NYC DOT — Infrastructure portal (Brooklyn Bridge example)",
+          "url": "https://www1.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
+          "type": "institution",
+          "note": "Municipal civil engineering documentation style"
+        },
+        {
+          "id": "src-wiki-road",
+          "title": "Wikipedia — Road",
+          "url": "https://en.wikipedia.org/wiki/Road",
+          "type": "wikipedia",
+          "note": "Pavement types, drainage, and standards references"
+        },
+        {
+          "id": "src-epa",
+          "title": "U.S. EPA",
+          "url": "https://www.epa.gov/",
+          "type": "institution",
+          "note": "Stormwater, dust control, and environmental compliance for earthworks"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "rope-and-cordage",
+    "name": "Rope and Cordage",
+    "tagline": "Twisted and braided fibres that turn tension into reliable force transmission, binding, and lifting",
+    "category": "tools",
+    "era": "prehistoric",
+    "difficulty": 1,
+    "prerequisites": [],
+    "unlocks": [
+      "cart-and-wagon",
+      "first-aid-and-wound-care",
+      "fishing-net-and-line",
+      "food-preservation",
+      "navigation-celestial",
+      "pulley",
+      "soil-science-and-composting"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Bast fibre plants",
+        "purpose": "High tensile vegetable cordage without metal tools",
+        "earthLocations": [
+          "Lime family (Tilia) in temperate Eurasia",
+          "Nettle (Urtica) globally",
+          "Paper mulberry and paperbark in Asia-Pacific"
+        ],
+        "spaceAlternatives": "Microbial cellulose or processed biomass fibres from controlled agriculture",
+        "processingRequired": "Retting (microbial loosening of gums), rinsing, stripping ribbons, drying"
+      },
+      {
+        "name": "Leaf fibres",
+        "purpose": "Hard-wearing cord for nets and dragging tasks",
+        "earthLocations": [
+          "Agave in Americas",
+          "New Zealand flax (Phormium)",
+          "Sisal plantations historically"
+        ],
+        "spaceAlternatives": "Glass or aramid fibres when industry exists — not primitive",
+        "processingRequired": "Scraping pulp, sun drying, sometimes beating to separate strands"
+      },
+      {
+        "name": "Animal sinew",
+        "purpose": "Extremely strong fine cord for traps and backing",
+        "earthLocations": [
+          "Grassland and arctic megafauna processing sites"
+        ],
+        "spaceAlternatives": "Cultured collagen fibres in advanced biofabrication",
+        "processingRequired": "Clean tendons, dry, split into ribbons, twist wet then dry under tension"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-fao-forestry",
+          "title": "FAO — Forestry and forest products",
+          "url": "https://www.fao.org/forestry/en/",
+          "type": "institution",
+          "note": "Plant-fibre resources, sustainability, and rural fibre supply chains"
+        },
+        {
+          "id": "src-wiki-rope",
+          "title": "Wikipedia — Rope",
+          "url": "https://en.wikipedia.org/wiki/Rope",
+          "type": "wikipedia",
+          "note": "Construction, materials, and history; trace citations for cordage engineering"
+        },
+        {
+          "id": "src-osha-general",
+          "title": "OSHA — Occupational Safety and Health Administration (standards portal)",
+          "url": "https://www.osha.gov/laws-regs/standards",
+          "type": "institution",
+          "note": "Machine guarding, PPE, and fibre-processing hazards in workshop settings"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "sanitation-and-clean-water",
+    "name": "Sanitation and Clean Water",
+    "tagline": "Safe drinking water, waste isolation, and hygiene habits that prevent waterborne disease when infrastructure disappears",
+    "category": "survival",
+    "era": "prehistoric",
+    "difficulty": 2,
+    "prerequisites": [
+      "fire",
+      "ceramics-and-pottery"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Source water",
+        "purpose": "Hydration after treatment",
+        "earthLocations": [
+          "Headwater springs",
+          "Deep tested wells",
+          "Rain from metal or tile roofs"
+        ],
+        "spaceAlternatives": "Mars: drill or trench for ice-rich regolith; sublimate or melt in closed processor; recycle condensate in habitat loops with brine management",
+        "processingRequired": "Assess dissolved salts and metals; blend or reject sources that fail simple taste and settle tests"
+      },
+      {
+        "name": "Filter media",
+        "purpose": "Particle removal and slow-sand biology",
+        "earthLocations": [
+          "River sand after washing",
+          "Quarry gravel"
+        ],
+        "spaceAlternatives": "Sintered metal or ceramic cartridges imported until regolith washing lines exist",
+        "processingRequired": "Wash until rinse clears; sterilise new media with boiling water before commissioning"
+      },
+      {
+        "name": "Disinfectant or fuel",
+        "purpose": "Final kill step or heat source",
+        "earthLocations": [
+          "Chlorine tablets where stocked",
+          "Wood and charcoal"
+        ],
+        "spaceAlternatives": "Electrolytic chlorine generators or UV LEDs with reliable power budgets",
+        "processingRequired": "If using halogens, measure mass per litre from manufacturer tables adapted to temperature"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "who-drinking",
+          "title": "WHO — Drinking water",
+          "url": "https://www.who.int/health-topics/drinking-water",
+          "type": "institution",
+          "note": "Global public health guidance"
+        },
+        {
+          "id": "cdc-shigella",
+          "title": "CDC — Shigella (bacterial dysentery)",
+          "url": "https://www.cdc.gov/shigella/index.html",
+          "type": "institution",
+          "note": "Water and hygiene related illness"
+        },
+        {
+          "id": "wiki-water",
+          "title": "Wikipedia — Water treatment",
+          "url": "https://en.wikipedia.org/wiki/Water_treatment",
+          "type": "wikipedia",
+          "note": "Engineering survey with references"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-12"
+  },
+  {
+    "id": "semiconductor-crystal-growing-doping",
+    "name": "Semiconductor Crystal Growing and Doping",
+    "tagline": "Single-crystal boules with controlled impurities — the material base of diodes, transistors, and integrated circuits",
+    "category": "communication",
+    "era": "mid-20th",
+    "difficulty": 5,
+    "prerequisites": [
+      "electric-motor",
+      "steel-production",
+      "glass-making"
+    ],
+    "unlocks": [
+      "transistor"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Trichlorosilane feedstock",
+        "purpose": "Electronic-grade silicon precursor",
+        "earthLocations": [
+          "Industrial chlorosilane plants in China, Germany, USA"
+        ],
+        "spaceAlternatives": "Terrestrial chlorosilane distillation chains feeding Siemens reactors; off-world fabs likely import polysilicon nuggets until local chlor-alkali and hydrogen plants close the loop safely",
+        "processingRequired": "Distillation to semiconductor purity"
+      },
+      {
+        "name": "Dopant gases",
+        "purpose": "PH₃, B₂H₆, AsH₃ for implant and CVD",
+        "earthLocations": [
+          "Speciality gas fabs"
+        ],
+        "spaceAlternatives": "Diluted phosphine, diborane, and arsine in cylinders with scrubbed exhaust — treat cylinders like living creatures with valves pointed safe directions",
+        "processingRequired": "Cylinder dilution and abatement scrubbers — arsine is lethal"
+      },
+      {
+        "name": "Quartz crucibles",
+        "purpose": "Non-contaminating melt container short term",
+        "earthLocations": [
+          "Fused quartz manufacturers"
+        ],
+        "spaceAlternatives": "Synthetic fused quartz crucibles baked before first charge; monitor dissolved oxygen trends versus crucible age",
+        "processingRequired": "Bake-out before first charge"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-nist-mml",
+          "title": "NIST — Material Measurement Laboratory",
+          "url": "https://www.nist.gov/mml",
+          "type": "institution",
+          "note": "Semiconductor materials metrology and reference materials"
+        },
+        {
+          "id": "src-wiki-cz",
+          "title": "Wikipedia — Czochralski process",
+          "url": "https://en.wikipedia.org/wiki/Czochralski_process",
+          "type": "wikipedia",
+          "note": "Crystal pulling and defect control references"
+        },
+        {
+          "id": "src-doi-transistor-nature",
+          "title": "Nature (1953) via DOI",
+          "url": "https://doi.org/10.1038/171740a0",
+          "type": "paper",
+          "note": "Early semiconductor device physics in peer-reviewed literature"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "shelter-construction-basic",
+    "name": "Shelter Construction (Basic)",
+    "tagline": "Windbreaks, lean-tos, and simple enclosed spaces that stabilise temperature and protect people, fire, and stores",
+    "category": "construction",
+    "era": "prehistoric",
+    "difficulty": 1,
+    "prerequisites": [
+      "stone-knapping"
+    ],
+    "unlocks": [
+      "road-construction"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Poles and stakes",
+        "purpose": "Primary structure",
+        "earthLocations": [
+          "Forests, riparian corridors, shrublands with straight stems"
+        ],
+        "spaceAlternatives": "Metal or composite framing when industry permits",
+        "processingRequired": "De-bark where insects hide; sharpen stake tips for driving"
+      },
+      {
+        "name": "Thatch vegetation",
+        "purpose": "Water-shedding roof",
+        "earthLocations": [
+          "Water reed (Phragmites) in wetlands",
+          "palm thatch in tropics",
+          "bunch grasses in steppe"
+        ],
+        "spaceAlternatives": "Regolith-bonded panels with sealed membranes",
+        "processingRequired": "Harvest dry if possible; bundle in courses; replace seasonally"
+      },
+      {
+        "name": "Cordage",
+        "purpose": "Joints and guy lines",
+        "earthLocations": [
+          "Local fibre as in rope-and-cordage entry"
+        ],
+        "spaceAlternatives": "UHMWPE or wire rope later",
+        "processingRequired": "Pre-stretch and dry before final tensioning"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-osha",
+          "title": "OSHA — Agency home",
+          "url": "https://www.osha.gov/",
+          "type": "institution",
+          "note": "Fall protection, scaffolding, excavation, and construction safety rules (jurisdiction-specific)"
+        },
+        {
+          "id": "src-wiki-housing",
+          "title": "Wikipedia — Housing",
+          "url": "https://en.wikipedia.org/wiki/Housing",
+          "type": "wikipedia",
+          "note": "Shelter typology and environmental design references"
+        },
+        {
+          "id": "src-cdc-healthy-homes",
+          "title": "CDC — Healthy housing and environmental health portal",
+          "url": "https://www.cdc.gov/nceh/",
+          "type": "institution",
+          "note": "Indoor environmental hazards, ventilation, and community health links"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "smelting-bronze-age",
+    "name": "Smelting (Bronze Age)",
+    "tagline": "Reducing copper and tin ores with carbon to produce castable bronze alloys",
+    "category": "materials",
+    "era": "ancient",
+    "difficulty": 3,
+    "prerequisites": [
+      "charcoal",
+      "ceramics-and-pottery"
+    ],
+    "unlocks": [
+      "copper-wire-and-cable",
+      "high-capacity-electrochemical-batteries",
+      "iron-smelting"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Copper ore (malachite, chalcopyrite after roasting)",
+        "purpose": "Copper source",
+        "earthLocations": [
+          "Cyprus historical fame",
+          "Timna Valley",
+          "Great Lakes native copper region",
+          "Andean deposits"
+        ],
+        "spaceAlternatives": "Metallic asteroids for native metals — different process chain",
+        "processingRequired": "Crushing, roasting sulphides, beneficiation by hand sorting"
+      },
+      {
+        "name": "Tin ore (cassiterite)",
+        "purpose": "Alloying element",
+        "earthLocations": [
+          "Cornwall, UK",
+          "Bohemia",
+          "Malaysia historically",
+          "Central Asian ranges"
+        ],
+        "spaceAlternatives": "Rare in homogeneous form — substitution with arsenic historically (toxic) avoided in modern ethics",
+        "processingRequired": "Washing placer gravels; reduction in furnace"
+      },
+      {
+        "name": "Charcoal",
+        "purpose": "Heat and chemical reductant",
+        "earthLocations": [
+          "Forestry regions near smelting sites"
+        ],
+        "spaceAlternatives": "Electrolytic copper wins before charcoal logistics replicate off-world",
+        "processingRequired": "Sized lumps for consistent bed permeability"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-unesco-ich",
+          "title": "UNESCO — Lists of Intangible Cultural Heritage",
+          "url": "https://ich.unesco.org/en/lists",
+          "type": "institution",
+          "note": "Documentation model for traditional craft and metallurgical heritage"
+        },
+        {
+          "id": "src-wiki-bronze",
+          "title": "Wikipedia — Bronze",
+          "url": "https://en.wikipedia.org/wiki/Bronze",
+          "type": "wikipedia",
+          "note": "Alloys, history, and metallurgical references"
+        },
+        {
+          "id": "src-nist-materials",
+          "title": "NIST — Materials Measurement Science portal",
+          "url": "https://www.nist.gov/mml",
+          "type": "institution",
+          "note": "Materials characterization methods relevant to alloy analysis"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "soap-making",
+    "name": "Soap Making",
+    "tagline": "Turning fat and strong alkali into surfactant that removes pathogens from skin and fabric — hygiene without petrochemical supply chains",
+    "category": "medicine",
+    "era": "ancient",
+    "difficulty": 2,
+    "prerequisites": [
+      "fire",
+      "cooking",
+      "charcoal"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Hardwood ash",
+        "purpose": "Potassium carbonate precursor for lye",
+        "earthLocations": [
+          "Oak, maple, fruitwood hearths"
+        ],
+        "spaceAlternatives": "Imported lye tablets until closed-loop plant ash or electrolytic alkali exists",
+        "processingRequired": "Sift charcoal chunks; leach with measured hot water volumes; filter"
+      },
+      {
+        "name": "Animal or plant fat",
+        "purpose": "Triglyceride feedstock",
+        "earthLocations": [
+          "Tallow from cattle",
+          "Olive oil regions",
+          "Coconut coasts"
+        ],
+        "spaceAlternatives": "Recovered lipids from food waste streams in habitats; synthetic fatty acids only at advanced chemical plants",
+        "processingRequired": "Render low and slow; filter cracklings"
+      },
+      {
+        "name": "Water",
+        "purpose": "Lye solvent and rinse",
+        "earthLocations": [
+          "Soft rainwater preferred for lye"
+        ],
+        "spaceAlternatives": "Recycled greywater never for lye — use potable loop only",
+        "processingRequired": "Boil and cool if biological contamination suspected"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [
+        "Contraindications: known severe contact allergy to specific oils or fragrances used in batch; discontinue if rash or respiratory irritation occurs.",
+        "Overdose risk: ingestion of lye or raw soap causes corrosive burns to mouth, oesophagus, and stomach — medical emergency; keep lye locked away from children.",
+        "Sterility: kitchen soap is not sterile surgical scrub; do not use it as a substitute for sterile field supplies in deep contaminated wounds.",
+        "Professional verification is required before use on a human being. This is especially important for any claim beyond routine hygiene and wound cleaning in non-sterile environments."
+      ],
+      "sources": [
+        {
+          "id": "who-handwash",
+          "title": "WHO — Hand hygiene in health care",
+          "url": "https://www.who.int/teams/integrated-health-services/infection-prevention-control/hand-hygiene",
+          "type": "institution",
+          "note": ""
+        },
+        {
+          "id": "cdc-handwash",
+          "title": "CDC — Handwashing",
+          "url": "https://www.cdc.gov/handwashing/index.html",
+          "type": "institution",
+          "note": ""
+        },
+        {
+          "id": "wiki-soap",
+          "title": "Wikipedia — Soap",
+          "url": "https://en.wikipedia.org/wiki/Soap",
+          "type": "wikipedia",
+          "note": "Chemistry overview"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-12"
+  },
+  {
+    "id": "soil-science-and-composting",
+    "name": "Soil Science and Composting",
+    "tagline": "Building fertile soil from organic waste, air, and patience — the biological engine behind reliable harvests",
+    "category": "agriculture",
+    "era": "prehistoric",
+    "difficulty": 2,
+    "prerequisites": [
+      "fire",
+      "cooking",
+      "rope-and-cordage"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Nitrogen greens",
+        "purpose": "Feeds thermophiles",
+        "earthLocations": [
+          "Kitchen scraps",
+          "Fresh grass",
+          "Herbivore manure"
+        ],
+        "spaceAlternatives": "Inedible biomass from hydroponics trim; human waste only after dedicated safety processing — never raw in food compost",
+        "processingRequired": "Chop small; mix immediately with browns"
+      },
+      {
+        "name": "Carbon browns",
+        "purpose": "Structure and energy reserve",
+        "earthLocations": [
+          "Straw",
+          "Leaves",
+          "Sawdust from non-treated wood"
+        ],
+        "spaceAlternatives": "Shredded packaging cellulose if uncontaminated",
+        "processingRequired": "Screen out plastics; avoid painted wood"
+      },
+      {
+        "name": "Bulk agent",
+        "purpose": "Prevents compaction",
+        "earthLocations": [
+          "Wood chips",
+          "Stalks"
+        ],
+        "spaceAlternatives": "Crushed foamed regolith simulants in research only",
+        "processingRequired": "Size mix to fist test — should crumble not ooze"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "fao-soil",
+          "title": "FAO — Soils portal",
+          "url": "https://www.fao.org/soils-portal/en/",
+          "type": "institution",
+          "note": ""
+        },
+        {
+          "id": "wiki-soil",
+          "title": "Wikipedia — Soil",
+          "url": "https://en.wikipedia.org/wiki/Soil",
+          "type": "wikipedia",
+          "note": ""
+        },
+        {
+          "id": "epa-compost",
+          "title": "U.S. EPA — Composting at home",
+          "url": "https://www.epa.gov/recycle/composting-home",
+          "type": "institution",
+          "note": "Municipal guidance adaptable to field practice"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-12"
+  },
+  {
+    "id": "solar-photovoltaic-power-systems",
+    "name": "Solar Photovoltaic Power Systems",
+    "tagline": "Semiconductor junctions that convert sunlight directly into DC electricity — modular generation without rotating prime movers",
+    "category": "energy",
+    "era": "late-20th",
+    "difficulty": 4,
+    "prerequisites": [
+      "transistor",
+      "glass-making",
+      "copper-wire-and-cable",
+      "electrical-power-grid"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Polysilicon",
+        "purpose": "Wafer feedstock",
+        "earthLocations": [
+          "China, Germany, USA polysilicon plants"
+        ],
+        "spaceAlternatives": "Electronic-grade polysilicon from Siemens-style chlorosilane reduction on Earth; early off-world PV may rely on shipped cells/modules until metallurgical silicon can be upgraded with portable chlorination and distillation skids",
+        "processingRequired": "Directional solidification ingots, wire saw"
+      },
+      {
+        "name": "Silver paste",
+        "purpose": "Front contacts",
+        "earthLocations": [
+          "Precious metals refiners"
+        ],
+        "spaceAlternatives": "Silver screen-print pastes today; migrating to plated copper fingers reduces Ag but needs clean plating lines — budget for either chemistry until copper recipes mature",
+        "processingRequired": "Fire-through contact firing profile"
+      },
+      {
+        "name": "Low-iron glass",
+        "purpose": "High transmission front sheet",
+        "earthLocations": [
+          "Float lines near deserts"
+        ],
+        "spaceAlternatives": "Low-iron tempered glass for transmission; thin-film cadmium telluride or CIGS on flexible substrates where mass or shatter risk dominates spacecraft surfaces",
+        "processingRequired": "Tempering for mechanical load"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-energy-solar-office",
+          "title": "U.S. DOE — Solar Energy Technologies Office",
+          "url": "https://www.energy.gov/eere/solar/solar-energy-technologies-office",
+          "type": "institution",
+          "note": "PV performance, grid integration, and manufacturing R&D"
+        },
+        {
+          "id": "src-wiki-pv",
+          "title": "Wikipedia — Photovoltaic system",
+          "url": "https://en.wikipedia.org/wiki/Photovoltaic_system",
+          "type": "wikipedia",
+          "note": "Array wiring, inverters, and safety disconnect requirements overview"
+        },
+        {
+          "id": "src-nist-pml",
+          "title": "NIST — PML",
+          "url": "https://www.nist.gov/pml",
+          "type": "institution",
+          "note": "Metrology for irradiance sensors and electrical efficiency measurements"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "spoken-language",
+    "name": "Spoken Language",
+    "tagline": "Shared sound patterns that coordinate teaching, planning, and culture faster than gesture alone",
+    "category": "communication",
+    "era": "prehistoric",
+    "difficulty": 1,
+    "prerequisites": [],
+    "unlocks": [
+      "writing-early-systems"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Living speech community",
+        "purpose": "Maintains and negotiates the code",
+        "earthLocations": [
+          "Everywhere humans congregate"
+        ],
+        "spaceAlternatives": "Living communities on Earth; isolated crews rely on scheduled high-bandwidth calls, in-person rotations, and written backups because interplanetary latency removes real-time prosody for months",
+        "processingRequired": "Intergenerational teaching institutions"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-unesco-ich-lang",
+          "title": "UNESCO — Intangible Cultural Heritage lists",
+          "url": "https://ich.unesco.org/en/lists",
+          "type": "institution",
+          "note": "Documentation of living language and oral tradition practices"
+        },
+        {
+          "id": "src-wiki-language",
+          "title": "Wikipedia — Language",
+          "url": "https://en.wikipedia.org/wiki/Language",
+          "type": "wikipedia",
+          "note": "Linguistics overview with extensive references"
+        },
+        {
+          "id": "src-who-comm",
+          "title": "WHO — Health topics portal",
+          "url": "https://www.who.int/health-topics",
+          "type": "institution",
+          "note": "Health communication and community engagement context"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "steam-engine",
+    "name": "Steam Engine",
+    "tagline": "External combustion machine that expands steam against pistons or turbines to produce rotary or reciprocating work",
+    "category": "energy",
+    "era": "industrial",
+    "difficulty": 4,
+    "prerequisites": [
+      "iron-smelting",
+      "pulley",
+      "steel-production",
+      "charcoal"
+    ],
+    "unlocks": [
+      "boiler-feedwater-treatment",
+      "internal-combustion-engine",
+      "steam-locomotive",
+      "steam-turbine-electric-generation"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Boiler plate steel",
+        "purpose": "Pressure containment",
+        "earthLocations": [
+          "Industrial steelworks"
+        ],
+        "spaceAlternatives": "Imported stock until mills exist",
+        "processingRequired": "Riveting/welding to code; nondestructive testing modern"
+      },
+      {
+        "name": "Fuel",
+        "purpose": "Boiler heat",
+        "earthLocations": [
+          "Coal historically dominant",
+          "wood in frontier contexts"
+        ],
+        "spaceAlternatives": "Solar heat for small boilers in vacuum-adjacent demos — niche",
+        "processingRequired": "Stoker sizing, ash removal"
+      },
+      {
+        "name": "Feedwater",
+        "purpose": "Steam supply continuity",
+        "earthLocations": [
+          "River water treated",
+          "well water"
+        ],
+        "spaceAlternatives": "Recycled condensate loops",
+        "processingRequired": "Softening and oxygen scavenging when chemistry available"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-energy-steam",
+          "title": "U.S. Department of Energy — EERE",
+          "url": "https://www.energy.gov/eere/renewable-energy",
+          "type": "institution",
+          "note": "Industrial energy systems and efficiency context"
+        },
+        {
+          "id": "src-wiki-steam-engine",
+          "title": "Wikipedia — Steam engine",
+          "url": "https://en.wikipedia.org/wiki/Steam_engine",
+          "type": "wikipedia",
+          "note": "Thermodynamic cycles and historical development"
+        },
+        {
+          "id": "src-nrc-public",
+          "title": "U.S. NRC — Public document collections FAQ",
+          "url": "https://www.nrc.gov/reading-rm/doc-collections/faq/",
+          "type": "institution",
+          "note": "High-reliability engineering documentation culture (analogous rigour for pressure systems)"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "steam-locomotive",
+    "name": "Steam Locomotive (Railway Engine)",
+    "tagline": "A mobile steam plant on flanged wheels, drawing adhesion traction from steel rails to haul trains at low rolling resistance",
+    "category": "transport",
+    "era": "industrial",
+    "difficulty": 4,
+    "prerequisites": [
+      "steam-engine",
+      "steel-production",
+      "wheel-and-axle",
+      "road-construction"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Boiler-grade steel",
+        "purpose": "Pressure containment",
+        "earthLocations": [
+          "Industrial steel suppliers"
+        ],
+        "spaceAlternatives": "Imported stock",
+        "processingRequired": "Riveting/welding to railway codes"
+      },
+      {
+        "name": "Rail steel",
+        "purpose": "Track structure",
+        "earthLocations": [
+          "Specialised rolling mills"
+        ],
+        "spaceAlternatives": "Welded wear-resistant alloys",
+        "processingRequired": "Heat treatment for head hardness"
+      },
+      {
+        "name": "Coal or oil fuel",
+        "purpose": "Boiler heat",
+        "earthLocations": [
+          "Coalfields globally",
+          "oil fields for oil-fired engines"
+        ],
+        "spaceAlternatives": "Biomass pellets in heritage contexts — chemistry affects ash fouling",
+        "processingRequired": "Sizing for stoker or hand firing"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-wiki-loco",
+          "title": "Wikipedia — Steam locomotive",
+          "url": "https://en.wikipedia.org/wiki/Steam_locomotive",
+          "type": "wikipedia",
+          "note": "Boiler, valve gear, and adhesion references"
+        },
+        {
+          "id": "src-nist-sp811",
+          "title": "NIST SP 811",
+          "url": "https://www.nist.gov/pml/special-publication-811",
+          "type": "standard",
+          "note": "Metrology for pressure and temperature instrumentation"
+        },
+        {
+          "id": "src-osha",
+          "title": "OSHA",
+          "url": "https://www.osha.gov/",
+          "type": "institution",
+          "note": "Boiler house and maintenance safety"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "steam-turbine-electric-generation",
+    "name": "Steam Turbine Electric Generation",
+    "tagline": "High-speed rotary steam expanders driving alternators — the thermal bridge to grid-scale electricity",
+    "category": "energy",
+    "era": "industrial",
+    "difficulty": 4,
+    "prerequisites": [
+      "steam-engine",
+      "steel-production",
+      "boiler-feedwater-treatment"
+    ],
+    "unlocks": [
+      "electrical-power-grid",
+      "nuclear-fission-power-plant"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Rotor forgings",
+        "purpose": "Creep-resistant discs",
+        "earthLocations": [
+          "Japan Steel Works class suppliers",
+          "European forges"
+        ],
+        "spaceAlternatives": "Until heavy forging exists on-site, use complete rotor assemblies from surviving industrial stock or trade with regions that retain mill capacity; smaller turbines may use bolted disc stacks with more conservative steam limits",
+        "processingRequired": "Ultrasonic inspection; rough turn; final balance"
+      },
+      {
+        "name": "Copper or aluminium conductors",
+        "purpose": "Generator windings",
+        "earthLocations": [
+          "Major smelters globally"
+        ],
+        "spaceAlternatives": "Conductor choice trades mass versus loss",
+        "processingRequired": "Vacuum impregnation of insulation"
+      },
+      {
+        "name": "Cooling water",
+        "purpose": "Rejects low-grade heat at condenser",
+        "earthLocations": [
+          "Rivers, seas, cooling towers on land"
+        ],
+        "spaceAlternatives": "Dry cooling adds parasitic fans and hot-climate penalties",
+        "processingRequired": "Biocide and screens for fouling control"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-energy-eere",
+          "title": "U.S. DOE — EERE programs",
+          "url": "https://www.energy.gov/eere/renewable-energy",
+          "type": "institution",
+          "note": "Industrial energy systems context"
+        },
+        {
+          "id": "src-wiki-steam-turbine",
+          "title": "Wikipedia — Steam turbine",
+          "url": "https://en.wikipedia.org/wiki/Steam_turbine",
+          "type": "wikipedia",
+          "note": "Thermodynamics and staging references"
+        },
+        {
+          "id": "src-nist-sp811",
+          "title": "NIST SP 811",
+          "url": "https://www.nist.gov/pml/special-publication-811",
+          "type": "standard",
+          "note": "SI units for enthalpy, power, and efficiency reporting"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "steel-production",
+    "name": "Steel Production (Carburised Bloom to Crucible and Bessemer Lineages)",
+    "tagline": "Controlling carbon in iron to balance hardness and toughness — the material behind machines",
+    "category": "materials",
+    "era": "medieval",
+    "difficulty": 4,
+    "prerequisites": [
+      "iron-smelting",
+      "charcoal"
+    ],
+    "unlocks": [
+      "automobile",
+      "bicycle",
+      "boiler-feedwater-treatment",
+      "copper-wire-and-cable",
+      "electric-motor",
+      "electrical-power-grid",
+      "electrical-telegraph",
+      "electrical-transformer",
+      "fixed-wing-aircraft",
+      "high-capacity-electrochemical-batteries",
+      "high-voltage-ac-transmission",
+      "internal-combustion-engine",
+      "nuclear-fission-power-plant",
+      "printing-press-movable-type",
+      "semiconductor-crystal-growing-doping",
+      "steam-engine",
+      "steam-locomotive",
+      "steam-turbine-electric-generation"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Wrought iron or bloom stock",
+        "purpose": "Low-carbon starting matrix for carburisation or puddled iron for refining",
+        "earthLocations": [
+          "Any bloomery tradition output"
+        ],
+        "spaceAlternatives": "Electrolytic iron powder sintered — advanced",
+        "processingRequired": "Forge consolidate before carburising to reduce slag stringers"
+      },
+      {
+        "name": "Charcoal powder",
+        "purpose": "Carbon source for pack carburising",
+        "earthLocations": [
+          "Charcoal production sites"
+        ],
+        "spaceAlternatives": "Graphite powder if available",
+        "processingRequired": "Sift fines; keep dry"
+      },
+      {
+        "name": "Alloying elements (optional)",
+        "purpose": "Improves hardenability, corrosion resistance (later stainless lineages)",
+        "earthLocations": [
+          "Nickel lateritic ores",
+          "chromite",
+          "manganese ores"
+        ],
+        "spaceAlternatives": "Imported pure elements in advanced industry",
+        "processingRequired": "Metallurgical knowledge to avoid embrittling phases"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-energy",
+          "title": "U.S. Department of Energy — Energy efficiency and industrial technology",
+          "url": "https://www.energy.gov/eere/renewable-energy",
+          "type": "institution",
+          "note": "Industrial energy use context for steelmaking and decarbonisation pathways"
+        },
+        {
+          "id": "src-wiki-steel",
+          "title": "Wikipedia — Steel",
+          "url": "https://en.wikipedia.org/wiki/Steel",
+          "type": "wikipedia",
+          "note": "Processes (BOF, EAF), microstructure introduction, citations"
+        },
+        {
+          "id": "src-nist-pml",
+          "title": "NIST — Physical Measurement Laboratory",
+          "url": "https://www.nist.gov/pml",
+          "type": "institution",
+          "note": "Metrology for temperature and composition measurements in materials processing"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "stone-knapping",
+    "name": "Stone Knapping",
+    "tagline": "Fracturing rock along predictable cones to produce sharp edges and durable tools",
+    "category": "tools",
+    "era": "prehistoric",
+    "difficulty": 1,
+    "prerequisites": [],
+    "unlocks": [
+      "shelter-construction-basic",
+      "lever-system",
+      "basic-hand-tools"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Knappable cryptocrystalline silica",
+        "purpose": "Predictable fracture and sharp edges",
+        "earthLocations": [
+          "Chalk flint beds in Western Europe",
+          "Limestone-hosted chert in North America",
+          "Obsidian flows in Anatolia, Armenia, East Africa, Americas",
+          "Australian silcrete"
+        ],
+        "spaceAlternatives": "Manufactured glass from regolith silica could be knapped similarly once produced — extremely hazardous without training",
+        "processingRequired": "Heat treatment for some cherts (controlled heating and slow cooling) improves flakeability"
+      },
+      {
+        "name": "Abrasive for platform preparation",
+        "purpose": "Strengthens platform edge to prevent crushing on impact",
+        "earthLocations": [
+          "Sandstone cobbles globally",
+          "Loose quartz-rich grit"
+        ],
+        "spaceAlternatives": "Crushed regolith sieved to coarse grit",
+        "processingRequired": "None beyond washing grit if muddy"
+      },
+      {
+        "name": "Organic padding",
+        "purpose": "Protects thighs and palms during pressure flaking",
+        "earthLocations": [
+          "Hide, bark, woven fibre from local plants"
+        ],
+        "spaceAlternatives": "Woven polymer textiles or rubber sheet",
+        "processingRequired": "Cut to size; multiple layers for blood containment if flakes pierce"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-humanorigins-behaviour",
+          "title": "Smithsonian Human Origins — Behaviour evidence",
+          "url": "https://humanorigins.si.edu/evidence/behavior",
+          "type": "institution",
+          "note": "Behavioural archaeology including tool use"
+        },
+        {
+          "id": "src-wiki-lithic",
+          "title": "Wikipedia — Lithic reduction",
+          "url": "https://en.wikipedia.org/wiki/Lithic_reduction",
+          "type": "wikipedia",
+          "note": "Core concepts and terminology for knapping; follow references for lithic analysis"
+        },
+        {
+          "id": "src-nist-si",
+          "title": "NIST — SI Redefinition (metrology context)",
+          "url": "https://www.nist.gov/si-redefinition",
+          "type": "standard",
+          "note": "Precision measurement standards relevant to experimental archaeology instrumentation"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "telephone-exchange-system",
+    "name": "Telephone Exchange System",
+    "tagline": "Switched analogue speech networks — circuit establishment, ringing, billing, and human-scale switching fabrics",
+    "category": "communication",
+    "era": "industrial",
+    "difficulty": 4,
+    "prerequisites": [
+      "electrical-telegraph",
+      "copper-wire-and-cable",
+      "electrical-power-grid"
+    ],
+    "unlocks": [
+      "internet-protocols-and-web"
+    ],
+    "rawMaterials": [
+      {
+        "name": "PE-insulated copper pairs",
+        "purpose": "Outside plant cable",
+        "earthLocations": [
+          "Cable factories globally"
+        ],
+        "spaceAlternatives": "PE-insulated twisted copper pairs from cable plants; ship pre-made cable until extruders exist off-world — then oversize conductors slightly for colder nights and UV",
+        "processingRequired": "Colour code pairs; fill gel against moisture"
+      },
+      {
+        "name": "Central office steel",
+        "purpose": "Racks and frames",
+        "earthLocations": [
+          "Rolling mills"
+        ],
+        "spaceAlternatives": "Galvanised steel frames from rolling mills; aluminium racks where weight matters, with bimetallic awareness at copper joints",
+        "processingRequired": "Bonding and grounding"
+      },
+      {
+        "name": "Rare metals in relays",
+        "purpose": "Wiping contacts",
+        "earthLocations": [
+          "Silver cadmium oxide contacts"
+        ],
+        "spaceAlternatives": "Silver-cadmium-oxide relay contacts historically; solid-state relays and digital line cards where semiconductor supply is healthy",
+        "processingRequired": "Reflow assembly"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-itu-t-tel",
+          "title": "ITU-T — Publications",
+          "url": "https://www.itu.int/en/ITU-T/publications/Pages/default.aspx",
+          "type": "institution",
+          "note": "PSTN signalling and digital telephony standards"
+        },
+        {
+          "id": "src-wiki-telephone",
+          "title": "Wikipedia — Telephone",
+          "url": "https://en.wikipedia.org/wiki/Telephone",
+          "type": "wikipedia",
+          "note": "Switching, transmission, and history"
+        },
+        {
+          "id": "src-rfc-sip",
+          "title": "IETF RFC Editor — SIP (example modern telephony signalling)",
+          "url": "https://www.rfc-editor.org/info/rfc3261",
+          "type": "standard",
+          "note": "Contemporary packet voice; compare to legacy circuit switching"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "automobile",
+    "name": "The Automobile (Car)",
+    "tagline": "A self-propelled wheeled vehicle that converts liquid fuel into personal mobility on road networks",
+    "category": "transport",
+    "era": "industrial",
+    "difficulty": 4,
+    "prerequisites": [
+      "internal-combustion-engine",
+      "steel-production",
+      "road-construction",
+      "cart-and-wagon"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Steel sheet and bar",
+        "purpose": "Body, engine internals, suspension",
+        "earthLocations": [
+          "Integrated steelworks near iron ore and coal historically",
+          "global minimills modern"
+        ],
+        "spaceAlternatives": "Meteoritic iron is irrelevant at scale — electrolytic iron and alloying",
+        "processingRequired": "Continuous casting, hot rolling, stamping, heat treatment"
+      },
+      {
+        "name": "Aluminium",
+        "purpose": "Lightweight powertrain and body panels in many designs",
+        "earthLocations": [
+          "Bauxite belts (Guinea, Australia, Brazil)"
+        ],
+        "spaceAlternatives": "Lunar anorthite routes to aluminium are studied but heavy energy",
+        "processingRequired": "Hall-Héroult electrolysis, rolling, age hardening"
+      },
+      {
+        "name": "Hydrocarbon fuels and rubber",
+        "purpose": "Energy storage and compliant tyres/seals",
+        "earthLocations": [
+          "Petroleum provinces globally",
+          "natural rubber plantations",
+          "synthetic rubber plants"
+        ],
+        "spaceAlternatives": "Electrification or hydrogen carriers change subsystem designs",
+        "processingRequired": "Refining; polymerisation for synthetic elastomers"
+      },
+      {
+        "name": "Copper",
+        "purpose": "Windings and harness conductors",
+        "earthLocations": [
+          "Chilean porphyry deposits",
+          "African copperbelt"
+        ],
+        "spaceAlternatives": "Aluminium conductors for some high-current paths with larger gauge",
+        "processingRequired": "Electrorefining to conductivity grades"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-wiki-auto",
+          "title": "Wikipedia — Automobile",
+          "url": "https://en.wikipedia.org/wiki/Automobile",
+          "type": "wikipedia",
+          "note": "Systems overview; pair with national vehicle safety agency materials for your jurisdiction"
+        },
+        {
+          "id": "src-epa-transport",
+          "title": "U.S. EPA — Transportation and climate change portal",
+          "url": "https://www.epa.gov/transportation-air-pollution-and-climate-change",
+          "type": "institution",
+          "note": "Emissions and fuels context"
+        },
+        {
+          "id": "src-energy",
+          "title": "U.S. Department of Energy",
+          "url": "https://www.energy.gov/",
+          "type": "institution",
+          "note": "Vehicle fuels, efficiency, and research programs"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "bicycle",
+    "name": "The Bicycle",
+    "tagline": "Human-powered rotary drive that converts leg endurance into efficient personal transport on prepared surfaces",
+    "category": "transport",
+    "era": "industrial",
+    "difficulty": 3,
+    "prerequisites": [
+      "wheel-and-axle",
+      "basic-hand-tools",
+      "steel-production"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Steel tubing",
+        "purpose": "Light strong frame",
+        "earthLocations": [
+          "Industrial mill towns globally"
+        ],
+        "spaceAlternatives": "Aluminium from electrolysis once power exists",
+        "processingRequired": "Butted drawing, mitering, welding or brazing"
+      },
+      {
+        "name": "Rubber (natural or synthetic)",
+        "purpose": "Tyres and grips",
+        "earthLocations": [
+          "Southeast Asian plantations historically",
+          "petrochemical synthetics modern"
+        ],
+        "spaceAlternatives": "Silicone or polyurethane variants in advanced labs",
+        "processingRequired": "Vulcanisation for durability"
+      },
+      {
+        "name": "Lubricants",
+        "purpose": "Chain and bearing life",
+        "earthLocations": [
+          "Petroleum oils",
+          "plant oils short-term"
+        ],
+        "spaceAlternatives": "PFPE greases for vacuum-adjacent weird environments",
+        "processingRequired": "Clean before relube — solvent risks to seals"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-cdc-active",
+          "title": "CDC — Physical activity basics",
+          "url": "https://www.cdc.gov/physical-activity-basics/about/index.html",
+          "type": "institution",
+          "note": "Health framing for human-powered transport"
+        },
+        {
+          "id": "src-wiki-bicycle",
+          "title": "Wikipedia — Bicycle",
+          "url": "https://en.wikipedia.org/wiki/Bicycle",
+          "type": "wikipedia",
+          "note": "Mechanics, history, and safety culture references"
+        },
+        {
+          "id": "src-osha",
+          "title": "OSHA",
+          "url": "https://www.osha.gov/",
+          "type": "institution",
+          "note": "Workshop safety for fabrication and repair of cycle components"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "lever-system",
+    "name": "The Lever (as a System)",
+    "tagline": "A rigid bar, pivot, load, and effort — mechanical advantage for lifting, holding, and precise force application",
+    "category": "science",
+    "era": "prehistoric",
+    "difficulty": 1,
+    "prerequisites": [
+      "stone-knapping"
+    ],
+    "unlocks": [
+      "basic-hand-tools"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Straight-grained hardwood",
+        "purpose": "High bending strength beam stock",
+        "earthLocations": [
+          "Oak, ash, hickory in temperate zones",
+          "ironwood in tropics"
+        ],
+        "spaceAlternatives": "Aluminium extrusion when available",
+        "processingRequired": "Season wood; split rather than saw when possible for long fibres"
+      },
+      {
+        "name": "Hard stone fulcrum",
+        "purpose": "Resists crushing at pivot",
+        "earthLocations": [
+          "Granite corners, dense basalt"
+        ],
+        "spaceAlternatives": "Metal blocks",
+        "processingRequired": "Dress a flat seat to reduce rocking"
+      },
+      {
+        "name": "Lubricants",
+        "purpose": "Reduce pivot friction",
+        "earthLocations": [
+          "Animal fat",
+          "plant oils"
+        ],
+        "spaceAlternatives": "Synthetic greases",
+        "processingRequired": "Clarify by heating and settling if gritty"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-nist-pml-lever",
+          "title": "NIST — PML",
+          "url": "https://www.nist.gov/pml",
+          "type": "institution",
+          "note": "Force metrology for lever and machine experiments"
+        },
+        {
+          "id": "src-wiki-lever",
+          "title": "Wikipedia — Lever",
+          "url": "https://en.wikipedia.org/wiki/Lever",
+          "type": "wikipedia",
+          "note": "Class I–III levers, torque, and equilibrium"
+        },
+        {
+          "id": "src-osha-heat",
+          "title": "OSHA — Heat",
+          "url": "https://www.osha.gov/heat",
+          "type": "institution",
+          "note": "Industrial hygiene when lifting outdoors in heat (field archaeology parallels)"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "pulley",
+    "name": "The Pulley",
+    "tagline": "A grooved wheel redirecting rope tension to lift, pull, and build mechanical advantage systems",
+    "category": "tools",
+    "era": "ancient",
+    "difficulty": 2,
+    "prerequisites": [
+      "rope-and-cordage",
+      "wheel-and-axle"
+    ],
+    "unlocks": [
+      "steam-engine"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Rope",
+        "purpose": "Flexible tensile member",
+        "earthLocations": [
+          "Hemp, manila historically",
+          "nylon/polyester modern"
+        ],
+        "spaceAlternatives": "UHMWPE cable",
+        "processingRequired": "Splice eyes with full strength methods — knots derate"
+      },
+      {
+        "name": "Hardwood or metal for sheave",
+        "purpose": "Wear-resistant groove",
+        "earthLocations": [
+          "Lignum vitae, bronze foundries"
+        ],
+        "spaceAlternatives": "Ceramic-coated metals",
+        "processingRequired": "Turn groove concentric to bore"
+      },
+      {
+        "name": "Lubricant",
+        "purpose": "Journal friction reduction",
+        "earthLocations": [
+          "Tallow",
+          "graphite",
+          "modern greases"
+        ],
+        "spaceAlternatives": "Dry PTFE bushings",
+        "processingRequired": "Match lubricant to load and temperature"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-nist-pml-pulley",
+          "title": "NIST — Physical Measurement Laboratory",
+          "url": "https://www.nist.gov/pml",
+          "type": "institution",
+          "note": "Force and mass standards context for rigging calculations"
+        },
+        {
+          "id": "src-wiki-pulley",
+          "title": "Wikipedia — Pulley",
+          "url": "https://en.wikipedia.org/wiki/Pulley",
+          "type": "wikipedia",
+          "note": "Mechanical advantage and block-and-tackle theory"
+        },
+        {
+          "id": "src-osha",
+          "title": "OSHA — Agency home",
+          "url": "https://www.osha.gov/",
+          "type": "institution",
+          "note": "Crane, hoist, and rigging safety regulations (U.S.; compare local codes)"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "wheel-and-axle",
+    "name": "The Wheel and Axle",
+    "tagline": "Rotary motion that reduces effective friction for moving loads across land",
+    "category": "transport",
+    "era": "ancient",
+    "difficulty": 2,
+    "prerequisites": [
+      "basic-hand-tools"
+    ],
+    "unlocks": [
+      "bicycle",
+      "cart-and-wagon",
+      "pulley",
+      "steam-locomotive"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Hardwood lumber",
+        "purpose": "Rim, hub, spokes in wood-wheel eras",
+        "earthLocations": [
+          "Oak, ash, teak depending on region"
+        ],
+        "spaceAlternatives": "Aluminium or composite rims when industry permits",
+        "processingRequired": "Seasoned wood, split billet stock for straight grain"
+      },
+      {
+        "name": "Iron tyre bar",
+        "purpose": "Hoop reinforcement and wear surface",
+        "earthLocations": [
+          "Bloomery iron rolled later",
+          "wrought bar stock"
+        ],
+        "spaceAlternatives": "Steel strip",
+        "processingRequired": "Forge weld ring; heat shrink onto rim"
+      },
+      {
+        "name": "Lubricant",
+        "purpose": "Reduces journal wear",
+        "earthLocations": [
+          "Tallow",
+          "pine pitch blends"
+        ],
+        "spaceAlternatives": "Synthetic grease",
+        "processingRequired": "Clarify to remove abrasive grit"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-nasa-science",
+          "title": "NASA Science — Solar system exploration portal",
+          "url": "https://science.nasa.gov/solar-system/",
+          "type": "institution",
+          "note": "NASA public science communication; rotational dynamics and mobility are central to planetary robotics"
+        },
+        {
+          "id": "src-wiki-wheel",
+          "title": "Wikipedia — Wheel",
+          "url": "https://en.wikipedia.org/wiki/Wheel",
+          "type": "wikipedia",
+          "note": "Mechanical advantage, history, and citations"
+        },
+        {
+          "id": "src-nist-si",
+          "title": "NIST — SI Redefinition",
+          "url": "https://www.nist.gov/si-redefinition",
+          "type": "standard",
+          "note": "Metrology for torque and force calibration in mechanical teaching labs"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "transistor",
+    "name": "Transistor (Bipolar and Field-Effect)",
+    "tagline": "Solid-state charge control in semiconductors — amplification and logic without heated cathodes",
+    "category": "communication",
+    "era": "mid-20th",
+    "difficulty": 5,
+    "prerequisites": [
+      "vacuum-tube-electronics",
+      "semiconductor-crystal-growing-doping"
+    ],
+    "unlocks": [
+      "communication-satellites",
+      "internet-protocols-and-web",
+      "optical-fiber-communications",
+      "solar-photovoltaic-power-systems"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Silicon wafers",
+        "purpose": "Substrate",
+        "earthLocations": [
+          "Shin-Etsu, SUMCO class suppliers"
+        ],
+        "spaceAlternatives": "Czochralski silicon wafers from established suppliers; early off-world electronics imports packaged discretes until local crystal pullers and clean chemistry justify wafer fabs",
+        "processingRequired": "Epitaxy, polish, clean"
+      },
+      {
+        "name": "Dopant species",
+        "purpose": "N and P regions",
+        "earthLocations": [
+          "Ion implantation gases"
+        ],
+        "spaceAlternatives": "Arsine, phosphine, and diborane diluted for implant sources — exhaust abatement is non-negotiable",
+        "processingRequired": "RTA anneal activation"
+      },
+      {
+        "name": "Photoresists and acids",
+        "purpose": "Pattern transfer",
+        "earthLocations": [
+          "Electronic chemical majors"
+        ],
+        "spaceAlternatives": "Electronic-grade photoresists, developers, and HF-containing wet benches — neutralise wastes deliberately, not down the drain",
+        "processingRequired": "Controlled waste neutralisation"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-doi-transistor",
+          "title": "Nature (1953) — semiconductor junction devices (DOI)",
+          "url": "https://doi.org/10.1038/171740a0",
+          "type": "paper",
+          "note": "Peer-reviewed primary literature anchor for solid-state amplification history"
+        },
+        {
+          "id": "src-wiki-transistor",
+          "title": "Wikipedia — Transistor",
+          "url": "https://en.wikipedia.org/wiki/Transistor",
+          "type": "wikipedia",
+          "note": "BJT/MOSFET overview with citations"
+        },
+        {
+          "id": "src-ieee-standards",
+          "title": "IEEE Standards Association",
+          "url": "https://standards.ieee.org/",
+          "type": "standard",
+          "note": "Solid-state devices and integrated circuit standards"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "vacuum-tube-electronics",
+    "name": "Vacuum Tube Electronics",
+    "tagline": "Thermionic emission in evacuated envelopes — amplification and switching before solid-state junctions dominated",
+    "category": "communication",
+    "era": "early-20th",
+    "difficulty": 4,
+    "prerequisites": [
+      "electric-motor",
+      "glass-making",
+      "copper-wire-and-cable"
+    ],
+    "unlocks": [
+      "radio-broadcast-and-receiver",
+      "transistor"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Glass tubing and press",
+        "purpose": "Envelope forming",
+        "earthLocations": [
+          "Glassworks with lathe seal skills"
+        ],
+        "spaceAlternatives": "Borosilicate glass tubing from lampworking supply; metal-ceramic packages for rugged military tubes",
+        "processingRequired": "Anneal to relieve stress"
+      },
+      {
+        "name": "Nickel and molybdenum",
+        "purpose": "Electrodes and grids",
+        "earthLocations": [
+          "Sulphide ore refining"
+        ],
+        "spaceAlternatives": "Nickel sleeves and molybdenum grid wire from refined sulphide ores; hydrogen-fired cleanliness before assembly",
+        "processingRequired": "Hydrogen firing for cleanliness"
+      },
+      {
+        "name": "Pump oils and mercury historically",
+        "purpose": "Evacuation",
+        "earthLocations": [
+          "Vacuum industry suppliers"
+        ],
+        "spaceAlternatives": "Dry roughing pumps plus high-vacuum pumps; avoid mercury where environmental rules forbid it — use turbomolecular stacks when power allows",
+        "processingRequired": "Trap hydrocarbon backstreaming"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-nist-sp811-tube",
+          "title": "NIST SP 811",
+          "url": "https://www.nist.gov/pml/special-publication-811",
+          "type": "standard",
+          "note": "Electrical units for vacuum-tube circuit analysis teaching"
+        },
+        {
+          "id": "src-wiki-vacuum-tube",
+          "title": "Wikipedia — Vacuum tube",
+          "url": "https://en.wikipedia.org/wiki/Vacuum_tube",
+          "type": "wikipedia",
+          "note": "Thermionic emission, triodes, and applications"
+        },
+        {
+          "id": "src-doi-transistor-nature",
+          "title": "Nature (1953) — Physical realization of amplification via DOI",
+          "url": "https://doi.org/10.1038/171740a0",
+          "type": "paper",
+          "note": "Historic peer-reviewed letter on semiconductor junction devices; contextualises tube-to-solid-state transition"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "writing-early-systems",
+    "name": "Writing (Early Systems)",
+    "tagline": "Visible marks that store language across time — from tokens to cuneiform and hieroglyphs",
+    "category": "communication",
+    "era": "ancient",
+    "difficulty": 2,
+    "prerequisites": [
+      "spoken-language",
+      "ceramics-and-pottery"
+    ],
+    "unlocks": [
+      "paper-and-ink-media"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Clay and temper",
+        "purpose": "Tablet medium",
+        "earthLocations": [
+          "Mesopotamian alluvium",
+          "Nile mud"
+        ],
+        "spaceAlternatives": "Clay and reeds along alluvial rivers; wax tablets for drafts in Mediterranean climates; slate pencils in schools where wood pulp is scarce",
+        "processingRequired": "Levigate; wedge while leather-hard; fire optional"
+      },
+      {
+        "name": "Carbon black and gum",
+        "purpose": "Ink precursors on papyrus",
+        "earthLocations": [
+          "Lampblack production",
+          "acacia gum"
+        ],
+        "spaceAlternatives": "Soot-based carbon ink from lampblack; iron-gall ink where tannin and vitriol exist — both need recipes filed with scribes",
+        "processingRequired": "Mulling into binder"
+      },
+      {
+        "name": "Papyrus or parchment",
+        "purpose": "Flexible scrolls",
+        "earthLocations": [
+          "Nile delta papyrus",
+          "sheep economies for parchment"
+        ],
+        "spaceAlternatives": "Stylus copper or bone for clay; reed pens for ink; brushes where silk or paper traditions dominate",
+        "processingRequired": "Layering, pressing, polishing"
+      }
+    ],
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "src-unesco-comm",
+          "title": "UNESCO — Communication and information",
+          "url": "https://www.unesco.org/en/communication-information",
+          "type": "institution",
+          "note": "Memory of the World and documentary heritage programmes"
+        },
+        {
+          "id": "src-wiki-writing",
+          "title": "Wikipedia — Writing",
+          "url": "https://en.wikipedia.org/wiki/Writing",
+          "type": "wikipedia",
+          "note": "Origins, scripts, and archaeology references"
+        },
+        {
+          "id": "src-loc-preservation",
+          "title": "Library of Congress — Preservation Directorate",
+          "url": "https://www.loc.gov/preservation/",
+          "type": "institution",
+          "note": "Manuscript care, inks, and conservation science"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-10"
+  }
+]

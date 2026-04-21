@@ -11,7 +11,7 @@ import {
 import "@xyflow/react/dist/style.css";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import type { Technology } from "../../types/technology";
+import type { TechnologySummary } from "../../types/technology";
 import { TechNode, type TechNodeData } from "./TechNode";
 import { NodeTooltip } from "./NodeTooltip";
 import { TreeControls } from "./TreeControls";
@@ -23,7 +23,7 @@ import { useMediaQuery } from "../../hooks/useMediaQuery";
 const nodeTypes = { tech: TechNode };
 
 interface Props {
-  technologies: Technology[];
+  technologies: TechnologySummary[];
   positions: { id: string; x: number; y: number }[];
 }
 
@@ -42,7 +42,7 @@ export function TechTree({ technologies, positions }: Props) {
   > | null>(null);
   const [hoverId, setHoverId] = useState<string | null>(null);
   const [hoverPt, setHoverPt] = useState<{ x: number; y: number } | null>(null);
-  const [preview, setPreview] = useState<Technology | null>(null);
+  const [preview, setPreview] = useState<TechnologySummary | null>(null);
 
   const posMap = useMemo(() => {
     const m = new Map<string, { x: number; y: number }>();
@@ -56,7 +56,7 @@ export function TechTree({ technologies, positions }: Props) {
   );
 
   const techById = useMemo(() => {
-    const m = new Map<string, Technology>();
+    const m = new Map<string, TechnologySummary>();
     for (const t of technologies) m.set(t.id, t);
     return m;
   }, [technologies]);
@@ -295,7 +295,7 @@ export function TechTree({ technologies, positions }: Props) {
             </div>
             <p className="mt-2 text-sm text-codex-secondary">{preview.tagline}</p>
             <p className="mt-3 line-clamp-6 text-xs leading-relaxed text-codex-muted">
-              {preview.overview}
+              Full documentary details load when this entry is opened.
             </p>
             <button
               type="button"

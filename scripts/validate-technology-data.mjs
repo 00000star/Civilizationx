@@ -184,7 +184,36 @@ const expectedIds = new Set(index.nodes.map((n) => n.id));
 
 const files = readdirSync(techDir).filter((f) => f.endsWith(".json"));
 const loadedIds = new Set();
+const loadedTechnologies = new Map();
 const errors = [];
+const allowedCategories = new Set([
+  "survival",
+  "food",
+  "materials",
+  "energy",
+  "tools",
+  "transport",
+  "construction",
+  "medicine",
+  "communication",
+  "computing",
+  "agriculture",
+  "warfare",
+  "science",
+]);
+const allowedEras = new Set([
+  "prehistoric",
+  "ancient",
+  "medieval",
+  "early-modern",
+  "industrial",
+  "early-20th",
+  "mid-20th",
+  "late-20th",
+  "21st-century",
+]);
+const requiredMedicalWarning =
+  "Professional verification is required before use on a human being.";
 
 for (const f of files) {
   const raw = readFileSync(join(techDir, f), "utf8");
@@ -204,6 +233,15 @@ for (const f of files) {
     errors.push(`${f}: filename must match id (${data.id}.json)`);
   }
   loadedIds.add(data.id);
+  loadedTechnologies.set(data.id, data);
+
+  if (!allowedCategories.has(data.category)) {
+    errors.push(`${f}: category "${data.category}" is not allowed`);
+  }
+  if (!allowedEras.has(data.era)) {
+    errors.push(`${f}: era "${data.era}" is not allowed`);
+  }
+
   for (const p of data.prerequisites || []) {
     if (!expectedIds.has(p)) {
       errors.push(`${f}: prerequisite "${p}" not listed in index.json`);
@@ -214,11 +252,76 @@ for (const f of files) {
       errors.push(`${f}: unlock "${u}" not listed in index.json`);
     }
   }
+
+  if ((data.verification?.sources?.length ?? 0) < 3) {
+    errors.push(`${f}: verification.sources must contain at least three sources`);
+  }
+
+  if (data.verification?.status === "expert-verified") {
+    if (!data.verification.reviewedBy) {
+      errors.push(`${f}: expert-verified entries require reviewedBy`);
+    }
+    if (!data.verification.reviewDate) {
+      errors.push(`${f}: expert-verified entries require reviewDate`);
+    }
+  }
+
+  for (const material of data.rawMaterials || []) {
+    if (
+      typeof material.spaceAlternatives !== "string" ||
+      material.spaceAlternatives.trim().length < 10
+    ) {
+      errors.push(
+        `${f}: raw material "${material.name}" needs a substantive spaceAlternatives value`
+      );
+    }
+  }
+
+  if (data.category === "medicine") {
+    const warnings = data.verification?.warnings ?? [];
+    const warningText = warnings.join(" ");
+    for (const keyword of [
+      "Contraindications",
+      "Overdose",
+      "Sterility",
+    ]) {
+      if (!warningText.toLowerCase().includes(keyword.toLowerCase())) {
+        errors.push(`${f}: medicine entries must warn about ${keyword}`);
+      }
+    }
+    if (!warningText.includes(requiredMedicalWarning)) {
+      errors.push(
+        `${f}: medicine entries must include the required professional verification warning`
+      );
+    }
+  }
 }
 
 for (const id of expectedIds) {
   if (!loadedIds.has(id)) {
     errors.push(`Missing technology file for index id: ${id}`);
+  }
+}
+
+for (const [id, data] of loadedTechnologies) {
+  for (const prerequisiteId of data.prerequisites || []) {
+    const prerequisite = loadedTechnologies.get(prerequisiteId);
+    if (!prerequisite) continue;
+    if (!(prerequisite.unlocks || []).includes(id)) {
+      errors.push(
+        `${data.id}.json: prerequisite "${prerequisiteId}" must list "${id}" in unlocks`
+      );
+    }
+  }
+
+  for (const unlockId of data.unlocks || []) {
+    const unlock = loadedTechnologies.get(unlockId);
+    if (!unlock) continue;
+    if (!(unlock.prerequisites || []).includes(id)) {
+      errors.push(
+        `${data.id}.json: unlock "${unlockId}" must list "${id}" in prerequisites`
+      );
+    }
   }
 }
 

@@ -10,8 +10,11 @@
     "stone-knapping"
   ],
   "unlocks": [
-    "wheel-and-axle",
-    "navigation-celestial"
+    "bicycle",
+    "internal-combustion-engine",
+    "navigation-celestial",
+    "printing-press-movable-type",
+    "wheel-and-axle"
   ],
   "problem": "Finger pressure cannot split a log, mortise a joint, or cut plate steel. Humans need hardened working edges and mass delivery systems — hammers for impulse, chisels for controlled splitting along weak planes, saws for kerf removal through abrasion and chip clearance. Without this triad, carpentry, joinery, and rough metal forming remain painfully slow.\n\nThe design problem is not only sharpness but durability: edges chip, handles split, heat ruins temper. Each tool is a system: head mass, handle compliance, grip geometry, and maintenance ritual (peening handles, filing teeth, jointing saw plates).\n\nThese tools are also safety-critical: glancing blows, tooth kickback, and flying chips define workshop epidemiology. Technique is inseparable from hardware.",
   "overview": "A hammer stores kinetic energy in a moving head and transfers it through a small contact patch. Hard faces elastically drive nails; soft faces drive chisels without marring steel. Mass and handle length set impact velocity trade space — heavy heads accelerate slowly but deliver momentum.\n\nChisels are wedges with controlled bevel angles: steep bevels for mortising tough wood; shallow bevels for paring across grain. Metal chisels add heat treatment — hard martensitic edge, softer tough back.\n\nSaws are rows of cutting teeth with rake and set: set widens kerf so the plate does not bind; rake and gullet shape control chip formation in rip versus crosscut profiles. Sharpening is jointing (uniform height), shaping (filing angles), and setting (bending alternately).\n\nBronze and iron ages swap materials but not functions: the biomechanics of swing, stance, and sightlines remain. Machine tools later automate these motions, but hand tools remain repair instruments when power fails.",
