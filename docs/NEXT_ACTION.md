@@ -3,38 +3,34 @@
 Current active task:
 
 ```text
-CIVX-SCHEMA-001: Add entry maturity levels
+CIVX-ATLAS-001: Normalize raw materials for Atlas search
 ```
 
 ## Goal
 
-Add maturity tracking separately from verification.
+Normalize raw materials so Atlas can group and search materials consistently.
 
-Verification answers: has an expert reviewed this?
+Current Atlas aggregates by free-text material names. That works for 56 entries, but will not scale as the project grows.
 
-Maturity answers: how complete is the entry as a piece of documentation?
+## Proposed Outcome
 
-## Proposed Maturity States
-
-- `stub`
-- `draft`
-- `researched`
-- `review-needed`
-- `field-guide-ready`
+- Add a normalized material key or derive one consistently.
+- Reduce duplicate material names.
+- Keep Earth locations and space alternatives visible.
+- Prepare for a future material catalogue.
 
 ## Implementation Shape
 
-1. Add `EntryMaturity` type.
-2. Add optional or required `maturity` field to technology data.
-3. Update validator to enforce allowed values.
-4. Update summary generator to include maturity.
-5. Show maturity on detail pages, tree tooltips, and status dashboard.
-6. Backfill current entries conservatively, probably `draft` or `researched`.
-7. Run validation, lint, and build.
-8. Update `/home/starking/.pi/civilizationx-agent-board.json`.
+1. Inspect `src/utils/atlasAggregator.ts`.
+2. Add deterministic material key normalization.
+3. Add aliases for obvious duplicates if needed.
+4. Show normalized grouping in Atlas.
+5. Add status metric for material count.
+6. Run validation, lint, and build.
+7. Update `/home/starking/.pi/civilizationx-agent-board.json`.
 
-## Important Caution
+## Just Completed
 
-Do not confuse maturity with verification.
+`CIVX-SCHEMA-001` is complete.
 
-An entry can be well-structured but still unverified.
+Maturity is now separate from verification and visible in detail pages, tree tooltips, summaries, and status metrics.

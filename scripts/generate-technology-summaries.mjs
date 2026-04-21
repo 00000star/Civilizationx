@@ -21,6 +21,7 @@ const summaries = files
     prerequisites: tech.prerequisites,
     unlocks: tech.unlocks,
     rawMaterials: tech.rawMaterials,
+    maturity: tech.maturity,
     verification: tech.verification,
     lastUpdated: tech.lastUpdated,
   }))

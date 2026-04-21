@@ -228,5 +228,6 @@
         "note": "Metrology for irradiance sensors and electrical efficiency measurements"
       }
     ]
-  }
+  },
+  "maturity": "researched"
 }

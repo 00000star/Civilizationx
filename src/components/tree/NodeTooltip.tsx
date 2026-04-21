@@ -31,6 +31,10 @@ export function NodeTooltip({ tech, locked }: Props) {
         <dd className="text-codex-secondary">
           {tech.verification.status.replaceAll("-", " ")}
         </dd>
+        <dt className="font-mono uppercase tracking-wide">Maturity</dt>
+        <dd className="text-codex-secondary">
+          {tech.maturity.replaceAll("-", " ")}
+        </dd>
       </dl>
     </div>
   );

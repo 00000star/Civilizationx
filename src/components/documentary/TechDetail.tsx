@@ -91,6 +91,10 @@ export function TechDetail({ tech }: Props) {
               <span className="normal-case">
                 Status: {tech.verification.status.replaceAll("-", " ")}
               </span>
+              <span aria-hidden>·</span>
+              <span className="normal-case">
+                Maturity: {tech.maturity.replaceAll("-", " ")}
+              </span>
             </div>
             <h1 className="codex-print-title mt-3 font-display text-4xl font-bold tracking-tight text-codex-text md:text-5xl print:text-black">
               {tech.name}
@@ -117,6 +121,7 @@ export function TechDetail({ tech }: Props) {
       </header>
 
       <VerificationBanner tech={tech} />
+      <MaturityBanner tech={tech} />
       <HazardBanner tech={tech} />
 
       <div
@@ -237,6 +242,25 @@ export function TechDetail({ tech }: Props) {
           <div className="h-[72px] w-[72px] shrink-0 border border-dashed border-black" />
         )}
       </div>
+    </div>
+  );
+}
+
+function MaturityBanner({ tech }: { tech: Technology }) {
+  const descriptions = {
+    stub: "Minimal placeholder. Needs substantial writing and source work.",
+    draft: "Usable draft. Needs deeper structure, sources, and review before field use.",
+    researched: "Source-backed and structurally complete, but not necessarily expert verified.",
+    "review-needed": "Ready for focused community or expert review.",
+    "field-guide-ready": "Structured for print/offline field use after review.",
+  } as const;
+
+  return (
+    <div className="mt-4 rounded-md border border-codex-border bg-codex-surface px-4 py-3 text-sm text-codex-secondary print:hidden">
+      <p className="font-semibold capitalize text-codex-text">
+        Documentation maturity: {tech.maturity.replaceAll("-", " ")}
+      </p>
+      <p className="mt-1">{descriptions[tech.maturity]}</p>
     </div>
   );
 }

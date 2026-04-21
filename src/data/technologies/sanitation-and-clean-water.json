@@ -5,48 +5,199 @@
   "category": "survival",
   "era": "prehistoric",
   "difficulty": 2,
-  "prerequisites": ["fire", "ceramics-and-pottery"],
+  "prerequisites": [
+    "fire",
+    "ceramics-and-pottery"
+  ],
   "unlocks": [],
   "problem": "Human beings are walking conflict zones for microbes: every litre of surface water near settlements is a potential culture medium seeded by faeces, urine, decaying biomass, and the invisible films called biofilms that protect pathogens from simple fixes. In the first hours after disruption, people still behave as if taps and chlorine exist; within days, diarrhoeal disease can remove more working adults from a labour pool than injury or violence. Children dehydrate fastest; caregivers then face impossible trade-offs between fetching water and staying at a bedside.\n\nThe second failure mode is engineering without discipline. A community can build an impressive filter or a gleaming boiling kettle and still poison itself by dipping unwashed hands into storage, by rinsing dishes in untreated stream water, or by locating a latrine uphill of the spring because the downhill slope was rockier to dig. Water safety is a system: source selection, transport, treatment, storage, and waste must be designed as one loop, not five independent hobbies.\n\nThe third failure mode is chemical complacency. Boiling does not remove arsenic, nitrates from agricultural runoff, or many industrial solvents. Clear water is not innocent water. Teaching people to recognise the limits of each method — heat, sand, sunlight, measured halogens — is as important as teaching them to tie knots.\n\nCollapse and frontier habitats share one brutal truth: there is no invisible municipal labour force keeping the loop closed. Either your group maintains the loop consciously, or the loop closes you.",
   "overview": "Practical field water treatment stacks independent barriers. First, protect the source: choose headwater springs or rain from clean roofs where possible; fence livestock away; avoid stirring sediment during collection. Second, reduce turbidity: settle in a series of jars or a drum, decanting progressively cleaner supernatant; pre-filter through cloth, then through packed sand and gravel when materials allow.\n\nThird, disinfect: a rolling boil for one minute (longer at altitude) inactivates most bacterial and viral threats if the entire volume reaches temperature — thin-walled metal kettles transfer heat faster than thick pottery. Solar disinfection (SODIS) combines ultraviolet exposure and modest heating in clear bottles laid in full sun; throughput is low and weather-dependent but costs almost no fuel. Where halogen chemistry exists, measured contact time beats guesswork; under-dosing selects hardier survivors while overdosing tastes foul and can irritate mucosa.\n\nSanitation is the mirror image of drinking water: isolate human waste from fingers, flies, feet, and wind. Deep pit latrines with fly-proof covers, trench latrines rotated on a schedule, and meticulous separation of greywater from potable storage break the faecal-oral routes that drive cholera, shigellosis, and many helminths. Hand hygiene with soap removes a staggering fraction of risk; where soap is absent, ash paste and friction still outperform hope.\n\nOn Mars or in closed habitats, the physics changes form but not logic: every litre is inventoried, every waste stream is processed, and cross-contamination is an existential engineering fault rather than a regrettable statistic.",
   "principles": [
-    {"name": "Multi-barrier protection", "explanation": "Settling, filtration, disinfection, and safe storage each remove different failure classes; redundancy beats optimism."},
-    {"name": "Faecal-oral interruption", "explanation": "Most epidemic diarrhoea is broken by distance, time, heat, chemistry, or hygiene that keeps pathogens from mouth."},
-    {"name": "Turbidity and disinfection", "explanation": "Particles shield microbes from UV and consume oxidants; clarify before final steps when possible."},
-    {"name": "Hydraulic gradient", "explanation": "Groundwater and surface flows follow gravity; latrines belong where leakage cannot reach intakes."}
+    {
+      "name": "Multi-barrier protection",
+      "explanation": "Settling, filtration, disinfection, and safe storage each remove different failure classes; redundancy beats optimism."
+    },
+    {
+      "name": "Faecal-oral interruption",
+      "explanation": "Most epidemic diarrhoea is broken by distance, time, heat, chemistry, or hygiene that keeps pathogens from mouth."
+    },
+    {
+      "name": "Turbidity and disinfection",
+      "explanation": "Particles shield microbes from UV and consume oxidants; clarify before final steps when possible."
+    },
+    {
+      "name": "Hydraulic gradient",
+      "explanation": "Groundwater and surface flows follow gravity; latrines belong where leakage cannot reach intakes."
+    }
   ],
   "components": [
-    {"id": "intake", "name": "Protected intake", "function": "Collects water with minimal sediment disturbance", "position": "Upstream of habitation", "madeFrom": "Screened pipe, bamboo, or ceramic conduit", "criticalNote": "Re-inspect after storms"},
-    {"id": "settling", "name": "Settling vessels", "function": "Gravity separation of sand and organic floc", "position": "Between intake and filter", "madeFrom": "Matched jars or drums with pour spouts", "criticalNote": "Discard sludge away from intake"},
-    {"id": "sand-filter", "name": "Sand and gravel filter", "function": "Removes particles; mature slow-sand bed hosts biocidal biofilm", "position": "After settling", "madeFrom": "Washed sand, gravel support, outlet valve", "criticalNote": "First litres after idle can be stagnant — discard"},
-    {"id": "boiler", "name": "Boiling kettle", "function": "Thermal disinfection", "position": "Fire or stove", "madeFrom": "Metal or thick fired clay", "criticalNote": "Steam burns; lid directs drips away from hands"},
-    {"id": "storage", "name": "Covered storage", "function": "Prevents recontamination after treatment", "position": "Shaded rack", "madeFrom": "Narrow-neck ceramics or sealed drums", "criticalNote": "Dedicated dipper only"},
-    {"id": "latrine", "name": "Pit latrine with cover", "function": "Isolates faeces from vectors", "position": "Down-gradient from wells", "madeFrom": "Deep pit, slab, fly screen", "criticalNote": "Watch water table in wet season"}
+    {
+      "id": "intake",
+      "name": "Protected intake",
+      "function": "Collects water with minimal sediment disturbance",
+      "position": "Upstream of habitation",
+      "madeFrom": "Screened pipe, bamboo, or ceramic conduit",
+      "criticalNote": "Re-inspect after storms"
+    },
+    {
+      "id": "settling",
+      "name": "Settling vessels",
+      "function": "Gravity separation of sand and organic floc",
+      "position": "Between intake and filter",
+      "madeFrom": "Matched jars or drums with pour spouts",
+      "criticalNote": "Discard sludge away from intake"
+    },
+    {
+      "id": "sand-filter",
+      "name": "Sand and gravel filter",
+      "function": "Removes particles; mature slow-sand bed hosts biocidal biofilm",
+      "position": "After settling",
+      "madeFrom": "Washed sand, gravel support, outlet valve",
+      "criticalNote": "First litres after idle can be stagnant — discard"
+    },
+    {
+      "id": "boiler",
+      "name": "Boiling kettle",
+      "function": "Thermal disinfection",
+      "position": "Fire or stove",
+      "madeFrom": "Metal or thick fired clay",
+      "criticalNote": "Steam burns; lid directs drips away from hands"
+    },
+    {
+      "id": "storage",
+      "name": "Covered storage",
+      "function": "Prevents recontamination after treatment",
+      "position": "Shaded rack",
+      "madeFrom": "Narrow-neck ceramics or sealed drums",
+      "criticalNote": "Dedicated dipper only"
+    },
+    {
+      "id": "latrine",
+      "name": "Pit latrine with cover",
+      "function": "Isolates faeces from vectors",
+      "position": "Down-gradient from wells",
+      "madeFrom": "Deep pit, slab, fly screen",
+      "criticalNote": "Watch water table in wet season"
+    }
   ],
   "rawMaterials": [
-    {"name": "Source water", "purpose": "Hydration after treatment", "earthLocations": ["Headwater springs", "Deep tested wells", "Rain from metal or tile roofs"], "spaceAlternatives": "Mars: drill or trench for ice-rich regolith; sublimate or melt in closed processor; recycle condensate in habitat loops with brine management", "processingRequired": "Assess dissolved salts and metals; blend or reject sources that fail simple taste and settle tests"},
-    {"name": "Filter media", "purpose": "Particle removal and slow-sand biology", "earthLocations": ["River sand after washing", "Quarry gravel"], "spaceAlternatives": "Sintered metal or ceramic cartridges imported until regolith washing lines exist", "processingRequired": "Wash until rinse clears; sterilise new media with boiling water before commissioning"},
-    {"name": "Disinfectant or fuel", "purpose": "Final kill step or heat source", "earthLocations": ["Chlorine tablets where stocked", "Wood and charcoal"], "spaceAlternatives": "Electrolytic chlorine generators or UV LEDs with reliable power budgets", "processingRequired": "If using halogens, measure mass per litre from manufacturer tables adapted to temperature"}
+    {
+      "name": "Source water",
+      "purpose": "Hydration after treatment",
+      "earthLocations": [
+        "Headwater springs",
+        "Deep tested wells",
+        "Rain from metal or tile roofs"
+      ],
+      "spaceAlternatives": "Mars: drill or trench for ice-rich regolith; sublimate or melt in closed processor; recycle condensate in habitat loops with brine management",
+      "processingRequired": "Assess dissolved salts and metals; blend or reject sources that fail simple taste and settle tests"
+    },
+    {
+      "name": "Filter media",
+      "purpose": "Particle removal and slow-sand biology",
+      "earthLocations": [
+        "River sand after washing",
+        "Quarry gravel"
+      ],
+      "spaceAlternatives": "Sintered metal or ceramic cartridges imported until regolith washing lines exist",
+      "processingRequired": "Wash until rinse clears; sterilise new media with boiling water before commissioning"
+    },
+    {
+      "name": "Disinfectant or fuel",
+      "purpose": "Final kill step or heat source",
+      "earthLocations": [
+        "Chlorine tablets where stocked",
+        "Wood and charcoal"
+      ],
+      "spaceAlternatives": "Electrolytic chlorine generators or UV LEDs with reliable power budgets",
+      "processingRequired": "If using halogens, measure mass per litre from manufacturer tables adapted to temperature"
+    }
   ],
   "buildSteps": [
-    {"order": 1, "title": "Walk the watershed before trusting any blue line on a map", "description": "Stand at the proposed intake during dry weather and again after rain. Note animal paths, burial sites, erosion, and upstream farms. Mark a fetch route that avoids dragging containers through mud that will foul rims.", "prerequisiteTools": ["notebook", "map or sketch"], "warningNote": "Industrial or mining districts may carry dissolved toxins boiling cannot remove — seek local knowledge"},
-    {"order": 2, "title": "Build the decant chain before you are thirsty", "description": "Label three vessels: raw, settled, filtered. Move water only by decanting clear supernatant. Never pour dregs forward. Teach the sequence as a chant children can supervise.", "prerequisiteTools": ["three containers", "clean cloth"], "warningNote": "Heavy water jars cause crush injuries — knee-bend lifting or pair carry"},
-    {"order": 3, "title": "Boil with a visible rolling boil", "description": "Whole volume must bubble, not just edges. Time one minute after full roll at low altitude; add time per public-health tables if you live high. Cool with lid cracked to limit airborne fallout.", "prerequisiteTools": ["timer or sundial mark", "gloves"], "warningNote": "Open flame and steam scald — secure loose clothing and hair"},
-    {"order": 4, "title": "Commission slow sand only with a fallback", "description": "Pack washed sand over gravel, wet slowly, and run discard water for days while still boiling drinking water. Measure flow so surface does not dry crack.", "prerequisiteTools": ["valve", "level"], "warningNote": "Dry sand dust damages lungs — wet packing only"},
-    {"order": 5, "title": "Dig latrine first class, not last minute", "description": "Depth below local water table guidance, offset from springs, fly-proof seat, daily ash cover, separate tool for lime if used. Post a handwash procedure at the path.", "prerequisiteTools": ["shovel", "lime or ash"], "warningNote": "Trench walls can collapse in loose soil — never dig alone"}
+    {
+      "order": 1,
+      "title": "Walk the watershed before trusting any blue line on a map",
+      "description": "Stand at the proposed intake during dry weather and again after rain. Note animal paths, burial sites, erosion, and upstream farms. Mark a fetch route that avoids dragging containers through mud that will foul rims.",
+      "prerequisiteTools": [
+        "notebook",
+        "map or sketch"
+      ],
+      "warningNote": "Industrial or mining districts may carry dissolved toxins boiling cannot remove — seek local knowledge"
+    },
+    {
+      "order": 2,
+      "title": "Build the decant chain before you are thirsty",
+      "description": "Label three vessels: raw, settled, filtered. Move water only by decanting clear supernatant. Never pour dregs forward. Teach the sequence as a chant children can supervise.",
+      "prerequisiteTools": [
+        "three containers",
+        "clean cloth"
+      ],
+      "warningNote": "Heavy water jars cause crush injuries — knee-bend lifting or pair carry"
+    },
+    {
+      "order": 3,
+      "title": "Boil with a visible rolling boil",
+      "description": "Whole volume must bubble, not just edges. Time one minute after full roll at low altitude; add time per public-health tables if you live high. Cool with lid cracked to limit airborne fallout.",
+      "prerequisiteTools": [
+        "timer or sundial mark",
+        "gloves"
+      ],
+      "warningNote": "Open flame and steam scald — secure loose clothing and hair"
+    },
+    {
+      "order": 4,
+      "title": "Commission slow sand only with a fallback",
+      "description": "Pack washed sand over gravel, wet slowly, and run discard water for days while still boiling drinking water. Measure flow so surface does not dry crack.",
+      "prerequisiteTools": [
+        "valve",
+        "level"
+      ],
+      "warningNote": "Dry sand dust damages lungs — wet packing only"
+    },
+    {
+      "order": 5,
+      "title": "Dig latrine first class, not last minute",
+      "description": "Depth below local water table guidance, offset from springs, fly-proof seat, daily ash cover, separate tool for lime if used. Post a handwash procedure at the path.",
+      "prerequisiteTools": [
+        "shovel",
+        "lime or ash"
+      ],
+      "warningNote": "Trench walls can collapse in loose soil — never dig alone"
+    }
   ],
   "history": [
-    {"year": "Ancient", "event": "Cisterns, qanats, and aqueducts distribute water across dry civilisations.", "location": "Mediterranean to Persia"},
-    {"year": 1854, "event": "Cholera outbreak mapping links water source to disease — modern field epidemiology begins.", "location": "London", "person": "John Snow"},
-    {"year": "20th century", "event": "Chlorination and rapid sand filtration drive down typhoid in piped cities.", "location": "Global"}
+    {
+      "year": "Ancient",
+      "event": "Cisterns, qanats, and aqueducts distribute water across dry civilisations.",
+      "location": "Mediterranean to Persia"
+    },
+    {
+      "year": 1854,
+      "event": "Cholera outbreak mapping links water source to disease — modern field epidemiology begins.",
+      "location": "London",
+      "person": "John Snow"
+    },
+    {
+      "year": "20th century",
+      "event": "Chlorination and rapid sand filtration drive down typhoid in piped cities.",
+      "location": "Global"
+    }
   ],
   "inventors": [],
   "impact": "Communities that keep drinking water and faeces apart survive long enough to argue about laws, calendars, and machines. Communities that fail this lesson disappear quietly into fever charts.\n\nSpace habitats inherit the same moral: there is no dilution sink — only engineering and procedure.",
   "images": [],
   "videos": [],
   "externalLinks": [
-    {"id": "who-water", "title": "WHO — Drinking-water topics", "url": "https://www.who.int/health-topics/drinking-water"},
-    {"id": "cdc-shigella", "title": "CDC — Shigella", "url": "https://www.cdc.gov/shigella/index.html"}
+    {
+      "id": "who-water",
+      "title": "WHO — Drinking-water topics",
+      "url": "https://www.who.int/health-topics/drinking-water"
+    },
+    {
+      "id": "cdc-shigella",
+      "title": "CDC — Shigella",
+      "url": "https://www.cdc.gov/shigella/index.html"
+    }
   ],
   "lastUpdated": "2026-04-12",
   "verification": {
@@ -55,9 +206,28 @@
     "reviewDate": null,
     "warnings": [],
     "sources": [
-      {"id": "who-drinking", "title": "WHO — Drinking water", "url": "https://www.who.int/health-topics/drinking-water", "type": "institution", "note": "Global public health guidance"},
-      {"id": "cdc-shigella", "title": "CDC — Shigella (bacterial dysentery)", "url": "https://www.cdc.gov/shigella/index.html", "type": "institution", "note": "Water and hygiene related illness"},
-      {"id": "wiki-water", "title": "Wikipedia — Water treatment", "url": "https://en.wikipedia.org/wiki/Water_treatment", "type": "wikipedia", "note": "Engineering survey with references"}
+      {
+        "id": "who-drinking",
+        "title": "WHO — Drinking water",
+        "url": "https://www.who.int/health-topics/drinking-water",
+        "type": "institution",
+        "note": "Global public health guidance"
+      },
+      {
+        "id": "cdc-shigella",
+        "title": "CDC — Shigella (bacterial dysentery)",
+        "url": "https://www.cdc.gov/shigella/index.html",
+        "type": "institution",
+        "note": "Water and hygiene related illness"
+      },
+      {
+        "id": "wiki-water",
+        "title": "Wikipedia — Water treatment",
+        "url": "https://en.wikipedia.org/wiki/Water_treatment",
+        "type": "wikipedia",
+        "note": "Engineering survey with references"
+      }
     ]
-  }
+  },
+  "maturity": "researched"
 }

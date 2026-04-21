@@ -29,6 +29,13 @@ export type VerificationStatus =
   | "community-reviewed"
   | "expert-verified";
 
+export type EntryMaturity =
+  | "stub"
+  | "draft"
+  | "researched"
+  | "review-needed"
+  | "field-guide-ready";
+
 export type SourceType =
   | "book"
   | "paper"
@@ -159,6 +166,7 @@ export interface Technology {
   videos: Video[];
   externalLinks: ExternalLink[];
   lastUpdated: string;
+  maturity: EntryMaturity;
   verification: Verification;
 }
 
@@ -174,6 +182,7 @@ export type TechnologySummary = Pick<
   | "unlocks"
   | "rawMaterials"
   | "verification"
+  | "maturity"
   | "lastUpdated"
 >;
 

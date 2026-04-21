@@ -247,5 +247,6 @@
         "note": "SI units for enthalpy, power, and efficiency reporting"
       }
     ]
-  }
+  },
+  "maturity": "researched"
 }

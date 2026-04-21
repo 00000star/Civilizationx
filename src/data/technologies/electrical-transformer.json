@@ -236,5 +236,6 @@
         "note": "SI coherence for magnetic flux, voltage, and power"
       }
     ]
-  }
+  },
+  "maturity": "researched"
 }

@@ -224,5 +224,6 @@
         "note": "Contemporary packet voice; compare to legacy circuit switching"
       }
     ]
-  }
+  },
+  "maturity": "researched"
 }

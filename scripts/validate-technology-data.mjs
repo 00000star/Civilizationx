@@ -34,6 +34,7 @@ const schema = {
     "videos",
     "externalLinks",
     "lastUpdated",
+    "maturity",
     "verification",
   ],
   properties: {
@@ -138,6 +139,10 @@ const schema = {
       },
     },
     lastUpdated: { type: "string", format: "date" },
+    maturity: {
+      type: "string",
+      enum: ["stub", "draft", "researched", "review-needed", "field-guide-ready"],
+    },
     verification: {
       type: "object",
       additionalProperties: false,
@@ -212,6 +217,13 @@ const allowedEras = new Set([
   "late-20th",
   "21st-century",
 ]);
+const allowedMaturity = new Set([
+  "stub",
+  "draft",
+  "researched",
+  "review-needed",
+  "field-guide-ready",
+]);
 const requiredMedicalWarning =
   "Professional verification is required before use on a human being.";
 
@@ -240,6 +252,9 @@ for (const f of files) {
   }
   if (!allowedEras.has(data.era)) {
     errors.push(`${f}: era "${data.era}" is not allowed`);
+  }
+  if (!allowedMaturity.has(data.maturity)) {
+    errors.push(`${f}: maturity "${data.maturity}" is not allowed`);
   }
 
   for (const p of data.prerequisites || []) {

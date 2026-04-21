@@ -220,5 +220,6 @@
         "note": "Satellite frequency coordination and interference management"
       }
     ]
-  }
+  },
+  "maturity": "researched"
 }

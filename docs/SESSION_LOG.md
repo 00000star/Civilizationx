@@ -32,5 +32,23 @@ npm run build
 Current active task after this session:
 
 ```text
-CIVX-SCHEMA-001: Add entry maturity levels
+CIVX-ATLAS-001: Normalize raw materials for Atlas search
+```
+
+Additional work completed:
+
+- Created checkpoint commit `25912ec` for foundation/scalable loading work.
+- Added `EntryMaturity` type and required `maturity` field.
+- Backfilled maturity across all 56 technology entries.
+- Added `scripts/backfill-maturity.mjs`.
+- Added maturity to generated summaries.
+- Added maturity display to documentary pages and tree tooltips.
+- Added maturity counts to Status page.
+
+Checks passed:
+
+```bash
+npm run validate-data
+npm run lint
+npm run build
 ```

@@ -5,48 +5,196 @@
   "category": "agriculture",
   "era": "prehistoric",
   "difficulty": 2,
-  "prerequisites": ["fire", "cooking", "rope-and-cordage"],
+  "prerequisites": [
+    "fire",
+    "cooking",
+    "rope-and-cordage"
+  ],
   "unlocks": [],
   "problem": "Dirt is not soil. Dirt is crushed rock with occasional luck; soil is a living community of bacteria, fungi, nematodes, and roots that store and exchange nutrients on a schedule humans only partly control. When people clear forest or plough prairie and harvest without returning organic matter, they mine the humus bank until yields collapse — not because NPK disappears entirely, but because water infiltration, cation exchange, and disease suppression degrade together.\n\nComposting is the controlled acceleration of decay that would happen anyway on the forest floor, but stacked for human convenience and pathogen reduction. Done wrong, it breeds flies and rats; done right, it converts kitchen scraps, crop residues, and manure into stable humus that buffers pH and feeds the microbial loop feeding plants.\n\nThe measurement problem is literacy: most survivors can smell anaerobic slime versus sweet earth, but fewer can interpret a simple pH strip or a jar-settle test for texture class. Without rough measurement, people lime sandy soil that needed sulphur, or add nitrogen to already hot piles that needed carbon.\n\nClimate matters: arid regions lose organic carbon quickly to oxidation; humid tropics leach nutrients if piles drain too freely. Any universal recipe is suspect — observation beats dogma.",
   "overview": "Soil fertility rests on texture (sand, silt, clay proportions), structure (aggregates formed by roots and glues), chemistry (pH, cation exchange capacity), and biology (decomposers and mycorrhizae). Compost improves structure and slowly releases nutrients while inoculating beneficial organisms.\n\nHot composting mixes high-nitrogen greens (manure, fresh grass) with high-carbon browns (straw, sawdust) near a 25–30:1 C:N target for active thermophilic stacks. Turning introduces oxygen; internal temperatures above roughly 55 °C for multiple days reduces many human pathogens in manure while speeding breakdown — monitor with a long thermometer or a clean iron rod test.\n\nCold composting is slower but lower labour: alternating thin layers in a bin works if rodents are excluded and anaerobic pockets are avoided by coarse bulking agents like wood chips.\n\nGreen manures grow living mulch — legumes fix nitrogen symbiotically when inoculated with compatible rhizobia; tilling them in returns biomass. Cover crops also break pest cycles and reduce erosion.\n\nSimple field tests: jar shake separates sand/silt/clay layers after settling; vinegar fizz suggests free carbonates; squeeze test maps plasticity. None replace occasional send-out samples if labs return.\n\nOn Mars, soil building is exobiology and chemistry — perchlorates and toxicity mean Earth compost lore applies only by analogy until ISRU washing protocols exist.",
   "principles": [
-    {"name": "Carbon to nitrogen ratio", "explanation": "Microbes need balanced diet; too much nitrogen goes ammonia; too much carbon stalls heating."},
-    {"name": "Aeration versus anaerobia", "explanation": "Oxygen drives aerobic thermophiles; waterlogged piles go septic."},
-    {"name": "Humus buffering", "explanation": "Organic matter stabilises pH and water retention on sandy soils."},
-    {"name": "Pathogen reduction", "explanation": "Time-temperature profiles in hot compost reduce risks from manure inputs."}
+    {
+      "name": "Carbon to nitrogen ratio",
+      "explanation": "Microbes need balanced diet; too much nitrogen goes ammonia; too much carbon stalls heating."
+    },
+    {
+      "name": "Aeration versus anaerobia",
+      "explanation": "Oxygen drives aerobic thermophiles; waterlogged piles go septic."
+    },
+    {
+      "name": "Humus buffering",
+      "explanation": "Organic matter stabilises pH and water retention on sandy soils."
+    },
+    {
+      "name": "Pathogen reduction",
+      "explanation": "Time-temperature profiles in hot compost reduce risks from manure inputs."
+    }
   ],
   "components": [
-    {"id": "bins", "name": "Compost bins or bays", "function": "Contains stack while allowing airflow", "position": "Downwind of kitchen", "madeFrom": "Pallets, wire mesh, stone", "criticalNote": "Rodent skirt of hardware cloth"},
-    {"id": "aerator", "name": "Turning fork or pipe rails", "function": "Reintroduces oxygen", "position": "Along bay length", "madeFrom": "Steel fork or perforated PVC", "criticalNote": "Back posture — twist with legs"},
-    {"id": "thermometer", "name": "Long-stem thermometer", "function": "Guides hot compost safety window", "position": "Core probe sites", "madeFrom": "Glass or dial metal", "criticalNote": "Sanitise between manure piles"},
-    {"id": "sieve", "name": "Finished compost sieve", "function": "Separates coarse chunks for return", "position": "Over wheelbarrow", "madeFrom": "Hardware cloth frame", "criticalNote": "Splinters from green wood frames"},
-    {"id": "cover", "name": "Tarp or straw cap", "function": "Balances moisture in rain", "position": "Top of pile", "madeFrom": "Breathable tarp", "criticalNote": "Remove if pile goes anaerobic slimy"},
-    {"id": "testkit", "name": "pH strips and jar", "function": "Texture and reaction tests", "position": "Shed shelf", "madeFrom": "Mason jar, strips", "criticalNote": "Calibrate strips against known buffer yearly"}
+    {
+      "id": "bins",
+      "name": "Compost bins or bays",
+      "function": "Contains stack while allowing airflow",
+      "position": "Downwind of kitchen",
+      "madeFrom": "Pallets, wire mesh, stone",
+      "criticalNote": "Rodent skirt of hardware cloth"
+    },
+    {
+      "id": "aerator",
+      "name": "Turning fork or pipe rails",
+      "function": "Reintroduces oxygen",
+      "position": "Along bay length",
+      "madeFrom": "Steel fork or perforated PVC",
+      "criticalNote": "Back posture — twist with legs"
+    },
+    {
+      "id": "thermometer",
+      "name": "Long-stem thermometer",
+      "function": "Guides hot compost safety window",
+      "position": "Core probe sites",
+      "madeFrom": "Glass or dial metal",
+      "criticalNote": "Sanitise between manure piles"
+    },
+    {
+      "id": "sieve",
+      "name": "Finished compost sieve",
+      "function": "Separates coarse chunks for return",
+      "position": "Over wheelbarrow",
+      "madeFrom": "Hardware cloth frame",
+      "criticalNote": "Splinters from green wood frames"
+    },
+    {
+      "id": "cover",
+      "name": "Tarp or straw cap",
+      "function": "Balances moisture in rain",
+      "position": "Top of pile",
+      "madeFrom": "Breathable tarp",
+      "criticalNote": "Remove if pile goes anaerobic slimy"
+    },
+    {
+      "id": "testkit",
+      "name": "pH strips and jar",
+      "function": "Texture and reaction tests",
+      "position": "Shed shelf",
+      "madeFrom": "Mason jar, strips",
+      "criticalNote": "Calibrate strips against known buffer yearly"
+    }
   ],
   "rawMaterials": [
-    {"name": "Nitrogen greens", "purpose": "Feeds thermophiles", "earthLocations": ["Kitchen scraps", "Fresh grass", "Herbivore manure"], "spaceAlternatives": "Inedible biomass from hydroponics trim; human waste only after dedicated safety processing — never raw in food compost", "processingRequired": "Chop small; mix immediately with browns"},
-    {"name": "Carbon browns", "purpose": "Structure and energy reserve", "earthLocations": ["Straw", "Leaves", "Sawdust from non-treated wood"], "spaceAlternatives": "Shredded packaging cellulose if uncontaminated", "processingRequired": "Screen out plastics; avoid painted wood"},
-    {"name": "Bulk agent", "purpose": "Prevents compaction", "earthLocations": ["Wood chips", "Stalks"], "spaceAlternatives": "Crushed foamed regolith simulants in research only", "processingRequired": "Size mix to fist test — should crumble not ooze"}
+    {
+      "name": "Nitrogen greens",
+      "purpose": "Feeds thermophiles",
+      "earthLocations": [
+        "Kitchen scraps",
+        "Fresh grass",
+        "Herbivore manure"
+      ],
+      "spaceAlternatives": "Inedible biomass from hydroponics trim; human waste only after dedicated safety processing — never raw in food compost",
+      "processingRequired": "Chop small; mix immediately with browns"
+    },
+    {
+      "name": "Carbon browns",
+      "purpose": "Structure and energy reserve",
+      "earthLocations": [
+        "Straw",
+        "Leaves",
+        "Sawdust from non-treated wood"
+      ],
+      "spaceAlternatives": "Shredded packaging cellulose if uncontaminated",
+      "processingRequired": "Screen out plastics; avoid painted wood"
+    },
+    {
+      "name": "Bulk agent",
+      "purpose": "Prevents compaction",
+      "earthLocations": [
+        "Wood chips",
+        "Stalks"
+      ],
+      "spaceAlternatives": "Crushed foamed regolith simulants in research only",
+      "processingRequired": "Size mix to fist test — should crumble not ooze"
+    }
   ],
   "buildSteps": [
-    {"order": 1, "title": "Site bins on drainage with rodent defence", "description": "Two bays allow flip. Hardware cloth apron buried 30 cm outward stops rats tunneling.", "prerequisiteTools": ["shovel", "wire"], "warningNote": "Trench cave-in — shore or step back width"},
-    {"order": 2, "title": "Build first layer cake", "description": "Coarse sticks at base, then alternating thin green and brown layers until shoulder height.", "prerequisiteTools": ["fork"], "warningNote": "Splinters — gloves"},
-    {"order": 3, "title": "Moisten to sponge wring test", "description": "Water evenly while building; squeeze handful — one drop, not stream.", "prerequisiteTools": ["hose or buckets"], "warningNote": "Slippery mud underfoot — boots"},
-    {"order": 4, "title": "Turn when core cools from peak", "description": "Record peak temp day; flip outer in when dropping; remix dry pockets.", "prerequisiteTools": ["thermometer"], "warningNote": "Steam burns — probe slowly"},
-    {"order": 5, "title": "Cure finished compost covered one month", "description": "Pathogens finish dying; mycelium stabilises humus; sieve and apply before planting.", "prerequisiteTools": ["sieve"], "warningNote": "Dust — mask if windy and dry"}
+    {
+      "order": 1,
+      "title": "Site bins on drainage with rodent defence",
+      "description": "Two bays allow flip. Hardware cloth apron buried 30 cm outward stops rats tunneling.",
+      "prerequisiteTools": [
+        "shovel",
+        "wire"
+      ],
+      "warningNote": "Trench cave-in — shore or step back width"
+    },
+    {
+      "order": 2,
+      "title": "Build first layer cake",
+      "description": "Coarse sticks at base, then alternating thin green and brown layers until shoulder height.",
+      "prerequisiteTools": [
+        "fork"
+      ],
+      "warningNote": "Splinters — gloves"
+    },
+    {
+      "order": 3,
+      "title": "Moisten to sponge wring test",
+      "description": "Water evenly while building; squeeze handful — one drop, not stream.",
+      "prerequisiteTools": [
+        "hose or buckets"
+      ],
+      "warningNote": "Slippery mud underfoot — boots"
+    },
+    {
+      "order": 4,
+      "title": "Turn when core cools from peak",
+      "description": "Record peak temp day; flip outer in when dropping; remix dry pockets.",
+      "prerequisiteTools": [
+        "thermometer"
+      ],
+      "warningNote": "Steam burns — probe slowly"
+    },
+    {
+      "order": 5,
+      "title": "Cure finished compost covered one month",
+      "description": "Pathogens finish dying; mycelium stabilises humus; sieve and apply before planting.",
+      "prerequisiteTools": [
+        "sieve"
+      ],
+      "warningNote": "Dust — mask if windy and dry"
+    }
   ],
   "history": [
-    {"year": "Neolithic", "event": "Midden heaps accidentally improve adjacent garden soils.", "location": "Global"},
-    {"year": "19th century", "event": "Liebig and others formalise plant nutrition.", "location": "Europe"},
-    {"year": "20th century", "event": "Industrial fertilisers complement but do not replace organic matter management.", "location": "Global"}
+    {
+      "year": "Neolithic",
+      "event": "Midden heaps accidentally improve adjacent garden soils.",
+      "location": "Global"
+    },
+    {
+      "year": "19th century",
+      "event": "Liebig and others formalise plant nutrition.",
+      "location": "Europe"
+    },
+    {
+      "year": "20th century",
+      "event": "Industrial fertilisers complement but do not replace organic matter management.",
+      "location": "Global"
+    }
   ],
   "inventors": [],
   "impact": "Soil is the balance sheet of agriculture; compost is one honest way to credit the account.\n\nClosed life-support systems treat organics as mass streams — same biology, tighter tolerances.",
   "images": [],
   "videos": [],
   "externalLinks": [
-    {"id": "fao-soil", "title": "FAO — Soils portal", "url": "https://www.fao.org/soils-portal/en/"},
-    {"id": "wiki-compost", "title": "Wikipedia — Compost", "url": "https://en.wikipedia.org/wiki/Compost"}
+    {
+      "id": "fao-soil",
+      "title": "FAO — Soils portal",
+      "url": "https://www.fao.org/soils-portal/en/"
+    },
+    {
+      "id": "wiki-compost",
+      "title": "Wikipedia — Compost",
+      "url": "https://en.wikipedia.org/wiki/Compost"
+    }
   ],
   "lastUpdated": "2026-04-12",
   "verification": {
@@ -55,9 +203,28 @@
     "reviewDate": null,
     "warnings": [],
     "sources": [
-      {"id": "fao-soil", "title": "FAO — Soils portal", "url": "https://www.fao.org/soils-portal/en/", "type": "institution", "note": ""},
-      {"id": "wiki-soil", "title": "Wikipedia — Soil", "url": "https://en.wikipedia.org/wiki/Soil", "type": "wikipedia", "note": ""},
-      {"id": "epa-compost", "title": "U.S. EPA — Composting at home", "url": "https://www.epa.gov/recycle/composting-home", "type": "institution", "note": "Municipal guidance adaptable to field practice"}
+      {
+        "id": "fao-soil",
+        "title": "FAO — Soils portal",
+        "url": "https://www.fao.org/soils-portal/en/",
+        "type": "institution",
+        "note": ""
+      },
+      {
+        "id": "wiki-soil",
+        "title": "Wikipedia — Soil",
+        "url": "https://en.wikipedia.org/wiki/Soil",
+        "type": "wikipedia",
+        "note": ""
+      },
+      {
+        "id": "epa-compost",
+        "title": "U.S. EPA — Composting at home",
+        "url": "https://www.epa.gov/recycle/composting-home",
+        "type": "institution",
+        "note": "Municipal guidance adaptable to field practice"
+      }
     ]
-  }
+  },
+  "maturity": "researched"
 }

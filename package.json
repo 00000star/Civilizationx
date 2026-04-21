@@ -10,6 +10,7 @@
     "prebuild": "npm run generate-summaries",
     "preview": "vite preview",
     "validate-data": "node scripts/validate-technology-data.mjs",
+    "backfill-maturity": "node scripts/backfill-maturity.mjs",
     "generate-summaries": "node scripts/generate-technology-summaries.mjs",
     "sync-unlocks": "node scripts/sync-unlocks.mjs",
     "generate-technologies": "node scripts/generate-technologies.mjs",

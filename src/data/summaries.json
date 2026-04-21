@@ -48,6 +48,7 @@
         "processingRequired": "Orient wedge across grain lock"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -124,6 +125,7 @@
         "processingRequired": "Filtration and disinfection if biological slime risk"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -198,6 +200,7 @@
         "processingRequired": "Maintain sharp drill tip; clear swarf to reduce heat"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -274,6 +277,7 @@
         "processingRequired": "Keep grit-free"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -349,6 +353,7 @@
         "processingRequired": "Copy critical tables redundantly"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -431,6 +436,7 @@
         "processingRequired": "Charcoal preferred for high-fire with fewer ash incidents"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -510,6 +516,7 @@
         "processingRequired": "Dry thoroughly"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -585,6 +592,7 @@
         "processingRequired": "Coverglass radiation shield"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -664,6 +672,7 @@
         "processingRequired": "Dry clay before firing if making permanent hearths; select rocks that do not spall explosively when heated"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -741,6 +750,7 @@
         "processingRequired": "Knowledge of local toxins is mandatory preprocessing"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -826,6 +836,7 @@
         "processingRequired": "Filter to remove grit that scores wire"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -899,6 +910,7 @@
         "processingRequired": "Self-healing metallisation"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -972,6 +984,7 @@
         "processingRequired": "Milling to controlled particle size"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -1051,6 +1064,7 @@
         "processingRequired": "Die casting under vacuum to reduce porosity"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -1134,6 +1148,7 @@
         "processingRequired": "Degas and dry before energisation"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -1211,6 +1226,7 @@
         "processingRequired": "Extrusion"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -1286,6 +1302,7 @@
         "processingRequired": "Dry, degas, test BDV"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -1361,6 +1378,7 @@
         "processingRequired": "Sand splinters away"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -1439,6 +1457,7 @@
         "processingRequired": "Shape to reduce snagging on bottom"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -1515,6 +1534,7 @@
         "processingRequired": "Tempering, lamination, anti-ice coatings"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -1590,6 +1610,7 @@
         "processingRequired": "Glaze food-safe; boil new crocks before first acid fill"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -1674,6 +1695,7 @@
         "processingRequired": "Calcine to quicklime if needed before batching"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -1748,6 +1770,7 @@
         "processingRequired": "Spheroidisation and carbon coating"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -1823,6 +1846,7 @@
         "processingRequired": "Glazing and proof testing"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -1899,6 +1923,7 @@
         "processingRequired": "Refining, desulphurisation modern"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -1973,6 +1998,7 @@
         "processingRequired": "Wear levelling firmware"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -2051,6 +2077,7 @@
         "processingRequired": "Calcined lime reacts in furnace"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -2125,6 +2152,7 @@
         "processingRequired": "Sintered pellets in stainless cladding"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -2200,6 +2228,7 @@
         "processingRequired": "Facet coating anti-reflection"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -2276,6 +2305,7 @@
         "processingRequired": "Disperse to submicron to avoid clogging"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -2352,6 +2382,7 @@
         "processingRequired": "Grain direction aligned to press"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -2428,6 +2459,7 @@
         "processingRequired": "Sintering and gapping"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -2503,6 +2535,7 @@
         "processingRequired": "Proper overlap and anchoring"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -2584,6 +2617,7 @@
         "processingRequired": "Clean tendons, dry, split into ribbons, twist wet then dry under tension"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -2660,6 +2694,7 @@
         "processingRequired": "If using halogens, measure mass per litre from manufacturer tables adapted to temperature"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -2735,6 +2770,7 @@
         "processingRequired": "Bake-out before first charge"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -2810,6 +2846,7 @@
         "processingRequired": "Pre-stretch and dry before final tensioning"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -2892,6 +2929,7 @@
         "processingRequired": "Sized lumps for consistent bed permeability"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -2967,6 +3005,7 @@
         "processingRequired": "Boil and cool if biological contamination suspected"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -3050,6 +3089,7 @@
         "processingRequired": "Size mix to fist test — should crumble not ooze"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -3124,6 +3164,7 @@
         "processingRequired": "Tempering for mechanical load"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -3177,6 +3218,7 @@
         "processingRequired": "Intergenerational teaching institutions"
       }
     ],
+    "maturity": "draft",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -3258,6 +3300,7 @@
         "processingRequired": "Softening and oxygen scavenging when chemistry available"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -3333,6 +3376,7 @@
         "processingRequired": "Sizing for stoker or hand firing"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -3410,6 +3454,7 @@
         "processingRequired": "Biocide and screens for fouling control"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -3503,6 +3548,7 @@
         "processingRequired": "Metallurgical knowledge to avoid embrittling phases"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -3580,6 +3626,7 @@
         "processingRequired": "Cut to size; multiple layers for blood containment if flakes pierce"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -3655,6 +3702,7 @@
         "processingRequired": "Reflow assembly"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -3742,6 +3790,7 @@
         "processingRequired": "Electrorefining to conductivity grades"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -3817,6 +3866,7 @@
         "processingRequired": "Clean before relube — solvent risks to seals"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -3892,6 +3942,7 @@
         "processingRequired": "Clarify by heating and settling if gritty"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -3969,6 +4020,7 @@
         "processingRequired": "Match lubricant to load and temperature"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -4047,6 +4099,7 @@
         "processingRequired": "Clarify to remove abrasive grit"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -4124,6 +4177,7 @@
         "processingRequired": "Controlled waste neutralisation"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -4200,6 +4254,7 @@
         "processingRequired": "Trap hydrocarbon backstreaming"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,
@@ -4277,6 +4332,7 @@
         "processingRequired": "Layering, pressing, polishing"
       }
     ],
+    "maturity": "researched",
     "verification": {
       "status": "unverified",
       "reviewedBy": null,

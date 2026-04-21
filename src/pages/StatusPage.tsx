@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { LoadingState } from "../components/ui/LoadingState";
 import { useTechnologies } from "../hooks/useTechnologies";
-import type { TechCategory, VerificationStatus } from "../types/technology";
+import type { EntryMaturity, TechCategory, VerificationStatus } from "../types/technology";
 import { computeCodexScore } from "../utils/codexScore";
 import { hazardDefinition, hazardRiskLevel, inferHazards } from "../utils/hazards";
 
@@ -54,6 +54,18 @@ export function StatusPage() {
     };
     for (const t of techs) u[t.verification.status] += 1;
     return u;
+  }, [techs]);
+
+  const maturityCounts = useMemo(() => {
+    const counts: Record<EntryMaturity, number> = {
+      stub: 0,
+      draft: 0,
+      researched: 0,
+      "review-needed": 0,
+      "field-guide-ready": 0,
+    };
+    for (const t of techs) counts[t.maturity] += 1;
+    return counts;
   }, [techs]);
 
   const expertVerified = verificationCounts["expert-verified"];
@@ -213,6 +225,30 @@ export function StatusPage() {
           </Link>{" "}
           and the repository CONTRIBUTING guide.
         </p>
+      </section>
+
+      <section className="mt-14">
+        <h2 className="font-display text-2xl font-semibold text-codex-text">Documentation maturity</h2>
+        <p className="mt-2 max-w-3xl text-sm text-codex-secondary">
+          Maturity tracks how complete the documentation is. It is separate from expert
+          verification: an entry can be well researched and still unverified.
+        </p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          {(
+            [
+              ["stub", "Stub"],
+              ["draft", "Draft"],
+              ["researched", "Researched"],
+              ["review-needed", "Review needed"],
+              ["field-guide-ready", "Field guide ready"],
+            ] as const
+          ).map(([key, label]) => (
+            <div key={key} className="rounded border border-codex-border bg-codex-surface p-4">
+              <p className="font-mono text-xs text-codex-muted">{label}</p>
+              <p className="mt-1 text-2xl font-semibold text-codex-text">{maturityCounts[key]}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="mt-14">

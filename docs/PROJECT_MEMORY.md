@@ -35,6 +35,7 @@ The project has five major pillars:
 - Foundations Mode at `/foundations`.
 - Pathfinder v1 at `/pathfinder`.
 - Hazard inference and visible risk classification.
+- Entry maturity levels separate from verification.
 - Route-level code splitting.
 - Lazy full-entry technology loading.
 - Generated lightweight technology summaries.
@@ -51,7 +52,8 @@ Read `/home/starking/.pi/civilizationx-agent-board.json`.
 As of the last update:
 
 - `CIVX-PERF-001` is done.
-- Active task is `CIVX-SCHEMA-001`: add entry maturity levels.
+- `CIVX-SCHEMA-001` is done.
+- Active task is `CIVX-ATLAS-001`: normalize raw materials for Atlas search.
 
 ## Important Files
 
