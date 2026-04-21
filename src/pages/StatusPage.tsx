@@ -5,6 +5,7 @@ import { useTechnologies } from "../hooks/useTechnologies";
 import type { EntryMaturity, TechCategory, VerificationStatus } from "../types/technology";
 import { computeCodexScore } from "../utils/codexScore";
 import { aggregateRawMaterials } from "../utils/atlasAggregator";
+import { computeCapabilityReadiness } from "../utils/capabilities";
 import { hazardDefinition, hazardRiskLevel, inferHazards } from "../utils/hazards";
 
 const PLANNED: Record<TechCategory, number> = {
@@ -82,6 +83,15 @@ export function StatusPage() {
   const groupedMaterialCount = useMemo(
     () => canonicalMaterials.filter((material) => material.sourceNames.length > 1).length,
     [canonicalMaterials]
+  );
+  const capabilityRows = useMemo(() => computeCapabilityReadiness(techs), [techs]);
+  const averageCapabilityReadiness = useMemo(() => {
+    if (capabilityRows.length === 0) return 0;
+    return Math.round(capabilityRows.reduce((sum, capability) => sum + capability.readiness, 0) / capabilityRows.length);
+  }, [capabilityRows]);
+  const serviceableCapabilities = useMemo(
+    () => capabilityRows.filter((capability) => capability.readiness >= 60).length,
+    [capabilityRows]
   );
 
   const branchesCovered = useMemo(() => {
@@ -179,6 +189,75 @@ export function StatusPage() {
         <StatCard label="Canonical materials" value={String(canonicalMaterials.length)} />
         <StatCard label="Raw material mentions" value={String(rawMaterialMentionCount)} />
         <StatCard label="Grouped material aliases" value={String(groupedMaterialCount)} />
+        <StatCard label="Avg capability readiness" value={`${averageCapabilityReadiness}%`} />
+        <StatCard label="Serviceable capabilities" value={`${serviceableCapabilities}/${capabilityRows.length}`} />
+      </section>
+
+      <section className="mt-14">
+        <h2 className="font-display text-2xl font-semibold text-codex-text">Capability readiness matrix</h2>
+        <p className="mt-2 max-w-3xl text-sm text-codex-secondary">
+          This groups entries by the real capabilities a collapse-recovery or space-settlement manual must provide.
+          Readiness combines coverage, documentation maturity, source depth, missing anchor entries, and high-risk review
+          burden.
+        </p>
+        <div className="mt-6 grid gap-4">
+          {capabilityRows.map((capability) => (
+            <div key={capability.id} className="rounded-lg border border-codex-border bg-codex-card p-4">
+              <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <h3 className="font-display text-lg font-semibold text-codex-text">{capability.name}</h3>
+                  <p className="mt-1 max-w-3xl text-sm text-codex-secondary">{capability.mission}</p>
+                </div>
+                <div className="shrink-0 text-left md:text-right">
+                  <p className="font-display text-2xl font-bold text-codex-gold">{capability.readiness}%</p>
+                  <p className="font-mono text-[10px] uppercase tracking-wide text-codex-muted">
+                    {capability.status}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-4 h-2 overflow-hidden rounded bg-codex-border">
+                <div className="h-full bg-codex-blue" style={{ width: `${capability.readiness}%` }} />
+              </div>
+              <div className="mt-4 grid gap-3 text-xs text-codex-secondary sm:grid-cols-2 lg:grid-cols-5">
+                <p>
+                  <span className="font-mono text-codex-muted">Entries:</span> {capability.entries.length}/
+                  {capability.targetEntries}
+                </p>
+                <p>
+                  <span className="font-mono text-codex-muted">Researched:</span> {capability.researchedEntries}
+                </p>
+                <p>
+                  <span className="font-mono text-codex-muted">Sourced:</span> {capability.sourcedEntries}
+                </p>
+                <p>
+                  <span className="font-mono text-codex-muted">Field-ready:</span> {capability.fieldGuideReadyEntries}
+                </p>
+                <p>
+                  <span className="font-mono text-codex-muted">High risk:</span> {capability.hazardousEntries}
+                </p>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {capability.entries.slice(0, 8).map((tech) => (
+                  <Link
+                    key={tech.id}
+                    to={`/tech/${tech.id}`}
+                    className="rounded-full border border-codex-border px-3 py-1 text-xs text-codex-secondary hover:border-codex-blue hover:text-codex-blue"
+                  >
+                    {tech.name}
+                  </Link>
+                ))}
+                {capability.entries.length > 8 ? (
+                  <span className="rounded-full border border-codex-border px-3 py-1 text-xs text-codex-muted">
+                    +{capability.entries.length - 8} more
+                  </span>
+                ) : null}
+              </div>
+              {capability.gaps.length > 0 ? (
+                <p className="mt-4 text-xs text-codex-muted">Gaps: {capability.gaps.join(", ")}</p>
+              ) : null}
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="mt-14">

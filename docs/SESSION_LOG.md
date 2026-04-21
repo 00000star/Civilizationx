@@ -61,3 +61,23 @@ Current active task after this session:
 ```text
 CIVX-CAP-001: Add capability readiness matrix
 ```
+
+Additional work completed:
+
+- Added deterministic capability definitions for core civilization functions.
+- Added readiness scoring based on coverage, maturity, source depth, missing anchors, and high-risk review burden.
+- Surfaced the readiness matrix on the Status page with linked entries and visible gaps.
+
+Checks passed:
+
+```bash
+npm run validate-data
+npm run lint
+npm run build
+```
+
+Current active task after this session:
+
+```text
+None. Create the next `.pi` task before adding more implementation.
+```

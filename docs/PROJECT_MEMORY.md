@@ -37,6 +37,7 @@ The project has five major pillars:
 - Hazard inference and visible risk classification.
 - Entry maturity levels separate from verification.
 - Canonical raw material grouping for Atlas search.
+- Capability readiness matrix on Status page.
 - Route-level code splitting.
 - Lazy full-entry technology loading.
 - Generated lightweight technology summaries.
@@ -55,7 +56,8 @@ As of the last update:
 - `CIVX-PERF-001` is done.
 - `CIVX-SCHEMA-001` is done.
 - `CIVX-ATLAS-001` is done.
-- Active task is `CIVX-CAP-001`: add capability readiness matrix.
+- `CIVX-CAP-001` is done.
+- No active `.pi` task is currently open.
 
 ## Important Files
 
@@ -73,6 +75,7 @@ As of the last update:
 - Pathfinder: `src/pages/PathfinderPage.tsx`, `src/utils/pathfinder.ts`
 - Hazards: `src/utils/hazards.ts`
 - Material normalization: `src/utils/materials.ts`, `src/utils/atlasAggregator.ts`
+- Capability readiness: `src/utils/capabilities.ts`, `src/pages/StatusPage.tsx`
 
 ## Required Checks
 
