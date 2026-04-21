@@ -4,6 +4,7 @@ import { LoadingState } from "../components/ui/LoadingState";
 import { useTechnologies } from "../hooks/useTechnologies";
 import type { EntryMaturity, TechCategory, VerificationStatus } from "../types/technology";
 import { computeCodexScore } from "../utils/codexScore";
+import { aggregateRawMaterials } from "../utils/atlasAggregator";
 import { hazardDefinition, hazardRiskLevel, inferHazards } from "../utils/hazards";
 
 const PLANNED: Record<TechCategory, number> = {
@@ -72,6 +73,15 @@ export function StatusPage() {
   const withSources = useMemo(
     () => techs.filter((t) => t.verification.sources.length >= 3).length,
     [techs]
+  );
+  const rawMaterialMentionCount = useMemo(
+    () => techs.reduce((sum, tech) => sum + tech.rawMaterials.length, 0),
+    [techs]
+  );
+  const canonicalMaterials = useMemo(() => aggregateRawMaterials(techs), [techs]);
+  const groupedMaterialCount = useMemo(
+    () => canonicalMaterials.filter((material) => material.sourceNames.length > 1).length,
+    [canonicalMaterials]
   );
 
   const branchesCovered = useMemo(() => {
@@ -166,6 +176,9 @@ export function StatusPage() {
         <StatCard label="Knowledge branches represented" value={String(branchesCovered)} />
         <StatCard label="Branches with zero entries (of 13 categories)" value={String(branchesWithZero)} />
         <StatCard label="Entries with ≥3 sources" value={String(withSources)} />
+        <StatCard label="Canonical materials" value={String(canonicalMaterials.length)} />
+        <StatCard label="Raw material mentions" value={String(rawMaterialMentionCount)} />
+        <StatCard label="Grouped material aliases" value={String(groupedMaterialCount)} />
       </section>
 
       <section className="mt-14">

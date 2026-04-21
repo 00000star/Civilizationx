@@ -1,8 +1,10 @@
 import type { Technology } from "../types/technology";
+import { materialKey, materialLabel } from "./materials";
 
 export type AtlasMaterial = {
   key: string;
   name: string;
+  sourceNames: string[];
   purpose: string;
   earthLocations: string[];
   spaceAlternatives: string;
@@ -18,16 +20,12 @@ export type AtlasMaterial = {
 
 const HAZARD = /\b(toxic|corrosive|acid|alkali|flammable|radiation|poison|fume)\b/i;
 
-function normKey(name: string): string {
-  return name.trim().toLowerCase();
-}
-
 export function aggregateRawMaterials(technologies: Technology[]): AtlasMaterial[] {
   const map = new Map<string, AtlasMaterial>();
 
   for (const tech of technologies) {
     for (const m of tech.rawMaterials) {
-      const key = normKey(m.name);
+      const key = materialKey(m.name);
       const existing = map.get(key);
       const spaceAlt = (m.spaceAlternatives ?? "").trim();
       const earthOnly =
@@ -37,6 +35,7 @@ export function aggregateRawMaterials(technologies: Technology[]): AtlasMaterial
         );
 
       if (existing) {
+        if (!existing.sourceNames.includes(m.name)) existing.sourceNames.push(m.name);
         existing.techIds.push(tech.id);
         existing.techNames.push(tech.name);
         existing.count = existing.techIds.length;
@@ -59,7 +58,8 @@ export function aggregateRawMaterials(technologies: Technology[]): AtlasMaterial
       } else {
         map.set(key, {
           key,
-          name: m.name,
+          name: materialLabel(key, m.name),
+          sourceNames: [m.name],
           purpose: m.purpose,
           earthLocations: [...m.earthLocations],
           spaceAlternatives: spaceAlt,
@@ -80,7 +80,7 @@ export function aggregateRawMaterials(technologies: Technology[]): AtlasMaterial
     v.critical = v.count >= 3;
     v.hazardous = HAZARD.test(v.processingRequired) || v.techIds.some((id) => {
       const t = technologies.find((x) => x.id === id);
-      return t?.rawMaterials.some((rm) => normKey(rm.name) === v.key && HAZARD.test(rm.processingRequired));
+      return t?.rawMaterials.some((rm) => materialKey(rm.name) === v.key && HAZARD.test(rm.processingRequired));
     });
   }
 

@@ -3,34 +3,33 @@
 Current active task:
 
 ```text
-CIVX-ATLAS-001: Normalize raw materials for Atlas search
+CIVX-CAP-001: Add capability readiness matrix
 ```
 
 ## Goal
 
-Normalize raw materials so Atlas can group and search materials consistently.
+Show the project as a civilization capability map, not only a list of technologies.
 
-Current Atlas aggregates by free-text material names. That works for 56 entries, but will not scale as the project grows.
+The next useful layer is a readiness matrix that answers: which core civilization capabilities can the current knowledge base explain from primitive inputs, and which still have missing links?
 
 ## Proposed Outcome
 
-- Add a normalized material key or derive one consistently.
-- Reduce duplicate material names.
-- Keep Earth locations and space alternatives visible.
-- Prepare for a future material catalogue.
+- Add capability groups such as water, food, shelter, materials, energy, medicine, communication, and computing.
+- Map existing technologies into those groups deterministically.
+- Show per-capability counts, maturity, source depth, and hazard exposure.
+- Make gaps visible so future content work targets missing civilization functions, not random entries.
 
 ## Implementation Shape
 
-1. Inspect `src/utils/atlasAggregator.ts`.
-2. Add deterministic material key normalization.
-3. Add aliases for obvious duplicates if needed.
-4. Show normalized grouping in Atlas.
-5. Add status metric for material count.
+1. Add a capability utility that groups technologies by category and keywords.
+2. Add capability readiness metrics from maturity, verification, and hazards.
+3. Surface the matrix on the Status page or a dedicated route.
+4. Keep the algorithm deterministic and easy to validate.
+5. Update project memory and the `.pi` board.
 6. Run validation, lint, and build.
-7. Update `/home/starking/.pi/civilizationx-agent-board.json`.
 
 ## Just Completed
 
-`CIVX-SCHEMA-001` is complete.
+`CIVX-ATLAS-001` is complete.
 
-Maturity is now separate from verification and visible in detail pages, tree tooltips, summaries, and status metrics.
+Raw materials now use canonical keys for Atlas grouping and search while preserving source names, Earth locations, and space alternatives.

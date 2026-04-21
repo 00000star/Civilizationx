@@ -21,6 +21,8 @@ export function AtlasPage() {
       list = list.filter(
         (m) =>
           m.name.toLowerCase().includes(nq) ||
+          m.key.toLowerCase().includes(nq) ||
+          m.sourceNames.some((name) => name.toLowerCase().includes(nq)) ||
           m.purpose.toLowerCase().includes(nq) ||
           m.processingRequired.toLowerCase().includes(nq)
       );
@@ -135,6 +137,14 @@ function AtlasCard({ m }: { m: AtlasMaterial }) {
           </span>
         </div>
       </div>
+      <p className="mt-1 font-mono text-[10px] uppercase tracking-wide text-codex-muted">
+        Material key: {m.key}
+      </p>
+      {m.sourceNames.length > 1 ? (
+        <p className="mt-2 text-xs text-codex-muted">
+          Grouped source names: {m.sourceNames.join(", ")}
+        </p>
+      ) : null}
       <p className="mt-2 text-sm text-codex-secondary">{m.purpose}</p>
       <div className="mt-4">
         <h3 className="font-mono text-[10px] uppercase tracking-wide text-codex-muted">Earth locations</h3>

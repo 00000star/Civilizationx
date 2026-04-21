@@ -44,6 +44,9 @@ Additional work completed:
 - Added maturity to generated summaries.
 - Added maturity display to documentary pages and tree tooltips.
 - Added maturity counts to Status page.
+- Normalized Atlas raw material grouping with canonical material keys.
+- Preserved grouped source material names for traceability.
+- Added material normalization metrics to Status page.
 
 Checks passed:
 
@@ -51,4 +54,10 @@ Checks passed:
 npm run validate-data
 npm run lint
 npm run build
+```
+
+Current active task after this session:
+
+```text
+CIVX-CAP-001: Add capability readiness matrix
 ```

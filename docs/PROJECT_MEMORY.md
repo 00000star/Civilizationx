@@ -36,6 +36,7 @@ The project has five major pillars:
 - Pathfinder v1 at `/pathfinder`.
 - Hazard inference and visible risk classification.
 - Entry maturity levels separate from verification.
+- Canonical raw material grouping for Atlas search.
 - Route-level code splitting.
 - Lazy full-entry technology loading.
 - Generated lightweight technology summaries.
@@ -53,7 +54,8 @@ As of the last update:
 
 - `CIVX-PERF-001` is done.
 - `CIVX-SCHEMA-001` is done.
-- Active task is `CIVX-ATLAS-001`: normalize raw materials for Atlas search.
+- `CIVX-ATLAS-001` is done.
+- Active task is `CIVX-CAP-001`: add capability readiness matrix.
 
 ## Important Files
 
@@ -70,6 +72,7 @@ As of the last update:
 - Foundations: `src/pages/FoundationsPage.tsx`, `src/utils/foundations.ts`
 - Pathfinder: `src/pages/PathfinderPage.tsx`, `src/utils/pathfinder.ts`
 - Hazards: `src/utils/hazards.ts`
+- Material normalization: `src/utils/materials.ts`, `src/utils/atlasAggregator.ts`
 
 ## Required Checks
 
