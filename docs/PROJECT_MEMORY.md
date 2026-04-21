@@ -1,17 +1,17 @@
-# CivilizationX Project Memory
+# The Codex Project Memory
 
 This file is the compact long-term memory for future Codex sessions.
 
 ## Project Identity
 
-CivilizationX is an offline-first civilization bootstrap manual.
+The Codex is an offline-first civilization bootstrap manual.
 
 It has two mirror use cases:
 
 - Collapse recovery: rebuilding critical capabilities if modern supply chains and institutions fail.
 - Space settlement: building, repairing, and substituting technology away from Earth supply chains.
 
-The core thesis: Wikipedia explains what things are; CivilizationX explains how civilization has things.
+The core thesis: Wikipedia explains what things are; The Codex explains how civilization has things.
 
 ## Product Model
 
@@ -57,11 +57,13 @@ As of the last update:
 - `CIVX-SCHEMA-001` is done.
 - `CIVX-ATLAS-001` is done.
 - `CIVX-CAP-001` is done.
-- No active `.pi` task is currently open.
+- `CODEX-LAUNCH-001` is done.
+- Active task is `CODEX-CONTENT-001`: upgrade primitive bootstrap entries to field-guide depth.
 
 ## Important Files
 
 - Vision: `docs/VISION.md`
+- Build specification: `docs/BUILD_SPEC.md`
 - Roadmap: `docs/ROADMAP.md`
 - Master plan: `docs/MASTER_PLAN.md`
 - Jira docs: `docs/jira/`
@@ -76,6 +78,7 @@ As of the last update:
 - Hazards: `src/utils/hazards.ts`
 - Material normalization: `src/utils/materials.ts`, `src/utils/atlasAggregator.ts`
 - Capability readiness: `src/utils/capabilities.ts`, `src/pages/StatusPage.tsx`
+- Local launcher: `scripts/launch-codex.mjs`, `launch-codex.sh`
 
 ## Required Checks
 

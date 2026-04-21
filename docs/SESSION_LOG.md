@@ -81,3 +81,32 @@ Current active task after this session:
 ```text
 None. Create the next `.pi` task before adding more implementation.
 ```
+
+Additional work completed:
+
+- Captured the current product contract in `docs/BUILD_SPEC.md`.
+- Added `npm run launch` and `npm start`.
+- Added root launcher `./launch-codex.sh` that installs dependencies when missing and starts the app.
+- Updated README launch instructions.
+- Recorded that the public name is The Codex.
+- Queued `CODEX-CONTENT-001` for bottom-of-tree field-guide depth.
+
+Checks passed:
+
+```bash
+npm run validate-data
+npm run lint
+npm run build
+```
+
+Launch smoke test passed:
+
+```bash
+CODEX_NO_BROWSER=1 CODEX_PORT=5199 npm run launch
+```
+
+Current active task after this session:
+
+```text
+CODEX-CONTENT-001: Upgrade primitive bootstrap entries to field-guide depth
+```

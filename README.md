@@ -25,6 +25,22 @@ Wrong information in this tool can injure or kill people. Entries carry a **veri
 
 ## Development
 
+Fastest launch:
+
+```bash
+./launch-codex.sh
+```
+
+If dependencies are already installed, this is equivalent:
+
+```bash
+npm run launch
+```
+
+The launcher starts the Vite dev server at `http://127.0.0.1:5173/` and opens a browser when possible. Set `CODEX_NO_BROWSER=1` if you only want the server. Set `CODEX_PORT=5174` or another port if `5173` is busy.
+
+Manual development commands:
+
 ```bash
 npm install
 npm run dev
@@ -38,6 +54,7 @@ Data lives in `src/data/technologies/*.json` with `src/data/index.json` as the m
 ## Project plan
 
 - Vision: `docs/VISION.md`
+- Build specification: `docs/BUILD_SPEC.md`
 - Roadmap: `docs/ROADMAP.md`
 - Master plan and idea backlog: `docs/MASTER_PLAN.md`
 - Jira import and workflow: `docs/jira/README.md`

@@ -29,3 +29,11 @@ Reason: the project needs to scale beyond dozens of entries without making the f
 Decision: use `/home/starking/.pi/civilizationx-agent-board.json` as the active Jira-style board when live Atlassian Jira is unreachable.
 
 Reason: Jira credentials exist locally, but Atlassian connections timed out from this environment.
+
+## 2026-04-21: Public Name Is The Codex
+
+Decision: the public project name is **The Codex**.
+
+Reason: the name matches the seriousness of the artifact: a durable, offline-first record of how human technology works and how capabilities depend on one another.
+
+Consequence: user-facing app text, README, and build specification should use The Codex. Older local project-management filenames may still contain `civilizationx` for continuity, but new public documentation should prefer The Codex.

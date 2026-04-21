@@ -3,31 +3,32 @@
 Current active task:
 
 ```text
-No active `.pi` task. Create the next task before adding more implementation.
+CODEX-CONTENT-001: Upgrade primitive bootstrap entries to field-guide depth
 ```
 
 ## Goal
 
-Expand the next layer deliberately instead of adding random features.
+Upgrade the bottom-of-tree entries that both collapse recovery and space settlement depend on.
 
-The current sprint is complete. The next strongest target is content depth for the lowest-level bootstrap chain because that is the foundation for both collapse recovery and space settlement.
+The strongest next move is not another UI feature. It is improving the first-principles documentary depth of primitive technologies because every later branch rests on them.
 
 ## Proposed Outcome
 
-- Create a new `.pi` issue before implementation.
-- Prioritise bottom-of-tree documentary depth: fire, stone knapping, rope, shelter, clean water, cooking, ceramics, charcoal, basic hand tools.
-- Add missing source depth and field-guide-ready standards where safe.
-- Keep hazards and verification visible.
+- Audit fire, stone knapping, rope, shelter, sanitation and clean water, cooking, ceramics, charcoal, and basic hand tools.
+- Improve source depth, material locations, space alternatives, build-step warnings, and component completeness.
+- Keep hazardous content unverified unless expert review exists.
+- Update maturity only when the entry actually meets the standard.
 
 ## Implementation Shape
 
-1. Add a focused `.pi` task for one content-depth slice.
-2. Update entries in small batches.
-3. Run validation, lint, and build after each batch.
-4. Commit each completed slice.
+1. Start with a small batch: fire, stone knapping, and rope.
+2. Read each entry before editing.
+3. Patch only factual, schema-valid improvements.
+4. Run validation, lint, and build.
+5. Commit the completed batch.
 
 ## Just Completed
 
-`CIVX-CAP-001` is complete.
+`CODEX-LAUNCH-001` is complete.
 
-The Status page now includes a capability readiness matrix across water, food, shelter, tools, materials, energy, medicine, transport, communication, computing, science, and space ISRU readiness.
+The app now has `npm run launch`, `npm start`, `./launch-codex.sh`, README launch instructions, and `docs/BUILD_SPEC.md`.

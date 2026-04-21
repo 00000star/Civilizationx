@@ -5,8 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "launch": "node scripts/launch-codex.mjs",
+    "start": "npm run launch",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "check": "npm run validate-data && npm run lint && npm run build",
     "prebuild": "npm run generate-summaries",
     "preview": "vite preview",
     "validate-data": "node scripts/validate-technology-data.mjs",
