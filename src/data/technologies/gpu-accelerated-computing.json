@@ -1,0 +1,195 @@
+{
+  "id": "gpu-accelerated-computing",
+  "name": "GPU-Accelerated Computing",
+  "tagline": "Massively parallel computation for graphics, simulation, and ML training",
+  "category": "computing",
+  "era": "21st-century",
+  "difficulty": 5,
+  "prerequisites": [
+    "microprocessor",
+    "integrated-circuit",
+    "electrical-power-grid"
+  ],
+  "unlocks": [
+    "distributed-training",
+    "transformer-models"
+  ],
+  "problem": "Some workloads are dominated by linear algebra and parallel operations. CPUs excel at control flow, but they are inefficient for massive parallel numeric throughput.\n\nGPUs solve this by providing many simple cores and high memory bandwidth, enabling feasible training of large models and fast simulation.",
+  "overview": "A GPU executes many threads in parallel, typically in lockstep groups. Performance depends on memory access patterns, batching, and avoiding divergence. Modern ML relies on GPU kernels for matrix multiplies and attention.\n\nFor The Codex, GPUs are an infrastructure node: they require power, cooling, and software stacks, and they shift 'AI from scratch' from theory to practice when combined with datasets and training pipelines.",
+  "principles": [
+    {
+      "name": "Parallel throughput",
+      "explanation": "Many simple cores trade latency for throughput on data-parallel tasks."
+    },
+    {
+      "name": "Memory bandwidth",
+      "explanation": "Bandwidth and locality often dominate performance; compute alone is not the bottleneck."
+    },
+    {
+      "name": "Kernel fusion and batching",
+      "explanation": "Combine operations to reduce memory traffic and improve utilization."
+    }
+  ],
+  "components": [
+    {
+      "id": "gpu",
+      "name": "GPU device",
+      "function": "Executes parallel kernels",
+      "position": "Compute node",
+      "madeFrom": "ICs, memory, power delivery"
+    },
+    {
+      "id": "memory",
+      "name": "High-bandwidth memory",
+      "function": "Feeds compute cores",
+      "position": "On-board",
+      "madeFrom": "GDDR/HBM"
+    },
+    {
+      "id": "cooling",
+      "name": "Cooling system",
+      "function": "Removes heat",
+      "position": "Chassis/rack",
+      "madeFrom": "Heatsinks, fans, liquid loops"
+    },
+    {
+      "id": "software",
+      "name": "Kernel and runtime stack",
+      "function": "Schedules and executes kernels",
+      "position": "Software layer",
+      "madeFrom": "Drivers, libraries"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    },
+    {
+      "name": "Semiconductor devices",
+      "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+      "earthLocations": [
+        "Global semiconductor supply chains; packaged IC distributors"
+      ],
+      "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+      "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+    },
+    {
+      "name": "Documentation and standards",
+      "purpose": "Make designs reproducible and debuggable across teams and time",
+      "earthLocations": [
+        "Libraries, universities, standards bodies, archived web"
+      ],
+      "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+      "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+    },
+    {
+      "name": "Cooling capacity",
+      "purpose": "Heat rejection for sustained compute",
+      "earthLocations": [
+        "Air/liquid cooling systems; HVAC infrastructure"
+      ],
+      "spaceAlternatives": "Radiators and thermal management are first-class constraints; power-limited regimes favor smaller models and efficient inference.",
+      "processingRequired": "Thermal design, monitoring, and maintenance routines."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Provision power and cooling first",
+      "description": "Ensure stable power delivery, airflow/liquid loops, and monitoring before running sustained workloads.",
+      "prerequisiteTools": [
+        "power monitoring"
+      ],
+      "warningNote": "Thermal runaway causes hardware failures."
+    },
+    {
+      "order": 2,
+      "title": "Install runtime stack",
+      "description": "Use stable drivers and compute libraries; lock versions and document environment.",
+      "prerequisiteTools": [
+        "software management"
+      ],
+      "warningNote": "Unpinned versions cause unreproducible results."
+    },
+    {
+      "order": 3,
+      "title": "Benchmark kernels",
+      "description": "Test matrix multiply throughput and memory bandwidth; detect bottlenecks.",
+      "prerequisiteTools": [
+        "benchmarks"
+      ],
+      "warningNote": "Compute underutilization wastes power."
+    },
+    {
+      "order": 4,
+      "title": "Train with checkpointing and monitoring",
+      "description": "Track utilization, temperature, errors, and training stability.",
+      "prerequisiteTools": [
+        "monitoring"
+      ],
+      "warningNote": "Silent errors can corrupt models."
+    }
+  ],
+  "history": [
+    {
+      "year": "2000s",
+      "event": "GPUs shift from fixed-function graphics to programmable compute.",
+      "location": "Global"
+    },
+    {
+      "year": "2010s",
+      "event": "GPU computing becomes central to deep learning.",
+      "location": "Global"
+    },
+    {
+      "year": "2020s",
+      "event": "Specialized accelerators and efficient kernels dominate scaling.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "GPU computing makes modern AI training and simulation feasible and drives a new industrial layer: data centers, cooling, and specialized software stacks.\n\nIn The Codex, GPUs are a bottleneck node: without them (or equivalents), large-model training becomes slow or impractical.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-gpu-accelerated-computing",
+      "title": "Wikipedia — GPU-Accelerated Computing",
+      "url": "https://en.wikipedia.org/wiki/GPU-Accelerated_Computing"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "cuda-programming-guide",
+        "title": "NVIDIA CUDA C++ Programming Guide",
+        "type": "institution",
+        "url": "https://docs.nvidia.com/cuda/cuda-c-programming-guide/"
+      },
+      {
+        "id": "wiki-gpu",
+        "title": "Wikipedia — Graphics processing unit",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Graphics_processing_unit"
+      },
+      {
+        "id": "goodfellow-dl",
+        "title": "Goodfellow, Bengio, Courville — Deep Learning",
+        "type": "book",
+        "url": "https://www.deeplearningbook.org/"
+      }
+    ]
+  }
+}

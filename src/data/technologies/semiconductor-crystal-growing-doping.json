@@ -11,6 +11,7 @@
     "glass-making"
   ],
   "unlocks": [
+    "integrated-circuit",
     "transistor"
   ],
   "problem": "Polycrystalline silicon is fine for soup pots and alloys; transistors demand monocrystals where atoms line up for micrometres without grain boundaries stealing carriers. The manufacturing problem couples heat, chemistry, and paranoia: melts attack crucibles; oxygen sneaks in at parts per billion and becomes precipitates; a single dislocation line can nucleate breakdown.\n\nDoping is dosage medicine for crystals — a few parts per million phosphorus shifts resistivity dramatically. Ion implantation shoots ions to controllable depths; annealing repairs lattice damage while activating dopants — thermal budgets fight each other.\n\nWafers must be flatter than intuition allows so lithography later pretends the world is Euclidean. Without crystal discipline, solid-state devices remain germanium whisker curiosities; with it, fabs etch billions of identical features.\n\nRecovery means protecting not only pullers but the trace labs that prove purity — ignorance is measured in yield loss.",

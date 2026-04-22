@@ -12,6 +12,7 @@
   ],
   "unlocks": [
     "radio-broadcast-and-receiver",
+    "stored-program-computer",
     "transistor"
   ],
   "problem": "Crystals could detect radio waves, but stable amplification eluded early builders until thermionic valves appeared: heat a cathode until it boils electrons, pull them across vacuum with a positive plate, and modulate the flow with a grid that demands almost no power — gain from geometry and temperature, not from microscopic junctions yet.\n\nVacuum is the unsung hero and villain. Residual gas ionises under high fields; getters swallow molecules after seal-off; pumps must reach hard vacuum before the oxide cathode dies from poisoning. Tubes are hot, fragile, and microphonic — mechanical vibration becomes signal.\n\nStill, tubes taught entire generations how amplifiers think: bias points, load lines, and screen grids are portable metaphors even after silicon arrives. High-power radio and radar kept tubes relevant where semiconductors struggled with voltage and heat.\n\nFor recovery, glassblowing, pump science, and getter flashing are crafts as essential as winding transformers — lose them and you lose long-distance voice until someone relearns them painfully.",

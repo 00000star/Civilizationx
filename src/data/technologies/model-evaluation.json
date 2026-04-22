@@ -1,0 +1,185 @@
+{
+  "id": "model-evaluation",
+  "name": "Model Evaluation and Benchmarking",
+  "tagline": "Tests generalization, safety, and reliability beyond training metrics",
+  "category": "computing",
+  "era": "21st-century",
+  "difficulty": 4,
+  "prerequisites": [
+    "machine-learning",
+    "probability-and-statistics"
+  ],
+  "unlocks": [
+    "ai-safety-and-governance"
+  ],
+  "problem": "Models can look good in training and still fail catastrophically in the real world due to leakage, distribution shift, or adversarial edge cases.\n\nEvaluation solves the honesty problem: define tests that reflect real use, measure uncertainty, and keep results comparable across versions.",
+  "overview": "Evaluation uses held-out datasets, targeted stress tests, calibration checks, and red-teaming. It also includes operational monitoring after deployment, because the world changes.\n\nFor The Codex, evaluation is a safety layer: it prevents deploying models that are confident, wrong, and unbounded in harm.",
+  "principles": [
+    {
+      "name": "Separation of concerns",
+      "explanation": "Training metrics do not equal real-world performance; use independent tests."
+    },
+    {
+      "name": "Calibration",
+      "explanation": "Confidence should match correctness; overconfidence is dangerous."
+    },
+    {
+      "name": "Distribution shift",
+      "explanation": "Performance changes when data changes; monitor and adapt."
+    }
+  ],
+  "components": [
+    {
+      "id": "benchmarks",
+      "name": "Benchmarks",
+      "function": "Standard tasks and datasets",
+      "position": "Evaluation suite",
+      "madeFrom": "Curated test sets"
+    },
+    {
+      "id": "redteam",
+      "name": "Red-teaming",
+      "function": "Find failure modes intentionally",
+      "position": "Safety testing",
+      "madeFrom": "Prompts, scenarios, adversarial cases"
+    },
+    {
+      "id": "monitoring",
+      "name": "Monitoring",
+      "function": "Detect drift and regressions",
+      "position": "Operations",
+      "madeFrom": "Logs and alerts"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    },
+    {
+      "name": "Semiconductor devices",
+      "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+      "earthLocations": [
+        "Global semiconductor supply chains; packaged IC distributors"
+      ],
+      "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+      "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+    },
+    {
+      "name": "Documentation and standards",
+      "purpose": "Make designs reproducible and debuggable across teams and time",
+      "earthLocations": [
+        "Libraries, universities, standards bodies, archived web"
+      ],
+      "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+      "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+    },
+    {
+      "name": "Test datasets and scenarios",
+      "purpose": "Independent evaluation signals",
+      "earthLocations": [
+        "Curated datasets; domain test cases"
+      ],
+      "spaceAlternatives": "Use locally relevant scenarios and safety constraints; keep tests offline and versioned.",
+      "processingRequired": "Versioning, confidentiality controls, and consistent scoring."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Define evaluation goals",
+      "description": "Specify what failures matter (safety, accuracy, bias, robustness).",
+      "prerequisiteTools": [
+        "requirements"
+      ],
+      "warningNote": "Undefined goals lead to cargo-cult benchmarks."
+    },
+    {
+      "order": 2,
+      "title": "Build an evaluation suite",
+      "description": "Create held-out tests and stress tests; pin versions.",
+      "prerequisiteTools": [
+        "test harness"
+      ],
+      "warningNote": "Never evaluate on training data."
+    },
+    {
+      "order": 3,
+      "title": "Run pre-deploy gates",
+      "description": "Block releases that regress; require sign-off on safety-critical changes.",
+      "prerequisiteTools": [
+        "CI/CD"
+      ],
+      "warningNote": "Without gates, regressions accumulate."
+    },
+    {
+      "order": 4,
+      "title": "Monitor post-deploy",
+      "description": "Track drift and user feedback; retrain responsibly.",
+      "prerequisiteTools": [
+        "monitoring"
+      ],
+      "warningNote": "Unmonitored models silently fail."
+    }
+  ],
+  "history": [
+    {
+      "year": "1900s",
+      "event": "Statistical evaluation methods mature.",
+      "location": "Global"
+    },
+    {
+      "year": "2010s",
+      "event": "Benchmark culture expands with ML competitions and shared datasets.",
+      "location": "Global"
+    },
+    {
+      "year": "2020s",
+      "event": "Safety evaluation and red-teaming become central for large models.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Evaluation protects users and maintainers from false confidence. It enables responsible iteration and makes models comparable over time.\n\nIn The Codex, evaluation is part of the technology, not paperwork: it is the only way to know if an AI system actually works safely.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-model-evaluation",
+      "title": "Wikipedia — Model Evaluation and Benchmarking",
+      "url": "https://en.wikipedia.org/wiki/Model_Evaluation_and_Benchmarking"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "wiki-model-evaluation",
+        "title": "Wikipedia — Model selection",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Model_selection"
+      },
+      {
+        "id": "bishop-prml",
+        "title": "Bishop — Pattern Recognition and Machine Learning",
+        "type": "book"
+      },
+      {
+        "id": "nist-ai-rmf",
+        "title": "NIST AI Risk Management Framework",
+        "type": "institution",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+      }
+    ]
+  }
+}

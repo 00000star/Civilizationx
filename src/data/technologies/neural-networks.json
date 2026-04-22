@@ -1,0 +1,204 @@
+{
+  "id": "neural-networks",
+  "name": "Neural Networks",
+  "tagline": "Parameterized function approximators built from layers of simple units",
+  "category": "computing",
+  "era": "late-20th",
+  "difficulty": 5,
+  "prerequisites": [
+    "backpropagation",
+    "gradient-descent",
+    "linear-algebra",
+    "probability-and-statistics"
+  ],
+  "unlocks": [
+    "transformer-models"
+  ],
+  "problem": "Many phenomena are nonlinear and high-dimensional: vision, language, control, and forecasting. Linear models can be too weak, and rule-based systems are brittle.\n\nNeural networks approximate complex functions by composing simple nonlinear transformations. The challenge is training stability and generalization, not just expressive power.",
+  "overview": "A neural network maps inputs to outputs through layers: linear transforms plus nonlinear activations. Training adjusts parameters to minimize loss on data.\n\nArchitectures specialize: convolutional nets for images, recurrent nets for sequences, transformers for attention. The common backbone is differentiable composition trained by gradient methods.",
+  "principles": [
+    {
+      "name": "Universal approximation",
+      "explanation": "With sufficient capacity, networks can approximate many functions, but training and data constrain what is practical."
+    },
+    {
+      "name": "Regularization",
+      "explanation": "Techniques like weight decay, dropout, and early stopping reduce overfitting."
+    },
+    {
+      "name": "Initialization and normalization",
+      "explanation": "Good initialization and normalization stabilize gradients and speed learning."
+    }
+  ],
+  "components": [
+    {
+      "id": "layers",
+      "name": "Layers",
+      "function": "Compose transformations",
+      "position": "Model",
+      "madeFrom": "Linear weights and biases"
+    },
+    {
+      "id": "activations",
+      "name": "Activation functions",
+      "function": "Introduce nonlinearity",
+      "position": "Between layers",
+      "madeFrom": "Math functions like ReLU"
+    },
+    {
+      "id": "loss",
+      "name": "Loss and metrics",
+      "function": "Defines training objective",
+      "position": "Training loop",
+      "madeFrom": "Math definitions"
+    },
+    {
+      "id": "regularizers",
+      "name": "Regularizers",
+      "function": "Improve generalization",
+      "position": "Training loop",
+      "madeFrom": "Penalties and stochastic methods"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    },
+    {
+      "name": "Semiconductor devices",
+      "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+      "earthLocations": [
+        "Global semiconductor supply chains; packaged IC distributors"
+      ],
+      "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+      "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+    },
+    {
+      "name": "Documentation and standards",
+      "purpose": "Make designs reproducible and debuggable across teams and time",
+      "earthLocations": [
+        "Libraries, universities, standards bodies, archived web"
+      ],
+      "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+      "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+    },
+    {
+      "name": "Labeled data",
+      "purpose": "Supervised learning signals for many tasks",
+      "earthLocations": [
+        "Human annotation; sensors with ground truth"
+      ],
+      "spaceAlternatives": "Use simulation and self-supervision where labels are scarce; prioritize safe data generation.",
+      "processingRequired": "Label quality checks and bias audits."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Start with a baseline",
+      "description": "Implement a small network and a simple baseline model; compare honestly.",
+      "prerequisiteTools": [
+        "programming environment"
+      ],
+      "warningNote": "Skipping baselines hides whether the model helps."
+    },
+    {
+      "order": 2,
+      "title": "Train with stable settings",
+      "description": "Use reasonable learning rates, normalization, and regularization; log metrics.",
+      "prerequisiteTools": [
+        "compute"
+      ],
+      "warningNote": "Instability can look like 'random bad luck' if you don't log."
+    },
+    {
+      "order": 3,
+      "title": "Evaluate failure modes",
+      "description": "Perform error analysis; check calibration and robustness to shifts.",
+      "prerequisiteTools": [
+        "eval suite"
+      ],
+      "warningNote": "High average accuracy can hide catastrophic edge cases."
+    },
+    {
+      "order": 4,
+      "title": "Scale only after correctness",
+      "description": "Increase model size or data only after the pipeline is correct and measurable.",
+      "prerequisiteTools": [
+        "monitoring"
+      ],
+      "warningNote": "Scaling amplifies bugs and costs."
+    }
+  ],
+  "history": [
+    {
+      "year": "1940s-60s",
+      "event": "Early neural models and perceptrons proposed.",
+      "location": "Global"
+    },
+    {
+      "year": "1980s-90s",
+      "event": "Backprop training popularizes multilayer networks.",
+      "location": "Global"
+    },
+    {
+      "year": "2010s",
+      "event": "Deep learning becomes dominant in many perception tasks.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Neural networks enable flexible models that learn from data, impacting communication, science, and automation. They also introduce new failure modes: opacity, bias, and overconfidence.\n\nIn The Codex, neural networks are a prerequisite to modern AI but must be paired with rigorous evaluation and governance to be safe and useful.",
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Input, hidden transforms, activations, output, loss",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-neural-networks",
+      "title": "Wikipedia — Neural Networks",
+      "url": "https://en.wikipedia.org/wiki/Neural_Networks"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "goodfellow-dl-nn",
+        "title": "Goodfellow, Bengio, Courville — Deep Learning",
+        "type": "book",
+        "url": "https://www.deeplearningbook.org/"
+      },
+      {
+        "id": "wiki-nn",
+        "title": "Wikipedia — Artificial neural network",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Artificial_neural_network"
+      },
+      {
+        "id": "lecun-98",
+        "title": "LeCun et al. (1998) — Gradient-based learning applied to document recognition",
+        "type": "paper",
+        "url": "https://ieeexplore.ieee.org/document/726791"
+      }
+    ]
+  }
+}

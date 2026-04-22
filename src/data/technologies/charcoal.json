@@ -11,6 +11,7 @@
   "unlocks": [
     "glass-making",
     "iron-smelting",
+    "lime-production",
     "smelting-bronze-age",
     "soap-making",
     "steam-engine",
@@ -170,7 +171,16 @@
   ],
   "inventors": [],
   "impact": "Charcoal linked forests to metals. The ability to reach reducing, high-temperature zones inside furnaces made copper, bronze, and iron possible at civilisation scale. Charcoal also underwrote glass and lime industries.\n\nEnvironmentally, charcoal production drove deforestation where demand outpaced silviculture — a lesson for restart ethics: sustainable coppicing is part of the technology, not optional.\n\nModern hobby and industrial analogues exist, but the principle — preprocess fuel to match process chemistry — remains central in coke, powdered coal injection, and electric reduction research.",
-  "images": [],
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Dry biomass, low oxygen heat, pyrolysis, cooling, sorting",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
   "videos": [],
   "externalLinks": [
     {

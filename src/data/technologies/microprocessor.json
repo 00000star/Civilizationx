@@ -1,0 +1,195 @@
+{
+  "id": "microprocessor",
+  "name": "Microprocessor",
+  "tagline": "A CPU implemented as an integrated circuit, enabling personal and embedded computing",
+  "category": "computing",
+  "era": "late-20th",
+  "difficulty": 5,
+  "prerequisites": [
+    "integrated-circuit"
+  ],
+  "unlocks": [
+    "data-storage-systems",
+    "gpu-accelerated-computing"
+  ],
+  "problem": "General-purpose computing was once room-sized and rare. Civilization needs computation everywhere: control systems, communications, instrumentation, and eventually personal devices.\n\nMicroprocessors compress a CPU into a single chip, reducing cost and power while enabling mass deployment of programmable systems.",
+  "overview": "A microprocessor integrates arithmetic logic, registers, control, and interfaces. It executes instructions from memory and interacts with peripherals via buses.\n\nThe key to bootstrap is modularity: even if you cannot manufacture microprocessors locally, you can build robust systems around imported chips if you understand their constraints, power needs, and failure modes.",
+  "principles": [
+    {
+      "name": "Instruction execution",
+      "explanation": "Machine code drives a predictable state machine."
+    },
+    {
+      "name": "Memory hierarchy",
+      "explanation": "Caches and memory buses trade speed for capacity."
+    },
+    {
+      "name": "Clocking and timing",
+      "explanation": "Synchronous design requires stable clock distribution and timing margins."
+    }
+  ],
+  "components": [
+    {
+      "id": "core",
+      "name": "CPU core",
+      "function": "Executes instructions",
+      "position": "On-die",
+      "madeFrom": "Logic gates and registers"
+    },
+    {
+      "id": "bus",
+      "name": "Bus interface",
+      "function": "Communicates with memory/peripherals",
+      "position": "Pins/controllers",
+      "madeFrom": "Drivers and protocols"
+    },
+    {
+      "id": "power",
+      "name": "Power regulation",
+      "function": "Provides stable voltages",
+      "position": "Board level",
+      "madeFrom": "Regulators, capacitors"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    },
+    {
+      "name": "Semiconductor devices",
+      "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+      "earthLocations": [
+        "Global semiconductor supply chains; packaged IC distributors"
+      ],
+      "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+      "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+    },
+    {
+      "name": "Documentation and standards",
+      "purpose": "Make designs reproducible and debuggable across teams and time",
+      "earthLocations": [
+        "Libraries, universities, standards bodies, archived web"
+      ],
+      "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+      "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+    },
+    {
+      "name": "Printed circuit boards (PCBs)",
+      "purpose": "Mount and interconnect processors, memory, and peripherals",
+      "earthLocations": [
+        "Electronics manufacturing globally"
+      ],
+      "spaceAlternatives": "Local PCB fab is plausible with chemicals and precision; early off-world relies on imported boards and careful repair.",
+      "processingRequired": "Copper etching/lamination, soldering, inspection, and rework capability."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Select a processor and document constraints",
+      "description": "Pick an architecture; record voltage, clocking, and I/O requirements.",
+      "prerequisiteTools": [
+        "datasheets"
+      ],
+      "warningNote": "Wrong voltage kills chips instantly."
+    },
+    {
+      "order": 2,
+      "title": "Design stable power and clocking",
+      "description": "Add regulators, decoupling, and clock sources per reference designs.",
+      "prerequisiteTools": [
+        "multimeter",
+        "oscilloscope"
+      ],
+      "warningNote": "Power integrity issues cause intermittent faults."
+    },
+    {
+      "order": 3,
+      "title": "Bring up minimal firmware",
+      "description": "Boot a simple monitor; verify memory and I/O stepwise.",
+      "prerequisiteTools": [
+        "programmer"
+      ],
+      "warningNote": "Complex software before hardware validation wastes time."
+    },
+    {
+      "order": 4,
+      "title": "Add peripherals and tests",
+      "description": "Integrate storage/networking; add self-tests and logs.",
+      "prerequisiteTools": [
+        "test harness"
+      ],
+      "warningNote": "Without tests, repairs become folklore."
+    }
+  ],
+  "history": [
+    {
+      "year": "1970s",
+      "event": "Early microprocessors enable embedded and personal computing.",
+      "location": "Global"
+    },
+    {
+      "year": "1990s-2000s",
+      "event": "High-performance CPUs and SoCs proliferate.",
+      "location": "Global"
+    },
+    {
+      "year": "2010s-2020s",
+      "event": "Energy efficiency and integration dominate design.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Microprocessors make computation ubiquitous and enable automation, communication, and measurement across society.\n\nThey also deepen dependencies on semiconductor manufacturing; The Codex treats them as a node that can be imported and maintained even if not locally fabricated.",
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Instruction fetch, registers, ALU, bus, peripherals",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-microprocessor",
+      "title": "Wikipedia — Microprocessor",
+      "url": "https://en.wikipedia.org/wiki/Microprocessor"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "wiki-microprocessor",
+        "title": "Wikipedia — Microprocessor",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Microprocessor"
+      },
+      {
+        "id": "hennessy-patterson",
+        "title": "Hennessy & Patterson — Computer Architecture: A Quantitative Approach",
+        "type": "book"
+      },
+      {
+        "id": "arm-arch",
+        "title": "ARM Architecture Reference Manuals (general)",
+        "type": "institution",
+        "url": "https://developer.arm.com/documentation"
+      }
+    ]
+  }
+}

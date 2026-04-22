@@ -1,0 +1,198 @@
+{
+  "id": "bricks-and-fired-masonry",
+  "name": "Bricks and Fired Masonry",
+  "tagline": "Standardized fired units for durable construction and kilns",
+  "category": "construction",
+  "era": "ancient",
+  "difficulty": 2,
+  "prerequisites": [
+    "ceramics-and-pottery",
+    "fire"
+  ],
+  "unlocks": [
+    "concrete-portland-cement"
+  ],
+  "problem": "Unfired mud and irregular stone limit what you can build: walls erode in rain, joints shift, and repairs consume labor. Civilization needs repeatable structural units that can be produced in volume and assembled by many hands.\n\nFired bricks solve the repeatability problem. Standard sizes make arches, vaults, and kilns practical, and they enable durable urban infrastructure when timber or quality stone is scarce.",
+  "overview": "Brickmaking shapes clay-rich mixes into consistent blocks, dries them to remove water, then fires them to sinter minerals into a hard ceramic. The firing schedule matters: too cold and bricks remain weak; too hot and they vitrify or slump.\n\nFor recovery, bricks also bootstrap industry: better kilns enable better ceramics, lime, glass, and metal heat-treatment. Bricks are both a building material and a manufacturing enabler.",
+  "principles": [
+    {
+      "name": "Drying and shrinkage",
+      "explanation": "Water removal shrinks clay; controlled drying prevents cracking and warping."
+    },
+    {
+      "name": "Sintering",
+      "explanation": "Firing bonds particles into a strong ceramic without fully melting the body."
+    },
+    {
+      "name": "Thermal gradients",
+      "explanation": "Uneven heating creates stress; kiln design and stacking reduce gradients."
+    }
+  ],
+  "components": [
+    {
+      "id": "clay-body",
+      "name": "Clay body and temper",
+      "function": "Forms the brick matrix",
+      "position": "Brick interior",
+      "madeFrom": "Clay plus sand/grog/straw depending on recipe"
+    },
+    {
+      "id": "mold",
+      "name": "Mold or press",
+      "function": "Standardizes size and shape",
+      "position": "Forming station",
+      "madeFrom": "Wood or metal frames"
+    },
+    {
+      "id": "drying",
+      "name": "Drying racks",
+      "function": "Air-dry green bricks",
+      "position": "Sheltered airflow area",
+      "madeFrom": "Wood frames, mats"
+    },
+    {
+      "id": "kiln",
+      "name": "Brick kiln",
+      "function": "Fires bricks to strength",
+      "position": "Firing site",
+      "madeFrom": "Temporary clamp or permanent kiln"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Clay-rich soil",
+      "purpose": "Primary ceramic feedstock",
+      "earthLocations": [
+        "Riverbanks, floodplains, clay pits"
+      ],
+      "spaceAlternatives": "Regolith-based ceramics are plausible with binders and controlled sintering; early bricks may rely on sintered regolith blocks.",
+      "processingRequired": "Screen stones; adjust moisture; add temper to reduce cracking."
+    },
+    {
+      "name": "Temper (sand, grog, ash, straw)",
+      "purpose": "Controls shrinkage and cracking; improves handling",
+      "earthLocations": [
+        "Sand deposits; crushed fired ceramics; plant fibers"
+      ],
+      "spaceAlternatives": "Screened regolith grains can serve as temper; keep dust under control.",
+      "processingRequired": "Sieve to consistent grain size; pre-dry organic tempers."
+    },
+    {
+      "name": "Heat and kilns",
+      "purpose": "Calcination and firing for lime, bricks, and cement precursors",
+      "earthLocations": [
+        "Wood/charcoal/coal; industrial fuels"
+      ],
+      "spaceAlternatives": "Electric kilns powered by solar/nuclear; thermal insulation is critical for energy efficiency.",
+      "processingRequired": "Temperature control, refractory linings, and safe ventilation."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Prepare clay body",
+      "description": "Screen and knead clay; add temper until the mix forms without slumping or cracking on bending tests.",
+      "prerequisiteTools": [
+        "sieves",
+        "mixing pit"
+      ],
+      "warningNote": "Silica dust from dry materials is hazardous; dampen and ventilate."
+    },
+    {
+      "order": 2,
+      "title": "Mold bricks",
+      "description": "Use a consistent mold; pack firmly; strike off excess; demold onto drying boards.",
+      "prerequisiteTools": [
+        "molds",
+        "boards"
+      ],
+      "warningNote": "Inconsistent compaction causes weak bricks."
+    },
+    {
+      "order": 3,
+      "title": "Dry slowly",
+      "description": "Dry under shade with airflow; flip bricks; avoid direct sun or wind that dries one face too fast.",
+      "prerequisiteTools": [
+        "racks",
+        "tarps"
+      ],
+      "warningNote": "Fast drying cracks bricks; cracked bricks fail in walls."
+    },
+    {
+      "order": 4,
+      "title": "Fire to target hardness",
+      "description": "Stack to allow airflow; ramp temperature; hold; cool gradually. Keep a log for repeatability.",
+      "prerequisiteTools": [
+        "kiln",
+        "fuel"
+      ],
+      "warningNote": "Kilns are fire hazards; establish clear zones and extinguishing."
+    },
+    {
+      "order": 5,
+      "title": "Sort and test",
+      "description": "Reject underfired or cracked units; do simple ring and drop tests; keep best bricks for kilns and load-bearing work.",
+      "prerequisiteTools": [
+        "basic test protocol"
+      ],
+      "warningNote": "Do not use weak bricks in structural arches or tall walls."
+    }
+  ],
+  "history": [
+    {
+      "year": "Ancient",
+      "event": "Fired bricks enable durable urban construction in multiple regions.",
+      "location": "Mesopotamia, Indus, China"
+    },
+    {
+      "year": "Roman era",
+      "event": "Standardized brick and tile systems scale construction.",
+      "location": "Roman Empire"
+    },
+    {
+      "year": "Industrial era",
+      "event": "Mechanized presses and continuous kilns increase consistency.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Bricks allow standardized construction, durable drainage, and scalable kilns. They also reduce reliance on large timber or high-quality stone.\n\nIn the tech tree, bricks are a platform technology for higher-temperature processes: lime, glass, and metallurgy improve when kilns become reliable.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-bricks-and-fired-masonry",
+      "title": "Wikipedia — Bricks and Fired Masonry",
+      "url": "https://en.wikipedia.org/wiki/Bricks_and_Fired_Masonry"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "wiki-brick",
+        "title": "Wikipedia — Brick",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Brick"
+      },
+      {
+        "id": "britannica-brick",
+        "title": "Encyclopaedia Britannica — Brick",
+        "type": "institution",
+        "url": "https://www.britannica.com/technology/brick"
+      },
+      {
+        "id": "nps-brickwork",
+        "title": "NPS Preservation Brief 2: Repointing Mortar Joints in Historic Masonry Buildings",
+        "type": "institution",
+        "url": "https://www.nps.gov/orgs/1739/preservation-briefs.htm",
+        "note": "See Brief 2 for masonry mortar context and failure modes"
+      }
+    ]
+  }
+}

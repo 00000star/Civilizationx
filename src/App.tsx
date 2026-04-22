@@ -19,6 +19,9 @@ const FoundationsPage = lazy(() =>
 const PathfinderPage = lazy(() =>
   import("./pages/PathfinderPage").then((mod) => ({ default: mod.PathfinderPage }))
 );
+const PlannerPage = lazy(() =>
+  import("./pages/PlannerPage").then((mod) => ({ default: mod.PlannerPage }))
+);
 const SurvivePage = lazy(() =>
   import("./pages/SurvivePage").then((mod) => ({ default: mod.SurvivePage }))
 );
@@ -46,6 +49,7 @@ export default function App() {
             <Route path="/search" element={<SearchPage />} />
             <Route path="/foundations" element={<FoundationsPage />} />
             <Route path="/pathfinder" element={<PathfinderPage />} />
+            <Route path="/planner" element={<PlannerPage />} />
             <Route path="/survive" element={<SurvivePage />} />
             <Route path="/atlas" element={<AtlasPage />} />
             <Route path="/status" element={<StatusPage />} />

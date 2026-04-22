@@ -1,0 +1,187 @@
+{
+  "id": "probability-and-statistics",
+  "name": "Probability and Statistics",
+  "tagline": "Reasoning under uncertainty for measurement, decisions, and learning from data",
+  "category": "science",
+  "era": "industrial",
+  "difficulty": 4,
+  "prerequisites": [
+    "writing-early-systems",
+    "paper-and-ink-media"
+  ],
+  "unlocks": [
+    "dataset-curation",
+    "machine-learning",
+    "model-evaluation",
+    "neural-networks"
+  ],
+  "problem": "Real measurements are noisy and incomplete. Without a framework for uncertainty, you cannot distinguish signal from coincidence or design robust systems that survive variation.\n\nProbability models uncertainty; statistics turns observations into estimates with error bars. This is central to medicine, engineering safety, and machine learning.",
+  "overview": "Probability assigns models to random variables and events; statistics uses data to fit models, test hypotheses, and estimate parameters. The discipline is as much about avoiding self-deception as it is about formulas.\n\nFor AI, statistics governs generalization, evaluation, and calibration. For physical systems, it governs tolerances, reliability, and risk management.",
+  "principles": [
+    {
+      "name": "Random variables",
+      "explanation": "Model uncertain quantities; distributions encode plausible ranges and likelihoods."
+    },
+    {
+      "name": "Estimation",
+      "explanation": "Infer parameters from data with bias/variance tradeoffs and confidence intervals."
+    },
+    {
+      "name": "Hypothesis testing",
+      "explanation": "Evaluate evidence; interpret p-values and effect sizes carefully to avoid false certainty."
+    }
+  ],
+  "components": [
+    {
+      "id": "distribution",
+      "name": "Distributions",
+      "function": "Model variability",
+      "position": "Math model",
+      "madeFrom": "Probability functions"
+    },
+    {
+      "id": "sampling",
+      "name": "Sampling",
+      "function": "Connect models to observed data",
+      "position": "Data collection",
+      "madeFrom": "Experimental design"
+    },
+    {
+      "id": "inference",
+      "name": "Inference methods",
+      "function": "Estimate and test",
+      "position": "Analysis",
+      "madeFrom": "Algorithms and assumptions"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Paper and writing media",
+      "purpose": "Record calculations, assumptions, and experimental outcomes",
+      "earthLocations": [
+        "Ubiquitous globally"
+      ],
+      "spaceAlternatives": "Digital notes plus printed backups; radiation-safe storage for critical references.",
+      "processingRequired": "Consistent notation, units, and metadata."
+    },
+    {
+      "name": "Measurement tools",
+      "purpose": "Quantify reality so models are not guesswork",
+      "earthLocations": [
+        "Workshops, labs, trade supply"
+      ],
+      "spaceAlternatives": "Prefer multi-use instruments; maintain calibration artifacts and procedures.",
+      "processingRequired": "Calibration logs and error bounds (uncertainty)."
+    },
+    {
+      "name": "Time and attention",
+      "purpose": "Iterative learning, practice, and verification",
+      "earthLocations": [
+        "Human labor everywhere"
+      ],
+      "spaceAlternatives": "Training time is a hard constraint; plan curricula and drills early.",
+      "processingRequired": "Deliberate practice, peer review, and documentation."
+    },
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Define uncertainty explicitly",
+      "description": "Write what is random, what is fixed, and what you assume about noise.",
+      "prerequisiteTools": [
+        "paper"
+      ],
+      "warningNote": "Hidden assumptions create fragile conclusions."
+    },
+    {
+      "order": 2,
+      "title": "Collect representative samples",
+      "description": "Design sampling to match the question; record context and confounders.",
+      "prerequisiteTools": [
+        "measurement tools"
+      ],
+      "warningNote": "Biased sampling can overwhelm any analysis."
+    },
+    {
+      "order": 3,
+      "title": "Report error bounds",
+      "description": "Use confidence intervals or credible intervals; include effect sizes, not just significance.",
+      "prerequisiteTools": [
+        "analysis tools"
+      ],
+      "warningNote": "Point estimates without uncertainty invite disaster."
+    }
+  ],
+  "history": [
+    {
+      "year": "1600s-1800s",
+      "event": "Probability formalizes; statistics emerges with astronomy and social measurement.",
+      "location": "Europe"
+    },
+    {
+      "year": "1900s",
+      "event": "Modern statistical inference and experimental design mature.",
+      "location": "Global"
+    },
+    {
+      "year": "2000s",
+      "event": "Data-driven methods become central across domains.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Probability and statistics make uncertainty manageable and decisions auditable. They reduce superstition and improve safety when used honestly.\n\nIn The Codex, they are prerequisites for reliable medicine, engineering, and machine learning systems.",
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Sampling, distribution, estimate, interval, decision",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-probability-and-statistics",
+      "title": "Wikipedia — Probability and Statistics",
+      "url": "https://en.wikipedia.org/wiki/Probability_and_Statistics"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "casella-berger",
+        "title": "Casella & Berger — Statistical Inference",
+        "type": "book"
+      },
+      {
+        "id": "jaynes",
+        "title": "Jaynes — Probability Theory: The Logic of Science",
+        "type": "book"
+      },
+      {
+        "id": "wiki-probability",
+        "title": "Wikipedia — Probability theory",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Probability_theory"
+      }
+    ]
+  }
+}

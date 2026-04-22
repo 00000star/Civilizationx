@@ -1,0 +1,178 @@
+{
+  "id": "calculus-and-optimization",
+  "name": "Calculus and Optimization",
+  "tagline": "Rates of change and constrained minimization for engineering design and machine learning",
+  "category": "science",
+  "era": "industrial",
+  "difficulty": 4,
+  "prerequisites": [
+    "writing-early-systems",
+    "paper-and-ink-media"
+  ],
+  "unlocks": [
+    "backpropagation",
+    "gradient-descent",
+    "machine-learning"
+  ],
+  "problem": "Engineering and learning systems require choosing parameters to minimize cost or maximize performance under constraints. Without calculus and optimization, tuning becomes trial-and-error and does not scale.\n\nOptimization turns goals into math: define an objective, compute sensitivities, and take steps toward better solutions while respecting constraints and stability.",
+  "overview": "Calculus provides derivatives and integrals; optimization uses gradients, convexity, constraints, and numerical methods to find minima or maxima. Real problems are noisy, nonconvex, and constrained by resources.\n\nIn AI, gradient-based optimization trains models. In physical systems, optimization designs structures, controllers, and processes. The same discipline applies: stable algorithms and honest evaluation.",
+  "principles": [
+    {
+      "name": "Derivatives",
+      "explanation": "Local sensitivity; gradients point in the steepest ascent direction."
+    },
+    {
+      "name": "Constraints",
+      "explanation": "Real systems have limits; constrained optimization handles feasibility and tradeoffs."
+    },
+    {
+      "name": "Numerical stability",
+      "explanation": "Finite precision and noise affect optimization; step sizes and conditioning matter."
+    }
+  ],
+  "components": [
+    {
+      "id": "objective",
+      "name": "Objective function",
+      "function": "Defines what to optimize",
+      "position": "Model",
+      "madeFrom": "Math expression"
+    },
+    {
+      "id": "gradient",
+      "name": "Gradient",
+      "function": "Sensitivity of objective to parameters",
+      "position": "Optimization",
+      "madeFrom": "Derivatives"
+    },
+    {
+      "id": "constraints",
+      "name": "Constraints",
+      "function": "Limit feasible solutions",
+      "position": "Problem definition",
+      "madeFrom": "Inequalities/equalities"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Paper and writing media",
+      "purpose": "Record calculations, assumptions, and experimental outcomes",
+      "earthLocations": [
+        "Ubiquitous globally"
+      ],
+      "spaceAlternatives": "Digital notes plus printed backups; radiation-safe storage for critical references.",
+      "processingRequired": "Consistent notation, units, and metadata."
+    },
+    {
+      "name": "Measurement tools",
+      "purpose": "Quantify reality so models are not guesswork",
+      "earthLocations": [
+        "Workshops, labs, trade supply"
+      ],
+      "spaceAlternatives": "Prefer multi-use instruments; maintain calibration artifacts and procedures.",
+      "processingRequired": "Calibration logs and error bounds (uncertainty)."
+    },
+    {
+      "name": "Time and attention",
+      "purpose": "Iterative learning, practice, and verification",
+      "earthLocations": [
+        "Human labor everywhere"
+      ],
+      "spaceAlternatives": "Training time is a hard constraint; plan curricula and drills early.",
+      "processingRequired": "Deliberate practice, peer review, and documentation."
+    },
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Write the objective and constraints",
+      "description": "Define the goal in measurable terms; list constraints explicitly.",
+      "prerequisiteTools": [
+        "paper"
+      ],
+      "warningNote": "If you cannot write the objective, you cannot optimize it."
+    },
+    {
+      "order": 2,
+      "title": "Compute derivatives",
+      "description": "Derive gradients; verify with finite-difference checks on small cases.",
+      "prerequisiteTools": [
+        "calculator or computer"
+      ],
+      "warningNote": "Wrong gradients train the wrong system."
+    },
+    {
+      "order": 3,
+      "title": "Choose a stable method",
+      "description": "Select gradient descent variants or second-order methods; track conditioning and step size.",
+      "prerequisiteTools": [
+        "numerical tools"
+      ],
+      "warningNote": "Unstable steps diverge and hide the root cause."
+    }
+  ],
+  "history": [
+    {
+      "year": "1600s-1700s",
+      "event": "Calculus formalizes; optimization methods emerge.",
+      "location": "Europe"
+    },
+    {
+      "year": "1900s",
+      "event": "Convex optimization and numerical methods mature.",
+      "location": "Global"
+    },
+    {
+      "year": "2000s",
+      "event": "Optimization becomes central to ML training.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Optimization improves designs and reduces waste by making tradeoffs explicit. It also introduces failure modes: local minima, instability, and overfitting to metrics.\n\nIn The Codex, it is a prerequisite to modern control systems and to training large AI models.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-calculus-and-optimization",
+      "title": "Wikipedia — Calculus and Optimization",
+      "url": "https://en.wikipedia.org/wiki/Calculus_and_Optimization"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "boyd-vandenberghe",
+        "title": "Boyd & Vandenberghe — Convex Optimization",
+        "type": "book",
+        "url": "https://web.stanford.edu/~boyd/cvxbook/"
+      },
+      {
+        "id": "nocedal-wright",
+        "title": "Nocedal & Wright — Numerical Optimization",
+        "type": "book"
+      },
+      {
+        "id": "wiki-optimization",
+        "title": "Wikipedia — Mathematical optimization",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mathematical_optimization"
+      }
+    ]
+  }
+}

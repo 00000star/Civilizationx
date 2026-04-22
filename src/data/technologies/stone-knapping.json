@@ -174,7 +174,16 @@
   ],
   "inventors": [],
   "impact": "Stone tools define the archaeological record of technology for millions of years. They made carcass processing efficient enough to change nutrition, enabled woodworking for shelters and watercraft, and supported clothing production through hide scraping.\n\nKnapping's intellectual legacy is materials thinking: understanding how brittle solids fail is prerequisite for later masonry, glassworking, and metal chiselling. Even after bronze and iron, knapped gunflints remained militarily important into early modern times.\n\nFor collapse recovery, knapping is a bridge technology: it works without supply chains, using rocks widely distributed on Earth's surface.",
-  "images": [],
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Core, platform, strike angle, flake removal, finished edge",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
   "videos": [
     {
       "id": "knapping-basics",

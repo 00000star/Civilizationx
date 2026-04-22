@@ -1,0 +1,197 @@
+{
+  "id": "lime-production",
+  "name": "Lime Production (Calcination of Limestone)",
+  "tagline": "Turns limestone into quicklime and slaked lime for mortars, plasters, and early cement chemistry",
+  "category": "materials",
+  "era": "ancient",
+  "difficulty": 3,
+  "prerequisites": [
+    "fire",
+    "ceramics-and-pottery",
+    "charcoal"
+  ],
+  "unlocks": [
+    "concrete-portland-cement"
+  ],
+  "problem": "Stone and mud structures fail in rain and time: joints wash out, surfaces erode, and weak binders crack. You can stack rocks, but without a binder you cannot reliably build thin walls, arches, or durable plastered interiors.\n\nLime provides a scalable binder and finish. The problem it solves is a repeatable chemistry that turns loose aggregates into a coherent mass and protects surfaces from water and abrasion.",
+  "overview": "Lime is produced by heating limestone (calcium carbonate) to drive off carbon dioxide, leaving quicklime (calcium oxide). Adding water produces slaked lime (calcium hydroxide). Mixed with sand, slaked lime becomes lime mortar or plaster.\n\nLime mortars cure primarily by carbonation: calcium hydroxide reacts with CO2 from air to reform calcium carbonate. This makes curing slow but durable when protected from rapid drying and freezing.\n\nFor recovery, lime is a bridge binder before industrial Portland cement. It also teaches kiln control, safety around caustics, and moisture management in construction.",
+  "principles": [
+    {
+      "name": "Calcination",
+      "explanation": "Heating carbonates drives off CO2, changing mineral phase and reactivity."
+    },
+    {
+      "name": "Hydration",
+      "explanation": "Quicklime reacts exothermically with water to form slaked lime; process control prevents burns and spatter."
+    },
+    {
+      "name": "Carbonation curing",
+      "explanation": "Lime mortars harden by absorbing CO2 over time; airflow and humidity control matter."
+    }
+  ],
+  "components": [
+    {
+      "id": "kiln",
+      "name": "Kiln",
+      "function": "Provides sustained high temperature for calcination",
+      "position": "Firing site",
+      "madeFrom": "Refractory bricks/stone, insulation"
+    },
+    {
+      "id": "feedstock",
+      "name": "Limestone feedstock",
+      "function": "Carbonate source",
+      "position": "Kiln charge",
+      "madeFrom": "CaCO3-rich rock"
+    },
+    {
+      "id": "fuel",
+      "name": "Fuel and airflow",
+      "function": "Heat generation and combustion control",
+      "position": "Kiln firebox",
+      "madeFrom": "Charcoal/wood plus draft control"
+    },
+    {
+      "id": "slaking",
+      "name": "Slaking pit",
+      "function": "Controlled hydration of quicklime",
+      "position": "Near kiln",
+      "madeFrom": "Stone/brick-lined pit, water"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Water",
+      "purpose": "Mixing, curing, and dust control",
+      "earthLocations": [
+        "Rivers, aquifers, municipal supplies"
+      ],
+      "spaceAlternatives": "Closed-loop water recycling; allocate for curing and dust suppression explicitly.",
+      "processingRequired": "Clean enough to avoid salts/organics that weaken binders."
+    },
+    {
+      "name": "Limestone (calcium carbonate)",
+      "purpose": "Primary feedstock for quicklime and slaked lime",
+      "earthLocations": [
+        "Sedimentary limestone regions worldwide"
+      ],
+      "spaceAlternatives": "Lunar regolith contains calcium-bearing minerals but not abundant limestone; early space binders often rely on sintering/regolith cement or imported binders.",
+      "processingRequired": "Crush to manageable size; keep dry before firing; avoid clay-heavy impurities when possible."
+    },
+    {
+      "name": "Heat and kilns",
+      "purpose": "Calcination and firing for lime, bricks, and cement precursors",
+      "earthLocations": [
+        "Wood/charcoal/coal; industrial fuels"
+      ],
+      "spaceAlternatives": "Electric kilns powered by solar/nuclear; thermal insulation is critical for energy efficiency.",
+      "processingRequired": "Temperature control, refractory linings, and safe ventilation."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Select limestone and fuel",
+      "description": "Choose carbonate-rich stone; prepare fuel and draft path to sustain high temperatures for hours.",
+      "prerequisiteTools": [
+        "hammer",
+        "sorting"
+      ],
+      "warningNote": "Lime dust is caustic; plan PPE and eye protection early."
+    },
+    {
+      "order": 2,
+      "title": "Build or refurbish a kiln",
+      "description": "Use refractory materials; ensure airflow path and safe loading/unloading; include a way to control draft.",
+      "prerequisiteTools": [
+        "masonry tools"
+      ],
+      "warningNote": "Kiln failures can collapse hot material; keep clear zones."
+    },
+    {
+      "order": 3,
+      "title": "Fire to calcination",
+      "description": "Heat the kiln charge until calcination occurs; track time and fuel additions; let cool before handling.",
+      "prerequisiteTools": [
+        "tongs",
+        "thermal judgment"
+      ],
+      "warningNote": "Hot quicklime reacts violently with water; keep it dry during cooling."
+    },
+    {
+      "order": 4,
+      "title": "Slake quicklime safely",
+      "description": "Add water in a controlled pit; allow reaction to complete; age slaked lime for improved workability.",
+      "prerequisiteTools": [
+        "containers",
+        "stirring paddles"
+      ],
+      "warningNote": "Exothermic reaction can boil water and spatter caustic slurry."
+    },
+    {
+      "order": 5,
+      "title": "Mix lime mortar or plaster",
+      "description": "Combine slaked lime with graded sand; adjust water; keep mixes damp while curing to avoid cracking.",
+      "prerequisiteTools": [
+        "mixing tools"
+      ],
+      "warningNote": "Avoid skin contact; lime can burn and damage eyes."
+    }
+  ],
+  "history": [
+    {
+      "year": "Ancient",
+      "event": "Lime mortars used in masonry and plaster in multiple civilizations.",
+      "location": "Mediterranean, Asia, Americas"
+    },
+    {
+      "year": "Roman era",
+      "event": "Hydraulic lime and pozzolanic additives enable durable concrete-like structures.",
+      "location": "Roman Empire"
+    },
+    {
+      "year": "Industrial era",
+      "event": "Portland cement displaces many lime applications but lime remains essential.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Lime enabled durable masonry, plastered interiors, and improved sanitation via washable surfaces. It also enabled early concrete chemistry with pozzolans and careful curing.\n\nIn the long tech tree, lime is a binder that unlocks better kilns, better buildings, and eventually modern cement and concrete systems.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-lime-production",
+      "title": "Wikipedia — Lime Production (Calcination of Limestone)",
+      "url": "https://en.wikipedia.org/wiki/Lime_Production_(Calcination_of_Limestone)"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "usgs-lime",
+        "title": "USGS: Lime (mineral commodity summaries / background)",
+        "type": "institution",
+        "url": "https://www.usgs.gov/centers/national-minerals-information-center/lime-statistics-and-information"
+      },
+      {
+        "id": "wiki-calcium-oxide",
+        "title": "Wikipedia — Calcium oxide",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Calcium_oxide"
+      },
+      {
+        "id": "britannica-lime",
+        "title": "Encyclopaedia Britannica — Lime",
+        "type": "institution",
+        "url": "https://www.britannica.com/science/lime"
+      }
+    ]
+  }
+}

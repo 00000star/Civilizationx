@@ -1,0 +1,168 @@
+{
+  "id": "integrated-circuit",
+  "name": "Integrated Circuit (IC)",
+  "tagline": "Multiple transistors and components fabricated on a single semiconductor die",
+  "category": "communication",
+  "era": "mid-20th",
+  "difficulty": 5,
+  "prerequisites": [
+    "transistor",
+    "semiconductor-crystal-growing-doping"
+  ],
+  "unlocks": [
+    "gpu-accelerated-computing",
+    "microprocessor"
+  ],
+  "problem": "As circuits grow, wiring discrete components becomes a reliability and scale problem: solder joints fail, parasitics dominate, and assembly time explodes.\n\nIntegrated circuits solve this by fabricating many devices together on one substrate, shrinking size, improving reliability, and enabling complex systems.",
+  "overview": "ICs use photolithography and thin-film processes to pattern transistors, interconnects, and passivation on silicon. Design and manufacturing are tightly coupled: yield and defect control matter as much as schematic logic.\n\nFor The Codex, ICs represent a major threshold: the required cleanliness, materials purity, and equipment are far beyond primitive industry, so early rebuild paths rely on importing ICs and building robust systems around them.",
+  "principles": [
+    {
+      "name": "Photolithography",
+      "explanation": "Pattern transfer at small scales enables dense circuits."
+    },
+    {
+      "name": "Planar processing",
+      "explanation": "Oxides and passivation stabilize surfaces and junctions."
+    },
+    {
+      "name": "Yield and defects",
+      "explanation": "Complexity increases defect sensitivity; process control dominates economics."
+    }
+  ],
+  "components": [
+    {
+      "id": "die",
+      "name": "Die",
+      "function": "Houses the circuit",
+      "position": "Inside package",
+      "madeFrom": "Patterned silicon"
+    },
+    {
+      "id": "interconnect",
+      "name": "Interconnect",
+      "function": "Connects devices",
+      "position": "Metal layers",
+      "madeFrom": "Aluminum/copper"
+    },
+    {
+      "id": "package",
+      "name": "Package",
+      "function": "Protects die and provides pins",
+      "position": "Outside die",
+      "madeFrom": "Epoxy/ceramic, lead frame"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Silicon and dopants",
+      "purpose": "Semiconductor substrate and device formation",
+      "earthLocations": [
+        "Global semiconductor supply chain"
+      ],
+      "spaceAlternatives": "Import packaged ICs early; local IC fab requires cleanrooms, ultrapure chemicals, and precision tooling.",
+      "processingRequired": "Ultrapure processing, lithography, and controlled diffusion/implant."
+    },
+    {
+      "name": "Ultrapure chemicals",
+      "purpose": "Etching, cleaning, and deposition",
+      "earthLocations": [
+        "Electronic chemical suppliers"
+      ],
+      "spaceAlternatives": "Closed-loop chemical management is mandatory off-world; waste handling is safety-critical.",
+      "processingRequired": "Contamination control, filtration, and neutralization."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Design for manufacturability",
+      "description": "Choose process node constraints; design test structures and margins.",
+      "prerequisiteTools": [
+        "EDA tools"
+      ],
+      "warningNote": "A design that cannot be tested is not a product."
+    },
+    {
+      "order": 2,
+      "title": "Fabricate wafers",
+      "description": "Run lithography, doping, deposition, and etch steps with strict process logs.",
+      "prerequisiteTools": [
+        "cleanroom tools"
+      ],
+      "warningNote": "Toxic and corrosive chemicals require professional safety systems."
+    },
+    {
+      "order": 3,
+      "title": "Test and package",
+      "description": "Probe wafers, dice, package, and perform burn-in screening.",
+      "prerequisiteTools": [
+        "test equipment"
+      ],
+      "warningNote": "ESD and thermal overstress can destroy devices."
+    }
+  ],
+  "history": [
+    {
+      "year": "1958-1959",
+      "event": "Early IC demonstrations enable integration.",
+      "location": "USA"
+    },
+    {
+      "year": "1960s-70s",
+      "event": "MOS and scaling drive complexity growth.",
+      "location": "Global"
+    },
+    {
+      "year": "2000s+",
+      "event": "Multi-layer interconnect and advanced nodes dominate.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "ICs enable computers, communications, and control systems at scales impossible with discrete components. They also create global supply-chain dependencies on specialized manufacturing.\n\nIn The Codex, ICs are both a pinnacle manufacturing node and a dependency anchor for advanced computing and AI.",
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Wafer, lithography, doping, interconnect, package",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-integrated-circuit",
+      "title": "Wikipedia — Integrated Circuit (IC)",
+      "url": "https://en.wikipedia.org/wiki/Integrated_Circuit_(IC)"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "wiki-ic",
+        "title": "Wikipedia — Integrated circuit",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Integrated_circuit"
+      },
+      {
+        "id": "sze",
+        "title": "Sze & Ng — Physics of Semiconductor Devices",
+        "type": "book"
+      },
+      {
+        "id": "ieee-sscs",
+        "title": "IEEE Solid-State Circuits Society",
+        "type": "institution",
+        "url": "https://sscs.ieee.org/"
+      }
+    ]
+  }
+}

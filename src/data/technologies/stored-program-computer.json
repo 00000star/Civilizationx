@@ -1,0 +1,218 @@
+{
+  "id": "stored-program-computer",
+  "name": "Stored-Program Computer",
+  "tagline": "General-purpose computation by executing instructions from memory",
+  "category": "computing",
+  "era": "mid-20th",
+  "difficulty": 5,
+  "prerequisites": [
+    "vacuum-tube-electronics",
+    "electrical-power-grid",
+    "writing-early-systems"
+  ],
+  "unlocks": [
+    "backpropagation",
+    "machine-learning",
+    "programming-languages"
+  ],
+  "problem": "Special-purpose machines solve one task at a time. Civilization needs a machine that can be reconfigured by changing instructions rather than rebuilding hardware.\n\nThe stored-program concept solves that by placing both data and instructions in addressable memory, allowing complex logic, automation, and later software ecosystems.",
+  "overview": "A stored-program computer has a processor that fetches instructions from memory, decodes them, and executes operations on data. The instruction stream is itself data that can be changed, stored, and copied.\n\nIn practice, the architecture requires reliable memory, deterministic clocking, and input/output interfaces. For bootstrap scenarios, the key insight is modularity: arithmetic, storage, and control are separable subsystems.",
+  "principles": [
+    {
+      "name": "Boolean logic",
+      "explanation": "Complex computation is built from simple logical operations and state."
+    },
+    {
+      "name": "Addressable memory",
+      "explanation": "A mapping from numeric addresses to stored values enables programs and data structures."
+    },
+    {
+      "name": "Fetch-decode-execute cycle",
+      "explanation": "A repeating control loop turns static circuits into dynamic behavior."
+    }
+  ],
+  "components": [
+    {
+      "id": "cpu",
+      "name": "Processor (CPU)",
+      "function": "Executes instructions and controls dataflow",
+      "position": "Central unit",
+      "madeFrom": "Logic gates, registers, control circuits"
+    },
+    {
+      "id": "memory",
+      "name": "Memory",
+      "function": "Stores instructions and data",
+      "position": "Attached to CPU",
+      "madeFrom": "Early: relays/tubes; later: transistors/ICs"
+    },
+    {
+      "id": "io",
+      "name": "Input/Output",
+      "function": "Moves data into and out of the machine",
+      "position": "Peripherals",
+      "madeFrom": "Interfaces, cables, transducers"
+    },
+    {
+      "id": "clock",
+      "name": "Clock and timing",
+      "function": "Coordinates state changes",
+      "position": "System timing",
+      "madeFrom": "Oscillators and distribution"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    },
+    {
+      "name": "Semiconductor devices",
+      "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+      "earthLocations": [
+        "Global semiconductor supply chains; packaged IC distributors"
+      ],
+      "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+      "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+    },
+    {
+      "name": "Documentation and standards",
+      "purpose": "Make designs reproducible and debuggable across teams and time",
+      "earthLocations": [
+        "Libraries, universities, standards bodies, archived web"
+      ],
+      "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+      "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+    },
+    {
+      "name": "Precision manufacturing",
+      "purpose": "Reliable interconnects, insulation, and repeatable assemblies",
+      "earthLocations": [
+        "Machine shops; electronics manufacturing"
+      ],
+      "spaceAlternatives": "Prefer modular boards and spares early; long-term: local PCB fabrication and controlled soldering/reflow environments.",
+      "processingRequired": "Quality control, rework capability, and test instrumentation."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Define a minimal instruction set",
+      "description": "Choose basic operations (load, store, add, branch). Keep it simple enough to implement and test.",
+      "prerequisiteTools": [
+        "paper",
+        "logic design"
+      ],
+      "warningNote": "Complexity kills reproducibility; start with minimal cores."
+    },
+    {
+      "order": 2,
+      "title": "Implement arithmetic and registers",
+      "description": "Build adders, registers, and buses; validate with test vectors.",
+      "prerequisiteTools": [
+        "multimeter",
+        "oscilloscope if available"
+      ],
+      "warningNote": "Debugging without tests becomes guesswork."
+    },
+    {
+      "order": 3,
+      "title": "Add memory and address decoding",
+      "description": "Provide read/write memory and reliable addressing; verify timing margins.",
+      "prerequisiteTools": [
+        "logic probe"
+      ],
+      "warningNote": "Memory timing violations produce intermittent failures."
+    },
+    {
+      "order": 4,
+      "title": "Add control unit",
+      "description": "Implement fetch/decode/execute sequencing; validate branching and loops.",
+      "prerequisiteTools": [
+        "test programs"
+      ],
+      "warningNote": "Control bugs can masquerade as arithmetic faults."
+    },
+    {
+      "order": 5,
+      "title": "Add I/O and bootstrap loader",
+      "description": "Enable loading programs; add a small monitor program for diagnostics.",
+      "prerequisiteTools": [
+        "I/O device"
+      ],
+      "warningNote": "Without diagnostics, every change is a full rebuild."
+    }
+  ],
+  "history": [
+    {
+      "year": "1940s",
+      "event": "Stored-program ideas formalize and early machines demonstrate feasibility.",
+      "location": "USA/UK"
+    },
+    {
+      "year": "1950s",
+      "event": "General-purpose computers spread into science and industry.",
+      "location": "Global"
+    },
+    {
+      "year": "1970s+",
+      "event": "Microprocessors and software ecosystems scale computing.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Stored-program computers enable software-defined behavior: the same hardware can simulate, control machinery, manage logistics, and communicate knowledge.\n\nIn the Codex context, computing is a civilization accelerant but also a dependency cliff: it requires power quality, precise manufacturing, and disciplined documentation.",
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Memory, fetch, decode, execute, write back",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-stored-program-computer",
+      "title": "Wikipedia — Stored-Program Computer",
+      "url": "https://en.wikipedia.org/wiki/Stored-Program_Computer"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "wiki-von-neumann-arch",
+        "title": "Wikipedia — von Neumann architecture",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Von_Neumann_architecture"
+      },
+      {
+        "id": "turing1936",
+        "title": "Turing (1936) — On Computable Numbers",
+        "type": "paper",
+        "url": "https://doi.org/10.1112/plms/s2-42.1.230",
+        "note": "Foundational theory for general computation"
+      },
+      {
+        "id": "nist-computing",
+        "title": "NIST Computer Security Resource Center (for systems perspective)",
+        "type": "institution",
+        "url": "https://csrc.nist.gov/",
+        "note": "Institutional reference for modern computing concerns"
+      }
+    ]
+  }
+}

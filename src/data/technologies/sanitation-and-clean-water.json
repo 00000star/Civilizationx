@@ -9,7 +9,10 @@
     "fire",
     "ceramics-and-pottery"
   ],
-  "unlocks": [],
+  "unlocks": [
+    "fermentation-basic",
+    "germ-theory"
+  ],
   "problem": "Human beings are walking conflict zones for microbes: every litre of surface water near settlements is a potential culture medium seeded by faeces, urine, decaying biomass, and the invisible films called biofilms that protect pathogens from simple fixes. In the first hours after disruption, people still behave as if taps and chlorine exist; within days, diarrhoeal disease can remove more working adults from a labour pool than injury or violence. Children dehydrate fastest; caregivers then face impossible trade-offs between fetching water and staying at a bedside.\n\nThe second failure mode is engineering without discipline. A community can build an impressive filter or a gleaming boiling kettle and still poison itself by dipping unwashed hands into storage, by rinsing dishes in untreated stream water, or by locating a latrine uphill of the spring because the downhill slope was rockier to dig. Water safety is a system: source selection, transport, treatment, storage, and waste must be designed as one loop, not five independent hobbies.\n\nThe third failure mode is chemical complacency. Boiling does not remove arsenic, nitrates from agricultural runoff, or many industrial solvents. Clear water is not innocent water. Teaching people to recognise the limits of each method — heat, sand, sunlight, measured halogens — is as important as teaching them to tie knots.\n\nCollapse and frontier habitats share one brutal truth: there is no invisible municipal labour force keeping the loop closed. Either your group maintains the loop consciously, or the loop closes you.",
   "overview": "Practical field water treatment stacks independent barriers. First, protect the source: choose headwater springs or rain from clean roofs where possible; fence livestock away; avoid stirring sediment during collection. Second, reduce turbidity: settle in a series of jars or a drum, decanting progressively cleaner supernatant; pre-filter through cloth, then through packed sand and gravel when materials allow.\n\nThird, disinfect: a rolling boil for one minute (longer at altitude) inactivates most bacterial and viral threats if the entire volume reaches temperature — thin-walled metal kettles transfer heat faster than thick pottery. Solar disinfection (SODIS) combines ultraviolet exposure and modest heating in clear bottles laid in full sun; throughput is low and weather-dependent but costs almost no fuel. Where halogen chemistry exists, measured contact time beats guesswork; under-dosing selects hardier survivors while overdosing tastes foul and can irritate mucosa.\n\nSanitation is the mirror image of drinking water: isolate human waste from fingers, flies, feet, and wind. Deep pit latrines with fly-proof covers, trench latrines rotated on a schedule, and meticulous separation of greywater from potable storage break the faecal-oral routes that drive cholera, shigellosis, and many helminths. Hand hygiene with soap removes a staggering fraction of risk; where soap is absent, ash paste and friction still outperform hope.\n\nOn Mars or in closed habitats, the physics changes form but not logic: every litre is inventoried, every waste stream is processed, and cross-contamination is an existential engineering fault rather than a regrettable statistic.",
   "principles": [
@@ -185,7 +188,16 @@
   ],
   "inventors": [],
   "impact": "Communities that keep drinking water and faeces apart survive long enough to argue about laws, calendars, and machines. Communities that fail this lesson disappear quietly into fever charts.\n\nSpace habitats inherit the same moral: there is no dilution sink — only engineering and procedure.",
-  "images": [],
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Source protection, settling, filtration, disinfection, storage",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
   "videos": [],
   "externalLinks": [
     {

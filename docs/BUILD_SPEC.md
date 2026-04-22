@@ -68,6 +68,12 @@ The strongest next content slice is primitive bootstrap depth:
 
 These entries support both collapse recovery and space settlement because all higher capabilities depend on them.
 
+## Content Depth Requirements
+
+The minimum quality bar for entries is defined in:
+
+- `docs/CONTENT_DEPTH_STANDARD.md`
+
 ## Launch Contract
 
 Users should be able to run The Codex locally with one command:

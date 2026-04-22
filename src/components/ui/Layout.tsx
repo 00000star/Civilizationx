@@ -143,6 +143,9 @@ export function Layout() {
               <NavLink to="/pathfinder" className={navCls}>
                 Pathfinder
               </NavLink>
+              <NavLink to="/planner" className={navCls}>
+                Planner
+              </NavLink>
               <NavLink to="/search" className={navCls}>
                 Search
               </NavLink>
@@ -316,6 +319,15 @@ export function Layout() {
                       className="block rounded px-2 py-2 text-codex-text hover:bg-codex-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-codex-blue"
                     >
                       Pathfinder
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/planner"
+                      onClick={() => setMoreOpen(false)}
+                      className="block rounded px-2 py-2 text-codex-text hover:bg-codex-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-codex-blue"
+                    >
+                      Planner
                     </Link>
                   </li>
                   <li>

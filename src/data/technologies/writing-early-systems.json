@@ -10,7 +10,13 @@
     "ceramics-and-pottery"
   ],
   "unlocks": [
-    "paper-and-ink-media"
+    "calculus-and-optimization",
+    "germ-theory",
+    "linear-algebra",
+    "paper-and-ink-media",
+    "probability-and-statistics",
+    "programming-languages",
+    "stored-program-computer"
   ],
   "problem": "Speech is a river — beautiful, immediate, and gone when the breath stops. Administrating a granary across seasons, collecting tithes, or promising repayment across harvests needs marks that survive the speaker. Early writing answers external memory: visible signs that rehydrate meaning when a trained reader returns with fresh eyes.\n\nThe obstacle shifts from air to stuff: clay that cracks if dried wrong, ink that fades, stone that weathers. It also shifts to labour: mastering thousands of signs was a profession; literacy rates stayed tiny for millennia while still reshaping who could command armies.\n\nWriting encodes power — law codes, propaganda, contracts — and creates new failure modes: forged seals, ambiguous clauses, copied errors that become tradition. Decipherment centuries later needs bilinguals and luck; archive dictionaries, not only heroic texts.\n\nFor recovery, treat writing as infrastructure: standardise signs, train scribes, and protect fired tablets from rain as carefully as you protect grain.",
   "overview": "Proto-writing begins with tokens and impressions counting discrete goods; full systems map language more directly. Cuneiform presses wedges into wet clay; Egyptian hieroglyphs mix logograms with phonetic complements; alphabets shrink the sign inventory by letting letters stand mostly for sounds.\n\nThe rebus principle — using the sound of a pictured word for an unrelated homophone — bridges pictographs toward syllabaries. Determinatives act like silent classifiers disambiguating homographs.\n\nMaterial shapes script: clay invites wedge strokes; papyrus invites flowing ink; bamboo slips encourage vertical columns. Copyists introduce errors that become manuscript families; commentaries freeze readings.\n\nLiteracy’s spread is uneven, but even small literate cadres let empires administer distance — orders can outlive couriers if sealed and authenticated.",

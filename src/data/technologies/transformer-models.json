@@ -1,0 +1,236 @@
+{
+  "id": "transformer-models",
+  "name": "Transformer Models",
+  "tagline": "Sequence modeling with attention mechanisms that scale to large datasets",
+  "category": "computing",
+  "era": "21st-century",
+  "difficulty": 5,
+  "prerequisites": [
+    "machine-learning",
+    "neural-networks",
+    "backpropagation",
+    "gpu-accelerated-computing"
+  ],
+  "unlocks": [],
+  "problem": "Many tasks require modeling long-range dependencies in sequences: language, code, and time series. Earlier architectures struggle with long contexts, training instability, and limited parallelism.\n\nTransformers solve this by using attention to connect tokens directly and by enabling highly parallel training on modern accelerators.",
+  "overview": "A transformer encodes tokens into vectors, applies self-attention to mix information across positions, then uses feed-forward layers and residual connections to build deep representations. Training typically uses gradient descent with backpropagation on large corpora.\n\nScaling behavior depends on data, compute, and optimization. The Codex treats the training recipe as part of the technology: tokenization, objective choice, evaluation, and safety constraints are not optional extras.",
+  "principles": [
+    {
+      "name": "Self-attention",
+      "explanation": "Computes weighted combinations of token representations based on content similarity."
+    },
+    {
+      "name": "Residual learning",
+      "explanation": "Skip connections stabilize deep networks and preserve gradient flow."
+    },
+    {
+      "name": "Parallel training",
+      "explanation": "Attention layers enable parallel computation across sequence positions, improving throughput."
+    }
+  ],
+  "components": [
+    {
+      "id": "tokenizer",
+      "name": "Tokenizer",
+      "function": "Maps text to token IDs",
+      "position": "Input pipeline",
+      "madeFrom": "Vocabulary and rules"
+    },
+    {
+      "id": "embedding",
+      "name": "Embeddings",
+      "function": "Convert tokens to vectors",
+      "position": "Model input",
+      "madeFrom": "Learned matrices"
+    },
+    {
+      "id": "attention",
+      "name": "Attention blocks",
+      "function": "Mix information across tokens",
+      "position": "Model core",
+      "madeFrom": "Q/K/V projections"
+    },
+    {
+      "id": "ffn",
+      "name": "Feed-forward layers",
+      "function": "Nonlinear transformation per position",
+      "position": "Inside blocks",
+      "madeFrom": "Linear layers and activations"
+    },
+    {
+      "id": "training",
+      "name": "Training pipeline",
+      "function": "Optimizes model parameters",
+      "position": "Outside model",
+      "madeFrom": "Loss, optimizer, schedules"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    },
+    {
+      "name": "Semiconductor devices",
+      "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+      "earthLocations": [
+        "Global semiconductor supply chains; packaged IC distributors"
+      ],
+      "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+      "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+    },
+    {
+      "name": "Documentation and standards",
+      "purpose": "Make designs reproducible and debuggable across teams and time",
+      "earthLocations": [
+        "Libraries, universities, standards bodies, archived web"
+      ],
+      "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+      "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+    },
+    {
+      "name": "Large-scale datasets",
+      "purpose": "Training data for language, code, or other sequences",
+      "earthLocations": [
+        "Public web corpora, code repositories, curated datasets"
+      ],
+      "spaceAlternatives": "Early off-world: limited corpora; rely on curated technical manuals and local logs; avoid unsafe or low-quality data sources.",
+      "processingRequired": "Deduplication, filtering, licensing review, and safety red-teaming."
+    },
+    {
+      "name": "Accelerated compute (GPUs/TPUs)",
+      "purpose": "Efficient training and inference for large models",
+      "earthLocations": [
+        "Data centers and HPC clusters"
+      ],
+      "spaceAlternatives": "Power/thermal limits force smaller models; prioritize efficiency and distillation.",
+      "processingRequired": "Cooling, power delivery, cluster networking, and monitoring."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Define objective and dataset",
+      "description": "Choose language modeling or task-specific training; curate data with provenance and safety filters.",
+      "prerequisiteTools": [
+        "data pipeline"
+      ],
+      "warningNote": "Data quality dominates model behavior."
+    },
+    {
+      "order": 2,
+      "title": "Choose architecture and scale",
+      "description": "Pick model size to match compute/data; start smaller to validate pipeline and evaluation.",
+      "prerequisiteTools": [
+        "compute budget"
+      ],
+      "warningNote": "Scaling without evaluation produces expensive confusion."
+    },
+    {
+      "order": 3,
+      "title": "Train with checkpointing",
+      "description": "Train with stable optimization settings; checkpoint frequently; log metrics and samples.",
+      "prerequisiteTools": [
+        "accelerators",
+        "storage"
+      ],
+      "warningNote": "Without checkpoints, failures waste weeks of compute."
+    },
+    {
+      "order": 4,
+      "title": "Evaluate and red-team",
+      "description": "Measure performance; probe for hallucinations, bias, and unsafe behaviors; iterate on data and constraints.",
+      "prerequisiteTools": [
+        "eval suite"
+      ],
+      "warningNote": "Do not rely on single benchmark scores."
+    },
+    {
+      "order": 5,
+      "title": "Deploy with monitoring and limits",
+      "description": "Add guardrails; monitor for drift; document known failure modes.",
+      "prerequisiteTools": [
+        "deployment"
+      ],
+      "warningNote": "Unbounded deployment can cause real-world harm."
+    }
+  ],
+  "history": [
+    {
+      "year": 2017,
+      "event": "Transformer architecture introduced for sequence modeling.",
+      "location": "Global"
+    },
+    {
+      "year": "2018-2020",
+      "event": "Large-scale pretraining demonstrates broad transfer.",
+      "location": "Global"
+    },
+    {
+      "year": "2020s",
+      "event": "Systems engineering for training/inference becomes central.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Transformers enable strong performance across language and perception tasks and make large-scale model training a systems engineering discipline. They also raise new governance and safety problems due to capability concentration.\n\nIn The Codex tree, transformers sit near the top of the computing branch: they require stable compute, data, evaluation rigor, and safety processes to be useful rather than dangerous.",
+  "images": [
+    {
+      "id": "ai-chain-atlas",
+      "filename": "ai-chain-atlas.png",
+      "caption": "Generated atlas illustration of the chain from primitive foundations to AI systems",
+      "type": "illustration",
+      "credit": "The Codex project, generated with OpenAI image generation",
+      "license": "Project-generated media"
+    },
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Tokens, embeddings, attention, feed-forward, logits",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-transformer-models",
+      "title": "Wikipedia — Transformer Models",
+      "url": "https://en.wikipedia.org/wiki/Transformer_Models"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "vaswani-attention",
+        "title": "Vaswani et al. (2017) — Attention Is All You Need",
+        "type": "paper",
+        "url": "https://arxiv.org/abs/1706.03762"
+      },
+      {
+        "id": "goodfellow-dl",
+        "title": "Goodfellow, Bengio, Courville — Deep Learning",
+        "type": "book",
+        "url": "https://www.deeplearningbook.org/"
+      },
+      {
+        "id": "wiki-transformer",
+        "title": "Wikipedia — Transformer (machine learning model)",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)"
+      }
+    ]
+  }
+}

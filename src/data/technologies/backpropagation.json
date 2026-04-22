@@ -1,0 +1,197 @@
+{
+  "id": "backpropagation",
+  "name": "Backpropagation",
+  "tagline": "Efficient gradient computation for layered models via the chain rule",
+  "category": "computing",
+  "era": "late-20th",
+  "difficulty": 5,
+  "prerequisites": [
+    "gradient-descent",
+    "calculus-and-optimization",
+    "stored-program-computer"
+  ],
+  "unlocks": [
+    "neural-networks",
+    "transformer-models"
+  ],
+  "problem": "Neural networks and layered models have many parameters. Computing gradients naively is prohibitively expensive if you treat each parameter independently.\n\nBackpropagation solves this by reusing intermediate computations: apply the chain rule backward through the computation graph to compute gradients efficiently.",
+  "overview": "Backprop treats a model as a sequence of operations. A forward pass computes outputs and caches intermediates; a backward pass propagates error signals and computes gradients for each parameter.\n\nThe method is general: any differentiable computation graph can use it. Practical engineering issues include numerical stability, gradient explosion/vanishing, and correct implementation of derivatives.",
+  "principles": [
+    {
+      "name": "Chain rule",
+      "explanation": "Derivatives of composed functions multiply; backprop organizes this computation efficiently."
+    },
+    {
+      "name": "Computation graphs",
+      "explanation": "Represent complex functions as nodes/edges so gradients can be computed systematically."
+    },
+    {
+      "name": "Automatic differentiation",
+      "explanation": "Software implements backprop for arbitrary graphs; correctness requires careful testing."
+    }
+  ],
+  "components": [
+    {
+      "id": "forward",
+      "name": "Forward pass",
+      "function": "Computes outputs and caches intermediates",
+      "position": "Training loop",
+      "madeFrom": "Model operations"
+    },
+    {
+      "id": "backward",
+      "name": "Backward pass",
+      "function": "Computes gradients via chain rule",
+      "position": "Training loop",
+      "madeFrom": "Derivatives and cached values"
+    },
+    {
+      "id": "graph",
+      "name": "Computation graph",
+      "function": "Structure that defines dependencies",
+      "position": "Model representation",
+      "madeFrom": "Nodes and edges"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    },
+    {
+      "name": "Semiconductor devices",
+      "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+      "earthLocations": [
+        "Global semiconductor supply chains; packaged IC distributors"
+      ],
+      "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+      "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+    },
+    {
+      "name": "Documentation and standards",
+      "purpose": "Make designs reproducible and debuggable across teams and time",
+      "earthLocations": [
+        "Libraries, universities, standards bodies, archived web"
+      ],
+      "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+      "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+    },
+    {
+      "name": "Test cases",
+      "purpose": "Verify gradient correctness and stability",
+      "earthLocations": [
+        "Engineering practice everywhere"
+      ],
+      "spaceAlternatives": "Same requirement: treat tests as life-support for software reliability.",
+      "processingRequired": "Finite-difference gradient checks and regression tests."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Write forward computation clearly",
+      "description": "Define layers/operations; cache intermediates needed for derivatives.",
+      "prerequisiteTools": [
+        "programming environment"
+      ],
+      "warningNote": "Hidden state makes gradients wrong."
+    },
+    {
+      "order": 2,
+      "title": "Implement backward derivatives",
+      "description": "Compute local derivatives; propagate gradients backward through the graph.",
+      "prerequisiteTools": [
+        "math references"
+      ],
+      "warningNote": "Small sign/shape bugs silently break training."
+    },
+    {
+      "order": 3,
+      "title": "Validate with gradient checks",
+      "description": "Compare analytic gradients to finite differences on small models.",
+      "prerequisiteTools": [
+        "test harness"
+      ],
+      "warningNote": "Only checking loss curves is not proof of correctness."
+    },
+    {
+      "order": 4,
+      "title": "Stabilize training",
+      "description": "Add normalization, clipping, or better initialization when gradients explode/vanish.",
+      "prerequisiteTools": [
+        "monitoring"
+      ],
+      "warningNote": "Unstable gradients can corrupt checkpoints."
+    }
+  ],
+  "history": [
+    {
+      "year": "1960s-1980s",
+      "event": "Backprop and related methods formalize and spread in ML.",
+      "location": "Global"
+    },
+    {
+      "year": "2010s",
+      "event": "Automatic differentiation frameworks make backprop ubiquitous.",
+      "location": "Global"
+    },
+    {
+      "year": "2020s",
+      "event": "Scaling requires systems engineering and careful numerics.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Backpropagation enables deep learning by making gradient computation tractable for large models. It turns learning into an optimization problem on a computation graph.\n\nIn The Codex, backprop is the hinge between math and modern AI capability; it depends on disciplined software and testing culture.",
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Forward pass, loss, chain rule, gradients, update",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-backpropagation",
+      "title": "Wikipedia — Backpropagation",
+      "url": "https://en.wikipedia.org/wiki/Backpropagation"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "rumelhart-1986",
+        "title": "Rumelhart, Hinton, Williams (1986) — Learning representations by back-propagating errors",
+        "type": "paper",
+        "url": "https://www.nature.com/articles/323533a0"
+      },
+      {
+        "id": "goodfellow-backprop",
+        "title": "Goodfellow et al. — Deep Learning (backprop chapter)",
+        "type": "book",
+        "url": "https://www.deeplearningbook.org/"
+      },
+      {
+        "id": "wiki-backprop",
+        "title": "Wikipedia — Backpropagation",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Backpropagation"
+      }
+    ]
+  }
+}

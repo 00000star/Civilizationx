@@ -1,0 +1,187 @@
+{
+  "id": "linear-algebra",
+  "name": "Linear Algebra",
+  "tagline": "Vectors, matrices, and transformations that power mechanics, electricity, and machine learning",
+  "category": "science",
+  "era": "industrial",
+  "difficulty": 4,
+  "prerequisites": [
+    "writing-early-systems",
+    "paper-and-ink-media"
+  ],
+  "unlocks": [
+    "gradient-descent",
+    "machine-learning",
+    "neural-networks"
+  ],
+  "problem": "As systems grow, scalar arithmetic stops scaling. Forces, currents, measurements, and signals are often multidimensional and coupled. Without a language for vectors and linear transforms, you cannot design or diagnose complex systems reliably.\n\nLinear algebra provides that language and enables computation at scale: solving simultaneous equations, projecting data, and representing transformations compactly.",
+  "overview": "Linear algebra studies vector spaces and linear maps. Matrices represent transformations; eigenvalues describe characteristic modes; decompositions turn messy problems into stable computations.\n\nIn engineering and AI, linear algebra is the substrate: sensor fusion, state estimation, circuit analysis, and neural network layers are matrix operations with constraints and numerical stability concerns.",
+  "principles": [
+    {
+      "name": "Vector spaces",
+      "explanation": "A set of objects with addition and scaling; coordinates are representations, not the thing itself."
+    },
+    {
+      "name": "Linear maps",
+      "explanation": "Transformations that preserve addition and scaling; representable as matrices in a basis."
+    },
+    {
+      "name": "Decompositions",
+      "explanation": "Factorizations (LU/QR/SVD) solve systems and reveal structure; stability matters more than elegance."
+    }
+  ],
+  "components": [
+    {
+      "id": "vectors",
+      "name": "Vectors",
+      "function": "Represent multi-dimensional quantities",
+      "position": "Math model",
+      "madeFrom": "Lists of numbers"
+    },
+    {
+      "id": "matrices",
+      "name": "Matrices",
+      "function": "Represent linear transforms",
+      "position": "Math model",
+      "madeFrom": "2D arrays of numbers"
+    },
+    {
+      "id": "solvers",
+      "name": "Solvers",
+      "function": "Compute solutions to linear systems",
+      "position": "Computation",
+      "madeFrom": "Algorithms and numerical methods"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Paper and writing media",
+      "purpose": "Record calculations, assumptions, and experimental outcomes",
+      "earthLocations": [
+        "Ubiquitous globally"
+      ],
+      "spaceAlternatives": "Digital notes plus printed backups; radiation-safe storage for critical references.",
+      "processingRequired": "Consistent notation, units, and metadata."
+    },
+    {
+      "name": "Measurement tools",
+      "purpose": "Quantify reality so models are not guesswork",
+      "earthLocations": [
+        "Workshops, labs, trade supply"
+      ],
+      "spaceAlternatives": "Prefer multi-use instruments; maintain calibration artifacts and procedures.",
+      "processingRequired": "Calibration logs and error bounds (uncertainty)."
+    },
+    {
+      "name": "Time and attention",
+      "purpose": "Iterative learning, practice, and verification",
+      "earthLocations": [
+        "Human labor everywhere"
+      ],
+      "spaceAlternatives": "Training time is a hard constraint; plan curricula and drills early.",
+      "processingRequired": "Deliberate practice, peer review, and documentation."
+    },
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Learn matrix operations with physical meaning",
+      "description": "Connect vectors to forces/currents and matrices to coupled equations; avoid purely symbolic memorization.",
+      "prerequisiteTools": [
+        "paper",
+        "examples"
+      ],
+      "warningNote": "Unit mistakes mimic math mistakes; track units."
+    },
+    {
+      "order": 2,
+      "title": "Practice solving linear systems",
+      "description": "Use elimination and stable decompositions; verify with residual checks.",
+      "prerequisiteTools": [
+        "calculator or computer"
+      ],
+      "warningNote": "Ill-conditioned systems amplify errors."
+    },
+    {
+      "order": 3,
+      "title": "Use decompositions for stability",
+      "description": "Prefer QR/SVD for least squares and noisy data; document assumptions.",
+      "prerequisiteTools": [
+        "numerical tools"
+      ],
+      "warningNote": "Naive inversion is often a bug."
+    }
+  ],
+  "history": [
+    {
+      "year": "1800s",
+      "event": "Matrix methods and determinants formalize for physics and engineering.",
+      "location": "Europe"
+    },
+    {
+      "year": "1900s",
+      "event": "Numerical linear algebra becomes central to computing.",
+      "location": "Global"
+    },
+    {
+      "year": "2000s",
+      "event": "Linear algebra accelerates data science and ML.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Linear algebra is the grammar of modern engineering: it turns coupled systems into solvable forms and enables scalable computation.\n\nIn The Codex, it is a cross-cutting prerequisite node: mechanics, electricity, navigation, and AI all lean on it.",
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Vectors, matrices, transforms, solvers, models",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-linear-algebra",
+      "title": "Wikipedia — Linear Algebra",
+      "url": "https://en.wikipedia.org/wiki/Linear_Algebra"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "strang-la",
+        "title": "Strang — Introduction to Linear Algebra",
+        "type": "book"
+      },
+      {
+        "id": "trefethen-bau",
+        "title": "Trefethen & Bau — Numerical Linear Algebra",
+        "type": "book"
+      },
+      {
+        "id": "wiki-linear-algebra",
+        "title": "Wikipedia — Linear algebra",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Linear_algebra"
+      }
+    ]
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "id": "dataset-curation",
+  "name": "Dataset Curation and Governance",
+  "tagline": "Provenance, filtering, and licensing discipline for training data",
+  "category": "computing",
+  "era": "21st-century",
+  "difficulty": 4,
+  "prerequisites": [
+    "data-storage-systems",
+    "probability-and-statistics",
+    "programming-languages"
+  ],
+  "unlocks": [
+    "ai-safety-and-governance"
+  ],
+  "problem": "Training data determines model behavior. Uncurated corpora contain duplicates, low-quality text, toxic content, private information, and licensing problems.\n\nDataset curation solves the governance problem: make data selection auditable, repeatable, and safe enough to support long-term systems without legal or ethical collapse.",
+  "overview": "Curation includes provenance tracking, deduplication, filtering, normalization, and documentation. Governance includes access control, privacy review, and a change log so future teams can reproduce or revise decisions.\n\nFor off-world settlement and collapse recovery, curated datasets matter even more: you cannot afford wasted compute or unsafe behavior from corrupted corpora.",
+  "principles": [
+    {
+      "name": "Provenance",
+      "explanation": "Record where data came from and under what conditions it can be used."
+    },
+    {
+      "name": "Deduplication",
+      "explanation": "Reduce memorization and overcounting; improves training efficiency and evaluation integrity."
+    },
+    {
+      "name": "Risk management",
+      "explanation": "Filter unsafe content; protect privacy; document known gaps and biases."
+    }
+  ],
+  "components": [
+    {
+      "id": "catalog",
+      "name": "Dataset catalog",
+      "function": "Inventory datasets and versions",
+      "position": "Governance layer",
+      "madeFrom": "Metadata and manifests"
+    },
+    {
+      "id": "pipeline",
+      "name": "Curation pipeline",
+      "function": "Transforms raw into curated",
+      "position": "ETL process",
+      "madeFrom": "Code and filters"
+    },
+    {
+      "id": "policy",
+      "name": "Usage policy",
+      "function": "Defines access and constraints",
+      "position": "Governance",
+      "madeFrom": "Rules and review process"
+    },
+    {
+      "id": "docs",
+      "name": "Dataset documentation",
+      "function": "Explains decisions and limitations",
+      "position": "Artifact",
+      "madeFrom": "Text and examples"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    },
+    {
+      "name": "Semiconductor devices",
+      "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+      "earthLocations": [
+        "Global semiconductor supply chains; packaged IC distributors"
+      ],
+      "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+      "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+    },
+    {
+      "name": "Documentation and standards",
+      "purpose": "Make designs reproducible and debuggable across teams and time",
+      "earthLocations": [
+        "Libraries, universities, standards bodies, archived web"
+      ],
+      "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+      "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+    },
+    {
+      "name": "Raw corpora",
+      "purpose": "Source material for curated datasets",
+      "earthLocations": [
+        "Libraries, web archives, repositories"
+      ],
+      "spaceAlternatives": "Local archives and manuals; prioritize high-signal technical references and vetted local logs.",
+      "processingRequired": "Parsing, deduplication, filtering, and metadata extraction."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Define data policy",
+      "description": "Specify what content is allowed, how provenance is tracked, and how privacy is protected.",
+      "prerequisiteTools": [
+        "policy doc"
+      ],
+      "warningNote": "No policy means accidental data misuse."
+    },
+    {
+      "order": 2,
+      "title": "Ingest with metadata",
+      "description": "Store raw data with hashes, source identifiers, and licensing notes.",
+      "prerequisiteTools": [
+        "storage",
+        "hashing"
+      ],
+      "warningNote": "If you cannot trace origin, you cannot debug model behavior."
+    },
+    {
+      "order": 3,
+      "title": "Deduplicate and filter",
+      "description": "Remove near-duplicates; filter low-quality or unsafe content; record filter rules.",
+      "prerequisiteTools": [
+        "curation pipeline"
+      ],
+      "warningNote": "Silent filters create hidden bias; document changes."
+    },
+    {
+      "order": 4,
+      "title": "Version and audit",
+      "description": "Publish dataset versions with changelogs and sample inspections.",
+      "prerequisiteTools": [
+        "version control"
+      ],
+      "warningNote": "Unversioned data makes training irreproducible."
+    }
+  ],
+  "history": [
+    {
+      "year": "2000s",
+      "event": "Data governance grows with web-scale systems.",
+      "location": "Global"
+    },
+    {
+      "year": "2010s",
+      "event": "Large-scale datasets become central to deep learning.",
+      "location": "Global"
+    },
+    {
+      "year": "2020s",
+      "event": "Dataset transparency and safety become critical concerns.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Dataset governance determines whether AI systems are reproducible and safe. It reduces wasted compute and prevents preventable harms caused by contaminated corpora.\n\nIn The Codex, dataset curation is part of the 'how to build AI' chain: models are downstream of data decisions.",
+  "images": [
+    {
+      "id": "ai-chain-atlas",
+      "filename": "ai-chain-atlas.png",
+      "caption": "Generated atlas illustration of the chain from primitive foundations to AI systems",
+      "type": "illustration",
+      "credit": "The Codex project, generated with OpenAI image generation",
+      "license": "Project-generated media"
+    },
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Provenance, filtering, deduplication, versioning, audit",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-dataset-curation",
+      "title": "Wikipedia — Dataset Curation and Governance",
+      "url": "https://en.wikipedia.org/wiki/Dataset_Curation_and_Governance"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "gebru-datasheets",
+        "title": "Gebru et al. (2021) — Datasheets for Datasets",
+        "type": "paper",
+        "url": "https://arxiv.org/abs/1803.09010"
+      },
+      {
+        "id": "wiki-data-governance",
+        "title": "Wikipedia — Data governance",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Data_governance"
+      },
+      {
+        "id": "nist-ai-rmf",
+        "title": "NIST AI Risk Management Framework",
+        "type": "institution",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+      }
+    ]
+  }
+}

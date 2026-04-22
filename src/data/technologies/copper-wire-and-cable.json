@@ -10,6 +10,7 @@
     "steel-production"
   ],
   "unlocks": [
+    "data-storage-systems",
     "dc-power-transmission-and-motor-drives",
     "electric-motor",
     "electrical-power-grid",

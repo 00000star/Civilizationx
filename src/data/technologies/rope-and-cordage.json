@@ -167,7 +167,16 @@
   ],
   "inventors": [],
   "impact": "Cordage is infrastructure in string form: it makes packs, nets, traps, sails, and hoists possible. It couples human force to loads and couples components into assemblies — lashings precede nails economically in many environments.\n\nIn later engineering, the same tensile logic underlies cables, wire rope, and fibre-reinforced composites. Understanding twist, bend radius, and termination is still how bridges and cranes are kept safe.\n\nFor off-world bases, lightweight high-strength cable may be among the first complex products once polymer or carbon fibre processes exist — but early settlements still benefit from vegetable fibre for filters, ties, and soft interfaces.",
-  "images": [],
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Fiber preparation, twist, counter-twist, strand, load test",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
   "videos": [
     {
       "id": "nettle-cordage",

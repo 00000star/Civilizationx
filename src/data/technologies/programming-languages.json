@@ -1,0 +1,183 @@
+{
+  "id": "programming-languages",
+  "name": "Programming Languages",
+  "tagline": "Human-readable abstractions for specifying computation",
+  "category": "computing",
+  "era": "mid-20th",
+  "difficulty": 4,
+  "prerequisites": [
+    "stored-program-computer",
+    "writing-early-systems"
+  ],
+  "unlocks": [
+    "dataset-curation",
+    "tokenization"
+  ],
+  "problem": "Machine code is precise but costly to write and review. Complex systems built in raw opcodes become unmaintainable and error-prone.\n\nProgramming languages solve this by providing structured abstractions: variables, functions, types, and modules. The real problem they solve is scalable coordination across many humans and years.",
+  "overview": "A language defines syntax and semantics. Toolchains (assemblers, compilers, interpreters) translate source into executable behavior. Libraries and standards stabilize the ecosystem.\n\nFor The Codex, languages are a leverage node: they make software reproducible and auditable, but only if versioning, testing, and documentation are disciplined.",
+  "principles": [
+    {
+      "name": "Abstraction",
+      "explanation": "Hide details behind interfaces so systems can scale."
+    },
+    {
+      "name": "Compilation and interpretation",
+      "explanation": "Translation strategies trade performance for flexibility."
+    },
+    {
+      "name": "Types and invariants",
+      "explanation": "Type systems express constraints that prevent entire bug classes."
+    }
+  ],
+  "components": [
+    {
+      "id": "spec",
+      "name": "Language specification",
+      "function": "Defines meaning",
+      "position": "Reference",
+      "madeFrom": "Documents and examples"
+    },
+    {
+      "id": "toolchain",
+      "name": "Toolchain",
+      "function": "Translates and links code",
+      "position": "Build system",
+      "madeFrom": "Compilers, linkers, runtimes"
+    },
+    {
+      "id": "stdlib",
+      "name": "Standard library",
+      "function": "Reusable building blocks",
+      "position": "Ecosystem",
+      "madeFrom": "Code modules"
+    },
+    {
+      "id": "tests",
+      "name": "Testing culture",
+      "function": "Prevents regressions",
+      "position": "Process",
+      "madeFrom": "Test suites and CI"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    },
+    {
+      "name": "Semiconductor devices",
+      "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+      "earthLocations": [
+        "Global semiconductor supply chains; packaged IC distributors"
+      ],
+      "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+      "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+    },
+    {
+      "name": "Documentation and standards",
+      "purpose": "Make designs reproducible and debuggable across teams and time",
+      "earthLocations": [
+        "Libraries, universities, standards bodies, archived web"
+      ],
+      "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+      "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+    },
+    {
+      "name": "Reference texts and examples",
+      "purpose": "Teach and preserve language semantics",
+      "earthLocations": [
+        "Books, standards, archives"
+      ],
+      "spaceAlternatives": "Mirror compilers/specs offline; keep multiple redundant copies of toolchains and docs.",
+      "processingRequired": "Version pinning and reproducible builds."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Choose a language for the constraint",
+      "description": "Pick based on reliability, tooling, ecosystem, and hardware constraints.",
+      "prerequisiteTools": [
+        "requirements"
+      ],
+      "warningNote": "Choosing by fashion increases long-term risk."
+    },
+    {
+      "order": 2,
+      "title": "Set up reproducible builds",
+      "description": "Pin toolchain versions; document build steps; store source and artifacts.",
+      "prerequisiteTools": [
+        "version control"
+      ],
+      "warningNote": "Unreproducible builds make repair impossible."
+    },
+    {
+      "order": 3,
+      "title": "Write tests and docs as you go",
+      "description": "Treat tests and docs as part of the product, not optional.",
+      "prerequisiteTools": [
+        "test runner"
+      ],
+      "warningNote": "Without tests, you cannot safely change anything later."
+    }
+  ],
+  "history": [
+    {
+      "year": "1950s",
+      "event": "High-level languages reduce machine-code burden.",
+      "location": "Global"
+    },
+    {
+      "year": "1970s-90s",
+      "event": "Structured programming, type systems, and tooling mature.",
+      "location": "Global"
+    },
+    {
+      "year": "2000s+",
+      "event": "Open ecosystems and reproducible builds become essential.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Programming languages make complex software possible by scaling human coordination and reducing error rates. They also introduce dependencies: compilers, runtimes, and libraries.\n\nIn The Codex, languages are a prerequisite to building any serious AI system because training and evaluation pipelines require reliable software and repeatability.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-programming-languages",
+      "title": "Wikipedia — Programming Languages",
+      "url": "https://en.wikipedia.org/wiki/Programming_Languages"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "wiki-programming-language",
+        "title": "Wikipedia — Programming language",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Programming_language"
+      },
+      {
+        "id": "dragon-book",
+        "title": "Aho, Lam, Sethi, Ullman — Compilers: Principles, Techniques, and Tools",
+        "type": "book"
+      },
+      {
+        "id": "knuth-taocp",
+        "title": "Knuth — The Art of Computer Programming (foundations)",
+        "type": "book"
+      }
+    ]
+  }
+}

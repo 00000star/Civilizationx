@@ -1,0 +1,214 @@
+{
+  "id": "concrete-portland-cement",
+  "name": "Concrete and Portland Cement",
+  "tagline": "Hydraulic binders and aggregates for modern structural construction",
+  "category": "construction",
+  "era": "industrial",
+  "difficulty": 4,
+  "prerequisites": [
+    "lime-production",
+    "bricks-and-fired-masonry"
+  ],
+  "unlocks": [],
+  "problem": "Lime mortars cure slowly and weaken in wet conditions without careful design. Large infrastructure needs a binder that hardens in water, develops predictable strength, and can be poured into forms to create complex shapes.\n\nConcrete solves that by combining aggregates with a hydraulic cement that reacts with water to form strength-giving mineral phases. The challenge is quality control: cement chemistry, aggregate grading, water ratio, and curing dominate outcomes.",
+  "overview": "Portland cement is produced by heating limestone and clay to form clinker, then grinding clinker with gypsum. Mixed with water, cement hydrates to form calcium silicate hydrates that bind aggregates into a stone-like composite.\n\nConcrete performance depends on mix design and curing. Too much water makes it weak and porous; too little prevents full hydration. Proper curing retains moisture and moderates temperature to prevent cracking and shrinkage failures.\n\nIn space contexts, cement chemistry may be constrained by feedstocks and water budget; alternatives include sulfur concrete, geopolymer binders, and sintered regolith depending on site resources.",
+  "principles": [
+    {
+      "name": "Hydraulic hydration",
+      "explanation": "Cement reacts with water to form binding phases; reaction rate depends on temperature and water availability."
+    },
+    {
+      "name": "Water-cement ratio",
+      "explanation": "Strength and permeability correlate strongly with water-to-cement ratio; excess water leaves pores."
+    },
+    {
+      "name": "Aggregate grading",
+      "explanation": "A well-graded aggregate reduces voids and cement demand while improving strength."
+    }
+  ],
+  "components": [
+    {
+      "id": "cement",
+      "name": "Cement binder",
+      "function": "Provides hydraulic binding",
+      "position": "Paste matrix",
+      "madeFrom": "Clinker ground with gypsum"
+    },
+    {
+      "id": "aggregate",
+      "name": "Aggregates",
+      "function": "Provide bulk and compressive strength",
+      "position": "Distributed in paste",
+      "madeFrom": "Sand, gravel, crushed stone"
+    },
+    {
+      "id": "water",
+      "name": "Mix water",
+      "function": "Hydrates cement and provides workability",
+      "position": "Paste",
+      "madeFrom": "Clean water"
+    },
+    {
+      "id": "forms",
+      "name": "Forms and reinforcement (when used)",
+      "function": "Shapes concrete; carries tension if reinforced",
+      "position": "Around/within pour",
+      "madeFrom": "Wood/steel forms; steel rebar"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Water",
+      "purpose": "Mixing, curing, and dust control",
+      "earthLocations": [
+        "Rivers, aquifers, municipal supplies"
+      ],
+      "spaceAlternatives": "Closed-loop water recycling; allocate for curing and dust suppression explicitly.",
+      "processingRequired": "Clean enough to avoid salts/organics that weaken binders."
+    },
+    {
+      "name": "Aggregates (sand, gravel, crushed stone)",
+      "purpose": "Bulk material and mechanical strength in mortars and concretes",
+      "earthLocations": [
+        "Riverbeds, quarries, glacial deposits"
+      ],
+      "spaceAlternatives": "Screened regolith can serve as aggregate; watch particle shape, dust, and reactive phases.",
+      "processingRequired": "Grading (sieving), washing, and removing organics/clays."
+    },
+    {
+      "name": "Limestone and clay",
+      "purpose": "Feedstock for clinker chemistry",
+      "earthLocations": [
+        "Sedimentary limestone; clay deposits worldwide"
+      ],
+      "spaceAlternatives": "Likely replaced by alternative binders early; long-term production depends on calcium, silica, alumina feedstocks and high-temperature kilns.",
+      "processingRequired": "Crush, proportion, and heat to clinker temperatures; then grind consistently."
+    },
+    {
+      "name": "Gypsum",
+      "purpose": "Controls cement set time",
+      "earthLocations": [
+        "Evaporite deposits globally"
+      ],
+      "spaceAlternatives": "Set control may require alternative additives depending on binder chemistry.",
+      "processingRequired": "Grind and proportion accurately; avoid moisture contamination."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Prepare aggregates",
+      "description": "Sieve and wash aggregates; remove clay, organics, and salts that weaken the bond.",
+      "prerequisiteTools": [
+        "sieves",
+        "washing"
+      ],
+      "warningNote": "Silica dust is hazardous; control dust during dry handling."
+    },
+    {
+      "order": 2,
+      "title": "Prepare binder",
+      "description": "Use known cement or produce clinker then grind; store dry; document proportions for repeatability.",
+      "prerequisiteTools": [
+        "grinder",
+        "storage"
+      ],
+      "warningNote": "Cement dust irritates lungs and eyes; use PPE."
+    },
+    {
+      "order": 3,
+      "title": "Mix with controlled water ratio",
+      "description": "Measure water and cement; mix to consistent workability; avoid adding water to 'fix' poor mixes.",
+      "prerequisiteTools": [
+        "measuring containers",
+        "mixing tools"
+      ],
+      "warningNote": "Over-watering is a silent strength killer."
+    },
+    {
+      "order": 4,
+      "title": "Place and compact",
+      "description": "Fill forms in lifts; compact to remove air; protect embedded reinforcement from movement.",
+      "prerequisiteTools": [
+        "tampers",
+        "vibration if available"
+      ],
+      "warningNote": "Forms can fail under pressure; brace and inspect."
+    },
+    {
+      "order": 5,
+      "title": "Cure",
+      "description": "Keep concrete damp and protected; avoid rapid drying; control temperature where possible.",
+      "prerequisiteTools": [
+        "tarps",
+        "water"
+      ],
+      "warningNote": "Early drying causes cracks and weak surfaces."
+    }
+  ],
+  "history": [
+    {
+      "year": 1824,
+      "event": "Portland cement patent (Aspdin) and later industrial standardization.",
+      "location": "UK"
+    },
+    {
+      "year": "1900s",
+      "event": "Reinforced concrete scales bridges, buildings, and infrastructure.",
+      "location": "Global"
+    },
+    {
+      "year": "Late 20th",
+      "event": "Modern admixtures and quality control improve performance.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Concrete enables durable roads, bridges, foundations, and water infrastructure. It also concentrates risk: poor design or curing creates catastrophic failures.\n\nFor civilization bootstrap, concrete is a major inflection point because it unlocks large-scale safe habitats, transport corridors, and industrial floors that support advanced manufacturing.",
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Binder, aggregate, water ratio, placement, curing",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-concrete-portland-cement",
+      "title": "Wikipedia — Concrete and Portland Cement",
+      "url": "https://en.wikipedia.org/wiki/Concrete_and_Portland_Cement"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "pci-what-is-concrete",
+        "title": "Portland Cement Association: What is Concrete?",
+        "type": "institution",
+        "url": "https://www.cement.org/learn/concrete-technology/what-is-concrete"
+      },
+      {
+        "id": "wiki-portland-cement",
+        "title": "Wikipedia — Portland cement",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Portland_cement"
+      },
+      {
+        "id": "nih-concrete-dust",
+        "title": "NIOSH: Silica (crystalline) hazard guidance",
+        "type": "institution",
+        "url": "https://www.cdc.gov/niosh/topics/silica/default.html"
+      }
+    ]
+  }
+}

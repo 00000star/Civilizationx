@@ -1,0 +1,205 @@
+{
+  "id": "ai-safety-and-governance",
+  "name": "AI Safety and Governance",
+  "tagline": "Processes, evaluation, and constraints to reduce harm from deployed models",
+  "category": "science",
+  "era": "21st-century",
+  "difficulty": 4,
+  "prerequisites": [
+    "model-evaluation",
+    "dataset-curation",
+    "machine-learning"
+  ],
+  "unlocks": [],
+  "problem": "Powerful models can cause harm through mistakes, bias, misuse, or overconfidence. Treating safety as an afterthought creates brittle systems and public backlash.\n\nGovernance solves the coordination problem: define risk thresholds, audit trails, and deployment constraints so AI remains a tool rather than a hazard multiplier.",
+  "overview": "Safety includes technical work (evaluation, robustness, calibration, security) and organizational work (policy, reviews, incident response). Governance means decisions are documented and reversible.\n\nFor The Codex, this node matters because 'AI from scratch' is not only math and compute. It is also deciding what you will not deploy, and how you will detect failure early.",
+  "principles": [
+    {
+      "name": "Risk management",
+      "explanation": "Identify hazards, likelihood, and impact; choose mitigations with accountable owners."
+    },
+    {
+      "name": "Defense in depth",
+      "explanation": "Layer dataset curation, evaluation, constraints, and monitoring."
+    },
+    {
+      "name": "Auditability",
+      "explanation": "Keep logs, provenance, and versioning so failures can be investigated."
+    }
+  ],
+  "components": [
+    {
+      "id": "policy",
+      "name": "Policy and review",
+      "function": "Defines constraints and approvals",
+      "position": "Organization",
+      "madeFrom": "Rules and processes"
+    },
+    {
+      "id": "eval",
+      "name": "Safety evaluation",
+      "function": "Detects unsafe behaviors",
+      "position": "Pre/post deploy",
+      "madeFrom": "Tests and red-teams"
+    },
+    {
+      "id": "monitoring",
+      "name": "Operational monitoring",
+      "function": "Detects drift and incidents",
+      "position": "Operations",
+      "madeFrom": "Telemetry and alerts"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Paper and writing media",
+      "purpose": "Record calculations, assumptions, and experimental outcomes",
+      "earthLocations": [
+        "Ubiquitous globally"
+      ],
+      "spaceAlternatives": "Digital notes plus printed backups; radiation-safe storage for critical references.",
+      "processingRequired": "Consistent notation, units, and metadata."
+    },
+    {
+      "name": "Measurement tools",
+      "purpose": "Quantify reality so models are not guesswork",
+      "earthLocations": [
+        "Workshops, labs, trade supply"
+      ],
+      "spaceAlternatives": "Prefer multi-use instruments; maintain calibration artifacts and procedures.",
+      "processingRequired": "Calibration logs and error bounds (uncertainty)."
+    },
+    {
+      "name": "Time and attention",
+      "purpose": "Iterative learning, practice, and verification",
+      "earthLocations": [
+        "Human labor everywhere"
+      ],
+      "spaceAlternatives": "Training time is a hard constraint; plan curricula and drills early.",
+      "processingRequired": "Deliberate practice, peer review, and documentation."
+    },
+    {
+      "name": "Incident logs and feedback",
+      "purpose": "Learn from failures and near-misses",
+      "earthLocations": [
+        "Operational systems and user reports"
+      ],
+      "spaceAlternatives": "Same requirement; treat incident response as life-support for software systems.",
+      "processingRequired": "Triage, root-cause analysis, and corrective actions."
+    },
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Define unacceptable outcomes",
+      "description": "Write what harms must be prevented; map to measurable tests.",
+      "prerequisiteTools": [
+        "policy doc"
+      ],
+      "warningNote": "If you cannot define harm, you cannot prevent it."
+    },
+    {
+      "order": 2,
+      "title": "Build evaluation gates",
+      "description": "Require passing safety tests before deployment; document exceptions.",
+      "prerequisiteTools": [
+        "CI/CD"
+      ],
+      "warningNote": "Informal exceptions become permanent holes."
+    },
+    {
+      "order": 3,
+      "title": "Deploy with constraints",
+      "description": "Rate limits, access controls, and monitoring; keep rollback plans.",
+      "prerequisiteTools": [
+        "ops tooling"
+      ],
+      "warningNote": "Unbounded systems fail at scale."
+    },
+    {
+      "order": 4,
+      "title": "Run incident response drills",
+      "description": "Practice failure handling; update playbooks.",
+      "prerequisiteTools": [
+        "playbooks"
+      ],
+      "warningNote": "First incident is not the time to invent a process."
+    }
+  ],
+  "history": [
+    {
+      "year": "2010s",
+      "event": "Safety concerns rise with model scale and deployment.",
+      "location": "Global"
+    },
+    {
+      "year": "2020s",
+      "event": "Risk frameworks and red-teaming become standard.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Safety and governance determine whether AI accelerates civilization or becomes a destabilizing force. They also enable long-term maintainability through documentation and audit trails.\n\nIn the Codex tree, this node is a prerequisite to responsible deployment of large-model systems in either Earth recovery or space settlement scenarios.",
+  "images": [
+    {
+      "id": "ai-chain-atlas",
+      "filename": "ai-chain-atlas.png",
+      "caption": "Generated atlas illustration of the chain from primitive foundations to AI systems",
+      "type": "illustration",
+      "credit": "The Codex project, generated with OpenAI image generation",
+      "license": "Project-generated media"
+    },
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Risk, evaluation, constraints, monitoring, incident review",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-ai-safety-and-governance",
+      "title": "Wikipedia — AI Safety and Governance",
+      "url": "https://en.wikipedia.org/wiki/AI_Safety_and_Governance"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "nist-ai-rmf",
+        "title": "NIST AI Risk Management Framework",
+        "type": "institution",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+      },
+      {
+        "id": "wiki-ai-safety",
+        "title": "Wikipedia — AI safety",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/AI_safety"
+      },
+      {
+        "id": "weapons-of-math-destruction",
+        "title": "O'Neil — Weapons of Math Destruction",
+        "type": "book"
+      }
+    ]
+  }
+}

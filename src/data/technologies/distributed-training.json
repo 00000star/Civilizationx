@@ -1,0 +1,192 @@
+{
+  "id": "distributed-training",
+  "name": "Distributed Training",
+  "tagline": "Trains large models across multiple accelerators and machines",
+  "category": "computing",
+  "era": "21st-century",
+  "difficulty": 5,
+  "prerequisites": [
+    "gpu-accelerated-computing",
+    "data-storage-systems",
+    "internet-protocols-and-web"
+  ],
+  "unlocks": [],
+  "problem": "Single machines have limited memory and compute. Large models and datasets require parallelism to finish training in reasonable time.\n\nDistributed training solves this by splitting computation and data across devices, but introduces new failure modes: synchronization bugs, silent corruption, and infrastructure fragility.",
+  "overview": "Common strategies include data parallelism (replicate model, split data) and model parallelism (split model across devices). Communication bandwidth and latency become bottlenecks.\n\nA practical distributed system needs checkpointing, monitoring, and deterministic configuration management. The Codex treats this as both a software and infrastructure technology.",
+  "principles": [
+    {
+      "name": "Parallelism strategies",
+      "explanation": "Data/model/pipeline parallelism trade communication for memory and speed."
+    },
+    {
+      "name": "Synchronization",
+      "explanation": "Gradient averaging and parameter updates require consistent coordination."
+    },
+    {
+      "name": "Fault tolerance",
+      "explanation": "Failures are normal at scale; recovery must be designed in."
+    }
+  ],
+  "components": [
+    {
+      "id": "cluster",
+      "name": "Compute cluster",
+      "function": "Provides many devices",
+      "position": "Infrastructure",
+      "madeFrom": "Nodes, accelerators, networking"
+    },
+    {
+      "id": "network",
+      "name": "High-speed network",
+      "function": "Moves gradients and activations",
+      "position": "Interconnect",
+      "madeFrom": "Switches, NICs, cables"
+    },
+    {
+      "id": "scheduler",
+      "name": "Job scheduler",
+      "function": "Allocates resources",
+      "position": "Operations",
+      "madeFrom": "Software and policies"
+    },
+    {
+      "id": "checkpoint",
+      "name": "Checkpointing system",
+      "function": "Saves state and enables recovery",
+      "position": "Storage",
+      "madeFrom": "Filesystems and metadata"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    },
+    {
+      "name": "Semiconductor devices",
+      "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+      "earthLocations": [
+        "Global semiconductor supply chains; packaged IC distributors"
+      ],
+      "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+      "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+    },
+    {
+      "name": "Documentation and standards",
+      "purpose": "Make designs reproducible and debuggable across teams and time",
+      "earthLocations": [
+        "Libraries, universities, standards bodies, archived web"
+      ],
+      "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+      "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+    },
+    {
+      "name": "Network equipment",
+      "purpose": "Low-latency communication between nodes",
+      "earthLocations": [
+        "Data center networking supply chains"
+      ],
+      "spaceAlternatives": "Bandwidth and power constraints push toward smaller models and more efficient training; prioritize robustness over peak throughput.",
+      "processingRequired": "Cabling discipline, configuration management, and monitoring."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Choose parallelism strategy",
+      "description": "Pick data vs model vs pipeline parallelism based on model size and network.",
+      "prerequisiteTools": [
+        "design docs"
+      ],
+      "warningNote": "Wrong strategy wastes most compute on communication."
+    },
+    {
+      "order": 2,
+      "title": "Implement fault-tolerant checkpoints",
+      "description": "Checkpoint frequently; test resume; keep metadata stable.",
+      "prerequisiteTools": [
+        "storage"
+      ],
+      "warningNote": "No resume plan means failed runs waste weeks."
+    },
+    {
+      "order": 3,
+      "title": "Instrument training",
+      "description": "Monitor throughput, errors, and divergence; alert on anomalies.",
+      "prerequisiteTools": [
+        "monitoring"
+      ],
+      "warningNote": "Silent divergence produces useless models."
+    },
+    {
+      "order": 4,
+      "title": "Validate determinism and configs",
+      "description": "Pin software versions and configs; track seeds and dataset versions.",
+      "prerequisiteTools": [
+        "config management"
+      ],
+      "warningNote": "Untracked configs make results non-reproducible."
+    }
+  ],
+  "history": [
+    {
+      "year": "1990s-2000s",
+      "event": "Distributed systems mature in industry and HPC.",
+      "location": "Global"
+    },
+    {
+      "year": "2010s",
+      "event": "Distributed deep learning becomes common.",
+      "location": "Global"
+    },
+    {
+      "year": "2020s",
+      "event": "Large-model training becomes a systems engineering field.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Distributed training enables large models but increases fragility and governance risks. It concentrates capability in organizations that can maintain complex infrastructure.\n\nIn The Codex, it is near the top of the AI chain: do not attempt it without strong monitoring, evaluation, and safety governance.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-distributed-training",
+      "title": "Wikipedia — Distributed Training",
+      "url": "https://en.wikipedia.org/wiki/Distributed_Training"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "wiki-distributed-computing",
+        "title": "Wikipedia — Distributed computing",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Distributed_computing"
+      },
+      {
+        "id": "dean-ghemawat",
+        "title": "Dean & Ghemawat (2008) — MapReduce",
+        "type": "paper",
+        "url": "https://dl.acm.org/doi/10.1145/1327452.1327492"
+      },
+      {
+        "id": "goodfellow-dl",
+        "title": "Goodfellow, Bengio, Courville — Deep Learning",
+        "type": "book",
+        "url": "https://www.deeplearningbook.org/"
+      }
+    ]
+  }
+}

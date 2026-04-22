@@ -1,0 +1,222 @@
+{
+  "id": "germ-theory",
+  "name": "Germ Theory of Disease",
+  "tagline": "Explains infection as microbial transmission and makes sanitation, antisepsis, and public health coherent",
+  "category": "medicine",
+  "era": "industrial",
+  "difficulty": 3,
+  "prerequisites": [
+    "writing-early-systems",
+    "sanitation-and-clean-water"
+  ],
+  "unlocks": [],
+  "problem": "Before germ theory, sickness looked like bad air, curses, or spontaneous decay. Those models fail because they cannot explain why washing hands reduces childbirth fever, why boiling water reduces diarrheal disease, or why outbreaks cluster in contact networks.\n\nThe practical problem is not philosophy. It is prevention and triage: if you do not know how infection spreads, you cannot reliably protect caregivers, keep wounds clean, manage waste, or design safe water and food systems.",
+  "overview": "Germ theory states that many diseases are caused by microorganisms that enter the body, multiply, and damage tissues directly or via toxins and immune response. Transmission depends on routes: water, food, droplets, aerosols, surfaces, vectors, and blood.\n\nThe theory becomes operational when you can break a transmission chain. That means controlling contamination, separating clean and dirty workflows, improving ventilation, disinfecting surfaces, and using barriers (gloves, masks) when appropriate.\n\nFor collapse recovery and space settlement, germ theory is a force multiplier: it turns soap, water, heat, and workflow discipline into lower mortality even without advanced drugs.",
+  "principles": [
+    {
+      "name": "Transmission routes",
+      "explanation": "Pathogens move through specific pathways; controls must match the pathway (water treatment differs from airborne controls)."
+    },
+    {
+      "name": "Dose and exposure",
+      "explanation": "Risk increases with infectious dose and duration of exposure; reducing either can prevent disease."
+    },
+    {
+      "name": "Asepsis and antisepsis",
+      "explanation": "Asepsis prevents introducing microbes; antisepsis reduces microbes present. Both are process disciplines, not a single product."
+    }
+  ],
+  "components": [
+    {
+      "id": "pathogen",
+      "name": "Pathogen (microbe)",
+      "function": "Agent that causes disease",
+      "position": "In environment or host",
+      "madeFrom": "Cells or virions with genetic material"
+    },
+    {
+      "id": "reservoir",
+      "name": "Reservoir and vectors",
+      "function": "Holds and transports microbes",
+      "position": "Water, humans, animals, surfaces",
+      "madeFrom": "Biological and environmental systems"
+    },
+    {
+      "id": "route",
+      "name": "Transmission route",
+      "function": "Mechanism that moves microbes to new host",
+      "position": "Contact, air, water, food, blood",
+      "madeFrom": "Physical pathways"
+    },
+    {
+      "id": "barriers",
+      "name": "Barriers and hygiene",
+      "function": "Reduce transfer between dirty and clean",
+      "position": "Hands, tools, surfaces",
+      "madeFrom": "Soap, water, heat, procedures"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Clean water",
+      "purpose": "Hand hygiene, cleaning, and basic disinfection workflows",
+      "earthLocations": [
+        "Rivers, wells, municipal supplies"
+      ],
+      "spaceAlternatives": "Closed-loop water recycling; allocate water for hygiene as a life-support priority.",
+      "processingRequired": "Filtration/boiling/chlorination appropriate to contamination risk."
+    },
+    {
+      "name": "Soap or detergents",
+      "purpose": "Breaks oils and disrupts microbes on skin and surfaces",
+      "earthLocations": [
+        "Animal/plant fats, lye sources; commercial soap"
+      ],
+      "spaceAlternatives": "Synthesize detergents where chemistry exists; otherwise prioritize soap production from fats and alkali.",
+      "processingRequired": "Correct formulation and safe handling of caustics during manufacture."
+    },
+    {
+      "name": "Heat (boiling/steam)",
+      "purpose": "Thermal kill step for water, tools, and some materials",
+      "earthLocations": [
+        "Fire, charcoal, electricity"
+      ],
+      "spaceAlternatives": "Electric heating and pressure steam sterilization where power allows.",
+      "processingRequired": "Time-at-temperature discipline; avoid recontamination after heating."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Define transmission routes for the environment",
+      "description": "Identify likely routes (water, food, contact, airborne) from living conditions, waste handling, and crowding.",
+      "prerequisiteTools": [
+        "paper",
+        "basic observation"
+      ],
+      "warningNote": "Do not assume a single route; multiple routes can operate at once."
+    },
+    {
+      "order": 2,
+      "title": "Separate clean and dirty workflows",
+      "description": "Designate clean areas for food and wound care; keep waste handling physically separated with dedicated tools.",
+      "prerequisiteTools": [
+        "labels",
+        "containers"
+      ],
+      "warningNote": "Cross-contamination happens through shared tools and hands."
+    },
+    {
+      "order": 3,
+      "title": "Implement hand hygiene",
+      "description": "Use soap and clean water; scrub all surfaces of hands; dry with clean material. Prioritize before eating and wound care.",
+      "prerequisiteTools": [
+        "soap",
+        "water"
+      ],
+      "warningNote": "If water quality is uncertain, treat water used for hand hygiene."
+    },
+    {
+      "order": 4,
+      "title": "Control water and food contamination",
+      "description": "Treat drinking water; cook food thoroughly when appropriate; store food in clean containers to prevent recontamination.",
+      "prerequisiteTools": [
+        "heat source",
+        "containers"
+      ],
+      "warningNote": "Boiled water can be recontaminated by dirty vessels."
+    },
+    {
+      "order": 5,
+      "title": "Clean and disinfect high-touch surfaces",
+      "description": "Establish routine cleaning; use heat or chemical disinfectants where safe; document what works and what fails.",
+      "prerequisiteTools": [
+        "cleaning tools"
+      ],
+      "warningNote": "Some chemicals create toxic fumes; ventilate and avoid mixing cleaners."
+    }
+  ],
+  "history": [
+    {
+      "year": "1840s",
+      "event": "Handwashing and hygiene reduce puerperal fever in clinics.",
+      "location": "Europe"
+    },
+    {
+      "year": "1860s",
+      "event": "Antiseptic surgery practices demonstrate infection control benefits.",
+      "location": "UK"
+    },
+    {
+      "year": "1880s",
+      "event": "Bacteriology links specific microbes to specific diseases.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "Ignaz Semmelweis",
+      "contribution": "Demonstrated hand hygiene impact in clinical practice",
+      "years": "1818-1865",
+      "nationality": "Hungarian"
+    },
+    {
+      "name": "Louis Pasteur",
+      "contribution": "Work on fermentation and microbes supports germ theory",
+      "years": "1822-1895",
+      "nationality": "French"
+    }
+  ],
+  "impact": "Germ theory changed civilization by making prevention possible: sanitation, clean water, safe food, and safer childbirth. It also changed the design of institutions: hospitals, laboratories, and public health agencies.\n\nIn the Codex context it is foundational because it upgrades many low-tech tools (soap, water, heat) into high-leverage health outcomes when applied with correct process discipline.",
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Reservoir, route, exposure, barrier, monitoring",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-germ-theory",
+      "title": "Wikipedia — Germ Theory of Disease",
+      "url": "https://en.wikipedia.org/wiki/Germ_Theory_of_Disease"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [
+      "Contraindications: individual conditions, allergies, pregnancy, age, immune status, and drug interactions change what is safe.",
+      "Overdose: dosing errors can cause serious injury or death; do not guess doses or concentrations.",
+      "Sterility: infection control and sterile technique are often the difference between healing and harm.",
+      "Professional verification is required before use on a human being."
+    ],
+    "sources": [
+      {
+        "id": "who-ipc",
+        "title": "WHO: Infection prevention and control",
+        "type": "institution",
+        "url": "https://www.who.int/teams/integrated-health-services/infection-prevention-control"
+      },
+      {
+        "id": "cdc-hand-hygiene",
+        "title": "CDC: Hand Hygiene in Healthcare Settings",
+        "type": "institution",
+        "url": "https://www.cdc.gov/handhygiene/"
+      },
+      {
+        "id": "wiki-germ-theory",
+        "title": "Wikipedia — Germ theory of disease",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Germ_theory_of_disease"
+      }
+    ]
+  }
+}

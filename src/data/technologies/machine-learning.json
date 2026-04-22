@@ -1,0 +1,250 @@
+{
+  "id": "machine-learning",
+  "name": "Machine Learning",
+  "tagline": "Learns patterns from data to make predictions and decisions",
+  "category": "computing",
+  "era": "late-20th",
+  "difficulty": 5,
+  "prerequisites": [
+    "stored-program-computer",
+    "linear-algebra",
+    "probability-and-statistics",
+    "calculus-and-optimization"
+  ],
+  "unlocks": [
+    "ai-safety-and-governance",
+    "model-evaluation",
+    "tokenization",
+    "transformer-models"
+  ],
+  "problem": "Hand-written rules break when environments are messy, high-dimensional, or partially observed. Many problems cannot be solved by enumerating if-then logic.\n\nMachine learning reframes the problem: choose a model family and fit parameters from data so the system generalizes to new cases. The hard part is not training; it is avoiding false confidence, bias, and overfitting.",
+  "overview": "A learning pipeline selects data, defines an objective (loss), and uses optimization to fit parameters. Performance is judged on held-out data and against baseline methods.\n\nReal deployments require monitoring and iteration: data drifts, labels are noisy, and correlations fail under regime change. The Codex treats this as an engineering discipline, not a one-time training run.",
+  "principles": [
+    {
+      "name": "Generalization",
+      "explanation": "The goal is performance on unseen data; training accuracy alone is not enough."
+    },
+    {
+      "name": "Bias-variance tradeoff",
+      "explanation": "Model capacity affects underfitting vs overfitting; regularization and data volume shift the balance."
+    },
+    {
+      "name": "Evaluation discipline",
+      "explanation": "Train/validation/test splits and error analysis prevent self-deception."
+    }
+  ],
+  "components": [
+    {
+      "id": "data",
+      "name": "Dataset",
+      "function": "Provides examples for learning",
+      "position": "Input",
+      "madeFrom": "Measurements, text, images, logs"
+    },
+    {
+      "id": "model",
+      "name": "Model family",
+      "function": "Maps inputs to outputs",
+      "position": "Core algorithm",
+      "madeFrom": "Parameters and structure"
+    },
+    {
+      "id": "loss",
+      "name": "Loss function",
+      "function": "Defines objective to optimize",
+      "position": "Training loop",
+      "madeFrom": "Math definition"
+    },
+    {
+      "id": "optimizer",
+      "name": "Optimizer",
+      "function": "Adjusts parameters to reduce loss",
+      "position": "Training loop",
+      "madeFrom": "Gradient-based methods or others"
+    },
+    {
+      "id": "evaluation",
+      "name": "Evaluation harness",
+      "function": "Measures performance and failure modes",
+      "position": "Testing",
+      "madeFrom": "Metrics, datasets, reports"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    },
+    {
+      "name": "Semiconductor devices",
+      "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+      "earthLocations": [
+        "Global semiconductor supply chains; packaged IC distributors"
+      ],
+      "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+      "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+    },
+    {
+      "name": "Documentation and standards",
+      "purpose": "Make designs reproducible and debuggable across teams and time",
+      "earthLocations": [
+        "Libraries, universities, standards bodies, archived web"
+      ],
+      "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+      "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+    },
+    {
+      "name": "Training data",
+      "purpose": "Examples that encode the target task",
+      "earthLocations": [
+        "Sensors, documents, logs, human annotations"
+      ],
+      "spaceAlternatives": "Data is a scarce resource early off-world; simulate where possible and design experiments to generate labeled data safely.",
+      "processingRequired": "Cleaning, labeling, privacy/safety review, and dataset versioning."
+    },
+    {
+      "name": "Compute time",
+      "purpose": "Optimization over large datasets and model parameters",
+      "earthLocations": [
+        "CPUs/GPUs/TPUs in data centers"
+      ],
+      "spaceAlternatives": "Prefer smaller models and task-specific systems early; schedule training around power availability and thermal limits.",
+      "processingRequired": "Thermal management, job scheduling, and checkpointing."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Define the task and metrics",
+      "description": "Specify inputs/outputs and what success means. Choose metrics and baseline approaches.",
+      "prerequisiteTools": [
+        "problem statement",
+        "metrics"
+      ],
+      "warningNote": "Bad metrics create models that optimize the wrong thing."
+    },
+    {
+      "order": 2,
+      "title": "Collect and version data",
+      "description": "Gather representative data; record provenance; split into train/validation/test sets.",
+      "prerequisiteTools": [
+        "storage",
+        "version control"
+      ],
+      "warningNote": "Leakage between splits produces fake performance."
+    },
+    {
+      "order": 3,
+      "title": "Choose model and objective",
+      "description": "Start simple; pick loss; add regularization. Document assumptions.",
+      "prerequisiteTools": [
+        "math references"
+      ],
+      "warningNote": "More complexity without data and evaluation increases risk."
+    },
+    {
+      "order": 4,
+      "title": "Train with monitoring",
+      "description": "Track loss/metrics; detect overfitting; tune hyperparameters cautiously.",
+      "prerequisiteTools": [
+        "compute",
+        "monitoring"
+      ],
+      "warningNote": "If training is unstable, reduce learning rate or simplify."
+    },
+    {
+      "order": 5,
+      "title": "Evaluate and stress-test",
+      "description": "Run on held-out tests; do error analysis; test for distribution shift and edge cases.",
+      "prerequisiteTools": [
+        "evaluation harness"
+      ],
+      "warningNote": "Do not deploy without understanding failures."
+    },
+    {
+      "order": 6,
+      "title": "Deploy with feedback",
+      "description": "Monitor drift; retrain responsibly; keep a rollback plan.",
+      "prerequisiteTools": [
+        "deployment pipeline"
+      ],
+      "warningNote": "Unmonitored models can silently degrade."
+    }
+  ],
+  "history": [
+    {
+      "year": "1950s-60s",
+      "event": "Early statistical learning and perceptron era.",
+      "location": "Global"
+    },
+    {
+      "year": "1990s",
+      "event": "Statistical learning theory and practical ML expand.",
+      "location": "Global"
+    },
+    {
+      "year": "2010s",
+      "event": "Deep learning and large datasets drive major capability jumps.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Machine learning automates pattern recognition and prediction across science, industry, and communication. It also concentrates power and risk: biased data and opaque models can cause real harm at scale.\n\nFor The Codex, ML is a late-tree capability that depends on stable computing infrastructure and disciplined measurement, but it can accelerate discovery when used responsibly.",
+  "images": [
+    {
+      "id": "ai-chain-atlas",
+      "filename": "ai-chain-atlas.png",
+      "caption": "Generated atlas illustration of the chain from primitive foundations to AI systems",
+      "type": "illustration",
+      "credit": "The Codex project, generated with OpenAI image generation",
+      "license": "Project-generated media"
+    },
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Data, model, loss, training, evaluation",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-machine-learning",
+      "title": "Wikipedia — Machine Learning",
+      "url": "https://en.wikipedia.org/wiki/Machine_Learning"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "bishop-prml",
+        "title": "Bishop — Pattern Recognition and Machine Learning",
+        "type": "book"
+      },
+      {
+        "id": "hastie-esl",
+        "title": "Hastie, Tibshirani, Friedman — The Elements of Statistical Learning",
+        "type": "book"
+      },
+      {
+        "id": "wiki-ml",
+        "title": "Wikipedia — Machine learning",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Machine_learning"
+      }
+    ]
+  }
+}

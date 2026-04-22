@@ -71,6 +71,8 @@ Each file is `src/data/technologies/<id>.json` where `<id>` matches the `id` fie
 
 These mirror the generator prompt in `scripts/generate-technologies.mjs`:
 
+Minimum content depth requirements (components, steps, paragraph depth, etc) are defined in `docs/CONTENT_DEPTH_STANDARD.md`.
+
 1. **Build steps**: Any step involving heat over 100 °C, flame, electricity, sharp tools, structural loads, pressure, toxic or corrosive chemicals, biological material, radiation, or confined spaces **must** include `warningNote`.
 2. **Hazardous raw materials**: `processingRequired` must cover safe handling, PPE, and disposal where hazards exist.
 3. **Medicine**: `category` `medicine` requires `verification.warnings` to list contraindications, overdose risk, sterility requirements, and the sentence: **Professional verification is required before use on a human being.**

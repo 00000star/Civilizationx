@@ -1,0 +1,203 @@
+{
+  "id": "data-storage-systems",
+  "name": "Data Storage Systems",
+  "tagline": "Persistent storage for documents, software, and datasets",
+  "category": "computing",
+  "era": "late-20th",
+  "difficulty": 4,
+  "prerequisites": [
+    "microprocessor",
+    "copper-wire-and-cable",
+    "electric-motor"
+  ],
+  "unlocks": [
+    "dataset-curation",
+    "distributed-training"
+  ],
+  "problem": "Civilization fails when knowledge cannot persist. Memory inside a running computer is not enough: you need durable storage for documents, software, and measurements.\n\nStorage systems solve persistence with tradeoffs: cost, reliability, speed, and power. The hard part is not writing bits; it is integrity over time and repairability.",
+  "overview": "Storage spans multiple tiers: paper and print, magnetic media, solid-state flash, and redundant distributed storage. Each tier has different failure modes: bit rot, mechanical wear, radiation, humidity, and human error.\n\nFor The Codex, storage is a survival technology: keep critical references in multiple formats, with checksums and redundancy, and test restores regularly.",
+  "principles": [
+    {
+      "name": "Redundancy",
+      "explanation": "Multiple copies and parity prevent single failures from destroying knowledge."
+    },
+    {
+      "name": "Checksums and integrity",
+      "explanation": "Hashing detects corruption; regular verification is required."
+    },
+    {
+      "name": "Lifecycle and failure modes",
+      "explanation": "Media wear and environmental stress determine refresh schedules."
+    }
+  ],
+  "components": [
+    {
+      "id": "media",
+      "name": "Storage media",
+      "function": "Holds bits",
+      "position": "Drives/tapes/print",
+      "madeFrom": "Magnetic domains, flash cells, ink"
+    },
+    {
+      "id": "controller",
+      "name": "Controller",
+      "function": "Reads/writes and manages errors",
+      "position": "Drive electronics",
+      "madeFrom": "ICs and firmware"
+    },
+    {
+      "id": "filesystem",
+      "name": "Filesystem and formats",
+      "function": "Organizes data into files",
+      "position": "Software layer",
+      "madeFrom": "Data structures and metadata"
+    },
+    {
+      "id": "backup",
+      "name": "Backup and replication",
+      "function": "Creates recoverable copies",
+      "position": "Operational process",
+      "madeFrom": "Procedures and automation"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    },
+    {
+      "name": "Semiconductor devices",
+      "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+      "earthLocations": [
+        "Global semiconductor supply chains; packaged IC distributors"
+      ],
+      "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+      "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+    },
+    {
+      "name": "Documentation and standards",
+      "purpose": "Make designs reproducible and debuggable across teams and time",
+      "earthLocations": [
+        "Libraries, universities, standards bodies, archived web"
+      ],
+      "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+      "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+    },
+    {
+      "name": "Magnetic materials and precision parts",
+      "purpose": "Disk/tape media and mechanical assemblies (where used)",
+      "earthLocations": [
+        "Industrial manufacturing supply chains"
+      ],
+      "spaceAlternatives": "Favor solid-state and printed backups early; mechanical storage is maintenance-heavy off-world.",
+      "processingRequired": "Clean assembly and alignment; environmental sealing."
+    },
+    {
+      "name": "Printed references",
+      "purpose": "Human-readable backup for critical knowledge",
+      "earthLocations": [
+        "Paper/ink supply chains"
+      ],
+      "spaceAlternatives": "Print key manuals; store in controlled environments; keep redundancy.",
+      "processingRequired": "Indexing, revision control, and archive discipline."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Choose redundancy strategy",
+      "description": "Define what must survive; decide copy count and locations; use offline backups.",
+      "prerequisiteTools": [
+        "inventory"
+      ],
+      "warningNote": "If you have only one copy, you do not have the data."
+    },
+    {
+      "order": 2,
+      "title": "Define integrity checks",
+      "description": "Use checksums and periodic verification; record hash manifests.",
+      "prerequisiteTools": [
+        "hash tools"
+      ],
+      "warningNote": "Silent corruption accumulates over time."
+    },
+    {
+      "order": 3,
+      "title": "Test restores",
+      "description": "Practice restoring from backup; document steps and dependencies.",
+      "prerequisiteTools": [
+        "restore plan"
+      ],
+      "warningNote": "Backups that cannot be restored are theater."
+    },
+    {
+      "order": 4,
+      "title": "Refresh media on schedule",
+      "description": "Rotate and migrate data before end-of-life; store spares.",
+      "prerequisiteTools": [
+        "maintenance logs"
+      ],
+      "warningNote": "Old media fails at the worst time."
+    }
+  ],
+  "history": [
+    {
+      "year": "1900s",
+      "event": "Paper archives and microfilm scale knowledge storage.",
+      "location": "Global"
+    },
+    {
+      "year": "1950s-80s",
+      "event": "Magnetic tape and disks dominate computing storage.",
+      "location": "Global"
+    },
+    {
+      "year": "2000s+",
+      "event": "Flash and distributed storage become standard.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Reliable storage is the difference between accumulated capability and repeated rediscovery. It enables science, engineering, governance, and long-term planning.\n\nIn the Codex, storage sits near the base of modern computing and of any resilience strategy for collapse recovery or space settlement.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-data-storage-systems",
+      "title": "Wikipedia — Data Storage Systems",
+      "url": "https://en.wikipedia.org/wiki/Data_Storage_Systems"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "wiki-data-storage",
+        "title": "Wikipedia — Data storage",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Data_storage"
+      },
+      {
+        "id": "nist-hash",
+        "title": "NIST: Cryptographic Hash Functions (general guidance)",
+        "type": "institution",
+        "url": "https://csrc.nist.gov/projects/hash-functions"
+      },
+      {
+        "id": "tanenbaum-os",
+        "title": "Tanenbaum & Bos — Modern Operating Systems (storage/filesystems context)",
+        "type": "book"
+      }
+    ]
+  }
+}

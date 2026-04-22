@@ -7,11 +7,13 @@
   "difficulty": 1,
   "prerequisites": [],
   "unlocks": [
+    "bricks-and-fired-masonry",
     "ceramics-and-pottery",
     "charcoal",
     "cooking",
     "first-aid-and-wound-care",
     "food-preservation",
+    "lime-production",
     "sanitation-and-clean-water",
     "soap-making",
     "soil-science-and-composting"

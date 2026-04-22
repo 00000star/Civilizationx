@@ -1,5 +1,176 @@
 [
   {
+    "id": "ai-safety-and-governance",
+    "name": "AI Safety and Governance",
+    "tagline": "Processes, evaluation, and constraints to reduce harm from deployed models",
+    "category": "science",
+    "era": "21st-century",
+    "difficulty": 4,
+    "prerequisites": [
+      "model-evaluation",
+      "dataset-curation",
+      "machine-learning"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Paper and writing media",
+        "purpose": "Record calculations, assumptions, and experimental outcomes",
+        "earthLocations": [
+          "Ubiquitous globally"
+        ],
+        "spaceAlternatives": "Digital notes plus printed backups; radiation-safe storage for critical references.",
+        "processingRequired": "Consistent notation, units, and metadata."
+      },
+      {
+        "name": "Measurement tools",
+        "purpose": "Quantify reality so models are not guesswork",
+        "earthLocations": [
+          "Workshops, labs, trade supply"
+        ],
+        "spaceAlternatives": "Prefer multi-use instruments; maintain calibration artifacts and procedures.",
+        "processingRequired": "Calibration logs and error bounds (uncertainty)."
+      },
+      {
+        "name": "Time and attention",
+        "purpose": "Iterative learning, practice, and verification",
+        "earthLocations": [
+          "Human labor everywhere"
+        ],
+        "spaceAlternatives": "Training time is a hard constraint; plan curricula and drills early.",
+        "processingRequired": "Deliberate practice, peer review, and documentation."
+      },
+      {
+        "name": "Incident logs and feedback",
+        "purpose": "Learn from failures and near-misses",
+        "earthLocations": [
+          "Operational systems and user reports"
+        ],
+        "spaceAlternatives": "Same requirement; treat incident response as life-support for software systems.",
+        "processingRequired": "Triage, root-cause analysis, and corrective actions."
+      },
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "nist-ai-rmf",
+          "title": "NIST AI Risk Management Framework",
+          "type": "institution",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        },
+        {
+          "id": "wiki-ai-safety",
+          "title": "Wikipedia — AI safety",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/AI_safety"
+        },
+        {
+          "id": "weapons-of-math-destruction",
+          "title": "O'Neil — Weapons of Math Destruction",
+          "type": "book"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
+    "id": "backpropagation",
+    "name": "Backpropagation",
+    "tagline": "Efficient gradient computation for layered models via the chain rule",
+    "category": "computing",
+    "era": "late-20th",
+    "difficulty": 5,
+    "prerequisites": [
+      "gradient-descent",
+      "calculus-and-optimization",
+      "stored-program-computer"
+    ],
+    "unlocks": [
+      "neural-networks",
+      "transformer-models"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      },
+      {
+        "name": "Semiconductor devices",
+        "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+        "earthLocations": [
+          "Global semiconductor supply chains; packaged IC distributors"
+        ],
+        "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+        "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+      },
+      {
+        "name": "Documentation and standards",
+        "purpose": "Make designs reproducible and debuggable across teams and time",
+        "earthLocations": [
+          "Libraries, universities, standards bodies, archived web"
+        ],
+        "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+        "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+      },
+      {
+        "name": "Test cases",
+        "purpose": "Verify gradient correctness and stability",
+        "earthLocations": [
+          "Engineering practice everywhere"
+        ],
+        "spaceAlternatives": "Same requirement: treat tests as life-support for software reliability.",
+        "processingRequired": "Finite-difference gradient checks and regression tests."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "rumelhart-1986",
+          "title": "Rumelhart, Hinton, Williams (1986) — Learning representations by back-propagating errors",
+          "type": "paper",
+          "url": "https://www.nature.com/articles/323533a0"
+        },
+        {
+          "id": "goodfellow-backprop",
+          "title": "Goodfellow et al. — Deep Learning (backprop chapter)",
+          "type": "book",
+          "url": "https://www.deeplearningbook.org/"
+        },
+        {
+          "id": "wiki-backprop",
+          "title": "Wikipedia — Backpropagation",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Backpropagation"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
     "id": "basic-hand-tools",
     "name": "Basic Hand Tools (Hammer, Chisel, Saw)",
     "tagline": "Percussion, cutting, and ripping tools that convert human intent into shaped wood, stone, and metal",
@@ -233,6 +404,161 @@
     "lastUpdated": "2026-04-10"
   },
   {
+    "id": "bricks-and-fired-masonry",
+    "name": "Bricks and Fired Masonry",
+    "tagline": "Standardized fired units for durable construction and kilns",
+    "category": "construction",
+    "era": "ancient",
+    "difficulty": 2,
+    "prerequisites": [
+      "ceramics-and-pottery",
+      "fire"
+    ],
+    "unlocks": [
+      "concrete-portland-cement"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Clay-rich soil",
+        "purpose": "Primary ceramic feedstock",
+        "earthLocations": [
+          "Riverbanks, floodplains, clay pits"
+        ],
+        "spaceAlternatives": "Regolith-based ceramics are plausible with binders and controlled sintering; early bricks may rely on sintered regolith blocks.",
+        "processingRequired": "Screen stones; adjust moisture; add temper to reduce cracking."
+      },
+      {
+        "name": "Temper (sand, grog, ash, straw)",
+        "purpose": "Controls shrinkage and cracking; improves handling",
+        "earthLocations": [
+          "Sand deposits; crushed fired ceramics; plant fibers"
+        ],
+        "spaceAlternatives": "Screened regolith grains can serve as temper; keep dust under control.",
+        "processingRequired": "Sieve to consistent grain size; pre-dry organic tempers."
+      },
+      {
+        "name": "Heat and kilns",
+        "purpose": "Calcination and firing for lime, bricks, and cement precursors",
+        "earthLocations": [
+          "Wood/charcoal/coal; industrial fuels"
+        ],
+        "spaceAlternatives": "Electric kilns powered by solar/nuclear; thermal insulation is critical for energy efficiency.",
+        "processingRequired": "Temperature control, refractory linings, and safe ventilation."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "wiki-brick",
+          "title": "Wikipedia — Brick",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Brick"
+        },
+        {
+          "id": "britannica-brick",
+          "title": "Encyclopaedia Britannica — Brick",
+          "type": "institution",
+          "url": "https://www.britannica.com/technology/brick"
+        },
+        {
+          "id": "nps-brickwork",
+          "title": "NPS Preservation Brief 2: Repointing Mortar Joints in Historic Masonry Buildings",
+          "type": "institution",
+          "url": "https://www.nps.gov/orgs/1739/preservation-briefs.htm",
+          "note": "See Brief 2 for masonry mortar context and failure modes"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
+    "id": "calculus-and-optimization",
+    "name": "Calculus and Optimization",
+    "tagline": "Rates of change and constrained minimization for engineering design and machine learning",
+    "category": "science",
+    "era": "industrial",
+    "difficulty": 4,
+    "prerequisites": [
+      "writing-early-systems",
+      "paper-and-ink-media"
+    ],
+    "unlocks": [
+      "backpropagation",
+      "gradient-descent",
+      "machine-learning"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Paper and writing media",
+        "purpose": "Record calculations, assumptions, and experimental outcomes",
+        "earthLocations": [
+          "Ubiquitous globally"
+        ],
+        "spaceAlternatives": "Digital notes plus printed backups; radiation-safe storage for critical references.",
+        "processingRequired": "Consistent notation, units, and metadata."
+      },
+      {
+        "name": "Measurement tools",
+        "purpose": "Quantify reality so models are not guesswork",
+        "earthLocations": [
+          "Workshops, labs, trade supply"
+        ],
+        "spaceAlternatives": "Prefer multi-use instruments; maintain calibration artifacts and procedures.",
+        "processingRequired": "Calibration logs and error bounds (uncertainty)."
+      },
+      {
+        "name": "Time and attention",
+        "purpose": "Iterative learning, practice, and verification",
+        "earthLocations": [
+          "Human labor everywhere"
+        ],
+        "spaceAlternatives": "Training time is a hard constraint; plan curricula and drills early.",
+        "processingRequired": "Deliberate practice, peer review, and documentation."
+      },
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "boyd-vandenberghe",
+          "title": "Boyd & Vandenberghe — Convex Optimization",
+          "type": "book",
+          "url": "https://web.stanford.edu/~boyd/cvxbook/"
+        },
+        {
+          "id": "nocedal-wright",
+          "title": "Nocedal & Wright — Numerical Optimization",
+          "type": "book"
+        },
+        {
+          "id": "wiki-optimization",
+          "title": "Wikipedia — Mathematical optimization",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Mathematical_optimization"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
     "id": "cart-and-wagon",
     "name": "Cart and Wagon",
     "tagline": "Four-wheeled and two-wheeled vehicles that multiply land freight using wheels, axles, and draft animals or humans",
@@ -396,7 +722,9 @@
       "fire"
     ],
     "unlocks": [
+      "bricks-and-fired-masonry",
       "glass-making",
+      "lime-production",
       "sanitation-and-clean-water",
       "smelting-bronze-age",
       "writing-early-systems"
@@ -481,6 +809,7 @@
     "unlocks": [
       "glass-making",
       "iron-smelting",
+      "lime-production",
       "smelting-bronze-age",
       "soap-making",
       "steam-engine",
@@ -625,6 +954,85 @@
     "lastUpdated": "2026-04-10"
   },
   {
+    "id": "concrete-portland-cement",
+    "name": "Concrete and Portland Cement",
+    "tagline": "Hydraulic binders and aggregates for modern structural construction",
+    "category": "construction",
+    "era": "industrial",
+    "difficulty": 4,
+    "prerequisites": [
+      "lime-production",
+      "bricks-and-fired-masonry"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Water",
+        "purpose": "Mixing, curing, and dust control",
+        "earthLocations": [
+          "Rivers, aquifers, municipal supplies"
+        ],
+        "spaceAlternatives": "Closed-loop water recycling; allocate for curing and dust suppression explicitly.",
+        "processingRequired": "Clean enough to avoid salts/organics that weaken binders."
+      },
+      {
+        "name": "Aggregates (sand, gravel, crushed stone)",
+        "purpose": "Bulk material and mechanical strength in mortars and concretes",
+        "earthLocations": [
+          "Riverbeds, quarries, glacial deposits"
+        ],
+        "spaceAlternatives": "Screened regolith can serve as aggregate; watch particle shape, dust, and reactive phases.",
+        "processingRequired": "Grading (sieving), washing, and removing organics/clays."
+      },
+      {
+        "name": "Limestone and clay",
+        "purpose": "Feedstock for clinker chemistry",
+        "earthLocations": [
+          "Sedimentary limestone; clay deposits worldwide"
+        ],
+        "spaceAlternatives": "Likely replaced by alternative binders early; long-term production depends on calcium, silica, alumina feedstocks and high-temperature kilns.",
+        "processingRequired": "Crush, proportion, and heat to clinker temperatures; then grind consistently."
+      },
+      {
+        "name": "Gypsum",
+        "purpose": "Controls cement set time",
+        "earthLocations": [
+          "Evaporite deposits globally"
+        ],
+        "spaceAlternatives": "Set control may require alternative additives depending on binder chemistry.",
+        "processingRequired": "Grind and proportion accurately; avoid moisture contamination."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "pci-what-is-concrete",
+          "title": "Portland Cement Association: What is Concrete?",
+          "type": "institution",
+          "url": "https://www.cement.org/learn/concrete-technology/what-is-concrete"
+        },
+        {
+          "id": "wiki-portland-cement",
+          "title": "Wikipedia — Portland cement",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Portland_cement"
+        },
+        {
+          "id": "nih-concrete-dust",
+          "title": "NIOSH: Silica (crystalline) hazard guidance",
+          "type": "institution",
+          "url": "https://www.cdc.gov/niosh/topics/silica/default.html"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
     "id": "fire",
     "name": "Controlled Fire",
     "tagline": "Heat, light, and chemical transformation on demand — the foundation of cooked food, warmth, and high-temperature processes",
@@ -633,11 +1041,13 @@
     "difficulty": 1,
     "prerequisites": [],
     "unlocks": [
+      "bricks-and-fired-masonry",
       "ceramics-and-pottery",
       "charcoal",
       "cooking",
       "first-aid-and-wound-care",
       "food-preservation",
+      "lime-production",
       "sanitation-and-clean-water",
       "soap-making",
       "soil-science-and-composting"
@@ -715,6 +1125,7 @@
       "fire"
     ],
     "unlocks": [
+      "fermentation-basic",
       "first-aid-and-wound-care",
       "food-preservation",
       "paper-and-ink-media",
@@ -794,6 +1205,7 @@
       "steel-production"
     ],
     "unlocks": [
+      "data-storage-systems",
       "dc-power-transmission-and-motor-drives",
       "electric-motor",
       "electrical-power-grid",
@@ -869,6 +1281,179 @@
     "lastUpdated": "2026-04-10"
   },
   {
+    "id": "data-storage-systems",
+    "name": "Data Storage Systems",
+    "tagline": "Persistent storage for documents, software, and datasets",
+    "category": "computing",
+    "era": "late-20th",
+    "difficulty": 4,
+    "prerequisites": [
+      "microprocessor",
+      "copper-wire-and-cable",
+      "electric-motor"
+    ],
+    "unlocks": [
+      "dataset-curation",
+      "distributed-training"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      },
+      {
+        "name": "Semiconductor devices",
+        "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+        "earthLocations": [
+          "Global semiconductor supply chains; packaged IC distributors"
+        ],
+        "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+        "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+      },
+      {
+        "name": "Documentation and standards",
+        "purpose": "Make designs reproducible and debuggable across teams and time",
+        "earthLocations": [
+          "Libraries, universities, standards bodies, archived web"
+        ],
+        "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+        "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+      },
+      {
+        "name": "Magnetic materials and precision parts",
+        "purpose": "Disk/tape media and mechanical assemblies (where used)",
+        "earthLocations": [
+          "Industrial manufacturing supply chains"
+        ],
+        "spaceAlternatives": "Favor solid-state and printed backups early; mechanical storage is maintenance-heavy off-world.",
+        "processingRequired": "Clean assembly and alignment; environmental sealing."
+      },
+      {
+        "name": "Printed references",
+        "purpose": "Human-readable backup for critical knowledge",
+        "earthLocations": [
+          "Paper/ink supply chains"
+        ],
+        "spaceAlternatives": "Print key manuals; store in controlled environments; keep redundancy.",
+        "processingRequired": "Indexing, revision control, and archive discipline."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "wiki-data-storage",
+          "title": "Wikipedia — Data storage",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Data_storage"
+        },
+        {
+          "id": "nist-hash",
+          "title": "NIST: Cryptographic Hash Functions (general guidance)",
+          "type": "institution",
+          "url": "https://csrc.nist.gov/projects/hash-functions"
+        },
+        {
+          "id": "tanenbaum-os",
+          "title": "Tanenbaum & Bos — Modern Operating Systems (storage/filesystems context)",
+          "type": "book"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
+    "id": "dataset-curation",
+    "name": "Dataset Curation and Governance",
+    "tagline": "Provenance, filtering, and licensing discipline for training data",
+    "category": "computing",
+    "era": "21st-century",
+    "difficulty": 4,
+    "prerequisites": [
+      "data-storage-systems",
+      "probability-and-statistics",
+      "programming-languages"
+    ],
+    "unlocks": [
+      "ai-safety-and-governance"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      },
+      {
+        "name": "Semiconductor devices",
+        "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+        "earthLocations": [
+          "Global semiconductor supply chains; packaged IC distributors"
+        ],
+        "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+        "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+      },
+      {
+        "name": "Documentation and standards",
+        "purpose": "Make designs reproducible and debuggable across teams and time",
+        "earthLocations": [
+          "Libraries, universities, standards bodies, archived web"
+        ],
+        "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+        "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+      },
+      {
+        "name": "Raw corpora",
+        "purpose": "Source material for curated datasets",
+        "earthLocations": [
+          "Libraries, web archives, repositories"
+        ],
+        "spaceAlternatives": "Local archives and manuals; prioritize high-signal technical references and vetted local logs.",
+        "processingRequired": "Parsing, deduplication, filtering, and metadata extraction."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "gebru-datasheets",
+          "title": "Gebru et al. (2021) — Datasheets for Datasets",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/1803.09010"
+        },
+        {
+          "id": "wiki-data-governance",
+          "title": "Wikipedia — Data governance",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Data_governance"
+        },
+        {
+          "id": "nist-ai-rmf",
+          "title": "NIST AI Risk Management Framework",
+          "type": "institution",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
     "id": "dc-power-transmission-and-motor-drives",
     "name": "DC Power Transmission and Motor Drives",
     "tagline": "Rectifiers, inverters, and choppers that move or motor power when AC alone is insufficient",
@@ -941,6 +1526,86 @@
       ]
     },
     "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "distributed-training",
+    "name": "Distributed Training",
+    "tagline": "Trains large models across multiple accelerators and machines",
+    "category": "computing",
+    "era": "21st-century",
+    "difficulty": 5,
+    "prerequisites": [
+      "gpu-accelerated-computing",
+      "data-storage-systems",
+      "internet-protocols-and-web"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      },
+      {
+        "name": "Semiconductor devices",
+        "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+        "earthLocations": [
+          "Global semiconductor supply chains; packaged IC distributors"
+        ],
+        "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+        "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+      },
+      {
+        "name": "Documentation and standards",
+        "purpose": "Make designs reproducible and debuggable across teams and time",
+        "earthLocations": [
+          "Libraries, universities, standards bodies, archived web"
+        ],
+        "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+        "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+      },
+      {
+        "name": "Network equipment",
+        "purpose": "Low-latency communication between nodes",
+        "earthLocations": [
+          "Data center networking supply chains"
+        ],
+        "spaceAlternatives": "Bandwidth and power constraints push toward smaller models and more efficient training; prioritize robustness over peak throughput.",
+        "processingRequired": "Cabling discipline, configuration management, and monitoring."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "wiki-distributed-computing",
+          "title": "Wikipedia — Distributed computing",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Distributed_computing"
+        },
+        {
+          "id": "dean-ghemawat",
+          "title": "Dean & Ghemawat (2008) — MapReduce",
+          "type": "paper",
+          "url": "https://dl.acm.org/doi/10.1145/1327452.1327492"
+        },
+        {
+          "id": "goodfellow-dl",
+          "title": "Goodfellow, Bengio, Courville — Deep Learning",
+          "type": "book",
+          "url": "https://www.deeplearningbook.org/"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
   },
   {
     "id": "electric-lighting-systems",
@@ -1029,6 +1694,7 @@
       "copper-wire-and-cable"
     ],
     "unlocks": [
+      "data-storage-systems",
       "dc-power-transmission-and-motor-drives",
       "electric-lighting-systems",
       "high-capacity-electrochemical-batteries",
@@ -1112,9 +1778,11 @@
     "unlocks": [
       "dc-power-transmission-and-motor-drives",
       "electric-motor",
+      "gpu-accelerated-computing",
       "high-voltage-ac-transmission",
       "radio-broadcast-and-receiver",
       "solar-photovoltaic-power-systems",
+      "stored-program-computer",
       "telephone-exchange-system"
     ],
     "rawMaterials": [
@@ -1333,6 +2001,75 @@
       ]
     },
     "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "fermentation-basic",
+    "name": "Fermentation (Basic)",
+    "tagline": "Uses microbes to preserve food, produce alcohol, and enable staple transformations",
+    "category": "food",
+    "era": "prehistoric",
+    "difficulty": 2,
+    "prerequisites": [
+      "cooking",
+      "sanitation-and-clean-water"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Food substrates",
+        "purpose": "Sugars and starches for fermentation",
+        "earthLocations": [
+          "Fruits, grains, root crops globally"
+        ],
+        "spaceAlternatives": "Hydroponic crops and stored carbohydrates; manage contamination carefully in closed habitats.",
+        "processingRequired": "Cleaning, crushing/mashing, and sometimes cooking to gelatinize starches."
+      },
+      {
+        "name": "Clean water",
+        "purpose": "Mixing and sanitation",
+        "earthLocations": [
+          "Wells, rivers, treated supplies"
+        ],
+        "spaceAlternatives": "Closed-loop water; prioritize for hygiene and safe food handling.",
+        "processingRequired": "Treat water to avoid introducing contamination."
+      },
+      {
+        "name": "Salt (when used)",
+        "purpose": "Selects for desired microbes in pickling",
+        "earthLocations": [
+          "Evaporite deposits; seawater evaporation"
+        ],
+        "spaceAlternatives": "Recycling salts from life support; manage corrosion and health constraints.",
+        "processingRequired": "Keep dry and uncontaminated; measure concentration."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "wiki-fermentation",
+          "title": "Wikipedia — Fermentation",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Fermentation"
+        },
+        {
+          "id": "who-food-safety",
+          "title": "WHO: Food safety",
+          "type": "institution",
+          "url": "https://www.who.int/health-topics/food-safety"
+        },
+        {
+          "id": "mcgee",
+          "title": "McGee — On Food and Cooking (fermentation sections)",
+          "type": "book"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
   },
   {
     "id": "first-aid-and-wound-care",
@@ -1643,6 +2380,81 @@
     "lastUpdated": "2026-04-12"
   },
   {
+    "id": "germ-theory",
+    "name": "Germ Theory of Disease",
+    "tagline": "Explains infection as microbial transmission and makes sanitation, antisepsis, and public health coherent",
+    "category": "medicine",
+    "era": "industrial",
+    "difficulty": 3,
+    "prerequisites": [
+      "writing-early-systems",
+      "sanitation-and-clean-water"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Clean water",
+        "purpose": "Hand hygiene, cleaning, and basic disinfection workflows",
+        "earthLocations": [
+          "Rivers, wells, municipal supplies"
+        ],
+        "spaceAlternatives": "Closed-loop water recycling; allocate water for hygiene as a life-support priority.",
+        "processingRequired": "Filtration/boiling/chlorination appropriate to contamination risk."
+      },
+      {
+        "name": "Soap or detergents",
+        "purpose": "Breaks oils and disrupts microbes on skin and surfaces",
+        "earthLocations": [
+          "Animal/plant fats, lye sources; commercial soap"
+        ],
+        "spaceAlternatives": "Synthesize detergents where chemistry exists; otherwise prioritize soap production from fats and alkali.",
+        "processingRequired": "Correct formulation and safe handling of caustics during manufacture."
+      },
+      {
+        "name": "Heat (boiling/steam)",
+        "purpose": "Thermal kill step for water, tools, and some materials",
+        "earthLocations": [
+          "Fire, charcoal, electricity"
+        ],
+        "spaceAlternatives": "Electric heating and pressure steam sterilization where power allows.",
+        "processingRequired": "Time-at-temperature discipline; avoid recontamination after heating."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [
+        "Contraindications: individual conditions, allergies, pregnancy, age, immune status, and drug interactions change what is safe.",
+        "Overdose: dosing errors can cause serious injury or death; do not guess doses or concentrations.",
+        "Sterility: infection control and sterile technique are often the difference between healing and harm.",
+        "Professional verification is required before use on a human being."
+      ],
+      "sources": [
+        {
+          "id": "who-ipc",
+          "title": "WHO: Infection prevention and control",
+          "type": "institution",
+          "url": "https://www.who.int/teams/integrated-health-services/infection-prevention-control"
+        },
+        {
+          "id": "cdc-hand-hygiene",
+          "title": "CDC: Hand Hygiene in Healthcare Settings",
+          "type": "institution",
+          "url": "https://www.cdc.gov/handhygiene/"
+        },
+        {
+          "id": "wiki-germ-theory",
+          "title": "Wikipedia — Germ theory of disease",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Germ_theory_of_disease"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
     "id": "glass-making",
     "name": "Glass Making",
     "tagline": "Melting silica with fluxes into an amorphous solid — transparent ceramic for vessels, lenses, and fibres",
@@ -1726,6 +2538,170 @@
       ]
     },
     "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "gpu-accelerated-computing",
+    "name": "GPU-Accelerated Computing",
+    "tagline": "Massively parallel computation for graphics, simulation, and ML training",
+    "category": "computing",
+    "era": "21st-century",
+    "difficulty": 5,
+    "prerequisites": [
+      "microprocessor",
+      "integrated-circuit",
+      "electrical-power-grid"
+    ],
+    "unlocks": [
+      "distributed-training",
+      "transformer-models"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      },
+      {
+        "name": "Semiconductor devices",
+        "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+        "earthLocations": [
+          "Global semiconductor supply chains; packaged IC distributors"
+        ],
+        "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+        "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+      },
+      {
+        "name": "Documentation and standards",
+        "purpose": "Make designs reproducible and debuggable across teams and time",
+        "earthLocations": [
+          "Libraries, universities, standards bodies, archived web"
+        ],
+        "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+        "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+      },
+      {
+        "name": "Cooling capacity",
+        "purpose": "Heat rejection for sustained compute",
+        "earthLocations": [
+          "Air/liquid cooling systems; HVAC infrastructure"
+        ],
+        "spaceAlternatives": "Radiators and thermal management are first-class constraints; power-limited regimes favor smaller models and efficient inference.",
+        "processingRequired": "Thermal design, monitoring, and maintenance routines."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "cuda-programming-guide",
+          "title": "NVIDIA CUDA C++ Programming Guide",
+          "type": "institution",
+          "url": "https://docs.nvidia.com/cuda/cuda-c-programming-guide/"
+        },
+        {
+          "id": "wiki-gpu",
+          "title": "Wikipedia — Graphics processing unit",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Graphics_processing_unit"
+        },
+        {
+          "id": "goodfellow-dl",
+          "title": "Goodfellow, Bengio, Courville — Deep Learning",
+          "type": "book",
+          "url": "https://www.deeplearningbook.org/"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
+    "id": "gradient-descent",
+    "name": "Gradient Descent",
+    "tagline": "Iterative optimization using gradients to reduce an objective",
+    "category": "computing",
+    "era": "mid-20th",
+    "difficulty": 4,
+    "prerequisites": [
+      "calculus-and-optimization",
+      "linear-algebra"
+    ],
+    "unlocks": [
+      "backpropagation",
+      "neural-networks"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      },
+      {
+        "name": "Semiconductor devices",
+        "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+        "earthLocations": [
+          "Global semiconductor supply chains; packaged IC distributors"
+        ],
+        "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+        "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+      },
+      {
+        "name": "Documentation and standards",
+        "purpose": "Make designs reproducible and debuggable across teams and time",
+        "earthLocations": [
+          "Libraries, universities, standards bodies, archived web"
+        ],
+        "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+        "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+      },
+      {
+        "name": "Paper and writing media",
+        "purpose": "Record calculations, assumptions, and experimental outcomes",
+        "earthLocations": [
+          "Ubiquitous globally"
+        ],
+        "spaceAlternatives": "Digital notes plus printed backups; radiation-safe storage for critical references.",
+        "processingRequired": "Consistent notation, units, and metadata."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "nocedal-wright-nd",
+          "title": "Nocedal & Wright — Numerical Optimization",
+          "type": "book"
+        },
+        {
+          "id": "goodfellow-sgd",
+          "title": "Goodfellow et al. — Deep Learning (optimization chapter)",
+          "type": "book",
+          "url": "https://www.deeplearningbook.org/"
+        },
+        {
+          "id": "wiki-sgd",
+          "title": "Wikipedia — Stochastic gradient descent",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Stochastic_gradient_descent"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
   },
   {
     "id": "high-capacity-electrochemical-batteries",
@@ -1879,6 +2855,69 @@
     "lastUpdated": "2026-04-10"
   },
   {
+    "id": "integrated-circuit",
+    "name": "Integrated Circuit (IC)",
+    "tagline": "Multiple transistors and components fabricated on a single semiconductor die",
+    "category": "communication",
+    "era": "mid-20th",
+    "difficulty": 5,
+    "prerequisites": [
+      "transistor",
+      "semiconductor-crystal-growing-doping"
+    ],
+    "unlocks": [
+      "gpu-accelerated-computing",
+      "microprocessor"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Silicon and dopants",
+        "purpose": "Semiconductor substrate and device formation",
+        "earthLocations": [
+          "Global semiconductor supply chain"
+        ],
+        "spaceAlternatives": "Import packaged ICs early; local IC fab requires cleanrooms, ultrapure chemicals, and precision tooling.",
+        "processingRequired": "Ultrapure processing, lithography, and controlled diffusion/implant."
+      },
+      {
+        "name": "Ultrapure chemicals",
+        "purpose": "Etching, cleaning, and deposition",
+        "earthLocations": [
+          "Electronic chemical suppliers"
+        ],
+        "spaceAlternatives": "Closed-loop chemical management is mandatory off-world; waste handling is safety-critical.",
+        "processingRequired": "Contamination control, filtration, and neutralization."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "wiki-ic",
+          "title": "Wikipedia — Integrated circuit",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Integrated_circuit"
+        },
+        {
+          "id": "sze",
+          "title": "Sze & Ng — Physics of Semiconductor Devices",
+          "type": "book"
+        },
+        {
+          "id": "ieee-sscs",
+          "title": "IEEE Solid-State Circuits Society",
+          "type": "institution",
+          "url": "https://sscs.ieee.org/"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
     "id": "internal-combustion-engine",
     "name": "Internal Combustion Engine",
     "tagline": "Chemical energy released inside cylinders, pushing pistons that turn a crankshaft into useful rotary power",
@@ -1968,7 +3007,9 @@
       "radio-broadcast-and-receiver",
       "optical-fiber-communications"
     ],
-    "unlocks": [],
+    "unlocks": [
+      "distributed-training"
+    ],
     "rawMaterials": [
       {
         "name": "TCAM and NPU silicon",
@@ -2108,6 +3149,496 @@
       ]
     },
     "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "lime-production",
+    "name": "Lime Production (Calcination of Limestone)",
+    "tagline": "Turns limestone into quicklime and slaked lime for mortars, plasters, and early cement chemistry",
+    "category": "materials",
+    "era": "ancient",
+    "difficulty": 3,
+    "prerequisites": [
+      "fire",
+      "ceramics-and-pottery",
+      "charcoal"
+    ],
+    "unlocks": [
+      "concrete-portland-cement"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Water",
+        "purpose": "Mixing, curing, and dust control",
+        "earthLocations": [
+          "Rivers, aquifers, municipal supplies"
+        ],
+        "spaceAlternatives": "Closed-loop water recycling; allocate for curing and dust suppression explicitly.",
+        "processingRequired": "Clean enough to avoid salts/organics that weaken binders."
+      },
+      {
+        "name": "Limestone (calcium carbonate)",
+        "purpose": "Primary feedstock for quicklime and slaked lime",
+        "earthLocations": [
+          "Sedimentary limestone regions worldwide"
+        ],
+        "spaceAlternatives": "Lunar regolith contains calcium-bearing minerals but not abundant limestone; early space binders often rely on sintering/regolith cement or imported binders.",
+        "processingRequired": "Crush to manageable size; keep dry before firing; avoid clay-heavy impurities when possible."
+      },
+      {
+        "name": "Heat and kilns",
+        "purpose": "Calcination and firing for lime, bricks, and cement precursors",
+        "earthLocations": [
+          "Wood/charcoal/coal; industrial fuels"
+        ],
+        "spaceAlternatives": "Electric kilns powered by solar/nuclear; thermal insulation is critical for energy efficiency.",
+        "processingRequired": "Temperature control, refractory linings, and safe ventilation."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "usgs-lime",
+          "title": "USGS: Lime (mineral commodity summaries / background)",
+          "type": "institution",
+          "url": "https://www.usgs.gov/centers/national-minerals-information-center/lime-statistics-and-information"
+        },
+        {
+          "id": "wiki-calcium-oxide",
+          "title": "Wikipedia — Calcium oxide",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Calcium_oxide"
+        },
+        {
+          "id": "britannica-lime",
+          "title": "Encyclopaedia Britannica — Lime",
+          "type": "institution",
+          "url": "https://www.britannica.com/science/lime"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
+    "id": "linear-algebra",
+    "name": "Linear Algebra",
+    "tagline": "Vectors, matrices, and transformations that power mechanics, electricity, and machine learning",
+    "category": "science",
+    "era": "industrial",
+    "difficulty": 4,
+    "prerequisites": [
+      "writing-early-systems",
+      "paper-and-ink-media"
+    ],
+    "unlocks": [
+      "gradient-descent",
+      "machine-learning",
+      "neural-networks"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Paper and writing media",
+        "purpose": "Record calculations, assumptions, and experimental outcomes",
+        "earthLocations": [
+          "Ubiquitous globally"
+        ],
+        "spaceAlternatives": "Digital notes plus printed backups; radiation-safe storage for critical references.",
+        "processingRequired": "Consistent notation, units, and metadata."
+      },
+      {
+        "name": "Measurement tools",
+        "purpose": "Quantify reality so models are not guesswork",
+        "earthLocations": [
+          "Workshops, labs, trade supply"
+        ],
+        "spaceAlternatives": "Prefer multi-use instruments; maintain calibration artifacts and procedures.",
+        "processingRequired": "Calibration logs and error bounds (uncertainty)."
+      },
+      {
+        "name": "Time and attention",
+        "purpose": "Iterative learning, practice, and verification",
+        "earthLocations": [
+          "Human labor everywhere"
+        ],
+        "spaceAlternatives": "Training time is a hard constraint; plan curricula and drills early.",
+        "processingRequired": "Deliberate practice, peer review, and documentation."
+      },
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "strang-la",
+          "title": "Strang — Introduction to Linear Algebra",
+          "type": "book"
+        },
+        {
+          "id": "trefethen-bau",
+          "title": "Trefethen & Bau — Numerical Linear Algebra",
+          "type": "book"
+        },
+        {
+          "id": "wiki-linear-algebra",
+          "title": "Wikipedia — Linear algebra",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Linear_algebra"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
+    "id": "machine-learning",
+    "name": "Machine Learning",
+    "tagline": "Learns patterns from data to make predictions and decisions",
+    "category": "computing",
+    "era": "late-20th",
+    "difficulty": 5,
+    "prerequisites": [
+      "stored-program-computer",
+      "linear-algebra",
+      "probability-and-statistics",
+      "calculus-and-optimization"
+    ],
+    "unlocks": [
+      "ai-safety-and-governance",
+      "model-evaluation",
+      "tokenization",
+      "transformer-models"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      },
+      {
+        "name": "Semiconductor devices",
+        "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+        "earthLocations": [
+          "Global semiconductor supply chains; packaged IC distributors"
+        ],
+        "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+        "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+      },
+      {
+        "name": "Documentation and standards",
+        "purpose": "Make designs reproducible and debuggable across teams and time",
+        "earthLocations": [
+          "Libraries, universities, standards bodies, archived web"
+        ],
+        "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+        "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+      },
+      {
+        "name": "Training data",
+        "purpose": "Examples that encode the target task",
+        "earthLocations": [
+          "Sensors, documents, logs, human annotations"
+        ],
+        "spaceAlternatives": "Data is a scarce resource early off-world; simulate where possible and design experiments to generate labeled data safely.",
+        "processingRequired": "Cleaning, labeling, privacy/safety review, and dataset versioning."
+      },
+      {
+        "name": "Compute time",
+        "purpose": "Optimization over large datasets and model parameters",
+        "earthLocations": [
+          "CPUs/GPUs/TPUs in data centers"
+        ],
+        "spaceAlternatives": "Prefer smaller models and task-specific systems early; schedule training around power availability and thermal limits.",
+        "processingRequired": "Thermal management, job scheduling, and checkpointing."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "bishop-prml",
+          "title": "Bishop — Pattern Recognition and Machine Learning",
+          "type": "book"
+        },
+        {
+          "id": "hastie-esl",
+          "title": "Hastie, Tibshirani, Friedman — The Elements of Statistical Learning",
+          "type": "book"
+        },
+        {
+          "id": "wiki-ml",
+          "title": "Wikipedia — Machine learning",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Machine_learning"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
+    "id": "microprocessor",
+    "name": "Microprocessor",
+    "tagline": "A CPU implemented as an integrated circuit, enabling personal and embedded computing",
+    "category": "computing",
+    "era": "late-20th",
+    "difficulty": 5,
+    "prerequisites": [
+      "integrated-circuit"
+    ],
+    "unlocks": [
+      "data-storage-systems",
+      "gpu-accelerated-computing"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      },
+      {
+        "name": "Semiconductor devices",
+        "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+        "earthLocations": [
+          "Global semiconductor supply chains; packaged IC distributors"
+        ],
+        "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+        "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+      },
+      {
+        "name": "Documentation and standards",
+        "purpose": "Make designs reproducible and debuggable across teams and time",
+        "earthLocations": [
+          "Libraries, universities, standards bodies, archived web"
+        ],
+        "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+        "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+      },
+      {
+        "name": "Printed circuit boards (PCBs)",
+        "purpose": "Mount and interconnect processors, memory, and peripherals",
+        "earthLocations": [
+          "Electronics manufacturing globally"
+        ],
+        "spaceAlternatives": "Local PCB fab is plausible with chemicals and precision; early off-world relies on imported boards and careful repair.",
+        "processingRequired": "Copper etching/lamination, soldering, inspection, and rework capability."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "wiki-microprocessor",
+          "title": "Wikipedia — Microprocessor",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Microprocessor"
+        },
+        {
+          "id": "hennessy-patterson",
+          "title": "Hennessy & Patterson — Computer Architecture: A Quantitative Approach",
+          "type": "book"
+        },
+        {
+          "id": "arm-arch",
+          "title": "ARM Architecture Reference Manuals (general)",
+          "type": "institution",
+          "url": "https://developer.arm.com/documentation"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
+    "id": "model-evaluation",
+    "name": "Model Evaluation and Benchmarking",
+    "tagline": "Tests generalization, safety, and reliability beyond training metrics",
+    "category": "computing",
+    "era": "21st-century",
+    "difficulty": 4,
+    "prerequisites": [
+      "machine-learning",
+      "probability-and-statistics"
+    ],
+    "unlocks": [
+      "ai-safety-and-governance"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      },
+      {
+        "name": "Semiconductor devices",
+        "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+        "earthLocations": [
+          "Global semiconductor supply chains; packaged IC distributors"
+        ],
+        "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+        "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+      },
+      {
+        "name": "Documentation and standards",
+        "purpose": "Make designs reproducible and debuggable across teams and time",
+        "earthLocations": [
+          "Libraries, universities, standards bodies, archived web"
+        ],
+        "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+        "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+      },
+      {
+        "name": "Test datasets and scenarios",
+        "purpose": "Independent evaluation signals",
+        "earthLocations": [
+          "Curated datasets; domain test cases"
+        ],
+        "spaceAlternatives": "Use locally relevant scenarios and safety constraints; keep tests offline and versioned.",
+        "processingRequired": "Versioning, confidentiality controls, and consistent scoring."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "wiki-model-evaluation",
+          "title": "Wikipedia — Model selection",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Model_selection"
+        },
+        {
+          "id": "bishop-prml",
+          "title": "Bishop — Pattern Recognition and Machine Learning",
+          "type": "book"
+        },
+        {
+          "id": "nist-ai-rmf",
+          "title": "NIST AI Risk Management Framework",
+          "type": "institution",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
+    "id": "neural-networks",
+    "name": "Neural Networks",
+    "tagline": "Parameterized function approximators built from layers of simple units",
+    "category": "computing",
+    "era": "late-20th",
+    "difficulty": 5,
+    "prerequisites": [
+      "backpropagation",
+      "gradient-descent",
+      "linear-algebra",
+      "probability-and-statistics"
+    ],
+    "unlocks": [
+      "transformer-models"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      },
+      {
+        "name": "Semiconductor devices",
+        "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+        "earthLocations": [
+          "Global semiconductor supply chains; packaged IC distributors"
+        ],
+        "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+        "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+      },
+      {
+        "name": "Documentation and standards",
+        "purpose": "Make designs reproducible and debuggable across teams and time",
+        "earthLocations": [
+          "Libraries, universities, standards bodies, archived web"
+        ],
+        "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+        "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+      },
+      {
+        "name": "Labeled data",
+        "purpose": "Supervised learning signals for many tasks",
+        "earthLocations": [
+          "Human annotation; sensors with ground truth"
+        ],
+        "spaceAlternatives": "Use simulation and self-supervision where labels are scarce; prioritize safe data generation.",
+        "processingRequired": "Label quality checks and bias audits."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "goodfellow-dl-nn",
+          "title": "Goodfellow, Bengio, Courville — Deep Learning",
+          "type": "book",
+          "url": "https://www.deeplearningbook.org/"
+        },
+        {
+          "id": "wiki-nn",
+          "title": "Wikipedia — Artificial neural network",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Artificial_neural_network"
+        },
+        {
+          "id": "lecun-98",
+          "title": "LeCun et al. (1998) — Gradient-based learning applied to document recognition",
+          "type": "paper",
+          "url": "https://ieeexplore.ieee.org/document/726791"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
   },
   {
     "id": "nuclear-fission-power-plant",
@@ -2272,7 +3803,10 @@
       "cooking"
     ],
     "unlocks": [
-      "printing-press-movable-type"
+      "calculus-and-optimization",
+      "linear-algebra",
+      "printing-press-movable-type",
+      "probability-and-statistics"
     ],
     "rawMaterials": [
       {
@@ -2413,6 +3947,168 @@
       ]
     },
     "lastUpdated": "2026-04-10"
+  },
+  {
+    "id": "probability-and-statistics",
+    "name": "Probability and Statistics",
+    "tagline": "Reasoning under uncertainty for measurement, decisions, and learning from data",
+    "category": "science",
+    "era": "industrial",
+    "difficulty": 4,
+    "prerequisites": [
+      "writing-early-systems",
+      "paper-and-ink-media"
+    ],
+    "unlocks": [
+      "dataset-curation",
+      "machine-learning",
+      "model-evaluation",
+      "neural-networks"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Paper and writing media",
+        "purpose": "Record calculations, assumptions, and experimental outcomes",
+        "earthLocations": [
+          "Ubiquitous globally"
+        ],
+        "spaceAlternatives": "Digital notes plus printed backups; radiation-safe storage for critical references.",
+        "processingRequired": "Consistent notation, units, and metadata."
+      },
+      {
+        "name": "Measurement tools",
+        "purpose": "Quantify reality so models are not guesswork",
+        "earthLocations": [
+          "Workshops, labs, trade supply"
+        ],
+        "spaceAlternatives": "Prefer multi-use instruments; maintain calibration artifacts and procedures.",
+        "processingRequired": "Calibration logs and error bounds (uncertainty)."
+      },
+      {
+        "name": "Time and attention",
+        "purpose": "Iterative learning, practice, and verification",
+        "earthLocations": [
+          "Human labor everywhere"
+        ],
+        "spaceAlternatives": "Training time is a hard constraint; plan curricula and drills early.",
+        "processingRequired": "Deliberate practice, peer review, and documentation."
+      },
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "casella-berger",
+          "title": "Casella & Berger — Statistical Inference",
+          "type": "book"
+        },
+        {
+          "id": "jaynes",
+          "title": "Jaynes — Probability Theory: The Logic of Science",
+          "type": "book"
+        },
+        {
+          "id": "wiki-probability",
+          "title": "Wikipedia — Probability theory",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Probability_theory"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
+    "id": "programming-languages",
+    "name": "Programming Languages",
+    "tagline": "Human-readable abstractions for specifying computation",
+    "category": "computing",
+    "era": "mid-20th",
+    "difficulty": 4,
+    "prerequisites": [
+      "stored-program-computer",
+      "writing-early-systems"
+    ],
+    "unlocks": [
+      "dataset-curation",
+      "tokenization"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      },
+      {
+        "name": "Semiconductor devices",
+        "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+        "earthLocations": [
+          "Global semiconductor supply chains; packaged IC distributors"
+        ],
+        "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+        "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+      },
+      {
+        "name": "Documentation and standards",
+        "purpose": "Make designs reproducible and debuggable across teams and time",
+        "earthLocations": [
+          "Libraries, universities, standards bodies, archived web"
+        ],
+        "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+        "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+      },
+      {
+        "name": "Reference texts and examples",
+        "purpose": "Teach and preserve language semantics",
+        "earthLocations": [
+          "Books, standards, archives"
+        ],
+        "spaceAlternatives": "Mirror compilers/specs offline; keep multiple redundant copies of toolchains and docs.",
+        "processingRequired": "Version pinning and reproducible builds."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "wiki-programming-language",
+          "title": "Wikipedia — Programming language",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Programming_language"
+        },
+        {
+          "id": "dragon-book",
+          "title": "Aho, Lam, Sethi, Ullman — Compilers: Principles, Techniques, and Tools",
+          "type": "book"
+        },
+        {
+          "id": "knuth-taocp",
+          "title": "Knuth — The Art of Computer Programming (foundations)",
+          "type": "book"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
   },
   {
     "id": "radio-broadcast-and-receiver",
@@ -2660,7 +4356,10 @@
       "fire",
       "ceramics-and-pottery"
     ],
-    "unlocks": [],
+    "unlocks": [
+      "fermentation-basic",
+      "germ-theory"
+    ],
     "rawMaterials": [
       {
         "name": "Source water",
@@ -2739,6 +4438,7 @@
       "glass-making"
     ],
     "unlocks": [
+      "integrated-circuit",
       "transistor"
     ],
     "rawMaterials": [
@@ -3659,6 +5359,92 @@
     "lastUpdated": "2026-04-10"
   },
   {
+    "id": "stored-program-computer",
+    "name": "Stored-Program Computer",
+    "tagline": "General-purpose computation by executing instructions from memory",
+    "category": "computing",
+    "era": "mid-20th",
+    "difficulty": 5,
+    "prerequisites": [
+      "vacuum-tube-electronics",
+      "electrical-power-grid",
+      "writing-early-systems"
+    ],
+    "unlocks": [
+      "backpropagation",
+      "machine-learning",
+      "programming-languages"
+    ],
+    "rawMaterials": [
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      },
+      {
+        "name": "Semiconductor devices",
+        "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+        "earthLocations": [
+          "Global semiconductor supply chains; packaged IC distributors"
+        ],
+        "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+        "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+      },
+      {
+        "name": "Documentation and standards",
+        "purpose": "Make designs reproducible and debuggable across teams and time",
+        "earthLocations": [
+          "Libraries, universities, standards bodies, archived web"
+        ],
+        "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+        "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+      },
+      {
+        "name": "Precision manufacturing",
+        "purpose": "Reliable interconnects, insulation, and repeatable assemblies",
+        "earthLocations": [
+          "Machine shops; electronics manufacturing"
+        ],
+        "spaceAlternatives": "Prefer modular boards and spares early; long-term: local PCB fabrication and controlled soldering/reflow environments.",
+        "processingRequired": "Quality control, rework capability, and test instrumentation."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "wiki-von-neumann-arch",
+          "title": "Wikipedia — von Neumann architecture",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Von_Neumann_architecture"
+        },
+        {
+          "id": "turing1936",
+          "title": "Turing (1936) — On Computable Numbers",
+          "type": "paper",
+          "url": "https://doi.org/10.1112/plms/s2-42.1.230",
+          "note": "Foundational theory for general computation"
+        },
+        {
+          "id": "nist-computing",
+          "title": "NIST Computer Security Resource Center (for systems perspective)",
+          "type": "institution",
+          "url": "https://csrc.nist.gov/",
+          "note": "Institutional reference for modern computing concerns"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
     "id": "telephone-exchange-system",
     "name": "Telephone Exchange System",
     "tagline": "Switched analogue speech networks — circuit establishment, ringing, billing, and human-scale switching fabrics",
@@ -4132,6 +5918,175 @@
     "lastUpdated": "2026-04-10"
   },
   {
+    "id": "tokenization",
+    "name": "Tokenization",
+    "tagline": "Turns raw text into discrete symbols for language models",
+    "category": "computing",
+    "era": "21st-century",
+    "difficulty": 4,
+    "prerequisites": [
+      "programming-languages",
+      "machine-learning"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      },
+      {
+        "name": "Semiconductor devices",
+        "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+        "earthLocations": [
+          "Global semiconductor supply chains; packaged IC distributors"
+        ],
+        "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+        "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+      },
+      {
+        "name": "Documentation and standards",
+        "purpose": "Make designs reproducible and debuggable across teams and time",
+        "earthLocations": [
+          "Libraries, universities, standards bodies, archived web"
+        ],
+        "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+        "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+      },
+      {
+        "name": "Representative text corpus",
+        "purpose": "Learns token merges or probabilities",
+        "earthLocations": [
+          "Books, docs, repositories, curated text"
+        ],
+        "spaceAlternatives": "Use locally relevant corpora: technical manuals, logs, and training materials stored offline.",
+        "processingRequired": "Deduplicate, filter, and normalize; keep licensing and provenance records."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "wiki-bpe",
+          "title": "Wikipedia — Byte pair encoding",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Byte_pair_encoding"
+        },
+        {
+          "id": "sennrich-bpe",
+          "title": "Sennrich et al. (2016) — Neural Machine Translation of Rare Words with Subword Units",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/1508.07909"
+        },
+        {
+          "id": "kudo-sentencepiece",
+          "title": "Kudo (2018) — SentencePiece",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/1808.06226"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
+    "id": "transformer-models",
+    "name": "Transformer Models",
+    "tagline": "Sequence modeling with attention mechanisms that scale to large datasets",
+    "category": "computing",
+    "era": "21st-century",
+    "difficulty": 5,
+    "prerequisites": [
+      "machine-learning",
+      "neural-networks",
+      "backpropagation",
+      "gpu-accelerated-computing"
+    ],
+    "unlocks": [],
+    "rawMaterials": [
+      {
+        "name": "Electric power",
+        "purpose": "Energy for computation, storage, and networking",
+        "earthLocations": [
+          "Electrical grids globally; generators in remote sites"
+        ],
+        "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+        "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      },
+      {
+        "name": "Semiconductor devices",
+        "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+        "earthLocations": [
+          "Global semiconductor supply chains; packaged IC distributors"
+        ],
+        "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+        "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+      },
+      {
+        "name": "Documentation and standards",
+        "purpose": "Make designs reproducible and debuggable across teams and time",
+        "earthLocations": [
+          "Libraries, universities, standards bodies, archived web"
+        ],
+        "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+        "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+      },
+      {
+        "name": "Large-scale datasets",
+        "purpose": "Training data for language, code, or other sequences",
+        "earthLocations": [
+          "Public web corpora, code repositories, curated datasets"
+        ],
+        "spaceAlternatives": "Early off-world: limited corpora; rely on curated technical manuals and local logs; avoid unsafe or low-quality data sources.",
+        "processingRequired": "Deduplication, filtering, licensing review, and safety red-teaming."
+      },
+      {
+        "name": "Accelerated compute (GPUs/TPUs)",
+        "purpose": "Efficient training and inference for large models",
+        "earthLocations": [
+          "Data centers and HPC clusters"
+        ],
+        "spaceAlternatives": "Power/thermal limits force smaller models; prioritize efficiency and distillation.",
+        "processingRequired": "Cooling, power delivery, cluster networking, and monitoring."
+      }
+    ],
+    "maturity": "stub",
+    "verification": {
+      "status": "unverified",
+      "reviewedBy": null,
+      "reviewDate": null,
+      "warnings": [],
+      "sources": [
+        {
+          "id": "vaswani-attention",
+          "title": "Vaswani et al. (2017) — Attention Is All You Need",
+          "type": "paper",
+          "url": "https://arxiv.org/abs/1706.03762"
+        },
+        {
+          "id": "goodfellow-dl",
+          "title": "Goodfellow, Bengio, Courville — Deep Learning",
+          "type": "book",
+          "url": "https://www.deeplearningbook.org/"
+        },
+        {
+          "id": "wiki-transformer",
+          "title": "Wikipedia — Transformer (machine learning model)",
+          "type": "wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)"
+        }
+      ]
+    },
+    "lastUpdated": "2026-04-22"
+  },
+  {
     "id": "transistor",
     "name": "Transistor (Bipolar and Field-Effect)",
     "tagline": "Solid-state charge control in semiconductors — amplification and logic without heated cathodes",
@@ -4144,6 +6099,7 @@
     ],
     "unlocks": [
       "communication-satellites",
+      "integrated-circuit",
       "internet-protocols-and-web",
       "optical-fiber-communications",
       "solar-photovoltaic-power-systems"
@@ -4223,6 +6179,7 @@
     ],
     "unlocks": [
       "radio-broadcast-and-receiver",
+      "stored-program-computer",
       "transistor"
     ],
     "rawMaterials": [
@@ -4298,7 +6255,13 @@
       "ceramics-and-pottery"
     ],
     "unlocks": [
-      "paper-and-ink-media"
+      "calculus-and-optimization",
+      "germ-theory",
+      "linear-algebra",
+      "paper-and-ink-media",
+      "probability-and-statistics",
+      "programming-languages",
+      "stored-program-computer"
     ],
     "rawMaterials": [
       {

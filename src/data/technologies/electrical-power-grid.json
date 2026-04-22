@@ -14,9 +14,11 @@
   "unlocks": [
     "dc-power-transmission-and-motor-drives",
     "electric-motor",
+    "gpu-accelerated-computing",
     "high-voltage-ac-transmission",
     "radio-broadcast-and-receiver",
     "solar-photovoltaic-power-systems",
+    "stored-program-computer",
     "telephone-exchange-system"
   ],
   "problem": "A single dynamo behind a wool mill is a self-contained story: the owner lights his shed and perhaps a neighbour’s lane. A city is not self-contained — factories, trams, hospitals, and pumps want power at the same instant, often far from where coal is burned or water falls. Moving that energy as electricity beats hauling fuel to every doorstep, but only if you can move it without melting conductors and only if every generator agrees on the rhythm of the alternating current.\n\nThat rhythm — the system frequency — is a shared clock. If one generator races slightly ahead and another lags, enormous currents try to flow between them through the network itself. Small imbalances are corrected every second by governors and dispatchers; large ones can split regions apart or black out millions. Weather ignores schedules: wind throws branches across lines, ice loads snap conductors, lightning ionises air into a momentary short.\n\nProtection is therefore as much a social agreement as a technical device: breakers must isolate a faulted line fast enough to save equipment, but not so greedily that a squirrel in one suburb darkens a province. Relay settings, fuse sizes, and earthing practices are negotiated standards — not natural laws — and they differ by country while obeying the same physics.\n\nThe grid is also market infrastructure: someone must be paid to spin spare capacity; someone must decide whether a rural valley gets a line at all. Rebuilding after collapse means rebuilding those agreements, not only stringing copper.",

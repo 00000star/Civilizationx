@@ -9,7 +9,9 @@
     "fire"
   ],
   "unlocks": [
+    "bricks-and-fired-masonry",
     "glass-making",
+    "lime-production",
     "sanitation-and-clean-water",
     "smelting-bronze-age",
     "writing-early-systems"
@@ -184,7 +186,16 @@
   ],
   "inventors": [],
   "impact": "Pottery changed diet and demography — storable cooked calories and safer water. Bricks changed architecture — modular, fireproof, locally manufacturable. Refractories made metal furnaces and glass tanks durable enough to be economic.\n\nCeramics are still everywhere: insulators, catalyst supports, bioceramics, armour. The pedagogical point is universal: earth plus heat plus time yields a material phase change civilisation depends on.",
-  "images": [],
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Clay body, forming, drying, bisque/firing, inspection",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
   "videos": [],
   "externalLinks": [
     {

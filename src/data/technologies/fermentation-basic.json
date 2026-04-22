@@ -1,0 +1,179 @@
+{
+  "id": "fermentation-basic",
+  "name": "Fermentation (Basic)",
+  "tagline": "Uses microbes to preserve food, produce alcohol, and enable staple transformations",
+  "category": "food",
+  "era": "prehistoric",
+  "difficulty": 2,
+  "prerequisites": [
+    "cooking",
+    "sanitation-and-clean-water"
+  ],
+  "unlocks": [],
+  "problem": "Fresh food spoils quickly and can be unsafe. Without refrigeration, civilizations need methods to preserve calories and make nutrients more bioavailable.\n\nFermentation solves this by using controlled microbial processes to acidify, alcoholize, or otherwise stabilize foods. The challenge is control: contamination can harm or waste the batch.",
+  "overview": "Fermentation uses yeasts and bacteria to convert sugars into acids, alcohols, and gases. Many traditions rely on stable starter cultures and workflow hygiene rather than advanced instruments.\n\nFor bootstrap, fermentation is both food technology and microbiology education: it teaches contamination control, temperature management, and process repeatability.",
+  "principles": [
+    {
+      "name": "Microbial metabolism",
+      "explanation": "Microbes convert sugars into products that change taste, safety, and shelf life."
+    },
+    {
+      "name": "pH and preservation",
+      "explanation": "Acidification inhibits many pathogens and spoilage organisms."
+    },
+    {
+      "name": "Process control",
+      "explanation": "Temperature, cleanliness, and time determine outcomes."
+    }
+  ],
+  "components": [
+    {
+      "id": "substrate",
+      "name": "Substrate (sugars/starches)",
+      "function": "Feeds microbes",
+      "position": "Fermentation vessel",
+      "madeFrom": "Grains, fruit, vegetables"
+    },
+    {
+      "id": "starter",
+      "name": "Starter culture",
+      "function": "Provides desired microbes",
+      "position": "Inoculation",
+      "madeFrom": "Yeast/bacteria from prior batch"
+    },
+    {
+      "id": "vessel",
+      "name": "Vessel and airlock",
+      "function": "Contains process and controls oxygen",
+      "position": "Container",
+      "madeFrom": "Ceramic/glass/food-safe wood"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Food substrates",
+      "purpose": "Sugars and starches for fermentation",
+      "earthLocations": [
+        "Fruits, grains, root crops globally"
+      ],
+      "spaceAlternatives": "Hydroponic crops and stored carbohydrates; manage contamination carefully in closed habitats.",
+      "processingRequired": "Cleaning, crushing/mashing, and sometimes cooking to gelatinize starches."
+    },
+    {
+      "name": "Clean water",
+      "purpose": "Mixing and sanitation",
+      "earthLocations": [
+        "Wells, rivers, treated supplies"
+      ],
+      "spaceAlternatives": "Closed-loop water; prioritize for hygiene and safe food handling.",
+      "processingRequired": "Treat water to avoid introducing contamination."
+    },
+    {
+      "name": "Salt (when used)",
+      "purpose": "Selects for desired microbes in pickling",
+      "earthLocations": [
+        "Evaporite deposits; seawater evaporation"
+      ],
+      "spaceAlternatives": "Recycling salts from life support; manage corrosion and health constraints.",
+      "processingRequired": "Keep dry and uncontaminated; measure concentration."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Choose product and method",
+      "description": "Decide acid fermentation, alcohol, or mixed; choose vessel and oxygen exposure accordingly.",
+      "prerequisiteTools": [
+        "containers"
+      ],
+      "warningNote": "Wrong method can enable unsafe microbes."
+    },
+    {
+      "order": 2,
+      "title": "Sanitize tools and containers",
+      "description": "Clean thoroughly; use boiling water or approved sanitizers; avoid recontamination.",
+      "prerequisiteTools": [
+        "heat source"
+      ],
+      "warningNote": "Dirty equipment causes batch failure or illness."
+    },
+    {
+      "order": 3,
+      "title": "Prepare substrate",
+      "description": "Crush, mash, or cook as needed; cool to inoculation temperature.",
+      "prerequisiteTools": [
+        "knives",
+        "pots"
+      ],
+      "warningNote": "Hot substrates can kill starter cultures."
+    },
+    {
+      "order": 4,
+      "title": "Inoculate and control environment",
+      "description": "Add starter; control temperature; limit oxygen if required; record times.",
+      "prerequisiteTools": [
+        "thermometer if available"
+      ],
+      "warningNote": "Temperature swings change microbial dominance."
+    },
+    {
+      "order": 5,
+      "title": "Assess and store safely",
+      "description": "Use smell/taste/visual checks; discard suspicious batches; store in clean containers.",
+      "prerequisiteTools": [
+        "clean containers"
+      ],
+      "warningNote": "Do not consume if mold/toxins are suspected."
+    }
+  ],
+  "history": [
+    {
+      "year": "Prehistoric",
+      "event": "Fermented foods appear across cultures as preservation and nutrition technology.",
+      "location": "Global"
+    },
+    {
+      "year": "Ancient",
+      "event": "Beer, wine, and leavened breads scale urban caloric systems.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Fermentation increases shelf life, can improve safety, and creates tradeable products. It also teaches process control and hygiene, which later supports medicine and industry.\n\nFor The Codex, fermentation is a foundational capability for both survival and the long chain toward biotech and pharmaceuticals.",
+  "images": [],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-fermentation-basic",
+      "title": "Wikipedia — Fermentation (Basic)",
+      "url": "https://en.wikipedia.org/wiki/Fermentation_(Basic)"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "wiki-fermentation",
+        "title": "Wikipedia — Fermentation",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Fermentation"
+      },
+      {
+        "id": "who-food-safety",
+        "title": "WHO: Food safety",
+        "type": "institution",
+        "url": "https://www.who.int/health-topics/food-safety"
+      },
+      {
+        "id": "mcgee",
+        "title": "McGee — On Food and Cooking (fermentation sections)",
+        "type": "book"
+      }
+    ]
+  }
+}

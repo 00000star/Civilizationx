@@ -1,0 +1,191 @@
+{
+  "id": "tokenization",
+  "name": "Tokenization",
+  "tagline": "Turns raw text into discrete symbols for language models",
+  "category": "computing",
+  "era": "21st-century",
+  "difficulty": 4,
+  "prerequisites": [
+    "programming-languages",
+    "machine-learning"
+  ],
+  "unlocks": [],
+  "problem": "Text is not naturally a fixed-size numeric input. Models need a stable representation that is efficient, reversible enough for decoding, and compatible with training.\n\nTokenization solves this by mapping text to token IDs. Poor tokenization inflates sequence length, harms multilingual performance, and creates brittle behavior around punctuation and whitespace.",
+  "overview": "Modern tokenizers often use subword methods (BPE/Unigram) to balance vocabulary size against sequence length. The tokenizer becomes part of the model contract: changing it changes what the model can express and how it generalizes.\n\nFor bootstrap, tokenization is attractive because it is reproducible without exotic hardware; the limiting factors are correct implementation and careful evaluation across languages and domains.",
+  "principles": [
+    {
+      "name": "Compression vs expressivity",
+      "explanation": "Smaller vocabularies increase sequence length; larger vocabularies increase sparsity and memory."
+    },
+    {
+      "name": "Reversibility",
+      "explanation": "Decoding should reconstruct text deterministically to preserve meaning."
+    },
+    {
+      "name": "Domain coverage",
+      "explanation": "Vocab must handle technical symbols, units, and scripts used by your corpus."
+    }
+  ],
+  "components": [
+    {
+      "id": "vocab",
+      "name": "Vocabulary",
+      "function": "Maps symbols to IDs",
+      "position": "Tokenizer core",
+      "madeFrom": "List of tokens"
+    },
+    {
+      "id": "rules",
+      "name": "Segmentation rules",
+      "function": "Splits text into tokens",
+      "position": "Tokenizer core",
+      "madeFrom": "Algorithms and merges"
+    },
+    {
+      "id": "normalization",
+      "name": "Normalization",
+      "function": "Canonicalizes text",
+      "position": "Preprocessing",
+      "madeFrom": "Unicode rules, casing, whitespace"
+    },
+    {
+      "id": "decoder",
+      "name": "Decoder",
+      "function": "Reconstructs text from IDs",
+      "position": "Output",
+      "madeFrom": "Inverse mapping"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    },
+    {
+      "name": "Semiconductor devices",
+      "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+      "earthLocations": [
+        "Global semiconductor supply chains; packaged IC distributors"
+      ],
+      "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+      "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+    },
+    {
+      "name": "Documentation and standards",
+      "purpose": "Make designs reproducible and debuggable across teams and time",
+      "earthLocations": [
+        "Libraries, universities, standards bodies, archived web"
+      ],
+      "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+      "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+    },
+    {
+      "name": "Representative text corpus",
+      "purpose": "Learns token merges or probabilities",
+      "earthLocations": [
+        "Books, docs, repositories, curated text"
+      ],
+      "spaceAlternatives": "Use locally relevant corpora: technical manuals, logs, and training materials stored offline.",
+      "processingRequired": "Deduplicate, filter, and normalize; keep licensing and provenance records."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Define corpus and normalization",
+      "description": "Choose what text represents your domain; define normalization rules up front.",
+      "prerequisiteTools": [
+        "data pipeline"
+      ],
+      "warningNote": "Normalization changes meaning if done carelessly."
+    },
+    {
+      "order": 2,
+      "title": "Train tokenizer",
+      "description": "Train BPE/Unigram tokenizer; choose vocab size by evaluation, not aesthetics.",
+      "prerequisiteTools": [
+        "tokenizer tool"
+      ],
+      "warningNote": "Too-small vocab explodes sequence lengths and compute."
+    },
+    {
+      "order": 3,
+      "title": "Evaluate edge cases",
+      "description": "Test with units, code, multilingual text, and punctuation-heavy content.",
+      "prerequisiteTools": [
+        "test suite"
+      ],
+      "warningNote": "Tokenizer bugs become permanent model behavior."
+    }
+  ],
+  "history": [
+    {
+      "year": "1990s-2000s",
+      "event": "Statistical NLP uses word-level and character models.",
+      "location": "Global"
+    },
+    {
+      "year": "2010s",
+      "event": "Subword tokenization becomes standard for neural NLP.",
+      "location": "Global"
+    },
+    {
+      "year": "2020s",
+      "event": "Tokenizer design becomes a core scaling decision.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Tokenization shapes what a language model can learn and how efficiently it trains. It is a hidden but critical piece of the AI stack.\n\nIn The Codex, tokenization is a gateway node between raw text archives and large-scale transformers.",
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Text, normalization, vocabulary, token IDs, decoding",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-tokenization",
+      "title": "Wikipedia — Tokenization",
+      "url": "https://en.wikipedia.org/wiki/Tokenization"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "wiki-bpe",
+        "title": "Wikipedia — Byte pair encoding",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Byte_pair_encoding"
+      },
+      {
+        "id": "sennrich-bpe",
+        "title": "Sennrich et al. (2016) — Neural Machine Translation of Rare Words with Subword Units",
+        "type": "paper",
+        "url": "https://arxiv.org/abs/1508.07909"
+      },
+      {
+        "id": "kudo-sentencepiece",
+        "title": "Kudo (2018) — SentencePiece",
+        "type": "paper",
+        "url": "https://arxiv.org/abs/1808.06226"
+      }
+    ]
+  }
+}

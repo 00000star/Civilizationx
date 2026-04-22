@@ -1,61 +1,245 @@
 {
   "version": "1",
   "nodes": [
-    { "id": "fire" },
-    { "id": "stone-knapping" },
-    { "id": "rope-and-cordage" },
-    { "id": "bone-tools" },
-    { "id": "charcoal" },
-    { "id": "ceramics-and-pottery" },
-    { "id": "shelter-construction-basic" },
-    { "id": "cooking" },
-    { "id": "fishing-net-and-line" },
-    { "id": "smelting-bronze-age" },
-    { "id": "iron-smelting" },
-    { "id": "steel-production" },
-    { "id": "glass-making" },
-    { "id": "wheel-and-axle" },
-    { "id": "pulley" },
-    { "id": "lever-system" },
-    { "id": "basic-hand-tools" },
-    { "id": "cart-and-wagon" },
-    { "id": "road-construction" },
-    { "id": "bicycle" },
-    { "id": "steam-engine" },
-    { "id": "internal-combustion-engine" },
-    { "id": "automobile" },
-    { "id": "steam-locomotive" },
-    { "id": "fixed-wing-aircraft" },
-    { "id": "copper-wire-and-cable" },
-    { "id": "boiler-feedwater-treatment" },
-    { "id": "steam-turbine-electric-generation" },
-    { "id": "electrical-transformer" },
-    { "id": "electrical-power-grid" },
-    { "id": "electric-motor" },
-    { "id": "electric-lighting-systems" },
-    { "id": "high-voltage-ac-transmission" },
-    { "id": "dc-power-transmission-and-motor-drives" },
-    { "id": "nuclear-fission-power-plant" },
-    { "id": "solar-photovoltaic-power-systems" },
-    { "id": "high-capacity-electrochemical-batteries" },
-    { "id": "spoken-language" },
-    { "id": "writing-early-systems" },
-    { "id": "paper-and-ink-media" },
-    { "id": "printing-press-movable-type" },
-    { "id": "electrical-telegraph" },
-    { "id": "telephone-exchange-system" },
-    { "id": "vacuum-tube-electronics" },
-    { "id": "radio-broadcast-and-receiver" },
-    { "id": "communication-satellites" },
-    { "id": "optical-fiber-communications" },
-    { "id": "semiconductor-crystal-growing-doping" },
-    { "id": "transistor" },
-    { "id": "internet-protocols-and-web" },
-    { "id": "sanitation-and-clean-water" },
-    { "id": "food-preservation" },
-    { "id": "soap-making" },
-    { "id": "navigation-celestial" },
-    { "id": "soil-science-and-composting" },
-    { "id": "first-aid-and-wound-care" }
+    {
+      "id": "fire"
+    },
+    {
+      "id": "stone-knapping"
+    },
+    {
+      "id": "rope-and-cordage"
+    },
+    {
+      "id": "bone-tools"
+    },
+    {
+      "id": "charcoal"
+    },
+    {
+      "id": "ceramics-and-pottery"
+    },
+    {
+      "id": "shelter-construction-basic"
+    },
+    {
+      "id": "cooking"
+    },
+    {
+      "id": "fishing-net-and-line"
+    },
+    {
+      "id": "smelting-bronze-age"
+    },
+    {
+      "id": "iron-smelting"
+    },
+    {
+      "id": "steel-production"
+    },
+    {
+      "id": "glass-making"
+    },
+    {
+      "id": "wheel-and-axle"
+    },
+    {
+      "id": "pulley"
+    },
+    {
+      "id": "lever-system"
+    },
+    {
+      "id": "basic-hand-tools"
+    },
+    {
+      "id": "cart-and-wagon"
+    },
+    {
+      "id": "road-construction"
+    },
+    {
+      "id": "bicycle"
+    },
+    {
+      "id": "steam-engine"
+    },
+    {
+      "id": "internal-combustion-engine"
+    },
+    {
+      "id": "automobile"
+    },
+    {
+      "id": "steam-locomotive"
+    },
+    {
+      "id": "fixed-wing-aircraft"
+    },
+    {
+      "id": "copper-wire-and-cable"
+    },
+    {
+      "id": "boiler-feedwater-treatment"
+    },
+    {
+      "id": "steam-turbine-electric-generation"
+    },
+    {
+      "id": "electrical-transformer"
+    },
+    {
+      "id": "electrical-power-grid"
+    },
+    {
+      "id": "electric-motor"
+    },
+    {
+      "id": "electric-lighting-systems"
+    },
+    {
+      "id": "high-voltage-ac-transmission"
+    },
+    {
+      "id": "dc-power-transmission-and-motor-drives"
+    },
+    {
+      "id": "nuclear-fission-power-plant"
+    },
+    {
+      "id": "solar-photovoltaic-power-systems"
+    },
+    {
+      "id": "high-capacity-electrochemical-batteries"
+    },
+    {
+      "id": "spoken-language"
+    },
+    {
+      "id": "writing-early-systems"
+    },
+    {
+      "id": "paper-and-ink-media"
+    },
+    {
+      "id": "printing-press-movable-type"
+    },
+    {
+      "id": "electrical-telegraph"
+    },
+    {
+      "id": "telephone-exchange-system"
+    },
+    {
+      "id": "vacuum-tube-electronics"
+    },
+    {
+      "id": "radio-broadcast-and-receiver"
+    },
+    {
+      "id": "communication-satellites"
+    },
+    {
+      "id": "optical-fiber-communications"
+    },
+    {
+      "id": "semiconductor-crystal-growing-doping"
+    },
+    {
+      "id": "transistor"
+    },
+    {
+      "id": "internet-protocols-and-web"
+    },
+    {
+      "id": "sanitation-and-clean-water"
+    },
+    {
+      "id": "food-preservation"
+    },
+    {
+      "id": "soap-making"
+    },
+    {
+      "id": "navigation-celestial"
+    },
+    {
+      "id": "soil-science-and-composting"
+    },
+    {
+      "id": "first-aid-and-wound-care"
+    },
+    {
+      "id": "germ-theory"
+    },
+    {
+      "id": "lime-production"
+    },
+    {
+      "id": "bricks-and-fired-masonry"
+    },
+    {
+      "id": "concrete-portland-cement"
+    },
+    {
+      "id": "stored-program-computer"
+    },
+    {
+      "id": "machine-learning"
+    },
+    {
+      "id": "transformer-models"
+    },
+    {
+      "id": "linear-algebra"
+    },
+    {
+      "id": "probability-and-statistics"
+    },
+    {
+      "id": "calculus-and-optimization"
+    },
+    {
+      "id": "gradient-descent"
+    },
+    {
+      "id": "backpropagation"
+    },
+    {
+      "id": "neural-networks"
+    },
+    {
+      "id": "gpu-accelerated-computing"
+    },
+    {
+      "id": "integrated-circuit"
+    },
+    {
+      "id": "microprocessor"
+    },
+    {
+      "id": "data-storage-systems"
+    },
+    {
+      "id": "programming-languages"
+    },
+    {
+      "id": "tokenization"
+    },
+    {
+      "id": "dataset-curation"
+    },
+    {
+      "id": "model-evaluation"
+    },
+    {
+      "id": "distributed-training"
+    },
+    {
+      "id": "ai-safety-and-governance"
+    },
+    {
+      "id": "fermentation-basic"
+    }
   ]
 }

@@ -1,0 +1,195 @@
+{
+  "id": "gradient-descent",
+  "name": "Gradient Descent",
+  "tagline": "Iterative optimization using gradients to reduce an objective",
+  "category": "computing",
+  "era": "mid-20th",
+  "difficulty": 4,
+  "prerequisites": [
+    "calculus-and-optimization",
+    "linear-algebra"
+  ],
+  "unlocks": [
+    "backpropagation",
+    "neural-networks"
+  ],
+  "problem": "Many objectives are too complex to solve in one step. You need an iterative method that improves a solution gradually using local information.\n\nGradient descent provides a generic workhorse: use the gradient as a direction of improvement and take steps with a learning rate. The hard part is step size, noise, and conditioning.",
+  "overview": "Basic gradient descent updates parameters by subtracting a scaled gradient. Variants include momentum and adaptive methods. Stochastic versions use minibatches to scale to large datasets.\n\nIn engineering, the same idea appears as iterative refinement. In AI, it is the engine that trains neural networks when combined with backpropagation.",
+  "principles": [
+    {
+      "name": "Learning rate",
+      "explanation": "Too large diverges; too small stalls. Schedules and adaptive steps manage tradeoffs."
+    },
+    {
+      "name": "Stochastic approximation",
+      "explanation": "Noisy gradients can still converge with correct averaging and step sizes."
+    },
+    {
+      "name": "Conditioning",
+      "explanation": "Ill-conditioned problems require preconditioning or careful normalization."
+    }
+  ],
+  "components": [
+    {
+      "id": "params",
+      "name": "Parameters",
+      "function": "Variables being optimized",
+      "position": "Model",
+      "madeFrom": "Vectors of numbers"
+    },
+    {
+      "id": "grad",
+      "name": "Gradient estimator",
+      "function": "Computes gradient or approximation",
+      "position": "Training loop",
+      "madeFrom": "Derivatives and data"
+    },
+    {
+      "id": "schedule",
+      "name": "Step schedule",
+      "function": "Controls step sizes over time",
+      "position": "Training loop",
+      "madeFrom": "Rules and hyperparameters"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Electric power",
+      "purpose": "Energy for computation, storage, and networking",
+      "earthLocations": [
+        "Electrical grids globally; generators in remote sites"
+      ],
+      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
+      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+    },
+    {
+      "name": "Semiconductor devices",
+      "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+      "earthLocations": [
+        "Global semiconductor supply chains; packaged IC distributors"
+      ],
+      "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
+      "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+    },
+    {
+      "name": "Documentation and standards",
+      "purpose": "Make designs reproducible and debuggable across teams and time",
+      "earthLocations": [
+        "Libraries, universities, standards bodies, archived web"
+      ],
+      "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
+      "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+    },
+    {
+      "name": "Paper and writing media",
+      "purpose": "Record calculations, assumptions, and experimental outcomes",
+      "earthLocations": [
+        "Ubiquitous globally"
+      ],
+      "spaceAlternatives": "Digital notes plus printed backups; radiation-safe storage for critical references.",
+      "processingRequired": "Consistent notation, units, and metadata."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Define objective",
+      "description": "Write the loss you want to minimize and the parameters it depends on.",
+      "prerequisiteTools": [
+        "paper"
+      ],
+      "warningNote": "Ambiguous objectives create misleading results."
+    },
+    {
+      "order": 2,
+      "title": "Compute gradients",
+      "description": "Derive or approximate gradients; verify on small examples.",
+      "prerequisiteTools": [
+        "calculator or computer"
+      ],
+      "warningNote": "Gradient sign errors cause divergence."
+    },
+    {
+      "order": 3,
+      "title": "Choose step size and normalization",
+      "description": "Start conservative; normalize inputs; use schedules if needed.",
+      "prerequisiteTools": [
+        "monitoring"
+      ],
+      "warningNote": "Exploding updates can corrupt checkpoints."
+    },
+    {
+      "order": 4,
+      "title": "Monitor convergence",
+      "description": "Track objective, validation metrics, and instability indicators.",
+      "prerequisiteTools": [
+        "logs"
+      ],
+      "warningNote": "Training loss decreasing does not guarantee generalization."
+    }
+  ],
+  "history": [
+    {
+      "year": "1900s",
+      "event": "Gradient-based methods become standard in numerical optimization.",
+      "location": "Global"
+    },
+    {
+      "year": "1980s-1990s",
+      "event": "Stochastic gradient descent becomes central to large-scale learning.",
+      "location": "Global"
+    },
+    {
+      "year": "2010s",
+      "event": "Adaptive methods and large-scale training popularize variants.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Gradient descent makes optimization practical at scale and enables modern ML training. It also creates new failure modes: instability, overfitting, and brittle dependence on hyperparameters.\n\nIn The Codex, it is a core algorithm node that unlocks deep learning when paired with backpropagation.",
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Objective, gradient, step, evaluate, repeat",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "wiki-gradient-descent",
+      "title": "Wikipedia — Gradient Descent",
+      "url": "https://en.wikipedia.org/wiki/Gradient_Descent"
+    }
+  ],
+  "lastUpdated": "2026-04-22",
+  "maturity": "stub",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [],
+    "sources": [
+      {
+        "id": "nocedal-wright-nd",
+        "title": "Nocedal & Wright — Numerical Optimization",
+        "type": "book"
+      },
+      {
+        "id": "goodfellow-sgd",
+        "title": "Goodfellow et al. — Deep Learning (optimization chapter)",
+        "type": "book",
+        "url": "https://www.deeplearningbook.org/"
+      },
+      {
+        "id": "wiki-sgd",
+        "title": "Wikipedia — Stochastic gradient descent",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Stochastic_gradient_descent"
+      }
+    ]
+  }
+}

@@ -93,6 +93,17 @@ export function StatusPage() {
     () => capabilityRows.filter((capability) => capability.readiness >= 60).length,
     [capabilityRows]
   );
+  const mediaStats = useMemo(() => {
+    const withImages = techs.filter((tech) => tech.images.length > 0).length;
+    const withVideos = techs.filter((tech) => tech.videos.length > 0).length;
+    const withAnyMedia = techs.filter((tech) => tech.images.length > 0 || tech.videos.length > 0).length;
+    return {
+      withImages,
+      withVideos,
+      withAnyMedia,
+      missingAnyMedia: techs.length - withAnyMedia,
+    };
+  }, [techs]);
 
   const branchesCovered = useMemo(() => {
     const s = new Set(techs.map((t) => t.category));
@@ -191,6 +202,9 @@ export function StatusPage() {
         <StatCard label="Grouped material aliases" value={String(groupedMaterialCount)} />
         <StatCard label="Avg capability readiness" value={`${averageCapabilityReadiness}%`} />
         <StatCard label="Serviceable capabilities" value={`${serviceableCapabilities}/${capabilityRows.length}`} />
+        <StatCard label="Entries with images" value={`${mediaStats.withImages}/${techs.length}`} />
+        <StatCard label="Entries with video refs" value={`${mediaStats.withVideos}/${techs.length}`} />
+        <StatCard label="Entries missing media" value={String(mediaStats.missingAnyMedia)} />
       </section>
 
       <section className="mt-14">
