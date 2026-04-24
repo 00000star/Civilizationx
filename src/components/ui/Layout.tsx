@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useCodexMode } from "../../context/useCodexMode";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 import { CodexCacheBadge } from "./CodexCacheBadge";
+import { CodexLogo } from "./CodexLogo";
 
 const INSTALL_DISMISS_KEY = "codex-pwa-install-dismissed";
 
@@ -10,6 +11,7 @@ export function Layout() {
   const { setMode, isSpace } = useCodexMode();
   const location = useLocation();
   const isMobile = useMediaQuery("(max-width: 767px)");
+  const watermarkTone = isSpace ? "text-codex-space/10" : "text-codex-gold/10";
 
   const [online, setOnline] = useState(
     () => (typeof navigator !== "undefined" ? navigator.onLine : true)
@@ -95,6 +97,17 @@ export function Layout() {
 
   return (
     <div className="codex-app-shell flex min-h-dvh flex-col">
+      <div
+        aria-hidden
+        className={`pointer-events-none fixed bottom-[calc(56px+env(safe-area-inset-bottom,0px))] right-0 z-0 flex select-none items-end justify-end overflow-hidden pr-2 pt-24 font-display text-[clamp(2.6rem,11vw,13rem)] font-semibold uppercase tracking-[0.28em] ${watermarkTone} md:inset-y-0 md:bottom-auto md:pr-4 md:text-[clamp(5rem,13vw,13rem)] md:tracking-[0.35em]`}
+      >
+        <span
+          className="codex-watermark translate-x-[18%] rotate-0 whitespace-nowrap leading-none md:translate-x-[14%] md:rotate-[-90deg]"
+        >
+          starking
+        </span>
+      </div>
+
       <header
         className={`sticky top-0 z-30 border-b border-codex-border bg-codex-bg/90 backdrop-blur-md print:hidden ${isSpace ? "border-codex-space/30" : ""}`}
       >
@@ -102,11 +115,11 @@ export function Layout() {
           <div className="flex flex-wrap items-center gap-3 md:gap-4">
             <Link
               to="/"
-              className={`rounded-sm font-display text-lg font-semibold tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-codex-blue ${
+              className={`rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-codex-blue ${
                 isSpace ? "text-codex-space hover:text-codex-space" : "text-codex-text hover:text-codex-gold"
               }`}
             >
-              The Codex
+              <CodexLogo isSpace={isSpace} />
             </Link>
             <div className="flex items-center gap-1 rounded border border-codex-border bg-codex-surface px-1 py-0.5">
               <button
@@ -182,12 +195,12 @@ export function Layout() {
       </header>
 
       <main
-        className={`flex min-h-0 flex-1 flex-col ${isMobile ? "pb-[calc(56px+env(safe-area-inset-bottom,0px))]" : ""}`}
+        className={`relative z-10 flex min-h-0 flex-1 flex-col ${isMobile ? "pb-[calc(56px+env(safe-area-inset-bottom,0px))]" : ""}`}
       >
         <Outlet />
       </main>
 
-      <footer className="hidden border-t border-codex-border bg-codex-surface px-3 py-4 text-center text-[11px] text-codex-muted print:hidden md:block md:px-6">
+      <footer className="relative z-10 hidden border-t border-codex-border bg-codex-surface px-3 py-4 text-center text-[11px] text-codex-muted print:hidden md:block md:px-6">
         <p>
           Static data — verify before rebuilding civilisation. Entries use verification status;
           treat unverified material as provisional.
