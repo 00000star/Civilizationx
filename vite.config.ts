@@ -8,6 +8,24 @@ import { readdirSync } from "node:fs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+function normalizeBasePath(pathname: string): string {
+  const trimmed = pathname.trim();
+  if (!trimmed || trimmed === "/") return "/";
+  return `/${trimmed.replace(/^\/+|\/+$/g, "")}/`;
+}
+
+function resolveBasePath(): string {
+  const explicitBase = process.env.VITE_PUBLIC_BASE?.trim();
+  if (explicitBase) return normalizeBasePath(explicitBase);
+
+  if (process.env.GITHUB_ACTIONS) {
+    const repositoryName = process.env.GITHUB_REPOSITORY?.split("/")[1];
+    if (repositoryName) return normalizeBasePath(repositoryName);
+  }
+
+  return "/";
+}
+
 function codexBuildId(): string {
   if (process.env.VITE_CODEX_BUILD_ID?.trim()) return process.env.VITE_CODEX_BUILD_ID.trim();
   try {
@@ -21,7 +39,11 @@ const techJsonUrls = readdirSync(resolve(__dirname, "src/data/technologies"))
   .filter((f) => f.endsWith(".json"))
   .map((f) => `src/data/technologies/${f}`);
 
+const basePath = resolveBasePath();
+const faviconPath = `${basePath}favicon.svg`;
+
 export default defineConfig({
+  base: basePath,
   define: {
     "import.meta.env.VITE_CODEX_BUILD_ID": JSON.stringify(codexBuildId()),
   },
@@ -39,10 +61,11 @@ export default defineConfig({
         theme_color: "#0A0A0F",
         background_color: "#0A0A0F",
         display: "standalone",
-        start_url: "/",
+        start_url: basePath,
+        scope: basePath,
         icons: [
           {
-            src: "/favicon.svg",
+            src: faviconPath,
             sizes: "any",
             type: "image/svg+xml",
             purpose: "any",
@@ -53,7 +76,7 @@ export default defineConfig({
         globPatterns: [
           "**/*.{js,css,html,ico,png,svg,woff2,json,webmanifest}",
         ],
-        navigateFallback: "/index.html",
+        navigateFallback: `${basePath}index.html`,
         navigateFallbackDenylist: [/^\/api\//],
         runtimeCaching: [
           {
@@ -86,7 +109,7 @@ export default defineConfig({
           },
           {
             urlPattern: ({ url }: { url: URL }) =>
-              url.pathname.startsWith("/images/"),
+              url.pathname.startsWith(`${basePath}images/`),
             handler: "CacheFirst",
             options: {
               cacheName: "codex-public-images",
@@ -99,8 +122,8 @@ export default defineConfig({
           {
             urlPattern: ({ request, url }: { request: Request; url: URL }) =>
               request.mode === "navigate" ||
-              url.pathname.startsWith("/assets/") ||
-              url.pathname === "/" ||
+              url.pathname.startsWith(`${basePath}assets/`) ||
+              url.pathname === basePath ||
               url.pathname.endsWith(".html"),
             handler: "NetworkFirst",
             options: {

@@ -18,9 +18,12 @@ void import("virtual:pwa-register")
     /* dev without plugin */
   });
 
+const routerBasename =
+  import.meta.env.BASE_URL === "/" ? undefined : import.meta.env.BASE_URL;
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename}>
       <CodexModeProvider>
         <App />
       </CodexModeProvider>

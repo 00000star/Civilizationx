@@ -49,6 +49,19 @@ npm run lint
 npm run validate-data
 ```
 
+## GitHub Pages
+
+Pushes to `main` automatically deploy this app to GitHub Pages through
+`.github/workflows/deploy-pages.yml`. The Pages build uses the repository name as
+the Vite base path, so this repo publishes correctly at:
+
+```text
+https://00000star.github.io/Civilizationx/
+```
+
+Local development stays at `/`. If you need to simulate a different deployment
+subpath, build with `VITE_PUBLIC_BASE=/your-path/ npm run build`.
+
 Data lives in `src/data/technologies/*.json` with `src/data/index.json` as the manifest. Images go in `public/images/<technology-id>/`.
 
 ## Project plan

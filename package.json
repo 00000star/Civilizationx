@@ -8,6 +8,7 @@
     "launch": "node scripts/launch-codex.mjs",
     "start": "npm run launch",
     "build": "tsc -b && vite build",
+    "postbuild": "node scripts/prepare-pages.mjs",
     "lint": "eslint .",
     "check": "npm run validate-data && npm run lint && npm run build",
     "export-obsidian": "node scripts/export-obsidian.mjs",
