@@ -76,10 +76,15 @@ export function aggregateRawMaterials(technologies: Technology[]): AtlasMaterial
     }
   }
 
+  const techById = new Map<string, Technology>();
+  for (const tech of technologies) {
+    techById.set(tech.id, tech);
+  }
+
   for (const v of map.values()) {
     v.critical = v.count >= 3;
     v.hazardous = HAZARD.test(v.processingRequired) || v.techIds.some((id) => {
-      const t = technologies.find((x) => x.id === id);
+      const t = techById.get(id);
       return t?.rawMaterials.some((rm) => materialKey(rm.name) === v.key && HAZARD.test(rm.processingRequired));
     });
   }
