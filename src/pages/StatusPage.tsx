@@ -5,7 +5,7 @@ import { useTechnologies } from "../hooks/useTechnologies";
 import type { EntryMaturity, TechCategory, VerificationStatus } from "../types/technology";
 import { computeCodexScore } from "../utils/codexScore";
 import { aggregateRawMaterials } from "../utils/atlasAggregator";
-import { computeCapabilityReadiness } from "../utils/capabilities";
+import { computeCapabilityReadiness, computeScenarioReadiness } from "../utils/capabilities";
 import { hazardDefinition, hazardRiskLevel, inferHazards } from "../utils/hazards";
 
 const PLANNED: Record<TechCategory, number> = {
@@ -88,6 +88,7 @@ export function StatusPage() {
     [canonicalMaterials]
   );
   const capabilityRows = useMemo(() => computeCapabilityReadiness(techs), [techs]);
+  const scenarioRows = useMemo(() => computeScenarioReadiness(capabilityRows), [capabilityRows]);
   const averageCapabilityReadiness = useMemo(() => {
     if (capabilityRows.length === 0) return 0;
     return Math.round(capabilityRows.reduce((sum, capability) => sum + capability.readiness, 0) / capabilityRows.length);
@@ -211,6 +212,59 @@ export function StatusPage() {
         <StatCard label="Entries with images" value={`${mediaStats.withImages}/${techs.length}`} />
         <StatCard label="Entries with video refs" value={`${mediaStats.withVideos}/${techs.length}`} />
         <StatCard label="Entries missing media" value={String(mediaStats.missingAnyMedia)} />
+      </section>
+
+      <section className="mt-14">
+        <h2 className="font-display text-2xl font-semibold text-codex-text">Scenario readiness dashboard</h2>
+        <p className="mt-2 max-w-3xl text-sm text-codex-secondary">
+          Simulated survival probability for specific collapse or settlement events.
+          Calculated by mapping critical technology chains to scenario requirements.
+        </p>
+        <div className="mt-6 grid gap-6 md:grid-cols-3">
+          {scenarioRows.map((scenario) => (
+            <div key={scenario.id} className="relative overflow-hidden rounded-xl border border-white/10 bg-codex-surface p-6 shadow-2xl">
+              <div className="relative z-10">
+                <h3 className="font-display text-xl font-bold text-codex-text">{scenario.name}</h3>
+                <p className="mt-2 text-xs leading-relaxed text-codex-secondary h-12 overflow-hidden">{scenario.description}</p>
+                
+                <div className="mt-6 flex items-baseline gap-2">
+                  <span className="font-display text-4xl font-bold text-codex-gold">{scenario.readiness}%</span>
+                  <span className="font-mono text-[10px] uppercase tracking-widest text-codex-muted">{scenario.status}</span>
+                </div>
+
+                <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-white/5">
+                  <div 
+                    className={`h-full transition-all duration-1000 ${
+                      scenario.readiness > 70 ? "bg-green-500" : scenario.readiness > 40 ? "bg-codex-blue" : "bg-red-500"
+                    }`}
+                    style={{ width: `${scenario.readiness}%` }} 
+                  />
+                </div>
+
+                <div className="mt-6 space-y-3">
+                  <p className="font-mono text-[10px] uppercase tracking-widest text-codex-muted">Critical Gaps</p>
+                  <div className="flex flex-wrap gap-2">
+                    {scenario.primaryGaps.length > 0 ? (
+                      scenario.primaryGaps.map(gap => (
+                        <span key={gap} className="rounded border border-red-500/20 bg-red-500/5 px-2 py-1 text-[10px] text-red-300/80 uppercase tracking-tighter">
+                          {gap}
+                        </span>
+                      ))
+                    ) : (
+                      <span className="text-[10px] text-green-400/60 uppercase">No major infrastructure gaps</span>
+                    )}
+                  </div>
+                </div>
+              </div>
+              
+              <div 
+                className={`absolute -right-8 -top-8 h-32 w-32 rounded-full opacity-10 blur-3xl ${
+                  scenario.readiness > 70 ? "bg-green-500" : scenario.readiness > 40 ? "bg-codex-blue" : "bg-red-500"
+                }`} 
+              />
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="mt-14">

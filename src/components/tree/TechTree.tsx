@@ -27,9 +27,12 @@ interface Props {
   technologies: TechnologySummary[];
   positions: { id: string; x: number; y: number }[];
   matchingIds?: Set<string>;
+  pathIds?: Set<string>;
+  pathEdgeIds?: Set<string>;
+  onNodeClick?: (id: string) => void;
 }
 
-export function TechTree({ technologies, positions, matchingIds }: Props) {
+export function TechTree({ technologies, positions, matchingIds, pathIds, pathEdgeIds, onNodeClick }: Props) {
   const navigate = useNavigate();
   const [params] = useSearchParams();
   const highlightId = params.get("node");
@@ -84,7 +87,18 @@ export function TechTree({ technologies, positions, matchingIds }: Props) {
         const p = posMap.get(tech.id) ?? { x: 0, y: 0 };
         const locked = !unlocked.has(tech.id);
         const isMatch = !matchingIds || matchingIds.has(tech.id);
-        const dimmed = Boolean((hoverId && !hoverBright.has(tech.id)) || (!isMatch));
+        const isPath = pathIds?.has(tech.id);
+        
+        // Dim logic: hover focus OR pathfinder focus OR filter match
+        let dimmed = false;
+        if (hoverId) {
+          dimmed = !hoverBright.has(tech.id);
+        } else if (pathIds) {
+          dimmed = !isPath;
+        } else {
+          dimmed = !isMatch;
+        }
+
         const accent = isSpace ? "space" : "gold";
 
         const incomingEdgeActive =
@@ -115,7 +129,7 @@ export function TechTree({ technologies, positions, matchingIds }: Props) {
           data: {
             tech,
             locked,
-            selected: tech.id === highlightId,
+            selected: Boolean(tech.id === highlightId || isPath),
             dimmed,
             edgeActive,
             spaceGlow: isSpace && tech.spaceReadiness.fullAlternatives,
@@ -137,6 +151,7 @@ export function TechTree({ technologies, positions, matchingIds }: Props) {
       inSet,
       techById,
       matchingIds,
+      pathIds,
     ]
   );
 
@@ -146,27 +161,32 @@ export function TechTree({ technologies, positions, matchingIds }: Props) {
       for (const p of t.prerequisites) {
         if (!inSet.has(p)) continue;
         const parent = techById.get(p);
+        const edgeId = `${p}->${t.id}`;
+        const isPathEdge = pathEdgeIds?.has(edgeId);
+
         const active =
-          Boolean(hoverId) &&
-          (hoverId === t.id || (hoverId === p && (parent?.unlocks.includes(t.id) ?? false)));
+          isPathEdge || 
+          (Boolean(hoverId) &&
+          (hoverId === t.id || (hoverId === p && (parent?.unlocks.includes(t.id) ?? false))));
         
         e.push({
-          id: `${p}->${t.id}`,
+          id: edgeId,
           source: p,
           target: t.id,
           type: "animated",
           data: { active },
           markerEnd: {
             type: MarkerType.ArrowClosed,
-            color: active ? "#00D4FF" : "#4A7FBD",
-            width: 16,
-            height: 16,
+            color: active ? (isPathEdge ? "#FBBF24" : "#00D4FF") : "#4A7FBD",
+            width: isPathEdge ? 20 : 16,
+            height: isPathEdge ? 20 : 16,
           },
+          zIndex: isPathEdge ? 10 : undefined,
         });
       }
     }
     return e;
-  }, [technologies, inSet, hoverId, techById]);
+  }, [technologies, inSet, hoverId, techById, pathEdgeIds]);
 
   const hoverTech = hoverId ? techById.get(hoverId) : undefined;
 
@@ -192,6 +212,15 @@ export function TechTree({ technologies, positions, matchingIds }: Props) {
     setHoverId(null);
     setHoverPt(null);
   }, []);
+
+  const onNodeClickInternal = useCallback(
+    (_: React.MouseEvent, node: Node<TechNodeData>) => {
+      if (onNodeClick) {
+        onNodeClick(node.id);
+      }
+    },
+    [onNodeClick]
+  );
 
   const onNodeContextMenu = useCallback(
     (e: React.MouseEvent, node: Node<TechNodeData>) => {
@@ -265,6 +294,7 @@ export function TechTree({ technologies, positions, matchingIds }: Props) {
         proOptions={{ hideAttribution: true }}
         onNodeMouseEnter={onNodeMouseEnter}
         onNodeMouseLeave={onNodeMouseLeave}
+        onNodeClick={onNodeClickInternal}
         onNodeContextMenu={onNodeContextMenu}
         onPaneClick={onPaneClick}
         nodesDraggable={false}

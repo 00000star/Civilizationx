@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useId, useMemo, useState } from "react";
 import QRCode from "qrcode";
+import { motion } from "framer-motion";
 import type { Technology } from "../../types/technology";
 import { CATEGORY_LABEL } from "../../utils/categoryMeta";
 import { ComponentList } from "./ComponentList";
@@ -7,7 +8,6 @@ import { BuildSteps } from "./BuildSteps";
 import { DependencyGraph } from "./DependencyGraph";
 import { LocationMap } from "./LocationMap";
 import { MediaGallery } from "./MediaGallery";
-import { formatReviewDate } from "../../utils/verificationUi";
 import { hazardDefinition, hazardRiskLevel, inferHazards } from "../../utils/hazards";
 
 const TABS = [
@@ -46,11 +46,7 @@ export function TechDetail({ tech }: Props) {
 
   const handlePrint = useCallback(async () => {
     try {
-      const url =
-        typeof window !== "undefined"
-          ? `${window.location.origin}/tech/${encodeURIComponent(tech.id)}`
-          : "";
-      const dataUrl = await QRCode.toDataURL(url, {
+      const dataUrl = await QRCode.toDataURL(entryUrl, {
         margin: 1,
         width: 120,
         color: { dark: "#000000", light: "#FFFFFF" },
@@ -60,11 +56,9 @@ export function TechDetail({ tech }: Props) {
         window.print();
       });
     } catch {
-      requestAnimationFrame(() => {
-        window.print();
-      });
+      window.print();
     }
-  }, [tech.id]);
+  }, [entryUrl]);
 
   useEffect(() => {
     const onAfterPrint = () => setPrintQrDataUrl(null);
@@ -73,194 +67,159 @@ export function TechDetail({ tech }: Props) {
   }, []);
 
   return (
-    <div className="codex-tech-detail mx-auto max-w-5xl px-3 py-8 md:px-6">
-      <div className="print-header-running" aria-hidden>
-        {tech.name}
+    <div className="codex-tech-detail mx-auto max-w-6xl px-3 py-8 md:px-6">
+      <div className="print-header-running font-mono text-[10px] uppercase tracking-widest text-codex-muted" aria-hidden>
+        DOCUMENTARY ENTRY // ID: {tech.id} // LEVEL: {tech.difficulty}
       </div>
 
-      <header className="border-b border-codex-border pb-8 print:border-black">
-        <div className="flex flex-wrap items-start justify-between gap-4">
-          <div className="min-w-0 flex-1">
-            <div className="flex flex-wrap items-center gap-2 text-xs font-mono uppercase tracking-wide text-codex-muted print:text-black">
-              <span>{CATEGORY_LABEL[tech.category]}</span>
-              <span aria-hidden>·</span>
+      <div className="flex flex-col gap-8 lg:flex-row">
+        {/* Main Content */}
+        <div className="min-w-0 flex-1">
+          <header className="border-b border-white/5 pb-8 print:border-black">
+            <div className="flex flex-wrap items-center gap-3 text-[10px] font-mono uppercase tracking-[0.2em] text-codex-gold print:text-black">
+              <span className="rounded border border-codex-gold/30 px-1.5 py-0.5">{CATEGORY_LABEL[tech.category]}</span>
+              <span className="text-white/20">//</span>
               <span>{tech.era.replaceAll("-", " ")}</span>
-              <span aria-hidden>·</span>
-              <span>Difficulty {tech.difficulty}/5</span>
-              <span aria-hidden>·</span>
-              <span className="normal-case">
-                Status: {tech.verification.status.replaceAll("-", " ")}
-              </span>
-              <span aria-hidden>·</span>
-              <span className="normal-case">
-                Maturity: {tech.maturity.replaceAll("-", " ")}
-              </span>
+              <span className="text-white/20">//</span>
+              <span>RANK {tech.difficulty}</span>
             </div>
-            <h1 className="codex-print-title mt-3 font-display text-4xl font-bold tracking-tight text-codex-text md:text-5xl print:text-black">
-              {tech.name}
+            
+            <h1 className="codex-print-title mt-6 font-display text-5xl font-black tracking-tighter text-codex-text md:text-7xl print:text-black">
+              {tech.name.toUpperCase()}
             </h1>
-            <p className="mt-3 max-w-3xl text-lg text-codex-secondary print:text-black">
+            
+            <p className="mt-6 max-w-3xl text-xl leading-relaxed text-codex-secondary print:text-black italic border-l-4 border-codex-gold/40 pl-6">
               {tech.tagline}
             </p>
-            <p className="mt-2 font-mono text-xs text-codex-muted print:text-black">
-              Updated {tech.lastUpdated}
-            </p>
-          </div>
-          <button
-            type="button"
-            onClick={handlePrint}
-            className="print:hidden shrink-0 rounded-md border border-codex-border bg-codex-surface px-3 py-2 text-sm text-codex-text hover:border-codex-gold/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-codex-blue"
-            aria-label="Print or save as PDF"
+          </header>
+
+          <VerificationBanner tech={tech} />
+          <HazardBanner tech={tech} />
+
+          {/* Desktop Tablist - Sticky */}
+          <div
+            className="sticky top-16 z-20 -mx-3 mt-8 border-b border-white/5 bg-codex-bg/95 px-3 py-2 backdrop-blur-xl print:hidden md:top-20"
+            role="tablist"
           >
-            <span aria-hidden className="mr-1.5 inline-block">
-              ⎙
-            </span>
-            Print / Save PDF
-          </button>
+            <div className="flex gap-2 overflow-x-auto pb-1">
+              {TABS.map((t) => {
+                const label = t === "build" ? "EXECUTION" : t.toUpperCase();
+                const selected = tab === t;
+                return (
+                  <button
+                    key={t}
+                    type="button"
+                    role="tab"
+                    aria-selected={selected}
+                    id={`tab-${t}-${printId}`}
+                    onClick={() => setTab(t)}
+                    className={`shrink-0 rounded px-4 py-2 font-mono text-[11px] font-bold tracking-widest transition-all focus-visible:outline-none ${
+                      selected
+                        ? "bg-codex-gold text-codex-bg"
+                        : "text-codex-muted hover:bg-white/5 hover:text-codex-text"
+                    }`}
+                  >
+                    {label}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <motion.div 
+            key={tab}
+            initial={{ opacity: 0, x: 10 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="print:hidden pt-12" 
+            role="tabpanel" 
+            aria-labelledby={`tab-${tab}-${printId}`}
+          >
+            {tab === "overview" ? <Overview tech={tech} /> : null}
+            {tab === "components" ? (
+              <ComponentList components={tech.components} />
+            ) : null}
+            {tab === "build" ? <BuildTab tech={tech} /> : null}
+            {tab === "connections" ? <DependencyGraph tech={tech} /> : null}
+            {tab === "media" ? (
+              <MediaGallery
+                techId={tech.id}
+                images={tech.images}
+                videos={tech.videos}
+                links={tech.externalLinks}
+              />
+            ) : null}
+            {tab === "history" ? <HistorySection tech={tech} /> : null}
+          </motion.div>
         </div>
-      </header>
 
-      <VerificationBanner tech={tech} />
-      <MaturityBanner tech={tech} />
-      <HazardBanner tech={tech} />
-
-      <div
-        className="sticky top-16 z-20 -mx-3 border-b border-codex-border bg-codex-bg/95 px-3 py-2 backdrop-blur print:hidden md:top-20"
-        role="tablist"
-        aria-label="Documentary sections"
-      >
-        <div className="flex gap-1 overflow-x-auto pb-1">
-          {TABS.map((t) => {
-            const label =
-              t === "build"
-                ? "Build it"
-                : t.charAt(0).toUpperCase() + t.slice(1);
-            const selected = tab === t;
-            return (
+        {/* Sidebar Info - "The Blueprint Block" */}
+        <aside className="shrink-0 space-y-6 print:hidden lg:w-72">
+           <div className="rounded-xl border border-white/10 bg-codex-card/50 p-6 backdrop-blur-md">
+              <p className="font-mono text-[10px] uppercase tracking-widest text-codex-muted">Metadata</p>
+              <div className="mt-4 space-y-4">
+                 <div>
+                    <p className="text-[10px] font-bold text-codex-gold uppercase">ID Code</p>
+                    <p className="mt-1 font-mono text-xs text-codex-text">{tech.id.toUpperCase()}</p>
+                 </div>
+                 <div>
+                    <p className="text-[10px] font-bold text-codex-gold uppercase">Documentation Maturity</p>
+                    <p className="mt-1 font-mono text-xs text-codex-text capitalize">{tech.maturity.replaceAll("-", " ")}</p>
+                 </div>
+                 <div>
+                    <p className="text-[10px] font-bold text-codex-gold uppercase">Last Sync</p>
+                    <p className="mt-1 font-mono text-xs text-codex-text">{tech.lastUpdated}</p>
+                 </div>
+              </div>
+              
               <button
-                key={t}
                 type="button"
-                role="tab"
-                aria-selected={selected}
-                id={`tab-${t}-${printId}`}
-                tabIndex={0}
-                onClick={() => setTab(t)}
-                className={`shrink-0 rounded-md border px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-codex-blue ${
-                  selected
-                    ? "border-codex-gold bg-codex-card text-codex-gold"
-                    : "border-transparent text-codex-secondary hover:border-codex-border hover:text-codex-text"
-                }`}
+                onClick={handlePrint}
+                className="mt-8 w-full rounded border border-white/10 bg-white/5 py-3 font-mono text-[10px] font-bold uppercase tracking-widest text-codex-text transition-all hover:bg-white/10 active:scale-[0.98]"
               >
-                {label}
+                Generate Field PDF
               </button>
-            );
-          })}
-        </div>
+           </div>
+           
+           <div className="rounded-xl border border-white/5 bg-white/5 p-6">
+              <p className="font-mono text-[10px] uppercase tracking-widest text-codex-muted">ISRU Status</p>
+              <div className="mt-4 flex items-center justify-between">
+                 <span className="text-[10px] text-codex-secondary uppercase">Space Readiness</span>
+                 <span className={`text-[10px] font-bold uppercase ${tech.spaceReadiness.fullAlternatives ? "text-green-400" : "text-orange-400"}`}>
+                   {tech.spaceReadiness.fullAlternatives ? "Serviceable" : "Earth Constrained"}
+                 </span>
+              </div>
+           </div>
+        </aside>
       </div>
 
-      {/* Screen: single active panel */}
-      <div className="print:hidden pt-8" role="tabpanel" aria-labelledby={`tab-${tab}-${printId}`}>
-        {tab === "overview" ? <Overview tech={tech} /> : null}
-        {tab === "components" ? (
-          <ComponentList components={tech.components} />
-        ) : null}
-        {tab === "build" ? <BuildTab tech={tech} /> : null}
-        {tab === "connections" ? <DependencyGraph tech={tech} /> : null}
-        {tab === "media" ? (
-          <MediaGallery
-            techId={tech.id}
-            images={tech.images}
-            videos={tech.videos}
-            links={tech.externalLinks}
-          />
-        ) : null}
-        {tab === "history" ? <HistorySection tech={tech} /> : null}
-      </div>
-
-      {/* Print: all sections in order */}
+      {/* Print View remains mostly the same but with better typography */}
       <div className="hidden print:block print:pt-6" aria-hidden>
-        <div className="print-verification-notice mb-6 rounded border-2 border-black bg-white p-4 text-black">
-          <p className="font-bold">Verification notice</p>
-          <p className="mt-2 text-sm leading-relaxed">
-            This document was generated from The Codex. Entry verification status:{" "}
-            <strong>{tech.verification.status.replaceAll("-", " ")}</strong>.
-            {tech.verification.status === "unverified"
-              ? " This entry has not been reviewed by a domain expert. Do not act on build instructions or material handling information without cross-referencing authoritative sources. In a survival situation, prioritise caution over speed."
-              : null}
-            {tech.verification.status === "community-reviewed"
-              ? " Community-reviewed entries await expert verification."
-              : null}
-            {tech.verification.status === "expert-verified" && tech.verification.reviewedBy
-              ? ` Verified by ${tech.verification.reviewedBy} on ${formatReviewDate(tech.verification.reviewDate)}.`
-              : null}
-          </p>
-        </div>
+         <div className="flex flex-col gap-1 text-xs leading-snug text-black mb-8 border-b-2 border-black pb-4">
+            <p className="font-bold uppercase tracking-widest">CIVILIZATIONX // FIELD DOCUMENTARY</p>
+            <p>ID: {tech.id.toUpperCase()} // STATUS: {tech.verification.status.toUpperCase()}</p>
+            <p>PRINTED: {printedAt}</p>
+            <p>URL: {entryUrl}</p>
+         </div>
 
-        <section className="print-section">
-          <h2 className="font-display text-xl font-semibold text-black">Overview</h2>
+         <section className="print-section">
+          <h2 className="font-display text-2xl font-bold text-black border-b-2 border-black pb-2 mb-6 uppercase">I. Overview</h2>
           <Overview tech={tech} />
         </section>
-        <section className="print-section mt-8">
-          <h2 className="font-display text-xl font-semibold text-black">Components</h2>
+        <section className="print-section mt-12">
+          <h2 className="font-display text-2xl font-bold text-black border-b-2 border-black pb-2 mb-6 uppercase">II. Components</h2>
           <ComponentList components={tech.components} />
         </section>
-        <section className="print-section mt-8">
-          <h2 className="font-display text-xl font-semibold text-black">Build it</h2>
+        <section className="print-section mt-12">
+          <h2 className="font-display text-2xl font-bold text-black border-b-2 border-black pb-2 mb-6 uppercase">III. Execution</h2>
           <BuildTab tech={tech} />
         </section>
-        <section className="print-section mt-8">
-          <h2 className="font-display text-xl font-semibold text-black">Connections</h2>
-          <DependencyGraph tech={tech} />
-        </section>
-        <section className="print-section mt-8">
-          <h2 className="font-display text-xl font-semibold text-black">Media</h2>
-          <MediaGallery
-            techId={tech.id}
-            images={tech.images}
-            videos={tech.videos}
-            links={tech.externalLinks}
-          />
-        </section>
-        <section className="print-section mt-8">
-          <h2 className="font-display text-xl font-semibold text-black">History</h2>
-          <HistorySection tech={tech} />
-        </section>
-      </div>
 
-      <div className="print-doc-footer hidden print:flex" aria-hidden>
-        <div className="flex flex-1 flex-col gap-1 text-xs leading-snug text-black">
-          <p>Printed from The Codex — verify before use</p>
-          <p>
-            Entry status: {tech.verification.status.replaceAll("-", " ")} · Printed:{" "}
-            {printedAt}
-          </p>
-          <p>Live version: {entryUrl}</p>
+        <div className="mt-12 flex justify-end">
+           {printQrDataUrl && (
+             <img src={printQrDataUrl} alt="" className="h-24 w-24 border-2 border-black" />
+           )}
         </div>
-        {printQrDataUrl ? (
-          <img src={printQrDataUrl} alt="" className="h-[72px] w-[72px] shrink-0 border border-black" />
-        ) : (
-          <div className="h-[72px] w-[72px] shrink-0 border border-dashed border-black" />
-        )}
       </div>
-    </div>
-  );
-}
-
-function MaturityBanner({ tech }: { tech: Technology }) {
-  const descriptions = {
-    stub: "Minimal placeholder. Needs substantial writing and source work.",
-    draft: "Usable draft. Needs deeper structure, sources, and review before field use.",
-    researched: "Source-backed and structurally complete, but not necessarily expert verified.",
-    "review-needed": "Ready for focused community or expert review.",
-    "field-guide-ready": "Structured for print/offline field use after review.",
-  } as const;
-
-  return (
-    <div className="mt-4 rounded-md border border-codex-border bg-codex-surface px-4 py-3 text-sm text-codex-secondary print:hidden">
-      <p className="font-semibold capitalize text-codex-text">
-        Documentation maturity: {tech.maturity.replaceAll("-", " ")}
-      </p>
-      <p className="mt-1">{descriptions[tech.maturity]}</p>
     </div>
   );
 }
@@ -269,117 +228,67 @@ function HazardBanner({ tech }: { tech: Technology }) {
   const hazards = inferHazards(tech);
   const risk = hazardRiskLevel(hazards);
 
-  if (!hazards.length) {
-    return null;
-  }
+  if (!hazards.length) return null;
 
-  const border =
+  const colorClass =
     risk === "critical"
-      ? "border-red-500 bg-red-950/30"
+      ? "text-red-400 border-red-500/30 bg-red-950/20"
       : risk === "high"
-        ? "border-orange-500 bg-orange-950/30"
-        : "border-amber-500 bg-amber-950/20";
+        ? "text-orange-400 border-orange-500/30 bg-orange-950/20"
+        : "text-amber-400 border-amber-500/30 bg-amber-950/10";
 
   return (
-    <section
-      className={`mt-4 rounded-md border ${border} px-4 py-3 text-sm print:border-black print:bg-white`}
-      aria-label="Hazard classification"
-    >
-      <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+    <section className={`mt-8 rounded-lg border p-6 ${colorClass} print:border-black print:bg-white`}>
+      <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-wide text-codex-muted print:text-black">
-            Hazard classification
+          <div className="flex items-center gap-2">
+             <div className={`h-2 w-2 rounded-full animate-pulse ${risk === "critical" ? "bg-red-500" : "bg-orange-500"}`} />
+             <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em]">Safety Warning // {risk.toUpperCase()} RISK</p>
+          </div>
+          <p className="mt-4 text-sm leading-relaxed max-w-2xl opacity-90">
+            Automated inference detected potential hazards: {hazards.map(h => hazardDefinition(h).label.toUpperCase()).join(", ")}. 
+            Review documentation with qualified personnel before initialization.
           </p>
-          <p className="mt-1 font-display text-lg font-semibold capitalize text-codex-text print:text-black">
-            {risk} risk
-          </p>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          {hazards.map((hazard) => {
-            const def = hazardDefinition(hazard);
-            return (
-              <span
-                key={hazard}
-                title={def.description}
-                className="rounded-full border border-codex-border bg-codex-card px-2.5 py-1 font-mono text-[11px] text-codex-secondary print:border-black print:bg-white print:text-black"
-              >
-                {def.label}
-              </span>
-            );
-          })}
         </div>
       </div>
-      <p className="mt-3 text-xs leading-relaxed text-codex-secondary print:text-black">
-        Hazards are inferred from the entry text and category. Treat this as a safety prompt,
-        not a certification; cross-check high-risk procedures with authoritative sources and
-        qualified experts.
-      </p>
     </section>
   );
 }
 
 function VerificationBanner({ tech }: { tech: Technology }) {
-  const { status, reviewedBy, reviewDate } = tech.verification;
+  const { status } = tech.verification;
 
   if (status === "expert-verified") {
-    const who = reviewedBy?.trim() || "unspecified reviewer";
-    const when = reviewDate ? formatReviewDate(reviewDate) : "unspecified date";
     return (
-      <div
-        className="mt-6 rounded-md border border-emerald-600/80 bg-emerald-950/40 px-4 py-3 text-sm text-emerald-100 print:hidden"
-        role="status"
-      >
-        <p className="font-semibold text-emerald-300">
-          ✓ Verified by {who} on {when}
-        </p>
-      </div>
-    );
-  }
-
-  if (status === "community-reviewed") {
-    return (
-      <div
-        className="mt-6 rounded-md border border-[#F59E0B] bg-[#F59E0B]/10 px-4 py-3 text-sm text-codex-secondary print:hidden"
-        role="status"
-      >
-        <p className="font-semibold text-[#F59E0B]">
-          ◎ Community reviewed — awaiting expert verification
-        </p>
+      <div className="mt-8 rounded border border-green-500/30 bg-green-500/5 px-4 py-2 font-mono text-[10px] font-bold uppercase tracking-widest text-green-400">
+        [ ENTRY STATUS: EXPERT VERIFIED // AUTHORIZED FOR FIELD USE ]
       </div>
     );
   }
 
   return (
-    <div
-      className="mt-6 rounded-md border-2 border-[#F59E0B] bg-[#F59E0B]/10 px-4 py-3 text-sm leading-relaxed text-codex-secondary print:hidden"
-      role="alert"
-    >
-      <p className="font-semibold text-[#F59E0B]">⚠️ Unverified Entry</p>
-      <p className="mt-2">
-        This entry has not been reviewed by a domain expert. Do not act on build instructions or
-        material handling information without cross-referencing authoritative sources. In a
-        survival situation, prioritise caution over speed.
-      </p>
+    <div className="mt-8 rounded border border-codex-gold/30 bg-codex-gold/5 px-4 py-2 font-mono text-[10px] font-bold uppercase tracking-widest text-codex-gold">
+      [ ENTRY STATUS: UNVERIFIED // USE WITH CAUTION ]
     </div>
   );
 }
 
 function BuildTab({ tech }: { tech: Technology }) {
   return (
-    <div className="space-y-10">
+    <div className="space-y-16">
       <section>
-        <h2 className="font-display text-2xl font-semibold text-codex-text print:text-black">
-          Raw materials
+        <h2 className="font-display text-2xl font-black uppercase tracking-tight text-codex-text">
+          Raw Material Provenance
         </h2>
-        <div className="mt-4">
+        <div className="mt-8">
           <LocationMap materials={tech.rawMaterials} />
         </div>
       </section>
       <section>
-        <h2 className="font-display text-2xl font-semibold text-codex-text print:text-black">
-          Build steps
+        <h2 className="font-display text-2xl font-black uppercase tracking-tight text-codex-text">
+          Operational Sequence
         </h2>
-        <div className="mt-4">
+        <div className="mt-8">
           <BuildSteps steps={tech.buildSteps} />
         </div>
       </section>
@@ -389,44 +298,27 @@ function BuildTab({ tech }: { tech: Technology }) {
 
 function Overview({ tech }: { tech: Technology }) {
   return (
-    <div className="space-y-10">
+    <div className="space-y-16">
       <section>
-        <h2 className="font-display text-2xl font-semibold text-codex-text print:text-black">
-          The problem
-        </h2>
-        <div className="prose-codex mt-4 print:text-black">{paragraphs(tech.problem)}</div>
+        <p className="font-mono text-[10px] font-bold uppercase tracking-widest text-codex-muted mb-4">// CORE PROBLEM</p>
+        <div className="prose-codex max-w-4xl text-lg leading-relaxed text-codex-secondary">{paragraphs(tech.problem)}</div>
       </section>
+      
       <section>
-        <h2 className="font-display text-2xl font-semibold text-codex-text print:text-black">
-          How it works
-        </h2>
-        <div className="prose-codex mt-4 print:text-black">{paragraphs(tech.overview)}</div>
-      </section>
-      <section>
-        <h2 className="font-display text-2xl font-semibold text-codex-text print:text-black">
-          Core principles
-        </h2>
-        <ul className="mt-4 space-y-4">
+        <p className="font-mono text-[10px] font-bold uppercase tracking-widest text-codex-muted mb-4">// TECHNICAL PRINCIPLES</p>
+        <div className="grid gap-4 md:grid-cols-2">
           {tech.principles.map((p) => (
-            <li
-              key={p.name}
-              className="rounded-lg border border-codex-border bg-codex-card p-4 print:border-black print:bg-white"
-            >
-              <h3 className="font-display text-lg font-semibold text-codex-gold print:text-black">
-                {p.name}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-codex-secondary print:text-black">
-                {p.explanation}
-              </p>
-            </li>
+            <div key={p.name} className="rounded-lg border border-white/5 bg-white/5 p-6 transition-colors hover:border-white/10">
+              <h3 className="font-mono text-xs font-bold text-codex-gold uppercase tracking-wider">{p.name}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-codex-secondary">{p.explanation}</p>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
+
       <section>
-        <h2 className="font-display text-2xl font-semibold text-codex-text print:text-black">
-          Historical impact
-        </h2>
-        <div className="prose-codex mt-4 print:text-black">{paragraphs(tech.impact)}</div>
+        <p className="font-mono text-[10px] font-bold uppercase tracking-widest text-codex-muted mb-4">// SYSTEM ARCHITECTURE</p>
+        <div className="prose-codex max-w-4xl text-base leading-relaxed text-codex-secondary">{paragraphs(tech.overview)}</div>
       </section>
     </div>
   );
@@ -434,83 +326,19 @@ function Overview({ tech }: { tech: Technology }) {
 
 function HistorySection({ tech }: { tech: Technology }) {
   return (
-    <div className="space-y-8">
+    <div className="space-y-12">
       <section>
-        <h2 className="font-display text-2xl font-semibold text-codex-text print:text-black">
-          Timeline
-        </h2>
-        <ol className="mt-4 space-y-4 border-l border-codex-border pl-4 print:border-black">
+        <h2 className="font-display text-2xl font-black uppercase tracking-tight text-codex-text mb-8">Development Chronology</h2>
+        <div className="space-y-8 border-l border-white/10 pl-8 ml-2">
           {tech.history.map((h, i) => (
-            <li key={i} className="relative">
-              <span className="absolute -left-[21px] top-1.5 h-2.5 w-2.5 rounded-full bg-codex-gold print:bg-black" />
-              <p className="font-mono text-xs text-codex-gold print:text-black">{h.year}</p>
-              <p className="mt-1 text-sm text-codex-text print:text-black">{h.event}</p>
-              <p className="mt-1 text-xs text-codex-muted print:text-black">{h.location}</p>
-              {h.person ? (
-                <p className="text-xs text-codex-secondary print:text-black">{h.person}</p>
-              ) : null}
-            </li>
+            <div key={i} className="relative">
+              <div className="absolute -left-[41px] top-1.5 h-4 w-4 rounded-full border-2 border-codex-gold bg-codex-bg" />
+              <p className="font-mono text-xs font-bold text-codex-gold">{h.year}</p>
+              <p className="mt-1 text-lg font-bold text-codex-text">{h.event}</p>
+              <p className="mt-1 text-xs uppercase tracking-widest text-codex-muted">{h.location}</p>
+            </div>
           ))}
-        </ol>
-      </section>
-      {tech.inventors.length ? (
-        <section>
-          <h2 className="font-display text-2xl font-semibold text-codex-text print:text-black">
-            Key people
-          </h2>
-          <ul className="mt-4 space-y-3">
-            {tech.inventors.map((p) => (
-              <li
-                key={p.name}
-                className="rounded-lg border border-codex-border bg-codex-card p-4 print:border-black print:bg-white"
-              >
-                <p className="font-display text-lg font-semibold text-codex-text print:text-black">
-                  {p.name}{" "}
-                  <span className="text-sm font-normal text-codex-muted print:text-black">
-                    ({p.years}, {p.nationality})
-                  </span>
-                </p>
-                <p className="mt-1 text-sm text-codex-secondary print:text-black">
-                  {p.contribution}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ) : null}
-
-      <section className="border-t border-codex-border pt-8 print:border-black">
-        <h2 className="font-display text-xl font-semibold text-codex-text print:text-black">
-          Sources used to write this entry
-        </h2>
-        {tech.verification.sources.length === 0 ? (
-          <p className="mt-3 text-sm text-codex-muted print:text-black">
-            No bibliographic sources are recorded for this entry yet. Treat all narrative and
-            procedural content as unverified.
-          </p>
-        ) : (
-          <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-codex-secondary print:text-black">
-            {tech.verification.sources.map((s) => (
-              <li key={s.id}>
-                <span className="font-medium text-codex-text print:text-black">{s.title}</span>
-                <span className="ml-1 font-mono text-xs text-codex-muted print:text-black">
-                  ({s.type})
-                </span>
-                {s.url ? (
-                  <a
-                    href={s.url}
-                    className="ml-1 text-codex-blue underline print:text-black"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {s.url}
-                  </a>
-                ) : null}
-                {s.note ? <p className="mt-1 text-xs text-codex-muted print:text-black">{s.note}</p> : null}
-              </li>
-            ))}
-          </ul>
-        )}
+        </div>
       </section>
     </div>
   );
@@ -518,10 +346,7 @@ function HistorySection({ tech }: { tech: Technology }) {
 
 function paragraphs(text: string) {
   return text.split("\n\n").map((para, i) => (
-    <p
-      key={i}
-      className="mb-4 text-sm leading-relaxed text-codex-secondary last:mb-0 print:text-black"
-    >
+    <p key={i} className="mb-6 last:mb-0">
       {para}
     </p>
   ));

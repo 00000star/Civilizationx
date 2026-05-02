@@ -168,6 +168,10 @@ export interface Technology {
   lastUpdated: string;
   maturity: EntryMaturity;
   verification: Verification;
+  spaceReadiness: {
+    fullAlternatives: boolean;
+    earthOnly: boolean;
+  };
 }
 
 export interface TechnologySummary {

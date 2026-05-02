@@ -246,3 +246,61 @@ export function computeCapabilityReadiness(technologies: Technology[]): Capabili
     };
   }).sort((a, b) => b.readiness - a.readiness || a.name.localeCompare(b.name));
 }
+
+export type ScenarioDefinition = {
+  id: string;
+  name: string;
+  description: string;
+  requiredCapIds: string[];
+};
+
+export type ScenarioReadiness = ScenarioDefinition & {
+  readiness: number;
+  status: CapabilityStatus;
+  primaryGaps: string[];
+};
+
+export const SCENARIOS: ScenarioDefinition[] = [
+  {
+    id: "grid-collapse",
+    name: "EMP / Grid Collapse",
+    description: "Modern power and electronics are disabled. Recovery depends on mechanical leverage, basic metallurgy, and localized energy production.",
+    requiredCapIds: ["tools-machines", "energy-power", "materials-industry", "water-sanitation"],
+  },
+  {
+    id: "global-famine",
+    name: "Global Famine",
+    description: "Industrial fertilizer chains and global logistics are severed. Survival depends on soil science, seed saving, and traditional irrigation.",
+    requiredCapIds: ["food-agriculture", "water-sanitation", "health-medicine"],
+  },
+  {
+    id: "mars-settlement",
+    name: "Mars Habitat",
+    description: "Survival in a sealed, hostile environment with no local biosphere. Depends on closed-loop life support, electronics, and space ISRU.",
+    requiredCapIds: ["space-isru", "computing-automation", "energy-power", "health-medicine"],
+  },
+];
+
+export function computeScenarioReadiness(caps: CapabilityReadiness[]): ScenarioReadiness[] {
+  const capMap = new Map(caps.map((c) => [c.id, c]));
+
+  return SCENARIOS.map((scenario): ScenarioReadiness => {
+    const required = scenario.requiredCapIds.map((id) => capMap.get(id)).filter(Boolean) as CapabilityReadiness[];
+    
+    if (required.length === 0) {
+      return { ...scenario, readiness: 0, status: "missing", primaryGaps: ["Infrastructure data missing"] };
+    }
+
+    const readiness = Math.round(required.reduce((sum, c) => sum + c.readiness, 0) / required.length);
+    const primaryGaps = required
+      .filter((c) => c.readiness < 60)
+      .map((c) => c.name);
+
+    return {
+      ...scenario,
+      readiness,
+      status: capabilityStatus(readiness, required.length) as CapabilityStatus,
+      primaryGaps: primaryGaps.slice(0, 3),
+    };
+  }).sort((a, b) => b.readiness - a.readiness);
+}
