@@ -291,9 +291,16 @@ export function computeScenarioReadiness(caps: CapabilityReadiness[]): ScenarioR
       return { ...scenario, readiness: 0, status: "missing", primaryGaps: ["Infrastructure data missing"] };
     }
 
-    const readiness = Math.round(required.reduce((sum, c) => sum + c.readiness, 0) / required.length);
+    const readinessAvg = Math.round(required.reduce((sum, c) => sum + c.readiness, 0) / required.length);
+    const minReadiness = Math.min(...required.map((c) => c.readiness));
+    
+    // Bottleneck Logic: Survival depends on the weakest link.
+    // We weight the minimum capability score more heavily than the average.
+    const readiness = Math.round((readinessAvg * 0.3) + (minReadiness * 0.7));
+
     const primaryGaps = required
-      .filter((c) => c.readiness < 60)
+      .filter((c) => c.readiness < 60 || c.readiness === minReadiness)
+      .sort((a, b) => a.readiness - b.readiness)
       .map((c) => c.name);
 
     return {
