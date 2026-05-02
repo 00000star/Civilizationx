@@ -16,24 +16,28 @@
     "soap-making",
     "soil-science-and-composting"
   ],
-  "problem": "Many foods are marginal without heat: proteins can harbour pathogens; some plants contain heat-labile toxins or enzyme inhibitors; starches in tubers and grains are less accessible raw. Chewing and digestion are metabolically expensive — heat denatures proteins, gelatinises starches, and breaks down cell walls, changing what calories a human gut can absorb per hour.\n\nCooking also concentrates flavours and enables combining ingredients into stews that homogenise nutrients across a group — a social technology as much as a chemical one.\n\nThe engineering problem is not merely temperature peaks but controlled heat transfer without burning, efficient fuel use, and containers that survive repeated thermal cycling. That couples cooking tightly to ceramics and later metals.",
-  "overview": "Cooking methods map to heat transfer modes. Direct radiation from coals or flame sears surfaces — good for Maillard browning, easy to overcook interiors. Conduction through stones (hot-rock boiling) heats liquids in organic containers that would burn in flame. Convection in earth ovens and steam pits circulates moist heat evenly. Immersion boiling in pottery is the gateway to grains and legumes at scale.\n\nTemperature bands matter: pasteurisation concepts (time at temperature) reduce pathogen risk though premodern cooks used heuristics — foam, colour, smell. For plant toxins, specific knowledge replaces thermometers: slow simmering versus rapid boil changes outcomes for some cyanogenic or lectin-rich foods.\n\nFuel efficiency is a design variable: insulated pits reuse heat; lids reduce evaporative losses; stacking pots saves charcoal. Ash and soot management affects food taste and long-term respiratory health — another reason ventilation design belongs with cooking.\n\nNutritionally, cooking can reduce some heat-sensitive vitamins while increasing bioavailability of others; the net depends on diet composition. The civilisational net effect has been overwhelmingly enabling for population density.",
+  "problem": "Many foods are marginal without heat: proteins can harbour pathogens (bacteria, parasites); some plants contain heat-labile toxins (lectins, cyanogenic glycosides) or enzyme inhibitors; starches in tubers and grains are less accessible raw. Chewing and digestion are metabolically expensive — heat denatures proteins, gelatinises starches, and breaks down cell walls, changing what calories a human gut can absorb per hour.\n\nCooking also concentrates flavours and enables combining ingredients into stews that homogenise nutrients across a group — a social technology as much as a chemical one.\n\nThe engineering problem is not merely temperature peaks but controlled heat transfer without burning, efficient fuel use, and containers that survive repeated thermal cycling. That couples cooking tightly to ceramics and later metals.\n\nIn space habitats, cooking is limited by the absence of open fire and the need for total smoke/volatile capture. Heat must be delivered via electrical induction or resistance, and off-gassing from oils and caramelisation must be scrubbed by the life-support system to prevent cabin atmosphere toxicity.",
+  "overview": "Cooking methods map to heat transfer modes. Direct radiation from coals or flame sears surfaces — good for Maillard browning, easy to overcook interiors. Conduction through stones (hot-rock boiling) heats liquids in organic containers (hides, bark) that would burn in flame. Convection in earth ovens (Hangi/Umu) and steam pits circulates moist heat evenly. Immersion boiling in pottery is the gateway to grains and legumes at scale.\n\nTemperature bands matter: pasteurisation concepts (time at temperature) reduce pathogen risk. For plant toxins, specific knowledge replaces thermometers: slow simmering (to destroy lectins in beans) versus multiple water-change boiling (to leach cyanide from cassava). Boiling point changes with altitude: at 5000m, water boils at ~83°C, requiring significantly longer cooking times or pressure vessels.\n\nFuel efficiency is a design variable: insulated 'hay boxes' reuse residual heat; lids reduce evaporative losses; nested pots save energy. Ash and soot management affects food taste and long-term respiratory health.\n\nNutritionally, cooking can reduce some heat-sensitive vitamins (C, B12) while increasing bioavailability of others (Lycopene, Beta-carotene); the net depends on diet composition. The civilisational net effect has been overwhelmingly enabling for human brain expansion and population density.",
   "principles": [
     {
       "name": "Denaturation and gelatinisation",
-      "explanation": "Heat unfolds proteins and swells starch granules, increasing digestibility and altering texture."
+      "explanation": "Heat unfolds complex proteins (meat) and swells starch granules (tubers), increasing surface area for digestive enzymes to work."
+    },
+    {
+      "name": "Maillard Reaction",
+      "explanation": "A chemical reaction between amino acids and reducing sugars that gives browned food its distinctive flavour. Occurs rapidly above 140°C — difficult to achieve in boiling water."
     },
     {
       "name": "Thermal death time for microbes",
-      "explanation": "Pathogen reduction is a function of temperature and duration — higher heat shortens required time."
+      "explanation": "Pathogen reduction is a function of temperature and duration. 74°C (165°F) is the general 'instant kill' field standard for most foodborne bacteria."
     },
     {
-      "name": "Moist versus dry heat",
-      "explanation": "Water limits surface temperature to ~100 °C at sea level, favouring even heating; dry air allows browning reactions above boiling."
+      "name": "Boiling point depression",
+      "explanation": "Atmospheric pressure drops with altitude, lowering the maximum temperature of boiling water. High-altitude cooking requires 2x-4x more time for the same chemical transformation."
     },
     {
-      "name": "Heat capacity of cooking media",
-      "explanation": "Water and stone store more heat per mass than air — good for stable simmer after fire adjustment."
+      "name": "Passive heat retention",
+      "explanation": "Once a vessel is at 100°C, it can be removed from fire and placed in an insulated pit. This saves 70% of fuel for long-simmer tasks like beans or tough meat."
     }
   ],
   "components": [
@@ -42,111 +46,114 @@
       "name": "Heat source",
       "function": "Supplies energy for cooking",
       "position": "Hearth, pit, or stove",
-      "madeFrom": "Wood, charcoal, dung",
-      "criticalNote": "Prefer coals for steady heat; flame impingement causes soot and uneven cooking"
+      "madeFrom": "Hardwood coals (steady), charcoal, or dung (smoky/low heat)",
+      "criticalNote": "Prefer glowing coals; direct flame impingement deposits bitter soot and can crack pottery"
     },
     {
       "id": "vessel",
       "name": "Cooking vessel",
       "function": "Contains food and cooking liquid",
-      "position": "On trivet, in coals, or suspended",
-      "madeFrom": "Pottery, later metal; organic bowls for hot-rock boiling",
-      "criticalNote": "Thermal shock cracks pottery — preheat gently"
+      "position": "On stones, in coals, or suspended by tripod",
+      "madeFrom": "Pottery (cord-marked/thick-walled), later metal; birch-bark baskets for hot-rock boiling",
+      "criticalNote": "Thermal shock — preheat pottery near the fire before placing on coals"
     },
     {
-      "id": "lid",
-      "name": "Lid / cover",
-      "function": "Traps steam, speeds heating, reduces fuel",
-      "position": "Seated on vessel rim",
-      "madeFrom": "Clay disc, bark, metal later",
-      "criticalNote": "Sealed lids can boil over explosively — vent if needed"
+      "id": "thermal-mass",
+      "name": "Hot stones / Baking stones",
+      "function": "Stores and transfers heat in pits or boiling baskets",
+      "position": "In the fire, then moved to the cooking vessel",
+      "madeFrom": "Granite, basalt, or other dense non-porous rocks",
+      "criticalNote": "Avoid 'river rocks' containing trapped water — they will explode when heated in fire"
     },
     {
       "id": "utensils",
-      "name": "Stirring and serving tools",
+      "name": "Stirring and handling tools",
       "function": "Moves food for even heating; avoids local scorch",
       "position": "Hand tools",
-      "madeFrom": "Wood, bone, later metal",
-      "criticalNote": "Avoid toxic species for spoons — some woods are irritant"
+      "madeFrom": "Wood (Maple, Oak), bone, or green-wood tongs",
+      "criticalNote": "Avoid toxic wood species like Yew or Oleander for spoons"
     }
   ],
   "rawMaterials": [
     {
       "name": "Water",
-      "purpose": "Boiling, steaming, cleaning",
+      "purpose": "Boiling, steaming, leaching toxins",
       "earthLocations": [
-        "Rivers, springs, collected rain"
+        "Potable sources as per Sanitation entry"
       ],
-      "spaceAlternatives": "Recovered humidity condensate — must be purified",
-      "processingRequired": "Clarify and boil if biological risk"
+      "spaceAlternatives": "Recycled greywater (purified) or humidity condensate",
+      "processingRequired": "Boil first if source is suspect; discard leaching water for toxic plants"
     },
     {
-      "name": "Fuel",
-      "purpose": "Heat",
+      "name": "Biomass fuel",
+      "purpose": "Energy source",
       "earthLocations": [
-        "As fire entry"
+        "Dry hardwoods provide the best 'cooking coal' beds"
       ],
-      "spaceAlternatives": "Electric resistance",
-      "processingRequired": "Dry storage"
+      "spaceAlternatives": "Direct solar concentrators or electric resistance coils",
+      "processingRequired": "Split wood to 'wrist-thickness' for rapid coal production"
     },
     {
-      "name": "Food ingredients",
-      "purpose": "Nutrition",
+      "name": "Bio-available starch and protein",
+      "purpose": "Primary nutrition",
       "earthLocations": [
-        "Hunted, gathered, cultivated sources"
+        "Tubers (Potato, Cassava), Grains (Wheat, Maize), Game meat",
+        "Leafy greens"
       ],
-      "spaceAlternatives": "Hydroponic biomass",
-      "processingRequired": "Knowledge of local toxins is mandatory preprocessing"
+      "spaceAlternatives": "Lab-grown 'clean meat' or high-protein algae (Spirulina)",
+      "processingRequired": "Wash, peel, and inspect for parasites (worms) before heating"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Establish a cooking fire layout",
-      "description": "Rake a bed of coals; place adjustable pot support (stones, trivet) for air access. Keep a separate small flame zone for searing if needed.",
+      "title": "Hearth preparation and coal bed",
+      "description": "Establish a fire using hardwood. Allow to burn down for 45 minutes until a 5cm bed of glowing white coals exists. Arrange three support stones (trivet) around the hottest zone.",
       "prerequisiteTools": [
-        "fire tongs from green wood",
-        "stones"
+        "fire-pit",
+        "hardwood fuel"
       ],
-      "warningNote": "River stones with trapped moisture can explode — use dry dense stones"
+      "warningNote": "Maintain ventilation — indoor cooking over open coals produces lethal levels of CO (Carbon Monoxide)"
     },
     {
       "order": 2,
-      "title": "Pre-treat hazardous foods",
-      "description": "Soak, ferment, or multiple-change boiling for known toxic plants per regional ethnobotany. When uncertain, do not eat — this step is knowledge-gated.",
+      "title": "Toxin removal (The Leaching Step)",
+      "description": "For plants like Bitter Cassava or Acorns: grind/shred, then wash in multiple changes of boiling water. This removes water-soluble toxins like cyanide and tannins. Discard the wash water.",
       "prerequisiteTools": [
-        "containers",
-        "water"
+        "grinding-stone",
+        "pottery-vessel"
       ],
-      "warningNote": "Wild mushroom misidentification is not fixable by cooking"
+      "warningNote": "Raw bitter cassava contains enough cyanide to kill an adult; leaching is a mandatory engineering step, not an option"
     },
     {
       "order": 3,
-      "title": "Bring to heat using appropriate mode",
-      "description": "For grains/legumes, simmer until tender — hardness of water and altitude change times. For meats, ensure time-at-temperature heuristics your culture trusts.",
+      "title": "Simmering and pathogen reduction",
+      "description": "Place vessel on supports. Bring water to a simmer (small bubbles). Add ingredients. Maintain heat for at least 20 minutes for stews. For meat, cook until the center is no longer 'pink' or reaches 74°C.",
       "prerequisiteTools": [
-        "pottery or metal pot when available"
+        "pot",
+        "wooden spoon"
       ],
-      "warningNote": "Undercooked pork and wild game carry parasite risk in many regions"
+      "warningNote": "Trichinosis in wild game (pigs, bears) requires thorough cooking to the bone"
     },
     {
       "order": 4,
-      "title": "Hold and rest",
-      "description": "Thick stews continue cooking off heat due to thermal mass; meats rest to redistribute juices in culinary terms — in survival terms, reduces immediate scald risk.",
+      "title": "The Earth Oven (Alternative for Large Loads)",
+      "description": "Dig a pit. Line with stones. Build a large fire on top. Once stones are glowing, rake out wood. Layer green leaves, then food, then more leaves. Bury with 10cm of earth. Wait 4-8 hours. This uses 100% convection/steam.",
       "prerequisiteTools": [
-        "insulating mat optional"
+        "shovel",
+        "hot stones"
       ],
-      "warningNote": "Spoilage risk remains — cool quickly if storing"
+      "warningNote": "Earth ovens can explode if built on saturated clay; ensure the site is dry"
     },
     {
       "order": 5,
-      "title": "Clean vessels",
-      "description": "Scrape char, scour with sand, rinse hot. Residual oils go rancid; biofilms harbour pathogens.",
+      "title": "Post-cook hygiene",
+      "description": "Eat immediately while hot. Scour vessels with sand and boiling water. Any leftover food must be reheated to boiling before the next meal to destroy 'storage bacteria' (Bacillus cereus).",
       "prerequisiteTools": [
         "scouring sand",
-        "water"
+        "boiling water"
       ],
-      "warningNote": "Thermal shock — do not plunge hot pottery into cold water"
+      "warningNote": "Grains (rice/maize) left at room temperature develop heat-stable toxins that even re-boiling won't remove"
     }
   ],
   "history": [
@@ -156,15 +163,14 @@
       "location": "Africa"
     },
     {
-      "year": "Neolithic",
-      "event": "Pottery spreads cooking of grains and legumes, tying cuisine to sedentary storage.",
-      "location": "Multiple independent centres"
+      "year": "20000 BCE",
+      "event": "Earliest pottery in East Asia suggests a shift to boiling-based diets long before agriculture.",
+      "location": "China/Japan"
     },
     {
-      "year": 1864,
-      "event": "Pasteurisation experiments help formalise heat treatment as a scientific countermeasure to microbial spoilage — a foundation for modern time–temperature safety practice.",
-      "location": "France",
-      "person": "Louis Pasteur"
+      "year": "1864",
+      "event": "Louis Pasteur formalises the relationship between heat and microbial life, leading to modern food safety standards.",
+      "location": "France"
     }
   ],
   "inventors": [
@@ -176,8 +182,24 @@
     }
   ],
   "impact": "Cooking underwrote denser populations and shorter feeding times, freeing hours for tool maintenance and travel. It is prerequisite to many preservation chains (though distinct from fermentation).\n\nIndustrial descendants include retorts, extrusion, and precision sous-vide — but the Codex conserves the campfire truth: heat plus container plus knowledge equals transformed biology.",
-  "images": [],
-  "videos": [],
+  "images": [
+    {
+      "id": "earth-oven-diagram",
+      "filename": "earth_oven.svg",
+      "caption": "Cross-section of an earth oven (Hangi/Umu) showing heat transfer layers",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [
+    {
+      "id": "primitive-cooking",
+      "title": "Stone-boiling and pit-cooking",
+      "description": "Traditional techniques for cooking without metal vessels; focus on heat management and hygiene.",
+      "durationSeconds": 900
+    }
+  ],
   "externalLinks": [
     {
       "id": "who-five-keys",
@@ -185,35 +207,41 @@
       "url": "https://www.who.int/news-room/fact-sheets/detail/food-safety"
     }
   ],
-  "lastUpdated": "2026-04-10",
+  "lastUpdated": "2026-05-02",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
     "reviewDate": null,
-    "warnings": [],
+    "warnings": [
+      "Wild mushroom toxicity (cooking does NOT make all safe)",
+      "Cyanide risk in bitter cassava",
+      "Trichinosis and parasites in wild meat",
+      "Carbon monoxide risk from indoor hearths",
+      "Exploding river stones"
+    ],
     "sources": [
       {
         "id": "src-who-food-safety",
         "title": "WHO — Food safety fact sheet",
         "url": "https://www.who.int/news-room/fact-sheets/detail/food-safety",
         "type": "institution",
-        "note": "Foodborne illness prevention and safe food handling principles"
+        "note": "The global standard for safe food handling"
       },
       {
-        "id": "src-cdc-foodsafety",
-        "title": "CDC — Food safety index",
-        "url": "https://www.cdc.gov/foodsafety/index.html",
-        "type": "institution",
-        "note": "U.S. public-health guidance complementary to WHO materials"
+        "id": "src-wrangham-cooking",
+        "title": "Catching Fire: How Cooking Made Us Human - Richard Wrangham",
+        "url": "https://www.basicbooks.com/titles/richard-wrangham/catching-fire/9780465020416/",
+        "type": "book",
+        "note": "Palaeoanthropological analysis of the caloric impact of cooking"
       },
       {
         "id": "src-wiki-cooking",
         "title": "Wikipedia — Cooking",
         "url": "https://en.wikipedia.org/wiki/Cooking",
         "type": "wikipedia",
-        "note": "Heat transfer, food chemistry overview, and further reading"
+        "note": "Technical overview of heat transfer and food chemistry"
       }
     ]
   },
-  "maturity": "researched"
+  "maturity": "field-guide-ready"
 }

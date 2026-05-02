@@ -11,8 +11,8 @@
   "unlocks": [
     "road-construction"
   ],
-  "problem": "Humans tolerate a narrow comfort band without clothing and fire support. Wind strips convective heat; rain destroys insulation; sun causes dehydration; predators exploit sleeping vulnerability. The basic shelter problem is creating a bounded microclimate: reducing wind speed, shedding precipitation, reflecting radiant heat from fire, and separating occupants from damp ground.\n\nThis is not aesthetics — it is thermodynamics and hygiene. Raised sleeping platforms reduce parasitic insect contact; overhangs keep fuel dry; smoke holes balance ventilation versus heat retention. In cold climates, small enclosed volumes around a fire are dramatically easier to heat than open camps.\n\nShelter also protects technology: cordage rots faster when constantly wet; clay dries unevenly in gusts; charcoal kilns need wind shields. A civilisation rebuilding needs the very first week to include reliable nightly shelter, not only because of comfort but because cognitive work (tool repair, planning) requires dry hands and stable light.",
-  "overview": "Basic shelters combine structural members, covering, and anchoring. Structural members are poles harvested green or dry, lashed into tripods, A-frames, or ridge-pole configurations. Coverings include thatch, bark sheets, hides, woven mats, and snow blocks in polar contexts. Anchoring uses stakes, rocks, and tensioned cordage in guy lines.\n\nSite selection dominates performance: avoid drainage channels, look for natural windbreaks, position openings away from prevailing storms, and place fire where smoke vents without filling the sleeping volume. In forest, dead standing timber is often straighter than ground-fall that has begun to rot.\n\nLashing is the joining technology: square lashings resist shear, diagonal lashings grip crossing poles, shear lashings bundle parallel members. Friction wraps must be seated under tension — slip knots fail in wind gusts.\n\nThermal upgrades include reflective fire walls (stones, clay), partial burrows, and insulating layers of leaves or grass between inner and outer skins. These are low-tech but map directly to later principles of insulation, vapour barriers, and ventilation in permanent architecture.",
+  "problem": "Humans tolerate a narrow comfort band without clothing and fire support. Wind strips convective heat; rain destroys insulation; sun causes dehydration; predators exploit sleeping vulnerability. The basic shelter problem is creating a bounded microclimate: reducing wind speed, shedding precipitation, reflecting radiant heat from fire, and separating occupants from damp ground.\n\nThis is not aesthetics — it is thermodynamics and hygiene. Raised sleeping platforms reduce parasitic insect contact; overhangs keep fuel dry; smoke holes balance ventilation versus heat retention. In cold climates, small enclosed volumes around a fire are dramatically easier to heat than open camps.\n\nShelter also protects technology: cordage rots faster when constantly wet; clay dries unevenly in gusts; charcoal kilns need wind shields. A civilisation rebuilding needs the very first week to include reliable nightly shelter, not only because of comfort but because cognitive work (tool repair, planning) requires dry hands and stable light.\n\nIn space settlement, shelter is an absolute pressure and radiation barrier. On planetary surfaces, the 'basic' shelter involves managing regolith overburden to block solar and cosmic radiation — a direct analog to the primitive earth-berm or cave, but with different mass-per-area requirements (typically 3-5 meters of soil).",
+  "overview": "Basic shelters combine structural members, covering, and anchoring. Structural members are poles harvested green (flexible) or dry (stable), lashed into tripods, A-frames, or ridge-pole configurations. Coverings include thatch, bark sheets, hides, woven mats, and snow blocks (igloos) in polar contexts. Anchoring uses stakes, rocks, and tensioned cordage in guy lines.\n\nSite selection dominates performance: avoid 'widow-makers' (dead branches above), drainage channels, and natural wind tunnels. Position openings 90-180 degrees away from prevailing storms. In forests, standing dead timber (conifers) provides straight, dry ridge poles; willow and hazel provide flexible ribs for domed structures.\n\nLashing is the joining technology: the Clove Hitch starts and ends most wraps; Square Lashings resist shear in crossing poles; Diagonal Lashings pull mismatched angles together. Friction wraps must be seated under tension — natural cordage shrinks/stretches with humidity, requiring a daily 'tension walk'.\n\nThermal upgrades include reflective fire walls (stones, clay), partial burrows, and insulating layers of dry leaves (duff) or grass between inner and outer skins. A wicking barrier (rocks or dry bark) between the ground and bedding is mandatory to prevent conductive hypothermia.",
   "principles": [
     {
       "name": "Wind pressure and permeability",
@@ -24,12 +24,16 @@
     },
     {
       "name": "Ground conduction",
-      "explanation": "Earth is a large heat sink; bedding platforms interrupt conductive loss even if air temperature seems acceptable."
+      "explanation": "Earth is a large heat sink; bedding platforms or 'dead air' layers (30cm of dry grass) interrupt conductive loss even if air temperature seems acceptable."
     },
     {
       "name": "Material creep under load",
       "explanation": "Green wood shrinks as it dries; lashings loosen. Retension after first nights is mandatory maintenance, not failure."
-    }
+    },
+    {
+      "name": "Radiation attenuation (Space)",
+      "explanation": "In space, shelter mass (regolith) is used to slow down GCR (Galactic Cosmic Rays) and SPE (Solar Particle Events). 300g/cm² of material is the 'safe' field standard."
+  }
   ],
   "components": [
     {
@@ -37,8 +41,8 @@
       "name": "Ridge pole or lintel",
       "function": "Spans opening, supports roof loads, defines shelter height",
       "position": "Highest horizontal member",
-      "madeFrom": "Straight trunk or lashed pair",
-      "criticalNote": "Check for heart rot — sound wood rings audibly when struck"
+      "madeFrom": "Straight trunk (Pine, Spruce, Cedar) or lashed pair",
+      "criticalNote": "Check for heart rot — sound wood rings audibly when struck with a stone"
     },
     {
       "id": "rafters",
@@ -46,111 +50,109 @@
       "function": "Transfer roof covering loads to walls or ground",
       "position": "Sloped from ridge to ground or wall plate",
       "madeFrom": "Saplings or split wood",
-      "criticalNote": "Snow load regions need closer spacing and stronger bend radius"
+      "criticalNote": "Snow load regions need closer spacing (30cm) and steeper pitch (>45°)"
     },
     {
       "id": "covering",
       "name": "Thatch, bark, or hides",
       "function": "Sheds rain and blocks wind",
-      "position": "Outer skin, layered shingle-style when possible",
-      "madeFrom": "Vegetation or animal skins",
-      "criticalNote": "Thatch must overhang walls to reduce splash-back"
+      "position": "Outer skin, layered shingle-style from bottom to top",
+      "madeFrom": "Reed (Phragmites), Birch bark, or tanned skins",
+      "criticalNote": "Thatch must be at least 15cm thick to be truly waterproof through surface tension"
     },
     {
       "id": "lashing",
       "name": "Cordage lashings",
-      "function": "Joins structural members elastically, absorbing wind shock better than rigid nails early on",
+      "function": "Joins structural members elastically, absorbing wind shock better than rigid nails",
       "position": "At every joint",
-      "madeFrom": "Twisted bark strips, vines, or full cordage where available",
-      "criticalNote": "Natural cordage stretches when wet — synthetic less so"
+      "madeFrom": "See rope-and-cordage; root-fibres (Spruce root) are excellent for heavy timber",
+      "criticalNote": "Always include 'frapping' turns (wraps between the poles) to tighten the lashing"
     },
     {
       "id": "bedding-platform",
-      "name": "Sleeping platform",
+      "name": "Sleeping platform / wicking barrier",
       "function": "Insulates from ground, improves drainage under sleeper",
-      "position": "Rear of shelter, away from primary door draft",
-      "madeFrom": "Poles with cross-lashed lattice and grass mattress"
+      "position": "Rear of shelter, raised 10-20cm off the floor",
+      "madeFrom": "Poles with cross-lashed lattice, topped with 30cm of compressed dry leaves"
     }
   ],
   "rawMaterials": [
     {
-      "name": "Poles and stakes",
-      "purpose": "Primary structure",
+      "name": "Structural timber",
+      "purpose": "Primary frame",
       "earthLocations": [
-        "Forests, riparian corridors, shrublands with straight stems"
+        "Temperate/Boreal forests (Softwoods for length/straightness; Hardwoods for stakes/impact)"
       ],
-      "spaceAlternatives": "Metal or composite framing when industry permits",
-      "processingRequired": "De-bark where insects hide; sharpen stake tips for driving"
+      "spaceAlternatives": "Extruded aluminium or inflatable polymer bladders; regolith-sintered bricks for permanent walls",
+      "processingRequired": "De-barking prevents beetle infestation; charring stake tips in fire improves rot resistance"
     },
     {
-      "name": "Thatch vegetation",
-      "purpose": "Water-shedding roof",
+      "name": "Thatch and duff",
+      "purpose": "Roofing and insulation",
       "earthLocations": [
-        "Water reed (Phragmites) in wetlands",
-        "palm thatch in tropics",
-        "bunch grasses in steppe"
+        "Wetland reeds, tall grasses, evergreen boughs (spruce/fir), or broadleaf litter"
       ],
-      "spaceAlternatives": "Regolith-bonded panels with sealed membranes",
-      "processingRequired": "Harvest dry if possible; bundle in courses; replace seasonally"
+      "spaceAlternatives": "Multi-layer insulation (MLI) blankets or thick regolith berms",
+      "processingRequired": "Harvest dry; bundle 'hand-sized' units for consistent thatch courses"
     },
     {
-      "name": "Cordage",
-      "purpose": "Joints and guy lines",
+      "name": "Binding materials",
+      "purpose": "Joints and tension lines",
       "earthLocations": [
-        "Local fibre as in rope-and-cordage entry"
+        "Vines (Clematis), inner bark (Willow, Basswood), or Spruce roots"
       ],
-      "spaceAlternatives": "UHMWPE or wire rope later",
-      "processingRequired": "Pre-stretch and dry before final tensioning"
+      "spaceAlternatives": "Vectran or Technora high-strength webbing",
+      "processingRequired": "Soak root/bark bindings in water before use to increase flexibility"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Survey site and wind rose",
-      "description": "Observe daytime breeze and local terrain funneling. Mark drainage during a rain if possible. Clear only what you must — vegetation is also camouflage and fuel.",
+      "title": "Site audit and hazard check",
+      "description": "Look UP for dead branches (widow-makers). Look DOWN for game trails and ant nests. Look AROUND for drainage patterns. Clear a 4x4m area of sharp stones and roots. Level the sleeping area by moving mineral soil.",
       "prerequisiteTools": [
-        "stone-knapping flakes for cutting cord"
+        "digging stick"
       ],
-      "warningNote": "Deadfalls can shift — do not build under hung-up trees"
+      "warningNote": "Building in a dry wash (arroyo) risks flash-flood burial even if no rain is falling locally"
     },
     {
       "order": 2,
-      "title": "Frame primary structure",
-      "description": "Raise ridge on tripods or lean ridge pole against living tree (use bark spacers to avoid girdling if long-term). Seat poles in shallow depressions or on flat stones to reduce sink.",
+      "title": "Erect the tripod or A-frame",
+      "description": "Lash three poles together using a tripod lashing. Raise and spread the legs. Seat the ridge pole into the 'V' formed by the tripod. Ensure the tripod is on the windward side to lean into the breeze.",
       "prerequisiteTools": [
-        "mallet from wood",
-        "digging stick"
+        "Square lashing",
+        "Tripod lashing"
       ],
-      "warningNote": "Heavy lean-to loads transfer to anchors — brace against shear"
+      "warningNote": "Unsecured poles can slide; dig shallow 'cups' for the leg bases"
     },
     {
       "order": 3,
-      "title": "Install lattice and first cover layer",
-      "description": "Lay horizontal purlins for thatch attachment. Begin shingling from eaves upward so upper layers sheds over lower. Overlap hides like roof tiles if using skins.",
+      "title": "Lattice and thatch (The Shingle Method)",
+      "description": "Lash horizontal purlins every 50cm. Begin at the ground: tie bundles of thatch to the lowest purlin. Place the next row so it overlaps the first by 50%. This ensures water 'stairs' down the outside.",
       "prerequisiteTools": [
-        "bone awl",
+        "Clove hitch",
         "cordage"
       ],
-      "warningNote": "Gaps at eaves destroy comfort — pack first course tightly"
+      "warningNote": "Thin thatch (under 10cm) will leak in heavy rain; test with a bucket of water if possible"
     },
     {
       "order": 4,
-      "title": "Add vent and adjustable door",
-      "description": "Cut high vent opposite door low slot for draft. Use hide flap or woven mat door you can partially open for smoke management.",
+      "title": "Firewall and ventilation",
+      "description": "Build a 1m high stone or clay wall 1m from the entrance. This reflects heat into the shelter while blocking direct wind. Leave a 30cm hole at the peak for smoke.",
       "prerequisiteTools": [
-        "knife or stone flake"
+        "rocks",
+        "clay/mud"
       ],
-      "warningNote": "Fully sealed small shelters with open fire risk CO buildup — keep controlled leakage"
+      "warningNote": "Maintain a 'two-fist' gap between your head and the smoke layer while sleeping"
     },
     {
       "order": 5,
-      "title": "Tension and storm guy",
-      "description": "Add guy lines to windward corners anchored to buried deadmen logs. Retension after wood shrinkage.",
+      "title": "Thermal banking (Earth Berming)",
+      "description": "In cold or high-wind environments, pile loose soil or leaves against the windward and side walls. This creates an air-tight thermal mass. In space, this is the 'Regolith Berm' phase.",
       "prerequisiteTools": [
-        "stakes",
-        "mallet"
+        "shovel or basket"
       ],
-      "warningNote": "Flying stakes under tension are hazardous — wear eye protection if using modern cordage under high load"
+      "warningNote": "Berming adds massive weight; ensure structural rafter support is sufficient to prevent collapse"
     }
   ],
   "history": [
@@ -165,15 +167,31 @@
       "location": "Ukraine (Mezhyrich-type sites)"
     },
     {
-      "year": "Holocene",
-      "event": "Seasonal roundhouses and longhouses become archaeological norms tied to sedentism.",
-      "location": "Global"
+      "year": "Modern Era",
+      "event": "The 3D-printing of regolith structures marks the transition of basic shelter to extra-terrestrial contexts.",
+      "location": "Lunar South Pole (Planned)"
     }
   ],
   "inventors": [],
   "impact": "Shelter converts climate into something humans can budget. It multiplies the effectiveness of fire and clothing, enables food storage trials, and supports infant survival — demographic growth tracks partly with housing quality.\n\nEngineering descendants include everything from cabin carpentry to insulated panels and HVAC. The Codex treats basic shelter as the first building code: site, structure, skin, vent.",
-  "images": [],
-  "videos": [],
+  "images": [
+    {
+      "id": "shelter-types",
+      "filename": "shelter_types.svg",
+      "caption": "Comparison of Lean-to, A-frame, and Wikiup structural skeletons",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [
+    {
+      "id": "survival-shelter",
+      "title": "Primitive shelter construction",
+      "description": "Watch for correct lashing techniques and thatch layering; adapt to your specific biomass and tools.",
+      "durationSeconds": 1200
+    }
+  ],
   "externalLinks": [
     {
       "id": "fema-shelter-safety",
@@ -181,35 +199,40 @@
       "url": "https://www.ready.gov/shelter"
     }
   ],
-  "lastUpdated": "2026-04-10",
+  "lastUpdated": "2026-05-02",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
     "reviewDate": null,
-    "warnings": [],
+    "warnings": [
+      "Deadfall risk (widow-makers)",
+      "Carbon monoxide poisoning from enclosed fire",
+      "Flash flood risk in arroyos",
+      "Hypothermia from ground conduction"
+    ],
     "sources": [
       {
         "id": "src-osha",
-        "title": "OSHA — Agency home",
+        "title": "OSHA — Construction Safety Standards",
         "url": "https://www.osha.gov/",
         "type": "institution",
-        "note": "Fall protection, scaffolding, excavation, and construction safety rules (jurisdiction-specific)"
+        "note": "Fall protection and excavation safety rules relevant to berming and structural integrity"
       },
       {
-        "id": "src-wiki-housing",
-        "title": "Wikipedia — Housing",
-        "url": "https://en.wikipedia.org/wiki/Housing",
+        "id": "src-sas-survival",
+        "title": "The SAS Survival Handbook - John 'Lofty' Wiseman",
+        "url": "https://www.harpercollins.com/products/the-sas-survival-handbook",
+        "type": "book",
+        "note": "Authoritative field guide for primitive shelter types and site selection"
+      },
+      {
+        "id": "src-wiki-shelter",
+        "title": "Wikipedia — Shelter (ecology/human)",
+        "url": "https://en.wikipedia.org/wiki/Shelter_(ecology)",
         "type": "wikipedia",
-        "note": "Shelter typology and environmental design references"
-      },
-      {
-        "id": "src-cdc-healthy-homes",
-        "title": "CDC — Healthy housing and environmental health portal",
-        "url": "https://www.cdc.gov/nceh/",
-        "type": "institution",
-        "note": "Indoor environmental hazards, ventilation, and community health links"
+        "note": "General survey of shelter in biology and human history"
       }
     ]
   },
-  "maturity": "researched"
+  "maturity": "field-guide-ready"
 }
