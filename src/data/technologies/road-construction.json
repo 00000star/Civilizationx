@@ -31,16 +31,16 @@
     "traffic-flow-control",
     "truck-cargo-logistics"
   ],
-  "problem": "Soil turns to mud under wheel loads; ruts trap vehicles; slopes erode under rain. Paths sufficient for feet fail under tonnes. The road problem is distributing wheel pressure into subgrade without pumping fines upward, shedding water sideways before it softens the foundation, and maintaining crossfall for drainage.\n\nRoads are also social technology: width standards, right-of-way law, tolls, and maintenance labour allocation determine whether a route stays passable across political seasons.\n\nStone Roman roads and modern asphalt differ in materials but share layering logic: subgrade, base, wearing course — each layer sized for grain distribution and compaction.",
-  "overview": "A durable unpaved road begins with clearing organics, cutting a bench into hillside for positive drainage, and installing a crown — high centre, low edges — so water runs off. Aggregate layers use graded stone: large stones at bottom, smaller toward top, fines to lock mechanically when compacted. Corduroy logs bridge bogs historically.\n\nPaved roads add a bound surface: Roman concrete with pozzolan, later macadam with angular crushed stone locked by compaction, later tar macadam, later hot-mix asphalt on prepared base. Each step improves impermeability and ride but increases maintenance tooling needs.\n\nDrainage structures — culverts, ditches, retaining walls — often matter more than surface quality. Plugged culverts destroy paved roads from underneath.\n\nSurveying aligns grades: too steep exhausts draft animals and trucks; too flat ponds water. Transition curves reduce jerk for fast traffic later.",
+  "problem": "Soil turns to mud under wheel loads; ruts trap vehicles; slopes erode under rain. Paths sufficient for feet fail under tonnes. The road problem is distributing wheel pressure into subgrade without pumping fines upward, shedding water sideways before it softens the foundation, and maintaining crossfall for drainage.\n\nRoads are also social technology: width standards, right-of-way law, tolls, and maintenance labour allocation determine whether a route stays passable across political seasons.\n\nStone Roman roads and modern asphalt differ in materials but share layering logic: subgrade, base, wearing course \u2014 each layer sized for grain distribution and compaction.",
+  "overview": "A durable unpaved road begins with clearing organics, cutting a bench into hillside for positive drainage, and installing a crown \u2014 high centre, low edges \u2014 so water runs off. Aggregate layers use graded stone: large stones at bottom, smaller toward top, fines to lock mechanically when compacted. Corduroy logs bridge bogs historically.\n\nPaved roads add a bound surface: Roman concrete with pozzolan, later macadam with angular crushed stone locked by compaction, later tar macadam, later hot-mix asphalt on prepared base. Each step improves impermeability and ride but increases maintenance tooling needs.\n\nDrainage structures \u2014 culverts, ditches, retaining walls \u2014 often matter more than surface quality. Plugged culverts destroy paved roads from underneath.\n\nSurveying aligns grades: too steep exhausts draft animals and trucks; too flat ponds water. Transition curves reduce jerk for fast traffic later.",
   "principles": [
     {
       "name": "Subgrade bearing capacity",
-      "explanation": "Weak subgrades fail by shear; road thickness spreads load over wider footprint — structural number concepts formalise this in modern pavement engineering."
+      "explanation": "Weak subgrades fail by shear; road thickness spreads load over wider footprint \u2014 structural number concepts formalise this in modern pavement engineering."
     },
     {
       "name": "Frost heave and capillary rise",
-      "explanation": "In cold climates, water wicks into base, freezes, lifts surface — requiring drainage layers and cut depth below frost line when possible."
+      "explanation": "In cold climates, water wicks into base, freezes, lifts surface \u2014 requiring drainage layers and cut depth below frost line when possible."
     },
     {
       "name": "Compaction and optimum moisture",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Erosion on slopes",
-      "explanation": "Sheet flow velocity scours shoulders — energy dissipators and vegetation stabilise cuts."
+      "explanation": "Sheet flow velocity scours shoulders \u2014 energy dissipators and vegetation stabilise cuts."
     }
   ],
   "components": [
@@ -66,7 +66,7 @@
       "function": "Distributes wheel loads; drains water laterally in permeable designs",
       "position": "Above subgrade",
       "madeFrom": "Crushed stone graded for interlock",
-      "criticalNote": "Segregation during placement ruins grading — mix in lifts"
+      "criticalNote": "Segregation during placement ruins grading \u2014 mix in lifts"
     },
     {
       "id": "wearing-course",
@@ -74,7 +74,7 @@
       "function": "Smooth, durable surface resisting abrasion",
       "position": "Top",
       "madeFrom": "Asphalt concrete, stone pavers, or compacted gravel",
-      "criticalNote": "Crossfall 1–2% typical for drainage — too steep discomforts slow traffic"
+      "criticalNote": "Crossfall 1\u20132% typical for drainage \u2014 too steep discomforts slow traffic"
     },
     {
       "id": "drainage",
@@ -82,7 +82,7 @@
       "function": "Removes water from structure before saturation",
       "position": "Parallel to alignment and at low points",
       "madeFrom": "Stone, tile, corrugated metal later",
-      "criticalNote": "Maintenance access — if culverts cannot be cleaned, they will fail"
+      "criticalNote": "Maintenance access \u2014 if culverts cannot be cleaned, they will fail"
     },
     {
       "id": "use-case-boundary",
@@ -109,7 +109,7 @@
       "earthLocations": [
         "Petroleum refining districts"
       ],
-      "spaceAlternatives": "Sulphur binder research materials — nonstandard",
+      "spaceAlternatives": "Sulphur binder research materials \u2014 nonstandard",
       "processingRequired": "Heat mix plants; compaction before cool"
     },
     {
@@ -131,7 +131,7 @@
         "line level or transit",
         "measuring chain"
       ],
-      "warningNote": "Working near roads — visibility vests even in premodern reenactment contexts with modern traffic nearby"
+      "warningNote": "Working near roads \u2014 visibility vests even in premodern reenactment contexts with modern traffic nearby"
     },
     {
       "order": 2,
@@ -142,7 +142,7 @@
         "rammer",
         "cart"
       ],
-      "warningNote": "Trench collapse in deep cuts — bench slopes"
+      "warningNote": "Trench collapse in deep cuts \u2014 bench slopes"
     },
     {
       "order": 3,
@@ -152,7 +152,7 @@
         "rake",
         "roller"
       ],
-      "warningNote": "Overthick lifts do not compact internally — false economy"
+      "warningNote": "Overthick lifts do not compact internally \u2014 false economy"
     },
     {
       "order": 4,
@@ -171,7 +171,7 @@
       "prerequisiteTools": [
         "pavers or asphalt crew if modern"
       ],
-      "warningNote": "Hot asphalt burns — PPE and escape routes"
+      "warningNote": "Hot asphalt burns \u2014 PPE and escape routes"
     }
   ],
   "history": [
@@ -189,22 +189,26 @@
   "inventors": [
     {
       "name": "John Loudon McAdam",
-      "contribution": "Promoted crushed-stone road surfacing with drainage discipline — 'macadamisation'",
+      "contribution": "Promoted crushed-stone road surfacing with drainage discipline \u2014 'macadamisation'",
       "years": "1756-1836",
       "nationality": "Scottish"
     }
   ],
-  "impact": "Roads are the physical API between vehicles and territory. Their quality determines energy cost of logistics — shaping cities, empires, and famine relief reach.\n\nMaintenance is the hidden half of road technology; building without a maintenance cadence is performative infrastructure.",
+  "impact": "Roads are the physical API between vehicles and territory. Their quality determines energy cost of logistics \u2014 shaping cities, empires, and famine relief reach.\n\nMaintenance is the hidden half of road technology; building without a maintenance cadence is performative infrastructure.",
   "images": [],
   "videos": [],
   "externalLinks": [
     {
       "id": "fhwa-pavement",
-      "title": "FHWA — pavement engineering basics (modern reference)",
+      "title": "FHWA \u2014 pavement engineering basics (modern reference)",
       "url": "https://www.fhwa.dot.gov/pavement/"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -213,14 +217,14 @@
     "sources": [
       {
         "id": "src-nyc-dot-road",
-        "title": "NYC DOT — Infrastructure portal (Brooklyn Bridge example)",
+        "title": "NYC DOT \u2014 Infrastructure portal (Brooklyn Bridge example)",
         "url": "https://www1.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
         "type": "institution",
         "note": "Municipal civil engineering documentation style"
       },
       {
         "id": "src-wiki-road",
-        "title": "Wikipedia — Road",
+        "title": "Wikipedia \u2014 Road",
         "url": "https://en.wikipedia.org/wiki/Road",
         "type": "wikipedia",
         "note": "Pavement types, drainage, and standards references"

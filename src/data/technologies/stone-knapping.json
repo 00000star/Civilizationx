@@ -12,7 +12,7 @@
     "basic-hand-tools"
   ],
   "problem": "Human hands and teeth are poor at cutting hide, butchering carcasses, and shaping wood compared with carnivores or beavers. Before metal, the sharpest durable edges came from certain rocks broken in controlled ways. The problem was not strength but geometry: a wedge-shaped edge concentrates force onto a line, enabling slicing and scraping.\n\nNatural sharp stones are rare and fragile. Knapping solves reproducibility: a skilled worker can detach flakes of predictable size from a core, renew a dull edge by removing a small flake, and stockpile blanks for transport. Without knapping, woodworking, butchery, and many textile steps remain painfully slow.\n\nKnapping is also conceptual training: it teaches that materials have grain, that fractures follow rules, and that small controlled failures (flakes) are how you shape the whole. Those abstractions transfer to later chiselling, sawing, and machining.",
-  "overview": "Stone knapping uses conchoidal fracture — the curved, shell-like breakage pattern seen in glass and fine-grained cryptocrystalline rocks such as flint, chert, obsidian, and some quartzites. When a sharp impact or pressure exceeds the material's strength, a crack initiates and propagates as a Hertzian cone under the contact point. By striking the core at correct angles and supporting it properly, a knapper detaches flakes whose ventral surfaces are smooth and whose edges can be razor sharp.\n\nTwo families of technique dominate: percussion (direct and indirect) and pressure flaking. Percussion removes large flakes quickly for roughing out shapes. Pressure flaking uses a bone or antler tip to apply inward force near an edge, trimming and sharpening with high control. Platforms — prepared surfaces where force enters — must be strong enough not to crush and oriented so force travels into the core.\n\nCores are reduced until exhausted; flakes become scrapers, knives, drills, or arrowheads depending on retouch. Retouch is small-scale flaking along an edge to strengthen, blunt (for gripping), or resharpen.\n\nNot all stone knaps well; coarse granites fracture unevenly. cryptocrystalline silicates are prized for predictable fracture and edge quality. Heat treatment of some cherts (200-350°C for 24+ hours) alters microstructure, improving workability — an early materials science.",
+  "overview": "Stone knapping uses conchoidal fracture \u2014 the curved, shell-like breakage pattern seen in glass and fine-grained cryptocrystalline rocks such as flint, chert, obsidian, and some quartzites. When a sharp impact or pressure exceeds the material's strength, a crack initiates and propagates as a Hertzian cone under the contact point. By striking the core at correct angles and supporting it properly, a knapper detaches flakes whose ventral surfaces are smooth and whose edges can be razor sharp.\n\nTwo families of technique dominate: percussion (direct and indirect) and pressure flaking. Percussion removes large flakes quickly for roughing out shapes. Pressure flaking uses a bone or antler tip to apply inward force near an edge, trimming and sharpening with high control. Platforms \u2014 prepared surfaces where force enters \u2014 must be strong enough not to crush and oriented so force travels into the core.\n\nCores are reduced until exhausted; flakes become scrapers, knives, drills, or arrowheads depending on retouch. Retouch is small-scale flaking along an edge to strengthen, blunt (for gripping), or resharpen.\n\nNot all stone knaps well; coarse granites fracture unevenly. cryptocrystalline silicates are prized for predictable fracture and edge quality. Heat treatment of some cherts (200-350\u00b0C for 24+ hours) alters microstructure, improving workability \u2014 an early materials science.",
   "principles": [
     {
       "name": "Conchoidal fracture",
@@ -28,7 +28,7 @@
     },
     {
       "name": "Edge angle versus durability",
-      "explanation": "Acute edges (<30°) cut better but chip faster; steeper edges (>60°) survive longer in heavy scraping tasks. Knappers balance geometry to task."
+      "explanation": "Acute edges (<30\u00b0) cut better but chip faster; steeper edges (>60\u00b0) survive longer in heavy scraping tasks. Knappers balance geometry to task."
     },
     {
       "name": "Bi-conical thinning",
@@ -42,7 +42,7 @@
       "function": "Parent block from which flakes are detached until exhausted",
       "position": "Held in hand, against thigh with pad, or on ground with stabilisation",
       "madeFrom": "Flint, chert, obsidian, dacite, or other knappable stone",
-      "criticalNote": "Hidden cracks in raw material waste effort — inspect sound (clear ring) before large removals"
+      "criticalNote": "Hidden cracks in raw material waste effort \u2014 inspect sound (clear ring) before large removals"
     },
     {
       "id": "hammerstone",
@@ -64,7 +64,7 @@
       "function": "Applies inward force to edge for retouch and finishing",
       "position": "Tip contacts edge; torso or forearm provides steady load",
       "madeFrom": "Copper-tipped tools in historic periods; bone or antler prehistoric",
-      "criticalNote": "Requires padding — pressure flaking drives sharp flakes into hands"
+      "criticalNote": "Requires padding \u2014 pressure flaking drives sharp flakes into hands"
     },
     {
       "id": "platform",
@@ -82,7 +82,7 @@
         "Chalk flint beds (Europe), Limestone-hosted chert (North America), Obsidian flows (Iceland, Anatolia, Rockies), Silcrete (Australia)"
       ],
       "spaceAlternatives": "Industrial glass scrap or fused silica tiles from heat shields; lunar regolith contains natural impact glass (agglutinates) but size is usually too small for tools.",
-      "processingRequired": "Heat treatment (controlled ramp-up to ~250°C) improves the 'glassy' quality of many cherts, making flakes longer and thinner."
+      "processingRequired": "Heat treatment (controlled ramp-up to ~250\u00b0C) improves the 'glassy' quality of many cherts, making flakes longer and thinner."
     },
     {
       "name": "Abrasive for platform preparation",
@@ -111,7 +111,7 @@
       "prerequisiteTools": [
         "hammerstone"
       ],
-      "warningNote": "Wear a respirator or work outdoors in a breeze — fine silica dust (invisible) causes permanent lung damage (silicosis)"
+      "warningNote": "Wear a respirator or work outdoors in a breeze \u2014 fine silica dust (invisible) causes permanent lung damage (silicosis)"
     },
     {
       "order": 2,
@@ -122,7 +122,7 @@
         "leather thigh pad",
         "eye protection"
       ],
-      "warningNote": "Flakes travel at high speed and are surgically sharp — long pants and closed shoes are mandatory"
+      "warningNote": "Flakes travel at high speed and are surgically sharp \u2014 long pants and closed shoes are mandatory"
     },
     {
       "order": 3,
@@ -152,7 +152,7 @@
         "rope-and-cordage",
         "adhesive (pitch)"
       ],
-      "warningNote": "Stone tools are brittle; do not pry or twist them in use — they are designed for slicing and percussion only"
+      "warningNote": "Stone tools are brittle; do not pry or twist them in use \u2014 they are designed for slicing and percussion only"
     }
   ],
   "history": [
@@ -162,13 +162,13 @@
       "location": "West Turkana, Kenya"
     },
     {
-      "year": "2.6–1.7 million years ago",
-      "event": "Oldowan industries spread cores and flakes across Africa — systematic reduction becomes a cultural inheritance.",
+      "year": "2.6\u20131.7 million years ago",
+      "event": "Oldowan industries spread cores and flakes across Africa \u2014 systematic reduction becomes a cultural inheritance.",
       "location": "Eastern and Southern Africa"
     },
     {
       "year": "1.76 million years ago",
-      "event": "Acheulean handaxes appear — sustained symmetrical shaping implying teaching, aesthetic norms, and long transport of raw material.",
+      "event": "Acheulean handaxes appear \u2014 sustained symmetrical shaping implying teaching, aesthetic norms, and long transport of raw material.",
       "location": "Africa; later Eurasia"
     }
   ],
@@ -195,7 +195,7 @@
   "externalLinks": [
     {
       "id": "britannica-flint",
-      "title": "Encyclopaedia Britannica — Flint tool",
+      "title": "Encyclopaedia Britannica \u2014 Flint tool",
       "url": "https://www.britannica.com/technology/flint-tool"
     },
     {
@@ -205,6 +205,10 @@
     }
   ],
   "lastUpdated": "2026-05-02",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -217,7 +221,7 @@
     "sources": [
       {
         "id": "src-humanorigins-behaviour",
-        "title": "Smithsonian Human Origins — Behaviour evidence",
+        "title": "Smithsonian Human Origins \u2014 Behaviour evidence",
         "url": "https://humanorigins.si.edu/evidence/behavior",
         "type": "institution",
         "note": "Behavioural archaeology including tool use"
@@ -231,7 +235,7 @@
       },
       {
         "id": "src-wiki-lithic",
-        "title": "Wikipedia — Lithic reduction",
+        "title": "Wikipedia \u2014 Lithic reduction",
         "url": "https://en.wikipedia.org/wiki/Lithic_reduction",
         "type": "wikipedia",
         "note": "Core concepts and terminology for knapping; follow references for lithic analysis"

@@ -1,7 +1,7 @@
 {
   "id": "electrical-telegraph",
   "name": "Electrical Telegraph",
-  "tagline": "Pulses on wires encoding letters at light-speed — shrinking command-and-control latency across continents",
+  "tagline": "Pulses on wires encoding letters at light-speed \u2014 shrinking command-and-control latency across continents",
   "category": "communication",
   "era": "industrial",
   "difficulty": 3,
@@ -15,20 +15,20 @@
     "telephone-exchange-system",
     "radio-broadcast-and-receiver"
   ],
-  "problem": "Horse couriers and semaphore chains carry news faster than walking, but they tire, sleep, and mishear flags in rain. The telegraph promises near-instant coordination along a wire — if you can detect feeble currents at the far end, if insulation survives miles underground or underwater, and if operators share protocols honest enough to prevent garble.\n\nEarly systems experimented with needles, numbered codes, and clicks; Morse class codes won simplicity of hardware at the cost of trained ears and wrists. Geography becomes code tables: which office relays which message, how billing is logged, how priority disputes resolve.\n\nBusiness and empire follow: railways schedule trains; newspapers quote distant markets; military commanders acquire appetites for bandwidth they cannot always secure.\n\nCollapse recovery must remember telegraphy is teamwork: batteries, sounders, repair climbers, and polite procedure are one system.",
-  "overview": "A loop of wire with a key in series and a sounder or relay at the office forms the simplest story: closing the key completes the circuit, energising an electromagnet that clicks. Repeaters amplify weak signals on long routes; duplex schemes send both directions with clever balances.\n\nInsulation mattered historically: glass and ceramic insulators on poles, gutta-percha on submarine cores, later bitumen and polymers. Lightning arrestors sacrifice paths to save humans and instruments — another layer of civic infrastructure.\n\nTelegraph offices become data centres of their era: brass pegboards, message forms, and night shifts. Cryptography appears quickly — anyone tapping a wire learns secrets unless operators encode.\n\nRadio and fibre did not erase the telegraph’s lesson: protocols and maintenance culture matter as much as conductors.",
+  "problem": "Horse couriers and semaphore chains carry news faster than walking, but they tire, sleep, and mishear flags in rain. The telegraph promises near-instant coordination along a wire \u2014 if you can detect feeble currents at the far end, if insulation survives miles underground or underwater, and if operators share protocols honest enough to prevent garble.\n\nEarly systems experimented with needles, numbered codes, and clicks; Morse class codes won simplicity of hardware at the cost of trained ears and wrists. Geography becomes code tables: which office relays which message, how billing is logged, how priority disputes resolve.\n\nBusiness and empire follow: railways schedule trains; newspapers quote distant markets; military commanders acquire appetites for bandwidth they cannot always secure.\n\nCollapse recovery must remember telegraphy is teamwork: batteries, sounders, repair climbers, and polite procedure are one system.",
+  "overview": "A loop of wire with a key in series and a sounder or relay at the office forms the simplest story: closing the key completes the circuit, energising an electromagnet that clicks. Repeaters amplify weak signals on long routes; duplex schemes send both directions with clever balances.\n\nInsulation mattered historically: glass and ceramic insulators on poles, gutta-percha on submarine cores, later bitumen and polymers. Lightning arrestors sacrifice paths to save humans and instruments \u2014 another layer of civic infrastructure.\n\nTelegraph offices become data centres of their era: brass pegboards, message forms, and night shifts. Cryptography appears quickly \u2014 anyone tapping a wire learns secrets unless operators encode.\n\nRadio and fibre did not erase the telegraph\u2019s lesson: protocols and maintenance culture matter as much as conductors.",
   "principles": [
     {
-      "name": "Ohm’s law on long lines",
-      "explanation": "Leakage conductance and capacitance smear pulses — Heaviside’s loading coils and later repeaters fight distortion."
+      "name": "Ohm\u2019s law on long lines",
+      "explanation": "Leakage conductance and capacitance smear pulses \u2014 Heaviside\u2019s loading coils and later repeaters fight distortion."
     },
     {
       "name": "Signal-to-noise in wet insulation",
-      "explanation": "Moisture raises conductance — maintenance crews walk lines with megohmmeters."
+      "explanation": "Moisture raises conductance \u2014 maintenance crews walk lines with megohmmeters."
     },
     {
       "name": "Human baud rate",
-      "explanation": "Skilled Morse beats naive typing for skinny channels — ergonomics of rhythm."
+      "explanation": "Skilled Morse beats naive typing for skinny channels \u2014 ergonomics of rhythm."
     },
     {
       "name": "Common versus metallic circuit",
@@ -79,7 +79,7 @@
       "earthLocations": [
         "Telegraph boom districts 19c"
       ],
-      "spaceAlternatives": "Soft-drawn copper telegraph wire on Earth; early off-world links may use aluminium with larger gauges or optical links once available — keep mechanical redundancy for dust storms",
+      "spaceAlternatives": "Soft-drawn copper telegraph wire on Earth; early off-world links may use aluminium with larger gauges or optical links once available \u2014 keep mechanical redundancy for dust storms",
       "processingRequired": "Annealed soft draw for wrapping"
     },
     {
@@ -97,7 +97,7 @@
       "earthLocations": [
         "Southeast Asia latex historically"
       ],
-      "spaceAlternatives": "Gutta-percha or bitumen-impregnated paper for submarine cores historically; XLPE or PE jackets on modern landlines — always test joints underwater before trusting claims",
+      "spaceAlternatives": "Gutta-percha or bitumen-impregnated paper for submarine cores historically; XLPE or PE jackets on modern landlines \u2014 always test joints underwater before trusting claims",
       "processingRequired": "Extrusion"
     }
   ],
@@ -110,17 +110,17 @@
         "maps",
         "measuring rope"
       ],
-      "warningNote": "Assuming ‘we’ll fix access later’ guarantees winter outages"
+      "warningNote": "Assuming \u2018we\u2019ll fix access later\u2019 guarantees winter outages"
     },
     {
       "order": 2,
       "title": "Set poles, insulators, and earth electrodes before stringing",
-      "description": "Keep consistent height above roads and livestock. Bond earth well at offices — telegraph references are relative to local ground. Label each span for repair crews.",
+      "description": "Keep consistent height above roads and livestock. Bond earth well at offices \u2014 telegraph references are relative to local ground. Label each span for repair crews.",
       "prerequisiteTools": [
         "post hole digger",
         "climbing irons"
       ],
-      "warningNote": "Induction from parallel power lines can surprise ‘dead’ wires"
+      "warningNote": "Induction from parallel power lines can surprise \u2018dead\u2019 wires"
     },
     {
       "order": 3,
@@ -130,12 +130,12 @@
         "come-along",
         "wire gauge"
       ],
-      "warningNote": "Snapped wire whips — clear bystanders"
+      "warningNote": "Snapped wire whips \u2014 clear bystanders"
     },
     {
       "order": 4,
       "title": "Install keys, sounders, and batteries with office discipline",
-      "description": "Teach a standard spacing for dots and dashes; practise relay retransmission until error rates drop. Log battery voltage — weak cells make marginal circuits lie.",
+      "description": "Teach a standard spacing for dots and dashes; practise relay retransmission until error rates drop. Log battery voltage \u2014 weak cells make marginal circuits lie.",
       "prerequisiteTools": [
         "practice set",
         "logbook"
@@ -174,7 +174,7 @@
       "nationality": "American"
     }
   ],
-  "impact": "Telegraphy coordinated empires and markets in real time — shrinking strategic surprise while raising the tempo of war and finance.\n\nIt is the ancestor of every packet — meaning encoded as physical state on a wire.",
+  "impact": "Telegraphy coordinated empires and markets in real time \u2014 shrinking strategic surprise while raising the tempo of war and finance.\n\nIt is the ancestor of every packet \u2014 meaning encoded as physical state on a wire.",
   "images": [],
   "videos": [
     {
@@ -187,16 +187,20 @@
   "externalLinks": [
     {
       "id": "itu-history",
-      "title": "ITU — history of telecommunications",
+      "title": "ITU \u2014 history of telecommunications",
       "url": "https://www.itu.int/en/history/Pages/default.aspx"
     },
     {
       "id": "smithsonian-telegraph",
-      "title": "Smithsonian — telegraph collections",
+      "title": "Smithsonian \u2014 telegraph collections",
       "url": "https://americanhistory.si.edu/collections/object-groups/telegraph"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -205,14 +209,14 @@
     "sources": [
       {
         "id": "src-itu-d-history",
-        "title": "ITU — Development Sector (telecommunications development and history resources)",
+        "title": "ITU \u2014 Development Sector (telecommunications development and history resources)",
         "url": "https://www.itu.int/en/ITU-D/Pages/default.aspx",
         "type": "institution",
         "note": "International telecommunication development; use ITU library for telegraph-era treaty history"
       },
       {
         "id": "src-wiki-telegraph",
-        "title": "Wikipedia — Electrical telegraph",
+        "title": "Wikipedia \u2014 Electrical telegraph",
         "url": "https://en.wikipedia.org/wiki/Electrical_telegraph",
         "type": "wikipedia",
         "note": "Morse systems and submarine cables references"

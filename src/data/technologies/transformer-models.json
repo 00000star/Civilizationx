@@ -201,12 +201,16 @@
   "externalLinks": [
     {
       "id": "wiki-transformer-models",
-      "title": "Wikipedia — Transformer Models",
+      "title": "Wikipedia \u2014 Transformer Models",
       "url": "https://en.wikipedia.org/wiki/Transformer_Models"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -215,19 +219,19 @@
     "sources": [
       {
         "id": "vaswani-attention",
-        "title": "Vaswani et al. (2017) — Attention Is All You Need",
+        "title": "Vaswani et al. (2017) \u2014 Attention Is All You Need",
         "type": "paper",
         "url": "https://arxiv.org/abs/1706.03762"
       },
       {
         "id": "goodfellow-dl",
-        "title": "Goodfellow, Bengio, Courville — Deep Learning",
+        "title": "Goodfellow, Bengio, Courville \u2014 Deep Learning",
         "type": "book",
         "url": "https://www.deeplearningbook.org/"
       },
       {
         "id": "wiki-transformer",
-        "title": "Wikipedia — Transformer (machine learning model)",
+        "title": "Wikipedia \u2014 Transformer (machine learning model)",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)"
       }

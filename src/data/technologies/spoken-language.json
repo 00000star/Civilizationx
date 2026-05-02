@@ -9,12 +9,12 @@
   "unlocks": [
     "writing-early-systems"
   ],
-  "problem": "Speech is the oldest wide-area network humans run without installing firmware. It crosses a workshop faster than a chalk line, carries tone that signals intent or irony, and lets a child ask ‘why’ until the adult admits the limit of their own knowledge. Without it, complex coordination collapses into gesture chains that do not survive interruption — you cannot revise a pointing sequence mid-sentence the way you can repair a spoken plan.\n\nThe obstacle is not only anatomy — lungs, larynx, ears — but agreement. A sound becomes a word only when a community treats it as one, corrects misuse, and punishes lies often enough that truthfulness stays cheaper than chaos. Oral cultures store technique in metre and story because rhythm and redundancy survive noisy transmission better than bare lists.\n\nEvery later medium is a compression of speech: writing freezes word order; telegraph prices by character; codecs predict phonemes. Lose fluent dialogue and you lose the fastest path to transfer tacit motor skill — the way a master potter’s hands explain what a book cannot.\n\nRecovery is therefore partly sociological: protect elders, apprenticeships, and councils where correction is kind. A language dies when children stop playing in it, not when dictionaries stop printing.",
-  "overview": "Spoken languages combine a small inventory of meaningless sounds with rules that build unlimited meaningful sentences — compositionality with pragmatic glue. Prosody — rise and fall, pause, stress — layers intent on top of grammar; the same sentence read flat can insult or apologise depending on tune.\n\nChildren acquire speech by statistical listening plus caregiver feedback; adults learn second languages with more effort but the same combinatorial core. Bilingualism is normal globally; diglossia — different languages for home and market — shapes who can access which institution.\n\nOral law, medicine, and navigation rely on memorable forms: parallelism, rhyme, and narrative embedding. Writing later partially replaces those affordances with external error correction, but courtrooms and hangars still run on live question-and-answer.\n\nFor rebuilders, record fluent experts on durable media, but never mistake recordings for communities — playback cannot negotiate new words for new tools the way a living room can.",
+  "problem": "Speech is the oldest wide-area network humans run without installing firmware. It crosses a workshop faster than a chalk line, carries tone that signals intent or irony, and lets a child ask \u2018why\u2019 until the adult admits the limit of their own knowledge. Without it, complex coordination collapses into gesture chains that do not survive interruption \u2014 you cannot revise a pointing sequence mid-sentence the way you can repair a spoken plan.\n\nThe obstacle is not only anatomy \u2014 lungs, larynx, ears \u2014 but agreement. A sound becomes a word only when a community treats it as one, corrects misuse, and punishes lies often enough that truthfulness stays cheaper than chaos. Oral cultures store technique in metre and story because rhythm and redundancy survive noisy transmission better than bare lists.\n\nEvery later medium is a compression of speech: writing freezes word order; telegraph prices by character; codecs predict phonemes. Lose fluent dialogue and you lose the fastest path to transfer tacit motor skill \u2014 the way a master potter\u2019s hands explain what a book cannot.\n\nRecovery is therefore partly sociological: protect elders, apprenticeships, and councils where correction is kind. A language dies when children stop playing in it, not when dictionaries stop printing.",
+  "overview": "Spoken languages combine a small inventory of meaningless sounds with rules that build unlimited meaningful sentences \u2014 compositionality with pragmatic glue. Prosody \u2014 rise and fall, pause, stress \u2014 layers intent on top of grammar; the same sentence read flat can insult or apologise depending on tune.\n\nChildren acquire speech by statistical listening plus caregiver feedback; adults learn second languages with more effort but the same combinatorial core. Bilingualism is normal globally; diglossia \u2014 different languages for home and market \u2014 shapes who can access which institution.\n\nOral law, medicine, and navigation rely on memorable forms: parallelism, rhyme, and narrative embedding. Writing later partially replaces those affordances with external error correction, but courtrooms and hangars still run on live question-and-answer.\n\nFor rebuilders, record fluent experts on durable media, but never mistake recordings for communities \u2014 playback cannot negotiate new words for new tools the way a living room can.",
   "principles": [
     {
       "name": "Compositionality",
-      "explanation": "Finite means, infinite use — new sentences remain interpretable if grammar is shared."
+      "explanation": "Finite means, infinite use \u2014 new sentences remain interpretable if grammar is shared."
     },
     {
       "name": "Pragmatic enrichment",
@@ -22,11 +22,11 @@
     },
     {
       "name": "Sound change",
-      "explanation": "Pronunciation drifts; orthography lags — literacy partially freezes phonology."
+      "explanation": "Pronunciation drifts; orthography lags \u2014 literacy partially freezes phonology."
     },
     {
       "name": "Displacement",
-      "explanation": "Language references absent objects and times — prerequisite for planning and history."
+      "explanation": "Language references absent objects and times \u2014 prerequisite for planning and history."
     }
   ],
   "components": [
@@ -100,7 +100,7 @@
     {
       "order": 1,
       "title": "Anchor words to shared attention",
-      "description": "Point at a visible object, say a short label, do the action, repeat. Wait for the learner’s eyes to follow before naming — joint attention is the handshake of meaning. Use the same word for the same object until it sticks; avoid cute synonyms early.",
+      "description": "Point at a visible object, say a short label, do the action, repeat. Wait for the learner\u2019s eyes to follow before naming \u2014 joint attention is the handshake of meaning. Use the same word for the same object until it sticks; avoid cute synonyms early.",
       "prerequisiteTools": [
         "patient speakers",
         "stable daily routines"
@@ -110,12 +110,12 @@
     {
       "order": 2,
       "title": "Teach a survival core before poetry",
-      "description": "Prioritise fire, water, tools, kin names, directions, numbers to ten, and honest refusal words. Drill short sentences in real contexts: ‘Stop — hot — back up.’ Role-play injuries and arguments so learners hear tone under stress.",
+      "description": "Prioritise fire, water, tools, kin names, directions, numbers to ten, and honest refusal words. Drill short sentences in real contexts: \u2018Stop \u2014 hot \u2014 back up.\u2019 Role-play injuries and arguments so learners hear tone under stress.",
       "prerequisiteTools": [
         "real tasks",
         "clear props"
       ],
-      "warningNote": "Homonyms across dialects confuse rebuild teams — keep a sense dictionary"
+      "warningNote": "Homonyms across dialects confuse rebuild teams \u2014 keep a sense dictionary"
     },
     {
       "order": 3,
@@ -124,16 +124,16 @@
       "prerequisiteTools": [
         "evening fire or shared meal"
       ],
-      "warningNote": "Gossip destroys trust faster than fire — teach norms for verification"
+      "warningNote": "Gossip destroys trust faster than fire \u2014 teach norms for verification"
     },
     {
       "order": 4,
       "title": "Train noisy-channel resilience",
-      "description": "Hold drills at distance, through wind, across water — any channel that strips consonants. Teach repetition protocols (‘say again’, ‘confirm word three’) borrowed from aviation and boats. Practice turn-taking with timers so shy speakers get airtime.",
+      "description": "Hold drills at distance, through wind, across water \u2014 any channel that strips consonants. Teach repetition protocols (\u2018say again\u2019, \u2018confirm word three\u2019) borrowed from aviation and boats. Practice turn-taking with timers so shy speakers get airtime.",
       "prerequisiteTools": [
         "whistle or drum optional"
       ],
-      "warningNote": "Shouting permanently damages young voices — use instruments for far signals when possible"
+      "warningNote": "Shouting permanently damages young voices \u2014 use instruments for far signals when possible"
     },
     {
       "order": 5,
@@ -143,7 +143,7 @@
         "mentor roster",
         "recording device if available"
       ],
-      "warningNote": "Recording elders without consent breaks trust — negotiate purpose and copies"
+      "warningNote": "Recording elders without consent breaks trust \u2014 negotiate purpose and copies"
     }
   ],
   "history": [
@@ -159,7 +159,7 @@
     }
   ],
   "inventors": [],
-  "impact": "Speech is the substrate of law, science, and love letters yet unwritten. Lose fluent communities and you lose more than accent — you lose debugging bandwidth.",
+  "impact": "Speech is the substrate of law, science, and love letters yet unwritten. Lose fluent communities and you lose more than accent \u2014 you lose debugging bandwidth.",
   "images": [],
   "videos": [
     {
@@ -177,11 +177,15 @@
     },
     {
       "id": "plato-lang",
-      "title": "Stanford Encyclopedia — philosophy of language",
+      "title": "Stanford Encyclopedia \u2014 philosophy of language",
       "url": "https://plato.stanford.edu/entries/language/"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -190,21 +194,21 @@
     "sources": [
       {
         "id": "src-unesco-ich-lang",
-        "title": "UNESCO — Intangible Cultural Heritage lists",
+        "title": "UNESCO \u2014 Intangible Cultural Heritage lists",
         "url": "https://ich.unesco.org/en/lists",
         "type": "institution",
         "note": "Documentation of living language and oral tradition practices"
       },
       {
         "id": "src-wiki-language",
-        "title": "Wikipedia — Language",
+        "title": "Wikipedia \u2014 Language",
         "url": "https://en.wikipedia.org/wiki/Language",
         "type": "wikipedia",
         "note": "Linguistics overview with extensive references"
       },
       {
         "id": "src-who-comm",
-        "title": "WHO — Health topics portal",
+        "title": "WHO \u2014 Health topics portal",
         "url": "https://www.who.int/health-topics",
         "type": "institution",
         "note": "Health communication and community engagement context"

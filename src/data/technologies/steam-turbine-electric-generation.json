@@ -1,7 +1,7 @@
 {
   "id": "steam-turbine-electric-generation",
   "name": "Steam Turbine Electric Generation",
-  "tagline": "High-speed rotary steam expanders driving alternators — the thermal bridge to grid-scale electricity",
+  "tagline": "High-speed rotary steam expanders driving alternators \u2014 the thermal bridge to grid-scale electricity",
   "category": "energy",
   "era": "industrial",
   "difficulty": 4,
@@ -14,16 +14,16 @@
     "electrical-power-grid",
     "nuclear-fission-power-plant"
   ],
-  "problem": "Picture a factory where every machine is driven by a beam engine: pistons hammer, oiling points multiply, and the maximum speed of the shaft is modest. Now picture a city that wants electric light in every street and trams that need compact motors. Generators prefer to spin quickly and smoothly; reciprocating steam plant struggles to deliver that without growing enormous and fragile. The steam turbine closes the gap by abandoning back-and-forth motion: steam pushes on curved blades mounted on a single shaft that can turn as fast as materials allow.\n\nThat elegance buys new hazards. Steam at boiler conditions carries immense energy per kilogram, but expanding steam changes volume dramatically — late stages see huge blades working in wet vapour that erodes metal like sandpaper if chemistry and design are wrong. A long rotor is also a spring: at certain speeds it wants to bend resonantly; crossing those speeds without care can rub the casing or snap bearings. At the exhaust, you often run below atmospheric pressure; any air leak steals vacuum and throws away efficiency, while live steam leaking outward wastes fuel and scalds people.\n\nThe cold side of the plant matters as much as the hot. If you cannot condense steam back to water efficiently, you throw away a large share of the energy you paid for in the boiler. Rivers, cooling towers, or air-cooled condensers are not accessories — they are half the thermodynamic story.\n\nFor someone rebuilding, the turbine is a reminder that electricity is not “invented” at the dynamo alone: it is the end of a chain that begins with honest water chemistry, continues through careful machining and balancing, and ends with operators who understand that a quiet bearing is as important as a loud whistle.",
-  "overview": "In plain terms, high-pressure steam is admitted through valves that can throttle it precisely. The steam accelerates through a series of fixed nozzles and moving blade rows — each row steals a portion of the steam’s remaining energy until, at the far end, the vapour has expanded to a large volume and low pressure. The spinning shaft couples directly or through a gearbox to the generator, whose magnetic field sweeping past copper windings induces alternating voltage.\n\nGovernors watch speed: if the city’s lights suddenly dim and load rises, more steam is admitted; if load falls, the valves close to keep frequency steady. That coupling between mechanical rotation and the clocks on every wall is one of the grid’s deepest habits — fifty or sixty hertz is not an accident of physics but a social convention enforced by steel and steam.\n\nBehind the turbine, a condenser usually waits at partial vacuum. Cooling water or air carries away the heat that cannot become electricity; the resulting hot water or warmed air is the physical price of the second law of thermodynamics. Condensate is pumped back toward the boiler, often preheated using steam tapped from intermediate turbine stages — squeezing more work from the same fire.\n\nLarge machines accumulate instruments — vibration pickups, temperature sensors, differential expansion gauges — because a turbine failure is rarely quiet. A small machine deserves the same respect scaled down: measure before you trust, warm up slowly, and never treat overspeed protection as optional jewellery.",
+  "problem": "Picture a factory where every machine is driven by a beam engine: pistons hammer, oiling points multiply, and the maximum speed of the shaft is modest. Now picture a city that wants electric light in every street and trams that need compact motors. Generators prefer to spin quickly and smoothly; reciprocating steam plant struggles to deliver that without growing enormous and fragile. The steam turbine closes the gap by abandoning back-and-forth motion: steam pushes on curved blades mounted on a single shaft that can turn as fast as materials allow.\n\nThat elegance buys new hazards. Steam at boiler conditions carries immense energy per kilogram, but expanding steam changes volume dramatically \u2014 late stages see huge blades working in wet vapour that erodes metal like sandpaper if chemistry and design are wrong. A long rotor is also a spring: at certain speeds it wants to bend resonantly; crossing those speeds without care can rub the casing or snap bearings. At the exhaust, you often run below atmospheric pressure; any air leak steals vacuum and throws away efficiency, while live steam leaking outward wastes fuel and scalds people.\n\nThe cold side of the plant matters as much as the hot. If you cannot condense steam back to water efficiently, you throw away a large share of the energy you paid for in the boiler. Rivers, cooling towers, or air-cooled condensers are not accessories \u2014 they are half the thermodynamic story.\n\nFor someone rebuilding, the turbine is a reminder that electricity is not \u201cinvented\u201d at the dynamo alone: it is the end of a chain that begins with honest water chemistry, continues through careful machining and balancing, and ends with operators who understand that a quiet bearing is as important as a loud whistle.",
+  "overview": "In plain terms, high-pressure steam is admitted through valves that can throttle it precisely. The steam accelerates through a series of fixed nozzles and moving blade rows \u2014 each row steals a portion of the steam\u2019s remaining energy until, at the far end, the vapour has expanded to a large volume and low pressure. The spinning shaft couples directly or through a gearbox to the generator, whose magnetic field sweeping past copper windings induces alternating voltage.\n\nGovernors watch speed: if the city\u2019s lights suddenly dim and load rises, more steam is admitted; if load falls, the valves close to keep frequency steady. That coupling between mechanical rotation and the clocks on every wall is one of the grid\u2019s deepest habits \u2014 fifty or sixty hertz is not an accident of physics but a social convention enforced by steel and steam.\n\nBehind the turbine, a condenser usually waits at partial vacuum. Cooling water or air carries away the heat that cannot become electricity; the resulting hot water or warmed air is the physical price of the second law of thermodynamics. Condensate is pumped back toward the boiler, often preheated using steam tapped from intermediate turbine stages \u2014 squeezing more work from the same fire.\n\nLarge machines accumulate instruments \u2014 vibration pickups, temperature sensors, differential expansion gauges \u2014 because a turbine failure is rarely quiet. A small machine deserves the same respect scaled down: measure before you trust, warm up slowly, and never treat overspeed protection as optional jewellery.",
   "principles": [
     {
       "name": "Stage matching",
-      "explanation": "Each stage is sized so blade speeds stay near optimum for the local Mach number — mismatch wastes available enthalpy as turbulence."
+      "explanation": "Each stage is sized so blade speeds stay near optimum for the local Mach number \u2014 mismatch wastes available enthalpy as turbulence."
     },
     {
       "name": "Reheat and regeneration",
-      "explanation": "Reheat raises average temperature of heat addition; feedwater heating steals extraction steam but cuts boiler heat input — both lift real-cycle efficiency."
+      "explanation": "Reheat raises average temperature of heat addition; feedwater heating steals extraction steam but cuts boiler heat input \u2014 both lift real-cycle efficiency."
     },
     {
       "name": "Condenser vacuum",
@@ -113,7 +113,7 @@
     {
       "order": 1,
       "title": "Decide what steam you have and what vacuum you can keep",
-      "description": "Write down the pressure and temperature at the turbine inlet, the coldest temperature your cooling water or air can reach, and whether you will condense below atmospheric pressure. Sketch the path from boiler stop valve to condenser. If you skip a workable condenser, you may still spin a machine, but you will pay for it in coal and wear — plan the cold end before you celebrate the hot end.",
+      "description": "Write down the pressure and temperature at the turbine inlet, the coldest temperature your cooling water or air can reach, and whether you will condense below atmospheric pressure. Sketch the path from boiler stop valve to condenser. If you skip a workable condenser, you may still spin a machine, but you will pay for it in coal and wear \u2014 plan the cold end before you celebrate the hot end.",
       "prerequisiteTools": [
         "thermometer",
         "pressure gauge",
@@ -136,7 +136,7 @@
     {
       "order": 3,
       "title": "Bolt the casing halves together evenly and align the generator",
-      "description": "Tighten flange bolts in a star pattern so the joint closes uniformly. Check that the turbine shaft and generator shaft meet at the coupling without forcing — use feeler gauges or dial indicators across the coupling while you turn slowly. Cold alignment will shift when hot; record your cold offsets so the next mechanic knows what you did.",
+      "description": "Tighten flange bolts in a star pattern so the joint closes uniformly. Check that the turbine shaft and generator shaft meet at the coupling without forcing \u2014 use feeler gauges or dial indicators across the coupling while you turn slowly. Cold alignment will shift when hot; record your cold offsets so the next mechanic knows what you did.",
       "prerequisiteTools": [
         "torque wrench",
         "dial indicators or straightedge",
@@ -147,19 +147,19 @@
     {
       "order": 4,
       "title": "Establish oil flow and roll the shaft before live steam",
-      "description": "Circulate clean oil through every bearing until you see flow at the drains. Jog the turning gear or hand-bar the shaft while listening and feeling. Only when oil temperature and pressure are stable should you admit warming steam to the casing on a published ramp — rushing thermal shock cracks castings.",
+      "description": "Circulate clean oil through every bearing until you see flow at the drains. Jog the turning gear or hand-bar the shaft while listening and feeling. Only when oil temperature and pressure are stable should you admit warming steam to the casing on a published ramp \u2014 rushing thermal shock cracks castings.",
       "prerequisiteTools": [
         "oil pump",
         "filters",
         "thermometers",
         "ear protection"
       ],
-      "warningNote": "Oil mist near hot surfaces can ignite — keep absorbents handy"
+      "warningNote": "Oil mist near hot surfaces can ignite \u2014 keep absorbents handy"
     },
     {
       "order": 5,
       "title": "Bring steam in slowly, then connect to the network with patience",
-      "description": "Watch vibration, metal temperatures, and packing steam. When ready to parallel a grid, match generator voltage, frequency, and phase angle with the existing system — lamps brightening and darkening in sequence are an old teacher; a synchroscope is a better one. Close the breaker only when the needle crawls into the window; then add load gradually so tubes and shafts expand together rather than fighting.",
+      "description": "Watch vibration, metal temperatures, and packing steam. When ready to parallel a grid, match generator voltage, frequency, and phase angle with the existing system \u2014 lamps brightening and darkening in sequence are an old teacher; a synchroscope is a better one. Close the breaker only when the needle crawls into the window; then add load gradually so tubes and shafts expand together rather than fighting.",
       "prerequisiteTools": [
         "synchroscope or lamp board",
         "voltmeters",
@@ -184,7 +184,7 @@
     },
     {
       "year": 1957,
-      "event": "Commercial nuclear plants export steam to turbines — thermal side mirrors fossil stations.",
+      "event": "Commercial nuclear plants export steam to turbines \u2014 thermal side mirrors fossil stations.",
       "location": "Shippingport, USA"
     }
   ],
@@ -196,7 +196,7 @@
       "nationality": "Anglo-Irish"
     }
   ],
-  "impact": "Turbo-alternators made electricity cheap enough for trams, factories, and eventually homes. They remain the heart of thermal and nuclear fleets; understanding them explains why gas turbines and wind turbines are different animals despite sharing the word turbine.\n\nRecovery without precision machining and chemistry cannot reproduce grid-scale steam — but the conceptual chain is still teachable.",
+  "impact": "Turbo-alternators made electricity cheap enough for trams, factories, and eventually homes. They remain the heart of thermal and nuclear fleets; understanding them explains why gas turbines and wind turbines are different animals despite sharing the word turbine.\n\nRecovery without precision machining and chemistry cannot reproduce grid-scale steam \u2014 but the conceptual chain is still teachable.",
   "images": [],
   "videos": [
     {
@@ -209,16 +209,20 @@
   "externalLinks": [
     {
       "id": "energy-gov-steam",
-      "title": "U.S. DOE — how steam turbines work",
+      "title": "U.S. DOE \u2014 how steam turbines work",
       "url": "https://www.energy.gov/eere/wind/how-do-wind-turbines-work"
     },
     {
       "id": "iea-power",
-      "title": "IEA — electricity and power sector context",
+      "title": "IEA \u2014 electricity and power sector context",
       "url": "https://www.iea.org/energy-system/electricity"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -227,14 +231,14 @@
     "sources": [
       {
         "id": "src-energy-eere",
-        "title": "U.S. DOE — EERE programs",
+        "title": "U.S. DOE \u2014 EERE programs",
         "url": "https://www.energy.gov/eere/renewable-energy",
         "type": "institution",
         "note": "Industrial energy systems context"
       },
       {
         "id": "src-wiki-steam-turbine",
-        "title": "Wikipedia — Steam turbine",
+        "title": "Wikipedia \u2014 Steam turbine",
         "url": "https://en.wikipedia.org/wiki/Steam_turbine",
         "type": "wikipedia",
         "note": "Thermodynamics and staging references"

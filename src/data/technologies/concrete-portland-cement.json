@@ -187,12 +187,16 @@
   "externalLinks": [
     {
       "id": "wiki-concrete-portland-cement",
-      "title": "Wikipedia — Concrete and Portland Cement",
+      "title": "Wikipedia \u2014 Concrete and Portland Cement",
       "url": "https://en.wikipedia.org/wiki/Concrete_and_Portland_Cement"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "review-needed",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -207,7 +211,7 @@
       },
       {
         "id": "wiki-portland-cement",
-        "title": "Wikipedia — Portland cement",
+        "title": "Wikipedia \u2014 Portland cement",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Portland_cement"
       },

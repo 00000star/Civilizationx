@@ -1,7 +1,7 @@
 {
   "id": "transistor",
   "name": "Transistor (Bipolar and Field-Effect)",
-  "tagline": "Solid-state charge control in semiconductors — amplification and logic without heated cathodes",
+  "tagline": "Solid-state charge control in semiconductors \u2014 amplification and logic without heated cathodes",
   "category": "communication",
   "era": "mid-20th",
   "difficulty": 5,
@@ -16,8 +16,8 @@
     "optical-fiber-communications",
     "solar-photovoltaic-power-systems"
   ],
-  "problem": "Vacuum tubes gave the world amplification, but they also gave it heat, fragility, and maintenance marathons — a computer should not consume more power than its city block. The transistor promises the same controlled current modulation with a cold junction inside a crystal: no heated cathode, no glass envelope, paths toward micrometre scale if surfaces can be passivated and junction depths controlled.\n\nBipolar devices inject carriers across a thin base; field-effect devices steer charge with an electric field through an oxide — each family trades speed, voltage tolerance, and fabrication complexity. The obstacle is cleanliness at atomic levels: a stray sodium ion in oxide shifts threshold voltage; a pinhole in passivation lets humidity drift parameters.\n\nLithography scaled junctions from millimetres to nanometres, but the transistor’s cultural lesson predates fabs: small reliable switches compose universality — logic is geology built from sand if you can pattern dopants honestly.\n\nFor recovery, protect not only crystal pullers but also the tacit craft of diffusion furnaces, implanter tuning, and wire-bond ergonomics.",
-  "overview": "Planar silicon processing grows thermal oxide, patterns windows in photoresist, introduces dopants by diffusion or implant, metallises contacts, and passivates surfaces so junctions stay stable in humid air. CMOS pairs n-channel and p-channel MOSFETs so static power stays tiny except during switching — enabling chips with billions of gates.\n\nPackaging bonds aluminium or copper wires from die pads to lead frames, moulds epoxy, and trims legs before burn-in screens infant failures. Power discretes parallel thousands of cells; IGBTs merge MOS gates with bipolar conductivity for traction inverters.\n\nCharacterisation — curve tracers, S-parameters, reliability ovens — translates physics into datasheets designers trust. Electromigration and hot-carrier wear appear as accelerated ageing curves.\n\nDiscrete transistors remain teaching instruments: you can still see a TO-220 tab and imagine heat leaving the junction.",
+  "problem": "Vacuum tubes gave the world amplification, but they also gave it heat, fragility, and maintenance marathons \u2014 a computer should not consume more power than its city block. The transistor promises the same controlled current modulation with a cold junction inside a crystal: no heated cathode, no glass envelope, paths toward micrometre scale if surfaces can be passivated and junction depths controlled.\n\nBipolar devices inject carriers across a thin base; field-effect devices steer charge with an electric field through an oxide \u2014 each family trades speed, voltage tolerance, and fabrication complexity. The obstacle is cleanliness at atomic levels: a stray sodium ion in oxide shifts threshold voltage; a pinhole in passivation lets humidity drift parameters.\n\nLithography scaled junctions from millimetres to nanometres, but the transistor\u2019s cultural lesson predates fabs: small reliable switches compose universality \u2014 logic is geology built from sand if you can pattern dopants honestly.\n\nFor recovery, protect not only crystal pullers but also the tacit craft of diffusion furnaces, implanter tuning, and wire-bond ergonomics.",
+  "overview": "Planar silicon processing grows thermal oxide, patterns windows in photoresist, introduces dopants by diffusion or implant, metallises contacts, and passivates surfaces so junctions stay stable in humid air. CMOS pairs n-channel and p-channel MOSFETs so static power stays tiny except during switching \u2014 enabling chips with billions of gates.\n\nPackaging bonds aluminium or copper wires from die pads to lead frames, moulds epoxy, and trims legs before burn-in screens infant failures. Power discretes parallel thousands of cells; IGBTs merge MOS gates with bipolar conductivity for traction inverters.\n\nCharacterisation \u2014 curve tracers, S-parameters, reliability ovens \u2014 translates physics into datasheets designers trust. Electromigration and hot-carrier wear appear as accelerated ageing curves.\n\nDiscrete transistors remain teaching instruments: you can still see a TO-220 tab and imagine heat leaving the junction.",
   "principles": [
     {
       "name": "PN junction physics",
@@ -29,11 +29,11 @@
     },
     {
       "name": "Carrier mobility",
-      "explanation": "Electrons move faster than holes in silicon — nMOS tends faster in equal geometry; strain silicon boosts mobility in advanced nodes."
+      "explanation": "Electrons move faster than holes in silicon \u2014 nMOS tends faster in equal geometry; strain silicon boosts mobility in advanced nodes."
     },
     {
       "name": "Scaling constant-field",
-      "explanation": "Shrink dimensions while adjusting doping and oxide thickness to preserve internal fields — until quantum tunnelling ends Dennard scaling."
+      "explanation": "Shrink dimensions while adjusting doping and oxide thickness to preserve internal fields \u2014 until quantum tunnelling ends Dennard scaling."
     }
   ],
   "components": [
@@ -49,14 +49,14 @@
       "name": "Gate oxide and polysilicon gate",
       "function": "Controls channel in MOSFET",
       "position": "Above channel",
-      "madeFrom": "SiO₂ historically; high-k HfO₂ in advanced nodes"
+      "madeFrom": "SiO\u2082 historically; high-k HfO\u2082 in advanced nodes"
     },
     {
       "id": "contacts",
       "name": "Silicide and metal contacts",
       "function": "Lowers contact resistance to silicon",
       "position": "Active areas",
-      "madeFrom": "TiSi₂ or CoSi₂ then copper dual damascene in fabs"
+      "madeFrom": "TiSi\u2082 or CoSi\u2082 then copper dual damascene in fabs"
     },
     {
       "id": "package",
@@ -90,7 +90,7 @@
       "earthLocations": [
         "Ion implantation gases"
       ],
-      "spaceAlternatives": "Arsine, phosphine, and diborane diluted for implant sources — exhaust abatement is non-negotiable",
+      "spaceAlternatives": "Arsine, phosphine, and diborane diluted for implant sources \u2014 exhaust abatement is non-negotiable",
       "processingRequired": "RTA anneal activation"
     },
     {
@@ -99,7 +99,7 @@
       "earthLocations": [
         "Electronic chemical majors"
       ],
-      "spaceAlternatives": "Electronic-grade photoresists, developers, and HF-containing wet benches — neutralise wastes deliberately, not down the drain",
+      "spaceAlternatives": "Electronic-grade photoresists, developers, and HF-containing wet benches \u2014 neutralise wastes deliberately, not down the drain",
       "processingRequired": "Controlled waste neutralisation"
     }
   ],
@@ -107,7 +107,7 @@
     {
       "order": 1,
       "title": "Start from wafers you can measure, not mystery bags",
-      "description": "Map resistivity and crystal orientation; clean with validated RCA or piranha sequences appropriate to your safety kit. Always know oxide thickness targets before dopant steps — they couple.",
+      "description": "Map resistivity and crystal orientation; clean with validated RCA or piranha sequences appropriate to your safety kit. Always know oxide thickness targets before dopant steps \u2014 they couple.",
       "prerequisiteTools": [
         "four-point probe",
         "ellipsometer if available"
@@ -117,7 +117,7 @@
     {
       "order": 2,
       "title": "Pattern a test die of simple structures",
-      "description": "Include Van der Pauw sheets, ring oscillators, and long serpentines to catch shorts. Align photomasks under microscope before exposing whole wafers — misalignment shows as uniform leakage, maddeningly symmetric.",
+      "description": "Include Van der Pauw sheets, ring oscillators, and long serpentines to catch shorts. Align photomasks under microscope before exposing whole wafers \u2014 misalignment shows as uniform leakage, maddeningly symmetric.",
       "prerequisiteTools": [
         "mask aligner",
         "microscope"
@@ -132,7 +132,7 @@
         "furnace logs",
         "CV meter"
       ],
-      "warningNote": "Channeling skews profiles — tilt wafers per recipe"
+      "warningNote": "Channeling skews profiles \u2014 tilt wafers per recipe"
     },
     {
       "order": 4,
@@ -147,7 +147,7 @@
     {
       "order": 5,
       "title": "Screen parts and publish honest limits",
-      "description": "Burn-in at modest overstress catches early deaths; curve-trace safe operating area including temperature derating. A datasheet lie becomes a field fire — mark secondary breakdown regions clearly.",
+      "description": "Burn-in at modest overstress catches early deaths; curve-trace safe operating area including temperature derating. A datasheet lie becomes a field fire \u2014 mark secondary breakdown regions clearly.",
       "prerequisiteTools": [
         "burn-in oven",
         "curve tracer"
@@ -194,7 +194,7 @@
       "nationality": "American"
     }
   ],
-  "impact": "Transistors shrank radios to pockets and later put billions of switches on one die — the hinge between industrial electricity and planetary computation.\n\nUnderstanding them is prerequisite to reading any modern datasheet.",
+  "impact": "Transistors shrank radios to pockets and later put billions of switches on one die \u2014 the hinge between industrial electricity and planetary computation.\n\nUnderstanding them is prerequisite to reading any modern datasheet.",
   "images": [],
   "videos": [
     {
@@ -207,7 +207,7 @@
   "externalLinks": [
     {
       "id": "nobel-transistor",
-      "title": "Nobel Prize — transistor physics background",
+      "title": "Nobel Prize \u2014 transistor physics background",
       "url": "https://www.nobelprize.org/prizes/physics/1956/summary/"
     },
     {
@@ -217,6 +217,10 @@
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -225,14 +229,14 @@
     "sources": [
       {
         "id": "src-doi-transistor",
-        "title": "Nature (1953) — semiconductor junction devices (DOI)",
+        "title": "Nature (1953) \u2014 semiconductor junction devices (DOI)",
         "url": "https://doi.org/10.1038/171740a0",
         "type": "paper",
         "note": "Peer-reviewed primary literature anchor for solid-state amplification history"
       },
       {
         "id": "src-wiki-transistor",
-        "title": "Wikipedia — Transistor",
+        "title": "Wikipedia \u2014 Transistor",
         "url": "https://en.wikipedia.org/wiki/Transistor",
         "type": "wikipedia",
         "note": "BJT/MOSFET overview with citations"

@@ -1,7 +1,7 @@
 {
   "id": "steel-production",
   "name": "Steel Production (Carburised Bloom to Crucible and Bessemer Lineages)",
-  "tagline": "Controlling carbon in iron to balance hardness and toughness — the material behind machines",
+  "tagline": "Controlling carbon in iron to balance hardness and toughness \u2014 the material behind machines",
   "category": "materials",
   "era": "medieval",
   "difficulty": 4,
@@ -29,20 +29,20 @@
     "steam-locomotive",
     "steam-turbine-electric-generation"
   ],
-  "problem": "Bloomery iron is variable: soft in some regions, glassy in others, never quite the same batch to batch. Tools that must keep edges need higher carbon; structural beams need toughness. The steel problem is reproducible control of iron–carbon chemistry and microstructure: enough carbon to harden, not so much that blades chip, with processes to refine inclusions and adjust properties after forging.\n\nHistorically, multiple lineages converged: pack carburisation of wrought iron bars, crucible melting of blister steel, finery/puddling converting pig iron, and eventually Bessemer and open-hearth bulk decarburisation. The Codex unifies them under one entry because the user-facing outcome is the same material class — steel — even though industrial paths differ.\n\nFor civilisation restart, the earliest accessible path is often forge carburisation plus quench-and-temper heuristics on wrought iron, scaling toward crucible steel once refractories and temperature measurement improve.",
-  "overview": "Steel is iron alloyed with roughly 0.2–2.1% carbon in modern definitions of steels (above that enters cast iron territory, though historical language blurs). Carbon in interstitial solid solution and as iron carbide changes hardness and hardenability. Heat treatment — austenitising, quenching to form martensite, tempering to reduce brittleness — is as important as composition.\n\nPack carburisation packs iron bars in charcoal powder inside sealed clay boxes heated for hours to days; carbon diffuses inward producing a gradient — shear surfaces can be ground to high-carbon while core stays tough. Quenching in water or oil locks a hard surface.\n\nCrucible steel (e.g., historical wootz/ulibar traditions) melts a selected charge in sealed crucibles, enabling more homogeneous alloy distribution before forging. This demands higher temperatures and excellent refractories.\n\nIndustrial revolution paths start from pig iron rich in carbon and silicon; oxygen or air oxidation lowers carbon under controlled conditions (Bessemer converter), or puddling stirs molten iron in a reverberatory furnace to expose it to oxidising slag. These are civilisation-scale technologies requiring large capital.\n\nRegardless of path, slag inclusion control, phosphorus/sulphur limits, and consistent forging practice separate ornamental metal from reliable machine steel.",
+  "problem": "Bloomery iron is variable: soft in some regions, glassy in others, never quite the same batch to batch. Tools that must keep edges need higher carbon; structural beams need toughness. The steel problem is reproducible control of iron\u2013carbon chemistry and microstructure: enough carbon to harden, not so much that blades chip, with processes to refine inclusions and adjust properties after forging.\n\nHistorically, multiple lineages converged: pack carburisation of wrought iron bars, crucible melting of blister steel, finery/puddling converting pig iron, and eventually Bessemer and open-hearth bulk decarburisation. The Codex unifies them under one entry because the user-facing outcome is the same material class \u2014 steel \u2014 even though industrial paths differ.\n\nFor civilisation restart, the earliest accessible path is often forge carburisation plus quench-and-temper heuristics on wrought iron, scaling toward crucible steel once refractories and temperature measurement improve.",
+  "overview": "Steel is iron alloyed with roughly 0.2\u20132.1% carbon in modern definitions of steels (above that enters cast iron territory, though historical language blurs). Carbon in interstitial solid solution and as iron carbide changes hardness and hardenability. Heat treatment \u2014 austenitising, quenching to form martensite, tempering to reduce brittleness \u2014 is as important as composition.\n\nPack carburisation packs iron bars in charcoal powder inside sealed clay boxes heated for hours to days; carbon diffuses inward producing a gradient \u2014 shear surfaces can be ground to high-carbon while core stays tough. Quenching in water or oil locks a hard surface.\n\nCrucible steel (e.g., historical wootz/ulibar traditions) melts a selected charge in sealed crucibles, enabling more homogeneous alloy distribution before forging. This demands higher temperatures and excellent refractories.\n\nIndustrial revolution paths start from pig iron rich in carbon and silicon; oxygen or air oxidation lowers carbon under controlled conditions (Bessemer converter), or puddling stirs molten iron in a reverberatory furnace to expose it to oxidising slag. These are civilisation-scale technologies requiring large capital.\n\nRegardless of path, slag inclusion control, phosphorus/sulphur limits, and consistent forging practice separate ornamental metal from reliable machine steel.",
   "principles": [
     {
-      "name": "Iron–carbon phase diagram",
+      "name": "Iron\u2013carbon phase diagram",
       "explanation": "Austenite can dissolve more carbon than ferrite; cooling paths determine pearlite, martensite, or graphite precipitation depending on rate and composition."
     },
     {
       "name": "Diffusion carburisation",
-      "explanation": "Carbon moves into solid iron over time and temperature; case depth scales with sqrt(time) approximately — thick cases need long soaks."
+      "explanation": "Carbon moves into solid iron over time and temperature; case depth scales with sqrt(time) approximately \u2014 thick cases need long soaks."
     },
     {
       "name": "Martensite formation",
-      "explanation": "Rapid quench traps carbon in a distorted lattice — very hard and brittle until tempered to allow carbide precipitation control."
+      "explanation": "Rapid quench traps carbon in a distorted lattice \u2014 very hard and brittle until tempered to allow carbide precipitation control."
     },
     {
       "name": "Hardenability and quench severity",
@@ -64,7 +64,7 @@
       "function": "Sets cooling rate for hardening",
       "position": "Adjacent to forge",
       "madeFrom": "Water, brine, oil",
-      "criticalNote": "Oils can ignite — fire protocol mandatory"
+      "criticalNote": "Oils can ignite \u2014 fire protocol mandatory"
     },
     {
       "id": "tempering-hearth",
@@ -72,7 +72,7 @@
       "function": "Reheats hardened steel to trade hardness for toughness",
       "position": "Lower temperature zone than welding heat",
       "madeFrom": "Forge with temperature judgement or oven",
-      "criticalNote": "Over-temper softens excessively — colour charts help historically"
+      "criticalNote": "Over-temper softens excessively \u2014 colour charts help historically"
     },
     {
       "id": "crucible",
@@ -80,7 +80,7 @@
       "function": "Melts alloyed charges homogeneously",
       "position": "Charcoal cupola or dedicated melt",
       "madeFrom": "Graphite-clay crucibles historically",
-      "criticalNote": "Liquid steel dissolves refractories — contamination path"
+      "criticalNote": "Liquid steel dissolves refractories \u2014 contamination path"
     },
     {
       "id": "use-case-boundary",
@@ -98,7 +98,7 @@
       "earthLocations": [
         "Any bloomery tradition output"
       ],
-      "spaceAlternatives": "Electrolytic iron powder sintered — advanced",
+      "spaceAlternatives": "Electrolytic iron powder sintered \u2014 advanced",
       "processingRequired": "Forge consolidate before carburising to reduce slag stringers"
     },
     {
@@ -126,23 +126,23 @@
     {
       "order": 1,
       "title": "Normalise starting iron",
-      "description": "Heat to bright orange and air cool to refine grain from prior forging. Test hardness with file — should cut easily if low carbon.",
+      "description": "Heat to bright orange and air cool to refine grain from prior forging. Test hardness with file \u2014 should cut easily if low carbon.",
       "prerequisiteTools": [
         "forge",
         "tongs",
         "file"
       ],
-      "warningNote": "Scale flies — eye protection"
+      "warningNote": "Scale flies \u2014 eye protection"
     },
     {
       "order": 2,
       "title": "Pack carburise",
-      "description": "Embed bars in charcoal fines with small carbonate addition if slag control is needed. Seal box, heat 850–950 °C range for many hours depending on case depth target.",
+      "description": "Embed bars in charcoal fines with small carbonate addition if slag control is needed. Seal box, heat 850\u2013950 \u00b0C range for many hours depending on case depth target.",
       "prerequisiteTools": [
         "pyrometric judgement",
         "sealed boxes"
       ],
-      "warningNote": "CO-rich atmosphere — outdoor furnace only with ventilation planning"
+      "warningNote": "CO-rich atmosphere \u2014 outdoor furnace only with ventilation planning"
     },
     {
       "order": 3,
@@ -152,7 +152,7 @@
         "quench tank",
         "tongs"
       ],
-      "warningNote": "Steam jacket can delay quench — agitate safely"
+      "warningNote": "Steam jacket can delay quench \u2014 agitate safely"
     },
     {
       "order": 4,
@@ -167,12 +167,12 @@
     {
       "order": 5,
       "title": "Test and iterate",
-      "description": "Break sample coupons if possible; check grain with etched macroetch later when acids exist. Document heat colours and timings — this is your future standard.",
+      "description": "Break sample coupons if possible; check grain with etched macroetch later when acids exist. Document heat colours and timings \u2014 this is your future standard.",
       "prerequisiteTools": [
         "vise",
         "hammer"
       ],
-      "warningNote": "Snap tests of high-carbon pieces are sharp — gloves"
+      "warningNote": "Snap tests of high-carbon pieces are sharp \u2014 gloves"
     }
   ],
   "history": [
@@ -208,17 +208,21 @@
       "nationality": "British"
     }
   ],
-  "impact": "Steel is the skeleton of industrial machines: shafts, gears, rails, boilers, and engines. Reliable steel changes what is worth building — bridges expand, railways span continents, turbines spin.\n\nFor recovery, steelmaking is a knowledge bottleneck: you can have iron and still fail for decades without carbon control lore. This entry is the conceptual bridge from 'metal' to 'machine metal'.",
+  "impact": "Steel is the skeleton of industrial machines: shafts, gears, rails, boilers, and engines. Reliable steel changes what is worth building \u2014 bridges expand, railways span continents, turbines spin.\n\nFor recovery, steelmaking is a knowledge bottleneck: you can have iron and still fail for decades without carbon control lore. This entry is the conceptual bridge from 'metal' to 'machine metal'.",
   "images": [],
   "videos": [],
   "externalLinks": [
     {
       "id": "worldsteel",
-      "title": "World Steel Association — steel production facts",
+      "title": "World Steel Association \u2014 steel production facts",
       "url": "https://worldsteel.org/steel-facts/statistics/"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -227,21 +231,21 @@
     "sources": [
       {
         "id": "src-energy",
-        "title": "U.S. Department of Energy — Energy efficiency and industrial technology",
+        "title": "U.S. Department of Energy \u2014 Energy efficiency and industrial technology",
         "url": "https://www.energy.gov/eere/renewable-energy",
         "type": "institution",
         "note": "Industrial energy use context for steelmaking and decarbonisation pathways"
       },
       {
         "id": "src-wiki-steel",
-        "title": "Wikipedia — Steel",
+        "title": "Wikipedia \u2014 Steel",
         "url": "https://en.wikipedia.org/wiki/Steel",
         "type": "wikipedia",
         "note": "Processes (BOF, EAF), microstructure introduction, citations"
       },
       {
         "id": "src-nist-pml",
-        "title": "NIST — Physical Measurement Laboratory",
+        "title": "NIST \u2014 Physical Measurement Laboratory",
         "url": "https://www.nist.gov/pml",
         "type": "institution",
         "note": "Metrology for temperature and composition measurements in materials processing"

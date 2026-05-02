@@ -217,12 +217,16 @@
   "externalLinks": [
     {
       "id": "wiki-machine-learning",
-      "title": "Wikipedia — Machine Learning",
+      "title": "Wikipedia \u2014 Machine Learning",
       "url": "https://en.wikipedia.org/wiki/Machine_Learning"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -231,17 +235,17 @@
     "sources": [
       {
         "id": "bishop-prml",
-        "title": "Bishop — Pattern Recognition and Machine Learning",
+        "title": "Bishop \u2014 Pattern Recognition and Machine Learning",
         "type": "book"
       },
       {
         "id": "hastie-esl",
-        "title": "Hastie, Tibshirani, Friedman — The Elements of Statistical Learning",
+        "title": "Hastie, Tibshirani, Friedman \u2014 The Elements of Statistical Learning",
         "type": "book"
       },
       {
         "id": "wiki-ml",
-        "title": "Wikipedia — Machine learning",
+        "title": "Wikipedia \u2014 Machine learning",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Machine_learning"
       }

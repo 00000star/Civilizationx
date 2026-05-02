@@ -1,7 +1,7 @@
 {
   "id": "radio-broadcast-and-receiver",
   "name": "Radio Broadcast and Receiver",
-  "tagline": "Modulated electromagnetic waves carrying voice and music — spectrum, antennas, and detectors at civilisation scale",
+  "tagline": "Modulated electromagnetic waves carrying voice and music \u2014 spectrum, antennas, and detectors at civilisation scale",
   "category": "communication",
   "era": "early-20th",
   "difficulty": 4,
@@ -32,24 +32,24 @@
     "signal-flags",
     "switchboard-operations"
   ],
-  "problem": "Copper follows ships until it cannot; armies and orchestras want audiences beyond earshot. Radio encodes information on high-frequency carriers — amplitude or frequency modulation early, digital modes later — so one transmitter can serve many receivers without stringing private wires to each listener.\n\nPhysics intrudes: antennas want sizes comparable to wavelength; the ether is crowded; harmonics from sloppy transmitters jam distress frequencies. Receivers must select one story among megahertz of noise without deafening the operator.\n\nRegulation becomes technology: licences, exams, band plans, and enforcement against spark-gap villains are as important as oscillator stability. Broadcasting reshaped politics and music — simultaneous audiences are a new social geometry.\n\nEmergency services and marine distress remind us radio remains collapse-relevant even when phones feel universal — towers fall; skywave sometimes still answers.",
-  "overview": "Transmitters generate a stable carrier, modulate it with audio or symbols, amplify through linearised stages, and match impedance to an antenna so power leaves as radiation instead of reflected heat. Receivers heterodyne signals to a fixed intermediate frequency for easier filtering, apply automatic gain control for fading, and demodulate to baseband.\n\nFM trades bandwidth for noise immunity; single-sideband squeezes spectrum for voice on crowded HF. Digital voice and data add error correction — intelligible speech where analogue would dissolve into hiss.\n\nAntenna farms pattern energy toward cities; ionospheric HF reaches continents at night with moods set by solar weather. Studio-to-transmitter links moved from phone pairs to microwave STL; RDS embeds metadata on FM subcarriers.\n\nEvery link budget is a story of watts, antenna gain, path loss, and acceptable noise — engineering as accounting.",
+  "problem": "Copper follows ships until it cannot; armies and orchestras want audiences beyond earshot. Radio encodes information on high-frequency carriers \u2014 amplitude or frequency modulation early, digital modes later \u2014 so one transmitter can serve many receivers without stringing private wires to each listener.\n\nPhysics intrudes: antennas want sizes comparable to wavelength; the ether is crowded; harmonics from sloppy transmitters jam distress frequencies. Receivers must select one story among megahertz of noise without deafening the operator.\n\nRegulation becomes technology: licences, exams, band plans, and enforcement against spark-gap villains are as important as oscillator stability. Broadcasting reshaped politics and music \u2014 simultaneous audiences are a new social geometry.\n\nEmergency services and marine distress remind us radio remains collapse-relevant even when phones feel universal \u2014 towers fall; skywave sometimes still answers.",
+  "overview": "Transmitters generate a stable carrier, modulate it with audio or symbols, amplify through linearised stages, and match impedance to an antenna so power leaves as radiation instead of reflected heat. Receivers heterodyne signals to a fixed intermediate frequency for easier filtering, apply automatic gain control for fading, and demodulate to baseband.\n\nFM trades bandwidth for noise immunity; single-sideband squeezes spectrum for voice on crowded HF. Digital voice and data add error correction \u2014 intelligible speech where analogue would dissolve into hiss.\n\nAntenna farms pattern energy toward cities; ionospheric HF reaches continents at night with moods set by solar weather. Studio-to-transmitter links moved from phone pairs to microwave STL; RDS embeds metadata on FM subcarriers.\n\nEvery link budget is a story of watts, antenna gain, path loss, and acceptable noise \u2014 engineering as accounting.",
   "principles": [
     {
       "name": "Antenna reciprocity",
-      "explanation": "Transmit and receive patterns match for passive antennas — design once, use both ways."
+      "explanation": "Transmit and receive patterns match for passive antennas \u2014 design once, use both ways."
     },
     {
       "name": "Superheterodyne image rejection",
-      "explanation": "Mixing creates sum and difference frequencies — front-end filtering must kill the image band."
+      "explanation": "Mixing creates sum and difference frequencies \u2014 front-end filtering must kill the image band."
     },
     {
       "name": "Capture effect in FM",
-      "explanation": "Stronger station captures demodulator — blessing and curse in overlapping markets."
+      "explanation": "Stronger station captures demodulator \u2014 blessing and curse in overlapping markets."
     },
     {
       "name": "Shannon-Hartley limit",
-      "explanation": "Channel capacity grows with bandwidth and SNR — guides digital rollouts."
+      "explanation": "Channel capacity grows with bandwidth and SNR \u2014 guides digital rollouts."
     }
   ],
   "components": [
@@ -96,7 +96,7 @@
       "earthLocations": [
         "Extrusion mills"
       ],
-      "spaceAlternatives": "Copper and aluminium for antennas and radials; PTFE coax where low loss matters — keep connectors weatherproofed",
+      "spaceAlternatives": "Copper and aluminium for antennas and radials; PTFE coax where low loss matters \u2014 keep connectors weatherproofed",
       "processingRequired": "Galvanising or anodising"
     },
     {
@@ -122,7 +122,7 @@
     {
       "order": 1,
       "title": "Learn your national band plan before soldering",
-      "description": "Print the allowed frequencies, power limits, and emission types for your licence class. Mark harmonics of your oscillator that must be suppressed — neighbours will not forgive interference to aeronautical bands.",
+      "description": "Print the allowed frequencies, power limits, and emission types for your licence class. Mark harmonics of your oscillator that must be suppressed \u2014 neighbours will not forgive interference to aeronautical bands.",
       "prerequisiteTools": [
         "regulatory booklet",
         "highlighter"
@@ -137,7 +137,7 @@
         "SWR meter",
         "cutting tools"
       ],
-      "warningNote": "RF burns are insidious — assume feedline is live"
+      "warningNote": "RF burns are insidious \u2014 assume feedline is live"
     },
     {
       "order": 3,
@@ -152,7 +152,7 @@
     {
       "order": 4,
       "title": "Align IF filters and demodulator for intended mode",
-      "description": "For AM, check diode detector bias; for FM, verify discriminator symmetry; for SSB, set carrier insertion carefully. Log alignment screws touched — future alignment starts from known state.",
+      "description": "For AM, check diode detector bias; for FM, verify discriminator symmetry; for SSB, set carrier insertion carefully. Log alignment screws touched \u2014 future alignment starts from known state.",
       "prerequisiteTools": [
         "alignment tools",
         "notebook"
@@ -162,7 +162,7 @@
     {
       "order": 5,
       "title": "On-air tests with a mentor",
-      "description": "Make short legal test transmissions; request signal reports; iterate antenna height and grounding. Keep a station log — it disciplines troubleshooting and proves good citizenship.",
+      "description": "Make short legal test transmissions; request signal reports; iterate antenna height and grounding. Keep a station log \u2014 it disciplines troubleshooting and proves good citizenship.",
       "prerequisiteTools": [
         "logbook",
         "mentor on frequency"
@@ -191,7 +191,7 @@
       "nationality": "Italian"
     }
   ],
-  "impact": "Radio created national simultaneity — coronations, wars, and jazz in every kitchen. It also taught spectrum as finite commons — a tragedy-of-the-commons problem solved imperfectly by law.",
+  "impact": "Radio created national simultaneity \u2014 coronations, wars, and jazz in every kitchen. It also taught spectrum as finite commons \u2014 a tragedy-of-the-commons problem solved imperfectly by law.",
   "images": [],
   "videos": [
     {
@@ -204,16 +204,20 @@
   "externalLinks": [
     {
       "id": "itu-r",
-      "title": "ITU-R — radiocommunication sector",
+      "title": "ITU-R \u2014 radiocommunication sector",
       "url": "https://www.itu.int/en/ITU-R/Pages/default.aspx"
     },
     {
       "id": "arrl",
-      "title": "ARRL — amateur radio handbook context",
+      "title": "ARRL \u2014 amateur radio handbook context",
       "url": "https://www.arrl.org/"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -229,14 +233,14 @@
       },
       {
         "id": "src-wiki-radio",
-        "title": "Wikipedia — Radio",
+        "title": "Wikipedia \u2014 Radio",
         "url": "https://en.wikipedia.org/wiki/Radio",
         "type": "wikipedia",
         "note": "Modulation, receivers, and regulation overview"
       },
       {
         "id": "src-nasa-communications",
-        "title": "NASA — Communications and navigation (entry via nasa.gov)",
+        "title": "NASA \u2014 Communications and navigation (entry via nasa.gov)",
         "url": "https://www.nasa.gov/",
         "type": "institution",
         "note": "Deep-space communications engineering; navigate to mission directorate pages for technical reports"

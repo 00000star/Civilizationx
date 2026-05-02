@@ -1,7 +1,7 @@
 {
   "id": "vacuum-tube-electronics",
   "name": "Vacuum Tube Electronics",
-  "tagline": "Thermionic emission in evacuated envelopes — amplification and switching before solid-state junctions dominated",
+  "tagline": "Thermionic emission in evacuated envelopes \u2014 amplification and switching before solid-state junctions dominated",
   "category": "communication",
   "era": "early-20th",
   "difficulty": 4,
@@ -15,11 +15,11 @@
     "stored-program-computer",
     "transistor"
   ],
-  "problem": "Crystals could detect radio waves, but stable amplification eluded early builders until thermionic valves appeared: heat a cathode until it boils electrons, pull them across vacuum with a positive plate, and modulate the flow with a grid that demands almost no power — gain from geometry and temperature, not from microscopic junctions yet.\n\nVacuum is the unsung hero and villain. Residual gas ionises under high fields; getters swallow molecules after seal-off; pumps must reach hard vacuum before the oxide cathode dies from poisoning. Tubes are hot, fragile, and microphonic — mechanical vibration becomes signal.\n\nStill, tubes taught entire generations how amplifiers think: bias points, load lines, and screen grids are portable metaphors even after silicon arrives. High-power radio and radar kept tubes relevant where semiconductors struggled with voltage and heat.\n\nFor recovery, glassblowing, pump science, and getter flashing are crafts as essential as winding transformers — lose them and you lose long-distance voice until someone relearns them painfully.",
-  "overview": "A triode stacks a control grid between cathode and plate; small grid voltage swings large plate current. Add screen and suppressor grids to tame capacitance and secondary emission — tetrodes and pentodes stabilise RF performance. Cathode-ray tubes steer electron beams for oscilloscopes and television with electric and magnetic fields.\n\nManufacturing joins glass to kovar pins, winds molybdenum grids on jigs, and flashes barium getters that bind stray gas. Pump trains rough with rotary pumps, finish with diffusion or turbomolecular stacks, bake envelopes to drive water out of glass.\n\nPower tubes dissipate kilowatts on graphite or metal anodes cooled by air, water, or vapor phases; bias supplies set operating points on plate curves chosen graphically before SPICE.\n\nLogistics once measured tube counts like ammunition — ENIAC-scale computers were maintenance marathons as much as mathematical marvels.",
+  "problem": "Crystals could detect radio waves, but stable amplification eluded early builders until thermionic valves appeared: heat a cathode until it boils electrons, pull them across vacuum with a positive plate, and modulate the flow with a grid that demands almost no power \u2014 gain from geometry and temperature, not from microscopic junctions yet.\n\nVacuum is the unsung hero and villain. Residual gas ionises under high fields; getters swallow molecules after seal-off; pumps must reach hard vacuum before the oxide cathode dies from poisoning. Tubes are hot, fragile, and microphonic \u2014 mechanical vibration becomes signal.\n\nStill, tubes taught entire generations how amplifiers think: bias points, load lines, and screen grids are portable metaphors even after silicon arrives. High-power radio and radar kept tubes relevant where semiconductors struggled with voltage and heat.\n\nFor recovery, glassblowing, pump science, and getter flashing are crafts as essential as winding transformers \u2014 lose them and you lose long-distance voice until someone relearns them painfully.",
+  "overview": "A triode stacks a control grid between cathode and plate; small grid voltage swings large plate current. Add screen and suppressor grids to tame capacitance and secondary emission \u2014 tetrodes and pentodes stabilise RF performance. Cathode-ray tubes steer electron beams for oscilloscopes and television with electric and magnetic fields.\n\nManufacturing joins glass to kovar pins, winds molybdenum grids on jigs, and flashes barium getters that bind stray gas. Pump trains rough with rotary pumps, finish with diffusion or turbomolecular stacks, bake envelopes to drive water out of glass.\n\nPower tubes dissipate kilowatts on graphite or metal anodes cooled by air, water, or vapor phases; bias supplies set operating points on plate curves chosen graphically before SPICE.\n\nLogistics once measured tube counts like ammunition \u2014 ENIAC-scale computers were maintenance marathons as much as mathematical marvels.",
   "principles": [
     {
-      "name": "Child–Langmuir law",
+      "name": "Child\u2013Langmuir law",
       "explanation": "Space-charge-limited current scales as three-halves power of plate voltage in planar diode idealisations."
     },
     {
@@ -28,11 +28,11 @@
     },
     {
       "name": "Miller effect",
-      "explanation": "Plate-to-grid capacitance multiplies effective input capacitance — motivates tetrode/pentode and later neutralisation in RF amps."
+      "explanation": "Plate-to-grid capacitance multiplies effective input capacitance \u2014 motivates tetrode/pentode and later neutralisation in RF amps."
     },
     {
       "name": "Secondary emission",
-      "explanation": "High-energy electrons knock secondaries from grids — causes negative resistance regions exploited in dynodes but parasitic in tetrodes without suppressor grids."
+      "explanation": "High-energy electrons knock secondaries from grids \u2014 causes negative resistance regions exploited in dynodes but parasitic in tetrodes without suppressor grids."
     }
   ],
   "components": [
@@ -97,7 +97,7 @@
       "earthLocations": [
         "Vacuum industry suppliers"
       ],
-      "spaceAlternatives": "Dry roughing pumps plus high-vacuum pumps; avoid mercury where environmental rules forbid it — use turbomolecular stacks when power allows",
+      "spaceAlternatives": "Dry roughing pumps plus high-vacuum pumps; avoid mercury where environmental rules forbid it \u2014 use turbomolecular stacks when power allows",
       "processingRequired": "Trap hydrocarbon backstreaming"
     }
   ],
@@ -115,17 +115,17 @@
     {
       "order": 2,
       "title": "Seal glass envelopes with leak-check discipline",
-      "description": "Use graded glass-to-metal seals; anneal to relieve stress. Helium leak-check before pumping investment — a pinhole wastes days.",
+      "description": "Use graded glass-to-metal seals; anneal to relieve stress. Helium leak-check before pumping investment \u2014 a pinhole wastes days.",
       "prerequisiteTools": [
         "torch or induction sealer",
         "leak detector"
       ],
-      "warningNote": "Implosion shards are real — shield during tests"
+      "warningNote": "Implosion shards are real \u2014 shield during tests"
     },
     {
       "order": 3,
       "title": "Pump, bake, and flash getters on schedule",
-      "description": "Bake-out drives moisture from mica and glass; ion gauges tell truth about vacuum. Flash getter when pressure is right — too early wastes capacity.",
+      "description": "Bake-out drives moisture from mica and glass; ion gauges tell truth about vacuum. Flash getter when pressure is right \u2014 too early wastes capacity.",
       "prerequisiteTools": [
         "vacuum manifold",
         "ion gauge"
@@ -139,7 +139,7 @@
       "prerequisiteTools": [
         "curve tracer or manual meters"
       ],
-      "warningNote": "Red-plate glow means runaway — cut power"
+      "warningNote": "Red-plate glow means runaway \u2014 cut power"
     },
     {
       "order": 5,
@@ -149,7 +149,7 @@
         "test jig",
         "labels"
       ],
-      "warningNote": "Dropping a power tube can bend grids internally — invisible until power applied"
+      "warningNote": "Dropping a power tube can bend grids internally \u2014 invisible until power applied"
     }
   ],
   "history": [
@@ -174,7 +174,7 @@
   "inventors": [
     {
       "name": "Lee de Forest",
-      "contribution": "Triode Audion — foundational amplifying tube",
+      "contribution": "Triode Audion \u2014 foundational amplifying tube",
       "years": "1873-1961",
       "nationality": "American"
     }
@@ -197,11 +197,15 @@
     },
     {
       "id": "smithsonian-computing",
-      "title": "Smithsonian — computing history context",
+      "title": "Smithsonian \u2014 computing history context",
       "url": "https://americanhistory.si.edu/comphist"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -217,14 +221,14 @@
       },
       {
         "id": "src-wiki-vacuum-tube",
-        "title": "Wikipedia — Vacuum tube",
+        "title": "Wikipedia \u2014 Vacuum tube",
         "url": "https://en.wikipedia.org/wiki/Vacuum_tube",
         "type": "wikipedia",
         "note": "Thermionic emission, triodes, and applications"
       },
       {
         "id": "src-doi-transistor-nature",
-        "title": "Nature (1953) — Physical realization of amplification via DOI",
+        "title": "Nature (1953) \u2014 Physical realization of amplification via DOI",
         "url": "https://doi.org/10.1038/171740a0",
         "type": "paper",
         "note": "Historic peer-reviewed letter on semiconductor junction devices; contextualises tube-to-solid-state transition"

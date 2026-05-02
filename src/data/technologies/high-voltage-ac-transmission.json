@@ -13,12 +13,12 @@
   "unlocks": [
     "nuclear-fission-power-plant"
   ],
-  "problem": "A distribution network built for a town cannot push the same power across a continent without turning conductors into toasters. Loss grows with the square of current, so the naive fix — thicker copper — becomes its own logistics problem: every extra tonne of metal needs towers strong enough to hold it and rights-of-way wide enough to keep it from the ground.\n\nRaising voltage lowers current for the same real power, which shrinks both loss and the cross-section you must hang in the sky. That shift buys a new class of headaches: the air itself begins to glow around conductors if the electric field at the surface is too high; lightning and switching surges hunt for the weakest insulator; fog and salt spray turn porcelain into a leakage path.\n\nLong lines are not passive ropes. They store electric and magnetic energy in their length, which shows up as charging current, voltage rise at light load, and sometimes slow oscillations between distant regions. Engineers add reactors, capacitors, and controlled devices as deliberately as steam engineers add valves — not as ornaments but as stability tools.\n\nWithout extra-high-voltage corridors, civilisation must sit generation beside load again — good for resilience in one sense, bad for using distant hydro, wind, or nuclear basins. The political shape of energy follows the physics of insulation.",
-  "overview": "At a corridor scale, generation voltage is stepped up to hundreds of kilovolts, then carried on bundled conductors that split the electric field across several subwires so corona hisses less. Shield wires ride above phase conductors to intercept lightning; grounding systems give fault currents a controlled path into earth. Substations are fenced cities of steel full of breakers, instrument transformers, and banks of reactive equipment.\n\nProtection is staged like nested fences: relays try to trip only the smallest segment that contains a fault so the rest of the grid keeps serving hospitals and pumps. Operators rehearse N-1 contingencies — losing any single element without losing stability — because weather and backhoes rarely announce appointments.\n\nEnvironmental engineering matters: corona can sing loudly enough to annoy neighbours; right-of-way clearing changes fire ecology; bird flight diverters reduce collisions. Underground extra-high-voltage appears in dense cities where aesthetics and lightning immunity outweigh cost and heat.\n\nStandards bodies harmonise insulation levels and testing so a breaker from one factory closes against a disconnect from another without a negotiation in the arc gap. That interoperability is easy to forget because it works — until a supplier skips a test and a line trips on mist alone.",
+  "problem": "A distribution network built for a town cannot push the same power across a continent without turning conductors into toasters. Loss grows with the square of current, so the naive fix \u2014 thicker copper \u2014 becomes its own logistics problem: every extra tonne of metal needs towers strong enough to hold it and rights-of-way wide enough to keep it from the ground.\n\nRaising voltage lowers current for the same real power, which shrinks both loss and the cross-section you must hang in the sky. That shift buys a new class of headaches: the air itself begins to glow around conductors if the electric field at the surface is too high; lightning and switching surges hunt for the weakest insulator; fog and salt spray turn porcelain into a leakage path.\n\nLong lines are not passive ropes. They store electric and magnetic energy in their length, which shows up as charging current, voltage rise at light load, and sometimes slow oscillations between distant regions. Engineers add reactors, capacitors, and controlled devices as deliberately as steam engineers add valves \u2014 not as ornaments but as stability tools.\n\nWithout extra-high-voltage corridors, civilisation must sit generation beside load again \u2014 good for resilience in one sense, bad for using distant hydro, wind, or nuclear basins. The political shape of energy follows the physics of insulation.",
+  "overview": "At a corridor scale, generation voltage is stepped up to hundreds of kilovolts, then carried on bundled conductors that split the electric field across several subwires so corona hisses less. Shield wires ride above phase conductors to intercept lightning; grounding systems give fault currents a controlled path into earth. Substations are fenced cities of steel full of breakers, instrument transformers, and banks of reactive equipment.\n\nProtection is staged like nested fences: relays try to trip only the smallest segment that contains a fault so the rest of the grid keeps serving hospitals and pumps. Operators rehearse N-1 contingencies \u2014 losing any single element without losing stability \u2014 because weather and backhoes rarely announce appointments.\n\nEnvironmental engineering matters: corona can sing loudly enough to annoy neighbours; right-of-way clearing changes fire ecology; bird flight diverters reduce collisions. Underground extra-high-voltage appears in dense cities where aesthetics and lightning immunity outweigh cost and heat.\n\nStandards bodies harmonise insulation levels and testing so a breaker from one factory closes against a disconnect from another without a negotiation in the arc gap. That interoperability is easy to forget because it works \u2014 until a supplier skips a test and a line trips on mist alone.",
   "principles": [
     {
       "name": "Surge impedance loading",
-      "explanation": "Natural power transfer capability of a lossless line relates to voltage and surge impedance — compensation adjusts effective electrical length."
+      "explanation": "Natural power transfer capability of a lossless line relates to voltage and surge impedance \u2014 compensation adjusts effective electrical length."
     },
     {
       "name": "Corona onset",
@@ -103,7 +103,7 @@
     {
       "order": 1,
       "title": "Pick a route humans and wildlife can live beside for decades",
-      "description": "Walk or fly the corridor before ordering steel. Note crossings of roads, rivers, forests, and houses. Mark where towers must turn, where ice loads worst, and where access roads can reach without carving unstable slopes. Document who owns or governs each segment — a perfect electrical route that ignores land tenure is a lawsuit with foundations.",
+      "description": "Walk or fly the corridor before ordering steel. Note crossings of roads, rivers, forests, and houses. Mark where towers must turn, where ice loads worst, and where access roads can reach without carving unstable slopes. Document who owns or governs each segment \u2014 a perfect electrical route that ignores land tenure is a lawsuit with foundations.",
       "prerequisiteTools": [
         "maps",
         "notebook",
@@ -114,7 +114,7 @@
     {
       "order": 2,
       "title": "Pour foundations and stand towers plumb",
-      "description": "Follow geotechnical borings: some soils need micropiles, rock needs anchors. Torque structural bolts to the spec — partial tightening warps lattices. Keep lifting plans conservative; a swinging conductor near an energised line can induce lethal voltages in supposedly dead spans.",
+      "description": "Follow geotechnical borings: some soils need micropiles, rock needs anchors. Torque structural bolts to the spec \u2014 partial tightening warps lattices. Keep lifting plans conservative; a swinging conductor near an energised line can induce lethal voltages in supposedly dead spans.",
       "prerequisiteTools": [
         "crane",
         "theodolite",
@@ -171,7 +171,7 @@
     }
   ],
   "inventors": [],
-  "impact": "EHV turned continents into single electrical machines — with the political entanglements of mutual dependence that implies.\n\nIt is prerequisite to siting generation where fuel or sun exists, not where load sits.",
+  "impact": "EHV turned continents into single electrical machines \u2014 with the political entanglements of mutual dependence that implies.\n\nIt is prerequisite to siting generation where fuel or sun exists, not where load sits.",
   "images": [],
   "videos": [
     {
@@ -184,16 +184,20 @@
   "externalLinks": [
     {
       "id": "cigre",
-      "title": "CIGRE — international grid research",
+      "title": "CIGRE \u2014 international grid research",
       "url": "https://www.cigre.org/"
     },
     {
       "id": "ferc",
-      "title": "FERC — transmission policy context (USA)",
+      "title": "FERC \u2014 transmission policy context (USA)",
       "url": "https://www.ferc.gov/"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -202,14 +206,14 @@
     "sources": [
       {
         "id": "src-itu-t",
-        "title": "ITU — Telecommunication standardisation (publications)",
+        "title": "ITU \u2014 Telecommunication standardisation (publications)",
         "url": "https://www.itu.int/en/ITU-T/publications/Pages/default.aspx",
         "type": "institution",
         "note": "International standards culture parallel to grid code harmonisation"
       },
       {
         "id": "src-wiki-hv",
-        "title": "Wikipedia — High-voltage transmission",
+        "title": "Wikipedia \u2014 High-voltage transmission",
         "url": "https://en.wikipedia.org/wiki/High-voltage_transmission",
         "type": "wikipedia",
         "note": "EHV concepts and references"

@@ -33,24 +33,24 @@
     "signal-flags",
     "switchboard-operations"
   ],
-  "problem": "Writing on stone or clay is durable but heavy; carrying a library on your back demands something thinner. Paper — interlocked plant fibres matted into sheets — trades archival perfection for portability and speed. That bargain creates new anxieties: mould in humid climates, acid that yellows pages, and fires that erase cities in an afternoon.\n\nInk is not decoration; it is colloidal chemistry. Pigments must disperse finely enough not to clog quills yet stay suspended; binders must fix to fibres without feathering uncontrollably. Watercolour skies and legal contracts ask different recipes from the same word ‘ink’.\n\nPaper also democratised bureaucracy: forms, receipts, and textbooks scale when sheets become cheap. With scale came forgery, watermark arms races, and the quiet politics of who owns a mill upstream of a city.\n\nFor recovery, protect rag supply chains and sizing recipes as carefully as you protect forges — a papermaker is a chemist with a vat, not a woodcutter with a whim.",
-  "overview": "Traditional rag paper pulps linen and cotton cloth to long fibres, beats them in water, forms sheets on a wire mould, presses, dries, and often sizes with gelatin or starch so ink sits on the surface instead of blotting sideways. Wood pulp later lowered cost but introduced lignin that ages unless removed or buffered.\n\nCarbon black inks soot in gum arabic are forgiving for scribes; iron-gall inks bite into fibres permanently but need disciplined chemistry — excess acid consumes paper from within. Printing inks add drying oils and modifiers for tack across metal type.\n\nWatermarks and chain lines become security features and dating clues. Archival storage fights relative humidity swings that stress bindings and encourages alkaline buffering where budgets allow.\n\nPaper’s fragility pushed redundancy: duplicate scriptoria, dispersed copies, and eventually digitisation — each layer inherits paper’s affordances while trying to escape fire.",
+  "problem": "Writing on stone or clay is durable but heavy; carrying a library on your back demands something thinner. Paper \u2014 interlocked plant fibres matted into sheets \u2014 trades archival perfection for portability and speed. That bargain creates new anxieties: mould in humid climates, acid that yellows pages, and fires that erase cities in an afternoon.\n\nInk is not decoration; it is colloidal chemistry. Pigments must disperse finely enough not to clog quills yet stay suspended; binders must fix to fibres without feathering uncontrollably. Watercolour skies and legal contracts ask different recipes from the same word \u2018ink\u2019.\n\nPaper also democratised bureaucracy: forms, receipts, and textbooks scale when sheets become cheap. With scale came forgery, watermark arms races, and the quiet politics of who owns a mill upstream of a city.\n\nFor recovery, protect rag supply chains and sizing recipes as carefully as you protect forges \u2014 a papermaker is a chemist with a vat, not a woodcutter with a whim.",
+  "overview": "Traditional rag paper pulps linen and cotton cloth to long fibres, beats them in water, forms sheets on a wire mould, presses, dries, and often sizes with gelatin or starch so ink sits on the surface instead of blotting sideways. Wood pulp later lowered cost but introduced lignin that ages unless removed or buffered.\n\nCarbon black inks soot in gum arabic are forgiving for scribes; iron-gall inks bite into fibres permanently but need disciplined chemistry \u2014 excess acid consumes paper from within. Printing inks add drying oils and modifiers for tack across metal type.\n\nWatermarks and chain lines become security features and dating clues. Archival storage fights relative humidity swings that stress bindings and encourages alkaline buffering where budgets allow.\n\nPaper\u2019s fragility pushed redundancy: duplicate scriptoria, dispersed copies, and eventually digitisation \u2014 each layer inherits paper\u2019s affordances while trying to escape fire.",
   "principles": [
     {
       "name": "Hydrogen bonding network",
-      "explanation": "Cellulose fibres mat through hydrogen bonds when drained — strength scales with beating energy and fibre length."
+      "explanation": "Cellulose fibres mat through hydrogen bonds when drained \u2014 strength scales with beating energy and fibre length."
     },
     {
       "name": "Sizing chemistry",
-      "explanation": "Fill pores partially so ink sits atop; oversizing repels ink — balance is empirical."
+      "explanation": "Fill pores partially so ink sits atop; oversizing repels ink \u2014 balance is empirical."
     },
     {
       "name": "Lignin yellowing",
-      "explanation": "Mechanical wood pulp retains lignin that oxidises — newsprint is ephemeral by chemistry."
+      "explanation": "Mechanical wood pulp retains lignin that oxidises \u2014 newsprint is ephemeral by chemistry."
     },
     {
       "name": "Capillary wicking",
-      "explanation": "Porosity and fibre orientation set anisotropic spread — grain direction matters for folding and printing."
+      "explanation": "Porosity and fibre orientation set anisotropic spread \u2014 grain direction matters for folding and printing."
     }
   ],
   "components": [
@@ -117,7 +117,7 @@
         "Carbon black",
         "organic dyes"
       ],
-      "spaceAlternatives": "Carbon black and organic dyes; mineral pigments like ochre where particle size is controlled — always pair pigment choice with intended pen or brush",
+      "spaceAlternatives": "Carbon black and organic dyes; mineral pigments like ochre where particle size is controlled \u2014 always pair pigment choice with intended pen or brush",
       "processingRequired": "Disperse to submicron to avoid clogging"
     }
   ],
@@ -125,7 +125,7 @@
     {
       "order": 1,
       "title": "Source long clean fibres",
-      "description": "Collect white linen or cotton rags free of buttons, elastic, and synthetic blends. Cut small and soak until fibres separate easily when rubbed. Note seasonal water hardness — minerals affect colour and sizing.",
+      "description": "Collect white linen or cotton rags free of buttons, elastic, and synthetic blends. Cut small and soak until fibres separate easily when rubbed. Note seasonal water hardness \u2014 minerals affect colour and sizing.",
       "prerequisiteTools": [
         "scissors",
         "soaking vats"
@@ -135,7 +135,7 @@
     {
       "order": 2,
       "title": "Beat to controlled fibrillation",
-      "description": "Move from stamp mill or Hollander beater in timed passes; pull test sheets often. Stop when fibres knit on a wire but do not yet dust apart when dry — over-beating weakens sheets.",
+      "description": "Move from stamp mill or Hollander beater in timed passes; pull test sheets often. Stop when fibres knit on a wire but do not yet dust apart when dry \u2014 over-beating weakens sheets.",
       "prerequisiteTools": [
         "beater",
         "test mould"
@@ -145,7 +145,7 @@
     {
       "order": 3,
       "title": "Sheet formation and couching",
-      "description": "Dip a mould and deckle, shake to interlock fibres evenly, drain, couch onto felts, press gradually. Keep vat temperature steady — cold slows drainage; heat grows bacteria.",
+      "description": "Dip a mould and deckle, shake to interlock fibres evenly, drain, couch onto felts, press gradually. Keep vat temperature steady \u2014 cold slows drainage; heat grows bacteria.",
       "prerequisiteTools": [
         "mould and deckle",
         "felts",
@@ -166,12 +166,12 @@
     {
       "order": 5,
       "title": "Mill ink and test on scraps",
-      "description": "Disperse pigment with muller or professional disperser; record binder ratios. Test feathering, drying time, and bleed-through on your actual paper — not on modern coated stock.",
+      "description": "Disperse pigment with muller or professional disperser; record binder ratios. Test feathering, drying time, and bleed-through on your actual paper \u2014 not on modern coated stock.",
       "prerequisiteTools": [
         "muller",
         "glass slab"
       ],
-      "warningNote": "Iron-gall needs dated labels — it evolves acidity over decades"
+      "warningNote": "Iron-gall needs dated labels \u2014 it evolves acidity over decades"
     }
   ],
   "history": [
@@ -183,7 +183,7 @@
     },
     {
       "year": 1150,
-      "event": "Paper mill established in Xàtiva region — spreads in Islamic world and Europe.",
+      "event": "Paper mill established in X\u00e0tiva region \u2014 spreads in Islamic world and Europe.",
       "location": "Al-Andalus"
     }
   ],
@@ -195,7 +195,7 @@
       "nationality": "Chinese"
     }
   ],
-  "impact": "Paper lowered the mass-per-word of bureaucracy and scholarship — prerequisite for printing’s economics and for modern notebooks that think alongside engineers.",
+  "impact": "Paper lowered the mass-per-word of bureaucracy and scholarship \u2014 prerequisite for printing\u2019s economics and for modern notebooks that think alongside engineers.",
   "images": [],
   "videos": [
     {
@@ -208,7 +208,7 @@
   "externalLinks": [
     {
       "id": "getty-paper",
-      "title": "Getty — paper conservation",
+      "title": "Getty \u2014 paper conservation",
       "url": "https://www.getty.edu/conservation/publications_resources/pdf_publications/paper.pdf"
     },
     {
@@ -218,6 +218,10 @@
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -226,21 +230,21 @@
     "sources": [
       {
         "id": "src-loc-preservation-paper",
-        "title": "Library of Congress — Preservation Directorate",
+        "title": "Library of Congress \u2014 Preservation Directorate",
         "url": "https://www.loc.gov/preservation/",
         "type": "institution",
         "note": "Paper conservation, inks, and stabilisation for library collections"
       },
       {
         "id": "src-wiki-paper",
-        "title": "Wikipedia — Paper",
+        "title": "Wikipedia \u2014 Paper",
         "url": "https://en.wikipedia.org/wiki/Paper",
         "type": "wikipedia",
         "note": "Pulp chemistry and manufacturing history"
       },
       {
         "id": "src-unesco-culture",
-        "title": "UNESCO — Culture",
+        "title": "UNESCO \u2014 Culture",
         "url": "https://www.unesco.org/en/culture",
         "type": "institution",
         "note": "Heritage crafts and artisanal knowledge"

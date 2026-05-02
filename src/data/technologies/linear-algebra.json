@@ -210,12 +210,16 @@
   "externalLinks": [
     {
       "id": "wiki-linear-algebra",
-      "title": "Wikipedia — Linear Algebra",
+      "title": "Wikipedia \u2014 Linear Algebra",
       "url": "https://en.wikipedia.org/wiki/Linear_Algebra"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -224,17 +228,17 @@
     "sources": [
       {
         "id": "strang-la",
-        "title": "Strang — Introduction to Linear Algebra",
+        "title": "Strang \u2014 Introduction to Linear Algebra",
         "type": "book"
       },
       {
         "id": "trefethen-bau",
-        "title": "Trefethen & Bau — Numerical Linear Algebra",
+        "title": "Trefethen & Bau \u2014 Numerical Linear Algebra",
         "type": "book"
       },
       {
         "id": "wiki-linear-algebra",
-        "title": "Wikipedia — Linear algebra",
+        "title": "Wikipedia \u2014 Linear algebra",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Linear_algebra"
       }

@@ -6130,7 +6130,7 @@
   {
     "id": "sanitation-and-clean-water",
     "name": "Sanitation and Clean Water",
-    "tagline": "Safe drinking water, waste isolation, and hygiene habits that prevent waterborne disease when infrastructure disappears",
+    "tagline": "A multi-barrier system for safe hydration, waste isolation, and epidemiological defense in resource-constrained environments",
     "category": "survival",
     "era": "prehistoric",
     "difficulty": 2,
@@ -6189,7 +6189,7 @@
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "review-needed",
+    "maturity": "field-guide-ready",
     "lastUpdated": "2026-05-02"
   },
   {

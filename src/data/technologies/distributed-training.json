@@ -176,12 +176,16 @@
   "externalLinks": [
     {
       "id": "wiki-distributed-training",
-      "title": "Wikipedia — Distributed Training",
+      "title": "Wikipedia \u2014 Distributed Training",
       "url": "https://en.wikipedia.org/wiki/Distributed_Training"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -190,19 +194,19 @@
     "sources": [
       {
         "id": "wiki-distributed-computing",
-        "title": "Wikipedia — Distributed computing",
+        "title": "Wikipedia \u2014 Distributed computing",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Distributed_computing"
       },
       {
         "id": "dean-ghemawat",
-        "title": "Dean & Ghemawat (2008) — MapReduce",
+        "title": "Dean & Ghemawat (2008) \u2014 MapReduce",
         "type": "paper",
         "url": "https://dl.acm.org/doi/10.1145/1327452.1327492"
       },
       {
         "id": "goodfellow-dl",
-        "title": "Goodfellow, Bengio, Courville — Deep Learning",
+        "title": "Goodfellow, Bengio, Courville \u2014 Deep Learning",
         "type": "book",
         "url": "https://www.deeplearningbook.org/"
       }

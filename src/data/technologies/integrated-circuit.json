@@ -181,12 +181,16 @@
   "externalLinks": [
     {
       "id": "wiki-integrated-circuit",
-      "title": "Wikipedia — Integrated Circuit (IC)",
+      "title": "Wikipedia \u2014 Integrated Circuit (IC)",
       "url": "https://en.wikipedia.org/wiki/Integrated_Circuit_(IC)"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -195,13 +199,13 @@
     "sources": [
       {
         "id": "wiki-ic",
-        "title": "Wikipedia — Integrated circuit",
+        "title": "Wikipedia \u2014 Integrated circuit",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Integrated_circuit"
       },
       {
         "id": "sze",
-        "title": "Sze & Ng — Physics of Semiconductor Devices",
+        "title": "Sze & Ng \u2014 Physics of Semiconductor Devices",
         "type": "book"
       },
       {

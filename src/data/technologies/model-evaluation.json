@@ -178,12 +178,16 @@
   "externalLinks": [
     {
       "id": "wiki-model-evaluation",
-      "title": "Wikipedia — Model Evaluation and Benchmarking",
+      "title": "Wikipedia \u2014 Model Evaluation and Benchmarking",
       "url": "https://en.wikipedia.org/wiki/Model_Evaluation_and_Benchmarking"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -192,13 +196,13 @@
     "sources": [
       {
         "id": "wiki-model-evaluation",
-        "title": "Wikipedia — Model selection",
+        "title": "Wikipedia \u2014 Model selection",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Model_selection"
       },
       {
         "id": "bishop-prml",
-        "title": "Bishop — Pattern Recognition and Machine Learning",
+        "title": "Bishop \u2014 Pattern Recognition and Machine Learning",
         "type": "book"
       },
       {

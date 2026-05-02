@@ -31,12 +31,12 @@
     "traffic-flow-control",
     "truck-cargo-logistics"
   ],
-  "problem": "Human backs scale poorly with grain surpluses, timber lengths, and stone blocks. Sledges work but waste energy ploughing soil; pack animals cap out at modest loads per animal. The wheeled vehicle problem is distributing weight across multiple rolling contacts, steering a front axle or pivot, and braking descent without destroying wheels.\n\nTwo-wheeled carts tip easily but track narrow paths; four-wheeled wagons need steering geometry — either pivoting front axle or turntable — or they scrub tires and break on turns. Suspension is historically minimal; road quality dominates ride.\n\nWithout standardised hubs, axle sizes, and repairable parts, vehicle fleets cannot be maintained at civilisation scale. Thus carts are not only carpentry but logistics standards.",
-  "overview": "A basic cart pairs a chassis (bed) with an undercarriage: axles, wheels, and often a drawbar for animal harness. Wheels may be fixed to the axle (both rotate) or rotate on fixed axles with pins — the latter wears journals and needs grease.\n\nSteering for four-wheelers historically uses a pivoting front assembly or side-by-side animals with a flexible pole. Braking uses drag shoes, rope wraps on wheel rims, or later band brakes — absent brakes, loads control descent with chocks and human ropes.\n\nMaterials: hardwood frames, iron tyres shrunk on rims, steel leaf springs later. Tyre contact patch and ground pressure determine whether the vehicle ruts mud or floats on grass.\n\nHuman traction variants exist — handcarts — obeying the same load paths with different ergonomic constraints.\n\nIn collapse recovery, cart and wagon must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
+  "problem": "Human backs scale poorly with grain surpluses, timber lengths, and stone blocks. Sledges work but waste energy ploughing soil; pack animals cap out at modest loads per animal. The wheeled vehicle problem is distributing weight across multiple rolling contacts, steering a front axle or pivot, and braking descent without destroying wheels.\n\nTwo-wheeled carts tip easily but track narrow paths; four-wheeled wagons need steering geometry \u2014 either pivoting front axle or turntable \u2014 or they scrub tires and break on turns. Suspension is historically minimal; road quality dominates ride.\n\nWithout standardised hubs, axle sizes, and repairable parts, vehicle fleets cannot be maintained at civilisation scale. Thus carts are not only carpentry but logistics standards.",
+  "overview": "A basic cart pairs a chassis (bed) with an undercarriage: axles, wheels, and often a drawbar for animal harness. Wheels may be fixed to the axle (both rotate) or rotate on fixed axles with pins \u2014 the latter wears journals and needs grease.\n\nSteering for four-wheelers historically uses a pivoting front assembly or side-by-side animals with a flexible pole. Braking uses drag shoes, rope wraps on wheel rims, or later band brakes \u2014 absent brakes, loads control descent with chocks and human ropes.\n\nMaterials: hardwood frames, iron tyres shrunk on rims, steel leaf springs later. Tyre contact patch and ground pressure determine whether the vehicle ruts mud or floats on grass.\n\nHuman traction variants exist \u2014 handcarts \u2014 obeying the same load paths with different ergonomic constraints.\n\nIn collapse recovery, cart and wagon must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Ground pressure",
-      "explanation": "Load divided by contact area predicts sinkage in soft soils — wider rims or more wheels reduce rutting."
+      "explanation": "Load divided by contact area predicts sinkage in soft soils \u2014 wider rims or more wheels reduce rutting."
     },
     {
       "name": "Scrub and Ackermann (conceptual)",
@@ -44,11 +44,11 @@
     },
     {
       "name": "Centre of mass height",
-      "explanation": "High stacks reduce rollover stability on cambered roads — lateral acceleration limits scale with track width over height."
+      "explanation": "High stacks reduce rollover stability on cambered roads \u2014 lateral acceleration limits scale with track width over height."
     },
     {
       "name": "Draft line alignment",
-      "explanation": "Harness attachment height changes animal biomechanics and tongue loading on the chassis — misalignment causes chronic animal injury and frame fatigue."
+      "explanation": "Harness attachment height changes animal biomechanics and tongue loading on the chassis \u2014 misalignment causes chronic animal injury and frame fatigue."
     }
   ],
   "components": [
@@ -66,7 +66,7 @@
       "function": "Transfers load to wheels; may transmit brake torque",
       "position": "Under bed",
       "madeFrom": "Wrought iron or steel later; wood in light carts",
-      "criticalNote": "Bending moment peaks at centre — avoid midspan welds without reinforcement"
+      "criticalNote": "Bending moment peaks at centre \u2014 avoid midspan welds without reinforcement"
     },
     {
       "id": "wheels",
@@ -74,7 +74,7 @@
       "function": "Rolling support",
       "position": "Outboard of chassis",
       "madeFrom": "Wood with iron tyre historically",
-      "criticalNote": "Nut retention on axles — castellated nuts and cotter pins after metal age"
+      "criticalNote": "Nut retention on axles \u2014 castellated nuts and cotter pins after metal age"
     },
     {
       "id": "steering-pivot",
@@ -82,7 +82,7 @@
       "function": "Allows front axle to turn relative to frame",
       "position": "Front undercarriage",
       "madeFrom": "Iron kingpin, bronze bush",
-      "criticalNote": "Grease schedule — dry pins ovalise under shock"
+      "criticalNote": "Grease schedule \u2014 dry pins ovalise under shock"
     },
     {
       "id": "drawbar",
@@ -132,7 +132,7 @@
         "measuring rope",
         "scale if available"
       ],
-      "warningNote": "Dynamic loads from potholes exceed static weight — use safety factor ≥2 for rural roads"
+      "warningNote": "Dynamic loads from potholes exceed static weight \u2014 use safety factor \u22652 for rural roads"
     },
     {
       "order": 2,
@@ -143,7 +143,7 @@
         "chisel",
         "brace and bit"
       ],
-      "warningNote": "End-grain bearing on bolts crushes — use washers and hardwood"
+      "warningNote": "End-grain bearing on bolts crushes \u2014 use washers and hardwood"
     },
     {
       "order": 3,
@@ -153,12 +153,12 @@
         "reamer",
         "wrenches"
       ],
-      "warningNote": "Spin test — listen for rub; shim cheek plates square"
+      "warningNote": "Spin test \u2014 listen for rub; shim cheek plates square"
     },
     {
       "order": 4,
       "title": "Attach drawgear",
-      "description": "Align tongue height to expected harness; install safety chains with correct working angle — not so long they drag, not so short they bind turns.",
+      "description": "Align tongue height to expected harness; install safety chains with correct working angle \u2014 not so long they drag, not so short they bind turns.",
       "prerequisiteTools": [
         "forge or blacksmith"
       ],
@@ -188,17 +188,21 @@
     }
   ],
   "inventors": [],
-  "impact": "Carts convert agricultural surplus into mobile calories — enabling markets, armies, and migrations. They also damage roads without maintenance, creating co-evolution with road engineering.\n\nModern descendants include trailers and container chassis — same load path thinking at megatonne scale.",
+  "impact": "Carts convert agricultural surplus into mobile calories \u2014 enabling markets, armies, and migrations. They also damage roads without maintenance, creating co-evolution with road engineering.\n\nModern descendants include trailers and container chassis \u2014 same load path thinking at megatonne scale.",
   "images": [],
   "videos": [],
   "externalLinks": [
     {
       "id": "britannica-wagon",
-      "title": "Encyclopaedia Britannica — wagon",
+      "title": "Encyclopaedia Britannica \u2014 wagon",
       "url": "https://www.britannica.com/technology/wagon"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -207,21 +211,21 @@
     "sources": [
       {
         "id": "src-nyc-dot",
-        "title": "NYC DOT — Brooklyn Bridge (historic infrastructure case study)",
+        "title": "NYC DOT \u2014 Brooklyn Bridge (historic infrastructure case study)",
         "url": "https://www1.nyc.gov/html/dot/html/infrastructure/brooklyn-bridge.shtml",
         "type": "institution",
         "note": "Public works engineering and load-carrying infrastructure context"
       },
       {
         "id": "src-wiki-wagon",
-        "title": "Wikipedia — Wagon",
+        "title": "Wikipedia \u2014 Wagon",
         "url": "https://en.wikipedia.org/wiki/Wagon",
         "type": "wikipedia",
         "note": "Vehicle history and mechanics references"
       },
       {
         "id": "src-fao",
-        "title": "FAO — Home",
+        "title": "FAO \u2014 Home",
         "url": "https://www.fao.org/home/en",
         "type": "institution",
         "note": "Draught animal welfare, rural transport, and agricultural logistics (verify regional guidance)"

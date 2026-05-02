@@ -1,7 +1,7 @@
 {
   "id": "ceramics-and-pottery",
   "name": "Ceramics and Pottery",
-  "tagline": "Clay shaped and fired into durable vessels, bricks, and refractories — humanity's first high-temperature materials science",
+  "tagline": "Clay shaped and fired into durable vessels, bricks, and refractories \u2014 humanity's first high-temperature materials science",
   "category": "materials",
   "era": "prehistoric",
   "difficulty": 2,
@@ -35,8 +35,8 @@
     "writing-early-systems",
     "wrought-iron-forging"
   ],
-  "problem": "Organic containers rot; stone bowls are heavy and hard to shape; baskets leak. Storing water, fermenting foods, cooking stews, and transporting liquids requires impermeable, heat-tolerant vessels. Sun-dried clay holds shape but dissolves in water. The problem ceramics solve is irreversible hardening: transform mouldable earth into glassy-bonded solids that resist water and heat.\n\nBeyond vessels, fired clay becomes brick — modular construction units that stack into granaries, kilns, and furnaces. Refractory ceramics line smelting furnaces where steel would slump. The same underlying sintering principle scales from cups to city walls.\n\nThe difficulty is process control: clay must be worked without laminations that become cracks; drying must be slow enough to avoid differential shrinkage; firing must climb through quartz inversion and sintering ranges without exploding trapped water or carbonaceous cores.",
-  "overview": "Pottery begins with clay — sheet silicates with adsorbed water and often fluxing impurities like iron, potassium, and calcium. Temper (sand, crushed shell, grog) is added to reduce shrinkage cracking. Wedging homogenises clay and aligns particles. Throwing, coiling, or pressing forms the piece; leather-hard trimming refines geometry.\n\nDrying removes free water; at the kiln, chemically bound water drives off first — the critical stage where rapid heating causes steam pressure that pops pieces. Carbon burns out next; then vitrification begins as particle surfaces melt slightly and fuse — the boundary between earthenware, stoneware, and porcelain depends on peak temperature, atmosphere, and body recipe.\n\nGlazes are glassy coatings: silica plus fluxes (alkali, alkaline earth) plus stabilisers (alumina) melted onto the body, often coloured by transition metal oxides. Glazes must thermal-expansion-match the body or craze or shiver.\n\nBricks are low-precision pottery optimised for stacking and thermal mass; refractory bricks use high-alumina or silica recipes to survive furnace linings. All share sintering: solid-state bonding plus partial liquid phase formation at high temperature.",
+  "problem": "Organic containers rot; stone bowls are heavy and hard to shape; baskets leak. Storing water, fermenting foods, cooking stews, and transporting liquids requires impermeable, heat-tolerant vessels. Sun-dried clay holds shape but dissolves in water. The problem ceramics solve is irreversible hardening: transform mouldable earth into glassy-bonded solids that resist water and heat.\n\nBeyond vessels, fired clay becomes brick \u2014 modular construction units that stack into granaries, kilns, and furnaces. Refractory ceramics line smelting furnaces where steel would slump. The same underlying sintering principle scales from cups to city walls.\n\nThe difficulty is process control: clay must be worked without laminations that become cracks; drying must be slow enough to avoid differential shrinkage; firing must climb through quartz inversion and sintering ranges without exploding trapped water or carbonaceous cores.",
+  "overview": "Pottery begins with clay \u2014 sheet silicates with adsorbed water and often fluxing impurities like iron, potassium, and calcium. Temper (sand, crushed shell, grog) is added to reduce shrinkage cracking. Wedging homogenises clay and aligns particles. Throwing, coiling, or pressing forms the piece; leather-hard trimming refines geometry.\n\nDrying removes free water; at the kiln, chemically bound water drives off first \u2014 the critical stage where rapid heating causes steam pressure that pops pieces. Carbon burns out next; then vitrification begins as particle surfaces melt slightly and fuse \u2014 the boundary between earthenware, stoneware, and porcelain depends on peak temperature, atmosphere, and body recipe.\n\nGlazes are glassy coatings: silica plus fluxes (alkali, alkaline earth) plus stabilisers (alumina) melted onto the body, often coloured by transition metal oxides. Glazes must thermal-expansion-match the body or craze or shiver.\n\nBricks are low-precision pottery optimised for stacking and thermal mass; refractory bricks use high-alumina or silica recipes to survive furnace linings. All share sintering: solid-state bonding plus partial liquid phase formation at high temperature.",
   "principles": [
     {
       "name": "Plasticity and particle packing",
@@ -44,11 +44,11 @@
     },
     {
       "name": "Sintering",
-      "explanation": "At elevated temperature, diffusion across particle contacts creates strength without full melting — the backbone of pottery and many refractories."
+      "explanation": "At elevated temperature, diffusion across particle contacts creates strength without full melting \u2014 the backbone of pottery and many refractories."
     },
     {
       "name": "Vitrification",
-      "explanation": "Partial melting forms glassy phase filling pores — increases strength and decreases permeability."
+      "explanation": "Partial melting forms glassy phase filling pores \u2014 increases strength and decreases permeability."
     },
     {
       "name": "Thermal expansion mismatch",
@@ -134,22 +134,22 @@
     {
       "order": 1,
       "title": "Prospect and test clay",
-      "description": "Roll coils and bend — good plasticity without crumbling indicates workable clay. Fire test briquettes through a stepped series to learn maturity temperature.",
+      "description": "Roll coils and bend \u2014 good plasticity without crumbling indicates workable clay. Fire test briquettes through a stepped series to learn maturity temperature.",
       "prerequisiteTools": [
         "sieve",
         "bucket"
       ],
-      "warningNote": "Some clays contain soluble salts that bloom as efflorescence — note for food use"
+      "warningNote": "Some clays contain soluble salts that bloom as efflorescence \u2014 note for food use"
     },
     {
       "order": 2,
       "title": "Prepare body",
-      "description": "Levigate or dry process to remove organics if needed. Add temper at 10–30% by mass typical; wedge thoroughly.",
+      "description": "Levigate or dry process to remove organics if needed. Add temper at 10\u201330% by mass typical; wedge thoroughly.",
       "prerequisiteTools": [
         "wedging table",
         "scale optional"
       ],
-      "warningNote": "Air bubbles in thick walls explode — compress corners"
+      "warningNote": "Air bubbles in thick walls explode \u2014 compress corners"
     },
     {
       "order": 3,
@@ -161,7 +161,7 @@
         "knife",
         "scraping stone"
       ],
-      "warningNote": "Join surfaces must be scored and slipped — butt joints fail"
+      "warningNote": "Join surfaces must be scored and slipped \u2014 butt joints fail"
     },
     {
       "order": 4,
@@ -176,12 +176,12 @@
     {
       "order": 5,
       "title": "Bisque fire",
-      "description": "Slow ramp through water smoking zone; peak around 900–1000 °C for earthenware bisque depending on body. Cool closed to prevent thermal shock.",
+      "description": "Slow ramp through water smoking zone; peak around 900\u20131000 \u00b0C for earthenware bisque depending on body. Cool closed to prevent thermal shock.",
       "prerequisiteTools": [
         "kiln",
         "pyrometric cones optional"
       ],
-      "warningNote": "Never open a hot kiln — radiant heat injures eyes and skin"
+      "warningNote": "Never open a hot kiln \u2014 radiant heat injures eyes and skin"
     },
     {
       "order": 6,
@@ -191,13 +191,13 @@
         "brushes",
         "tongs"
       ],
-      "warningNote": "Lead-bearing folk glazes are toxic — avoid without modern safety"
+      "warningNote": "Lead-bearing folk glazes are toxic \u2014 avoid without modern safety"
     }
   ],
   "history": [
     {
       "year": "Before 20000 BCE",
-      "event": "Earliest known fired ceramic figurines precede utilitarian pottery in some sequences — fire applied to clay artistically.",
+      "event": "Earliest known fired ceramic figurines precede utilitarian pottery in some sequences \u2014 fire applied to clay artistically.",
       "location": "Central Europe (Venus figurine sites)"
     },
     {
@@ -212,7 +212,7 @@
     }
   ],
   "inventors": [],
-  "impact": "Pottery changed diet and demography — storable cooked calories and safer water. Bricks changed architecture — modular, fireproof, locally manufacturable. Refractories made metal furnaces and glass tanks durable enough to be economic.\n\nCeramics are still everywhere: insulators, catalyst supports, bioceramics, armour. The pedagogical point is universal: earth plus heat plus time yields a material phase change civilisation depends on.",
+  "impact": "Pottery changed diet and demography \u2014 storable cooked calories and safer water. Bricks changed architecture \u2014 modular, fireproof, locally manufacturable. Refractories made metal furnaces and glass tanks durable enough to be economic.\n\nCeramics are still everywhere: insulators, catalyst supports, bioceramics, armour. The pedagogical point is universal: earth plus heat plus time yields a material phase change civilisation depends on.",
   "images": [
     {
       "id": "overview",
@@ -227,11 +227,15 @@
   "externalLinks": [
     {
       "id": "getty-conservation-pottery",
-      "title": "Getty Conservation — ceramics overview",
+      "title": "Getty Conservation \u2014 ceramics overview",
       "url": "https://www.getty.edu/conservation/publications_resources/pdf_publications/pdf/pottery.pdf"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -240,21 +244,21 @@
     "sources": [
       {
         "id": "src-unesco-culture",
-        "title": "UNESCO — Culture sector",
+        "title": "UNESCO \u2014 Culture sector",
         "url": "https://www.unesco.org/en/culture",
         "type": "institution",
         "note": "Living heritage, craft traditions, and documentation of ceramic arts in cultural context"
       },
       {
         "id": "src-wiki-pottery",
-        "title": "Wikipedia — Pottery",
+        "title": "Wikipedia \u2014 Pottery",
         "url": "https://en.wikipedia.org/wiki/Pottery",
         "type": "wikipedia",
         "note": "Materials science and kiln-process overview with citations"
       },
       {
         "id": "src-nist-pml",
-        "title": "NIST — Physical Measurement Laboratory",
+        "title": "NIST \u2014 Physical Measurement Laboratory",
         "url": "https://www.nist.gov/pml",
         "type": "institution",
         "note": "High-temperature metrology and materials characterization context"

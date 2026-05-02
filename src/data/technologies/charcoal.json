@@ -1,7 +1,7 @@
 {
   "id": "charcoal",
   "name": "Charcoal",
-  "tagline": "Carbon-rich fuel that burns hotter and cleaner than raw wood — the bridge to smelting metals and fine pyrotechnology",
+  "tagline": "Carbon-rich fuel that burns hotter and cleaner than raw wood \u2014 the bridge to smelting metals and fine pyrotechnology",
   "category": "energy",
   "era": "prehistoric",
   "difficulty": 2,
@@ -36,8 +36,8 @@
     "wood-tar-and-pitch",
     "wrought-iron-forging"
   ],
-  "problem": "Raw wood fires are limited by moisture, volatile smoke, and the chemistry of burning whole biomass. For pottery glazes, glass melts, and especially metal smelting, you need sustained high temperature in a reducing or controllable atmosphere. Wood directly in a furnace introduces too much ash, fluctuating airflow through char structure, and heat wasted driving off water and pyrolysing large chunks.\n\nCharcoal solves this by preprocessing wood: driving off water and most volatiles in the absence of oxygen, leaving a porous carbon matrix that burns with a concentrated, relatively pure carbon-oxygen reaction. The result is higher attainable temperatures in smaller volumes and more predictable control — critical when a few degrees or the wrong oxidation state ruins a metal batch.\n\nTransport matters too: charcoal is lighter than green wood per unit energy for high-temperature tasks and stacks efficiently. Preindustrial metallurgy scaled on charcoal logistics: forests, kilns, and transport to furnaces.",
-  "overview": "Charcoal is produced by pyrolysis — heating wood in an oxygen-limited environment until non-carbon gases and tars leave, leaving fixed carbon and mineral ash. Practically, this is done in a mound kiln or brick kiln where combustion of a portion of the charge heats the rest while smoke exits through vents, and air ingress is restricted enough to carbonise rather than fully burn the load.\n\nA simple earth mound covers stacked billets; a central chimney or flue path is created; kindling at the base is lit; as the fire establishes, the outer soil or turf seals cracks. Operators monitor smoke colour and smell — stages shift from white steam to blue volatiles to thinning smoke as carbonisation completes. Water quench or airtight smothering stops the burn at charcoal stage.\n\nQuality depends on wood species (density and ash chemistry), uniformity of piece size, and peak temperature profile. Hardwoods historically preferred in many regions for metallurgical charcoal because of structural strength of pieces and favourable ash chemistry, though conifers can work with process adjustments.\n\nChemically, charcoal is mostly carbon with micropores left by removed cellulose and lignin. Those pores accelerate ignition and surface area for oxidation in furnaces — why charcoal catches easily and burns hot when blown.",
+  "problem": "Raw wood fires are limited by moisture, volatile smoke, and the chemistry of burning whole biomass. For pottery glazes, glass melts, and especially metal smelting, you need sustained high temperature in a reducing or controllable atmosphere. Wood directly in a furnace introduces too much ash, fluctuating airflow through char structure, and heat wasted driving off water and pyrolysing large chunks.\n\nCharcoal solves this by preprocessing wood: driving off water and most volatiles in the absence of oxygen, leaving a porous carbon matrix that burns with a concentrated, relatively pure carbon-oxygen reaction. The result is higher attainable temperatures in smaller volumes and more predictable control \u2014 critical when a few degrees or the wrong oxidation state ruins a metal batch.\n\nTransport matters too: charcoal is lighter than green wood per unit energy for high-temperature tasks and stacks efficiently. Preindustrial metallurgy scaled on charcoal logistics: forests, kilns, and transport to furnaces.",
+  "overview": "Charcoal is produced by pyrolysis \u2014 heating wood in an oxygen-limited environment until non-carbon gases and tars leave, leaving fixed carbon and mineral ash. Practically, this is done in a mound kiln or brick kiln where combustion of a portion of the charge heats the rest while smoke exits through vents, and air ingress is restricted enough to carbonise rather than fully burn the load.\n\nA simple earth mound covers stacked billets; a central chimney or flue path is created; kindling at the base is lit; as the fire establishes, the outer soil or turf seals cracks. Operators monitor smoke colour and smell \u2014 stages shift from white steam to blue volatiles to thinning smoke as carbonisation completes. Water quench or airtight smothering stops the burn at charcoal stage.\n\nQuality depends on wood species (density and ash chemistry), uniformity of piece size, and peak temperature profile. Hardwoods historically preferred in many regions for metallurgical charcoal because of structural strength of pieces and favourable ash chemistry, though conifers can work with process adjustments.\n\nChemically, charcoal is mostly carbon with micropores left by removed cellulose and lignin. Those pores accelerate ignition and surface area for oxidation in furnaces \u2014 why charcoal catches easily and burns hot when blown.",
   "principles": [
     {
       "name": "Pyrolysis versus combustion",
@@ -49,11 +49,11 @@
     },
     {
       "name": "Reducing potential",
-      "explanation": "Carbon can act as a chemical reductant — in a furnace packed with ore and charcoal, carbon monoxide forms and strips oxygen from metal oxides, enabling smelting."
+      "explanation": "Carbon can act as a chemical reductant \u2014 in a furnace packed with ore and charcoal, carbon monoxide forms and strips oxygen from metal oxides, enabling smelting."
     },
     {
       "name": "Ash inheritance",
-      "explanation": "Minerals in wood become ash in charcoal; some elements flux slag helpfully; others poison refractories or metal — species selection matters."
+      "explanation": "Minerals in wood become ash in charcoal; some elements flux slag helpfully; others poison refractories or metal \u2014 species selection matters."
     }
   ],
   "components": [
@@ -291,7 +291,7 @@
     },
     {
       "year": 1709,
-      "event": "Abraham Darby's Coalbrookdale works pioneers coke-smelted iron in Britain — a transition that eventually reduces dependence on charcoal for some iron processes, though charcoal remains essential in many regions for centuries.",
+      "event": "Abraham Darby's Coalbrookdale works pioneers coke-smelted iron in Britain \u2014 a transition that eventually reduces dependence on charcoal for some iron processes, though charcoal remains essential in many regions for centuries.",
       "location": "Shropshire, United Kingdom",
       "person": "Abraham Darby I"
     },
@@ -307,7 +307,7 @@
     }
   ],
   "inventors": [],
-  "impact": "Charcoal linked forests to metals. The ability to reach reducing, high-temperature zones inside furnaces made copper, bronze, and iron possible at civilisation scale. Charcoal also underwrote glass and lime industries.\n\nEnvironmentally, charcoal production drove deforestation where demand outpaced silviculture — a lesson for restart ethics: sustainable coppicing is part of the technology, not optional.\n\nModern hobby and industrial analogues exist, but the principle — preprocess fuel to match process chemistry — remains central in coke, powdered coal injection, and electric reduction research.",
+  "impact": "Charcoal linked forests to metals. The ability to reach reducing, high-temperature zones inside furnaces made copper, bronze, and iron possible at civilisation scale. Charcoal also underwrote glass and lime industries.\n\nEnvironmentally, charcoal production drove deforestation where demand outpaced silviculture \u2014 a lesson for restart ethics: sustainable coppicing is part of the technology, not optional.\n\nModern hobby and industrial analogues exist, but the principle \u2014 preprocess fuel to match process chemistry \u2014 remains central in coke, powdered coal injection, and electric reduction research.",
   "images": [
     {
       "id": "overview",
@@ -334,6 +334,10 @@
     }
   ],
   "lastUpdated": "2026-05-02",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -369,7 +373,7 @@
       },
       {
         "id": "src-wiki-charcoal",
-        "title": "Wikipedia — Charcoal",
+        "title": "Wikipedia \u2014 Charcoal",
         "url": "https://en.wikipedia.org/wiki/Charcoal",
         "type": "wikipedia",
         "note": "Manufacturing routes, chemistry overview, and references"

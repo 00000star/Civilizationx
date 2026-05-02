@@ -196,12 +196,16 @@
   "externalLinks": [
     {
       "id": "wiki-dataset-curation",
-      "title": "Wikipedia — Dataset Curation and Governance",
+      "title": "Wikipedia \u2014 Dataset Curation and Governance",
       "url": "https://en.wikipedia.org/wiki/Dataset_Curation_and_Governance"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -210,13 +214,13 @@
     "sources": [
       {
         "id": "gebru-datasheets",
-        "title": "Gebru et al. (2021) — Datasheets for Datasets",
+        "title": "Gebru et al. (2021) \u2014 Datasheets for Datasets",
         "type": "paper",
         "url": "https://arxiv.org/abs/1803.09010"
       },
       {
         "id": "wiki-data-governance",
-        "title": "Wikipedia — Data governance",
+        "title": "Wikipedia \u2014 Data governance",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Data_governance"
       },

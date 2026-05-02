@@ -1,7 +1,7 @@
 {
   "id": "solar-photovoltaic-power-systems",
   "name": "Solar Photovoltaic Power Systems",
-  "tagline": "Semiconductor junctions that convert sunlight directly into DC electricity — modular generation without rotating prime movers",
+  "tagline": "Semiconductor junctions that convert sunlight directly into DC electricity \u2014 modular generation without rotating prime movers",
   "category": "energy",
   "era": "late-20th",
   "difficulty": 4,
@@ -12,12 +12,12 @@
     "electrical-power-grid"
   ],
   "unlocks": [],
-  "problem": "Every green leaf is a solar collector tuned by billions of years of evolution; human photovoltaic panels are a blunt industrial imitation that nonetheless works well enough to matter. The problem is not whether sunlight exists — it is whether you can turn a diffuse sky into dispatchable electrons without bankrupting yourself in glass, silver, and land.\n\nA solar cell is a thin sandwich where photons lift electrons across a junction built by painstaking crystal and dopant control. Dust, heat, and partial shading each punish output differently: dust steals photons; heat narrows the voltage window; shading can reverse-bias weak cells until bypass diodes save them — at the cost of complexity and fire risk if connectors are cheap.\n\nGrid-tied inverters must respect the same frequency and voltage contracts as steam turbines, while lacking inertia. Rapid shutdown rules exist so firefighters are not surprised by live roof conductors after a house fire. Off-grid systems add batteries whose chemistry introduces another discipline — state-of-charge estimation, thermal runaway prevention, and end-of-life recycling.\n\nScale shifts politics: utility fields compete with agriculture and habitat; rooftop arrays compete with roof structure and installer skill. The technology is honest about land and labour — ignore either and the levelised cost lies.",
-  "overview": "Modern silicon modules laminate cells between glass and polymer backsheets, edge-sealed against moisture. Cells are sliced from boules or grown as ribbons, doped to form PN junctions, contacted with fine grid fingers, and anti-reflection coated. Silver paste dominates fine-line printing today though copper-plating recipes seek to reduce noble metal.\n\nStrings of modules feed inverters that track the maximum power point as irradiance changes — an algorithmic hill climb on a curve that shifts with temperature. Central inverters serve whole fields; string inverters isolate failures; microinverters per module simplify shading at cost of electronics count.\n\nTrackers aim modules toward the sun on steel posts driven by motors, controllers, and lightning grounding that must survive decades outdoors. Transformers step up collector voltage for interconnection rules; protective devices isolate ground faults on wet mornings when insulation is worst.\n\nLife-cycle thinking includes inverter replacement cadence, module delamination, and recycling routes for silicon, glass, and frames — the industry matures as waste piles appear.",
+  "problem": "Every green leaf is a solar collector tuned by billions of years of evolution; human photovoltaic panels are a blunt industrial imitation that nonetheless works well enough to matter. The problem is not whether sunlight exists \u2014 it is whether you can turn a diffuse sky into dispatchable electrons without bankrupting yourself in glass, silver, and land.\n\nA solar cell is a thin sandwich where photons lift electrons across a junction built by painstaking crystal and dopant control. Dust, heat, and partial shading each punish output differently: dust steals photons; heat narrows the voltage window; shading can reverse-bias weak cells until bypass diodes save them \u2014 at the cost of complexity and fire risk if connectors are cheap.\n\nGrid-tied inverters must respect the same frequency and voltage contracts as steam turbines, while lacking inertia. Rapid shutdown rules exist so firefighters are not surprised by live roof conductors after a house fire. Off-grid systems add batteries whose chemistry introduces another discipline \u2014 state-of-charge estimation, thermal runaway prevention, and end-of-life recycling.\n\nScale shifts politics: utility fields compete with agriculture and habitat; rooftop arrays compete with roof structure and installer skill. The technology is honest about land and labour \u2014 ignore either and the levelised cost lies.",
+  "overview": "Modern silicon modules laminate cells between glass and polymer backsheets, edge-sealed against moisture. Cells are sliced from boules or grown as ribbons, doped to form PN junctions, contacted with fine grid fingers, and anti-reflection coated. Silver paste dominates fine-line printing today though copper-plating recipes seek to reduce noble metal.\n\nStrings of modules feed inverters that track the maximum power point as irradiance changes \u2014 an algorithmic hill climb on a curve that shifts with temperature. Central inverters serve whole fields; string inverters isolate failures; microinverters per module simplify shading at cost of electronics count.\n\nTrackers aim modules toward the sun on steel posts driven by motors, controllers, and lightning grounding that must survive decades outdoors. Transformers step up collector voltage for interconnection rules; protective devices isolate ground faults on wet mornings when insulation is worst.\n\nLife-cycle thinking includes inverter replacement cadence, module delamination, and recycling routes for silicon, glass, and frames \u2014 the industry matures as waste piles appear.",
   "principles": [
     {
       "name": "Shockley-Queisser limit",
-      "explanation": "Single-junction detailed balance caps ideal efficiency near 33% for silicon under AM1.5 — tandem cells relax limit at cost."
+      "explanation": "Single-junction detailed balance caps ideal efficiency near 33% for silicon under AM1.5 \u2014 tandem cells relax limit at cost."
     },
     {
       "name": "MPP tracking",
@@ -25,7 +25,7 @@
     },
     {
       "name": "Temperature coefficient",
-      "explanation": "Higher cell temperature reduces open-circuit voltage — desert installs trade sun for heat penalty."
+      "explanation": "Higher cell temperature reduces open-circuit voltage \u2014 desert installs trade sun for heat penalty."
     },
     {
       "name": "Harmonics from inverters",
@@ -85,7 +85,7 @@
       "earthLocations": [
         "Precious metals refiners"
       ],
-      "spaceAlternatives": "Silver screen-print pastes today; migrating to plated copper fingers reduces Ag but needs clean plating lines — budget for either chemistry until copper recipes mature",
+      "spaceAlternatives": "Silver screen-print pastes today; migrating to plated copper fingers reduces Ag but needs clean plating lines \u2014 budget for either chemistry until copper recipes mature",
       "processingRequired": "Fire-through contact firing profile"
     },
     {
@@ -101,8 +101,8 @@
   "buildSteps": [
     {
       "order": 1,
-      "title": "Measure your site’s sun and shade before buying pallets of glass",
-      "description": "Log hourly shade from trees, chimneys, and future construction. Use a simple tilted sensor for a week if you lack professional data — winter sun angles surprise optimists. Decide whether trackers earn their maintenance cost or fixed tilt is wiser.",
+      "title": "Measure your site\u2019s sun and shade before buying pallets of glass",
+      "description": "Log hourly shade from trees, chimneys, and future construction. Use a simple tilted sensor for a week if you lack professional data \u2014 winter sun angles surprise optimists. Decide whether trackers earn their maintenance cost or fixed tilt is wiser.",
       "prerequisiteTools": [
         "notebook",
         "camera",
@@ -123,7 +123,7 @@
     {
       "order": 3,
       "title": "Wire strings to voltage limits your inverter expects",
-      "description": "Read the inverter’s maximum input voltage at coldest morning — open-circuit voltage rises when silicon is cold. Use appropriate cable gauges and UV-rated jackets outdoors. Label every combiner box leg.",
+      "description": "Read the inverter\u2019s maximum input voltage at coldest morning \u2014 open-circuit voltage rises when silicon is cold. Use appropriate cable gauges and UV-rated jackets outdoors. Label every combiner box leg.",
       "prerequisiteTools": [
         "multimeter",
         "temperature chart for Voc"
@@ -133,7 +133,7 @@
     {
       "order": 4,
       "title": "Commission the inverter with grid rules or battery BMS limits",
-      "description": "If grid-tied, enable anti-islanding protection required locally. If off-grid, set battery voltage and current limits conservatively; verify temperature sensors on packs. Update firmware deliberately — log versions.",
+      "description": "If grid-tied, enable anti-islanding protection required locally. If off-grid, set battery voltage and current limits conservatively; verify temperature sensors on packs. Update firmware deliberately \u2014 log versions.",
       "prerequisiteTools": [
         "laptop",
         "vendor manual"
@@ -143,7 +143,7 @@
     {
       "order": 5,
       "title": "Plan cleaning, inverter replacement, and module inspection on a calendar",
-      "description": "Dust losses vary by climate; schedule a spring wash where ROI justifies water use. Infrared-scan modules annually if you can — hot spots reveal cracked cells and bad diodes before they become fires.",
+      "description": "Dust losses vary by climate; schedule a spring wash where ROI justifies water use. Infrared-scan modules annually if you can \u2014 hot spots reveal cracked cells and bad diodes before they become fires.",
       "prerequisiteTools": [
         "soft brush",
         "hose",
@@ -177,7 +177,7 @@
       "nationality": "American"
     }
   ],
-  "impact": "PV decentralised generation to rooftops and deserts alike — and forced grids to learn flexibility, storage, and forecasting.\n\nIt is semiconductor manufacturing wearing a civil engineering hat.",
+  "impact": "PV decentralised generation to rooftops and deserts alike \u2014 and forced grids to learn flexibility, storage, and forecasting.\n\nIt is semiconductor manufacturing wearing a civil engineering hat.",
   "images": [],
   "videos": [
     {
@@ -190,7 +190,7 @@
   "externalLinks": [
     {
       "id": "nrel-pv",
-      "title": "NREL — photovoltaics research",
+      "title": "NREL \u2014 photovoltaics research",
       "url": "https://www.nrel.gov/pv/"
     },
     {
@@ -200,6 +200,10 @@
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -208,21 +212,21 @@
     "sources": [
       {
         "id": "src-energy-solar-office",
-        "title": "U.S. DOE — Solar Energy Technologies Office",
+        "title": "U.S. DOE \u2014 Solar Energy Technologies Office",
         "url": "https://www.energy.gov/eere/solar/solar-energy-technologies-office",
         "type": "institution",
         "note": "PV performance, grid integration, and manufacturing R&D"
       },
       {
         "id": "src-wiki-pv",
-        "title": "Wikipedia — Photovoltaic system",
+        "title": "Wikipedia \u2014 Photovoltaic system",
         "url": "https://en.wikipedia.org/wiki/Photovoltaic_system",
         "type": "wikipedia",
         "note": "Array wiring, inverters, and safety disconnect requirements overview"
       },
       {
         "id": "src-nist-pml",
-        "title": "NIST — PML",
+        "title": "NIST \u2014 PML",
         "url": "https://www.nist.gov/pml",
         "type": "institution",
         "note": "Metrology for irradiance sensors and electrical efficiency measurements"

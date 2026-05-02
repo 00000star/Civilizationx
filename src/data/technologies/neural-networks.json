@@ -188,12 +188,16 @@
   "externalLinks": [
     {
       "id": "wiki-neural-networks",
-      "title": "Wikipedia — Neural Networks",
+      "title": "Wikipedia \u2014 Neural Networks",
       "url": "https://en.wikipedia.org/wiki/Neural_Networks"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -202,19 +206,19 @@
     "sources": [
       {
         "id": "goodfellow-dl-nn",
-        "title": "Goodfellow, Bengio, Courville — Deep Learning",
+        "title": "Goodfellow, Bengio, Courville \u2014 Deep Learning",
         "type": "book",
         "url": "https://www.deeplearningbook.org/"
       },
       {
         "id": "wiki-nn",
-        "title": "Wikipedia — Artificial neural network",
+        "title": "Wikipedia \u2014 Artificial neural network",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Artificial_neural_network"
       },
       {
         "id": "lecun-98",
-        "title": "LeCun et al. (1998) — Gradient-based learning applied to document recognition",
+        "title": "LeCun et al. (1998) \u2014 Gradient-based learning applied to document recognition",
         "type": "paper",
         "url": "https://ieeexplore.ieee.org/document/726791"
       }

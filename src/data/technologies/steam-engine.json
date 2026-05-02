@@ -17,20 +17,20 @@
     "steam-locomotive",
     "steam-turbine-electric-generation"
   ],
-  "problem": "Waterwheels need rivers; horses need hay. Industrial tasks — pumping mines, driving forge bellows, spinning mills — needed concentrated, schedulable power decoupled from muscle and weather. The steam engine solves this by a closed loop: boil water, expand vapour against moving boundaries, exhaust lower-pressure steam, condense or vent, and repeat.\n\nEarly engines were thermally inefficient and mechanically crude; Newcomen atmospheric engines pumped water using vacuum after steam condensation. Watt's separate condenser and later high-pressure expansions improved efficiency enough for widespread stationary power and eventually self-propelled locomotion.\n\nThe engineering obstacles are materials and safety: pressure vessels fail catastrophically; sloppy valve timing wastes steam; lubricants must survive heat and water contamination.",
-  "overview": "A reciprocating steam engine includes a boiler producing high-pressure steam, throttle and governor controlling admission, a slide or piston valve timing steam admission and exhaust to a cylinder, a piston converting pressure to linear motion, and a crankshaft with flywheel smoothing torque pulsations. Exhaust routes to a condenser (vacuum engines) or atmosphere.\n\nBoilers are riveted or welded shells with tubes passing hot gases through water (fire-tube) or water through hot gas paths (water-tube). Feedwater must be treated to reduce scale — scale insulates tubes leading to hot spots and rupture.\n\nTurbine steam engines (later industrial dominance for large power) use staged nozzles accelerating steam onto blades — higher speeds, fewer reciprocating parts, different bearing challenges.\n\nStationary engines transmitted power via flat belts on stepped pulleys to line shafts — linking to our pulley entry. The locomotive variant rigidly couples engine to wheels on rails — see steam-locomotive entry.",
+  "problem": "Waterwheels need rivers; horses need hay. Industrial tasks \u2014 pumping mines, driving forge bellows, spinning mills \u2014 needed concentrated, schedulable power decoupled from muscle and weather. The steam engine solves this by a closed loop: boil water, expand vapour against moving boundaries, exhaust lower-pressure steam, condense or vent, and repeat.\n\nEarly engines were thermally inefficient and mechanically crude; Newcomen atmospheric engines pumped water using vacuum after steam condensation. Watt's separate condenser and later high-pressure expansions improved efficiency enough for widespread stationary power and eventually self-propelled locomotion.\n\nThe engineering obstacles are materials and safety: pressure vessels fail catastrophically; sloppy valve timing wastes steam; lubricants must survive heat and water contamination.",
+  "overview": "A reciprocating steam engine includes a boiler producing high-pressure steam, throttle and governor controlling admission, a slide or piston valve timing steam admission and exhaust to a cylinder, a piston converting pressure to linear motion, and a crankshaft with flywheel smoothing torque pulsations. Exhaust routes to a condenser (vacuum engines) or atmosphere.\n\nBoilers are riveted or welded shells with tubes passing hot gases through water (fire-tube) or water through hot gas paths (water-tube). Feedwater must be treated to reduce scale \u2014 scale insulates tubes leading to hot spots and rupture.\n\nTurbine steam engines (later industrial dominance for large power) use staged nozzles accelerating steam onto blades \u2014 higher speeds, fewer reciprocating parts, different bearing challenges.\n\nStationary engines transmitted power via flat belts on stepped pulleys to line shafts \u2014 linking to our pulley entry. The locomotive variant rigidly couples engine to wheels on rails \u2014 see steam-locomotive entry.",
   "principles": [
     {
       "name": "Rankine cycle (idealised)",
-      "explanation": "Steam engines realise a heat-work cycle: heat in during boiling/superheat, work out during expansion, heat rejection during condensation — second law limits efficiency below Carnot bound set by temperature extremes."
+      "explanation": "Steam engines realise a heat-work cycle: heat in during boiling/superheat, work out during expansion, heat rejection during condensation \u2014 second law limits efficiency below Carnot bound set by temperature extremes."
     },
     {
       "name": "Cut-off and expansion",
-      "explanation": "Stopping steam admission early lets expanding steam do additional work — compound engines stage expansion across cylinders for efficiency."
+      "explanation": "Stopping steam admission early lets expanding steam do additional work \u2014 compound engines stage expansion across cylinders for efficiency."
     },
     {
       "name": "Boiler stress and hoop tension",
-      "explanation": "Pressure vessel walls see tensile hoop stress scaling with radius over thickness — why inspections and relief valves are moral necessities."
+      "explanation": "Pressure vessel walls see tensile hoop stress scaling with radius over thickness \u2014 why inspections and relief valves are moral necessities."
     },
     {
       "name": "Lubrication in wet steam",
@@ -44,7 +44,7 @@
       "function": "Generates steam at pressure",
       "position": "Firebox below or adjacent to water shell",
       "madeFrom": "Riveted iron plates historically; steel later",
-      "criticalNote": "Relief valves, water level glass, blowdown — non-negotiable"
+      "criticalNote": "Relief valves, water level glass, blowdown \u2014 non-negotiable"
     },
     {
       "id": "cylinder",
@@ -52,7 +52,7 @@
       "function": "Converts steam pressure to linear force",
       "position": "Bolted to frame inline with crank throw",
       "madeFrom": "Cast iron cylinder, steel piston with rings",
-      "criticalNote": "Keep condensate from hydraulic locking cylinder — drain cocks before start"
+      "criticalNote": "Keep condensate from hydraulic locking cylinder \u2014 drain cocks before start"
     },
     {
       "id": "valve-gear",
@@ -68,7 +68,7 @@
       "function": "Converts reciprocation to rotation; stores kinetic energy",
       "position": "Main bearings on bedplate",
       "madeFrom": "Forged steel shaft, cast iron flywheel",
-      "criticalNote": "Flywheel keying must be perfect — loose keys are lethal projectiles"
+      "criticalNote": "Flywheel keying must be perfect \u2014 loose keys are lethal projectiles"
     },
     {
       "id": "governor",
@@ -76,7 +76,7 @@
       "function": "Limits overspeed by throttling steam or adjusting cut-off",
       "position": "Driven from crankshaft",
       "madeFrom": "Weighted arms, linkage to throttle",
-      "criticalNote": "Governor failure on unloaded engine causes runaway — engineering ethics demand redundant safeguards"
+      "criticalNote": "Governor failure on unloaded engine causes runaway \u2014 engineering ethics demand redundant safeguards"
     }
   ],
   "rawMaterials": [
@@ -96,7 +96,7 @@
         "Coal historically dominant",
         "wood in frontier contexts"
       ],
-      "spaceAlternatives": "Solar heat for small boilers in vacuum-adjacent demos — niche",
+      "spaceAlternatives": "Solar heat for small boilers in vacuum-adjacent demos \u2014 niche",
       "processingRequired": "Stoker sizing, ash removal"
     },
     {
@@ -119,7 +119,7 @@
         "design tables",
         "competent inspector"
       ],
-      "warningNote": "Amateur boilers kill — this step is legally regulated in modern nations"
+      "warningNote": "Amateur boilers kill \u2014 this step is legally regulated in modern nations"
     },
     {
       "order": 2,
@@ -129,7 +129,7 @@
         "hydraulic pump",
         "gauges calibrated"
       ],
-      "warningNote": "During test, assume lethal energy — no one in plane of shell seams"
+      "warningNote": "During test, assume lethal energy \u2014 no one in plane of shell seams"
     },
     {
       "order": 3,
@@ -159,7 +159,7 @@
         "insulated gloves",
         "infrared thermometer modern"
       ],
-      "warningNote": "Entanglement with belts — machine guarding is not optional ethically"
+      "warningNote": "Entanglement with belts \u2014 machine guarding is not optional ethically"
     }
   ],
   "history": [
@@ -196,17 +196,21 @@
       "nationality": "British"
     }
   ],
-  "impact": "Steam power industrialised textiles, mills, shipping (steamships), and railways. It taught thermodynamics to engineers and created the safety culture around pressure vessels.\n\nModern grids still use steam turbines — the working fluid changed scale, not conceptual role.",
+  "impact": "Steam power industrialised textiles, mills, shipping (steamships), and railways. It taught thermodynamics to engineers and created the safety culture around pressure vessels.\n\nModern grids still use steam turbines \u2014 the working fluid changed scale, not conceptual role.",
   "images": [],
   "videos": [],
   "externalLinks": [
     {
       "id": "asme-boiler",
-      "title": "ASME — boiler and pressure vessel code context",
+      "title": "ASME \u2014 boiler and pressure vessel code context",
       "url": "https://www.asme.org/topics-resources/content/history-of-boilers"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -215,21 +219,21 @@
     "sources": [
       {
         "id": "src-energy-steam",
-        "title": "U.S. Department of Energy — EERE",
+        "title": "U.S. Department of Energy \u2014 EERE",
         "url": "https://www.energy.gov/eere/renewable-energy",
         "type": "institution",
         "note": "Industrial energy systems and efficiency context"
       },
       {
         "id": "src-wiki-steam-engine",
-        "title": "Wikipedia — Steam engine",
+        "title": "Wikipedia \u2014 Steam engine",
         "url": "https://en.wikipedia.org/wiki/Steam_engine",
         "type": "wikipedia",
         "note": "Thermodynamic cycles and historical development"
       },
       {
         "id": "src-nrc-public",
-        "title": "U.S. NRC — Public document collections FAQ",
+        "title": "U.S. NRC \u2014 Public document collections FAQ",
         "url": "https://www.nrc.gov/reading-rm/doc-collections/faq/",
         "type": "institution",
         "note": "High-reliability engineering documentation culture (analogous rigour for pressure systems)"

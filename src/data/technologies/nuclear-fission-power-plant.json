@@ -12,24 +12,24 @@
     "steel-production"
   ],
   "unlocks": [],
-  "problem": "Burning coal or gas ties megawatt-years to chemistry in the air — carbon leaves the stack whether you like the climate mathematics or not. Fission concentrates energy in heavy nuclei: a modest mass of fuel, handled with discipline, can run a turbine hall for years between refuel outages. The engineering problem is kinetic, not rhetorical: keep exactly one neutron from each fission, on average, causing another fission; remove heat faster than fuel and cladding can melt; confine radioactive products when pipes break or operators fumble.\n\nMaterials age in ways invisible to casual inspection: neutron embrittlement hardens reactor vessels; helium bubbles gather in welds; boron absorbers deplete on schedules easy to miss in a busy outage. Chemistry is equally unforgiving: radiolysis makes aggressive species; crud on fuel surfaces shifts power peaks; iodine spikes after transients demand instruments humans trust under stress.\n\nDecay heat is the moral fact reactor students learn first: after you SCRAM the chain reaction, fission products still release roughly single-digit percent of full power immediately, falling on hour and day scales but not to zero for years. Cooling must survive blackouts, sabotage scenarios, and human forgetfulness — because it will be tested by at least one of them.\n\nSocially, the plant is inseparable from safeguards, waste stewardship, and transparent regulation. Physics can be perfect on paper while institutions rot; the opposite is also true — careful people can run modest machines safely for decades if design margins and training culture align.",
-  "overview": "Light-water reactors pack low-enriched uranium oxide pellets in zirconium tubes, arranged in assemblies inside a vessel flooded with pressurised water that both moderates neutrons and carries heat. In a pressurised-water plant, steam generators transfer that heat to a secondary loop that looks like a fossil turbine island — turbines, condensers, feedwater chemistry — except every room is zoned for radiation and every valve has a training story.\n\nControl rods and boron chemistry shim reactivity; operators move in small steps because delayed neutrons buy seconds of human reaction time. Containment buildings resist pressure from pipe breaks and limit hydrogen risks if mitigation fails. Spent fuel pools glow blue with Cherenkov light while decay heat drops toward dry-cask storage politics.\n\nAdvanced concepts swap coolants and fuels — helium, sodium, molten salt — each trading corrosion, activation, and leak reactivity differently. None removes the need for heat removal ethics after shutdown.\n\nOperation is a licence to practice applied ethics: every alarm ties to a scenario analysis written in ink from prior plants. Preserving that culture across generations is as important as preserving forgings.",
+  "problem": "Burning coal or gas ties megawatt-years to chemistry in the air \u2014 carbon leaves the stack whether you like the climate mathematics or not. Fission concentrates energy in heavy nuclei: a modest mass of fuel, handled with discipline, can run a turbine hall for years between refuel outages. The engineering problem is kinetic, not rhetorical: keep exactly one neutron from each fission, on average, causing another fission; remove heat faster than fuel and cladding can melt; confine radioactive products when pipes break or operators fumble.\n\nMaterials age in ways invisible to casual inspection: neutron embrittlement hardens reactor vessels; helium bubbles gather in welds; boron absorbers deplete on schedules easy to miss in a busy outage. Chemistry is equally unforgiving: radiolysis makes aggressive species; crud on fuel surfaces shifts power peaks; iodine spikes after transients demand instruments humans trust under stress.\n\nDecay heat is the moral fact reactor students learn first: after you SCRAM the chain reaction, fission products still release roughly single-digit percent of full power immediately, falling on hour and day scales but not to zero for years. Cooling must survive blackouts, sabotage scenarios, and human forgetfulness \u2014 because it will be tested by at least one of them.\n\nSocially, the plant is inseparable from safeguards, waste stewardship, and transparent regulation. Physics can be perfect on paper while institutions rot; the opposite is also true \u2014 careful people can run modest machines safely for decades if design margins and training culture align.",
+  "overview": "Light-water reactors pack low-enriched uranium oxide pellets in zirconium tubes, arranged in assemblies inside a vessel flooded with pressurised water that both moderates neutrons and carries heat. In a pressurised-water plant, steam generators transfer that heat to a secondary loop that looks like a fossil turbine island \u2014 turbines, condensers, feedwater chemistry \u2014 except every room is zoned for radiation and every valve has a training story.\n\nControl rods and boron chemistry shim reactivity; operators move in small steps because delayed neutrons buy seconds of human reaction time. Containment buildings resist pressure from pipe breaks and limit hydrogen risks if mitigation fails. Spent fuel pools glow blue with Cherenkov light while decay heat drops toward dry-cask storage politics.\n\nAdvanced concepts swap coolants and fuels \u2014 helium, sodium, molten salt \u2014 each trading corrosion, activation, and leak reactivity differently. None removes the need for heat removal ethics after shutdown.\n\nOperation is a licence to practice applied ethics: every alarm ties to a scenario analysis written in ink from prior plants. Preserving that culture across generations is as important as preserving forgings.",
   "principles": [
     {
       "name": "Six-factor formula intuition",
-      "explanation": "Thermal utilisation, resonance escape, fast fission, reproduction factor, non-leakage probabilities multiply to k-effective — kept near 1.000 by operators."
+      "explanation": "Thermal utilisation, resonance escape, fast fission, reproduction factor, non-leakage probabilities multiply to k-effective \u2014 kept near 1.000 by operators."
     },
     {
       "name": "Doppler broadening",
-      "explanation": "Fuel temperature rise broadens resonances, increasing absorption — negative reactivity feedback that buys seconds in transients."
+      "explanation": "Fuel temperature rise broadens resonances, increasing absorption \u2014 negative reactivity feedback that buys seconds in transients."
     },
     {
       "name": "Decay heat",
-      "explanation": "After shutdown, fission products still release ~6-7% power immediately — cooling must persist through blackouts or ponds boil."
+      "explanation": "After shutdown, fission products still release ~6-7% power immediately \u2014 cooling must persist through blackouts or ponds boil."
     },
     {
       "name": "Dose ALARA",
-      "explanation": "As low as reasonably achievable — optimisation under uncertainty, not minimisation regardless of cost."
+      "explanation": "As low as reasonably achievable \u2014 optimisation under uncertainty, not minimisation regardless of cost."
     }
   ],
   "components": [
@@ -45,7 +45,7 @@
       "name": "Fuel assemblies",
       "function": "Host fission in moderated spectrum",
       "position": "Core lattice",
-      "madeFrom": "UO₂ pellets, Zircaloy tubes, spacer grids"
+      "madeFrom": "UO\u2082 pellets, Zircaloy tubes, spacer grids"
     },
     {
       "id": "steam-gen",
@@ -76,8 +76,8 @@
       "earthLocations": [
         "Kazakhstan, Canada, Australia, Namibia"
       ],
-      "spaceAlternatives": "Uranium from sandstone, unconformity, or porphyry deposits on Earth; off-world fission would more plausibly use shipped enriched oxide or thorium-uranium cycles engineered for that environment — not lunar helium-3, which implies an entirely different fuel cycle and reactor physics",
-      "processingRequired": "Conversion to UF₆, centrifuge enrichment, reduction to UO₂"
+      "spaceAlternatives": "Uranium from sandstone, unconformity, or porphyry deposits on Earth; off-world fission would more plausibly use shipped enriched oxide or thorium-uranium cycles engineered for that environment \u2014 not lunar helium-3, which implies an entirely different fuel cycle and reactor physics",
+      "processingRequired": "Conversion to UF\u2086, centrifuge enrichment, reduction to UO\u2082"
     },
     {
       "name": "Heavy forgings",
@@ -94,7 +94,7 @@
       "earthLocations": [
         "Turkey, Argentina boron sources"
       ],
-      "spaceAlternatives": "Boron carbide or silver-indium-cadmium in clad rods for thermal reactors; metallic hafnium assemblies where chemistry favours them — both require honest metallurgy and inspection, not improvised scrap",
+      "spaceAlternatives": "Boron carbide or silver-indium-cadmium in clad rods for thermal reactors; metallic hafnium assemblies where chemistry favours them \u2014 both require honest metallurgy and inspection, not improvised scrap",
       "processingRequired": "Sintered pellets in stainless cladding"
     }
   ],
@@ -102,7 +102,7 @@
     {
       "order": 1,
       "title": "Treat licensing and independent review as part of the reactor, not paperwork around it",
-      "description": "Write safety cases humans can read without a law degree: what fails, how you detect it, what power paths remain, how long until something worse happens if nobody acts. Invite external reviewers early — embarrassment in a conference room beats headlines later.",
+      "description": "Write safety cases humans can read without a law degree: what fails, how you detect it, what power paths remain, how long until something worse happens if nobody acts. Invite external reviewers early \u2014 embarrassment in a conference room beats headlines later.",
       "prerequisiteTools": [
         "regulatory guides",
         "probabilistic risk templates"
@@ -112,7 +112,7 @@
     {
       "order": 2,
       "title": "Forge, weld, and inspect nuclear-grade components with traceable identity",
-      "description": "Every plate and weld gets certificates; radiography and ultrasonic testing find slag and lack of fusion before water ever touches metal. Qualify welders and procedures on coupons before production joints. Store bolts in tamper-evident bins — counterfeit fasteners have killed projects and people.",
+      "description": "Every plate and weld gets certificates; radiography and ultrasonic testing find slag and lack of fusion before water ever touches metal. Qualify welders and procedures on coupons before production joints. Store bolts in tamper-evident bins \u2014 counterfeit fasteners have killed projects and people.",
       "prerequisiteTools": [
         "radiography",
         "UT equipment",
@@ -128,17 +128,17 @@
         "startup instrumentation",
         "written checklist"
       ],
-      "warningNote": "Mis-counted bundles have approached criticality wrong in history — do not add your story"
+      "warningNote": "Mis-counted bundles have approached criticality wrong in history \u2014 do not add your story"
     },
     {
       "order": 4,
       "title": "Hot functional test every pump, valve, and snubber before loading fuel",
-      "description": "Run primary loops at temperature without fission power; record vibration baselines; rehearse switching from normal to emergency cooling paths with clocks running. Water hammer cracks steam generator tubes — open and close valves per procedure, not bravado.",
+      "description": "Run primary loops at temperature without fission power; record vibration baselines; rehearse switching from normal to emergency cooling paths with clocks running. Water hammer cracks steam generator tubes \u2014 open and close valves per procedure, not bravado.",
       "prerequisiteTools": [
         "vibration sensors",
         "procedure manuals"
       ],
-      "warningNote": "A cracked tube can let primary chemistry meet secondary — a long expensive week"
+      "warningNote": "A cracked tube can let primary chemistry meet secondary \u2014 a long expensive week"
     },
     {
       "order": 5,
@@ -148,7 +148,7 @@
         "health physics lab support",
         "chemistry logbooks"
       ],
-      "warningNote": "Organisational drift causes accidents — training rot is hardware failure"
+      "warningNote": "Organisational drift causes accidents \u2014 training rot is hardware failure"
     }
   ],
   "history": [
@@ -160,7 +160,7 @@
     },
     {
       "year": 1954,
-      "event": "Obninsk APS-1 supplies grid power — first civilian nuclear electricity.",
+      "event": "Obninsk APS-1 supplies grid power \u2014 first civilian nuclear electricity.",
       "location": "USSR"
     },
     {
@@ -177,7 +177,7 @@
       "nationality": "Italian-American"
     }
   ],
-  "impact": "Nuclear plants supplied large fractions of carbon-free electricity in several nations — and concentrated waste, risk, and regulatory expertise.\n\nRestart without enrichment and metallurgy knowledge is effectively impossible; preserving documents is not enough without institutions.",
+  "impact": "Nuclear plants supplied large fractions of carbon-free electricity in several nations \u2014 and concentrated waste, risk, and regulatory expertise.\n\nRestart without enrichment and metallurgy knowledge is effectively impossible; preserving documents is not enough without institutions.",
   "images": [],
   "videos": [
     {
@@ -190,16 +190,20 @@
   "externalLinks": [
     {
       "id": "iaea",
-      "title": "IAEA — nuclear power information",
+      "title": "IAEA \u2014 nuclear power information",
       "url": "https://www.iaea.org/topics/energy/nuclear-power"
     },
     {
       "id": "nrc",
-      "title": "U.S. NRC — reactor concepts",
+      "title": "U.S. NRC \u2014 reactor concepts",
       "url": "https://www.nrc.gov/reading-rm/basic-ref/students/reactor-types.html"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -222,7 +226,7 @@
       },
       {
         "id": "src-wiki-nuclear",
-        "title": "Wikipedia — Nuclear power",
+        "title": "Wikipedia \u2014 Nuclear power",
         "url": "https://en.wikipedia.org/wiki/Nuclear_power",
         "type": "wikipedia",
         "note": "Survey article; always cross-check operational limits with licensed procedures"

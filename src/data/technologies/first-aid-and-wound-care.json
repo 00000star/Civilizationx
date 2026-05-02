@@ -32,12 +32,12 @@
     "vector-control",
     "vital-signs-monitoring"
   ],
-  "problem": "Most people who die after battles, factory accidents, and kitchen slips do not die from the wound in the first minute — they die from blood loss hours later, from infection days later, or from fever because someone packed dirt into a laceration. Modern emergency departments hide this truth behind ambulances and antibiotics; remove the infrastructure and the same bodies obey the same physiology.\n\nThe first aid problem is triage under uncertainty: you cannot image every fracture, culture every wound, or wait for a sterile field. You must decide which injuries demand immediate motionless packaging, which can walk, and which will declare themselves later with swelling lines up the limb. Wrong triage wastes the one person who could fetch water; right triage is a moral skill learned by drill.\n\nThe wound-care problem is contamination control without sterile industry: boiled cloth is not operating-theatre sterile but beats unwashed shirt; honey and sugar have osmotic effects on some wounds but are not universal magic; pressure dressings stop venous ooze but do not fix arterial jets. Teaching people what they cannot fix — open abdomens, skull depressions with changing consciousness, partial amputations with pale stumps — is as important as teaching pressure bandages, because false confidence kills.\n\nContraindications: do not apply tourniquets for minor bleeding — ischaemia damages limbs; do not pour alcohol into deep cavities; do not reduce fractures blindly if sensation is lost after manipulation. Overdose of pain relief is less common without drugs, but herbal toxicity is real. Sterile conditions for surgery are not reproduced by campfire ash — professional verification is required before use on a human being for any intervention beyond basic first aid and wound cleaning in non-sterile environments.",
-  "overview": "Bleeding control begins with direct pressure: gloved or clean-clothed hand on wound, add bulk dressing, elevate if not contraindicated. Arterial bright spurting may need a tourniquet wide and proximal — note time written on forehead tape culture. Release only in systems that can surgically salvage — in collapse, tourniquet means limb life versus life life; train that horror honestly.\n\nWound cleaning means remove visible foreign material, irrigate with copious clean water boiled and cooled if possible, and dress without reintroducing fingers. Debride hanging dead tissue only if trained — otherwise cover and evacuate.\n\nBurns: stop burning process with cool clean water not ice; cover with loose sterile or clean dressings; fluid losses scale with surface area — small children die faster.\n\nSplints immobilise along joints above and below fracture; check circulation after every wrap pass — blue fingers mean loosen now. Slings support collarbone and wrist patterns.\n\nFever after wound: infection sign — open dressing if safe, photograph smell colour if literate, increase fluids if drinking possible, and isolate patient to reduce epidemic spread in camp.\n\nThis entry is not a substitute for professional medical care when it exists.",
+  "problem": "Most people who die after battles, factory accidents, and kitchen slips do not die from the wound in the first minute \u2014 they die from blood loss hours later, from infection days later, or from fever because someone packed dirt into a laceration. Modern emergency departments hide this truth behind ambulances and antibiotics; remove the infrastructure and the same bodies obey the same physiology.\n\nThe first aid problem is triage under uncertainty: you cannot image every fracture, culture every wound, or wait for a sterile field. You must decide which injuries demand immediate motionless packaging, which can walk, and which will declare themselves later with swelling lines up the limb. Wrong triage wastes the one person who could fetch water; right triage is a moral skill learned by drill.\n\nThe wound-care problem is contamination control without sterile industry: boiled cloth is not operating-theatre sterile but beats unwashed shirt; honey and sugar have osmotic effects on some wounds but are not universal magic; pressure dressings stop venous ooze but do not fix arterial jets. Teaching people what they cannot fix \u2014 open abdomens, skull depressions with changing consciousness, partial amputations with pale stumps \u2014 is as important as teaching pressure bandages, because false confidence kills.\n\nContraindications: do not apply tourniquets for minor bleeding \u2014 ischaemia damages limbs; do not pour alcohol into deep cavities; do not reduce fractures blindly if sensation is lost after manipulation. Overdose of pain relief is less common without drugs, but herbal toxicity is real. Sterile conditions for surgery are not reproduced by campfire ash \u2014 professional verification is required before use on a human being for any intervention beyond basic first aid and wound cleaning in non-sterile environments.",
+  "overview": "Bleeding control begins with direct pressure: gloved or clean-clothed hand on wound, add bulk dressing, elevate if not contraindicated. Arterial bright spurting may need a tourniquet wide and proximal \u2014 note time written on forehead tape culture. Release only in systems that can surgically salvage \u2014 in collapse, tourniquet means limb life versus life life; train that horror honestly.\n\nWound cleaning means remove visible foreign material, irrigate with copious clean water boiled and cooled if possible, and dress without reintroducing fingers. Debride hanging dead tissue only if trained \u2014 otherwise cover and evacuate.\n\nBurns: stop burning process with cool clean water not ice; cover with loose sterile or clean dressings; fluid losses scale with surface area \u2014 small children die faster.\n\nSplints immobilise along joints above and below fracture; check circulation after every wrap pass \u2014 blue fingers mean loosen now. Slings support collarbone and wrist patterns.\n\nFever after wound: infection sign \u2014 open dressing if safe, photograph smell colour if literate, increase fluids if drinking possible, and isolate patient to reduce epidemic spread in camp.\n\nThis entry is not a substitute for professional medical care when it exists.",
   "principles": [
     {
       "name": "ABC mindset",
-      "explanation": "Airway, breathing, circulation — unconscious patient may need positioning before wound play."
+      "explanation": "Airway, breathing, circulation \u2014 unconscious patient may need positioning before wound play."
     },
     {
       "name": "Pressure before tourniquet",
@@ -49,7 +49,7 @@
     },
     {
       "name": "Infection sentinels",
-      "explanation": "Rising pain after initial relief, spreading redness, red streaks, fever — escalate isolation and care plans."
+      "explanation": "Rising pain after initial relief, spreading redness, red streaks, fever \u2014 escalate isolation and care plans."
     }
   ],
   "components": [
@@ -75,7 +75,7 @@
       "function": "Washes debris from wounds",
       "position": "Clean area",
       "madeFrom": "Boiled water, catheter tip syringe",
-      "criticalNote": "Pressure irrigation drives bacteria deeper if uncontrolled — training matters"
+      "criticalNote": "Pressure irrigation drives bacteria deeper if uncontrolled \u2014 training matters"
     },
     {
       "id": "burn",
@@ -142,7 +142,7 @@
         "gloves",
         "mask"
       ],
-      "warningNote": "Moving spinal injury without stabilisation can paralyse — hold head inline if mechanism fits"
+      "warningNote": "Moving spinal injury without stabilisation can paralyse \u2014 hold head inline if mechanism fits"
     },
     {
       "order": 2,
@@ -151,16 +151,16 @@
       "prerequisiteTools": [
         "dressings"
       ],
-      "warningNote": "Bloodborne pathogens — assume infection risk"
+      "warningNote": "Bloodborne pathogens \u2014 assume infection risk"
     },
     {
       "order": 3,
       "title": "If arterial and uncontrolled, apply wide tourniquet and mark time",
-      "description": "Place proximal; tighten until bleeding stops; never narrow cord — nerve injury.",
+      "description": "Place proximal; tighten until bleeding stops; never narrow cord \u2014 nerve injury.",
       "prerequisiteTools": [
         "commercial tourniquet or windlass strap"
       ],
-      "warningNote": "Tourniquet pain is severe — psychological support; limb loss risk is real"
+      "warningNote": "Tourniquet pain is severe \u2014 psychological support; limb loss risk is real"
     },
     {
       "order": 4,
@@ -170,7 +170,7 @@
         "forceps",
         "litre bottles"
       ],
-      "warningNote": "Do not irrigate embedded objects that tamponade vessels — stabilise and transport"
+      "warningNote": "Do not irrigate embedded objects that tamponade vessels \u2014 stabilise and transport"
     },
     {
       "order": 5,
@@ -180,7 +180,7 @@
         "watch",
         "scissors"
       ],
-      "warningNote": "Scissors near skin in trembling hands — cut along long axis away from body"
+      "warningNote": "Scissors near skin in trembling hands \u2014 cut along long axis away from body"
     }
   ],
   "history": [
@@ -202,50 +202,54 @@
     }
   ],
   "inventors": [],
-  "impact": "First aid is the technology of buying time until better care exists — or of accepting limits honestly when it never will.\n\nEvery settlement should rehearse it quarterly.",
+  "impact": "First aid is the technology of buying time until better care exists \u2014 or of accepting limits honestly when it never will.\n\nEvery settlement should rehearse it quarterly.",
   "images": [],
   "videos": [],
   "externalLinks": [
     {
       "id": "who-injuries",
-      "title": "WHO — Injuries",
+      "title": "WHO \u2014 Injuries",
       "url": "https://www.who.int/health-topics/injuries"
     },
     {
       "id": "who-burns",
-      "title": "WHO — Burns fact sheet",
+      "title": "WHO \u2014 Burns fact sheet",
       "url": "https://www.who.int/news-room/fact-sheets/detail/burns"
     }
   ],
   "lastUpdated": "2026-04-12",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [
-      "Contraindications: suspected spinal injury with neuro deficit — immobilise spine before movement; crush injury compartments — do not apply tight circumferential wraps without monitoring.",
-      "Overdose risk: minimal for non-drug interventions; if using any stocked analgesic, follow printed dosing — never double-dose children by adult scales.",
-      "Sterility: field dressings are cleaner than dirt, not sterile — deep penetrating wounds need professional care when available.",
+      "Contraindications: suspected spinal injury with neuro deficit \u2014 immobilise spine before movement; crush injury compartments \u2014 do not apply tight circumferential wraps without monitoring.",
+      "Overdose risk: minimal for non-drug interventions; if using any stocked analgesic, follow printed dosing \u2014 never double-dose children by adult scales.",
+      "Sterility: field dressings are cleaner than dirt, not sterile \u2014 deep penetrating wounds need professional care when available.",
       "Professional verification is required before use on a human being. This is especially important for any procedure beyond basic first aid, public-health triage, and non-invasive wound cleaning."
     ],
     "sources": [
       {
         "id": "who-injuries",
-        "title": "WHO — Injuries",
+        "title": "WHO \u2014 Injuries",
         "url": "https://www.who.int/health-topics/injuries",
         "type": "institution",
         "note": "Global injury prevention and care context"
       },
       {
         "id": "who-burns",
-        "title": "WHO — Burns",
+        "title": "WHO \u2014 Burns",
         "url": "https://www.who.int/news-room/fact-sheets/detail/burns",
         "type": "institution",
         "note": "Burn first aid and prevention"
       },
       {
         "id": "icrc-health",
-        "title": "ICRC — Health",
+        "title": "ICRC \u2014 Health",
         "url": "https://www.icrc.org/en/what-we-do/health",
         "type": "institution",
         "note": "International Red Cross and Red Crescent Movement health programmes and standards context"

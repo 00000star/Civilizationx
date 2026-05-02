@@ -11,12 +11,12 @@
     "steel-production"
   ],
   "unlocks": [],
-  "problem": "Walking scales poorly with distance for time-sensitive tasks; horses cost feed and care. Mid-industrial societies needed a personal vehicle that uses human food calories directly without animal overhead. Early velocipedes were heavy and bone-shaking; the safety bicycle with similar-size wheels and chain drive solved stability and gearing, enabling mass adoption.\n\nThe bicycle problem is lightweight structure plus reliable rolling bearings plus a drivetrain that tolerates grit. It couples ergonomics (crank length, saddle height) with materials (thin-walled steel tubing) and manufacturing precision (interchangeable threads).\n\nBicycles also democratised mobility for working classes and reshaped women's clothing and urban geography — social effects as large as engineering ones.",
-  "overview": "A modern bicycle couples a diamond or compact frame for triangular rigidity with two wheels on axles containing ball bearings. The crankset drives a chainring; a roller chain transmits torque to a rear sprocket on a hub that may include a freewheel allowing coasting. Steering uses a fork with rake and trail geometry that provides self-centering tendency at speed.\n\nBrakes evolved from spoon brakes on tyres to calliper rim brakes and disc brakes; each trades complexity for wet-weather performance. Tyres are pneumatic for low rolling resistance and bump absorption; they require airtight rims and valves.\n\nGearing uses derailleurs or internal hubs to match human cadence to terrain. Tensioners and limit screws prevent chain drop; alignment of hanger faces matters to sub-millimetre scales.\n\nManufacturing depends on steel tubing, lugged or welded joints, and heat-treated cranks — the bicycle is an early triumph of thin-walled metal and precision threads.",
+  "problem": "Walking scales poorly with distance for time-sensitive tasks; horses cost feed and care. Mid-industrial societies needed a personal vehicle that uses human food calories directly without animal overhead. Early velocipedes were heavy and bone-shaking; the safety bicycle with similar-size wheels and chain drive solved stability and gearing, enabling mass adoption.\n\nThe bicycle problem is lightweight structure plus reliable rolling bearings plus a drivetrain that tolerates grit. It couples ergonomics (crank length, saddle height) with materials (thin-walled steel tubing) and manufacturing precision (interchangeable threads).\n\nBicycles also democratised mobility for working classes and reshaped women's clothing and urban geography \u2014 social effects as large as engineering ones.",
+  "overview": "A modern bicycle couples a diamond or compact frame for triangular rigidity with two wheels on axles containing ball bearings. The crankset drives a chainring; a roller chain transmits torque to a rear sprocket on a hub that may include a freewheel allowing coasting. Steering uses a fork with rake and trail geometry that provides self-centering tendency at speed.\n\nBrakes evolved from spoon brakes on tyres to calliper rim brakes and disc brakes; each trades complexity for wet-weather performance. Tyres are pneumatic for low rolling resistance and bump absorption; they require airtight rims and valves.\n\nGearing uses derailleurs or internal hubs to match human cadence to terrain. Tensioners and limit screws prevent chain drop; alignment of hanger faces matters to sub-millimetre scales.\n\nManufacturing depends on steel tubing, lugged or welded joints, and heat-treated cranks \u2014 the bicycle is an early triumph of thin-walled metal and precision threads.",
   "principles": [
     {
       "name": "Rolling resistance versus aero drag",
-      "explanation": "At low speeds, rolling losses dominate; at high speeds, aerodynamic drag dominates — shaping rider position matters more than marginal bearing gains at racing speeds."
+      "explanation": "At low speeds, rolling losses dominate; at high speeds, aerodynamic drag dominates \u2014 shaping rider position matters more than marginal bearing gains at racing speeds."
     },
     {
       "name": "Bicycle self-stability",
@@ -46,7 +46,7 @@
       "function": "Steers front wheel with defined rake/trail",
       "position": "Front",
       "madeFrom": "Steel or aluminium legs, steerer tube",
-      "criticalNote": "Indexed bearings must be preloaded correctly — too loose wobbles, too tight binds"
+      "criticalNote": "Indexed bearings must be preloaded correctly \u2014 too loose wobbles, too tight binds"
     },
     {
       "id": "wheels",
@@ -62,7 +62,7 @@
       "function": "Converts leg torque to rear wheel rotation",
       "position": "Chain path from chainring to cassette",
       "madeFrom": "Steel chain, hardened teeth, derailleur linkage",
-      "criticalNote": "Cross-chaining accelerates wear — avoid extreme combos"
+      "criticalNote": "Cross-chaining accelerates wear \u2014 avoid extreme combos"
     },
     {
       "id": "brakes",
@@ -70,7 +70,7 @@
       "function": "Dissipates kinetic energy as heat",
       "position": "Rim or rotor at wheels",
       "madeFrom": "Aluminium rims, rubber pads, steel cables, hydraulic fluid later",
-      "criticalNote": "Wet rims reduce friction — test before descending"
+      "criticalNote": "Wet rims reduce friction \u2014 test before descending"
     }
   ],
   "rawMaterials": [
@@ -101,7 +101,7 @@
         "plant oils short-term"
       ],
       "spaceAlternatives": "PFPE greases for vacuum-adjacent weird environments",
-      "processingRequired": "Clean before relube — solvent risks to seals"
+      "processingRequired": "Clean before relube \u2014 solvent risks to seals"
     }
   ],
   "buildSteps": [
@@ -113,7 +113,7 @@
         "frame jig",
         "TIG welder or oxy torch for brazing"
       ],
-      "warningNote": "Welding fumes — ventilation; UV eye damage"
+      "warningNote": "Welding fumes \u2014 ventilation; UV eye damage"
     },
     {
       "order": 2,
@@ -143,7 +143,7 @@
         "alignment gauge",
         "cable cutters"
       ],
-      "warningNote": "Front derailleur can throw chain into spokes — set limits conservatively"
+      "warningNote": "Front derailleur can throw chain into spokes \u2014 set limits conservatively"
     },
     {
       "order": 5,
@@ -153,7 +153,7 @@
         "torque wrench",
         "multitool"
       ],
-      "warningNote": "Always wear helmet on public roads — modern injury data is unambiguous"
+      "warningNote": "Always wear helmet on public roads \u2014 modern injury data is unambiguous"
     }
   ],
   "history": [
@@ -178,22 +178,26 @@
   "inventors": [
     {
       "name": "John Kemp Starley",
-      "contribution": "Rover safety bicycle — chain drive and stable wheel sizing",
+      "contribution": "Rover safety bicycle \u2014 chain drive and stable wheel sizing",
       "years": "1854-1901",
       "nationality": "British"
     }
   ],
-  "impact": "Bicycles improved urban worker mobility, enabled rural postal routes, and became sport infrastructure. They previewed mass personal mechanised transport and still outperform many vehicles on energy per kilometre.\n\nIn recovery scenarios, bicycles are rebuildable with a lathe, welder, and wire wheel skills — a mid-tier industrial product, not stone-age.",
+  "impact": "Bicycles improved urban worker mobility, enabled rural postal routes, and became sport infrastructure. They previewed mass personal mechanised transport and still outperform many vehicles on energy per kilometre.\n\nIn recovery scenarios, bicycles are rebuildable with a lathe, welder, and wire wheel skills \u2014 a mid-tier industrial product, not stone-age.",
   "images": [],
   "videos": [],
   "externalLinks": [
     {
       "id": "britannica-bicycle",
-      "title": "Encyclopaedia Britannica — bicycle",
+      "title": "Encyclopaedia Britannica \u2014 bicycle",
       "url": "https://www.britannica.com/technology/bicycle"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -202,14 +206,14 @@
     "sources": [
       {
         "id": "src-cdc-active",
-        "title": "CDC — Physical activity basics",
+        "title": "CDC \u2014 Physical activity basics",
         "url": "https://www.cdc.gov/physical-activity-basics/about/index.html",
         "type": "institution",
         "note": "Health framing for human-powered transport"
       },
       {
         "id": "src-wiki-bicycle",
-        "title": "Wikipedia — Bicycle",
+        "title": "Wikipedia \u2014 Bicycle",
         "url": "https://en.wikipedia.org/wiki/Bicycle",
         "type": "wikipedia",
         "note": "Mechanics, history, and safety culture references"

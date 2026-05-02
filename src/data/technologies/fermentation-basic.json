@@ -161,12 +161,16 @@
   "externalLinks": [
     {
       "id": "wiki-fermentation-basic",
-      "title": "Wikipedia — Fermentation (Basic)",
+      "title": "Wikipedia \u2014 Fermentation (Basic)",
       "url": "https://en.wikipedia.org/wiki/Fermentation_(Basic)"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -175,7 +179,7 @@
     "sources": [
       {
         "id": "wiki-fermentation",
-        "title": "Wikipedia — Fermentation",
+        "title": "Wikipedia \u2014 Fermentation",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Fermentation"
       },
@@ -187,7 +191,7 @@
       },
       {
         "id": "mcgee",
-        "title": "McGee — On Food and Cooking (fermentation sections)",
+        "title": "McGee \u2014 On Food and Cooking (fermentation sections)",
         "type": "book"
       }
     ]

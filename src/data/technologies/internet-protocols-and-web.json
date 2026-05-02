@@ -1,7 +1,7 @@
 {
   "id": "internet-protocols-and-web",
   "name": "Internet Protocols and the World Wide Web",
-  "tagline": "TCP/IP internetworking plus HTTP, HTML, TLS, and DNS — packets, names, and documents on one stack",
+  "tagline": "TCP/IP internetworking plus HTTP, HTML, TLS, and DNS \u2014 packets, names, and documents on one stack",
   "category": "communication",
   "era": "21st-century",
   "difficulty": 5,
@@ -14,16 +14,16 @@
   "unlocks": [
     "distributed-training"
   ],
-  "problem": "Circuit-switched telephony reserves a wire’s capacity whether you speak or not; data traffic is bursty — silence on a video call should not consume a dedicated copper pair across a continent. Packet networks chop information into self-describing chunks routers forward independently; TCP adds reliability and congestion control at the ends while IP provides best-effort delivery — a deliberately dumb network with smart edges.\n\nHumans still need names, not only numbers; documents, not only bytes; trust on hostile paths. The web stacks HTTP on TLS on DNS on BGP-routed IP — each layer introduces failure modes: poisoned caches, forged certificates, mixed content, and economies that monetise attention.\n\nScaling demanded hierarchical addressing, content delivery networks, and databases that admit eventual consistency — latency engineering disguised as sociology because where you place a cache shapes who loads faster during crises.\n\nThe political problem equals the technical: centralised platforms, censorship, and misinformation ride the same protocols that host scientific collaboration and disaster coordination — neutrality is a design stance, not a default law of nature.",
-  "overview": "Hosts wrap segments in IP packets; routers longest-prefix-match destinations updated by interior and exterior routing protocols. Ethernet carries frames on LANs; MPLS labels speed carrier cores; VPNs tunnel across untrusted coffee-shop Wi-Fi. TCP’s congestion control backs off when loss signals overload; QUIC merges encryption with UDP-based transport for the web’s dominant flows.\n\nBrowsers resolve names (often over encrypted DNS), negotiate TLS with certificate chains, then request objects with HTTP verbs and cache semantics. HTML structures documents; CSS styles; JavaScript executes client-side logic in sandboxes. CDNs cache static assets near users; origin servers remain authoritative.\n\nParallel stacks run email (SMTP/IMAP), calendars, and voice — the internet is families of protocols, not only the web. Accessibility and internationalisation encode ethics as measurable constraints; archiving fights link rot because the web forgets by default.\n\nOperations teams live in dashboards of latency, error budgets, and certificate expiry — maintenance never ended when dial-up died.",
+  "problem": "Circuit-switched telephony reserves a wire\u2019s capacity whether you speak or not; data traffic is bursty \u2014 silence on a video call should not consume a dedicated copper pair across a continent. Packet networks chop information into self-describing chunks routers forward independently; TCP adds reliability and congestion control at the ends while IP provides best-effort delivery \u2014 a deliberately dumb network with smart edges.\n\nHumans still need names, not only numbers; documents, not only bytes; trust on hostile paths. The web stacks HTTP on TLS on DNS on BGP-routed IP \u2014 each layer introduces failure modes: poisoned caches, forged certificates, mixed content, and economies that monetise attention.\n\nScaling demanded hierarchical addressing, content delivery networks, and databases that admit eventual consistency \u2014 latency engineering disguised as sociology because where you place a cache shapes who loads faster during crises.\n\nThe political problem equals the technical: centralised platforms, censorship, and misinformation ride the same protocols that host scientific collaboration and disaster coordination \u2014 neutrality is a design stance, not a default law of nature.",
+  "overview": "Hosts wrap segments in IP packets; routers longest-prefix-match destinations updated by interior and exterior routing protocols. Ethernet carries frames on LANs; MPLS labels speed carrier cores; VPNs tunnel across untrusted coffee-shop Wi-Fi. TCP\u2019s congestion control backs off when loss signals overload; QUIC merges encryption with UDP-based transport for the web\u2019s dominant flows.\n\nBrowsers resolve names (often over encrypted DNS), negotiate TLS with certificate chains, then request objects with HTTP verbs and cache semantics. HTML structures documents; CSS styles; JavaScript executes client-side logic in sandboxes. CDNs cache static assets near users; origin servers remain authoritative.\n\nParallel stacks run email (SMTP/IMAP), calendars, and voice \u2014 the internet is families of protocols, not only the web. Accessibility and internationalisation encode ethics as measurable constraints; archiving fights link rot because the web forgets by default.\n\nOperations teams live in dashboards of latency, error budgets, and certificate expiry \u2014 maintenance never ended when dial-up died.",
   "principles": [
     {
       "name": "End-to-end argument",
-      "explanation": "Smart edges, dumb network — reliability and semantics belong where application knowledge lives unless performance forces middlebox exceptions."
+      "explanation": "Smart edges, dumb network \u2014 reliability and semantics belong where application knowledge lives unless performance forces middlebox exceptions."
     },
     {
       "name": "Longest-prefix routing",
-      "explanation": "Aggregating routes shrinks tables but can blackhole if summaries are wrong — operations risk as much as code risk."
+      "explanation": "Aggregating routes shrinks tables but can blackhole if summaries are wrong \u2014 operations risk as much as code risk."
     },
     {
       "name": "Layered security",
@@ -31,7 +31,7 @@
     },
     {
       "name": "Same-origin policy",
-      "explanation": "Isolates scripts unless explicitly relaxed — cornerstone of browser security against cross-site data theft."
+      "explanation": "Isolates scripts unless explicitly relaxed \u2014 cornerstone of browser security against cross-site data theft."
     }
   ],
   "components": [
@@ -110,13 +110,13 @@
   "buildSteps": [
     {
       "order": 1,
-      "title": "Draw your site’s trust boundaries on one whiteboard",
+      "title": "Draw your site\u2019s trust boundaries on one whiteboard",
       "description": "List users, browsers, TLS terminators, application servers, databases, and admin laptops. Mark where secrets live and who may touch them. If the drawing looks hairy, simplify topology before buying hardware.",
       "prerequisiteTools": [
         "whiteboard",
         "markers"
       ],
-      "warningNote": "Mixed HTTP/HTTPS pages leak cookies — draw redirects explicitly"
+      "warningNote": "Mixed HTTP/HTTPS pages leak cookies \u2014 draw redirects explicitly"
     },
     {
       "order": 2,
@@ -131,7 +131,7 @@
     {
       "order": 3,
       "title": "Serve a minimal working site over TLS first",
-      "description": "Static HTML proves DNS, TLS, and CDN paths. Add application complexity only after observability exists — logs, metrics, traces — so regressions surface as graphs, not angry emails.",
+      "description": "Static HTML proves DNS, TLS, and CDN paths. Add application complexity only after observability exists \u2014 logs, metrics, traces \u2014 so regressions surface as graphs, not angry emails.",
       "prerequisiteTools": [
         "web server",
         "log aggregation"
@@ -141,7 +141,7 @@
     {
       "order": 4,
       "title": "Threat-model realistic adversaries",
-      "description": "Ask what a bored teenager, a thief with a stolen laptop, and a nation-state each gain from attacking you — implement TLS, secure headers, dependency updates, and backups proportional to actual assets.",
+      "description": "Ask what a bored teenager, a thief with a stolen laptop, and a nation-state each gain from attacking you \u2014 implement TLS, secure headers, dependency updates, and backups proportional to actual assets.",
       "prerequisiteTools": [
         "security checklist"
       ],
@@ -202,7 +202,7 @@
       "nationality": "British"
     }
   ],
-  "impact": "The web made the internet legible to billions — and concentrated attention economics into a few dashboards. It is simultaneously library, marketplace, and battleground.\n\nPreserving it requires archiving, open standards, and constant security patching — eternal maintenance, not a finished monument.",
+  "impact": "The web made the internet legible to billions \u2014 and concentrated attention economics into a few dashboards. It is simultaneously library, marketplace, and battleground.\n\nPreserving it requires archiving, open standards, and constant security patching \u2014 eternal maintenance, not a finished monument.",
   "images": [],
   "videos": [
     {
@@ -215,7 +215,7 @@
   "externalLinks": [
     {
       "id": "w3c",
-      "title": "W3C — web standards",
+      "title": "W3C \u2014 web standards",
       "url": "https://www.w3.org/"
     },
     {
@@ -225,6 +225,10 @@
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -233,21 +237,21 @@
     "sources": [
       {
         "id": "src-rfc9293",
-        "title": "IETF RFC 9293 — Transmission Control Protocol (TCP)",
+        "title": "IETF RFC 9293 \u2014 Transmission Control Protocol (TCP)",
         "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
         "type": "standard",
         "note": "Authoritative standards-track specification"
       },
       {
         "id": "src-rfc793",
-        "title": "IETF RFC 793 — TCP (historic)",
+        "title": "IETF RFC 793 \u2014 TCP (historic)",
         "url": "https://www.rfc-editor.org/info/rfc793",
         "type": "standard",
         "note": "Classic reference retained for historical comparison"
       },
       {
         "id": "src-wiki-internet",
-        "title": "Wikipedia — Internet",
+        "title": "Wikipedia \u2014 Internet",
         "url": "https://en.wikipedia.org/wiki/Internet",
         "type": "wikipedia",
         "note": "Architecture survey with citations to standards bodies"

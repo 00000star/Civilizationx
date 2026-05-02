@@ -13,12 +13,12 @@
   "unlocks": [
     "communication-satellites"
   ],
-  "problem": "Humans are not born with wings. Balloons drift; dirigibles carry large envelopes and hydrogen risks. Fixed-wing aircraft solve directed, rapid travel over obstacles by generating aerodynamic lift with wings moving through air — trading fuel for speed and access.\n\nThe obstacles are simultaneous: structures must be light yet strong; engines must produce power at altitude with thinning air; controls must keep the craft stable and controllable across flight regimes; and manufacturing must hold airfoil and incidence tolerances or stall characteristics become lethal.\n\nWeather adds a systems layer: icing destroys lift and blocks pitot probes; turbulence couples structural fatigue. Pilot training and instrumentation (where glassmaking and optics feed in) are inseparable from the machine.",
-  "overview": "A conventional aeroplane includes wings with airfoil sections tuned for cruise lift-to-drag ratio; a fuselage housing payload, fuel, and systems; empennage surfaces providing pitch (elevator/stabiliser) and yaw (rudder) stability and control; and roll control via ailerons or spoilers. Propulsion may be tractor or pusher propellers, turboprops, or jet engines — this entry emphasises propeller-driven IC-engine lineage for continuity with prior nodes.\n\nPrimary structure uses aluminium alloys or composites; flight loads path from wings through spars into fuselage frames. Control surfaces actuate via cables, pushrods, or fly-by-wire. Fuel tanks are baffled to prevent slosh shifting centre of gravity dangerously.\n\nAirspeed measurement uses pitot-static systems feeding instruments (mechanical or glass-faced). Stall warning devices alert when angle of attack approaches critical values where flow separation collapses lift.\n\nCertification concepts (where civil aviation authorities exist) encode crashworthiness, fire protection, and maintenance schedules — the technology is legally coupled to governance.",
+  "problem": "Humans are not born with wings. Balloons drift; dirigibles carry large envelopes and hydrogen risks. Fixed-wing aircraft solve directed, rapid travel over obstacles by generating aerodynamic lift with wings moving through air \u2014 trading fuel for speed and access.\n\nThe obstacles are simultaneous: structures must be light yet strong; engines must produce power at altitude with thinning air; controls must keep the craft stable and controllable across flight regimes; and manufacturing must hold airfoil and incidence tolerances or stall characteristics become lethal.\n\nWeather adds a systems layer: icing destroys lift and blocks pitot probes; turbulence couples structural fatigue. Pilot training and instrumentation (where glassmaking and optics feed in) are inseparable from the machine.",
+  "overview": "A conventional aeroplane includes wings with airfoil sections tuned for cruise lift-to-drag ratio; a fuselage housing payload, fuel, and systems; empennage surfaces providing pitch (elevator/stabiliser) and yaw (rudder) stability and control; and roll control via ailerons or spoilers. Propulsion may be tractor or pusher propellers, turboprops, or jet engines \u2014 this entry emphasises propeller-driven IC-engine lineage for continuity with prior nodes.\n\nPrimary structure uses aluminium alloys or composites; flight loads path from wings through spars into fuselage frames. Control surfaces actuate via cables, pushrods, or fly-by-wire. Fuel tanks are baffled to prevent slosh shifting centre of gravity dangerously.\n\nAirspeed measurement uses pitot-static systems feeding instruments (mechanical or glass-faced). Stall warning devices alert when angle of attack approaches critical values where flow separation collapses lift.\n\nCertification concepts (where civil aviation authorities exist) encode crashworthiness, fire protection, and maintenance schedules \u2014 the technology is legally coupled to governance.",
   "principles": [
     {
       "name": "Lift generation",
-      "explanation": "Wings deflect airflow and sustain lower upper-surface pressure in subsonic flight via circulation and boundary-layer physics — angle of attack trades lift for proximity to stall."
+      "explanation": "Wings deflect airflow and sustain lower upper-surface pressure in subsonic flight via circulation and boundary-layer physics \u2014 angle of attack trades lift for proximity to stall."
     },
     {
       "name": "Thrust required equals drag",
@@ -30,7 +30,7 @@
     },
     {
       "name": "V-n diagram (conceptual)",
-      "explanation": "Structural strength is certified across airspeed and gust combinations — exceeding limits risks aileron reversal or wing failure."
+      "explanation": "Structural strength is certified across airspeed and gust combinations \u2014 exceeding limits risks aileron reversal or wing failure."
     }
   ],
   "components": [
@@ -48,7 +48,7 @@
       "function": "Carries occupants, payload, and integrates systems",
       "position": "Centre body",
       "madeFrom": "Semi-monocoque aluminium, composite barrels modern",
-      "criticalNote": "Pressurisation cycles fatigue fuselage — inspection programs exist for a reason"
+      "criticalNote": "Pressurisation cycles fatigue fuselage \u2014 inspection programs exist for a reason"
     },
     {
       "id": "empennage",
@@ -64,7 +64,7 @@
       "function": "Produces thrust",
       "position": "Nose or wing-mounted nacelles",
       "madeFrom": "IC engine or turbine; constant-speed propeller governor",
-      "criticalNote": "Torque and P-factor demand rudder input on climb — training issue"
+      "criticalNote": "Torque and P-factor demand rudder input on climb \u2014 training issue"
     },
     {
       "id": "landing-gear",
@@ -72,7 +72,7 @@
       "function": "Supports ground loads; retracts to reduce drag on some types",
       "position": "Tricycle or tailwheel",
       "madeFrom": "Steel struts, oleo shocks, tyres",
-      "criticalNote": "Ground resonance in helicopters differs — fixed-wing risks include shimmy if caster geometry wrong"
+      "criticalNote": "Ground resonance in helicopters differs \u2014 fixed-wing risks include shimmy if caster geometry wrong"
     },
     {
       "id": "instruments",
@@ -80,7 +80,7 @@
       "function": "Provides attitude, airspeed, altitude references",
       "position": "Panel and windscreen",
       "madeFrom": "Glass or polycarbonate windscreen; mechanical or glass cockpit displays",
-      "criticalNote": "Bird strikes test glazing — lamination improves post-impact vision retention"
+      "criticalNote": "Bird strikes test glazing \u2014 lamination improves post-impact vision retention"
     }
   ],
   "rawMaterials": [
@@ -90,7 +90,7 @@
       "earthLocations": [
         "Global smelters near cheap electricity"
       ],
-      "spaceAlternatives": "Not applicable to Earth atmosphere craft — launch vehicles overlap materials science differently",
+      "spaceAlternatives": "Not applicable to Earth atmosphere craft \u2014 launch vehicles overlap materials science differently",
       "processingRequired": "Solution treat, quench, age; alclad corrosion protection"
     },
     {
@@ -99,7 +99,7 @@
       "earthLocations": [
         "Refineries producing AVGAS or Jet-A depending on engine"
       ],
-      "spaceAlternatives": "Synthetic fuels — drop-in testing required per engine STC",
+      "spaceAlternatives": "Synthetic fuels \u2014 drop-in testing required per engine STC",
       "processingRequired": "Strict water exclusion; filtration at wing tanks"
     },
     {
@@ -109,7 +109,7 @@
         "Speciality glassmakers",
         "polycarbonate sheet plants"
       ],
-      "spaceAlternatives": "Sapphire for extreme environments — niche",
+      "spaceAlternatives": "Sapphire for extreme environments \u2014 niche",
       "processingRequired": "Tempering, lamination, anti-ice coatings"
     }
   ],
@@ -121,17 +121,17 @@
       "prerequisiteTools": [
         "structural analysis software or scaled testing"
       ],
-      "warningNote": "Homebuilders skipping flutter analysis die — non-negotiable engineering step"
+      "warningNote": "Homebuilders skipping flutter analysis die \u2014 non-negotiable engineering step"
     },
     {
       "order": 2,
       "title": "Fabricate wing spar and ribs",
-      "description": "Jig-build to wing twist design; drill rivet lines with ream/fit discipline; seal fuel tanks if integral — leak test with safe fluid.",
+      "description": "Jig-build to wing twist design; drill rivet lines with ream/fit discipline; seal fuel tanks if integral \u2014 leak test with safe fluid.",
       "prerequisiteTools": [
         "rivet gun",
         "jig frames"
       ],
-      "warningNote": "Choked vent lines collapse tanks in climb — vent sizing is safety"
+      "warningNote": "Choked vent lines collapse tanks in climb \u2014 vent sizing is safety"
     },
     {
       "order": 3,
@@ -141,7 +141,7 @@
         "tensiometer",
         "protractor"
       ],
-      "warningNote": "Reversed aileron cables discovered only at rotation — checklist culture prevents"
+      "warningNote": "Reversed aileron cables discovered only at rotation \u2014 checklist culture prevents"
     },
     {
       "order": 4,
@@ -151,7 +151,7 @@
         "torque wrench",
         "fireproof sealants"
       ],
-      "warningNote": "Exhaust leaks near cowl — CO in cabin; test with detectors"
+      "warningNote": "Exhaust leaks near cowl \u2014 CO in cabin; test with detectors"
     },
     {
       "order": 5,
@@ -161,7 +161,7 @@
         "radio",
         "flight test cards"
       ],
-      "warningNote": "Spin recovery training before intentional spins — historically lethal for untrained"
+      "warningNote": "Spin recovery training before intentional spins \u2014 historically lethal for untrained"
     }
   ],
   "history": [
@@ -173,7 +173,7 @@
     },
     {
       "year": 1919,
-      "event": "Alcock and Brown complete the first non-stop transatlantic flight in a modified Vickers Vimy — proving long-range potential.",
+      "event": "Alcock and Brown complete the first non-stop transatlantic flight in a modified Vickers Vimy \u2014 proving long-range potential.",
       "location": "Atlantic Ocean",
       "person": "John Alcock, Arthur Brown"
     },
@@ -198,17 +198,21 @@
       "nationality": "American"
     }
   ],
-  "impact": "Aviation shrank perceived distance, enabled global tourism and cargo, and transformed warfare reconnaissance and logistics. It also threaded noise contours around airports and contrail radiative effects into climate discussions — technologies have planetary footprints.\n\nFor recovery, aircraft are late-stack: you need light alloys, precise machining, fuels, and institutional flight test discipline.",
+  "impact": "Aviation shrank perceived distance, enabled global tourism and cargo, and transformed warfare reconnaissance and logistics. It also threaded noise contours around airports and contrail radiative effects into climate discussions \u2014 technologies have planetary footprints.\n\nFor recovery, aircraft are late-stack: you need light alloys, precise machining, fuels, and institutional flight test discipline.",
   "images": [],
   "videos": [],
   "externalLinks": [
     {
       "id": "faa-handbooks",
-      "title": "FAA — Pilot's Handbook of Aeronautical Knowledge",
+      "title": "FAA \u2014 Pilot's Handbook of Aeronautical Knowledge",
       "url": "https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -224,7 +228,7 @@
       },
       {
         "id": "src-wiki-aircraft",
-        "title": "Wikipedia — Fixed-wing aircraft",
+        "title": "Wikipedia \u2014 Fixed-wing aircraft",
         "url": "https://en.wikipedia.org/wiki/Fixed-wing_aircraft",
         "type": "wikipedia",
         "note": "Aerodynamics and structures introduction"

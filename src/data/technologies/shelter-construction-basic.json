@@ -49,8 +49,8 @@
     "window-glazing",
     "workshop-building"
   ],
-  "problem": "Humans tolerate a narrow comfort band without clothing and fire support. Wind strips convective heat; rain destroys insulation; sun causes dehydration; predators exploit sleeping vulnerability. The basic shelter problem is creating a bounded microclimate: reducing wind speed, shedding precipitation, reflecting radiant heat from fire, and separating occupants from damp ground.\n\nThis is not aesthetics — it is thermodynamics and hygiene. Raised sleeping platforms reduce parasitic insect contact; overhangs keep fuel dry; smoke holes balance ventilation versus heat retention. In cold climates, small enclosed volumes around a fire are dramatically easier to heat than open camps.\n\nShelter also protects technology: cordage rots faster when constantly wet; clay dries unevenly in gusts; charcoal kilns need wind shields. A civilisation rebuilding needs the very first week to include reliable nightly shelter, not only because of comfort but because cognitive work (tool repair, planning) requires dry hands and stable light.\n\nIn space settlement, shelter is an absolute pressure and radiation barrier. On planetary surfaces, the 'basic' shelter involves managing regolith overburden to block solar and cosmic radiation — a direct analog to the primitive earth-berm or cave, but with different mass-per-area requirements (typically 3-5 meters of soil).",
-  "overview": "Basic shelters combine structural members, covering, and anchoring. Structural members are poles harvested green (flexible) or dry (stable), lashed into tripods, A-frames, or ridge-pole configurations. Coverings include thatch, bark sheets, hides, woven mats, and snow blocks (igloos) in polar contexts. Anchoring uses stakes, rocks, and tensioned cordage in guy lines.\n\nSite selection dominates performance: avoid 'widow-makers' (dead branches above), drainage channels, and natural wind tunnels. Position openings 90-180 degrees away from prevailing storms. In forests, standing dead timber (conifers) provides straight, dry ridge poles; willow and hazel provide flexible ribs for domed structures.\n\nLashing is the joining technology: the Clove Hitch starts and ends most wraps; Square Lashings resist shear in crossing poles; Diagonal Lashings pull mismatched angles together. Friction wraps must be seated under tension — natural cordage shrinks/stretches with humidity, requiring a daily 'tension walk'.\n\nThermal upgrades include reflective fire walls (stones, clay), partial burrows, and insulating layers of dry leaves (duff) or grass between inner and outer skins. A wicking barrier (rocks or dry bark) between the ground and bedding is mandatory to prevent conductive hypothermia.",
+  "problem": "Humans tolerate a narrow comfort band without clothing and fire support. Wind strips convective heat; rain destroys insulation; sun causes dehydration; predators exploit sleeping vulnerability. The basic shelter problem is creating a bounded microclimate: reducing wind speed, shedding precipitation, reflecting radiant heat from fire, and separating occupants from damp ground.\n\nThis is not aesthetics \u2014 it is thermodynamics and hygiene. Raised sleeping platforms reduce parasitic insect contact; overhangs keep fuel dry; smoke holes balance ventilation versus heat retention. In cold climates, small enclosed volumes around a fire are dramatically easier to heat than open camps.\n\nShelter also protects technology: cordage rots faster when constantly wet; clay dries unevenly in gusts; charcoal kilns need wind shields. A civilisation rebuilding needs the very first week to include reliable nightly shelter, not only because of comfort but because cognitive work (tool repair, planning) requires dry hands and stable light.\n\nIn space settlement, shelter is an absolute pressure and radiation barrier. On planetary surfaces, the 'basic' shelter involves managing regolith overburden to block solar and cosmic radiation \u2014 a direct analog to the primitive earth-berm or cave, but with different mass-per-area requirements (typically 3-5 meters of soil).",
+  "overview": "Basic shelters combine structural members, covering, and anchoring. Structural members are poles harvested green (flexible) or dry (stable), lashed into tripods, A-frames, or ridge-pole configurations. Coverings include thatch, bark sheets, hides, woven mats, and snow blocks (igloos) in polar contexts. Anchoring uses stakes, rocks, and tensioned cordage in guy lines.\n\nSite selection dominates performance: avoid 'widow-makers' (dead branches above), drainage channels, and natural wind tunnels. Position openings 90-180 degrees away from prevailing storms. In forests, standing dead timber (conifers) provides straight, dry ridge poles; willow and hazel provide flexible ribs for domed structures.\n\nLashing is the joining technology: the Clove Hitch starts and ends most wraps; Square Lashings resist shear in crossing poles; Diagonal Lashings pull mismatched angles together. Friction wraps must be seated under tension \u2014 natural cordage shrinks/stretches with humidity, requiring a daily 'tension walk'.\n\nThermal upgrades include reflective fire walls (stones, clay), partial burrows, and insulating layers of dry leaves (duff) or grass between inner and outer skins. A wicking barrier (rocks or dry bark) between the ground and bedding is mandatory to prevent conductive hypothermia.",
   "principles": [
     {
       "name": "Wind pressure and permeability",
@@ -58,7 +58,7 @@
     },
     {
       "name": "Stack effect ventilation",
-      "explanation": "Warm smoke rises; a high vent draws air low — without a low inlet you get backdraft and smoke pooling at sleeping height."
+      "explanation": "Warm smoke rises; a high vent draws air low \u2014 without a low inlet you get backdraft and smoke pooling at sleeping height."
     },
     {
       "name": "Ground conduction",
@@ -70,7 +70,7 @@
     },
     {
       "name": "Radiation attenuation (Space)",
-      "explanation": "In space, shelter mass (regolith) is used to slow down GCR (Galactic Cosmic Rays) and SPE (Solar Particle Events). 300g/cm² of material is the 'safe' field standard."
+      "explanation": "In space, shelter mass (regolith) is used to slow down GCR (Galactic Cosmic Rays) and SPE (Solar Particle Events). 300g/cm\u00b2 of material is the 'safe' field standard."
     }
   ],
   "components": [
@@ -80,7 +80,7 @@
       "function": "Spans opening, supports roof loads, defines shelter height",
       "position": "Highest horizontal member",
       "madeFrom": "Straight trunk (Pine, Spruce, Cedar) or lashed pair",
-      "criticalNote": "Check for heart rot — sound wood rings audibly when struck with a stone"
+      "criticalNote": "Check for heart rot \u2014 sound wood rings audibly when struck with a stone"
     },
     {
       "id": "rafters",
@@ -88,7 +88,7 @@
       "function": "Transfer roof covering loads to walls or ground",
       "position": "Sloped from ridge to ground or wall plate",
       "madeFrom": "Saplings or split wood",
-      "criticalNote": "Snow load regions need closer spacing (30cm) and steeper pitch (>45°)"
+      "criticalNote": "Snow load regions need closer spacing (30cm) and steeper pitch (>45\u00b0)"
     },
     {
       "id": "covering",
@@ -211,7 +211,7 @@
     }
   ],
   "inventors": [],
-  "impact": "Shelter converts climate into something humans can budget. It multiplies the effectiveness of fire and clothing, enables food storage trials, and supports infant survival — demographic growth tracks partly with housing quality.\n\nEngineering descendants include everything from cabin carpentry to insulated panels and HVAC. The Codex treats basic shelter as the first building code: site, structure, skin, vent.",
+  "impact": "Shelter converts climate into something humans can budget. It multiplies the effectiveness of fire and clothing, enables food storage trials, and supports infant survival \u2014 demographic growth tracks partly with housing quality.\n\nEngineering descendants include everything from cabin carpentry to insulated panels and HVAC. The Codex treats basic shelter as the first building code: site, structure, skin, vent.",
   "images": [
     {
       "id": "shelter-types",
@@ -233,11 +233,15 @@
   "externalLinks": [
     {
       "id": "fema-shelter-safety",
-      "title": "FEMA — emergency shelter guidance (modern framing)",
+      "title": "FEMA \u2014 emergency shelter guidance (modern framing)",
       "url": "https://www.ready.gov/shelter"
     }
   ],
   "lastUpdated": "2026-05-02",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -251,7 +255,7 @@
     "sources": [
       {
         "id": "src-osha",
-        "title": "OSHA — Construction Safety Standards",
+        "title": "OSHA \u2014 Construction Safety Standards",
         "url": "https://www.osha.gov/",
         "type": "institution",
         "note": "Fall protection and excavation safety rules relevant to berming and structural integrity"
@@ -265,7 +269,7 @@
       },
       {
         "id": "src-wiki-shelter",
-        "title": "Wikipedia — Shelter (ecology/human)",
+        "title": "Wikipedia \u2014 Shelter (ecology/human)",
         "url": "https://en.wikipedia.org/wiki/Shelter_(ecology)",
         "type": "wikipedia",
         "note": "General survey of shelter in biology and human history"

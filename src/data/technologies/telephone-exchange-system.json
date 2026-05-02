@@ -1,7 +1,7 @@
 {
   "id": "telephone-exchange-system",
   "name": "Telephone Exchange System",
-  "tagline": "Switched analogue speech networks — circuit establishment, ringing, billing, and human-scale switching fabrics",
+  "tagline": "Switched analogue speech networks \u2014 circuit establishment, ringing, billing, and human-scale switching fabrics",
   "category": "communication",
   "era": "industrial",
   "difficulty": 4,
@@ -13,24 +13,24 @@
   "unlocks": [
     "internet-protocols-and-web"
   ],
-  "problem": "A telegraph excels at one-to-many urgency but feels rude for intimate coordination; everyone on a party line hears your negotiation with the midwife. Telephony wants switched circuits — a temporary electrical path between two voices — then later packetised speech, but the human problem remains: who may connect when, and who pays.\n\nManual exchanges trained operators to memorise personalities and faults; automatic exchanges replaced empathy with relays and then digital switches. Common-battery systems centralised power so subscribers did not each maintain a cellar full of wet cells.\n\nScaling introduced mathematics: blocking probabilities, trunk groups, and overload days when everyone picks up at once. Rural long loops demanded careful impedance design so speech stayed intelligible.\n\nToday’s mobile cores hide complexity behind glass, but the exchange problem persists as routing tables, lawful intercept interfaces, and emergency services location — sociology wearing copper headphones.",
-  "overview": "Strowger-class stepping switches translated dial pulses into physical positions of wiper arms; crossbar systems separated control from paths; digital switches time-multiplex PCM samples through non-blocking fabrics. Outside plant moved from open wires to twisted pairs that reduced crosstalk; loading coils spaced inductance to extend voice band on long loops.\n\nSignalling evolved: loop start, ground start, multifrequency tones, and common-channel signalling carried setup messages out-of-band. SS7-linked worlds enabled mobility and fraud simultaneously — every convenience is a new seam.\n\nPowering remote terminals, cooling huts, and battery backup for blackouts are part of the voice promise. Fibre backhaul eventually swallowed copper trunks, but the last mile lesson remains: impedance, balance, and corrosion control.\n\nExchanges are also buildings with human rituals: shift logs, spare cards, and the coffee machine that kept 3 a.m. reroutes civil.",
+  "problem": "A telegraph excels at one-to-many urgency but feels rude for intimate coordination; everyone on a party line hears your negotiation with the midwife. Telephony wants switched circuits \u2014 a temporary electrical path between two voices \u2014 then later packetised speech, but the human problem remains: who may connect when, and who pays.\n\nManual exchanges trained operators to memorise personalities and faults; automatic exchanges replaced empathy with relays and then digital switches. Common-battery systems centralised power so subscribers did not each maintain a cellar full of wet cells.\n\nScaling introduced mathematics: blocking probabilities, trunk groups, and overload days when everyone picks up at once. Rural long loops demanded careful impedance design so speech stayed intelligible.\n\nToday\u2019s mobile cores hide complexity behind glass, but the exchange problem persists as routing tables, lawful intercept interfaces, and emergency services location \u2014 sociology wearing copper headphones.",
+  "overview": "Strowger-class stepping switches translated dial pulses into physical positions of wiper arms; crossbar systems separated control from paths; digital switches time-multiplex PCM samples through non-blocking fabrics. Outside plant moved from open wires to twisted pairs that reduced crosstalk; loading coils spaced inductance to extend voice band on long loops.\n\nSignalling evolved: loop start, ground start, multifrequency tones, and common-channel signalling carried setup messages out-of-band. SS7-linked worlds enabled mobility and fraud simultaneously \u2014 every convenience is a new seam.\n\nPowering remote terminals, cooling huts, and battery backup for blackouts are part of the voice promise. Fibre backhaul eventually swallowed copper trunks, but the last mile lesson remains: impedance, balance, and corrosion control.\n\nExchanges are also buildings with human rituals: shift logs, spare cards, and the coffee machine that kept 3 a.m. reroutes civil.",
   "principles": [
     {
       "name": "Twisted pair balance",
-      "explanation": "Equal and opposite currents cancel radiated pickup — why untwisted house wire hums on audio."
+      "explanation": "Equal and opposite currents cancel radiated pickup \u2014 why untwisted house wire hums on audio."
     },
     {
       "name": "4 kHz channel spacing",
-      "explanation": "Legacy FDM stacks 300–3400 Hz voice channels — defines digital sampling at 8 kHz after Nyquist guard."
+      "explanation": "Legacy FDM stacks 300\u20133400 Hz voice channels \u2014 defines digital sampling at 8 kHz after Nyquist guard."
     },
     {
       "name": "Blocking probability",
-      "explanation": "Erlang models size trunk groups — insufficient trunks yield post-dial busy flashes."
+      "explanation": "Erlang models size trunk groups \u2014 insufficient trunks yield post-dial busy flashes."
     },
     {
       "name": "Signalling separation",
-      "explanation": "Out-of-band SS7 decouples call setup from voice path — enables mobility and fraud if not authenticated."
+      "explanation": "Out-of-band SS7 decouples call setup from voice path \u2014 enables mobility and fraud if not authenticated."
     }
   ],
   "components": [
@@ -77,7 +77,7 @@
       "earthLocations": [
         "Cable factories globally"
       ],
-      "spaceAlternatives": "PE-insulated twisted copper pairs from cable plants; ship pre-made cable until extruders exist off-world — then oversize conductors slightly for colder nights and UV",
+      "spaceAlternatives": "PE-insulated twisted copper pairs from cable plants; ship pre-made cable until extruders exist off-world \u2014 then oversize conductors slightly for colder nights and UV",
       "processingRequired": "Colour code pairs; fill gel against moisture"
     },
     {
@@ -103,12 +103,12 @@
     {
       "order": 1,
       "title": "Model how many simultaneous conversations your town truly needs",
-      "description": "Count phones, peak hour patterns, and emergency surge assumptions. Decide blocking target — not every village needs zero blocking if economics forbids it — but document the trade-off honestly.",
+      "description": "Count phones, peak hour patterns, and emergency surge assumptions. Decide blocking target \u2014 not every village needs zero blocking if economics forbids it \u2014 but document the trade-off honestly.",
       "prerequisiteTools": [
         "notebook",
         "population data"
       ],
-      "warningNote": "Underestimating Mothers’ Day traffic is a classic bruise"
+      "warningNote": "Underestimating Mothers\u2019 Day traffic is a classic bruise"
     },
     {
       "order": 2,
@@ -123,7 +123,7 @@
     {
       "order": 3,
       "title": "Install MDF and protector blocks before subscriber prem",
-      "description": "Bring pairs to a main distribution frame; terminate on protectors that shunt lightning. Label every jumper with origin and date — future you will bless the discipline.",
+      "description": "Bring pairs to a main distribution frame; terminate on protectors that shunt lightning. Label every jumper with origin and date \u2014 future you will bless the discipline.",
       "prerequisiteTools": [
         "punch tool",
         "labels"
@@ -143,7 +143,7 @@
     {
       "order": 5,
       "title": "Write runbooks for outage, lawful intercept, and migration",
-      "description": "Document how to reroute trunks, how to patch around card faults, and how to roll back software. Train two people per skill — buses still hit teams.",
+      "description": "Document how to reroute trunks, how to patch around card faults, and how to roll back software. Train two people per skill \u2014 buses still hit teams.",
       "prerequisiteTools": [
         "runbooks",
         "spare cards"
@@ -173,7 +173,7 @@
       "nationality": "Scottish-Canadian-American"
     }
   ],
-  "impact": "Telephony put voices in real time across cities — reshaping business, intimacy, and emergency response. Exchanges were the first large-scale connection-oriented networks computers later mimicked.\n\nRecovery must preserve craft knowledge of copper plant, not only VoIP overlays.",
+  "impact": "Telephony put voices in real time across cities \u2014 reshaping business, intimacy, and emergency response. Exchanges were the first large-scale connection-oriented networks computers later mimicked.\n\nRecovery must preserve craft knowledge of copper plant, not only VoIP overlays.",
   "images": [],
   "videos": [
     {
@@ -186,16 +186,20 @@
   "externalLinks": [
     {
       "id": "itu-t",
-      "title": "ITU-T — telecommunication standardization",
+      "title": "ITU-T \u2014 telecommunication standardization",
       "url": "https://www.itu.int/en/ITU-T/about/"
     },
     {
       "id": "fcc-voip",
-      "title": "FCC — voice services context (USA)",
+      "title": "FCC \u2014 voice services context (USA)",
       "url": "https://www.fcc.gov/consumers/guides/voice-over-internet-protocol-voip"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -204,21 +208,21 @@
     "sources": [
       {
         "id": "src-itu-t-tel",
-        "title": "ITU-T — Publications",
+        "title": "ITU-T \u2014 Publications",
         "url": "https://www.itu.int/en/ITU-T/publications/Pages/default.aspx",
         "type": "institution",
         "note": "PSTN signalling and digital telephony standards"
       },
       {
         "id": "src-wiki-telephone",
-        "title": "Wikipedia — Telephone",
+        "title": "Wikipedia \u2014 Telephone",
         "url": "https://en.wikipedia.org/wiki/Telephone",
         "type": "wikipedia",
         "note": "Switching, transmission, and history"
       },
       {
         "id": "src-rfc-sip",
-        "title": "IETF RFC Editor — SIP (example modern telephony signalling)",
+        "title": "IETF RFC Editor \u2014 SIP (example modern telephony signalling)",
         "url": "https://www.rfc-editor.org/info/rfc3261",
         "type": "standard",
         "note": "Contemporary packet voice; compare to legacy circuit switching"

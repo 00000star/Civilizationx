@@ -189,12 +189,16 @@
   "externalLinks": [
     {
       "id": "wiki-backpropagation",
-      "title": "Wikipedia — Backpropagation",
+      "title": "Wikipedia \u2014 Backpropagation",
       "url": "https://en.wikipedia.org/wiki/Backpropagation"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -203,19 +207,19 @@
     "sources": [
       {
         "id": "rumelhart-1986",
-        "title": "Rumelhart, Hinton, Williams (1986) — Learning representations by back-propagating errors",
+        "title": "Rumelhart, Hinton, Williams (1986) \u2014 Learning representations by back-propagating errors",
         "type": "paper",
         "url": "https://www.nature.com/articles/323533a0"
       },
       {
         "id": "goodfellow-backprop",
-        "title": "Goodfellow et al. — Deep Learning (backprop chapter)",
+        "title": "Goodfellow et al. \u2014 Deep Learning (backprop chapter)",
         "type": "book",
         "url": "https://www.deeplearningbook.org/"
       },
       {
         "id": "wiki-backprop",
-        "title": "Wikipedia — Backpropagation",
+        "title": "Wikipedia \u2014 Backpropagation",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Backpropagation"
       }

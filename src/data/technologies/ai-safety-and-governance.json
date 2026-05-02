@@ -198,12 +198,16 @@
   "externalLinks": [
     {
       "id": "wiki-ai-safety-and-governance",
-      "title": "Wikipedia — AI Safety and Governance",
+      "title": "Wikipedia \u2014 AI Safety and Governance",
       "url": "https://en.wikipedia.org/wiki/AI_Safety_and_Governance"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -218,13 +222,13 @@
       },
       {
         "id": "wiki-ai-safety",
-        "title": "Wikipedia — AI safety",
+        "title": "Wikipedia \u2014 AI safety",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/AI_safety"
       },
       {
         "id": "weapons-of-math-destruction",
-        "title": "O'Neil — Weapons of Math Destruction",
+        "title": "O'Neil \u2014 Weapons of Math Destruction",
         "type": "book"
       }
     ]

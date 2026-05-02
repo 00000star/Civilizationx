@@ -210,12 +210,16 @@
   "externalLinks": [
     {
       "id": "wiki-probability-and-statistics",
-      "title": "Wikipedia — Probability and Statistics",
+      "title": "Wikipedia \u2014 Probability and Statistics",
       "url": "https://en.wikipedia.org/wiki/Probability_and_Statistics"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -224,17 +228,17 @@
     "sources": [
       {
         "id": "casella-berger",
-        "title": "Casella & Berger — Statistical Inference",
+        "title": "Casella & Berger \u2014 Statistical Inference",
         "type": "book"
       },
       {
         "id": "jaynes",
-        "title": "Jaynes — Probability Theory: The Logic of Science",
+        "title": "Jaynes \u2014 Probability Theory: The Logic of Science",
         "type": "book"
       },
       {
         "id": "wiki-probability",
-        "title": "Wikipedia — Probability theory",
+        "title": "Wikipedia \u2014 Probability theory",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Probability_theory"
       }

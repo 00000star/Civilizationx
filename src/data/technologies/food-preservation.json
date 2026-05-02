@@ -31,8 +31,8 @@
     "sprouting-grains",
     "yogurt-culturing"
   ],
-  "problem": "Fresh food spoils on a clock measured in hours for meat, days for many vegetables, and weeks at best for dry grain unless protected from moisture and pests. A civilisation cannot store labour — every calorie someone hunts, digs, or harvests must either be eaten soon, preserved, or lost. Loss is not merely hunger tomorrow; it is the inability to fund specialists who do anything other than finding the next meal.\n\nPreservation is also a public-health problem. Clostridium botulinum and other anaerobes love sealed jars of low-acid food; salt concentration must be high enough in brines; pH must be low enough in ferments; smoke deposits must actually carry antimicrobial compounds, not merely smell nice. Ignorance does not produce mild food — it produces corpses.\n\nGeography changes what works: humid tropics fight drying; cold dry winters favour freeze-drying on racks; coasts offer salt; inland peoples lean on smoke, fermentation, and tight grain discipline. Any guide that pretends one recipe fits all climates is dangerous.\n\nFinally, preservation interacts with justice: who controls the granary controls survival. Building transparent rules for weighing, sealing, and distributing stored food is political technology wrapped around chemistry.",
-  "overview": "Heat preservation removes water or kills surface microbes. Sun drying and wind drying work when relative humidity cooperates; thin slices and good airflow beat thick slabs left in shade. Smoking combines heat with deposited phenols and other compounds that inhibit bacterial growth on meat surfaces — the craft is draft, temperature, and time, not colour alone.\n\nSalt and sugar osmotically bind water away from microbes; heavy brines preserve fish and meat for months if kept cool enough that fat does not go rancid. Fat sealing — confit — uses anaerobic layers of rendered fat over cooked meat as a barrier when cellar temperatures stay low.\n\nFermentation partners with desirable microbes: lactobacilli acidify vegetables, dropping pH below the comfort zone of pathogens while producing vitamins and digestibility gains. The art is cleanliness in the first days, salt level, and exclusion of oxygen where moulds would win.\n\nCold storage without electricity uses earth coupling: root cellars, ice houses, and deep pits leverage stable ground temperatures. Rodent-proofing with tight doors and raised platforms is non-negotiable — a mouse can undo a winter of potatoes in a week.\n\nCalorie accounting is simple arithmetic: preserved inventory equals deferred labour. A month of grain for ten adults is civilisation-level slack; without it, every rainstorm is a crisis.",
+  "problem": "Fresh food spoils on a clock measured in hours for meat, days for many vegetables, and weeks at best for dry grain unless protected from moisture and pests. A civilisation cannot store labour \u2014 every calorie someone hunts, digs, or harvests must either be eaten soon, preserved, or lost. Loss is not merely hunger tomorrow; it is the inability to fund specialists who do anything other than finding the next meal.\n\nPreservation is also a public-health problem. Clostridium botulinum and other anaerobes love sealed jars of low-acid food; salt concentration must be high enough in brines; pH must be low enough in ferments; smoke deposits must actually carry antimicrobial compounds, not merely smell nice. Ignorance does not produce mild food \u2014 it produces corpses.\n\nGeography changes what works: humid tropics fight drying; cold dry winters favour freeze-drying on racks; coasts offer salt; inland peoples lean on smoke, fermentation, and tight grain discipline. Any guide that pretends one recipe fits all climates is dangerous.\n\nFinally, preservation interacts with justice: who controls the granary controls survival. Building transparent rules for weighing, sealing, and distributing stored food is political technology wrapped around chemistry.",
+  "overview": "Heat preservation removes water or kills surface microbes. Sun drying and wind drying work when relative humidity cooperates; thin slices and good airflow beat thick slabs left in shade. Smoking combines heat with deposited phenols and other compounds that inhibit bacterial growth on meat surfaces \u2014 the craft is draft, temperature, and time, not colour alone.\n\nSalt and sugar osmotically bind water away from microbes; heavy brines preserve fish and meat for months if kept cool enough that fat does not go rancid. Fat sealing \u2014 confit \u2014 uses anaerobic layers of rendered fat over cooked meat as a barrier when cellar temperatures stay low.\n\nFermentation partners with desirable microbes: lactobacilli acidify vegetables, dropping pH below the comfort zone of pathogens while producing vitamins and digestibility gains. The art is cleanliness in the first days, salt level, and exclusion of oxygen where moulds would win.\n\nCold storage without electricity uses earth coupling: root cellars, ice houses, and deep pits leverage stable ground temperatures. Rodent-proofing with tight doors and raised platforms is non-negotiable \u2014 a mouse can undo a winter of potatoes in a week.\n\nCalorie accounting is simple arithmetic: preserved inventory equals deferred labour. A month of grain for ten adults is civilisation-level slack; without it, every rainstorm is a crisis.",
   "principles": [
     {
       "name": "Water activity",
@@ -90,7 +90,7 @@
       "function": "Uses earth temperature stability",
       "position": "Hillside or buried bin",
       "madeFrom": "Stone walls, vent pipes, insulated hatch",
-      "criticalNote": "Condensation promotes rot — ventilate judiciously"
+      "criticalNote": "Condensation promotes rot \u2014 ventilate judiciously"
     },
     {
       "id": "seal",
@@ -140,7 +140,7 @@
       "prerequisiteTools": [
         "hygrometer or local knowledge"
       ],
-      "warningNote": "Open flame near drying meat ignites fat drips — keep drip trays and clearance"
+      "warningNote": "Open flame near drying meat ignites fat drips \u2014 keep drip trays and clearance"
     },
     {
       "order": 2,
@@ -150,7 +150,7 @@
         "saw or axe",
         "rope"
       ],
-      "warningNote": "Falls from roof-mounted racks are common — ladder discipline"
+      "warningNote": "Falls from roof-mounted racks are common \u2014 ladder discipline"
     },
     {
       "order": 3,
@@ -160,17 +160,17 @@
         "scale or balance",
         "measuring jug"
       ],
-      "warningNote": "Under-salted fish can host Clostridium botulinum in sealed jars — never home-can low-acid foods like modern pressure canners without equivalent equipment"
+      "warningNote": "Under-salted fish can host Clostridium botulinum in sealed jars \u2014 never home-can low-acid foods like modern pressure canners without equivalent equipment"
     },
     {
       "order": 4,
       "title": "Smoke a training batch with thermometry",
-      "description": "Hold chamber between roughly 50–80 °C for long smokes depending on recipe tradition; vent smoke away from sleeping areas.",
+      "description": "Hold chamber between roughly 50\u201380 \u00b0C for long smokes depending on recipe tradition; vent smoke away from sleeping areas.",
       "prerequisiteTools": [
         "thermometer",
         "metal baffles"
       ],
-      "warningNote": "Carbon monoxide from smouldering fires kills in enclosed sheds — ventilate"
+      "warningNote": "Carbon monoxide from smouldering fires kills in enclosed sheds \u2014 ventilate"
     },
     {
       "order": 5,
@@ -180,7 +180,7 @@
         "chisel",
         "lamp"
       ],
-      "warningNote": "Rat bites transmit disease — wear gloves during cleanup"
+      "warningNote": "Rat bites transmit disease \u2014 wear gloves during cleanup"
     }
   ],
   "history": [
@@ -207,16 +207,20 @@
   "externalLinks": [
     {
       "id": "who-food",
-      "title": "WHO — Food safety",
+      "title": "WHO \u2014 Food safety",
       "url": "https://www.who.int/news-room/fact-sheets/detail/food-safety"
     },
     {
       "id": "cdc-botulism",
-      "title": "CDC — Botulism",
+      "title": "CDC \u2014 Botulism",
       "url": "https://www.cdc.gov/botulism/index.html"
     }
   ],
   "lastUpdated": "2026-04-12",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -225,21 +229,21 @@
     "sources": [
       {
         "id": "who-food",
-        "title": "WHO — Food safety fact sheet",
+        "title": "WHO \u2014 Food safety fact sheet",
         "url": "https://www.who.int/news-room/fact-sheets/detail/food-safety",
         "type": "institution",
         "note": ""
       },
       {
         "id": "cdc-botulism",
-        "title": "CDC — Botulism",
+        "title": "CDC \u2014 Botulism",
         "url": "https://www.cdc.gov/botulism/index.html",
         "type": "institution",
         "note": "Home preservation risks"
       },
       {
         "id": "wiki-food-pres",
-        "title": "Wikipedia — Food preservation",
+        "title": "Wikipedia \u2014 Food preservation",
         "url": "https://en.wikipedia.org/wiki/Food_preservation",
         "type": "wikipedia",
         "note": ""

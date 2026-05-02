@@ -211,12 +211,16 @@
   "externalLinks": [
     {
       "id": "wiki-germ-theory",
-      "title": "Wikipedia — Germ Theory of Disease",
+      "title": "Wikipedia \u2014 Germ Theory of Disease",
       "url": "https://en.wikipedia.org/wiki/Germ_Theory_of_Disease"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "review-needed",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -242,7 +246,7 @@
       },
       {
         "id": "wiki-germ-theory",
-        "title": "Wikipedia — Germ theory of disease",
+        "title": "Wikipedia \u2014 Germ theory of disease",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Germ_theory_of_disease"
       }

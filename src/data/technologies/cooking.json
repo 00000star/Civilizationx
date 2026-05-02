@@ -35,8 +35,8 @@
     "sprouting-grains",
     "yogurt-culturing"
   ],
-  "problem": "Many foods are marginal without heat: proteins can harbour pathogens (bacteria, parasites); some plants contain heat-labile toxins (lectins, cyanogenic glycosides) or enzyme inhibitors; starches in tubers and grains are less accessible raw. Chewing and digestion are metabolically expensive — heat denatures proteins, gelatinises starches, and breaks down cell walls, changing what calories a human gut can absorb per hour.\n\nCooking also concentrates flavours and enables combining ingredients into stews that homogenise nutrients across a group — a social technology as much as a chemical one.\n\nThe engineering problem is not merely temperature peaks but controlled heat transfer without burning, efficient fuel use, and containers that survive repeated thermal cycling. That couples cooking tightly to ceramics and later metals.\n\nIn space habitats, cooking is limited by the absence of open fire and the need for total smoke/volatile capture. Heat must be delivered via electrical induction or resistance, and off-gassing from oils and caramelisation must be scrubbed by the life-support system to prevent cabin atmosphere toxicity.",
-  "overview": "Cooking methods map to heat transfer modes. Direct radiation from coals or flame sears surfaces — good for Maillard browning, easy to overcook interiors. Conduction through stones (hot-rock boiling) heats liquids in organic containers (hides, bark) that would burn in flame. Convection in earth ovens (Hangi/Umu) and steam pits circulates moist heat evenly. Immersion boiling in pottery is the gateway to grains and legumes at scale.\n\nTemperature bands matter: pasteurisation concepts (time at temperature) reduce pathogen risk. For plant toxins, specific knowledge replaces thermometers: slow simmering (to destroy lectins in beans) versus multiple water-change boiling (to leach cyanide from cassava). Boiling point changes with altitude: at 5000m, water boils at ~83°C, requiring significantly longer cooking times or pressure vessels.\n\nFuel efficiency is a design variable: insulated 'hay boxes' reuse residual heat; lids reduce evaporative losses; nested pots save energy. Ash and soot management affects food taste and long-term respiratory health.\n\nNutritionally, cooking can reduce some heat-sensitive vitamins (C, B12) while increasing bioavailability of others (Lycopene, Beta-carotene); the net depends on diet composition. The civilisational net effect has been overwhelmingly enabling for human brain expansion and population density.",
+  "problem": "Many foods are marginal without heat: proteins can harbour pathogens (bacteria, parasites); some plants contain heat-labile toxins (lectins, cyanogenic glycosides) or enzyme inhibitors; starches in tubers and grains are less accessible raw. Chewing and digestion are metabolically expensive \u2014 heat denatures proteins, gelatinises starches, and breaks down cell walls, changing what calories a human gut can absorb per hour.\n\nCooking also concentrates flavours and enables combining ingredients into stews that homogenise nutrients across a group \u2014 a social technology as much as a chemical one.\n\nThe engineering problem is not merely temperature peaks but controlled heat transfer without burning, efficient fuel use, and containers that survive repeated thermal cycling. That couples cooking tightly to ceramics and later metals.\n\nIn space habitats, cooking is limited by the absence of open fire and the need for total smoke/volatile capture. Heat must be delivered via electrical induction or resistance, and off-gassing from oils and caramelisation must be scrubbed by the life-support system to prevent cabin atmosphere toxicity.",
+  "overview": "Cooking methods map to heat transfer modes. Direct radiation from coals or flame sears surfaces \u2014 good for Maillard browning, easy to overcook interiors. Conduction through stones (hot-rock boiling) heats liquids in organic containers (hides, bark) that would burn in flame. Convection in earth ovens (Hangi/Umu) and steam pits circulates moist heat evenly. Immersion boiling in pottery is the gateway to grains and legumes at scale.\n\nTemperature bands matter: pasteurisation concepts (time at temperature) reduce pathogen risk. For plant toxins, specific knowledge replaces thermometers: slow simmering (to destroy lectins in beans) versus multiple water-change boiling (to leach cyanide from cassava). Boiling point changes with altitude: at 5000m, water boils at ~83\u00b0C, requiring significantly longer cooking times or pressure vessels.\n\nFuel efficiency is a design variable: insulated 'hay boxes' reuse residual heat; lids reduce evaporative losses; nested pots save energy. Ash and soot management affects food taste and long-term respiratory health.\n\nNutritionally, cooking can reduce some heat-sensitive vitamins (C, B12) while increasing bioavailability of others (Lycopene, Beta-carotene); the net depends on diet composition. The civilisational net effect has been overwhelmingly enabling for human brain expansion and population density.",
   "principles": [
     {
       "name": "Denaturation and gelatinisation",
@@ -44,11 +44,11 @@
     },
     {
       "name": "Maillard Reaction",
-      "explanation": "A chemical reaction between amino acids and reducing sugars that gives browned food its distinctive flavour. Occurs rapidly above 140°C — difficult to achieve in boiling water."
+      "explanation": "A chemical reaction between amino acids and reducing sugars that gives browned food its distinctive flavour. Occurs rapidly above 140\u00b0C \u2014 difficult to achieve in boiling water."
     },
     {
       "name": "Thermal death time for microbes",
-      "explanation": "Pathogen reduction is a function of temperature and duration. 74°C (165°F) is the general 'instant kill' field standard for most foodborne bacteria."
+      "explanation": "Pathogen reduction is a function of temperature and duration. 74\u00b0C (165\u00b0F) is the general 'instant kill' field standard for most foodborne bacteria."
     },
     {
       "name": "Boiling point depression",
@@ -56,7 +56,7 @@
     },
     {
       "name": "Passive heat retention",
-      "explanation": "Once a vessel is at 100°C, it can be removed from fire and placed in an insulated pit. This saves 70% of fuel for long-simmer tasks like beans or tough meat."
+      "explanation": "Once a vessel is at 100\u00b0C, it can be removed from fire and placed in an insulated pit. This saves 70% of fuel for long-simmer tasks like beans or tough meat."
     }
   ],
   "components": [
@@ -74,7 +74,7 @@
       "function": "Contains food and cooking liquid",
       "position": "On stones, in coals, or suspended by tripod",
       "madeFrom": "Pottery (cord-marked/thick-walled), later metal; birch-bark baskets for hot-rock boiling",
-      "criticalNote": "Thermal shock — preheat pottery near the fire before placing on coals"
+      "criticalNote": "Thermal shock \u2014 preheat pottery near the fire before placing on coals"
     },
     {
       "id": "thermal-mass",
@@ -82,7 +82,7 @@
       "function": "Stores and transfers heat in pits or boiling baskets",
       "position": "In the fire, then moved to the cooking vessel",
       "madeFrom": "Granite, basalt, or other dense non-porous rocks",
-      "criticalNote": "Avoid 'river rocks' containing trapped water — they will explode when heated in fire"
+      "criticalNote": "Avoid 'river rocks' containing trapped water \u2014 they will explode when heated in fire"
     },
     {
       "id": "utensils",
@@ -140,7 +140,7 @@
         "fire-pit",
         "hardwood fuel"
       ],
-      "warningNote": "Maintain ventilation — indoor cooking over open coals produces lethal levels of CO (Carbon Monoxide)"
+      "warningNote": "Maintain ventilation \u2014 indoor cooking over open coals produces lethal levels of CO (Carbon Monoxide)"
     },
     {
       "order": 2,
@@ -155,7 +155,7 @@
     {
       "order": 3,
       "title": "Simmering and pathogen reduction",
-      "description": "Place vessel on supports. Bring water to a simmer (small bubbles). Add ingredients. Maintain heat for at least 20 minutes for stews. For meat, cook until the center is no longer 'pink' or reaches 74°C.",
+      "description": "Place vessel on supports. Bring water to a simmer (small bubbles). Add ingredients. Maintain heat for at least 20 minutes for stews. For meat, cook until the center is no longer 'pink' or reaches 74\u00b0C.",
       "prerequisiteTools": [
         "pot",
         "wooden spoon"
@@ -203,12 +203,12 @@
   "inventors": [
     {
       "name": "Louis Pasteur",
-      "contribution": "Demonstrated heat treatment and microbial causation of spoilage — foundation of pasteurisation science",
+      "contribution": "Demonstrated heat treatment and microbial causation of spoilage \u2014 foundation of pasteurisation science",
       "years": "1822-1895",
       "nationality": "French"
     }
   ],
-  "impact": "Cooking underwrote denser populations and shorter feeding times, freeing hours for tool maintenance and travel. It is prerequisite to many preservation chains (though distinct from fermentation).\n\nIndustrial descendants include retorts, extrusion, and precision sous-vide — but the Codex conserves the campfire truth: heat plus container plus knowledge equals transformed biology.",
+  "impact": "Cooking underwrote denser populations and shorter feeding times, freeing hours for tool maintenance and travel. It is prerequisite to many preservation chains (though distinct from fermentation).\n\nIndustrial descendants include retorts, extrusion, and precision sous-vide \u2014 but the Codex conserves the campfire truth: heat plus container plus knowledge equals transformed biology.",
   "images": [
     {
       "id": "earth-oven-diagram",
@@ -230,11 +230,15 @@
   "externalLinks": [
     {
       "id": "who-five-keys",
-      "title": "WHO — Five keys to safer food (modern public health)",
+      "title": "WHO \u2014 Five keys to safer food (modern public health)",
       "url": "https://www.who.int/news-room/fact-sheets/detail/food-safety"
     }
   ],
   "lastUpdated": "2026-05-02",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -249,7 +253,7 @@
     "sources": [
       {
         "id": "src-who-food-safety",
-        "title": "WHO — Food safety fact sheet",
+        "title": "WHO \u2014 Food safety fact sheet",
         "url": "https://www.who.int/news-room/fact-sheets/detail/food-safety",
         "type": "institution",
         "note": "The global standard for safe food handling"
@@ -263,7 +267,7 @@
       },
       {
         "id": "src-wiki-cooking",
-        "title": "Wikipedia — Cooking",
+        "title": "Wikipedia \u2014 Cooking",
         "url": "https://en.wikipedia.org/wiki/Cooking",
         "type": "wikipedia",
         "note": "Technical overview of heat transfer and food chemistry"

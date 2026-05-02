@@ -1,7 +1,7 @@
 {
   "id": "semiconductor-crystal-growing-doping",
   "name": "Semiconductor Crystal Growing and Doping",
-  "tagline": "Single-crystal boules with controlled impurities — the material base of diodes, transistors, and integrated circuits",
+  "tagline": "Single-crystal boules with controlled impurities \u2014 the material base of diodes, transistors, and integrated circuits",
   "category": "communication",
   "era": "mid-20th",
   "difficulty": 5,
@@ -14,8 +14,8 @@
     "integrated-circuit",
     "transistor"
   ],
-  "problem": "Polycrystalline silicon is fine for soup pots and alloys; transistors demand monocrystals where atoms line up for micrometres without grain boundaries stealing carriers. The manufacturing problem couples heat, chemistry, and paranoia: melts attack crucibles; oxygen sneaks in at parts per billion and becomes precipitates; a single dislocation line can nucleate breakdown.\n\nDoping is dosage medicine for crystals — a few parts per million phosphorus shifts resistivity dramatically. Ion implantation shoots ions to controllable depths; annealing repairs lattice damage while activating dopants — thermal budgets fight each other.\n\nWafers must be flatter than intuition allows so lithography later pretends the world is Euclidean. Without crystal discipline, solid-state devices remain germanium whisker curiosities; with it, fabs etch billions of identical features.\n\nRecovery means protecting not only pullers but the trace labs that prove purity — ignorance is measured in yield loss.",
-  "overview": "Electronic-grade polysilicon comes from distilled chlorosilanes reduced on slim rods in bell jars. Czochralski pullers melt charge in quartz crucibles under inert gas, dip a seed crystal, neck to dislocate-out, shoulder to diameter, then pull slowly while rotating — freezing a single crystal behind the meniscus. Float-zone refining can further purify without crucible contact.\n\nSlicing with diamond wire saws, lapping, and chemical-mechanical polishing yields mirror wafers; RCA cleans strip organics and metals. Ion implanters accelerate dopant beams through photoresist masks; rapid thermal anneals activate without excessive diffusion spread.\n\nEpitaxial reactors grow thin doped films atop wafers for controlled junction stacks. Characterisation maps resistivity, lifetime, and defects — swirls in CZ crystals show as yield patterns later.\n\nGettering strategies move metals to harmless regions so active devices never see them — crystal growth is also impurity traffic management.",
+  "problem": "Polycrystalline silicon is fine for soup pots and alloys; transistors demand monocrystals where atoms line up for micrometres without grain boundaries stealing carriers. The manufacturing problem couples heat, chemistry, and paranoia: melts attack crucibles; oxygen sneaks in at parts per billion and becomes precipitates; a single dislocation line can nucleate breakdown.\n\nDoping is dosage medicine for crystals \u2014 a few parts per million phosphorus shifts resistivity dramatically. Ion implantation shoots ions to controllable depths; annealing repairs lattice damage while activating dopants \u2014 thermal budgets fight each other.\n\nWafers must be flatter than intuition allows so lithography later pretends the world is Euclidean. Without crystal discipline, solid-state devices remain germanium whisker curiosities; with it, fabs etch billions of identical features.\n\nRecovery means protecting not only pullers but the trace labs that prove purity \u2014 ignorance is measured in yield loss.",
+  "overview": "Electronic-grade polysilicon comes from distilled chlorosilanes reduced on slim rods in bell jars. Czochralski pullers melt charge in quartz crucibles under inert gas, dip a seed crystal, neck to dislocate-out, shoulder to diameter, then pull slowly while rotating \u2014 freezing a single crystal behind the meniscus. Float-zone refining can further purify without crucible contact.\n\nSlicing with diamond wire saws, lapping, and chemical-mechanical polishing yields mirror wafers; RCA cleans strip organics and metals. Ion implanters accelerate dopant beams through photoresist masks; rapid thermal anneals activate without excessive diffusion spread.\n\nEpitaxial reactors grow thin doped films atop wafers for controlled junction stacks. Characterisation maps resistivity, lifetime, and defects \u2014 swirls in CZ crystals show as yield patterns later.\n\nGettering strategies move metals to harmless regions so active devices never see them \u2014 crystal growth is also impurity traffic management.",
   "principles": [
     {
       "name": "Czochralski interface stability",
@@ -31,7 +31,7 @@
     },
     {
       "name": "Epitaxial lattice match",
-      "explanation": "Misfit strain beyond critical thickness generates misfit dislocations — fatal for thin junctions."
+      "explanation": "Misfit strain beyond critical thickness generates misfit dislocations \u2014 fatal for thin junctions."
     }
   ],
   "components": [
@@ -83,12 +83,12 @@
     },
     {
       "name": "Dopant gases",
-      "purpose": "PH₃, B₂H₆, AsH₃ for implant and CVD",
+      "purpose": "PH\u2083, B\u2082H\u2086, AsH\u2083 for implant and CVD",
       "earthLocations": [
         "Speciality gas fabs"
       ],
-      "spaceAlternatives": "Diluted phosphine, diborane, and arsine in cylinders with scrubbed exhaust — treat cylinders like living creatures with valves pointed safe directions",
-      "processingRequired": "Cylinder dilution and abatement scrubbers — arsine is lethal"
+      "spaceAlternatives": "Diluted phosphine, diborane, and arsine in cylinders with scrubbed exhaust \u2014 treat cylinders like living creatures with valves pointed safe directions",
+      "processingRequired": "Cylinder dilution and abatement scrubbers \u2014 arsine is lethal"
     },
     {
       "name": "Quartz crucibles",
@@ -113,7 +113,7 @@
     {
       "order": 2,
       "title": "Charge melt, dip seed, and practise necking on scrap",
-      "description": "Watch diameter cameras; respond to power disturbances quickly — a freeze event loses the boule. Log crucible hours — dissolved oxygen rises with time.",
+      "description": "Watch diameter cameras; respond to power disturbances quickly \u2014 a freeze event loses the boule. Log crucible hours \u2014 dissolved oxygen rises with time.",
       "prerequisiteTools": [
         "CZ puller controls",
         "training operator"
@@ -128,7 +128,7 @@
         "wire saw",
         "particle counter"
       ],
-      "warningNote": "PVC gloves shed chloride — use nitrile in clean steps"
+      "warningNote": "PVC gloves shed chloride \u2014 use nitrile in clean steps"
     },
     {
       "order": 4,
@@ -137,7 +137,7 @@
       "prerequisiteTools": [
         "four-point probe"
       ],
-      "warningNote": "Channeling during implant skews depth — tilt and twist wafers deliberately"
+      "warningNote": "Channeling during implant skews depth \u2014 tilt and twist wafers deliberately"
     },
     {
       "order": 5,
@@ -146,13 +146,13 @@
       "prerequisiteTools": [
         "lifetime mapper"
       ],
-      "warningNote": "Local Fe spots show donut patterns — trace handling"
+      "warningNote": "Local Fe spots show donut patterns \u2014 trace handling"
     }
   ],
   "history": [
     {
       "year": 1916,
-      "event": "Czochralski method published — later adapted to silicon boules.",
+      "event": "Czochralski method published \u2014 later adapted to silicon boules.",
       "location": "Poland/Germany",
       "person": "Jan Czochralski"
     },
@@ -176,7 +176,7 @@
       "nationality": "American"
     }
   ],
-  "impact": "Crystal growth and doping turned quantum band diagrams into inventory — fabs are chemistry plants that output geometry substrates.\n\nNo monocrystal, no planetary-scale computation.",
+  "impact": "Crystal growth and doping turned quantum band diagrams into inventory \u2014 fabs are chemistry plants that output geometry substrates.\n\nNo monocrystal, no planetary-scale computation.",
   "images": [],
   "videos": [
     {
@@ -189,16 +189,20 @@
   "externalLinks": [
     {
       "id": "semiconductor-industry",
-      "title": "SEMI — semiconductor materials overview",
+      "title": "SEMI \u2014 semiconductor materials overview",
       "url": "https://www.semi.org/"
     },
     {
       "id": "nist-si",
-      "title": "NIST — silicon material properties reference",
+      "title": "NIST \u2014 silicon material properties reference",
       "url": "https://www.nist.gov/"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -207,14 +211,14 @@
     "sources": [
       {
         "id": "src-nist-mml",
-        "title": "NIST — Material Measurement Laboratory",
+        "title": "NIST \u2014 Material Measurement Laboratory",
         "url": "https://www.nist.gov/mml",
         "type": "institution",
         "note": "Semiconductor materials metrology and reference materials"
       },
       {
         "id": "src-wiki-cz",
-        "title": "Wikipedia — Czochralski process",
+        "title": "Wikipedia \u2014 Czochralski process",
         "url": "https://en.wikipedia.org/wiki/Czochralski_process",
         "type": "wikipedia",
         "note": "Crystal pulling and defect control references"

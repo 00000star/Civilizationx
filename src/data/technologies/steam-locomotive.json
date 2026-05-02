@@ -12,20 +12,20 @@
     "road-construction"
   ],
   "unlocks": [],
-  "problem": "Canal boats are slow; roads consume tractive effort ploughing dirt even with good wheels. Railways solve friction by running flanged steel wheels on steel rails — hard, small contact patches with low rolling resistance — enabling a locomotive to tow many times its own weight on level track. The steam locomotive packages a boiler, firebox, and reciprocating engine into a vehicle that carries its own fuel and water (or tenders them).\n\nChallenges are adhesion limits (coefficient of friction between wheel and rail), grueling thermal cycles on boilers, and maintenance of valve timing at varying cut-off for efficiency. Civil engineering must provide gentle grades, stable embankments, and drainage — track is not merely rails but a structure.\n\nSocially, railways synchronised time zones and markets; they are infrastructure that outlives any single engine class.",
-  "overview": "A classical steam locomotive integrates a firebox burning coal or oil, a boiler generating steam, a steam chest distributing steam to cylinders via valve gear (e.g., Stephenson, Walschaerts), pistons driving side rods to coupled driving wheels, and a pilot truck or trailing truck supporting weight distribution. Exhaust steam blasts up the stack to enhance draft through the fire tubes — a self-stoking thermodynamic coupling.\n\nThe boiler is a pressure vessel with a water level maintained by injectors or feedwater pumps; blowdown manages dissolved solids. Lubrication includes mechanical lubricators for cylinder oil and journal oils for bearings running under heavy side loads from connecting rods.\n\nTraction is adhesion-limited: drivers must not slip under starting torque — sanders drop grit to raise friction temporarily. Dynamic augment from rotating masses and rod geometry sets speed limits on light track.\n\nBraking historically included hand brakes, steam brakes, and later air brakes (Westinghouse) that revolutionised train safety — the locomotive is one node in a train-wide pneumatic system.",
+  "problem": "Canal boats are slow; roads consume tractive effort ploughing dirt even with good wheels. Railways solve friction by running flanged steel wheels on steel rails \u2014 hard, small contact patches with low rolling resistance \u2014 enabling a locomotive to tow many times its own weight on level track. The steam locomotive packages a boiler, firebox, and reciprocating engine into a vehicle that carries its own fuel and water (or tenders them).\n\nChallenges are adhesion limits (coefficient of friction between wheel and rail), grueling thermal cycles on boilers, and maintenance of valve timing at varying cut-off for efficiency. Civil engineering must provide gentle grades, stable embankments, and drainage \u2014 track is not merely rails but a structure.\n\nSocially, railways synchronised time zones and markets; they are infrastructure that outlives any single engine class.",
+  "overview": "A classical steam locomotive integrates a firebox burning coal or oil, a boiler generating steam, a steam chest distributing steam to cylinders via valve gear (e.g., Stephenson, Walschaerts), pistons driving side rods to coupled driving wheels, and a pilot truck or trailing truck supporting weight distribution. Exhaust steam blasts up the stack to enhance draft through the fire tubes \u2014 a self-stoking thermodynamic coupling.\n\nThe boiler is a pressure vessel with a water level maintained by injectors or feedwater pumps; blowdown manages dissolved solids. Lubrication includes mechanical lubricators for cylinder oil and journal oils for bearings running under heavy side loads from connecting rods.\n\nTraction is adhesion-limited: drivers must not slip under starting torque \u2014 sanders drop grit to raise friction temporarily. Dynamic augment from rotating masses and rod geometry sets speed limits on light track.\n\nBraking historically included hand brakes, steam brakes, and later air brakes (Westinghouse) that revolutionised train safety \u2014 the locomotive is one node in a train-wide pneumatic system.",
   "principles": [
     {
       "name": "Adhesion traction",
-      "explanation": "Tractive effort at the rail is capped by normal force on drivers times friction coefficient — extra power beyond slip simply burns wheel steel."
+      "explanation": "Tractive effort at the rail is capped by normal force on drivers times friction coefficient \u2014 extra power beyond slip simply burns wheel steel."
     },
     {
       "name": "Cut-off and expansive working",
-      "explanation": "Engineers reduce steam admission late in the stroke to let steam expand — saving steam and coal on long runs when skillfully managed."
+      "explanation": "Engineers reduce steam admission late in the stroke to let steam expand \u2014 saving steam and coal on long runs when skillfully managed."
     },
     {
       "name": "Boiler circulation and priming",
-      "explanation": "Carryover of water into steam lines (priming) causes dangerous cylinder hydraulic lock — water level and water chemistry management are operational skills."
+      "explanation": "Carryover of water into steam lines (priming) causes dangerous cylinder hydraulic lock \u2014 water level and water chemistry management are operational skills."
     },
     {
       "name": "Con rod geometry and balancing",
@@ -39,7 +39,7 @@
       "function": "Generates steam at working pressure",
       "position": "Centreline of locomotive",
       "madeFrom": "Riveted or welded steel, staybolts, firebrick arch",
-      "criticalNote": "Annual inspections and hydrotests — statutory for good reason"
+      "criticalNote": "Annual inspections and hydrotests \u2014 statutory for good reason"
     },
     {
       "id": "cylinders",
@@ -55,7 +55,7 @@
       "function": "Controls admission and exhaust timing; reverser sets direction",
       "position": "Linked from cab",
       "madeFrom": "Steel links, pins, bushings",
-      "criticalNote": "Lost motion makes engines misfire — frequent adjustment"
+      "criticalNote": "Lost motion makes engines misfire \u2014 frequent adjustment"
     },
     {
       "id": "driving-wheels",
@@ -63,7 +63,7 @@
       "function": "Convert rod torque to rail traction",
       "position": "Coupled drivers with side rods",
       "madeFrom": "Steel tyres shrunk on spoked centres historically",
-      "criticalNote": "Tyre slippage on rim is catastrophic — maintain tyre bolts and keys"
+      "criticalNote": "Tyre slippage on rim is catastrophic \u2014 maintain tyre bolts and keys"
     },
     {
       "id": "tender",
@@ -71,7 +71,7 @@
       "function": "Carries coal and water for long runs",
       "position": "Coupled behind cab",
       "madeFrom": "Steel tank, hopper",
-      "criticalNote": "Water chemistry affects boiler scale — treat or blow down"
+      "criticalNote": "Water chemistry affects boiler scale \u2014 treat or blow down"
     }
   ],
   "rawMaterials": [
@@ -100,7 +100,7 @@
         "Coalfields globally",
         "oil fields for oil-fired engines"
       ],
-      "spaceAlternatives": "Biomass pellets in heritage contexts — chemistry affects ash fouling",
+      "spaceAlternatives": "Biomass pellets in heritage contexts \u2014 chemistry affects ash fouling",
       "processingRequired": "Sizing for stoker or hand firing"
     }
   ],
@@ -123,7 +123,7 @@
         "hydro pump",
         "inspector sign-off"
       ],
-      "warningNote": "Boiler explosions historically level stations — never skip codes"
+      "warningNote": "Boiler explosions historically level stations \u2014 never skip codes"
     },
     {
       "order": 3,
@@ -133,7 +133,7 @@
         "jacks",
         "dial indicators"
       ],
-      "warningNote": "Finger crush zones under rods during rotation — bar out personnel"
+      "warningNote": "Finger crush zones under rods during rotation \u2014 bar out personnel"
     },
     {
       "order": 4,
@@ -143,7 +143,7 @@
         "timing diagrams",
         "feeler gauges"
       ],
-      "warningNote": "Hot tests require clear exhaust paths — steam scald risk"
+      "warningNote": "Hot tests require clear exhaust paths \u2014 steam scald risk"
     },
     {
       "order": 5,
@@ -153,13 +153,13 @@
         "gauges",
         "blowdown valves"
       ],
-      "warningNote": "Entanglement with clothing near rods — strict crew discipline"
+      "warningNote": "Entanglement with clothing near rods \u2014 strict crew discipline"
     }
   ],
   "history": [
     {
       "year": 1804,
-      "event": "Richard Trevithick runs a steam locomotive on rails at Penydarren — early proof of rail adhesion traction.",
+      "event": "Richard Trevithick runs a steam locomotive on rails at Penydarren \u2014 early proof of rail adhesion traction.",
       "location": "Wales",
       "person": "Richard Trevithick"
     },
@@ -182,17 +182,21 @@
       "nationality": "British"
     }
   ],
-  "impact": "Steam railways moved grain, coal, and troops at scales that reshaped empires and famine relief. They accelerated industrial specialisation by enlarging markets.\n\nHeritage railways today preserve tacit knowledge of steam operation — important because thermodynamic intuition is hard to recover from textbooks alone.",
+  "impact": "Steam railways moved grain, coal, and troops at scales that reshaped empires and famine relief. They accelerated industrial specialisation by enlarging markets.\n\nHeritage railways today preserve tacit knowledge of steam operation \u2014 important because thermodynamic intuition is hard to recover from textbooks alone.",
   "images": [],
   "videos": [],
   "externalLinks": [
     {
       "id": "smithsonian-rail",
-      "title": "Smithsonian — America on the Move (rail history)",
+      "title": "Smithsonian \u2014 America on the Move (rail history)",
       "url": "https://americanhistory.si.edu/america-on-the-move"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -201,7 +205,7 @@
     "sources": [
       {
         "id": "src-wiki-loco",
-        "title": "Wikipedia — Steam locomotive",
+        "title": "Wikipedia \u2014 Steam locomotive",
         "url": "https://en.wikipedia.org/wiki/Steam_locomotive",
         "type": "wikipedia",
         "note": "Boiler, valve gear, and adhesion references"

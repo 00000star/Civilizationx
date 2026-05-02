@@ -1,7 +1,7 @@
 {
   "id": "copper-wire-and-cable",
   "name": "Copper Wire and Cable",
-  "tagline": "Drawn and stranded conductors that carry current with low loss — the nervous system of electrification",
+  "tagline": "Drawn and stranded conductors that carry current with low loss \u2014 the nervous system of electrification",
   "category": "energy",
   "era": "industrial",
   "difficulty": 3,
@@ -22,24 +22,24 @@
     "telephone-exchange-system",
     "vacuum-tube-electronics"
   ],
-  "problem": "Electricity without conductors is a lecture-demonstration, not a civilisation. You can see sparks jump across a gap, but you cannot power a mill or carry a telegram miles through rain unless metal behaves predictably: low resistance, enough ductility to bend around corners, and joints that stay tight after a thousand heat cycles.\n\nCopper won for most power and signal roles because it solders and welds forgivingly, work-hardens in ways wire drawers understand, and can be refined electrolytically until grain boundaries stop stealing electrons. The obstacle is geometry: a solid bar is too stiff to wind into a motor; wire must be drawn through dies in stages, annealed between passes, then stranded so cords survive flexing without snapping single crystals.\n\nInsulation is half the product. Bare copper touching steel creates faults; cloth and rubber age; modern polymers survive temperature classes inside machines. Each jacket is a compatibility puzzle with semiconducting layers in high-voltage cables to keep electric fields smooth — voids invite partial discharge that eats insulation from within.\n\nWithout agreed gauges and termination discipline, lugs loosen thermally, fires start at connections, and maintenance becomes guesswork. Wire is therefore standards and craft together — not merely metal shopping.",
-  "overview": "Cathode copper is melted and cast into rod, then reduced through tungsten-carbide or diamond dies. Each pass shrinks diameter while lengthening the wire; intermediate annealing in a controlled atmosphere restores softness so the next pass does not tear. Multiple strands are twisted into rope-lay bundles so flexing shares fatigue among many small wires.\n\nInsulation systems stack functions: dielectric strength, moisture barrier, flame retardance, sunlight resistance on poles. Oil-impregnated paper still appears in some high-voltage land cables; cross-linked polyethylene dominates modern distribution because it tolerates thermal class and wet environments if manufacturing avoids voids.\n\nJointing matters as much as drawing. Compression lugs, exothermic welds for earth grids, and torque schedules for aluminium teach the same lesson: contact resistance is a device you did not intend to build. Oxidation at aluminium terminals pushed industry toward antioxidant compounds and disciplined tightening — a reminder that chemistry lives at every screw.\n\nMagnet wire for motors adds enamel films in multiple bakes, cured to survive varnish ovens without pinholes — invisible insulation is the difference between a quiet machine and a turn-to-turn short.",
+  "problem": "Electricity without conductors is a lecture-demonstration, not a civilisation. You can see sparks jump across a gap, but you cannot power a mill or carry a telegram miles through rain unless metal behaves predictably: low resistance, enough ductility to bend around corners, and joints that stay tight after a thousand heat cycles.\n\nCopper won for most power and signal roles because it solders and welds forgivingly, work-hardens in ways wire drawers understand, and can be refined electrolytically until grain boundaries stop stealing electrons. The obstacle is geometry: a solid bar is too stiff to wind into a motor; wire must be drawn through dies in stages, annealed between passes, then stranded so cords survive flexing without snapping single crystals.\n\nInsulation is half the product. Bare copper touching steel creates faults; cloth and rubber age; modern polymers survive temperature classes inside machines. Each jacket is a compatibility puzzle with semiconducting layers in high-voltage cables to keep electric fields smooth \u2014 voids invite partial discharge that eats insulation from within.\n\nWithout agreed gauges and termination discipline, lugs loosen thermally, fires start at connections, and maintenance becomes guesswork. Wire is therefore standards and craft together \u2014 not merely metal shopping.",
+  "overview": "Cathode copper is melted and cast into rod, then reduced through tungsten-carbide or diamond dies. Each pass shrinks diameter while lengthening the wire; intermediate annealing in a controlled atmosphere restores softness so the next pass does not tear. Multiple strands are twisted into rope-lay bundles so flexing shares fatigue among many small wires.\n\nInsulation systems stack functions: dielectric strength, moisture barrier, flame retardance, sunlight resistance on poles. Oil-impregnated paper still appears in some high-voltage land cables; cross-linked polyethylene dominates modern distribution because it tolerates thermal class and wet environments if manufacturing avoids voids.\n\nJointing matters as much as drawing. Compression lugs, exothermic welds for earth grids, and torque schedules for aluminium teach the same lesson: contact resistance is a device you did not intend to build. Oxidation at aluminium terminals pushed industry toward antioxidant compounds and disciplined tightening \u2014 a reminder that chemistry lives at every screw.\n\nMagnet wire for motors adds enamel films in multiple bakes, cured to survive varnish ovens without pinholes \u2014 invisible insulation is the difference between a quiet machine and a turn-to-turn short.",
   "principles": [
     {
       "name": "Skin effect",
-      "explanation": "At AC frequencies current crowds toward outer conductor surface — litz wire and tubular busbars manage effective resistance."
+      "explanation": "At AC frequencies current crowds toward outer conductor surface \u2014 litz wire and tubular busbars manage effective resistance."
     },
     {
       "name": "Work hardening",
       "explanation": "Cold drawing raises tensile strength but lowers elongation; annealing trades strength for drawability in the next pass."
     },
     {
-      "name": "I²R losses",
-      "explanation": "Loss scales with resistance and square of current — why transmission uses high voltage for the same power."
+      "name": "I\u00b2R losses",
+      "explanation": "Loss scales with resistance and square of current \u2014 why transmission uses high voltage for the same power."
     },
     {
       "name": "Partial discharge",
-      "explanation": "Voids in solid insulation initiate micro-arcs that erode polymer — manufacturing seeks void-free extrusion."
+      "explanation": "Voids in solid insulation initiate micro-arcs that erode polymer \u2014 manufacturing seeks void-free extrusion."
     }
   ],
   "components": [
@@ -88,7 +88,7 @@
         "Zambian copperbelt",
         "Indonesian Grasberg region"
       ],
-      "spaceAlternatives": "Electrolytic cathode from porphyry or sediment-hosted mines; in early off-world camps recycle busbar and cable ends before expecting new sulphide flotation — meteoritic iron is a poor conductor for power distribution",
+      "spaceAlternatives": "Electrolytic cathode from porphyry or sediment-hosted mines; in early off-world camps recycle busbar and cable ends before expecting new sulphide flotation \u2014 meteoritic iron is a poor conductor for power distribution",
       "processingRequired": "Fire refine then electrolytic refine to 99.99%"
     },
     {
@@ -106,7 +106,7 @@
       "earthLocations": [
         "Synthetic ester and soap suppliers"
       ],
-      "spaceAlternatives": "Synthetic ester or soap-based drawing soaps; historically tallow mixtures — filter aggressively so grit never scores dies or embeds in copper",
+      "spaceAlternatives": "Synthetic ester or soap-based drawing soaps; historically tallow mixtures \u2014 filter aggressively so grit never scores dies or embeds in copper",
       "processingRequired": "Filter to remove grit that scores wire"
     }
   ],
@@ -114,17 +114,17 @@
     {
       "order": 1,
       "title": "Start from the cleanest copper you can obtain",
-      "description": "If you are not yet running a refinery, begin with known-grade cathode or reclaimed busbar, stripped of solder and insulation in a ventilated space. Sort alloys — brass and bronze are not substitutes for electrical copper. Weigh and label batches so you can correlate breaks with sources.",
+      "description": "If you are not yet running a refinery, begin with known-grade cathode or reclaimed busbar, stripped of solder and insulation in a ventilated space. Sort alloys \u2014 brass and bronze are not substitutes for electrical copper. Weigh and label batches so you can correlate breaks with sources.",
       "prerequisiteTools": [
         "furnace or local melter access",
         "labels"
       ],
-      "warningNote": "Burning PVC insulation releases hydrochloric acid gas — strip mechanically when possible"
+      "warningNote": "Burning PVC insulation releases hydrochloric acid gas \u2014 strip mechanically when possible"
     },
     {
       "order": 2,
       "title": "Reduce diameter in patient steps",
-      "description": "Each draw through a die should remove modest cross-section so the wire lengthens without tearing or overheating. If the wire sings or smells hot, stop — add lubricant, check die wear, or anneal sooner. Measure diameter with micrometers after passes until you trust your machine’s indexing.",
+      "description": "Each draw through a die should remove modest cross-section so the wire lengthens without tearing or overheating. If the wire sings or smells hot, stop \u2014 add lubricant, check die wear, or anneal sooner. Measure diameter with micrometers after passes until you trust your machine\u2019s indexing.",
       "prerequisiteTools": [
         "series of dies",
         "micrometers",
@@ -140,7 +140,7 @@
         "temperature control",
         "pyrometer or experience"
       ],
-      "warningNote": "Over-annealing softens excessively — the next die snaps the strand"
+      "warningNote": "Over-annealing softens excessively \u2014 the next die snaps the strand"
     },
     {
       "order": 4,
@@ -150,12 +150,12 @@
         "extrusion line or hand jacketing",
         "spark tester if HV"
       ],
-      "warningNote": "Wet polymer pellets cause steam voids — predry feedstock"
+      "warningNote": "Wet polymer pellets cause steam voids \u2014 predry feedstock"
     },
     {
       "order": 5,
       "title": "Test and tag so the next person trusts your drum",
-      "description": "Measure DC resistance per length at known temperature; hi-pot jackets where standards demand. Print gauge, temperature class, and date. File a sample under the batch number — when a fault appears years later, you will want evidence whether it was manufacturing or abuse.",
+      "description": "Measure DC resistance per length at known temperature; hi-pot jackets where standards demand. Print gauge, temperature class, and date. File a sample under the batch number \u2014 when a fault appears years later, you will want evidence whether it was manufacturing or abuse.",
       "prerequisiteTools": [
         "Kelvin bridge or good ohmmeter",
         "labels"
@@ -181,7 +181,7 @@
     }
   ],
   "inventors": [],
-  "impact": "Copper wire turned electricity into infrastructure — motors, lights, telegraphs, and later data all ride on refined stranding and insulation craft.\n\nRecovery must preserve drawing die mathematics and spark-testing culture, not only smelter output.",
+  "impact": "Copper wire turned electricity into infrastructure \u2014 motors, lights, telegraphs, and later data all ride on refined stranding and insulation craft.\n\nRecovery must preserve drawing die mathematics and spark-testing culture, not only smelter output.",
   "images": [],
   "videos": [
     {
@@ -194,16 +194,20 @@
   "externalLinks": [
     {
       "id": "iec-cables",
-      "title": "IEC — international electrical standards directory",
+      "title": "IEC \u2014 international electrical standards directory",
       "url": "https://www.iec.ch/"
     },
     {
       "id": "copper-org",
-      "title": "Copper Development Association — electrical copper",
+      "title": "Copper Development Association \u2014 electrical copper",
       "url": "https://www.copper.org/"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -212,14 +216,14 @@
     "sources": [
       {
         "id": "src-nist-conductivity",
-        "title": "NIST — Conductivity and resistivity of copper (via materials portal)",
+        "title": "NIST \u2014 Conductivity and resistivity of copper (via materials portal)",
         "url": "https://www.nist.gov/mml",
         "type": "institution",
         "note": "Electrical material standards and measurement science entry point"
       },
       {
         "id": "src-wiki-conductor",
-        "title": "Wikipedia — Electrical conductor",
+        "title": "Wikipedia \u2014 Electrical conductor",
         "url": "https://en.wikipedia.org/wiki/Electrical_conductor",
         "type": "wikipedia",
         "note": "Copper conductivity, stranding, and cable design references"

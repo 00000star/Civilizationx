@@ -188,12 +188,16 @@
   "externalLinks": [
     {
       "id": "wiki-gradient-descent",
-      "title": "Wikipedia — Gradient Descent",
+      "title": "Wikipedia \u2014 Gradient Descent",
       "url": "https://en.wikipedia.org/wiki/Gradient_Descent"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -202,18 +206,18 @@
     "sources": [
       {
         "id": "nocedal-wright-nd",
-        "title": "Nocedal & Wright — Numerical Optimization",
+        "title": "Nocedal & Wright \u2014 Numerical Optimization",
         "type": "book"
       },
       {
         "id": "goodfellow-sgd",
-        "title": "Goodfellow et al. — Deep Learning (optimization chapter)",
+        "title": "Goodfellow et al. \u2014 Deep Learning (optimization chapter)",
         "type": "book",
         "url": "https://www.deeplearningbook.org/"
       },
       {
         "id": "wiki-sgd",
-        "title": "Wikipedia — Stochastic gradient descent",
+        "title": "Wikipedia \u2014 Stochastic gradient descent",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Stochastic_gradient_descent"
       }

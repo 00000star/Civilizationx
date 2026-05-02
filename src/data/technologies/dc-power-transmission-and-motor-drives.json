@@ -11,8 +11,8 @@
     "copper-wire-and-cable"
   ],
   "unlocks": [],
-  "problem": "Alternating current won cities because a transformer is a simple, reliable impedance translator. But physics punishes AC on very long submarine cables: the cable itself behaves like a giant capacitor, and charging current can eat the ampacity you thought you bought. High-voltage direct current links move energy as DC between converter stations, letting asynchronous grids shake hands without synchronising every generator.\n\nThe same semiconductor families that rescue cables also reinvent the workshop: a motor no longer needs to locked to line frequency if an inverter synthesises whatever Hz the load wants. Braking energy can return to the grid instead of smoking in a resistor bank — when regulations and hardware allow.\n\nPower electronics trade old problems for new ones. Switching devices must not shoot through; snubbers and layout fight voltage spikes; harmonics on the AC side can overheat neutrals and nuisance-trip upstream protection. A drive cabinet is therefore both liberator and neighbour: done well it is whisper-quiet; done poorly it is a radio jammer and a fire starter.\n\nInterruption is harder on DC than AC — there is no natural current zero every half-cycle — so breaker technology, fault detection, and coordination remain active engineering frontiers, not solved textbook trivia.",
-  "overview": "Historically, mercury-arc valves and later thyristor bridges rectified and inverted bulk power; today IGBT and silicon-carbide stacks PWM approximate sine waves with self-commutation, helping weak grids and enabling black-start services modular converters can provide. Modular multilevel converters stack many small cells so waveforms are smooth and filters shrink.\n\nMotor drives typically rectify AC to a DC link, filter briefly, then invert to variable frequency for induction or permanent-magnet motors. Four-quadrant drives can motor or regenerate; ship propulsion and elevators exploit that daily. Cable and motor must be matched to fast edges — reflections from impedance mismatch can overvoltage windings.\n\nHVDC overlays connect offshore wind fields, cross mountain ranges with narrower right-of-way than AC for the same power, and tie islands to continents. Metallic return electrodes handle monopolar schemes; insulation coordination on DC bushings borrows from AC craft but is not identical.\n\nHarmonic filters and PWM strategies are civic infrastructure: they keep your drive from being the reason a hospital’s imaging suite ghosts artifacts. Standards encode emission limits; compliance is part of the product, not an afterthought.",
+  "problem": "Alternating current won cities because a transformer is a simple, reliable impedance translator. But physics punishes AC on very long submarine cables: the cable itself behaves like a giant capacitor, and charging current can eat the ampacity you thought you bought. High-voltage direct current links move energy as DC between converter stations, letting asynchronous grids shake hands without synchronising every generator.\n\nThe same semiconductor families that rescue cables also reinvent the workshop: a motor no longer needs to locked to line frequency if an inverter synthesises whatever Hz the load wants. Braking energy can return to the grid instead of smoking in a resistor bank \u2014 when regulations and hardware allow.\n\nPower electronics trade old problems for new ones. Switching devices must not shoot through; snubbers and layout fight voltage spikes; harmonics on the AC side can overheat neutrals and nuisance-trip upstream protection. A drive cabinet is therefore both liberator and neighbour: done well it is whisper-quiet; done poorly it is a radio jammer and a fire starter.\n\nInterruption is harder on DC than AC \u2014 there is no natural current zero every half-cycle \u2014 so breaker technology, fault detection, and coordination remain active engineering frontiers, not solved textbook trivia.",
+  "overview": "Historically, mercury-arc valves and later thyristor bridges rectified and inverted bulk power; today IGBT and silicon-carbide stacks PWM approximate sine waves with self-commutation, helping weak grids and enabling black-start services modular converters can provide. Modular multilevel converters stack many small cells so waveforms are smooth and filters shrink.\n\nMotor drives typically rectify AC to a DC link, filter briefly, then invert to variable frequency for induction or permanent-magnet motors. Four-quadrant drives can motor or regenerate; ship propulsion and elevators exploit that daily. Cable and motor must be matched to fast edges \u2014 reflections from impedance mismatch can overvoltage windings.\n\nHVDC overlays connect offshore wind fields, cross mountain ranges with narrower right-of-way than AC for the same power, and tie islands to continents. Metallic return electrodes handle monopolar schemes; insulation coordination on DC bushings borrows from AC craft but is not identical.\n\nHarmonic filters and PWM strategies are civic infrastructure: they keep your drive from being the reason a hospital\u2019s imaging suite ghosts artifacts. Standards encode emission limits; compliance is part of the product, not an afterthought.",
   "principles": [
     {
       "name": "Line versus self commutation",
@@ -20,7 +20,7 @@
     },
     {
       "name": "DC cable ampacity",
-      "explanation": "No skin effect at DC — conductor used more uniformly than AC at same size, helping submarine economics."
+      "explanation": "No skin effect at DC \u2014 conductor used more uniformly than AC at same size, helping submarine economics."
     },
     {
       "name": "PWM harmonic spectrum",
@@ -28,7 +28,7 @@
     },
     {
       "name": "Four-quadrant operation",
-      "explanation": "Drives can motor or regenerate — braking energy returns to grid or burns in resistors if infrastructure forbids."
+      "explanation": "Drives can motor or regenerate \u2014 braking energy returns to grid or burns in resistors if infrastructure forbids."
     }
   ],
   "components": [
@@ -101,7 +101,7 @@
     {
       "order": 1,
       "title": "Write the electrical story on one page before ordering semiconductors",
-      "description": "State input voltage class, DC bus target, switching frequency, maximum load current, and whether you must regenerate to the grid. Sketch the path from grid terminals through precharge, DC link, inverter, and motor. Note ambient temperature and altitude — semiconductors derate sharply when air is thin or hot.",
+      "description": "State input voltage class, DC bus target, switching frequency, maximum load current, and whether you must regenerate to the grid. Sketch the path from grid terminals through precharge, DC link, inverter, and motor. Note ambient temperature and altitude \u2014 semiconductors derate sharply when air is thin or hot.",
       "prerequisiteTools": [
         "notebook",
         "multimeter"
@@ -121,7 +121,7 @@
     {
       "order": 3,
       "title": "Install line reactors, DC chokes, and filters where the design calls for them",
-      "description": "Reactors soften di/dt and help compliance with harmonic limits; DC chokes limit fault rise rates in some topologies. Label each inductor with its function — future you will forget why it sat there.",
+      "description": "Reactors soften di/dt and help compliance with harmonic limits; DC chokes limit fault rise rates in some topologies. Label each inductor with its function \u2014 future you will forget why it sat there.",
       "prerequisiteTools": [
         "LCR meter if available"
       ],
@@ -130,7 +130,7 @@
     {
       "order": 4,
       "title": "Program protections before connecting the motor",
-      "description": "Set overcurrent, overvoltage, earth-fault, and thermal models conservatively. Verify encoder or resolver direction matches motor rotation command — a wrong sign can run away until mechanical limits stop it. Test emergency stop paths independently of software.",
+      "description": "Set overcurrent, overvoltage, earth-fault, and thermal models conservatively. Verify encoder or resolver direction matches motor rotation command \u2014 a wrong sign can run away until mechanical limits stop it. Test emergency stop paths independently of software.",
       "prerequisiteTools": [
         "laptop with vendor tool",
         "isolated scope probe"
@@ -166,7 +166,7 @@
     }
   ],
   "inventors": [],
-  "impact": "HVDC and drives are the duct tape of modern power — stitching asynchronous regions and spinning motors at arbitrary speed without mechanical gears.\n\nThey are also harmonic pollution sources if designed without civic filters.",
+  "impact": "HVDC and drives are the duct tape of modern power \u2014 stitching asynchronous regions and spinning motors at arbitrary speed without mechanical gears.\n\nThey are also harmonic pollution sources if designed without civic filters.",
   "images": [],
   "videos": [
     {
@@ -179,16 +179,20 @@
   "externalLinks": [
     {
       "id": "abb-hvdc",
-      "title": "Hitachi Energy — HVDC reference projects (industry)",
+      "title": "Hitachi Energy \u2014 HVDC reference projects (industry)",
       "url": "https://www.hitachienergy.com/us/en/offers/product-system/high-voltage-direct-current-hvdc"
     },
     {
       "id": "iea-hvdc",
-      "title": "IEA — grid integration reports",
+      "title": "IEA \u2014 grid integration reports",
       "url": "https://www.iea.org/"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -204,7 +208,7 @@
       },
       {
         "id": "src-wiki-dc",
-        "title": "Wikipedia — High-voltage direct current",
+        "title": "Wikipedia \u2014 High-voltage direct current",
         "url": "https://en.wikipedia.org/wiki/High-voltage_direct_current",
         "type": "wikipedia",
         "note": "HVDC links and converter stations (subset of DC power transmission topic)"

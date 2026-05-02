@@ -1,7 +1,7 @@
 {
   "id": "lever-system",
   "name": "The Lever (as a System)",
-  "tagline": "A rigid bar, pivot, load, and effort — mechanical advantage for lifting, holding, and precise force application",
+  "tagline": "A rigid bar, pivot, load, and effort \u2014 mechanical advantage for lifting, holding, and precise force application",
   "category": "science",
   "era": "prehistoric",
   "difficulty": 1,
@@ -30,12 +30,12 @@
     "water-powered-trip-hammer",
     "workbench-design"
   ],
-  "problem": "Human muscle output is limited and joints fatigue. Many tasks require forces beyond comfortable grip: lifting stone blocks, extracting roots, holding a split log while binding it, or applying controlled pressure to flake stone. The lever problem is redirecting and amplifying force through a rigid body rotating about a pivot so a small effort over a long arc moves a large resistance over a short arc.\n\nLevers also enable fine control: a long handle on a small cutting edge turns wrist motion into high contact pressure — the functional heart of axes, adzes, and chisels even before the classification is named.\n\nWithout explicit lever thinking, tools remain inefficient: short handles waste backs; wrong pivot placement damages edges. Making the lever explicit is prerequisite to later machines built from lever, wheel, and screw families.",
-  "overview": "A lever system has a fulcrum, an effort arm, and a load arm. Class I places the fulcrum between load and effort (crowbar). Class II places the load between fulcrum and effort (wheelbarrow conceptually). Class III places effort between fulcrum and load (tongs, fishing rod) — trading force for speed and range.\n\nMechanical advantage in the ideal model equals the ratio of effort arm to load arm. Real systems lose efficiency to friction at the fulcrum, deformation of the bar, and off-axis loading that introduces bending.\n\nStone-age fulcrums are rock edges or logs; effort and load contacts are rounded to reduce stress concentrations. Metal ages add hardened pivots and bushings, but geometry remains king.\n\nLevers compose: compound levers in nail clippers and bolt cutters cascade small motions into huge forces. The Codex conserves the root pattern: rigid bar, pivot, two moments in equilibrium (approximately).",
+  "problem": "Human muscle output is limited and joints fatigue. Many tasks require forces beyond comfortable grip: lifting stone blocks, extracting roots, holding a split log while binding it, or applying controlled pressure to flake stone. The lever problem is redirecting and amplifying force through a rigid body rotating about a pivot so a small effort over a long arc moves a large resistance over a short arc.\n\nLevers also enable fine control: a long handle on a small cutting edge turns wrist motion into high contact pressure \u2014 the functional heart of axes, adzes, and chisels even before the classification is named.\n\nWithout explicit lever thinking, tools remain inefficient: short handles waste backs; wrong pivot placement damages edges. Making the lever explicit is prerequisite to later machines built from lever, wheel, and screw families.",
+  "overview": "A lever system has a fulcrum, an effort arm, and a load arm. Class I places the fulcrum between load and effort (crowbar). Class II places the load between fulcrum and effort (wheelbarrow conceptually). Class III places effort between fulcrum and load (tongs, fishing rod) \u2014 trading force for speed and range.\n\nMechanical advantage in the ideal model equals the ratio of effort arm to load arm. Real systems lose efficiency to friction at the fulcrum, deformation of the bar, and off-axis loading that introduces bending.\n\nStone-age fulcrums are rock edges or logs; effort and load contacts are rounded to reduce stress concentrations. Metal ages add hardened pivots and bushings, but geometry remains king.\n\nLevers compose: compound levers in nail clippers and bolt cutters cascade small motions into huge forces. The Codex conserves the root pattern: rigid bar, pivot, two moments in equilibrium (approximately).",
   "principles": [
     {
       "name": "Torque balance",
-      "explanation": "Static equilibrium requires the sum of moments about the pivot to be zero — load force times its lever arm equals effort force times its lever arm in the ideal case."
+      "explanation": "Static equilibrium requires the sum of moments about the pivot to be zero \u2014 load force times its lever arm equals effort force times its lever arm in the ideal case."
     },
     {
       "name": "Stress and bending",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Stability of the fulcrum",
-      "explanation": "A rolling fulcrum changes effective lever arms during motion — sometimes desirable (cam-like), often hazardous if unplanned."
+      "explanation": "A rolling fulcrum changes effective lever arms during motion \u2014 sometimes desirable (cam-like), often hazardous if unplanned."
     }
   ],
   "components": [
@@ -57,7 +57,7 @@
       "function": "Transmits force between effort and load",
       "position": "Spans from handle to working end",
       "madeFrom": "Wood, bone, metal later",
-      "criticalNote": "Knots and grain runout weaken bending strength — orient continuous grain along beam"
+      "criticalNote": "Knots and grain runout weaken bending strength \u2014 orient continuous grain along beam"
     },
     {
       "id": "fulcrum",
@@ -73,12 +73,12 @@
       "function": "Where human or machine applies input force",
       "position": "Handle grip region",
       "madeFrom": "Shaped wood swell, wrapped cord for grip",
-      "criticalNote": "Handle diameter matches hand — too thin causes nerve compression"
+      "criticalNote": "Handle diameter matches hand \u2014 too thin causes nerve compression"
     },
     {
       "id": "load-interface",
       "name": "Load interface",
-      "function": "Contacts workpiece — hook, blade, pad",
+      "function": "Contacts workpiece \u2014 hook, blade, pad",
       "position": "Opposite side of fulcrum from effort depending on class",
       "madeFrom": "Steel edge, bronze shoe, wood pad",
       "criticalNote": "Slip at interface converts intended lift into dangerous kick-out"
@@ -142,7 +142,7 @@
         "axe",
         "drawknife"
       ],
-      "warningNote": "Shavings ignite easily near fire — clear workspace"
+      "warningNote": "Shavings ignite easily near fire \u2014 clear workspace"
     },
     {
       "order": 3,
@@ -162,16 +162,16 @@
         "drill or awl",
         "wedges"
       ],
-      "warningNote": "Pinned joints under tension can eject pins — use shoulders"
+      "warningNote": "Pinned joints under tension can eject pins \u2014 use shoulders"
     },
     {
       "order": 5,
       "title": "Proof test progressively",
-      "description": "Load to 1.25× working load with known masses if possible. Listen for fibre cracks. Shorten lever arm if creep appears.",
+      "description": "Load to 1.25\u00d7 working load with known masses if possible. Listen for fibre cracks. Shorten lever arm if creep appears.",
       "prerequisiteTools": [
         "known weights or water barrels"
       ],
-      "warningNote": "Use body posture that keeps load path within base of support — levers amplify kickback too"
+      "warningNote": "Use body posture that keeps load path within base of support \u2014 levers amplify kickback too"
     }
   ],
   "history": [
@@ -190,22 +190,26 @@
   "inventors": [
     {
       "name": "Archimedes",
-      "contribution": "Mathematical treatment of levers and buoyancy — codified mechanical advantage reasoning",
+      "contribution": "Mathematical treatment of levers and buoyancy \u2014 codified mechanical advantage reasoning",
       "years": "c. 287-212 BCE",
       "nationality": "Greek"
     }
   ],
-  "impact": "Levers appear in every subsequent machine age: brakes, valve gear, control surfaces, and robotic linkages are torque budgeting problems. Teaching the lever early prevents folk beliefs that 'bigger muscles' are the only answer — geometry is strength.",
+  "impact": "Levers appear in every subsequent machine age: brakes, valve gear, control surfaces, and robotic linkages are torque budgeting problems. Teaching the lever early prevents folk beliefs that 'bigger muscles' are the only answer \u2014 geometry is strength.",
   "images": [],
   "videos": [],
   "externalLinks": [
     {
       "id": "hyperphysics-lever",
-      "title": "HyperPhysics — torque and rotation concepts",
+      "title": "HyperPhysics \u2014 torque and rotation concepts",
       "url": "http://hyperphysics.phy-astr.gsu.edu/hbase/torq.html"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -214,21 +218,21 @@
     "sources": [
       {
         "id": "src-nist-pml-lever",
-        "title": "NIST — PML",
+        "title": "NIST \u2014 PML",
         "url": "https://www.nist.gov/pml",
         "type": "institution",
         "note": "Force metrology for lever and machine experiments"
       },
       {
         "id": "src-wiki-lever",
-        "title": "Wikipedia — Lever",
+        "title": "Wikipedia \u2014 Lever",
         "url": "https://en.wikipedia.org/wiki/Lever",
         "type": "wikipedia",
-        "note": "Class I–III levers, torque, and equilibrium"
+        "note": "Class I\u2013III levers, torque, and equilibrium"
       },
       {
         "id": "src-osha-heat",
-        "title": "OSHA — Heat",
+        "title": "OSHA \u2014 Heat",
         "url": "https://www.osha.gov/heat",
         "type": "institution",
         "note": "Industrial hygiene when lifting outdoors in heat (field archaeology parallels)"

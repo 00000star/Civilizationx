@@ -13,11 +13,11 @@
   ],
   "unlocks": [],
   "problem": "Before the automobile, humans depended on horses, oxen, or their own legs for most land travel. Horses require feed, rest, stabling, and veterinary care. They are expensive to maintain at household scale, slow over long distances compared with later motor speeds, and impractical for on-demand heavy errands without a wagon. Cities were constrained in daily reach because commuting beyond a few kilometres consumed hours.\n\nThe fundamental problem was converting stored chemical energy into reliable mechanical motion on demand, without a living engine. Steam carriages existed but carried boiler inertia and fire risk perceptions. The automobile wins by packaging internal combustion (or later alternatives) into a chassis with controlled cooling, lubrication, and transmissions suited to variable road load.\n\nRoads matter as much as engines: soft surfaces waste tractive effort; crowned pavements shed water; signalling and rules reduce kinetic-energy conflicts between vehicles.",
-  "overview": "A typical petrol automobile couples a multi-cylinder four-stroke engine to a transmission that multiplies torque for acceleration and reduces engine speed for efficient cruising. The engine's crankshaft torque passes through a clutch (manual) or torque converter (automatic), then a gearbox, then a final drive and differential that splits torque to driven wheels while allowing different wheel speeds in corners.\n\nThe chassis or unitised body provides structural paths for suspension, crash loads, and noise isolation. Suspension links control wheel motion relative to the body, keeping tyres in contact for grip. Steering uses a rack-and-pinion or recirculating ball system translating wheel rotation to toe changes at the front axle (most layouts). Brakes convert kinetic energy to heat via friction at discs or drums, hydraulically actuated with vacuum or electric boost.\n\nTyres are pneumatic composites: fabric or steel plies, rubber tread and sidewall, bead seated on the rim, inflated to tune contact patch pressure. The electrical system starts the engine, powers sensors, and runs safety lighting. Emissions controls (where present) add catalytic conversion and precise fuel metering.\n\nManufacturing integrates stamping, welding, painting, and assembly lines — the automobile is as much logistics and quality systems as mechanical design.",
+  "overview": "A typical petrol automobile couples a multi-cylinder four-stroke engine to a transmission that multiplies torque for acceleration and reduces engine speed for efficient cruising. The engine's crankshaft torque passes through a clutch (manual) or torque converter (automatic), then a gearbox, then a final drive and differential that splits torque to driven wheels while allowing different wheel speeds in corners.\n\nThe chassis or unitised body provides structural paths for suspension, crash loads, and noise isolation. Suspension links control wheel motion relative to the body, keeping tyres in contact for grip. Steering uses a rack-and-pinion or recirculating ball system translating wheel rotation to toe changes at the front axle (most layouts). Brakes convert kinetic energy to heat via friction at discs or drums, hydraulically actuated with vacuum or electric boost.\n\nTyres are pneumatic composites: fabric or steel plies, rubber tread and sidewall, bead seated on the rim, inflated to tune contact patch pressure. The electrical system starts the engine, powers sensors, and runs safety lighting. Emissions controls (where present) add catalytic conversion and precise fuel metering.\n\nManufacturing integrates stamping, welding, painting, and assembly lines \u2014 the automobile is as much logistics and quality systems as mechanical design.",
   "principles": [
     {
       "name": "Internal combustion power stroke",
-      "explanation": "Each cylinder executes intake, compression, ignition, expansion, exhaust — phased across cylinders for smoother torque and manageable flywheel storage."
+      "explanation": "Each cylinder executes intake, compression, ignition, expansion, exhaust \u2014 phased across cylinders for smoother torque and manageable flywheel storage."
     },
     {
       "name": "Transmission mechanical advantage",
@@ -25,11 +25,11 @@
     },
     {
       "name": "Tyre friction circle",
-      "explanation": "Longitudinal acceleration/braking and lateral cornering share friction limits at each contact patch — aggressive combined manoeuvres can exceed available grip."
+      "explanation": "Longitudinal acceleration/braking and lateral cornering share friction limits at each contact patch \u2014 aggressive combined manoeuvres can exceed available grip."
     },
     {
       "name": "Brake energy and fade",
-      "explanation": "Repeated hard braking heats friction materials; coefficient of friction can drop (fade) — sizing brakes includes thermal mass and cooling airflow."
+      "explanation": "Repeated hard braking heats friction materials; coefficient of friction can drop (fade) \u2014 sizing brakes includes thermal mass and cooling airflow."
     }
   ],
   "components": [
@@ -79,7 +79,7 @@
       "function": "Dissipates kinetic energy safely",
       "position": "At wheels; hydraulic lines to pedal",
       "madeFrom": "Cast iron rotors, friction pads, rubber seals, ABS module modern",
-      "criticalNote": "Brake fluid is hygroscopic — scheduled replacement matters"
+      "criticalNote": "Brake fluid is hygroscopic \u2014 scheduled replacement matters"
     },
     {
       "id": "fuel-system",
@@ -106,7 +106,7 @@
         "Integrated steelworks near iron ore and coal historically",
         "global minimills modern"
       ],
-      "spaceAlternatives": "Meteoritic iron is irrelevant at scale — electrolytic iron and alloying",
+      "spaceAlternatives": "Meteoritic iron is irrelevant at scale \u2014 electrolytic iron and alloying",
       "processingRequired": "Continuous casting, hot rolling, stamping, heat treatment"
     },
     {
@@ -116,7 +116,7 @@
         "Bauxite belts (Guinea, Australia, Brazil)"
       ],
       "spaceAlternatives": "Lunar anorthite routes to aluminium are studied but heavy energy",
-      "processingRequired": "Hall-Héroult electrolysis, rolling, age hardening"
+      "processingRequired": "Hall-H\u00e9roult electrolysis, rolling, age hardening"
     },
     {
       "name": "Hydrocarbon fuels and rubber",
@@ -150,7 +150,7 @@
         "alignment jig",
         "gauges"
       ],
-      "warningNote": "Monocoque alignment is safety-critical — use manufacturer dimensions"
+      "warningNote": "Monocoque alignment is safety-critical \u2014 use manufacturer dimensions"
     },
     {
       "order": 2,
@@ -161,7 +161,7 @@
         "bleed kit",
         "alignment rack"
       ],
-      "warningNote": "Split pin or cotter retention on ball joints — never reuse single-use nuts where specified"
+      "warningNote": "Split pin or cotter retention on ball joints \u2014 never reuse single-use nuts where specified"
     },
     {
       "order": 3,
@@ -181,7 +181,7 @@
         "tube bender",
         "pressure tester"
       ],
-      "warningNote": "Carbon monoxide is odourless — verify exhaust integrity before enclosed operation"
+      "warningNote": "Carbon monoxide is odourless \u2014 verify exhaust integrity before enclosed operation"
     },
     {
       "order": 5,
@@ -191,7 +191,7 @@
         "multimeter",
         "wiring diagrams"
       ],
-      "warningNote": "Airbag systems require de-energising procedures — accidental deployment injures"
+      "warningNote": "Airbag systems require de-energising procedures \u2014 accidental deployment injures"
     },
     {
       "order": 6,
@@ -237,22 +237,26 @@
       "nationality": "American"
     }
   ],
-  "impact": "Automobiles reorganised land use toward suburbs, built petroleum geopolitics, and enabled emergency services and rural medical access. They also generated congestion, particulate and NOx exposure near roads, and roughly one million annual road deaths globally in modern eras — a civilisational trade humans are still negotiating via regulation, design, and electrification.\n\nFor recovery, cars are mid-stack artefacts: you need fuels, machine tools, rubber, and electronics supply chains — not the first vehicle you build after losing industry.",
+  "impact": "Automobiles reorganised land use toward suburbs, built petroleum geopolitics, and enabled emergency services and rural medical access. They also generated congestion, particulate and NOx exposure near roads, and roughly one million annual road deaths globally in modern eras \u2014 a civilisational trade humans are still negotiating via regulation, design, and electrification.\n\nFor recovery, cars are mid-stack artefacts: you need fuels, machine tools, rubber, and electronics supply chains \u2014 not the first vehicle you build after losing industry.",
   "images": [],
   "videos": [],
   "externalLinks": [
     {
       "id": "nhtsa",
-      "title": "NHTSA — vehicle safety (modern regulatory reference)",
+      "title": "NHTSA \u2014 vehicle safety (modern regulatory reference)",
       "url": "https://www.nhtsa.gov/"
     },
     {
       "id": "iea-transport",
-      "title": "IEA — transport energy outlook",
+      "title": "IEA \u2014 transport energy outlook",
       "url": "https://www.iea.org/energy-system/transport"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -261,14 +265,14 @@
     "sources": [
       {
         "id": "src-wiki-auto",
-        "title": "Wikipedia — Automobile",
+        "title": "Wikipedia \u2014 Automobile",
         "url": "https://en.wikipedia.org/wiki/Automobile",
         "type": "wikipedia",
         "note": "Systems overview; pair with national vehicle safety agency materials for your jurisdiction"
       },
       {
         "id": "src-epa-transport",
-        "title": "U.S. EPA — Transportation and climate change portal",
+        "title": "U.S. EPA \u2014 Transportation and climate change portal",
         "url": "https://www.epa.gov/transportation-air-pollution-and-climate-change",
         "type": "institution",
         "note": "Emissions and fuels context"

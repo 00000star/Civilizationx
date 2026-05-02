@@ -179,12 +179,16 @@
   "externalLinks": [
     {
       "id": "wiki-gpu-accelerated-computing",
-      "title": "Wikipedia — GPU-Accelerated Computing",
+      "title": "Wikipedia \u2014 GPU-Accelerated Computing",
       "url": "https://en.wikipedia.org/wiki/GPU-Accelerated_Computing"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -199,13 +203,13 @@
       },
       {
         "id": "wiki-gpu",
-        "title": "Wikipedia — Graphics processing unit",
+        "title": "Wikipedia \u2014 Graphics processing unit",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Graphics_processing_unit"
       },
       {
         "id": "goodfellow-dl",
-        "title": "Goodfellow, Bengio, Courville — Deep Learning",
+        "title": "Goodfellow, Bengio, Courville \u2014 Deep Learning",
         "type": "book",
         "url": "https://www.deeplearningbook.org/"
       }

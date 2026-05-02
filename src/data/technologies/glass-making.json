@@ -1,7 +1,7 @@
 {
   "id": "glass-making",
   "name": "Glass Making",
-  "tagline": "Melting silica with fluxes into an amorphous solid — transparent ceramic for vessels, lenses, and fibres",
+  "tagline": "Melting silica with fluxes into an amorphous solid \u2014 transparent ceramic for vessels, lenses, and fibres",
   "category": "materials",
   "era": "ancient",
   "difficulty": 3,
@@ -19,8 +19,8 @@
     "solar-photovoltaic-power-systems",
     "vacuum-tube-electronics"
   ],
-  "problem": "Clay becomes opaque pottery; humans wanted translucency — to see liquids inside containers, to transmit light for windows, and eventually to shape lenses that extend vision. Silica alone melts at a temperature difficult for early furnaces; the glass problem is fluxing: adding soda, potash, or lime to break up the silica network, lowering viscosity and working range.\n\nGlass also demands thermal patience: rapid cooling shatters due to internal stresses. Annealing — holding near the glass transition then cooling slowly — converts a museum of internal stresses into a durable object.\n\nChemically, glass is a frozen liquid: disordered network. That makes it corrosive-resistant compared with metals in many contexts, but brittle — shock and scratch concentration limit structural roles until tempered and laminated technologies appear millennia later.",
-  "overview": "Soda-lime glass, the bulk of modern windows and bottles, combines silica sand, sodium carbonate (historically from natron or ashes), and calcium oxide (from limestone) to stabilise against water attack. In a furnace at roughly 1000–1200 °C batch reactions form melt; working occurs at lower temperatures on the glory hole or punty iron.\n\nColour comes from transition metal oxides: iron greens, cobalt blues, manganese purples. Decolourisers and oxidising/reducing flames interact subtly — glass chemistry is visibly readable to the trained eye.\n\nForming methods evolve from core-formed vessels to blown glass — a inflation process that uses surface tension to create thin, even walls. Flat glass historically was cast or crown-blown; modern float glass rides on molten tin — outside primitive scope but noted as descendant.\n\nRecycling cullet lowers melt energy — an ancient and modern efficiency lever.",
+  "problem": "Clay becomes opaque pottery; humans wanted translucency \u2014 to see liquids inside containers, to transmit light for windows, and eventually to shape lenses that extend vision. Silica alone melts at a temperature difficult for early furnaces; the glass problem is fluxing: adding soda, potash, or lime to break up the silica network, lowering viscosity and working range.\n\nGlass also demands thermal patience: rapid cooling shatters due to internal stresses. Annealing \u2014 holding near the glass transition then cooling slowly \u2014 converts a museum of internal stresses into a durable object.\n\nChemically, glass is a frozen liquid: disordered network. That makes it corrosive-resistant compared with metals in many contexts, but brittle \u2014 shock and scratch concentration limit structural roles until tempered and laminated technologies appear millennia later.",
+  "overview": "Soda-lime glass, the bulk of modern windows and bottles, combines silica sand, sodium carbonate (historically from natron or ashes), and calcium oxide (from limestone) to stabilise against water attack. In a furnace at roughly 1000\u20131200 \u00b0C batch reactions form melt; working occurs at lower temperatures on the glory hole or punty iron.\n\nColour comes from transition metal oxides: iron greens, cobalt blues, manganese purples. Decolourisers and oxidising/reducing flames interact subtly \u2014 glass chemistry is visibly readable to the trained eye.\n\nForming methods evolve from core-formed vessels to blown glass \u2014 a inflation process that uses surface tension to create thin, even walls. Flat glass historically was cast or crown-blown; modern float glass rides on molten tin \u2014 outside primitive scope but noted as descendant.\n\nRecycling cullet lowers melt energy \u2014 an ancient and modern efficiency lever.",
   "principles": [
     {
       "name": "Network formers and modifiers",
@@ -28,7 +28,7 @@
     },
     {
       "name": "Viscosity curves",
-      "explanation": "Glass is not a single melting point — it softens over a range; working, annealing, and strain points are milestones along the viscosity-temperature curve."
+      "explanation": "Glass is not a single melting point \u2014 it softens over a range; working, annealing, and strain points are milestones along the viscosity-temperature curve."
     },
     {
       "name": "Thermal stress",
@@ -36,7 +36,7 @@
     },
     {
       "name": "Devitrification",
-      "explanation": "Held too long in crystallisation-prone compositions, glass can nucleate crystals — undesirable in most vessel glass."
+      "explanation": "Held too long in crystallisation-prone compositions, glass can nucleate crystals \u2014 undesirable in most vessel glass."
     }
   ],
   "components": [
@@ -46,7 +46,7 @@
       "function": "Provides continuous high temperature for melting and reheating",
       "position": "Workshop centreline with flue",
       "madeFrom": "Refractory brick, ceramic burners later",
-      "criticalNote": "Eye protection against infrared — even without visible flame"
+      "criticalNote": "Eye protection against infrared \u2014 even without visible flame"
     },
     {
       "id": "crucible-pot",
@@ -62,7 +62,7 @@
       "function": "Transfers molten glass and enables inflation",
       "position": "Operator hand tool",
       "madeFrom": "Iron or stainless steel hollow rod",
-      "criticalNote": "Wet pipes flash steam — preheat"
+      "criticalNote": "Wet pipes flash steam \u2014 preheat"
     },
     {
       "id": "marver",
@@ -122,17 +122,17 @@
         "scales",
         "screens"
       ],
-      "warningNote": "Fine silica dust — respiratory protection"
+      "warningNote": "Fine silica dust \u2014 respiratory protection"
     },
     {
       "order": 2,
       "title": "Initial melt",
-      "description": "Ramp furnace slowly to drive off carbonates as CO2 — foaming stage needs headspace. Hold until bubbles refine.",
+      "description": "Ramp furnace slowly to drive off carbonates as CO2 \u2014 foaming stage needs headspace. Hold until bubbles refine.",
       "prerequisiteTools": [
         "crucible tongs",
         "pyrometric judgement"
       ],
-      "warningNote": "Hot glass looks like cold glass — assume everything in the shop is hot"
+      "warningNote": "Hot glass looks like cold glass \u2014 assume everything in the shop is hot"
     },
     {
       "order": 3,
@@ -142,7 +142,7 @@
         "blowpipe",
         "marver"
       ],
-      "warningNote": "Drips cause foot burns — leather shoes insufficient"
+      "warningNote": "Drips cause foot burns \u2014 leather shoes insufficient"
     },
     {
       "order": 4,
@@ -153,7 +153,7 @@
         "wood blocks",
         "shears"
       ],
-      "warningNote": "Implosion risk if wall too thin — wear safety glasses"
+      "warningNote": "Implosion risk if wall too thin \u2014 wear safety glasses"
     },
     {
       "order": 5,
@@ -178,17 +178,21 @@
     }
   ],
   "inventors": [],
-  "impact": "Glass changed architecture (windows), science (lenses and laboratory ware), and communication (fibre optics centuries later). It is fragile but information-transparent — a different design axis than metal or ceramic.\n\nOff-world, transparent habitats and solar concentrators make glass chemistry strategically relevant once silica sources are local.",
+  "impact": "Glass changed architecture (windows), science (lenses and laboratory ware), and communication (fibre optics centuries later). It is fragile but information-transparent \u2014 a different design axis than metal or ceramic.\n\nOff-world, transparent habitats and solar concentrators make glass chemistry strategically relevant once silica sources are local.",
   "images": [],
   "videos": [],
   "externalLinks": [
     {
       "id": "corning-museum",
-      "title": "Corning Museum of Glass — educational resources",
+      "title": "Corning Museum of Glass \u2014 educational resources",
       "url": "https://www.cmog.org/"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -197,21 +201,21 @@
     "sources": [
       {
         "id": "src-nist-sp811-glass",
-        "title": "NIST SP 811 — SI Guide",
+        "title": "NIST SP 811 \u2014 SI Guide",
         "url": "https://www.nist.gov/pml/special-publication-811",
         "type": "standard",
         "note": "Thermal unit consistency for furnace engineering calculations"
       },
       {
         "id": "src-wiki-glass",
-        "title": "Wikipedia — Glass",
+        "title": "Wikipedia \u2014 Glass",
         "url": "https://en.wikipedia.org/wiki/Glass",
         "type": "wikipedia",
         "note": "Composition, viscosity, and manufacturing overview"
       },
       {
         "id": "src-unesco-comm",
-        "title": "UNESCO — Communication and information",
+        "title": "UNESCO \u2014 Communication and information",
         "url": "https://www.unesco.org/en/communication-information",
         "type": "institution",
         "note": "Institutional context for scientific and technical information preservation"

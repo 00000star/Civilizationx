@@ -9,16 +9,16 @@
   "unlocks": [
     "fishing-net-and-line"
   ],
-  "problem": "Stone flakes cut and scrape, but many tasks need slender stiffness: piercing hide without huge tears, guiding cord through mesh, picking apart fibres, or spreading pressure in pressure flaking. Wood can work but dulls and splits across grain. Bone and antler occupy a middle hardness: tougher than wood along long axes, easier to shape than stone in elongate forms, and available wherever large animals are processed.\n\nThe problem bone solves is manufacturability of slender tools before metal wire drawing. A bone needle enables sewn clothing — a thermal technology multiplier. An awl enables consistent holes for lashings and later rivets conceptually.\n\nBone is also information-dense waste: if you already process animals for meat, converting metapodials and ribs into tools extracts value from refuse.",
-  "overview": "Bone tools are made by sawing, grooving, snapping, and grinding. Long bones yield splinters with natural stiffness; metapodials yield rods; ribs yield flat strips. Splintering follows collagen-apatite composite structure — sharp stone saws score a groove, then bending snaps along the weak plane. Points are shaped by abrasion on sandstone or fine-grained stone; polishing reduces friction when piercing.\n\nNeedles require an eye — drilled with a stone point in a bow drill or pushed through with gradual enlargement. Eyes weaken cross-section; design balances length and thickness so bending does not snap the web.\n\nAntler differs: it is remodelled bone grown as weapon and tool stock. Tines detach or are sectioned; antler billet is the classic soft hammer for knapping. Dense antler resists shock and spreads impact.\n\nPreservation bias makes bone tools look rarer than they were — many contexts destroy organic artefacts. Where preserved, bone harpoons, spear straighteners, and weaving tools show deep integration with fishing and textiles.",
+  "problem": "Stone flakes cut and scrape, but many tasks need slender stiffness: piercing hide without huge tears, guiding cord through mesh, picking apart fibres, or spreading pressure in pressure flaking. Wood can work but dulls and splits across grain. Bone and antler occupy a middle hardness: tougher than wood along long axes, easier to shape than stone in elongate forms, and available wherever large animals are processed.\n\nThe problem bone solves is manufacturability of slender tools before metal wire drawing. A bone needle enables sewn clothing \u2014 a thermal technology multiplier. An awl enables consistent holes for lashings and later rivets conceptually.\n\nBone is also information-dense waste: if you already process animals for meat, converting metapodials and ribs into tools extracts value from refuse.",
+  "overview": "Bone tools are made by sawing, grooving, snapping, and grinding. Long bones yield splinters with natural stiffness; metapodials yield rods; ribs yield flat strips. Splintering follows collagen-apatite composite structure \u2014 sharp stone saws score a groove, then bending snaps along the weak plane. Points are shaped by abrasion on sandstone or fine-grained stone; polishing reduces friction when piercing.\n\nNeedles require an eye \u2014 drilled with a stone point in a bow drill or pushed through with gradual enlargement. Eyes weaken cross-section; design balances length and thickness so bending does not snap the web.\n\nAntler differs: it is remodelled bone grown as weapon and tool stock. Tines detach or are sectioned; antler billet is the classic soft hammer for knapping. Dense antler resists shock and spreads impact.\n\nPreservation bias makes bone tools look rarer than they were \u2014 many contexts destroy organic artefacts. Where preserved, bone harpoons, spear straighteners, and weaving tools show deep integration with fishing and textiles.",
   "principles": [
     {
       "name": "Composite structure",
-      "explanation": "Bone combines flexible collagen and hard hydroxyapatite; fracture paths follow porosity and growth zones — tool makers learn to read grain."
+      "explanation": "Bone combines flexible collagen and hard hydroxyapatite; fracture paths follow porosity and growth zones \u2014 tool makers learn to read grain."
     },
     {
       "name": "Work hardening by polishing",
-      "explanation": "Abrasion compresses surface fibres and reduces snag — critical for needles passing through tight holes."
+      "explanation": "Abrasion compresses surface fibres and reduces snag \u2014 critical for needles passing through tight holes."
     },
     {
       "name": "Stress concentration at eyes",
@@ -26,7 +26,7 @@
     },
     {
       "name": "Orthotropic strength",
-      "explanation": "Bone is stronger along the long axis of the shaft — align tools with loaded direction."
+      "explanation": "Bone is stronger along the long axis of the shaft \u2014 align tools with loaded direction."
     }
   ],
   "components": [
@@ -36,7 +36,7 @@
       "function": "Starting stock sized for intended tool class",
       "position": "Split from long bone or cut from antler beam",
       "madeFrom": "Long bones of medium-large mammals or antler",
-      "criticalNote": "Fresh green bone cuts easier; dry bone is brittle — soak if needed"
+      "criticalNote": "Fresh green bone cuts easier; dry bone is brittle \u2014 soak if needed"
     },
     {
       "id": "point",
@@ -51,7 +51,7 @@
       "function": "Passes thread or sinew",
       "position": "Near midpoint or proximal end depending on tradition",
       "madeFrom": "Drilled hole, sometimes ground slot eye in antiquity",
-      "criticalNote": "Deburr interior — thread abrasion fails sewing projects silently"
+      "criticalNote": "Deburr interior \u2014 thread abrasion fails sewing projects silently"
     },
     {
       "id": "handle-grip",
@@ -86,7 +86,7 @@
       "earthLocations": [
         "Sandstone slabs, fine quartzite"
       ],
-      "spaceAlternatives": "Diamond abrasive later; early — silica-rich regolith pressed into blocks",
+      "spaceAlternatives": "Diamond abrasive later; early \u2014 silica-rich regolith pressed into blocks",
       "processingRequired": "Flatten working surface by grinding mutually"
     },
     {
@@ -109,7 +109,7 @@
       "prerequisiteTools": [
         "stone saw or grooving flake"
       ],
-      "warningNote": "Zoonoses from fresh bone handling — wash hands; heat-treat if culturally appropriate"
+      "warningNote": "Zoonoses from fresh bone handling \u2014 wash hands; heat-treat if culturally appropriate"
     },
     {
       "order": 2,
@@ -119,7 +119,7 @@
         "abrasive slab",
         "stone flake"
       ],
-      "warningNote": "Bone shards are sharp — eye protection"
+      "warningNote": "Bone shards are sharp \u2014 eye protection"
     },
     {
       "order": 3,
@@ -128,7 +128,7 @@
       "prerequisiteTools": [
         "coarse then fine abrasives"
       ],
-      "warningNote": "Overheating from dry grinding can crack bone — use water"
+      "warningNote": "Overheating from dry grinding can crack bone \u2014 use water"
     },
     {
       "order": 4,
@@ -138,17 +138,17 @@
         "bow drill",
         "stone drill bit"
       ],
-      "warningNote": "Thin web breaks last — stop enlarging early and finish by pulling abrasive cord through"
+      "warningNote": "Thin web breaks last \u2014 stop enlarging early and finish by pulling abrasive cord through"
     },
     {
       "order": 5,
       "title": "Polish and temper use",
-      "description": "Final polish with fine grit or leather. Test on scrap hide — smooth draw indicates success.",
+      "description": "Final polish with fine grit or leather. Test on scrap hide \u2014 smooth draw indicates success.",
       "prerequisiteTools": [
         "fine abrasive",
         "hide scrap"
       ],
-      "warningNote": "Needles snap if used as levers — bend radius matters"
+      "warningNote": "Needles snap if used as levers \u2014 bend radius matters"
     }
   ],
   "history": [
@@ -169,17 +169,21 @@
     }
   ],
   "inventors": [],
-  "impact": "Bone tools quietly enabled clothing, containers, fishing, and fine crafts. They occupy a durability niche between wood and stone and teach composite material thinking.\n\nHistorically, bone and antler remained important into metal ages for pins, combs, and specialised awls. For civilisation-restart scenarios, bone is a bridge material when metal is absent but megafauna or fish skeletons exist.\n\nEthically and legally, modern makers must respect wildlife protection laws and cultural heritage — the Codex describes principles, not permission to loot sites.",
+  "impact": "Bone tools quietly enabled clothing, containers, fishing, and fine crafts. They occupy a durability niche between wood and stone and teach composite material thinking.\n\nHistorically, bone and antler remained important into metal ages for pins, combs, and specialised awls. For civilisation-restart scenarios, bone is a bridge material when metal is absent but megafauna or fish skeletons exist.\n\nEthically and legally, modern makers must respect wildlife protection laws and cultural heritage \u2014 the Codex describes principles, not permission to loot sites.",
   "images": [],
   "videos": [],
   "externalLinks": [
     {
       "id": "britannica-needle",
-      "title": "Encyclopaedia Britannica — needle (tool)",
+      "title": "Encyclopaedia Britannica \u2014 needle (tool)",
       "url": "https://www.britannica.com/technology/needle"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -195,14 +199,14 @@
       },
       {
         "id": "src-wiki-bone-tool",
-        "title": "Wikipedia — Bone tool",
+        "title": "Wikipedia \u2014 Bone tool",
         "url": "https://en.wikipedia.org/wiki/Bone_tool",
         "type": "wikipedia",
         "note": "Typology and archaeological examples"
       },
       {
         "id": "src-who-nutrition",
-        "title": "WHO — Nutrition health topic",
+        "title": "WHO \u2014 Nutrition health topic",
         "url": "https://www.who.int/health-topics/nutrition",
         "type": "institution",
         "note": "Human nutritional context when discussing food processing tools (cross-disciplinary anchor)"

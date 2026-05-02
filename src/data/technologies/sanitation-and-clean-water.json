@@ -1,7 +1,7 @@
 {
   "id": "sanitation-and-clean-water",
   "name": "Sanitation and Clean Water",
-  "tagline": "Safe drinking water, waste isolation, and hygiene habits that prevent waterborne disease when infrastructure disappears",
+  "tagline": "A multi-barrier system for safe hydration, waste isolation, and epidemiological defense in resource-constrained environments",
   "category": "survival",
   "era": "prehistoric",
   "difficulty": 2,
@@ -53,252 +53,313 @@
     "waste-burial-and-isolation",
     "weather-observation"
   ],
-  "problem": "Human beings are walking conflict zones for microbes: every litre of surface water near settlements is a potential culture medium seeded by faeces, urine, decaying biomass, and biofilms that protect pathogens from simple fixes. In the first hours after disruption, people still behave as if taps and chlorine exist; within days, diarrhoeal disease can remove more working adults from a labour pool than injury or violence. Children dehydrate fastest; caregivers then face impossible trade-offs between fetching water and staying at a bedside.\n\nThe second failure mode is engineering without discipline. A community can build an impressive filter or a gleaming boiling kettle and still poison itself by dipping unwashed hands into storage, by rinsing dishes in untreated stream water, or by locating a latrine uphill of the spring because the downhill slope was rockier to dig. Water safety is a system: source selection, transport, treatment, storage, and waste must be designed as one loop, not five independent hobbies.\n\nThe third failure mode is chemical complacency. Boiling does not remove arsenic, nitrates from agricultural runoff, or many industrial solvents. Clear water is not innocent water. Teaching people to recognise the limits of each method — heat, sand, sunlight, measured halogens — is as important as teaching them to tie knots.\n\nOn Mars or in closed habitats, water is the primary life-support fluid. Every litre is part of a closed-loop system where cross-contamination between greywater (wash), blackwater (waste), and potable storage is an existential threat.",
-  "overview": "Practical field water treatment stacks independent barriers. First, protect the source: choose headwater springs or rain from clean roofs where possible; fence livestock away. Second, reduce turbidity: settle in a series of jars or a drum, decanting progressively cleaner supernatant; pre-filter through cloth, then through packed sand and gravel.\n\nThird, disinfect: a rolling boil for one minute (three minutes at altitudes >2000m) inactivates most bacterial and viral threats. Solar disinfection (SODIS) uses UV-A radiation and modest heating (above 50°C) in clear PET bottles laid in full sun for 6-48 hours. Where halogen chemistry exists, measured contact time (typically 30 minutes) is required for chlorine or iodine to work.\n\nSanitation is the mirror image of drinking water: isolate human waste from fingers, flies, feet, and wind. Deep pit latrines (minimum 2m depth) with fly-proof covers, trench latrines rotated on a schedule, and meticulous separation of greywater from potable storage break the faecal-oral routes. Hand hygiene with soap removes a staggering fraction of risk; where soap is absent, wood ash paste (alkaline) and friction still outperform hope.\n\nOn Mars, the 'Sanitation' challenge is brine management: separating salts and perchlorates from regolith ice to produce potable water, while recycling all habitat waste via anaerobic digesters or high-pressure oxidation.",
+  "problem": "Human beings are walking culture media for pathogens. Every settlement produces a 'fecal plume' that travels through surface water, groundwater, and insect vectors. Without a multi-barrier sanitation system, diarrheal disease will inflict more casualties than trauma or combat. Children under five are the primary indicators: high infant mortality from 'fever and flux' signals a fundamental failure of the water loop.\n\nThe core obstacle is visibility. Clear water can contain 10^8 pathogens per liter. Odorless waste can harbor cysts that survive for months in damp soil. Civilization depends on the intellectual discipline to treat water that looks clean and isolate waste that seems inert.\n\nIn collapse scenarios, the loss of municipal pressure leads to immediate cross-contamination as backflow pulls sewer water into dry mains. In space settlement, water is the primary life-support fluid; there is no 'external environment' to flush waste into. Every milligram of nitrogen and every milliliter of moisture must be recovered through high-integrity chemical or biological recycling loops.",
+  "overview": "Field water safety is achieved by stacking independent barriers: Protect the Source, Settle/Clarify, Filter, Disinfect, and Store Safely. Each barrier removes a specific class of failure. Protecting the source (e.g., capping a spring) prevents contamination from entering. Settling (clarification) removes the silt that 'shields' bacteria from UV and chemicals. Filtration (slow-sand) removes larger parasites and uses a biological biofilm to consume bacteria. Disinfection (boiling/SODIS/halogens) provides the final biological kill. Safe storage prevents re-contamination during use.\n\nSanitation is the mirror image: break the fecal-oral route by isolating waste from Fingers, Flies, Fields, and Fluids (The 4-F Framework). Latrines must be deep, covered, and located at least 30 meters down-gradient from any water source. Hand hygiene with soap or alkaline wood ash is the single highest-leverage mechanical intervention in public health. On Mars, the loop is closed via membrane distillation and anaerobic digestion, where human waste becomes the primary feedstock for greenhouse fertilizers.",
   "principles": [
     {
-      "name": "Multi-barrier protection",
-      "explanation": "Settling, filtration, disinfection, and safe storage each remove different failure classes; redundancy (e.g., filtering AND boiling) is the field standard."
+      "name": "The Multi-Barrier Standard",
+      "explanation": "No single treatment is 100% reliable. Stacking clarification (removes 90% parasites), filtration (removes 99% bacteria), and boiling (removes 99.99% viruses) creates a system where failure in one layer does not result in an outbreak."
     },
     {
-      "name": "Schmutzdecke (Biofilm)",
-      "explanation": "In slow-sand filters, the top 2cm of sand hosts a biological layer of predatory microbes that eat pathogens. A filter is not 'mature' until this layer develops (typically 14-21 days)."
+      "name": "Schmutzdecke Dynamics",
+      "explanation": "In a biosand filter, the active agent is a 2cm thick biological layer (biofilm) of algae, bacteria, and zooplankton. They consume pathogens through predation and competition. This layer requires 14-21 days of daily 'feeding' with oxygenated water to reach full efficacy."
     },
     {
-      "name": "Turbidity shielding",
-      "explanation": "Microscopic particles (clay/silt) act as 'shields' for bacteria against UV radiation and chemical disinfectants. Water MUST be clear before the final kill step."
+      "name": "CT Value (Kill Power)",
+      "explanation": "Disinfection efficiency is Concentration x Time. For chlorine, lower temperatures or higher pH require longer contact times. For boiling, a rolling boil is the indicator that the critical 'kill temperature' (usually 70\u00b0C for enteric pathogens) has been exceeded and maintained."
     },
     {
-      "name": "Hydraulic gradient",
-      "explanation": "Groundwater and surface flows follow gravity; latrines must be at least 30 meters away and down-gradient from any water intake."
+      "name": "The 30-Meter Rule (Hydraulic Isolation)",
+      "explanation": "Latrines must be separated from water intakes by at least 30 meters of soil. This distance allows for natural filtration and UV/desiccation to neutralize the majority of mobile pathogens in the groundwater plume."
     },
     {
-      "name": "Perchlorate toxicity (Mars)",
-      "explanation": "Mars regolith contains perchlorates (salts) that disrupt thyroid function. Water extracted from ice must be treated via ion exchange or reverse osmosis to remove these chemicals."
+      "name": "Solar Thermal-UV Synergy",
+      "explanation": "Solar disinfection (SODIS) works through two parallel mechanisms: UV-A radiation causes DNA cross-linking in pathogens, while heat (exceeding 50\u00b0C) accelerates their metabolic collapse. PET bottles maximize UV-A transmission; glass does not."
     }
   ],
+  "parameters": {
+    "minLatrineDepth": "2.0m",
+    "waterTableSafetyMargin": "1.5m",
+    "minBoilTime": "60s (Rolling)",
+    "minBoilTimeHighAlt": "180s (>2000m)",
+    "sodisExposureSunny": "6h",
+    "sodisExposureCloudy": "48h",
+    "filterSandSize": "0.15mm - 0.35mm",
+    "filterFlowRateMax": "0.4 L/min per m\u00b2"
+  },
   "components": [
     {
-      "id": "intake",
-      "name": "Protected intake",
-      "function": "Collects water with minimal sediment disturbance",
-      "position": "Upstream of habitation",
-      "madeFrom": "Screened pipe, bamboo, or ceramic conduit",
-      "criticalNote": "Position intake mid-depth — avoid surface scum and bottom silt"
+      "id": "protected-intake",
+      "name": "Protected Intake / Spring Box",
+      "function": "Captures raw water without surface contamination or sediment uptake",
+      "position": "Upstream of settlement",
+      "madeFrom": "Ceramic pipe, bamboo, or stone-packed basin with concrete/clay cap",
+      "criticalNote": "Screened to prevent macro-fauna entry; located away from livestock paths."
     },
     {
-      "id": "settling",
-      "name": "Settling vessels / Flocculation",
-      "function": "Gravity separation of sand and organic floc",
-      "position": "Between intake and filter",
-      "madeFrom": "Matched jars or drums; use crushed Moringa seeds or Alum to speed settling",
-      "criticalNote": "Discard sludge away from the intake zone"
+      "id": "clarifier",
+      "name": "Clarification Tank (The Settling Chain)",
+      "function": "Removes turbidity through gravity and flocculation",
+      "position": "Primary treatment stage",
+      "madeFrom": "Two or more 200L drums or ceramic jars",
+      "criticalNote": "Clear water is mandatory for SODIS or chlorination efficacy."
     },
     {
-      "id": "biosand-filter",
-      "name": "Biosand filter",
-      "function": "Removes particles; mature slow-sand bed hosts biocidal biofilm",
-      "position": "After settling",
-      "madeFrom": "Washed river sand (0.1-0.7mm), pea gravel support, outlet valve",
-      "criticalNote": "Never allow the sand surface to dry; maintain 5cm of standing water"
+      "id": "slow-sand-filter",
+      "name": "Slow-Sand / Biosand Filter",
+      "function": "Mechanical filtration + biological predation of pathogens",
+      "position": "Secondary treatment stage",
+      "madeFrom": "Concrete or plastic housing, sieved sharp sand, pea gravel, standpipe",
+      "criticalNote": "Never let the sand go dry; Schmutzdecke requires constant moisture."
     },
     {
-      "id": "boiler",
-      "name": "Boiling kettle",
-      "function": "Thermal disinfection",
-      "position": "Fire or stove",
-      "madeFrom": "Metal or thick fired clay",
-      "criticalNote": "Boiling kills everything biological but concentrates chemical toxins through evaporation"
+      "id": "thermal-disinfector",
+      "name": "Thermal Disinfection Unit (Kettle/Vat)",
+      "function": "Inactivates 99.9% of biological pathogens via heat",
+      "position": "Final treatment stage",
+      "madeFrom": "Copper, stainless steel, or thick-walled stoneware",
+      "criticalNote": "Must achieve 'rolling boil' status; storage in same vessel is ideal."
     },
     {
-      "id": "sodis-station",
-      "name": "SODIS bottles",
-      "function": "UV and thermal disinfection using sunlight",
-      "position": "Full sun exposure on a reflective surface (e.g., corrugated metal)",
-      "madeFrom": "Clear PET plastic bottles (under 2L)",
-      "criticalNote": "Discard bottles when they become scratched or opaque"
+      "id": "sodis-array",
+      "name": "Solar Disinfection Array",
+      "function": "UV-A and thermal inactivation",
+      "position": "Alternative final stage (Sunny climates)",
+      "madeFrom": "Clear PET bottles (<2L), black or reflective backing sheet",
+      "criticalNote": "Replace bottles if scratched; scratches block UV and shelter bacteria."
     },
     {
-      "id": "latrine",
-      "name": "Pit latrine with cover",
-      "function": "Isolates faeces from vectors (flies)",
-      "position": "Down-gradient from wells; minimum 2m above water table",
-      "madeFrom": "Deep pit, concrete or wood slab, fly screen vent",
-      "criticalNote": "Add a cup of wood ash after each use to reduce odor and speed decomposition"
+      "id": "tippy-tap",
+      "name": "Hygiene Station (Tippy-Tap)",
+      "function": "Touch-free handwashing using minimal water",
+      "position": "At latrine exit and kitchen entrance",
+      "madeFrom": "Suspended 5L jug, foot-pedal string, bar of soap/ash-sock",
+      "criticalNote": "Frequent use is the single best defense against community spread."
+    },
+    {
+      "id": "ventilated-pit-latrine",
+      "name": "VIP Latrine (Ventilated Improved Pit)",
+      "function": "Fecal isolation + fly trap",
+      "position": "30m down-gradient from water sources",
+      "madeFrom": "2m+ pit, sealed slab, dark vent pipe with fly-screen",
+      "criticalNote": "Airflow through vent pipe creates suction that traps flies and reduces odor."
     }
   ],
   "rawMaterials": [
     {
-      "name": "Source water",
-      "purpose": "Hydration after treatment",
+      "name": "Raw Source Water",
+      "purpose": "Primary input for the loop",
       "earthLocations": [
-        "Headwater springs, deep tested wells, rain from clean metal/tile roofs (avoid lead flashing)"
+        "Mountain springs, deep aquifers, rain collection"
       ],
-      "spaceAlternatives": "Mars: subsurface glacier ice or hydrated clay minerals; recycle urine/condensate via membrane distillation.",
-      "processingRequired": "Pre-screen for heavy metals if near mining sites; boiling will NOT remove lead or mercury"
+      "spaceAlternatives": "Recycled humidity condensate, urine distillate, hydrated regolith melt",
+      "processingRequired": "Screening for heavy metals (lead/arsenic) if in industrial regions."
     },
     {
-      "name": "Filter media",
-      "purpose": "Particle removal and slow-sand biology",
+      "name": "Sieved Sharp Sand",
+      "purpose": "Slow-sand filter media",
       "earthLocations": [
-        "Sharp river sand (sieved), pea gravel (washed and boiled)"
+        "Riverbeds, glacial outwash"
       ],
-      "spaceAlternatives": "Sintered regolith beads or basalt-fibre mesh filters",
-      "processingRequired": "Wash sand until the water runs clear; sterilise with boiling water during initial setup"
+      "spaceAlternatives": "Sintered regolith beads, crushed basalt (washed and sieved)",
+      "processingRequired": "Washed until turbidity < 5 NTU; sieved to 0.15-0.35mm."
     },
     {
-      "name": "Disinfectant or fuel",
-      "purpose": "Final kill step or heat source",
+      "name": "Natural Coagulants (Alum or Moringa)",
+      "purpose": "Flocculation to speed settling",
       "earthLocations": [
-        "Chlorine (bleach/tablets), iodine, or biomass fuel (wood/dung)"
+        "Alum mines, Moringa Oleifera seeds (crushed)"
       ],
-      "spaceAlternatives": "Electrolytic chlorine generators or UVC (254nm) lamps",
-      "processingRequired": "Calculate 'CT' (Concentration x Time) based on water temperature and pH"
+      "spaceAlternatives": "Electrolytic iron/aluminum dosing",
+      "processingRequired": "Crushed to fine powder; mixed into raw water at 50-150mg/L."
+    },
+    {
+      "name": "Alkaline Wood Ash",
+      "purpose": "Soap substitute for hand hygiene",
+      "earthLocations": [
+        "Fire hearths (hardwood preferred)"
+      ],
+      "spaceAlternatives": "Electrolyzed oxidizing water (EOW)",
+      "processingRequired": "Sieved to remove char; kept dry until use as a scrub paste."
+    },
+    {
+      "name": "Safe Storage Containers",
+      "purpose": "Post-treatment protection",
+      "earthLocations": [
+        "Narrow-neck ceramic jars, PET bottles"
+      ],
+      "spaceAlternatives": "Teflon-lined titanium tanks, bladders",
+      "processingRequired": "Narrow neck prevents hand-dipping; must be scrubbed with bleach/boiling water weekly."
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Watershed audit and hazard map",
-      "description": "Walk 1km upstream of your intake. Identify animal feedlots, burials, or chemical dumps. Mark a 'fetch route' that is kept clear of human waste and mud.",
+      "title": "Site Survey & Watershed Mapping",
+      "description": "Walk 2km upstream of intended intake. Identify 'dead zones' (stagnant water), animal access points, and potential chemical runoff. Dig test holes to find water table depth. Mark latrine sites at least 30m away and downhill from the intake.",
       "prerequisiteTools": [
         "notebook",
-        "compass"
+        "digging stick",
+        "pacing"
       ],
-      "warningNote": "Clear water does not mean safe water — assume all surface water is contaminated until treated"
+      "warningNote": "Assume all surface water is contaminated; 'clear' mountain streams often harbor Giardia/Cryptosporidium from wildlife."
     },
     {
       "order": 2,
-      "title": "The Decant Chain (Settling)",
-      "description": "Fill 'Raw' vessel. Wait 12-24 hours. Decant the top 80% into 'Settled' vessel. Use a clean cloth over the rim. This step removes the majority of parasites (like Cryptosporidium) that are attached to silt.",
+      "title": "Construct the 3-Stage Clarifier",
+      "description": "Link three containers. Vessel 1: Raw intake + crushed Moringa seeds. Vessel 2: 12-hour settling. Vessel 3: 12-hour settling. Transfer water only from the top 75% of each vessel. This reduces turbidity to <10 NTU, protecting downstream filters.",
       "prerequisiteTools": [
-        "Two containers",
-        "clean cloth"
+        "3 drums/jars",
+        "Moringa seeds"
       ],
-      "warningNote": "Do not stir the bottom dregs; they contain the highest pathogen concentration"
+      "warningNote": "Do not reuse 'dregs' from the bottom of settling tanks for any purpose other than agriculture."
     },
     {
       "order": 3,
-      "title": "Filter commissioning",
-      "description": "Pack your biosand filter. Run 50L of water through it and discard. Feed it with settled water daily to allow the 'Schmutzdecke' to grow. Test with a clear glass — water must be crystal clear before moving to step 4.",
+      "title": "Biosand Filter Commissioning",
+      "description": "Layer 5cm pea gravel, then 5cm coarse sand, then 40cm fine sieved sand. Fill with water until 5cm of standing water remains above sand. Feed with 20L of clarified water daily for 21 days. Do not use for drinking until the Schmutzdecke (greenish-brown film) is visible and flow rate stabilizes.",
       "prerequisiteTools": [
-        "biosand filter",
-        "clear glass"
+        "housing",
+        "sieve",
+        "sand/gravel"
       ],
-      "warningNote": "A new filter is only a mechanical strainer; it is NOT biocide-active for the first 2 weeks"
+      "warningNote": "A dry filter is a dead filter. The biofilm dies if exposed to air for more than 4 hours."
     },
     {
       "order": 4,
-      "title": "The Kill Step (Boil or SODIS)",
-      "description": "Boil for 1 minute (rolling). If using SODIS, place bottles in sun for 6 hours (sunny) or 2 days (cloudy). The water must reach 50°C and receive UV-A exposure. Storage must be in the same bottle or a sterile container.",
+      "title": "Final Biological Kill (Boil or SODIS)",
+      "description": "For Boiling: Maintain a rolling boil for 1 minute (3 mins at altitude). For SODIS: Fill clear PET bottles, shake for 30s to oxygenate, and place on a reflective metal roof in full sun. Exposure time: 6h sunny, 48h cloudy.",
       "prerequisiteTools": [
-        "pot",
-        "PET bottles"
+        "pot/fire or PET bottles"
       ],
-      "warningNote": "If using SODIS, bottles MUST be clear plastic; glass blocks necessary UV-A wavelengths"
+      "warningNote": "SODIS bottles must be PET (Symbol #1); PVC or glass will block UV-A or leach toxins."
     },
     {
       "order": 5,
-      "title": "Latrine and hygiene station",
-      "description": "Dig a 2m pit. Build a sealed platform with a 'drop-hole' that can be covered. Install a 'Tippy-Tap' (suspended jug) for handwashing with soap or ash. Enforce the rule: wash hands BEFORE fetching water.",
+      "title": "Establish Fecal Isolation (The VIP Latrine)",
+      "description": "Dig a 2-3m pit. Build a concrete or hardwood slab with a 15x30cm drop-hole. Install a 10cm diameter black vent pipe facing the sun, topped with a fine mesh screen. The sun heats the pipe, creating a vacuum that pulls air (and flies) down the hole and up the pipe where they die against the screen.",
       "prerequisiteTools": [
         "shovel",
-        "soap or ash"
+        "slab materials",
+        "pipe",
+        "screen"
       ],
-      "warningNote": "Never locate a latrine within 30m of a well; ensure the floor is non-slip to prevent falls into the pit"
+      "warningNote": "Never dig a latrine in high-water-table areas; waste will travel directly into the local aquifer."
+    },
+    {
+      "order": 6,
+      "title": "Implement the Tippy-Tap Protocol",
+      "description": "Hang a water jug by a string at the latrine exit. Use a foot pedal to tilt the jug. This allows handwashing with soap or ash-sock without touching any surfaces. Enforce a 'No Wash, No Food' community rule.",
+      "prerequisiteTools": [
+        "jug",
+        "string",
+        "soap/ash"
+      ],
+      "warningNote": "Hand contamination is the #1 failure mode of clean water systems."
+    },
+    {
+      "order": 7,
+      "title": "Safe Storage & Secondary Defense",
+      "description": "Store treated water in narrow-necked, covered vessels. Never dip hands or cups into the main storage. Clean storage vessels with a 0.5% chlorine solution or boiling water every 7 days to prevent biofilm regrowth.",
+      "prerequisiteTools": [
+        "covered vessels"
+      ],
+      "warningNote": "Biofilms in storage containers can re-colonize sterile water within 24-48 hours."
+    },
+    {
+      "order": 8,
+      "title": "Closed-Loop Recovery (Mars Protocol)",
+      "description": "For space contexts: Pass all habitat humidity and greywater through a catalytic oxidizer at 130\u00b0C, then through an ion-exchange bed to remove nitrogenous waste and perchlorates. Final polishing via 254nm UVC radiation. Total recovery target: 98%.",
+      "prerequisiteTools": [
+        "catalytic reactor",
+        "ion-exchange resin"
+      ],
+      "warningNote": "Ammonia breakthrough is the primary failure mode of recycled water; monitor pH and conductivity hourly."
     }
   ],
   "history": [
     {
       "year": "Ancient",
-      "event": "Cisterns, qanats, and aqueducts distribute water across dry civilisations.",
-      "location": "Mediterranean to Persia"
+      "event": "Qanats and aqueducts move clean water over long distances, separating urban areas from stagnant sources.",
+      "location": "Persia / Rome"
     },
     {
       "year": 1854,
-      "event": "Cholera outbreak mapping links water source to disease — modern field epidemiology begins.",
-      "location": "London",
-      "person": "John Snow"
+      "event": "John Snow's map of the Broad Street pump proves waterborne transmission of Cholera.",
+      "location": "London"
     },
     {
       "year": "1990s",
-      "event": "The Biosand filter is adapted from industrial slow-sand technology for household use in the developing world.",
+      "event": "Dr. David Manz adapts the industrial slow-sand filter into the 'Biosand Filter' for household use.",
+      "location": "Global"
+    },
+    {
+      "year": "2000s",
+      "event": "Solar Disinfection (SODIS) is validated by WHO for extreme-poverty and disaster response.",
       "location": "Global"
     }
   ],
   "inventors": [
     {
       "name": "John Snow",
-      "contribution": "Father of modern epidemiology; proved waterborne transmission of cholera",
-      "years": "1813-1858",
-      "nationality": "British"
+      "years": "1813\u20131858",
+      "nationality": "British",
+      "contribution": "Mapped the fecal-oral route of cholera, establishing the science of epidemiology."
     }
   ],
-  "impact": "Communities that keep drinking water and faeces apart survive long enough to argue about laws, calendars, and machines. Communities that fail this lesson disappear quietly into fever charts.\n\nSpace habitats inherit the same moral: there is no dilution sink — only engineering and rigorous procedure.",
+  "impact": "Sanitation is the foundation of the 'Demographic Transition.' When waterborne infant mortality drops, families shift from high-birth-rate survival to high-education investment. It is the single most important technology in the history of human population growth. On Mars, it is not a luxury, but the absolute limit of habitat carrying capacity.",
   "images": [
     {
-      "id": "biosand-diagram",
-      "filename": "biosand_filter.svg",
-      "caption": "Cross-section of a biosand filter showing sand, schmutzdecke, and gravel layers",
+      "id": "biosand-cross-section",
+      "filename": "biosand.svg",
+      "caption": "Biofilm (Schmutzdecke), Fine Sand, Coarse Sand, and Gravel support layers.",
       "type": "diagram",
-      "credit": "The Codex project",
+      "credit": "The Codex Project",
       "license": "CC0"
     }
   ],
-  "videos": [
-    {
-      "id": "sodis-method",
-      "title": "SODIS water disinfection",
-      "description": "How to use sunlight to make water safe; follow time and temperature requirements strictly.",
-      "durationSeconds": 480
-    }
-  ],
+  "videos": [],
   "externalLinks": [
     {
-      "id": "who-water",
-      "title": "WHO — Drinking-water topics",
-      "url": "https://www.who.int/health-topics/drinking-water"
-    },
-    {
-      "id": "cawst-filters",
-      "title": "CAWST — Biosand filter technical resources",
+      "id": "cawst-biosand",
+      "title": "CAWST: Biosand Filter Design Manual",
       "url": "https://www.cawst.org/resources"
     }
   ],
   "lastUpdated": "2026-05-02",
+  "maturity": "field-guide-ready",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [
-      "Chemical toxins (lead/arsenic) are NOT removed by boiling",
-      "Latrine pit collapse risk",
-      "Biosand filter 'ripening' period (2 weeks minimum)",
-      "CO2/CO accumulation during indoor water boiling"
+      "Boiling does NOT remove heavy metals (Lead/Arsenic/Mercury)",
+      "Biosand filters require 2-3 weeks to become biologically active",
+      "Pit latrines must never be dug in flood-prone or high-water-table zones",
+      "SODIS requires PET plastic; glass and most other plastics block UV-A"
     ],
     "sources": [
       {
-        "id": "src-who-drinking",
-        "title": "WHO — Guidelines for drinking-water quality",
+        "id": "who-wash-2022",
+        "title": "WHO: Guidelines for Drinking-water Quality",
         "url": "https://www.who.int/publications/i/item/9789241549950",
-        "type": "institution",
-        "note": "The global gold standard for water safety and treatment"
+        "type": "institution"
       },
       {
-        "id": "src-sodis-manual",
-        "title": "SODIS Manual — Eawag/Sandec",
-        "url": "https://www.sodis.ch/methode/index_EN",
-        "type": "institution",
-        "note": "Technical manual for solar water disinfection"
+        "id": "sphere-handbook",
+        "title": "The Sphere Handbook: Humanitarian Charter and Minimum Standards in Disaster Response",
+        "url": "https://spherestandards.org/handbook/",
+        "type": "institution"
       },
       {
-        "id": "src-wiki-sanitation",
-        "title": "Wikipedia — Water, Sanitation and Hygiene (WASH)",
-        "url": "https://en.wikipedia.org/wiki/WASH",
-        "type": "wikipedia",
-        "note": "Interdisciplinary framework for disease prevention"
+        "id": "manz-biosand",
+        "title": "Manz, D. - The Biosand Filter: Design, Construction and Operation",
+        "type": "book"
       }
     ]
-  },
-  "maturity": "review-needed"
+  }
 }

@@ -13,8 +13,8 @@
     "steel-production",
     "steam-engine"
   ],
-  "problem": "Bronze is excellent but constrained by tin availability and cost gradients. Iron oxide is extraordinarily common — banded formations, bog ores, laterites — promising a metal for populations far from tin trade routes. The problem is thermodynamics and kinetics: iron melts far hotter than copper under simple charcoal furnaces, so early ironmaking produces a spongy solid bloom of iron and slag rather than a clean pourable puddle like bronze.\n\nSeparating iron metal from glassy slag inclusions requires prolonged hammering and folding — labour-intensive but doable at village scale. Controlling carbon uptake distinguishes soft wrought iron from harder steely regions within the same bloom.\n\nIron also changes warfare and agriculture: ploughshares, axes, and nails scale with ore proximity. The technology is not 'better bronze' — it is a different process chain with different failure modes (corrosion, brittleness if carburised wrong).",
-  "overview": "A bloomery furnace stacks charcoal and iron ore with forced air through a tuyère. Carbon monoxide reduces hematite (Fe2O3) or magnetite (Fe3O4) to metallic iron in the solid state, while silica-rich gangue melts into slag that trickles downward and is tapped or drains. Operating temperature stays below the melting point of pure iron under these conditions, so metal accumulates as a pasty mass — the bloom.\n\nThe smelt ends when the operator judges from flame colour, slag viscosity, and time. The bloom is extracted hot and compacted under hammering, expelling liquid slag and welding iron fibres together. Repeated heats and folds align inclusions and homogenise composition somewhat.\n\nOre preparation matters: roasting drives off hydrate water and converts carbonates; sizing ore pieces balances reaction rate against furnace permeability. Too fine chokes airflow; too coarse under-reacts.\n\nThis entry describes the bloomery lineage — ancestor to later finery processes and, in a different branch, blast furnaces producing pig iron. The Codex separates those because the tooling, fuels, and products diverge strongly.",
+  "problem": "Bronze is excellent but constrained by tin availability and cost gradients. Iron oxide is extraordinarily common \u2014 banded formations, bog ores, laterites \u2014 promising a metal for populations far from tin trade routes. The problem is thermodynamics and kinetics: iron melts far hotter than copper under simple charcoal furnaces, so early ironmaking produces a spongy solid bloom of iron and slag rather than a clean pourable puddle like bronze.\n\nSeparating iron metal from glassy slag inclusions requires prolonged hammering and folding \u2014 labour-intensive but doable at village scale. Controlling carbon uptake distinguishes soft wrought iron from harder steely regions within the same bloom.\n\nIron also changes warfare and agriculture: ploughshares, axes, and nails scale with ore proximity. The technology is not 'better bronze' \u2014 it is a different process chain with different failure modes (corrosion, brittleness if carburised wrong).",
+  "overview": "A bloomery furnace stacks charcoal and iron ore with forced air through a tuy\u00e8re. Carbon monoxide reduces hematite (Fe2O3) or magnetite (Fe3O4) to metallic iron in the solid state, while silica-rich gangue melts into slag that trickles downward and is tapped or drains. Operating temperature stays below the melting point of pure iron under these conditions, so metal accumulates as a pasty mass \u2014 the bloom.\n\nThe smelt ends when the operator judges from flame colour, slag viscosity, and time. The bloom is extracted hot and compacted under hammering, expelling liquid slag and welding iron fibres together. Repeated heats and folds align inclusions and homogenise composition somewhat.\n\nOre preparation matters: roasting drives off hydrate water and converts carbonates; sizing ore pieces balances reaction rate against furnace permeability. Too fine chokes airflow; too coarse under-reacts.\n\nThis entry describes the bloomery lineage \u2014 ancestor to later finery processes and, in a different branch, blast furnaces producing pig iron. The Codex separates those because the tooling, fuels, and products diverge strongly.",
   "principles": [
     {
       "name": "Solid-state reduction",
@@ -22,15 +22,15 @@
     },
     {
       "name": "Carburisation from charcoal contact",
-      "explanation": "Iron can dissolve carbon from the coke bed, locally raising hardness — controlled in later steelmaking, often incidental in bloomery output."
+      "explanation": "Iron can dissolve carbon from the coke bed, locally raising hardness \u2014 controlled in later steelmaking, often incidental in bloomery output."
     },
     {
       "name": "Slag basicity",
-      "explanation": "Adding silica versus lime-bearing flux changes slag fluidity and sulphur partitioning — even bloomery operators learned empirical flux recipes."
+      "explanation": "Adding silica versus lime-bearing flux changes slag fluidity and sulphur partitioning \u2014 even bloomery operators learned empirical flux recipes."
     },
     {
       "name": "Work consolidation",
-      "explanation": "Hammering raises temperature via deformation work and squeezes out slag — mechanical finishing is part of smelting, not optional."
+      "explanation": "Hammering raises temperature via deformation work and squeezes out slag \u2014 mechanical finishing is part of smelting, not optional."
     }
   ],
   "components": [
@@ -38,17 +38,17 @@
       "id": "bloomery-shaft",
       "name": "Bloomery shaft",
       "function": "Contains stacked charcoal and ore; focuses reaction zone",
-      "position": "Slag tapping hole near base; tuyère enters above hearth",
+      "position": "Slag tapping hole near base; tuy\u00e8re enters above hearth",
       "madeFrom": "Clay-grass tempered lining, later stone",
-      "criticalNote": "Tuyère can melt back — water-cooled copper tuyères appear historically in advanced setups"
+      "criticalNote": "Tuy\u00e8re can melt back \u2014 water-cooled copper tuy\u00e8res appear historically in advanced setups"
     },
     {
       "id": "tuyere",
-      "name": "Tuyère",
+      "name": "Tuy\u00e8re",
       "function": "Directs blast into charcoal bed",
       "position": "Penetrates furnace wall toward hearth centreline",
       "madeFrom": "Clay pipe, later metal",
-      "criticalNote": "Blast rate sets peak temperature — too high burns iron; too low fails to reduce"
+      "criticalNote": "Blast rate sets peak temperature \u2014 too high burns iron; too low fails to reduce"
     },
     {
       "id": "bellows",
@@ -64,7 +64,7 @@
       "function": "Forges bloom, excludes slag",
       "position": "Anvil stone or iron stump",
       "madeFrom": "Stone maul early; iron hammer later",
-      "criticalNote": "Hot short cracks if worked too cold — keep yellow heat"
+      "criticalNote": "Hot short cracks if worked too cold \u2014 keep yellow heat"
     },
     {
       "id": "use-case-boundary",
@@ -111,12 +111,12 @@
     {
       "order": 1,
       "title": "Prepare ore and charcoal",
-      "description": "Roast carbonates and hydrates; crush to consistent size. Charcoal should be metallurgical grade — rings when struck, few fines.",
+      "description": "Roast carbonates and hydrates; crush to consistent size. Charcoal should be metallurgical grade \u2014 rings when struck, few fines.",
       "prerequisiteTools": [
         "screens",
         "tongs"
       ],
-      "warningNote": "Silica dust from crushing — respiratory hazard"
+      "warningNote": "Silica dust from crushing \u2014 respiratory hazard"
     },
     {
       "order": 2,
@@ -131,12 +131,12 @@
     {
       "order": 3,
       "title": "Run the smelt",
-      "description": "Layer charcoal and ore while maintaining blast. Tap slag when it appears at eye port. Record time — learning curve is steep.",
+      "description": "Layer charcoal and ore while maintaining blast. Tap slag when it appears at eye port. Record time \u2014 learning curve is steep.",
       "prerequisiteTools": [
         "charging tools",
         "slag hook"
       ],
-      "warningNote": "CO exposure — work upwind; ventilated apron not optional ethically"
+      "warningNote": "CO exposure \u2014 work upwind; ventilated apron not optional ethically"
     },
     {
       "order": 4,
@@ -146,7 +146,7 @@
         "hooks",
         "tongs"
       ],
-      "warningNote": "Slag spray from hammering — face shield"
+      "warningNote": "Slag spray from hammering \u2014 face shield"
     },
     {
       "order": 5,
@@ -156,7 +156,7 @@
         "hammer",
         "chisel"
       ],
-      "warningNote": "High-carbon regions may shatter — normalise by extended soak if you have controlled hearth later"
+      "warningNote": "High-carbon regions may shatter \u2014 normalise by extended soak if you have controlled hearth later"
     }
   ],
   "history": [
@@ -172,17 +172,21 @@
     }
   ],
   "inventors": [],
-  "impact": "Iron decoupled metal supply from tin networks for many societies, though charcoal demand reshaped forests. It enabled cheaper cutting edges and nails — mundane objects that scale construction.\n\nTechnically, bloomery iron is a bridge to fining, puddling, and Bessemer steel. Understanding that ironmaking is a family of processes prevents cargo-cult rebuilding of the wrong furnace for available ore.",
+  "impact": "Iron decoupled metal supply from tin networks for many societies, though charcoal demand reshaped forests. It enabled cheaper cutting edges and nails \u2014 mundane objects that scale construction.\n\nTechnically, bloomery iron is a bridge to fining, puddling, and Bessemer steel. Understanding that ironmaking is a family of processes prevents cargo-cult rebuilding of the wrong furnace for available ore.",
   "images": [],
   "videos": [],
   "externalLinks": [
     {
       "id": "britannica-iron-age",
-      "title": "Encyclopaedia Britannica — Iron Age",
+      "title": "Encyclopaedia Britannica \u2014 Iron Age",
       "url": "https://www.britannica.com/event/Iron-Age"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -191,21 +195,21 @@
     "sources": [
       {
         "id": "src-osha-heat",
-        "title": "OSHA — Heat illness prevention",
+        "title": "OSHA \u2014 Heat illness prevention",
         "url": "https://www.osha.gov/heat",
         "type": "institution",
         "note": "Thermal stress and industrial hygiene for furnace work"
       },
       {
         "id": "src-wiki-smelting",
-        "title": "Wikipedia — Smelting",
+        "title": "Wikipedia \u2014 Smelting",
         "url": "https://en.wikipedia.org/wiki/Smelting",
         "type": "wikipedia",
         "note": "Pyrometallurgical principles and historical development"
       },
       {
         "id": "src-epa-sustainability",
-        "title": "U.S. EPA — Sustainability",
+        "title": "U.S. EPA \u2014 Sustainability",
         "url": "https://www.epa.gov/sustainability",
         "type": "institution",
         "note": "Environmental management framing for emissions and waste from smelting"

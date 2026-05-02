@@ -182,12 +182,16 @@
   "externalLinks": [
     {
       "id": "wiki-calculus-and-optimization",
-      "title": "Wikipedia — Calculus and Optimization",
+      "title": "Wikipedia \u2014 Calculus and Optimization",
       "url": "https://en.wikipedia.org/wiki/Calculus_and_Optimization"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -196,18 +200,18 @@
     "sources": [
       {
         "id": "boyd-vandenberghe",
-        "title": "Boyd & Vandenberghe — Convex Optimization",
+        "title": "Boyd & Vandenberghe \u2014 Convex Optimization",
         "type": "book",
         "url": "https://web.stanford.edu/~boyd/cvxbook/"
       },
       {
         "id": "nocedal-wright",
-        "title": "Nocedal & Wright — Numerical Optimization",
+        "title": "Nocedal & Wright \u2014 Numerical Optimization",
         "type": "book"
       },
       {
         "id": "wiki-optimization",
-        "title": "Wikipedia — Mathematical optimization",
+        "title": "Wikipedia \u2014 Mathematical optimization",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Mathematical_optimization"
       }

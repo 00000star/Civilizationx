@@ -1,7 +1,7 @@
 {
   "id": "communication-satellites",
   "name": "Communication Satellites",
-  "tagline": "Microwave repeaters in orbit — global footprints, transponders, and the geometry of delay",
+  "tagline": "Microwave repeaters in orbit \u2014 global footprints, transponders, and the geometry of delay",
   "category": "communication",
   "era": "mid-20th",
   "difficulty": 5,
@@ -13,24 +13,24 @@
   "unlocks": [
     "optical-fiber-communications"
   ],
-  "problem": "Submarine cables are expensive; HF skywave is moody; microwave towers need line-of-sight chains across politics. Satellites offer a microwave repeater hundreds or thousands of kilometres up, seeing enormous ground footprints — one hop where Earth would need dozens of towers.\n\nOrbits trade gifts: geostationary dishes stay pointed but inject quarter-second echo on voice; low Earth constellations cut latency but demand handoffs and thousands of spacecraft. Launch is still violence wrapped in paperwork — mass and reliability dominate.\n\nSpace is not empty for electronics: radiation ionises gates; single-event upsets flip bits; atomic oxygen gnaws surfaces in LEO. Thermal design must survive sunside and shadowside every hour without cracking solder.\n\nRegulation treats spectrum and slots as property-like — ITU filings are diplomacy with Kepler attached.",
-  "overview": "A satellite bus supplies power from solar arrays and batteries, controls temperature with heat pipes and radiators, maintains attitude with reaction wheels and thrusters, and talks to Earth via telemetry links. Payloads amplify and translate microwave bands — LNAs at the antenna, channel filters, TWTA or solid-state power amplifiers, output multiplexers.\n\nGround stations track with parabolic dishes, cryogenic LNAs for weak signals, and modems that close link budgets against rain fade. Beam shaping and polarisation reuse squeeze capacity; digital carriers pack many signals per transponder with error correction.\n\nEnd-of-life graveyard burns and deorbit plans address debris ethics; collision avoidance manoeuvres are now routine operations, not science fiction.\n\nNavigation constellations are cousins — same buses, different maths — proving communication and timing are braided.",
+  "problem": "Submarine cables are expensive; HF skywave is moody; microwave towers need line-of-sight chains across politics. Satellites offer a microwave repeater hundreds or thousands of kilometres up, seeing enormous ground footprints \u2014 one hop where Earth would need dozens of towers.\n\nOrbits trade gifts: geostationary dishes stay pointed but inject quarter-second echo on voice; low Earth constellations cut latency but demand handoffs and thousands of spacecraft. Launch is still violence wrapped in paperwork \u2014 mass and reliability dominate.\n\nSpace is not empty for electronics: radiation ionises gates; single-event upsets flip bits; atomic oxygen gnaws surfaces in LEO. Thermal design must survive sunside and shadowside every hour without cracking solder.\n\nRegulation treats spectrum and slots as property-like \u2014 ITU filings are diplomacy with Kepler attached.",
+  "overview": "A satellite bus supplies power from solar arrays and batteries, controls temperature with heat pipes and radiators, maintains attitude with reaction wheels and thrusters, and talks to Earth via telemetry links. Payloads amplify and translate microwave bands \u2014 LNAs at the antenna, channel filters, TWTA or solid-state power amplifiers, output multiplexers.\n\nGround stations track with parabolic dishes, cryogenic LNAs for weak signals, and modems that close link budgets against rain fade. Beam shaping and polarisation reuse squeeze capacity; digital carriers pack many signals per transponder with error correction.\n\nEnd-of-life graveyard burns and deorbit plans address debris ethics; collision avoidance manoeuvres are now routine operations, not science fiction.\n\nNavigation constellations are cousins \u2014 same buses, different maths \u2014 proving communication and timing are braided.",
   "principles": [
     {
       "name": "Link budget",
-      "explanation": "C/N0 integrates EIRP, path loss, G/T, and losses — closes whether a modem can lock."
+      "explanation": "C/N0 integrates EIRP, path loss, G/T, and losses \u2014 closes whether a modem can lock."
     },
     {
       "name": "Shannon limit on transponder",
-      "explanation": "Operating back-off from saturation trades linearity for capacity — multicarrier needs linear amps."
+      "explanation": "Operating back-off from saturation trades linearity for capacity \u2014 multicarrier needs linear amps."
     },
     {
       "name": "Doppler in LEO",
-      "explanation": "Fast satellites shift carrier — receivers track with PLL bandwidth."
+      "explanation": "Fast satellites shift carrier \u2014 receivers track with PLL bandwidth."
     },
     {
       "name": "Radiation hardness",
-      "explanation": "Shielding, RHBD logic, and EDAC mitigate SEUs — watchdogs reboot gracefully."
+      "explanation": "Shielding, RHBD logic, and EDAC mitigate SEUs \u2014 watchdogs reboot gracefully."
     }
   ],
   "components": [
@@ -95,7 +95,7 @@
       "earthLocations": [
         "III-V multi-junction fabs"
       ],
-      "spaceAlternatives": "Monopropellant hydrazine or electric propulsion xenon — propellant choice sets station-keeping life and logistics",
+      "spaceAlternatives": "Monopropellant hydrazine or electric propulsion xenon \u2014 propellant choice sets station-keeping life and logistics",
       "processingRequired": "Coverglass radiation shield"
     }
   ],
@@ -118,7 +118,7 @@
         "thermal vacuum chamber access",
         "rad test sources"
       ],
-      "warningNote": "Latch-up in CMOS can brick a bus — design inhibits"
+      "warningNote": "Latch-up in CMOS can brick a bus \u2014 design inhibits"
     },
     {
       "order": 3,
@@ -136,16 +136,16 @@
       "prerequisiteTools": [
         "ops simulator"
       ],
-      "warningNote": "Fat-fingered commands cannot be ‘oops’ in orbit"
+      "warningNote": "Fat-fingered commands cannot be \u2018oops\u2019 in orbit"
     },
     {
       "order": 5,
       "title": "Commission on orbit with patience",
-      "description": "Unfold arrays slowly; bake out moisture; map momentum wheel saturation. Verify transponder linearity before loading many carriers — intermodulation is rude to neighbours.",
+      "description": "Unfold arrays slowly; bake out moisture; map momentum wheel saturation. Verify transponder linearity before loading many carriers \u2014 intermodulation is rude to neighbours.",
       "prerequisiteTools": [
         "spectrum analyser on ground"
       ],
-      "warningNote": "Thruster leaks re-point antennas — monitor pressure"
+      "warningNote": "Thruster leaks re-point antennas \u2014 monitor pressure"
     }
   ],
   "history": [
@@ -169,7 +169,7 @@
       "nationality": "British"
     }
   ],
-  "impact": "Satellites made live global television and intercontinental telephony routine — and turned orbital slots into strategic assets.\n\nCollapse without launch cadence still benefits from understanding link budgets for terrestrial relays.",
+  "impact": "Satellites made live global television and intercontinental telephony routine \u2014 and turned orbital slots into strategic assets.\n\nCollapse without launch cadence still benefits from understanding link budgets for terrestrial relays.",
   "images": [],
   "videos": [
     {
@@ -182,16 +182,20 @@
   "externalLinks": [
     {
       "id": "itu-sat",
-      "title": "ITU — satellite filings",
+      "title": "ITU \u2014 satellite filings",
       "url": "https://www.itu.int/en/ITU-R/space/Pages/default.aspx"
     },
     {
       "id": "nasa-deep-space",
-      "title": "NASA — Deep Space Network",
+      "title": "NASA \u2014 Deep Space Network",
       "url": "https://www.nasa.gov/directorates/heo/scan/services/networks/deep_space_network/about"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -207,7 +211,7 @@
       },
       {
         "id": "src-wiki-satellite",
-        "title": "Wikipedia — Satellite",
+        "title": "Wikipedia \u2014 Satellite",
         "url": "https://en.wikipedia.org/wiki/Satellite",
         "type": "wikipedia",
         "note": "Orbits, bus subsystems, and link budgets introduction"

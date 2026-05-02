@@ -1,7 +1,7 @@
 {
   "id": "electrical-transformer",
   "name": "Electrical Transformer",
-  "tagline": "AC magnetic coupling that steps voltage up for transmission and down for safe use — without moving parts",
+  "tagline": "AC magnetic coupling that steps voltage up for transmission and down for safe use \u2014 without moving parts",
   "category": "energy",
   "era": "industrial",
   "difficulty": 3,
@@ -13,12 +13,12 @@
     "electric-lighting-systems",
     "electrical-power-grid"
   ],
-  "problem": "Imagine trying to push a city’s worth of power through wires sized for a neighbourhood: the copper would melt long before the lights came on, or you would need cables too thick to hang from poles. The opposite problem waits inside a house — nobody wants a toaster wired for lightning-strike voltages. Alternating current has one magical property: a changing magnetic field can push energy from one coil to another through an iron bridge, without the coils touching. A transformer is that bridge: it trades voltage for current (almost) freely, so power can travel far at high voltage and arrive safe at low voltage.\n\nBuilding one is not merely wrapping wire around a nail. The iron core must change its magnetisation sixty times a second without heating itself to uselessness; laminations interrupt eddy currents the way a dam interrupts a river. The windings must survive enormous magnetic forces during faults — short circuits try to crush coils together like hands clapping. Oil or resin must keep conductors cool and free of bubbles, because a bubble is a void where voltage concentrates until something arcs.\n\nLarge grid transformers are also slow political objects: they weigh as much as a house, take months to wind and impregnate, and cannot be improvised from scrap in a weekend. After a disaster, spare transformers are as precious as generators. The design discipline — drying paper, pulling vacuum, testing insulation — is what separates a quiet substation from a fireball.\n\nDirect current cannot use this trick without rotating machinery or semiconductors. That historical fact shaped entire cities: where you can transform AC cheaply, you build one kind of grid; where you cannot, you build another.",
-  "overview": "At its heart, a transformer is two coils wrapped so they share magnetic flux inside a core of silicon steel. When AC flows in the primary, flux rises and falls; that changing flux induces a voltage in the secondary proportional to the ratio of turns. More turns on the secondary than the primary raises voltage and lowers current for the same power (minus small losses from resistance and core heating).\n\nUtility units are often filled with mineral or ester oil that both insulates and carries heat to radiators. Bushings — thick, graded insulators — bring conductors out through the grounded steel tank without letting flashover creep along surfaces. Tap changers nudge the turns ratio while the unit is live, correcting for voltage sag on long feeders the way a violinist tunes between movements.\n\nTesting a finished transformer is part craft, part mathematics: an open-circuit test maps core loss; a short-circuit test maps copper loss and impedance. Protection engineers care about those numbers because they set how much fault current will flow and how fast relays must decide. Inrush currents when first energising can look like faults — operators learn to read harmonic signatures so breakers do not trip uselessly.\n\nDry-type transformers trade oil for cast resin in buildings and tunnels; they are noisier in thermal terms but safer around people who fear spills. At every scale, the same lesson repeats: keep the insulation dry, keep the core tight, and never treat a hum as merely ambience — it is the sound of magnetostriction reporting that the grid still breathes.",
+  "problem": "Imagine trying to push a city\u2019s worth of power through wires sized for a neighbourhood: the copper would melt long before the lights came on, or you would need cables too thick to hang from poles. The opposite problem waits inside a house \u2014 nobody wants a toaster wired for lightning-strike voltages. Alternating current has one magical property: a changing magnetic field can push energy from one coil to another through an iron bridge, without the coils touching. A transformer is that bridge: it trades voltage for current (almost) freely, so power can travel far at high voltage and arrive safe at low voltage.\n\nBuilding one is not merely wrapping wire around a nail. The iron core must change its magnetisation sixty times a second without heating itself to uselessness; laminations interrupt eddy currents the way a dam interrupts a river. The windings must survive enormous magnetic forces during faults \u2014 short circuits try to crush coils together like hands clapping. Oil or resin must keep conductors cool and free of bubbles, because a bubble is a void where voltage concentrates until something arcs.\n\nLarge grid transformers are also slow political objects: they weigh as much as a house, take months to wind and impregnate, and cannot be improvised from scrap in a weekend. After a disaster, spare transformers are as precious as generators. The design discipline \u2014 drying paper, pulling vacuum, testing insulation \u2014 is what separates a quiet substation from a fireball.\n\nDirect current cannot use this trick without rotating machinery or semiconductors. That historical fact shaped entire cities: where you can transform AC cheaply, you build one kind of grid; where you cannot, you build another.",
+  "overview": "At its heart, a transformer is two coils wrapped so they share magnetic flux inside a core of silicon steel. When AC flows in the primary, flux rises and falls; that changing flux induces a voltage in the secondary proportional to the ratio of turns. More turns on the secondary than the primary raises voltage and lowers current for the same power (minus small losses from resistance and core heating).\n\nUtility units are often filled with mineral or ester oil that both insulates and carries heat to radiators. Bushings \u2014 thick, graded insulators \u2014 bring conductors out through the grounded steel tank without letting flashover creep along surfaces. Tap changers nudge the turns ratio while the unit is live, correcting for voltage sag on long feeders the way a violinist tunes between movements.\n\nTesting a finished transformer is part craft, part mathematics: an open-circuit test maps core loss; a short-circuit test maps copper loss and impedance. Protection engineers care about those numbers because they set how much fault current will flow and how fast relays must decide. Inrush currents when first energising can look like faults \u2014 operators learn to read harmonic signatures so breakers do not trip uselessly.\n\nDry-type transformers trade oil for cast resin in buildings and tunnels; they are noisier in thermal terms but safer around people who fear spills. At every scale, the same lesson repeats: keep the insulation dry, keep the core tight, and never treat a hum as merely ambience \u2014 it is the sound of magnetostriction reporting that the grid still breathes.",
   "principles": [
     {
       "name": "Faraday induction",
-      "explanation": "Time-varying flux induces voltage proportional to turns — the basis of all AC transformation."
+      "explanation": "Time-varying flux induces voltage proportional to turns \u2014 the basis of all AC transformation."
     },
     {
       "name": "Ideal transformer relationships",
@@ -30,7 +30,7 @@
     },
     {
       "name": "Inrush current",
-      "explanation": "Closing a breaker at voltage zero can saturate core — generating harmonic-rich magnetising currents mistaken for faults."
+      "explanation": "Closing a breaker at voltage zero can saturate core \u2014 generating harmonic-rich magnetising currents mistaken for faults."
     }
   ],
   "components": [
@@ -105,29 +105,29 @@
     {
       "order": 1,
       "title": "Decide your voltages, power, and whether you need taps",
-      "description": "Write on paper what AC frequency you have, the RMS voltage coming in, the voltage you want going out, and the maximum power in kilovolt-amperes (not necessarily kilowatts — power factor matters). Sketch which winding will sit nearer the core (usually the lower voltage for insulation reasons). If your load varies — long rural lines, for example — plan a simple tap scheme so you can reconnect a few turns later without rewinding everything.",
+      "description": "Write on paper what AC frequency you have, the RMS voltage coming in, the voltage you want going out, and the maximum power in kilovolt-amperes (not necessarily kilowatts \u2014 power factor matters). Sketch which winding will sit nearer the core (usually the lower voltage for insulation reasons). If your load varies \u2014 long rural lines, for example \u2014 plan a simple tap scheme so you can reconnect a few turns later without rewinding everything.",
       "prerequisiteTools": [
         "notebook",
         "calculator",
         "AC voltmeter"
       ],
-      "warningNote": "Never work on windings while anything upstream can energise them — lock out breakers and verify dead with a meter"
+      "warningNote": "Never work on windings while anything upstream can energise them \u2014 lock out breakers and verify dead with a meter"
     },
     {
       "order": 2,
       "title": "Build or buy a laminated core and clean every surface",
-      "description": "Stack silicon-steel laminations in the prescribed overlap pattern so joints do not line up into a low-resistance magnetic short. Deburr edges; burrs pierce inter-lamination insulation and create hot spots. Clamp the core gently but evenly — a twisted core makes noise and losses. If you are reusing an old core, sand rust only where needed; do not remove the factory’s oxide coating blindly.",
+      "description": "Stack silicon-steel laminations in the prescribed overlap pattern so joints do not line up into a low-resistance magnetic short. Deburr edges; burrs pierce inter-lamination insulation and create hot spots. Clamp the core gently but evenly \u2014 a twisted core makes noise and losses. If you are reusing an old core, sand rust only where needed; do not remove the factory\u2019s oxide coating blindly.",
       "prerequisiteTools": [
         "deburring tool",
         "micrometer",
         "clean lint-free rags"
       ],
-      "warningNote": "Silicon steel is sharp — cut gloves easily"
+      "warningNote": "Silicon steel is sharp \u2014 cut gloves easily"
     },
     {
       "order": 3,
       "title": "Wind the coils with even tension and generous radii at corners",
-      "description": "Whether you hand-wind magnet wire or lay rectangular conductors, keep tension steady so turns do not loosen when oil flows later. Add layer insulation where the design calls for it; slide cooling ducts in larger conductors so heat can escape the middle of a bundle. Label starts and finishes with tags you cannot smudge — polarity mistakes explode semiconductors downstream.",
+      "description": "Whether you hand-wind magnet wire or lay rectangular conductors, keep tension steady so turns do not loosen when oil flows later. Add layer insulation where the design calls for it; slide cooling ducts in larger conductors so heat can escape the middle of a bundle. Label starts and finishes with tags you cannot smudge \u2014 polarity mistakes explode semiconductors downstream.",
       "prerequisiteTools": [
         "wire tensioner or gloved hands",
         "insulation paper",
@@ -144,19 +144,19 @@
         "vacuum pump",
         "oil test kit if available"
       ],
-      "warningNote": "Hot oil vapour is flammable — ventilate and forbid sparks"
+      "warningNote": "Hot oil vapour is flammable \u2014 ventilate and forbid sparks"
     },
     {
       "order": 5,
       "title": "Close the tank, fill conservatively, and measure before connecting load",
-      "description": "Pressure-test the tank for leaks with dry air if specifications demand it. Install bushings using the torque pattern the manufacturer specifies. Energise first at no load: listen, smell, and measure magnetising current. Only then connect load through appropriate protection. Log temperatures and sounds for the first days — a rising oil temperature curve that never flattens means blocked cooling or circulating currents.",
+      "description": "Pressure-test the tank for leaks with dry air if specifications demand it. Install bushings using the torque pattern the manufacturer specifies. Energise first at no load: listen, smell, and measure magnetising current. Only then connect load through appropriate protection. Log temperatures and sounds for the first days \u2014 a rising oil temperature curve that never flattens means blocked cooling or circulating currents.",
       "prerequisiteTools": [
         "wrench set",
         "torque wrench",
         "clamp meter",
         "infrared thermometer"
       ],
-      "warningNote": "Energised bushings can look harmless — stay beyond strike distance until a qualified person confirms clearance"
+      "warningNote": "Energised bushings can look harmless \u2014 stay beyond strike distance until a qualified person confirms clearance"
     }
   ],
   "history": [
@@ -167,7 +167,7 @@
     },
     {
       "year": 1891,
-      "event": "Three-phase demonstration in Lauffen–Frankfurt proves transformer-linked transmission.",
+      "event": "Three-phase demonstration in Lauffen\u2013Frankfurt proves transformer-linked transmission.",
       "location": "Germany"
     }
   ],
@@ -185,7 +185,7 @@
       "nationality": "British"
     }
   ],
-  "impact": "Transformers made long-distance AC grids economical — the enabling device between generator voltage and lightning-prone transmission lines.\n\nThey remain heavy, oil-filled monuments of electromagnetic craft.",
+  "impact": "Transformers made long-distance AC grids economical \u2014 the enabling device between generator voltage and lightning-prone transmission lines.\n\nThey remain heavy, oil-filled monuments of electromagnetic craft.",
   "images": [],
   "videos": [
     {
@@ -203,11 +203,15 @@
     },
     {
       "id": "eia-transformers",
-      "title": "EIA — transformers and grid equipment context",
+      "title": "EIA \u2014 transformers and grid equipment context",
       "url": "https://www.eia.gov/tools/glossary/"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -223,7 +227,7 @@
       },
       {
         "id": "src-wiki-transformer",
-        "title": "Wikipedia — Transformer",
+        "title": "Wikipedia \u2014 Transformer",
         "url": "https://en.wikipedia.org/wiki/Transformer",
         "type": "wikipedia",
         "note": "Magnetics, equivalent circuits, and safety notes"

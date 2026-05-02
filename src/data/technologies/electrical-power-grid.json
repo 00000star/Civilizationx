@@ -40,8 +40,8 @@
     "windmill-mechanical-power",
     "wood-gas-generator"
   ],
-  "problem": "A single dynamo behind a wool mill is a self-contained story: the owner lights his shed and perhaps a neighbour’s lane. A city is not self-contained — factories, trams, hospitals, and pumps want power at the same instant, often far from where coal is burned or water falls. Moving that energy as electricity beats hauling fuel to every doorstep, but only if you can move it without melting conductors and only if every generator agrees on the rhythm of the alternating current.\n\nThat rhythm — the system frequency — is a shared clock. If one generator races slightly ahead and another lags, enormous currents try to flow between them through the network itself. Small imbalances are corrected every second by governors and dispatchers; large ones can split regions apart or black out millions. Weather ignores schedules: wind throws branches across lines, ice loads snap conductors, lightning ionises air into a momentary short.\n\nProtection is therefore as much a social agreement as a technical device: breakers must isolate a faulted line fast enough to save equipment, but not so greedily that a squirrel in one suburb darkens a province. Relay settings, fuse sizes, and earthing practices are negotiated standards — not natural laws — and they differ by country while obeying the same physics.\n\nThe grid is also market infrastructure: someone must be paid to spin spare capacity; someone must decide whether a rural valley gets a line at all. Rebuilding after collapse means rebuilding those agreements, not only stringing copper.",
-  "overview": "At the largest scale, power plants spin alternators that output three-phase voltages — three sine waves staggered in time so motors turn smoothly and transmission can use less metal than single-phase for the same power. Step-up transformers raise voltage for the long haul across steel towers; step-down transformers in substations peel voltage layers like an onion until neighbourhood lines are safe with reasonable insulation.\n\nConductors are often aluminium with a steel core for strength, hung from glass or polymer insulators that keep lightning and switching surges from jumping to the tower. Reactive devices — capacitors and inductors — manage the imaginary part of power flow so voltage does not sag at the end of long lines. Underground cables trade lightning immunity for cost and heat.\n\nControl rooms watch schematic diagrams light up with colours: breakers open and close; transformers tap; capacitor banks switch. Automatic schemes re-route around damage when possible. Wind and solar inverters sometimes lack the spinning mass that once buffered frequency; engineers add batteries, synthetic inertia controls, or faster markets to keep stability.\n\nTo a beginner, the grid looks like spaghetti; to an operator, it is a set of zones with boundaries you may not cross without synchronising angle and voltage. Closing a tie only when both sides match is as important as any cable gauge.",
+  "problem": "A single dynamo behind a wool mill is a self-contained story: the owner lights his shed and perhaps a neighbour\u2019s lane. A city is not self-contained \u2014 factories, trams, hospitals, and pumps want power at the same instant, often far from where coal is burned or water falls. Moving that energy as electricity beats hauling fuel to every doorstep, but only if you can move it without melting conductors and only if every generator agrees on the rhythm of the alternating current.\n\nThat rhythm \u2014 the system frequency \u2014 is a shared clock. If one generator races slightly ahead and another lags, enormous currents try to flow between them through the network itself. Small imbalances are corrected every second by governors and dispatchers; large ones can split regions apart or black out millions. Weather ignores schedules: wind throws branches across lines, ice loads snap conductors, lightning ionises air into a momentary short.\n\nProtection is therefore as much a social agreement as a technical device: breakers must isolate a faulted line fast enough to save equipment, but not so greedily that a squirrel in one suburb darkens a province. Relay settings, fuse sizes, and earthing practices are negotiated standards \u2014 not natural laws \u2014 and they differ by country while obeying the same physics.\n\nThe grid is also market infrastructure: someone must be paid to spin spare capacity; someone must decide whether a rural valley gets a line at all. Rebuilding after collapse means rebuilding those agreements, not only stringing copper.",
+  "overview": "At the largest scale, power plants spin alternators that output three-phase voltages \u2014 three sine waves staggered in time so motors turn smoothly and transmission can use less metal than single-phase for the same power. Step-up transformers raise voltage for the long haul across steel towers; step-down transformers in substations peel voltage layers like an onion until neighbourhood lines are safe with reasonable insulation.\n\nConductors are often aluminium with a steel core for strength, hung from glass or polymer insulators that keep lightning and switching surges from jumping to the tower. Reactive devices \u2014 capacitors and inductors \u2014 manage the imaginary part of power flow so voltage does not sag at the end of long lines. Underground cables trade lightning immunity for cost and heat.\n\nControl rooms watch schematic diagrams light up with colours: breakers open and close; transformers tap; capacitor banks switch. Automatic schemes re-route around damage when possible. Wind and solar inverters sometimes lack the spinning mass that once buffered frequency; engineers add batteries, synthetic inertia controls, or faster markets to keep stability.\n\nTo a beginner, the grid looks like spaghetti; to an operator, it is a set of zones with boundaries you may not cross without synchronising angle and voltage. Closing a tie only when both sides match is as important as any cable gauge.",
   "principles": [
     {
       "name": "AC versus DC trade-offs",
@@ -49,11 +49,11 @@
     },
     {
       "name": "Reactive power",
-      "explanation": "Inductive loads need vars; capacitors, reactors, and generator excitation supply them — neglecting vars collapses voltage locally."
+      "explanation": "Inductive loads need vars; capacitors, reactors, and generator excitation supply them \u2014 neglecting vars collapses voltage locally."
     },
     {
       "name": "Symmetrical components",
-      "explanation": "Unbalanced faults decompose into positive, negative, and zero sequences — the algebra protection engineers live in."
+      "explanation": "Unbalanced faults decompose into positive, negative, and zero sequences \u2014 the algebra protection engineers live in."
     },
     {
       "name": "Stability margin",
@@ -64,7 +64,7 @@
     {
       "id": "transmission",
       "name": "Transmission lines and towers",
-      "function": "Carries bulk power with minimal I²R loss",
+      "function": "Carries bulk power with minimal I\u00b2R loss",
       "position": "Inter-city corridors",
       "madeFrom": "ACSR conductors, steel lattice, porcelain or composite insulators"
     },
@@ -133,18 +133,18 @@
     {
       "order": 1,
       "title": "Draw your network on paper before you buy metal",
-      "description": "Mark every planned generator, major load, and junction. For each line, write its length, the power you hope to carry, and the nominal voltage. Identify a single reference frequency (50 or 60 Hz) and stick to it everywhere. This sketch becomes the checklist when someone later proposes a shortcut — if it is not on the map, it is not in the protection study.",
+      "description": "Mark every planned generator, major load, and junction. For each line, write its length, the power you hope to carry, and the nominal voltage. Identify a single reference frequency (50 or 60 Hz) and stick to it everywhere. This sketch becomes the checklist when someone later proposes a shortcut \u2014 if it is not on the map, it is not in the protection study.",
       "prerequisiteTools": [
         "large paper or chalkboard",
         "ruler",
         "coloured pencils"
       ],
-      "warningNote": "Mixing frequencies without converters is not a small mistake — it is a new class of accident"
+      "warningNote": "Mixing frequencies without converters is not a small mistake \u2014 it is a new class of accident"
     },
     {
       "order": 2,
       "title": "Size conductors for thermal limit, not for hope",
-      "description": "For each segment, estimate maximum current including motor starting surges. Look up ampacity tables for your conductor type (ACSR, copper, underground bundle) and ambient temperature. Add margin for future load. Record ice and wind assumptions if you use overhead lines — a line that clears a tree in summer can touch in winter.",
+      "description": "For each segment, estimate maximum current including motor starting surges. Look up ampacity tables for your conductor type (ACSR, copper, underground bundle) and ambient temperature. Add margin for future load. Record ice and wind assumptions if you use overhead lines \u2014 a line that clears a tree in summer can touch in winter.",
       "prerequisiteTools": [
         "ampacity charts or engineering handbook",
         "notebook"
@@ -154,18 +154,18 @@
     {
       "order": 3,
       "title": "Install grounding so faults have somewhere safe to go",
-      "description": "Drive or bury a grounding grid at substations and major poles. Connect neutrals according to your regional practice (TN, TT, IT). Measure earth resistance after installation — wet season and dry season if possible. Teach everyone which conductors are never safe to cut, even when ‘the power is off’, because induction from parallel lines can still bite.",
+      "description": "Drive or bury a grounding grid at substations and major poles. Connect neutrals according to your regional practice (TN, TT, IT). Measure earth resistance after installation \u2014 wet season and dry season if possible. Teach everyone which conductors are never safe to cut, even when \u2018the power is off\u2019, because induction from parallel lines can still bite.",
       "prerequisiteTools": [
         "earth tester",
         "heavy copper strap",
         "exothermic or compression connectors"
       ],
-      "warningNote": "Shared earth and neutral mistakes can energise plumbing — verify with a qualified person"
+      "warningNote": "Shared earth and neutral mistakes can energise plumbing \u2014 verify with a qualified person"
     },
     {
       "order": 4,
       "title": "Commission protection before you invite customers",
-      "description": "For each breaker, write a one-page story: what it protects, what current should trip it, and how fast. Secondary-inject relays with known currents and voltages; verify trip times against curves. Label settings with dates and initials. Stage a controlled fault test only where regulations allow — otherwise use primary injection at reduced risk locations.",
+      "description": "For each breaker, write a one-page story: what it protects, what current should trip it, and how fast. Secondary-inject relays with known currents and voltages; verify trip times against curves. Label settings with dates and initials. Stage a controlled fault test only where regulations allow \u2014 otherwise use primary injection at reduced risk locations.",
       "prerequisiteTools": [
         "relay test set or primary injection kit",
         "stopwatch",
@@ -176,7 +176,7 @@
     {
       "order": 5,
       "title": "Energise in stages and rehearse black-start roles",
-      "description": "Start radially: one source, one feeder, a few loads. Measure voltage at the far end under load. Only then close rings or parallel ties after synchronising — match voltage, frequency, and phase sequence with lamps or a synchroscope. Document who is allowed to close which breaker. Rehearse what happens if a line trips: who calls whom, in what order.",
+      "description": "Start radially: one source, one feeder, a few loads. Measure voltage at the far end under load. Only then close rings or parallel ties after synchronising \u2014 match voltage, frequency, and phase sequence with lamps or a synchroscope. Document who is allowed to close which breaker. Rehearse what happens if a line trips: who calls whom, in what order.",
       "prerequisiteTools": [
         "synchroscope or lamp board",
         "radios",
@@ -188,7 +188,7 @@
   "history": [
     {
       "year": 1886,
-      "event": "Great Barrington demonstration transmits AC power — early argument for polyphase systems.",
+      "event": "Great Barrington demonstration transmits AC power \u2014 early argument for polyphase systems.",
       "location": "Massachusetts, USA"
     },
     {
@@ -198,7 +198,7 @@
     },
     {
       "year": 1954,
-      "event": "HVDC link connects Gotland — submarine DC interties mature.",
+      "event": "HVDC link connects Gotland \u2014 submarine DC interties mature.",
       "location": "Sweden"
     }
   ],
@@ -210,7 +210,7 @@
       "nationality": "Serbian-American"
     }
   ],
-  "impact": "Grids synchronised industry to a clock of electrons — enabling motors, lighting, and later computing at arbitrary distance from fuel piles. They also created blackout risk as a political fact.\n\nOff-world, microgrids precede continents of copper; the same physics applies at smaller perimeters.",
+  "impact": "Grids synchronised industry to a clock of electrons \u2014 enabling motors, lighting, and later computing at arbitrary distance from fuel piles. They also created blackout risk as a political fact.\n\nOff-world, microgrids precede continents of copper; the same physics applies at smaller perimeters.",
   "images": [],
   "videos": [
     {
@@ -223,16 +223,20 @@
   "externalLinks": [
     {
       "id": "nerc",
-      "title": "NERC — reliability standards (context)",
+      "title": "NERC \u2014 reliability standards (context)",
       "url": "https://www.nerc.com/"
     },
     {
       "id": "eia-grid",
-      "title": "EIA — electricity delivery and reliability",
+      "title": "EIA \u2014 electricity delivery and reliability",
       "url": "https://www.eia.gov/energyexplained/electricity/delivery-to-consumers.php"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -241,14 +245,14 @@
     "sources": [
       {
         "id": "src-itu-d",
-        "title": "ITU — Development Sector (ICT for resilient infrastructure)",
+        "title": "ITU \u2014 Development Sector (ICT for resilient infrastructure)",
         "url": "https://www.itu.int/en/ITU-D/Pages/default.aspx",
         "type": "institution",
         "note": "Telecommunications resilience alongside grid modernisation"
       },
       {
         "id": "src-wiki-grid",
-        "title": "Wikipedia — Electrical grid",
+        "title": "Wikipedia \u2014 Electrical grid",
         "url": "https://en.wikipedia.org/wiki/Electrical_grid",
         "type": "wikipedia",
         "note": "Topology, frequency control, and reliability references"

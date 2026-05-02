@@ -206,12 +206,16 @@
   "externalLinks": [
     {
       "id": "wiki-data-storage-systems",
-      "title": "Wikipedia — Data Storage Systems",
+      "title": "Wikipedia \u2014 Data Storage Systems",
       "url": "https://en.wikipedia.org/wiki/Data_Storage_Systems"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -220,7 +224,7 @@
     "sources": [
       {
         "id": "wiki-data-storage",
-        "title": "Wikipedia — Data storage",
+        "title": "Wikipedia \u2014 Data storage",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Data_storage"
       },
@@ -232,7 +236,7 @@
       },
       {
         "id": "tanenbaum-os",
-        "title": "Tanenbaum & Bos — Modern Operating Systems (storage/filesystems context)",
+        "title": "Tanenbaum & Bos \u2014 Modern Operating Systems (storage/filesystems context)",
         "type": "book"
       }
     ]

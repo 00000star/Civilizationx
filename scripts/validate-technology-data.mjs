@@ -36,6 +36,7 @@ const schema = {
     "lastUpdated",
     "maturity",
     "verification",
+    "spaceReadiness",
   ],
   properties: {
     id: { type: "string", minLength: 1 },
@@ -48,6 +49,7 @@ const schema = {
     unlocks: { type: "array", items: { type: "string" } },
     problem: { type: "string", minLength: 50 },
     overview: { type: "string", minLength: 80 },
+    parameters: { type: "object", additionalProperties: { type: "string" } },
     principles: {
       type: "array",
       minItems: 1,
@@ -142,6 +144,14 @@ const schema = {
     maturity: {
       type: "string",
       enum: ["stub", "draft", "researched", "review-needed", "field-guide-ready"],
+    },
+    spaceReadiness: {
+      type: "object",
+      required: ["fullAlternatives", "earthOnly"],
+      properties: {
+        fullAlternatives: { type: "boolean" },
+        earthOnly: { type: "boolean" },
+      },
     },
     verification: {
       type: "object",

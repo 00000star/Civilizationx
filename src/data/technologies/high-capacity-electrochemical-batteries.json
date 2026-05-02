@@ -1,7 +1,7 @@
 {
   "id": "high-capacity-electrochemical-batteries",
   "name": "High-Capacity Electrochemical Batteries",
-  "tagline": "Reversible electron transfer cells that store grid and mobility energy as chemical potential — hours to days of buffer",
+  "tagline": "Reversible electron transfer cells that store grid and mobility energy as chemical potential \u2014 hours to days of buffer",
   "category": "energy",
   "era": "late-20th",
   "difficulty": 4,
@@ -12,24 +12,24 @@
     "electric-motor"
   ],
   "unlocks": [],
-  "problem": "A spinning reserve turbine answers the grid in seconds but wants fuel and maintenance; a reservoir answers in minutes but needs geography. Batteries answer in milliseconds — they are the fastest negotiators between variable sun and impatient motors — but they store energy in reactive chemistry that ages with every cycle and every hot afternoon.\n\nLithium-ion families intercalate ions between graphite-like anodes and oxide cathodes through an electrolyte and a separator thinner than a hair. That thinness is performance and peril: dendrites, contamination, and overcharge can puncture separation; thermal runaway can cascade through packs if spacing and cooling lie.\n\nA battery management system is therefore not an accessory; it is the organ that measures each cell’s voltage and temperature, balances state of charge, limits current, and opens contactors when sanity fails. Without it, a pretty stack of pouches is a sculpture awaiting ignition.\n\nRecycling and mining ethics follow batteries into headlines — cobalt geography, brine water use, and firefighter training for warehouse fires are part of the technology now, not footnotes.",
-  "overview": "Industrial packs series-parallel cells to reach hundreds of volts; contactors and fuses protect both directions. Thermal management may be air, liquid cold plates, or refrigerant loops depending on C-rate and calendar life targets. Inverters bidirectionally convert DC to grid AC with harmonic controls similar to solar.\n\nCathode chemistries trade energy density, cobalt content, cycle life, and thermal stability — lithium iron phosphate is kinder on many axes at cost of volumetric density. Silicon-blended anodes promise more capacity if swelling can be engineered around.\n\nGrid services include frequency regulation, peak shaving, transmission deferral, and black-start support when paired with inverters that can form voltage. Behind-the-meter systems shave demand charges if tariffs reward them honestly.\n\nSecond-life reuse of vehicle packs into stationary storage extends value but demands recharacterisation — aged cells are not fresh cells with a discount sticker.",
+  "problem": "A spinning reserve turbine answers the grid in seconds but wants fuel and maintenance; a reservoir answers in minutes but needs geography. Batteries answer in milliseconds \u2014 they are the fastest negotiators between variable sun and impatient motors \u2014 but they store energy in reactive chemistry that ages with every cycle and every hot afternoon.\n\nLithium-ion families intercalate ions between graphite-like anodes and oxide cathodes through an electrolyte and a separator thinner than a hair. That thinness is performance and peril: dendrites, contamination, and overcharge can puncture separation; thermal runaway can cascade through packs if spacing and cooling lie.\n\nA battery management system is therefore not an accessory; it is the organ that measures each cell\u2019s voltage and temperature, balances state of charge, limits current, and opens contactors when sanity fails. Without it, a pretty stack of pouches is a sculpture awaiting ignition.\n\nRecycling and mining ethics follow batteries into headlines \u2014 cobalt geography, brine water use, and firefighter training for warehouse fires are part of the technology now, not footnotes.",
+  "overview": "Industrial packs series-parallel cells to reach hundreds of volts; contactors and fuses protect both directions. Thermal management may be air, liquid cold plates, or refrigerant loops depending on C-rate and calendar life targets. Inverters bidirectionally convert DC to grid AC with harmonic controls similar to solar.\n\nCathode chemistries trade energy density, cobalt content, cycle life, and thermal stability \u2014 lithium iron phosphate is kinder on many axes at cost of volumetric density. Silicon-blended anodes promise more capacity if swelling can be engineered around.\n\nGrid services include frequency regulation, peak shaving, transmission deferral, and black-start support when paired with inverters that can form voltage. Behind-the-meter systems shave demand charges if tariffs reward them honestly.\n\nSecond-life reuse of vehicle packs into stationary storage extends value but demands recharacterisation \u2014 aged cells are not fresh cells with a discount sticker.",
   "principles": [
     {
       "name": "Nernst voltage",
-      "explanation": "Open-circuit potential ties to activities of redox species — SOC estimation fuses voltage with coulomb counting."
+      "explanation": "Open-circuit potential ties to activities of redox species \u2014 SOC estimation fuses voltage with coulomb counting."
     },
     {
       "name": "Solid-electrolyte interphase",
-      "explanation": "Passivation layer on anode consumes lithium irreversibly — formation cycles matter."
+      "explanation": "Passivation layer on anode consumes lithium irreversibly \u2014 formation cycles matter."
     },
     {
       "name": "C-rate limits",
-      "explanation": "High current raises ohmic loss and lithium plating risk on graphite — fast charge needs thermal headroom."
+      "explanation": "High current raises ohmic loss and lithium plating risk on graphite \u2014 fast charge needs thermal headroom."
     },
     {
       "name": "Arrhenius ageing",
-      "explanation": "Calendar and cycle life accelerate exponentially with temperature — parking a hot EV full kills capacity quietly."
+      "explanation": "Calendar and cycle life accelerate exponentially with temperature \u2014 parking a hot EV full kills capacity quietly."
     }
   ],
   "components": [
@@ -72,7 +72,7 @@
   "rawMaterials": [
     {
       "name": "Lithium salts",
-      "purpose": "Electrolyte LiPF₆ etc.",
+      "purpose": "Electrolyte LiPF\u2086 etc.",
       "earthLocations": [
         "Atacama brines, Australian spodumene"
       ],
@@ -102,7 +102,7 @@
     {
       "order": 1,
       "title": "Choose chemistry to match duty cycle, safety culture, and temperature",
-      "description": "Read datasheets for allowed voltage and temperature windows. If your site cannot guarantee aircon, favour chemistries with wider thermal tolerance. Write the maximum continuous charge and discharge power you truly need — oversizing C-rate wastes money and shortens life.",
+      "description": "Read datasheets for allowed voltage and temperature windows. If your site cannot guarantee aircon, favour chemistries with wider thermal tolerance. Write the maximum continuous charge and discharge power you truly need \u2014 oversizing C-rate wastes money and shortens life.",
       "prerequisiteTools": [
         "notebook",
         "utility tariff if grid-tied"
@@ -122,7 +122,7 @@
     {
       "order": 3,
       "title": "Install fuses and contactors so a single cell fault cannot feed unlimited current",
-      "description": "Size fuses per string; use contactors rated for DC interruption — AC ratings lie. Precharge resistors limit inrush when closing onto capacitive inverters.",
+      "description": "Size fuses per string; use contactors rated for DC interruption \u2014 AC ratings lie. Precharge resistors limit inrush when closing onto capacitive inverters.",
       "prerequisiteTools": [
         "DC-rated fuses",
         "precharge schematic"
@@ -142,20 +142,20 @@
     {
       "order": 5,
       "title": "Log state of health and plan replacement economics",
-      "description": "Export cycle counts and temperature histograms quarterly. Train firefighters where disconnects live and what hazards remain after disconnect — some faults smoulder inside pouches.",
+      "description": "Export cycle counts and temperature histograms quarterly. Train firefighters where disconnects live and what hazards remain after disconnect \u2014 some faults smoulder inside pouches.",
       "prerequisiteTools": [
         "logbook",
         "site diagram for fire service"
       ],
-      "warningNote": "Thermal runaway can release toxic HF — respirators matter"
+      "warningNote": "Thermal runaway can release toxic HF \u2014 respirators matter"
     }
   ],
   "history": [
     {
       "year": 1859,
-      "event": "Planté rechargeable lead-acid cell demonstrates secondary battery concept.",
+      "event": "Plant\u00e9 rechargeable lead-acid cell demonstrates secondary battery concept.",
       "location": "France",
-      "person": "Gaston Planté"
+      "person": "Gaston Plant\u00e9"
     },
     {
       "year": 1991,
@@ -176,7 +176,7 @@
       "nationality": "American"
     }
   ],
-  "impact": "Batteries made handheld computers and EVs credible — and forced chemists, fire departments, and miners into one supply chain argument.\n\nThey are chemical factories folded into flat packs — respect the vent.",
+  "impact": "Batteries made handheld computers and EVs credible \u2014 and forced chemists, fire departments, and miners into one supply chain argument.\n\nThey are chemical factories folded into flat packs \u2014 respect the vent.",
   "images": [],
   "videos": [
     {
@@ -189,16 +189,20 @@
   "externalLinks": [
     {
       "id": "battery-university",
-      "title": "Battery University — technical primers",
+      "title": "Battery University \u2014 technical primers",
       "url": "https://batteryuniversity.com/"
     },
     {
       "id": "iea-batteries",
-      "title": "IEA — batteries and secure transitions",
+      "title": "IEA \u2014 batteries and secure transitions",
       "url": "https://www.iea.org/energy-system/electricity/batteries"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -207,21 +211,21 @@
     "sources": [
       {
         "id": "src-doi-battery-review",
-        "title": "Peer-reviewed article (Elsevier) — lithium-ion battery topics via DOI resolver",
+        "title": "Peer-reviewed article (Elsevier) \u2014 lithium-ion battery topics via DOI resolver",
         "url": "https://doi.org/10.1016/j.jpowsour.2016.07.100",
         "type": "paper",
         "note": "Example contemporary review article reachable via DOI; library access may be required for full text"
       },
       {
         "id": "src-energy-storage",
-        "title": "U.S. Department of Energy — EERE",
+        "title": "U.S. Department of Energy \u2014 EERE",
         "url": "https://www.energy.gov/eere/renewable-energy",
         "type": "institution",
         "note": "Grid storage and battery research programs entry point"
       },
       {
         "id": "src-wiki-li",
-        "title": "Wikipedia — Lithium-ion battery",
+        "title": "Wikipedia \u2014 Lithium-ion battery",
         "url": "https://en.wikipedia.org/wiki/Lithium-ion_battery",
         "type": "wikipedia",
         "note": "Cell chemistry, thermal runaway, and safety references"

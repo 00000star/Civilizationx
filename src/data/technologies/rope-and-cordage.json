@@ -15,8 +15,8 @@
     "pulley",
     "soil-science-and-composting"
   ],
-  "problem": "Many critical tasks require pulling forces larger than a bare hand can apply, or holding forces steady for long periods: dragging carcasses, hoisting bundles, lashing loads to frames, making nets, climbing safely, and binding tool heads to handles. Vines snap unpredictably; green bark slips; short grass bundles fatigue. The problem is scalable tensile members: materials that share load across many parallel fibres locked together by twist or braid so partial breaks do not instantly cascade.\n\nCordage also stores technique: a well-made rope is a composite whose strength emerges from friction between plies and the helix angle distributing strain. Without understanding twist direction (S and Z) and balance, ropes untwist under load or kink into useless hockles.\n\nIn recovery contexts, cordage is a universal adapter: it connects almost every other primitive technology — shelters, traps, boats, packs, and later pulleys and machines.",
-  "overview": "Traditional cordage begins with harvesting fibres: bast from inner bark (lime, willow, nettle, paper mulberry), leaf fibres (agave, yucca), animal sinew, rawhide strips, or hair. Fibres are retted or scraped clean, dried, then split to consistent width. Short fibres are spun into continuous yarn by adding twist — twist traps fibre ends against neighbours via friction.\n\nYarns are combined into cord by plying: two or more yarns twisted together in the opposite direction from their spin, locking the structure. Three-strand rope is made by twisting three plies into a larger helix. Braids (plaits) distribute abrasion more evenly and reduce twist-induced torque on suspended loads.\n\nStrength scales with cross-sectional area of load-bearing fibres and quality of processing. Kinks, sharp bends over small radii, and UV degradation are dominant failure modes. Storage dry prevents rot; natural ropes stretch when wet and may shrink drying — important when building tension structures.\n\nMechanically, rope is a flexible tensile element in machines: with a wheel it becomes a belt drive ancestor; with a grooved wheel it becomes a pulley line; with capstans it multiplies human pulling power through friction wraps.",
+  "problem": "Many critical tasks require pulling forces larger than a bare hand can apply, or holding forces steady for long periods: dragging carcasses, hoisting bundles, lashing loads to frames, making nets, climbing safely, and binding tool heads to handles. Vines snap unpredictably; green bark slips; short grass bundles fatigue. The problem is scalable tensile members: materials that share load across many parallel fibres locked together by twist or braid so partial breaks do not instantly cascade.\n\nCordage also stores technique: a well-made rope is a composite whose strength emerges from friction between plies and the helix angle distributing strain. Without understanding twist direction (S and Z) and balance, ropes untwist under load or kink into useless hockles.\n\nIn recovery contexts, cordage is a universal adapter: it connects almost every other primitive technology \u2014 shelters, traps, boats, packs, and later pulleys and machines.",
+  "overview": "Traditional cordage begins with harvesting fibres: bast from inner bark (lime, willow, nettle, paper mulberry), leaf fibres (agave, yucca), animal sinew, rawhide strips, or hair. Fibres are retted or scraped clean, dried, then split to consistent width. Short fibres are spun into continuous yarn by adding twist \u2014 twist traps fibre ends against neighbours via friction.\n\nYarns are combined into cord by plying: two or more yarns twisted together in the opposite direction from their spin, locking the structure. Three-strand rope is made by twisting three plies into a larger helix. Braids (plaits) distribute abrasion more evenly and reduce twist-induced torque on suspended loads.\n\nStrength scales with cross-sectional area of load-bearing fibres and quality of processing. Kinks, sharp bends over small radii, and UV degradation are dominant failure modes. Storage dry prevents rot; natural ropes stretch when wet and may shrink drying \u2014 important when building tension structures.\n\nMechanically, rope is a flexible tensile element in machines: with a wheel it becomes a belt drive ancestor; with a grooved wheel it becomes a pulley line; with capstans it multiplies human pulling power through friction wraps.",
   "principles": [
     {
       "name": "Twist balance (S and Z)",
@@ -24,7 +24,7 @@
     },
     {
       "name": "Helix Angle and Strength",
-      "explanation": "The angle of the twist relative to the rope's axis (typically 30-40°) balances flexibility and strength. Steeper angles (more twist) improve grip but reduce maximum tensile strength by putting fibres into shear."
+      "explanation": "The angle of the twist relative to the rope's axis (typically 30-40\u00b0) balances flexibility and strength. Steeper angles (more twist) improve grip but reduce maximum tensile strength by putting fibres into shear."
     },
     {
       "name": "Friction sharing",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Bend radius and strength",
-      "explanation": "Fibre outer paths stretch more around tight bends; undersized sheaves cut strength dramatically — a rule pulleys must respect (D/d ratio of at least 8:1 is ideal for natural fibre)."
+      "explanation": "Fibre outer paths stretch more around tight bends; undersized sheaves cut strength dramatically \u2014 a rule pulleys must respect (D/d ratio of at least 8:1 is ideal for natural fibre)."
     },
     {
       "name": "Creep and relaxation",
@@ -46,7 +46,7 @@
       "function": "Provides long-chain cellulosic or protein strands bearing tension",
       "position": "Processed into consistent ribbon or bundles before spinning",
       "madeFrom": "Bast (Nettle, Inner bark), leaf (Agave, Yucca), sinew, hair, or later cotton/hemp",
-      "criticalNote": "Avoid 'brittle' fibres; test by wrapping around a finger — if it snaps, it is unsuitable for cordage"
+      "criticalNote": "Avoid 'brittle' fibres; test by wrapping around a finger \u2014 if it snaps, it is unsuitable for cordage"
     },
     {
       "id": "spindle",
@@ -140,7 +140,7 @@
     {
       "order": 4,
       "title": "Scaling to rope",
-      "description": "For thick rope, ply the plied cords again in the Z-direction. This 'hawser-laid' structure is the basis for heavy lifting lines. For long lengths, use a 'rope walk' — a long clear path where multiple people can twist simultaneously.",
+      "description": "For thick rope, ply the plied cords again in the Z-direction. This 'hawser-laid' structure is the basis for heavy lifting lines. For long lengths, use a 'rope walk' \u2014 a long clear path where multiple people can twist simultaneously.",
       "prerequisiteTools": [
         "rope jack or multiple hooks"
       ],
@@ -165,7 +165,7 @@
     },
     {
       "year": "28000 BCE",
-      "event": "Earliest physical evidence of cordage from burnt clay impressions in Dolní Věstonice.",
+      "event": "Earliest physical evidence of cordage from burnt clay impressions in Doln\u00ed V\u011bstonice.",
       "location": "Czech Republic"
     },
     {
@@ -175,7 +175,7 @@
     }
   ],
   "inventors": [],
-  "impact": "Cordage is infrastructure in string form: it makes packs, nets, traps, sails, and hoists possible. It couples human force to loads and couples components into assemblies — lashings precede nails economically in many environments.\n\nIn later engineering, the same tensile logic underlies cables, wire rope, and fibre-reinforced composites. Understanding twist, bend radius, and termination is still how bridges and cranes are kept safe.\n\nFor off-world bases, lightweight high-strength cable may be among the first complex products once polymer or carbon fibre processes exist — but early settlements still benefit from vegetable fibre for filters, ties, and soft interfaces.",
+  "impact": "Cordage is infrastructure in string form: it makes packs, nets, traps, sails, and hoists possible. It couples human force to loads and couples components into assemblies \u2014 lashings precede nails economically in many environments.\n\nIn later engineering, the same tensile logic underlies cables, wire rope, and fibre-reinforced composites. Understanding twist, bend radius, and termination is still how bridges and cranes are kept safe.\n\nFor off-world bases, lightweight high-strength cable may be among the first complex products once polymer or carbon fibre processes exist \u2014 but early settlements still benefit from vegetable fibre for filters, ties, and soft interfaces.",
   "images": [
     {
       "id": "overview",
@@ -190,7 +190,7 @@
     {
       "id": "nettle-cordage",
       "title": "Plant fibre cordage demonstrations",
-      "description": "Educational videos on nettle or lime bast processing — verify plant ID with local experts.",
+      "description": "Educational videos on nettle or lime bast processing \u2014 verify plant ID with local experts.",
       "durationSeconds": 720
     }
   ],
@@ -203,6 +203,10 @@
     }
   ],
   "lastUpdated": "2026-05-02",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -215,7 +219,7 @@
     "sources": [
       {
         "id": "src-fao-fibres",
-        "title": "FAO — World fibre production and use",
+        "title": "FAO \u2014 World fibre production and use",
         "url": "https://www.fao.org/natural-fibres-world-2009/en/",
         "type": "institution",
         "note": "Plant-fibre resources, sustainability, and rural fibre supply chains"
@@ -229,7 +233,7 @@
       },
       {
         "id": "src-wiki-rope",
-        "title": "Wikipedia — Rope",
+        "title": "Wikipedia \u2014 Rope",
         "url": "https://en.wikipedia.org/wiki/Rope",
         "type": "wikipedia",
         "note": "Construction, materials, and history; trace citations for cordage engineering"

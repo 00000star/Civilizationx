@@ -188,12 +188,16 @@
   "externalLinks": [
     {
       "id": "wiki-microprocessor",
-      "title": "Wikipedia — Microprocessor",
+      "title": "Wikipedia \u2014 Microprocessor",
       "url": "https://en.wikipedia.org/wiki/Microprocessor"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -202,13 +206,13 @@
     "sources": [
       {
         "id": "wiki-microprocessor",
-        "title": "Wikipedia — Microprocessor",
+        "title": "Wikipedia \u2014 Microprocessor",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Microprocessor"
       },
       {
         "id": "hennessy-patterson",
-        "title": "Hennessy & Patterson — Computer Architecture: A Quantitative Approach",
+        "title": "Hennessy & Patterson \u2014 Computer Architecture: A Quantitative Approach",
         "type": "book"
       },
       {

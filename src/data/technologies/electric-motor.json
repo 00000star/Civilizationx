@@ -37,12 +37,12 @@
     "windmill-mechanical-power",
     "wood-gas-generator"
   ],
-  "problem": "Before electricity, motive power in a workshop meant leather belts snaking from a ceiling shaft, or a small steam engine hissing beside each heavy machine. Belts slip, alignments drift, and every new tool demands another hole in the ceiling. An electric motor replaces that tangle with a compact drum of copper and iron that pulls power through a wire — the fire stays at the power station while the work happens where it is needed.\n\nMotors are not magic rotation boxes; they are heat machines that happen to spin. Current in the windings meets resistance; iron reverses magnetisation sixty times a second; bearings rub. Neglect cooling and the insulation class becomes a countdown. Start a large motor on a weak line and the whole village’s lights dip — inrush currents can be many times running current until the rotor catches up with the magnetic field.\n\nVariable speed was historically expensive: rheostats turned excess energy into smoke. Modern drives synthesise new frequencies electronically, but introduce harmonics that can pit bearing races through tiny capacitive currents. The motor problem is therefore electrical, mechanical, and thermal at once.\n\nFor civilisation recovery, motors are precious because they couple precision metallurgy (laminations), chemistry (varnish and enamel), and craft (winding) into one dependable worker that never sleeps.",
-  "overview": "Most industrial motors you meet are induction machines: the stator’s three-phase windings create a magnetic field that appears to rotate around the rotor. Conductors in the rotor — often aluminium bars cast into a steel stack — see that motion as a changing field and develop currents of their own. Those currents create their own field that tries to catch the stator’s field, producing torque. The rotor must slip slightly behind synchronous speed; at perfect synchronism induction would stop and torque would vanish.\n\nLaminated silicon steel in the stator guides flux while limiting eddy currents. Slots hold insulated copper or aluminium conductors; the slot shape trades ease of manufacture against stray loss. The frame and fan path move heat from windings to air; larger machines may use water jackets or external blowers.\n\nSynchronous motors lock to grid frequency once running; they can also behave as generators. DC motors still appear where fine torque control predates cheap electronics — brushes wear but the physics is transparent. Universal motors in power tools accept AC or DC at the cost of sparking brushes and shorter life.\n\nNameplate letters and efficiency bands encode starting behaviour: some rotor designs prioritise high starting torque for compressors; others prioritise low inrush for weak grids. Reading the nameplate is as important as reading a steam plate’s pressure rating.",
+  "problem": "Before electricity, motive power in a workshop meant leather belts snaking from a ceiling shaft, or a small steam engine hissing beside each heavy machine. Belts slip, alignments drift, and every new tool demands another hole in the ceiling. An electric motor replaces that tangle with a compact drum of copper and iron that pulls power through a wire \u2014 the fire stays at the power station while the work happens where it is needed.\n\nMotors are not magic rotation boxes; they are heat machines that happen to spin. Current in the windings meets resistance; iron reverses magnetisation sixty times a second; bearings rub. Neglect cooling and the insulation class becomes a countdown. Start a large motor on a weak line and the whole village\u2019s lights dip \u2014 inrush currents can be many times running current until the rotor catches up with the magnetic field.\n\nVariable speed was historically expensive: rheostats turned excess energy into smoke. Modern drives synthesise new frequencies electronically, but introduce harmonics that can pit bearing races through tiny capacitive currents. The motor problem is therefore electrical, mechanical, and thermal at once.\n\nFor civilisation recovery, motors are precious because they couple precision metallurgy (laminations), chemistry (varnish and enamel), and craft (winding) into one dependable worker that never sleeps.",
+  "overview": "Most industrial motors you meet are induction machines: the stator\u2019s three-phase windings create a magnetic field that appears to rotate around the rotor. Conductors in the rotor \u2014 often aluminium bars cast into a steel stack \u2014 see that motion as a changing field and develop currents of their own. Those currents create their own field that tries to catch the stator\u2019s field, producing torque. The rotor must slip slightly behind synchronous speed; at perfect synchronism induction would stop and torque would vanish.\n\nLaminated silicon steel in the stator guides flux while limiting eddy currents. Slots hold insulated copper or aluminium conductors; the slot shape trades ease of manufacture against stray loss. The frame and fan path move heat from windings to air; larger machines may use water jackets or external blowers.\n\nSynchronous motors lock to grid frequency once running; they can also behave as generators. DC motors still appear where fine torque control predates cheap electronics \u2014 brushes wear but the physics is transparent. Universal motors in power tools accept AC or DC at the cost of sparking brushes and shorter life.\n\nNameplate letters and efficiency bands encode starting behaviour: some rotor designs prioritise high starting torque for compressors; others prioritise low inrush for weak grids. Reading the nameplate is as important as reading a steam plate\u2019s pressure rating.",
   "principles": [
     {
       "name": "Lorentz force",
-      "explanation": "Current crossing magnetic field experiences force — the microscopic origin of motor torque."
+      "explanation": "Current crossing magnetic field experiences force \u2014 the microscopic origin of motor torque."
     },
     {
       "name": "Slip in induction machines",
@@ -50,11 +50,11 @@
     },
     {
       "name": "Back-EMF",
-      "explanation": "Spinning conductors generate voltage opposing applied voltage — limits no-load current and sets constant-speed behaviour on stiff grids."
+      "explanation": "Spinning conductors generate voltage opposing applied voltage \u2014 limits no-load current and sets constant-speed behaviour on stiff grids."
     },
     {
       "name": "Thermal class",
-      "explanation": "Insulation life halves roughly every 10°C over rated — derating altitude and ambient is mandatory."
+      "explanation": "Insulation life halves roughly every 10\u00b0C over rated \u2014 derating altitude and ambient is mandatory."
     }
   ],
   "components": [
@@ -127,7 +127,7 @@
     {
       "order": 1,
       "title": "Choose the motor type to match your supply and job",
-      "description": "If you have stable three-phase AC, a squirrel-cage induction motor is the default workhorse. If you only have single-phase domestic supply, look for split-phase or capacitor-start designs — understand that starting capacitors are not interchangeable decoration. If you need speed control, plan for a variable-frequency drive and shielded cable suitable for fast switching edges.",
+      "description": "If you have stable three-phase AC, a squirrel-cage induction motor is the default workhorse. If you only have single-phase domestic supply, look for split-phase or capacitor-start designs \u2014 understand that starting capacitors are not interchangeable decoration. If you need speed control, plan for a variable-frequency drive and shielded cable suitable for fast switching edges.",
       "prerequisiteTools": [
         "multimeter",
         "motor nameplate or datasheet"
@@ -137,7 +137,7 @@
     {
       "order": 2,
       "title": "Stack laminations and insert slot liners without burrs",
-      "description": "Interleave stator laminations and weld or cleat the back iron per your design. Slide slot liners in so conductors never touch steel directly. Deburr every lamination tooth — a burr is a short waiting to happen. Blow out grit before windings enter; grit abrades enamel during vibration.",
+      "description": "Interleave stator laminations and weld or cleat the back iron per your design. Slide slot liners in so conductors never touch steel directly. Deburr every lamination tooth \u2014 a burr is a short waiting to happen. Blow out grit before windings enter; grit abrades enamel during vibration.",
       "prerequisiteTools": [
         "compressed air or brush",
         "slot liners",
@@ -154,12 +154,12 @@
         "varnish or epoxy",
         "oven"
       ],
-      "warningNote": "Solvent vapours are flammable — ventilate and kill ignition sources"
+      "warningNote": "Solvent vapours are flammable \u2014 ventilate and kill ignition sources"
     },
     {
       "order": 4,
       "title": "Assemble rotor, balance, and align to the driven machine",
-      "description": "For fabricated rotors, verify cage integrity and skew. Machine the outside diameter if casting left ovality. Balance dynamically to the ISO grade appropriate for speed — an unbalanced rotor walks bearings out in weeks. Bolt the motor to a flat base; check soft foot with feeler gauges under each foot while tightening in a cross pattern. Align coupling to load within a few hundredths of a millimetre; repeat hot if thermal growth matters.",
+      "description": "For fabricated rotors, verify cage integrity and skew. Machine the outside diameter if casting left ovality. Balance dynamically to the ISO grade appropriate for speed \u2014 an unbalanced rotor walks bearings out in weeks. Bolt the motor to a flat base; check soft foot with feeler gauges under each foot while tightening in a cross pattern. Align coupling to load within a few hundredths of a millimetre; repeat hot if thermal growth matters.",
       "prerequisiteTools": [
         "dynamic balancer if available",
         "dial indicators",
@@ -171,14 +171,14 @@
     {
       "order": 5,
       "title": "Megger, spin no-load, then load-test thermally",
-      "description": "Measure insulation resistance phase-to-phase and phase-to-ground with a megohmmeter at a voltage appropriate to the machine class. Spin at no load listening for rubs; measure current — wildly high no-load current means shorted turns or wrong connections. Apply load gradually; watch bearing temperature rise for an hour; capture vibration if you have a phone app or accelerometer. Document baseline numbers for the next maintainer.",
+      "description": "Measure insulation resistance phase-to-phase and phase-to-ground with a megohmmeter at a voltage appropriate to the machine class. Spin at no load listening for rubs; measure current \u2014 wildly high no-load current means shorted turns or wrong connections. Apply load gradually; watch bearing temperature rise for an hour; capture vibration if you have a phone app or accelerometer. Document baseline numbers for the next maintainer.",
       "prerequisiteTools": [
         "megohmmeter",
         "clamp meter",
         "infrared thermometer",
         "notebook"
       ],
-      "warningNote": "Shafts and fan blades remain dangerous above idle speed — guard before energising"
+      "warningNote": "Shafts and fan blades remain dangerous above idle speed \u2014 guard before energising"
     }
   ],
   "history": [
@@ -207,7 +207,7 @@
       "nationality": "Serbian-American"
     }
   ],
-  "impact": "Motors made electricity actionable at every machine scale — from dental drills to ship propulsion. They are the distributed muscle of electrification.\n\nRecovery must preserve lamination stamping and varnish impregnation, not only copper.",
+  "impact": "Motors made electricity actionable at every machine scale \u2014 from dental drills to ship propulsion. They are the distributed muscle of electrification.\n\nRecovery must preserve lamination stamping and varnish impregnation, not only copper.",
   "images": [],
   "videos": [
     {
@@ -220,16 +220,20 @@
   "externalLinks": [
     {
       "id": "ieee-motor",
-      "title": "IEEE — electric machines technical community",
+      "title": "IEEE \u2014 electric machines technical community",
       "url": "https://ieee-pes.org/"
     },
     {
       "id": "energy-motors",
-      "title": "DOE — electric motor systems",
+      "title": "DOE \u2014 electric motor systems",
       "url": "https://www.energy.gov/eere/amo/electric-motors"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -245,14 +249,14 @@
       },
       {
         "id": "src-wiki-motor",
-        "title": "Wikipedia — Electric motor",
+        "title": "Wikipedia \u2014 Electric motor",
         "url": "https://en.wikipedia.org/wiki/Electric_motor",
         "type": "wikipedia",
         "note": "Induction, synchronous, and DC motor theory"
       },
       {
         "id": "src-nist-pml",
-        "title": "NIST — PML",
+        "title": "NIST \u2014 PML",
         "url": "https://www.nist.gov/pml",
         "type": "institution",
         "note": "Precision electrical measurements for efficiency testing"

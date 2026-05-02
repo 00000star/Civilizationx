@@ -14,8 +14,8 @@
     "nuclear-fission-power-plant",
     "steam-turbine-electric-generation"
   ],
-  "problem": "When you boil ordinary water in a kettle, a white film eventually appears on the element. Scale that behaviour across a power plant: dissolved minerals plate out on hot metal and insulate it from the water you are trying to heat. The metal underneath runs hotter than the designers intended, warps tubes, and in the worst case fails under pressure. At the same time, oxygen that was harmless while cold becomes aggressive as soon as the water warms — it attacks steel from the inside, often long before anyone sees a leak on the outside.\n\nSteam turbines are less forgiving than reciprocating engines. Tiny droplets of boiler water can be carried upward with the steam, carrying dissolved salts into precision nozzles and blades where they bake on like plaque in an artery. A few hundred hours of wrong chemistry can destroy what took months to machine. The problem is therefore not an optional refinement but the difference between decades of service and a plant that consumes itself.\n\nDifferent waters carry different hazards: hardness from limestone country, chlorides from coastal intakes, organic matter after river floods, silica from some groundwaters. Each behaves differently as pressure and temperature rise. There is no single recipe that fits every river; you learn your source, decide what must be removed before the boiler, and prove it with regular testing.\n\nAfter a civilisation shock, rebuilding chemistry discipline may be harder than rebuilding brickwork. Pumps and valves can be forged again, but the habit of sampling, titrating, logging, and training the night shift to care about a number on a chart is cultural technology — easy to lose and slow to regain.",
-  "overview": "Feedwater treatment aims to make water chemically dull — so dull that it can be evaporated thousands of times without turning the inside of your plant to stone. In practice you begin at the intake: strain out mud and debris, settle or filter if the water is cloudy, then attack hardness (the calcium and magnesium that love to form scale) using precipitation, ion-exchange softening, or full demineralisation depending on how hard you run the boiler and how much margin you can afford to lose.\n\nNext you strip dissolved gases. Oxygen is steel’s enemy in hot water; carbon dioxide makes condensate acidic. A deaerator heats the water almost to boiling while steam scrubs the surface, driving gases out through a vent you can see as a plume at first. Chemical scavengers catch the last traces of oxygen that physics alone would remove too slowly for comfort.\n\nInside the boiler you may use phosphate or similar programmes to trap any remaining hardness in sludge that falls to the mud drum instead of sticking to tubes — then you blow that sludge down on a schedule. You measure conductivity or total dissolved solids to decide how much water to discard and replace. Every choice trades chemical cost, water cost, and the life of your tubes.\n\nWhether you use automated analysers or a notebook and test kit, the logic is the same: know what is in your water, remove what does not belong, sample the same way every shift, and teach the next crew what “normal” looked like yesterday.",
+  "problem": "When you boil ordinary water in a kettle, a white film eventually appears on the element. Scale that behaviour across a power plant: dissolved minerals plate out on hot metal and insulate it from the water you are trying to heat. The metal underneath runs hotter than the designers intended, warps tubes, and in the worst case fails under pressure. At the same time, oxygen that was harmless while cold becomes aggressive as soon as the water warms \u2014 it attacks steel from the inside, often long before anyone sees a leak on the outside.\n\nSteam turbines are less forgiving than reciprocating engines. Tiny droplets of boiler water can be carried upward with the steam, carrying dissolved salts into precision nozzles and blades where they bake on like plaque in an artery. A few hundred hours of wrong chemistry can destroy what took months to machine. The problem is therefore not an optional refinement but the difference between decades of service and a plant that consumes itself.\n\nDifferent waters carry different hazards: hardness from limestone country, chlorides from coastal intakes, organic matter after river floods, silica from some groundwaters. Each behaves differently as pressure and temperature rise. There is no single recipe that fits every river; you learn your source, decide what must be removed before the boiler, and prove it with regular testing.\n\nAfter a civilisation shock, rebuilding chemistry discipline may be harder than rebuilding brickwork. Pumps and valves can be forged again, but the habit of sampling, titrating, logging, and training the night shift to care about a number on a chart is cultural technology \u2014 easy to lose and slow to regain.",
+  "overview": "Feedwater treatment aims to make water chemically dull \u2014 so dull that it can be evaporated thousands of times without turning the inside of your plant to stone. In practice you begin at the intake: strain out mud and debris, settle or filter if the water is cloudy, then attack hardness (the calcium and magnesium that love to form scale) using precipitation, ion-exchange softening, or full demineralisation depending on how hard you run the boiler and how much margin you can afford to lose.\n\nNext you strip dissolved gases. Oxygen is steel\u2019s enemy in hot water; carbon dioxide makes condensate acidic. A deaerator heats the water almost to boiling while steam scrubs the surface, driving gases out through a vent you can see as a plume at first. Chemical scavengers catch the last traces of oxygen that physics alone would remove too slowly for comfort.\n\nInside the boiler you may use phosphate or similar programmes to trap any remaining hardness in sludge that falls to the mud drum instead of sticking to tubes \u2014 then you blow that sludge down on a schedule. You measure conductivity or total dissolved solids to decide how much water to discard and replace. Every choice trades chemical cost, water cost, and the life of your tubes.\n\nWhether you use automated analysers or a notebook and test kit, the logic is the same: know what is in your water, remove what does not belong, sample the same way every shift, and teach the next crew what \u201cnormal\u201d looked like yesterday.",
   "principles": [
     {
       "name": "Solubility product",
@@ -46,7 +46,7 @@
     {
       "id": "deaerator",
       "name": "Deaerator",
-      "function": "Heats water to saturation and strips O₂ and CO₂",
+      "function": "Heats water to saturation and strips O\u2082 and CO\u2082",
       "position": "Feed pump suction",
       "madeFrom": "Carbon steel shell, stainless trays"
     },
@@ -97,7 +97,7 @@
       "earthLocations": [
         "Surface and well sources"
       ],
-      "spaceAlternatives": "Surface water, wells, or aggressive condensate return — pair with filtration and UV or chlorination only where compatible with downstream chemistry",
+      "spaceAlternatives": "Surface water, wells, or aggressive condensate return \u2014 pair with filtration and UV or chlorination only where compatible with downstream chemistry",
       "processingRequired": "Filtration and disinfection if biological slime risk"
     }
   ],
@@ -105,7 +105,7 @@
     {
       "order": 1,
       "title": "Learn what your water actually contains",
-      "description": "Fill labelled bottles in wet season and dry season, from the same point where water will enter the plant. Note colour, smell, and visible grit. If you have test strips or a titration kit, measure hardness and total dissolved solids; if not, at least boil a measured sample in a clean pan and see how much solid remains. Write everything in a notebook — you are building a map, not performing a ritual.",
+      "description": "Fill labelled bottles in wet season and dry season, from the same point where water will enter the plant. Note colour, smell, and visible grit. If you have test strips or a titration kit, measure hardness and total dissolved solids; if not, at least boil a measured sample in a clean pan and see how much solid remains. Write everything in a notebook \u2014 you are building a map, not performing a ritual.",
       "prerequisiteTools": [
         "clean bottles",
         "labels",
@@ -128,7 +128,7 @@
     {
       "order": 3,
       "title": "Heat the water and drive off dissolved air",
-      "description": "Bring cold makeup close to boiling in a vented tank or spray chamber while live steam scrubs the surface. You should see mist leaving the vent — that is mostly oxygen and carbon dioxide leaving the liquid. Only after this step should you trust steel pipes to stay uncorroded for years.",
+      "description": "Bring cold makeup close to boiling in a vented tank or spray chamber while live steam scrubs the surface. You should see mist leaving the vent \u2014 that is mostly oxygen and carbon dioxide leaving the liquid. Only after this step should you trust steel pipes to stay uncorroded for years.",
       "prerequisiteTools": [
         "deaerator or heated vented tank",
         "thermometer",
@@ -156,7 +156,7 @@
         "bound notebook or duplicate forms",
         "clock"
       ],
-      "warningNote": "If readings drift slowly, fix the cause — do not just turn the chart upside down"
+      "warningNote": "If readings drift slowly, fix the cause \u2014 do not just turn the chart upside down"
     }
   ],
   "history": [
@@ -185,16 +185,20 @@
   "externalLinks": [
     {
       "id": "asme-boiler",
-      "title": "ASME — boiler and pressure vessel code (context)",
+      "title": "ASME \u2014 boiler and pressure vessel code (context)",
       "url": "https://www.asme.org/topics-resources/content/boilers"
     },
     {
       "id": "who-water",
-      "title": "WHO — drinking-water quality parameters (source context)",
+      "title": "WHO \u2014 drinking-water quality parameters (source context)",
       "url": "https://www.who.int/teams/environment-climate-change-and-health/water-sanitation-and-health/water-safety-and-quality/drinking-water-quality-guidelines"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -203,21 +207,21 @@
     "sources": [
       {
         "id": "src-nrc-steam-culture",
-        "title": "U.S. NRC — Public information FAQ",
+        "title": "U.S. NRC \u2014 Public information FAQ",
         "url": "https://www.nrc.gov/reading-rm/doc-collections/faq/",
         "type": "institution",
         "note": "High-reliability documentation practices for steam plants (nuclear context)"
       },
       {
         "id": "src-wiki-boiler",
-        "title": "Wikipedia — Boiler",
+        "title": "Wikipedia \u2014 Boiler",
         "url": "https://en.wikipedia.org/wiki/Boiler",
         "type": "wikipedia",
         "note": "Steam generation and water treatment overview"
       },
       {
         "id": "src-who-air",
-        "title": "WHO — Household air pollution and health",
+        "title": "WHO \u2014 Household air pollution and health",
         "url": "https://www.who.int/news-room/fact-sheets/detail/household-air-pollution-and-health",
         "type": "institution",
         "note": "Combustion-related health risks when boilers are misapplied in enclosed spaces"

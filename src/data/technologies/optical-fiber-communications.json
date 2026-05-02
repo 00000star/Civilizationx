@@ -1,7 +1,7 @@
 {
   "id": "optical-fiber-communications",
   "name": "Optical Fiber Communications",
-  "tagline": "Dielectric waveguides carrying terabits on photons — low loss, high bandwidth, immunity to copper theft",
+  "tagline": "Dielectric waveguides carrying terabits on photons \u2014 low loss, high bandwidth, immunity to copper theft",
   "category": "communication",
   "era": "late-20th",
   "difficulty": 5,
@@ -13,12 +13,12 @@
   "unlocks": [
     "internet-protocols-and-web"
   ],
-  "problem": "Copper bandwidth fatigues with distance: high frequencies attenuate, crosstalk whispers between pairs, and repeaters multiply noise. Optical fibre guides infrared light in a glass core so pure that transoceanic links need fewer regenerations than coax ever could — if splices are clean, bends gentle, and lasers stable.\n\nNonlinear optics punishes hubris: high launch powers create four-wave mixing and self-phase modulation that smear pulses across dense wavelength-division multiplexing systems. Chromatic dispersion spreads short pulses unless fibres, lasers, and compensators conspire.\n\nLast-mile economics fought trenches and rights-of-way until demand for bits exceeded dislike of construction dust. Inside data centres, fibre is the quiet workhorse tying top-of-rack switches to spine fabrics.\n\nCollapse recovery still values fibre craft: cleave angles, fusion splicer calibration, and cleaning sticks are small tools that gate gigabits.",
-  "overview": "Single-mode fibre confines light to one propagating mode with a tiny core; lasers launch narrow linewidths that survive long haul. Multimode fibre serves short reaches with cheaper optics inside buildings. Preforms are built by MCVD or outside vapour deposition, drawn to kilometres of hair-fine glass, coated in acrylate, and cabled with strength members.\n\nErbium-doped fibre amplifiers boost C-band signals without optical-electrical-optical conversion; Raman amplification uses the fibre itself as gain medium. Coherent detection treats light like RF — DSP recovers phase and polarisation.\n\nConnectors (SC, LC, MPO) trade loss against convenience; angled polish reduces reflections that destabilise lasers. OTDR sends pulses to map faults versus distance — indispensable storytelling for crews.\n\nSubmarine cables add armour, power feed to repeaters, and branching units — geography with amplifiers every few dozen kilometres.",
+  "problem": "Copper bandwidth fatigues with distance: high frequencies attenuate, crosstalk whispers between pairs, and repeaters multiply noise. Optical fibre guides infrared light in a glass core so pure that transoceanic links need fewer regenerations than coax ever could \u2014 if splices are clean, bends gentle, and lasers stable.\n\nNonlinear optics punishes hubris: high launch powers create four-wave mixing and self-phase modulation that smear pulses across dense wavelength-division multiplexing systems. Chromatic dispersion spreads short pulses unless fibres, lasers, and compensators conspire.\n\nLast-mile economics fought trenches and rights-of-way until demand for bits exceeded dislike of construction dust. Inside data centres, fibre is the quiet workhorse tying top-of-rack switches to spine fabrics.\n\nCollapse recovery still values fibre craft: cleave angles, fusion splicer calibration, and cleaning sticks are small tools that gate gigabits.",
+  "overview": "Single-mode fibre confines light to one propagating mode with a tiny core; lasers launch narrow linewidths that survive long haul. Multimode fibre serves short reaches with cheaper optics inside buildings. Preforms are built by MCVD or outside vapour deposition, drawn to kilometres of hair-fine glass, coated in acrylate, and cabled with strength members.\n\nErbium-doped fibre amplifiers boost C-band signals without optical-electrical-optical conversion; Raman amplification uses the fibre itself as gain medium. Coherent detection treats light like RF \u2014 DSP recovers phase and polarisation.\n\nConnectors (SC, LC, MPO) trade loss against convenience; angled polish reduces reflections that destabilise lasers. OTDR sends pulses to map faults versus distance \u2014 indispensable storytelling for crews.\n\nSubmarine cables add armour, power feed to repeaters, and branching units \u2014 geography with amplifiers every few dozen kilometres.",
   "principles": [
     {
       "name": "V-number and modes",
-      "explanation": "Single-mode cutoff ensures one spatial mode — avoids modal dispersion."
+      "explanation": "Single-mode cutoff ensures one spatial mode \u2014 avoids modal dispersion."
     },
     {
       "name": "Material and waveguide dispersion",
@@ -30,7 +30,7 @@
     },
     {
       "name": "Shot noise limit",
-      "explanation": "Photons arrive Poisson — sensitivity floors for given BER."
+      "explanation": "Photons arrive Poisson \u2014 sensitivity floors for given BER."
     }
   ],
   "components": [
@@ -86,7 +86,7 @@
       "earthLocations": [
         "ZnO smelter byproduct streams"
       ],
-      "spaceAlternatives": "Germanium tetrachloride or alternative index dopants tuned to your process — document refractive index profiles, not only supplier names",
+      "spaceAlternatives": "Germanium tetrachloride or alternative index dopants tuned to your process \u2014 document refractive index profiles, not only supplier names",
       "processingRequired": "Controlled partial pressure in preform"
     },
     {
@@ -103,7 +103,7 @@
     {
       "order": 1,
       "title": "Design span loss and dispersion budgets before ordering reels",
-      "description": "Sum connector losses, splice losses, fibre attenuation per km, splitter penalties, and system margin. Pick laser wavelength and fibre type together — they are not independent.",
+      "description": "Sum connector losses, splice losses, fibre attenuation per km, splitter penalties, and system margin. Pick laser wavelength and fibre type together \u2014 they are not independent.",
       "prerequisiteTools": [
         "OTDR calculator",
         "datasheets"
@@ -113,7 +113,7 @@
     {
       "order": 2,
       "title": "Prepare workspace cleaner than you think necessary",
-      "description": "Close HVAC vents that blow dust; lint-free wipes only; inspect cleavers under magnification. Label every patch cord directionally — chaos grows exponentially in dense racks.",
+      "description": "Close HVAC vents that blow dust; lint-free wipes only; inspect cleavers under magnification. Label every patch cord directionally \u2014 chaos grows exponentially in dense racks.",
       "prerequisiteTools": [
         "microscope",
         "cleaver"
@@ -144,12 +144,12 @@
     {
       "order": 5,
       "title": "Document as-built and train handlers",
-      "description": "Print diagrams with cable IDs; teach bend-radius discipline and trunk strain relief. Schedule re-OTDR after building moves — forklifts murder trays.",
+      "description": "Print diagrams with cable IDs; teach bend-radius discipline and trunk strain relief. Schedule re-OTDR after building moves \u2014 forklifts murder trays.",
       "prerequisiteTools": [
         "labels",
         "zip ties rated for temperature"
       ],
-      "warningNote": "Macro-bends raise loss slowly — temperature shifts unmask them"
+      "warningNote": "Macro-bends raise loss slowly \u2014 temperature shifts unmask them"
     }
   ],
   "history": [
@@ -173,7 +173,7 @@
       "nationality": "British-American"
     }
   ],
-  "impact": "Fibre carries the bulk backbone of the internet — satellites and radio are edges; glass is the spine.\n\nUnderstanding OTDR is understanding archaeology for light.",
+  "impact": "Fibre carries the bulk backbone of the internet \u2014 satellites and radio are edges; glass is the spine.\n\nUnderstanding OTDR is understanding archaeology for light.",
   "images": [],
   "videos": [
     {
@@ -186,16 +186,20 @@
   "externalLinks": [
     {
       "id": "itu-t-fiber",
-      "title": "ITU-T — optical transport standards",
+      "title": "ITU-T \u2014 optical transport standards",
       "url": "https://www.itu.int/en/ITU-T/about/"
     },
     {
       "id": "ofc",
-      "title": "OFC — optical fibre communication conference",
+      "title": "OFC \u2014 optical fibre communication conference",
       "url": "https://www.ofcconference.org/"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -204,21 +208,21 @@
     "sources": [
       {
         "id": "src-itu-t-fiber",
-        "title": "ITU-T — Publications",
+        "title": "ITU-T \u2014 Publications",
         "url": "https://www.itu.int/en/ITU-T/publications/Pages/default.aspx",
         "type": "institution",
         "note": "G.652/G.653 fibre recommendations and related optical transport standards"
       },
       {
         "id": "src-wiki-fiber",
-        "title": "Wikipedia — Optical fiber",
+        "title": "Wikipedia \u2014 Optical fiber",
         "url": "https://en.wikipedia.org/wiki/Optical_fiber",
         "type": "wikipedia",
         "note": "Waveguides, attenuation, and dispersion"
       },
       {
         "id": "src-rfc-internet",
-        "title": "IETF — TCP/IP overview (RFC 9293)",
+        "title": "IETF \u2014 TCP/IP overview (RFC 9293)",
         "url": "https://www.rfc-editor.org/rfc/rfc9293.html",
         "type": "standard",
         "note": "Packet networking stack carried over modern optical backbones"

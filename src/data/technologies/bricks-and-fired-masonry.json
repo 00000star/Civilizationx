@@ -170,12 +170,16 @@
   "externalLinks": [
     {
       "id": "wiki-bricks-and-fired-masonry",
-      "title": "Wikipedia — Bricks and Fired Masonry",
+      "title": "Wikipedia \u2014 Bricks and Fired Masonry",
       "url": "https://en.wikipedia.org/wiki/Bricks_and_Fired_Masonry"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "review-needed",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -184,13 +188,13 @@
     "sources": [
       {
         "id": "wiki-brick",
-        "title": "Wikipedia — Brick",
+        "title": "Wikipedia \u2014 Brick",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Brick"
       },
       {
         "id": "britannica-brick",
-        "title": "Encyclopaedia Britannica — Brick",
+        "title": "Encyclopaedia Britannica \u2014 Brick",
         "type": "institution",
         "url": "https://www.britannica.com/technology/brick"
       },

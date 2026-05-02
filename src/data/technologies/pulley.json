@@ -12,20 +12,20 @@
   "unlocks": [
     "steam-engine"
   ],
-  "problem": "Lifting stone for construction, drawing water from wells, and tensioning ship rigging all require applying large forces along directions human posture cannot sustain. Rope alone cuts hands and wastes friction over edges; sharp edges abrade fibres. The pulley problem is providing a low-friction curved support that preserves rope integrity while changing force direction — and, in block-and-tackle systems, multiplying force at the expense of rope travel.\n\nPulleys also appear in power transmission: leather belts on stepped cone pulleys change speed ratios between shafts before geared heads dominate machine tools.\n\nMisunderstanding pulleys leads to dangerous false security — mechanical advantage never removes the need to anchor frames against reaction forces.",
-  "overview": "A fixed pulley redirects tension ideally without changing magnitude (neglecting friction). A movable pulley attached to the load halves the required pull force in ideal 1:2 systems because two rope segments support the load. Compounding with multiple sheaves creates tackle rove to trade rope pull distance for force.\n\nReal sheaves have bearing friction, rope bending hysteresis, and efficiency losses that accumulate in long tackles. Sheave diameter should be large relative to rope diameter to preserve rope strength — small diameters fatigue fibres.\n\nMaterials progress from grooved wood discs on wooden pins, to bronze bearings, to ball-bearing sheaves in modern lifting. Frames (blocks) must be closed shapes that cannot spit the rope under side loading.\n\nAlignment matters: fleet angles on multi-wrap drums must stay within manufacturer limits — historical analogues still fail if rope piles on one flange.",
+  "problem": "Lifting stone for construction, drawing water from wells, and tensioning ship rigging all require applying large forces along directions human posture cannot sustain. Rope alone cuts hands and wastes friction over edges; sharp edges abrade fibres. The pulley problem is providing a low-friction curved support that preserves rope integrity while changing force direction \u2014 and, in block-and-tackle systems, multiplying force at the expense of rope travel.\n\nPulleys also appear in power transmission: leather belts on stepped cone pulleys change speed ratios between shafts before geared heads dominate machine tools.\n\nMisunderstanding pulleys leads to dangerous false security \u2014 mechanical advantage never removes the need to anchor frames against reaction forces.",
+  "overview": "A fixed pulley redirects tension ideally without changing magnitude (neglecting friction). A movable pulley attached to the load halves the required pull force in ideal 1:2 systems because two rope segments support the load. Compounding with multiple sheaves creates tackle rove to trade rope pull distance for force.\n\nReal sheaves have bearing friction, rope bending hysteresis, and efficiency losses that accumulate in long tackles. Sheave diameter should be large relative to rope diameter to preserve rope strength \u2014 small diameters fatigue fibres.\n\nMaterials progress from grooved wood discs on wooden pins, to bronze bearings, to ball-bearing sheaves in modern lifting. Frames (blocks) must be closed shapes that cannot spit the rope under side loading.\n\nAlignment matters: fleet angles on multi-wrap drums must stay within manufacturer limits \u2014 historical analogues still fail if rope piles on one flange.",
   "principles": [
     {
       "name": "Tension continuity (ideal)",
-      "explanation": "Along a continuous rope strand on massless frictionless sheaves, tension is uniform — compounding alters mechanical advantage by segment counting."
+      "explanation": "Along a continuous rope strand on massless frictionless sheaves, tension is uniform \u2014 compounding alters mechanical advantage by segment counting."
     },
     {
       "name": "Capstan equation",
-      "explanation": "Friction on wrapped drums grows exponentially with wrap angle — why a few turns on a capstan holds enormous load with modest holding force."
+      "explanation": "Friction on wrapped drums grows exponentially with wrap angle \u2014 why a few turns on a capstan holds enormous load with modest holding force."
     },
     {
       "name": "Bending fatigue",
-      "explanation": "Each bend cycles outer and inner fibres — undersized sheaves shorten rope life via internal heating and broken wires/strands."
+      "explanation": "Each bend cycles outer and inner fibres \u2014 undersized sheaves shorten rope life via internal heating and broken wires/strands."
     },
     {
       "name": "Reaction forces on frames",
@@ -39,7 +39,7 @@
       "function": "Supports and guides rope with minimal wear",
       "position": "Rotates inside block cheeks",
       "madeFrom": "Lignum vitae historically, cast iron later, aluminium in aircraft",
-      "criticalNote": "Groove radius matches rope — V-grooves crush soft ropes"
+      "criticalNote": "Groove radius matches rope \u2014 V-grooves crush soft ropes"
     },
     {
       "id": "pin",
@@ -55,7 +55,7 @@
       "function": "Retains sheave and connects shackle/becket",
       "position": "Straddles sheave",
       "madeFrom": "Wood strapped with iron, later cast or forged steel",
-      "criticalNote": "Open hooks are outlawed in modern lifting — use closed shackle paths"
+      "criticalNote": "Open hooks are outlawed in modern lifting \u2014 use closed shackle paths"
     },
     {
       "id": "becket",
@@ -63,7 +63,7 @@
       "function": "Terminates one rope end in tackle systems",
       "position": "On block body",
       "madeFrom": "Integral ear or thimble-protected eye",
-      "criticalNote": "Sharp bends at termination cut strength — use thimbles"
+      "criticalNote": "Sharp bends at termination cut strength \u2014 use thimbles"
     },
     {
       "id": "use-case-boundary",
@@ -83,7 +83,7 @@
         "nylon/polyester modern"
       ],
       "spaceAlternatives": "UHMWPE cable",
-      "processingRequired": "Splice eyes with full strength methods — knots derate"
+      "processingRequired": "Splice eyes with full strength methods \u2014 knots derate"
     },
     {
       "name": "Hardwood or metal for sheave",
@@ -110,7 +110,7 @@
     {
       "order": 1,
       "title": "Size sheave for rope",
-      "description": "Choose sheave diameter at least ~10× rope diameter for natural fibre; modern wire rope charts stricter. Mark groove profile to match rope crown.",
+      "description": "Choose sheave diameter at least ~10\u00d7 rope diameter for natural fibre; modern wire rope charts stricter. Mark groove profile to match rope crown.",
       "prerequisiteTools": [
         "calipers",
         "compass"
@@ -130,7 +130,7 @@
     {
       "order": 3,
       "title": "Fabricate cheeks and assemble",
-      "description": "Bolt or strap cheeks with correct spacing — rope must not pinch between cheek and sheave edge.",
+      "description": "Bolt or strap cheeks with correct spacing \u2014 rope must not pinch between cheek and sheave edge.",
       "prerequisiteTools": [
         "drill",
         "wrenches"
@@ -140,17 +140,17 @@
     {
       "order": 4,
       "title": "Rove tackle and proof test",
-      "description": "Rig fall line from planned direction; hoist known test mass ≥1.25× working load if possible. Listen for bearing grind.",
+      "description": "Rig fall line from planned direction; hoist known test mass \u22651.25\u00d7 working load if possible. Listen for bearing grind.",
       "prerequisiteTools": [
         "test weights",
         "tag lines"
       ],
-      "warningNote": "Stay clear of bight — recoil if rope breaks is lethal"
+      "warningNote": "Stay clear of bight \u2014 recoil if rope breaks is lethal"
     },
     {
       "order": 5,
       "title": "Mark SWL and inspect schedule",
-      "description": "Paint or tag safe working load and date. Document bend radius and rope type pairing — future users depend on labels.",
+      "description": "Paint or tag safe working load and date. Document bend radius and rope type pairing \u2014 future users depend on labels.",
       "prerequisiteTools": [
         "paint",
         "metal stamp"
@@ -166,7 +166,7 @@
     },
     {
       "year": 1850,
-      "event": "Factory line-shafting spreads belt-and-stepped-pulley drive systems that distribute power from central steam engines to rows of machines — a signature layout of industrial-era workshops.",
+      "event": "Factory line-shafting spreads belt-and-stepped-pulley drive systems that distribute power from central steam engines to rows of machines \u2014 a signature layout of industrial-era workshops.",
       "location": "Europe and North America"
     }
   ],
@@ -184,11 +184,15 @@
   "externalLinks": [
     {
       "id": "nasasimplemachines-pulley",
-      "title": "NASA — simple machines educator guide (pulleys)",
+      "title": "NASA \u2014 simple machines educator guide (pulleys)",
       "url": "https://www.nasa.gov/stem-content/simple-machines-educator-guide"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -197,21 +201,21 @@
     "sources": [
       {
         "id": "src-nist-pml-pulley",
-        "title": "NIST — Physical Measurement Laboratory",
+        "title": "NIST \u2014 Physical Measurement Laboratory",
         "url": "https://www.nist.gov/pml",
         "type": "institution",
         "note": "Force and mass standards context for rigging calculations"
       },
       {
         "id": "src-wiki-pulley",
-        "title": "Wikipedia — Pulley",
+        "title": "Wikipedia \u2014 Pulley",
         "url": "https://en.wikipedia.org/wiki/Pulley",
         "type": "wikipedia",
         "note": "Mechanical advantage and block-and-tackle theory"
       },
       {
         "id": "src-osha",
-        "title": "OSHA — Agency home",
+        "title": "OSHA \u2014 Agency home",
         "url": "https://www.osha.gov/",
         "type": "institution",
         "note": "Crane, hoist, and rigging safety regulations (U.S.; compare local codes)"

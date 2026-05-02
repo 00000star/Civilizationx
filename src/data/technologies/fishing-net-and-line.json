@@ -10,16 +10,16 @@
     "bone-tools"
   ],
   "unlocks": [],
-  "problem": "Rivers, lakes, and coasts concentrate protein in forms humans cannot outrun or easily spear without tools. Hand-catching works for small shallow species only. The fishing problem is projecting human reach into water: suspending bait at depth, entangling fish in mesh, or gorging swallow hooks — each method trades materials, skill, and bycatch risk.\n\nFishing also solves seasonality: when terrestrial game is scarce, aquatic resources often remain. Preserved fish (drying, smoking — enabled by cordage racks and fire) becomes a storable amino acid source.\n\nThe constraint is tensile reliability underwater: fibres swell, knots slip when wet unless designed correctly, and biofouling weakens lines. Net making is combinatorics: many repeated knots must be uniform or mesh tears propagate.",
-  "overview": "Line fishing uses a cord with a terminal hook — historically bone, shell, cactus spine, later metal. Bait or lure triggers swallowing; hook geometry sets jaw penetration angle. Floats and sinkers tune presentation depth using buoyancy and mass along the line.\n\nNets are textiles in two dimensions: seine nets surround schools; gill nets entangle by mesh size matched to target species; cast nets spread radially from weights at periphery. Knots include sheet bend variants for joining meshes; finger gauges maintain uniform openings.\n\nTraps and weirs channel fish into enclosures — sometimes more fuel-efficient than active netting when streams are reliable. They couple civil engineering (stone walls, woven fences) with ichthyology knowledge.\n\nEcologically, fishing scales into depletion. Sustainable practice is part of the technology: mesh regulations, seasonal closures, and habitat protection — not optional cultural garnish.",
+  "problem": "Rivers, lakes, and coasts concentrate protein in forms humans cannot outrun or easily spear without tools. Hand-catching works for small shallow species only. The fishing problem is projecting human reach into water: suspending bait at depth, entangling fish in mesh, or gorging swallow hooks \u2014 each method trades materials, skill, and bycatch risk.\n\nFishing also solves seasonality: when terrestrial game is scarce, aquatic resources often remain. Preserved fish (drying, smoking \u2014 enabled by cordage racks and fire) becomes a storable amino acid source.\n\nThe constraint is tensile reliability underwater: fibres swell, knots slip when wet unless designed correctly, and biofouling weakens lines. Net making is combinatorics: many repeated knots must be uniform or mesh tears propagate.",
+  "overview": "Line fishing uses a cord with a terminal hook \u2014 historically bone, shell, cactus spine, later metal. Bait or lure triggers swallowing; hook geometry sets jaw penetration angle. Floats and sinkers tune presentation depth using buoyancy and mass along the line.\n\nNets are textiles in two dimensions: seine nets surround schools; gill nets entangle by mesh size matched to target species; cast nets spread radially from weights at periphery. Knots include sheet bend variants for joining meshes; finger gauges maintain uniform openings.\n\nTraps and weirs channel fish into enclosures \u2014 sometimes more fuel-efficient than active netting when streams are reliable. They couple civil engineering (stone walls, woven fences) with ichthyology knowledge.\n\nEcologically, fishing scales into depletion. Sustainable practice is part of the technology: mesh regulations, seasonal closures, and habitat protection \u2014 not optional cultural garnish.",
   "principles": [
     {
       "name": "Buoyancy and drag",
-      "explanation": "Floats must support terminal tackle weight; currents add drag that straightens lines and moves baits — design accounts for stream velocity."
+      "explanation": "Floats must support terminal tackle weight; currents add drag that straightens lines and moves baits \u2014 design accounts for stream velocity."
     },
     {
       "name": "Mesh selectivity",
-      "explanation": "Fish attempt passage through openings; correctly sized mesh catches target girth while reducing juvenile take — a mechanical conservation lever."
+      "explanation": "Fish attempt passage through openings; correctly sized mesh catches target girth while reducing juvenile take \u2014 a mechanical conservation lever."
     },
     {
       "name": "Wet strength of fibres",
@@ -45,7 +45,7 @@
       "function": "Engages fish mouth or gut depending on design",
       "position": "Terminal end",
       "madeFrom": "Bone, shell, forged metal later",
-      "criticalNote": "Keep points sharp — dull hooks injure fish without securing catch"
+      "criticalNote": "Keep points sharp \u2014 dull hooks injure fish without securing catch"
     },
     {
       "id": "net-panel",
@@ -53,7 +53,7 @@
       "function": "Entangles or encloses fish",
       "position": "Deployed in water column or across channel",
       "madeFrom": "Knotted mesh of cordage",
-      "criticalNote": "Repair tears immediately — propagates under load"
+      "criticalNote": "Repair tears immediately \u2014 propagates under load"
     },
     {
       "id": "float-sinker",
@@ -61,7 +61,7 @@
       "function": "Positions gear vertically",
       "position": "Along line or net headrope/footrope",
       "madeFrom": "Cork, wood, fired clay, stone, lead later",
-      "warningNote": "Lead is toxic — avoid handling residues near food; modern regulations restrict lead tackle in many regions"
+      "warningNote": "Lead is toxic \u2014 avoid handling residues near food; modern regulations restrict lead tackle in many regions"
     },
     {
       "id": "use-case-boundary",
@@ -106,7 +106,7 @@
     {
       "order": 1,
       "title": "Select target species and method",
-      "description": "Mesh size, hook size, and bait follow biology — consult local ecological knowledge. Start with abundant small species to calibrate fibres and knots before scaling mesh.",
+      "description": "Mesh size, hook size, and bait follow biology \u2014 consult local ecological knowledge. Start with abundant small species to calibrate fibres and knots before scaling mesh.",
       "prerequisiteTools": [
         "measuring gauge stick"
       ],
@@ -121,7 +121,7 @@
         "abrasive stone",
         "knife"
       ],
-      "warningNote": "Bone hooks snap under shock — smooth fighting reduces losses"
+      "warningNote": "Bone hooks snap under shock \u2014 smooth fighting reduces losses"
     },
     {
       "order": 3,
@@ -131,17 +131,17 @@
         "netting needle",
         "gauge stick"
       ],
-      "warningNote": "Uniformity matters — one tight mesh becomes failure nucleus"
+      "warningNote": "Uniformity matters \u2014 one tight mesh becomes failure nucleus"
     },
     {
       "order": 4,
       "title": "Rig floats and weights",
-      "description": "For gill nets, space floats on headrope and weights on footrope to achieve vertical hang. Adjust for current — too light rides surface; too heavy snags.",
+      "description": "For gill nets, space floats on headrope and weights on footrope to achieve vertical hang. Adjust for current \u2014 too light rides surface; too heavy snags.",
       "prerequisiteTools": [
         "awl for threading",
         "knife"
       ],
-      "warningNote": "Entanglement hazard — never wrap line around limbs"
+      "warningNote": "Entanglement hazard \u2014 never wrap line around limbs"
     },
     {
       "order": 5,
@@ -150,7 +150,7 @@
       "prerequisiteTools": [
         "net repair fid"
       ],
-      "warningNote": "Cold water immersion risk — wear flotation in boats"
+      "warningNote": "Cold water immersion risk \u2014 wear flotation in boats"
     }
   ],
   "history": [
@@ -166,23 +166,27 @@
     },
     {
       "year": "1937",
-      "event": "Commercial production of nylon enables synthetic fishing lines and nets that resist rot — dramatically changing industrial fisheries' economics and ecological impact.",
+      "event": "Commercial production of nylon enables synthetic fishing lines and nets that resist rot \u2014 dramatically changing industrial fisheries' economics and ecological impact.",
       "location": "United States",
       "person": "Wallace Carothers (nylon invention context)"
     }
   ],
   "inventors": [],
-  "impact": "Fishing supported riverside and coastal sedentism and trade — dried fish is lightweight calories. It also drove boat technologies and navigation later.\n\nModern industrial fishing is a cautionary lesson: technology without governance collapses stocks. The Codex encodes that governance is a subsystem of extraction tech.",
+  "impact": "Fishing supported riverside and coastal sedentism and trade \u2014 dried fish is lightweight calories. It also drove boat technologies and navigation later.\n\nModern industrial fishing is a cautionary lesson: technology without governance collapses stocks. The Codex encodes that governance is a subsystem of extraction tech.",
   "images": [],
   "videos": [],
   "externalLinks": [
     {
       "id": "fao-fisheries",
-      "title": "FAO — fisheries and aquaculture overview",
+      "title": "FAO \u2014 fisheries and aquaculture overview",
       "url": "https://www.fao.org/fishery/en"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -191,21 +195,21 @@
     "sources": [
       {
         "id": "src-fao-fishery",
-        "title": "FAO — Fisheries and Aquaculture",
+        "title": "FAO \u2014 Fisheries and Aquaculture",
         "url": "https://www.fao.org/fishery/en",
         "type": "institution",
         "note": "Gear types, fisheries management, and responsible harvesting"
       },
       {
         "id": "src-wiki-net",
-        "title": "Wikipedia — Fishing net",
+        "title": "Wikipedia \u2014 Fishing net",
         "url": "https://en.wikipedia.org/wiki/Fishing_net",
         "type": "wikipedia",
         "note": "Net-making materials and methods with citations"
       },
       {
         "id": "src-itu-r",
-        "title": "ITU — Radiocommunication Sector (ITU-R)",
+        "title": "ITU \u2014 Radiocommunication Sector (ITU-R)",
         "url": "https://www.itu.int/en/ITU-R/Pages/default.aspx",
         "type": "institution",
         "note": "Radio spectrum standards context for modern electronic aids to navigation and safety communications"

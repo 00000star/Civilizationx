@@ -198,12 +198,16 @@
   "externalLinks": [
     {
       "id": "wiki-programming-languages",
-      "title": "Wikipedia — Programming Languages",
+      "title": "Wikipedia \u2014 Programming Languages",
       "url": "https://en.wikipedia.org/wiki/Programming_Languages"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -212,18 +216,18 @@
     "sources": [
       {
         "id": "wiki-programming-language",
-        "title": "Wikipedia — Programming language",
+        "title": "Wikipedia \u2014 Programming language",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Programming_language"
       },
       {
         "id": "dragon-book",
-        "title": "Aho, Lam, Sethi, Ullman — Compilers: Principles, Techniques, and Tools",
+        "title": "Aho, Lam, Sethi, Ullman \u2014 Compilers: Principles, Techniques, and Tools",
         "type": "book"
       },
       {
         "id": "knuth-taocp",
-        "title": "Knuth — The Art of Computer Programming (foundations)",
+        "title": "Knuth \u2014 The Art of Computer Programming (foundations)",
         "type": "book"
       }
     ]

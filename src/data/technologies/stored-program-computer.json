@@ -207,12 +207,16 @@
   "externalLinks": [
     {
       "id": "wiki-stored-program-computer",
-      "title": "Wikipedia — Stored-Program Computer",
+      "title": "Wikipedia \u2014 Stored-Program Computer",
       "url": "https://en.wikipedia.org/wiki/Stored-Program_Computer"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -221,13 +225,13 @@
     "sources": [
       {
         "id": "wiki-von-neumann-arch",
-        "title": "Wikipedia — von Neumann architecture",
+        "title": "Wikipedia \u2014 von Neumann architecture",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Von_Neumann_architecture"
       },
       {
         "id": "turing1936",
-        "title": "Turing (1936) — On Computable Numbers",
+        "title": "Turing (1936) \u2014 On Computable Numbers",
         "type": "paper",
         "url": "https://doi.org/10.1112/plms/s2-42.1.230",
         "note": "Foundational theory for general computation"

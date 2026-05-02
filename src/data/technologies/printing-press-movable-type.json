@@ -1,7 +1,7 @@
 {
   "id": "printing-press-movable-type",
   "name": "Printing Press (Movable Type)",
-  "tagline": "Mechanised impression of reusable type — mass duplication of text with repeatable fidelity",
+  "tagline": "Mechanised impression of reusable type \u2014 mass duplication of text with repeatable fidelity",
   "category": "communication",
   "era": "medieval",
   "difficulty": 3,
@@ -13,24 +13,24 @@
   "unlocks": [
     "electrical-telegraph"
   ],
-  "problem": "A scriptorium can duplicate a book beautifully, but each copy ties up a scribe for months. Ideas spread at the speed of handwriting — fine for liturgy, lethal for science and navigation when printers multiply faster than wars. Movable type attacks the bottleneck: cast many identical letters once, arrange them into any page, print, break apart, reuse.\n\nThe obstacle is precision economics: type must be hard enough to survive thousands of impressions yet soft enough to file; height must match within microns or impressions ghost and ink floods. Paper supply and ink tack must agree with metal and press speed.\n\nPrinting also amplifies error: a wrong letter becomes a thousand wrong letters. Editorial workflows — proof sheets, stop-press corrections — become technologies alongside the press itself.\n\nPolitically, cheap text rearranges who may read law, scripture, and sedition. The press is not only gears; it is an argument about who controls reproduction.",
-  "overview": "Punchcutters carve master letters in steel, strike them into copper matrices, and cast many type pieces in lead-antimony-tin alloys that solidify sharp and wear slowly. Compositors set lines in composing sticks, justify with spaces, lock the forme into a chase, and ink evenly with composition rollers or balls.\n\nScrew presses apply firm even pressure across the platen; later cylinder presses raise speed. Paper grain direction aligns with pull to reduce tearing; dampening relaxes fibres for deeper impressions.\n\nTypography encodes readability: x-height, contrast, and ligatures are ergonomic choices. Colour printing layers separate formes — registration becomes mathematics.\n\nDigital printers inherited the same questions with different physics — toner fusion and inkjet drops — but the social shape remains: cheap copies change regimes.",
+  "problem": "A scriptorium can duplicate a book beautifully, but each copy ties up a scribe for months. Ideas spread at the speed of handwriting \u2014 fine for liturgy, lethal for science and navigation when printers multiply faster than wars. Movable type attacks the bottleneck: cast many identical letters once, arrange them into any page, print, break apart, reuse.\n\nThe obstacle is precision economics: type must be hard enough to survive thousands of impressions yet soft enough to file; height must match within microns or impressions ghost and ink floods. Paper supply and ink tack must agree with metal and press speed.\n\nPrinting also amplifies error: a wrong letter becomes a thousand wrong letters. Editorial workflows \u2014 proof sheets, stop-press corrections \u2014 become technologies alongside the press itself.\n\nPolitically, cheap text rearranges who may read law, scripture, and sedition. The press is not only gears; it is an argument about who controls reproduction.",
+  "overview": "Punchcutters carve master letters in steel, strike them into copper matrices, and cast many type pieces in lead-antimony-tin alloys that solidify sharp and wear slowly. Compositors set lines in composing sticks, justify with spaces, lock the forme into a chase, and ink evenly with composition rollers or balls.\n\nScrew presses apply firm even pressure across the platen; later cylinder presses raise speed. Paper grain direction aligns with pull to reduce tearing; dampening relaxes fibres for deeper impressions.\n\nTypography encodes readability: x-height, contrast, and ligatures are ergonomic choices. Colour printing layers separate formes \u2014 registration becomes mathematics.\n\nDigital printers inherited the same questions with different physics \u2014 toner fusion and inkjet drops \u2014 but the social shape remains: cheap copies change regimes.",
   "principles": [
     {
       "name": "Viscosity and tack",
-      "explanation": "Ink must split cleanly between type surface and paper without picking fibres — temperature and pigment load tune rheology."
+      "explanation": "Ink must split cleanly between type surface and paper without picking fibres \u2014 temperature and pigment load tune rheology."
     },
     {
       "name": "Hardness matching",
-      "explanation": "Type metal softer than punch steel but harder than paper contaminants — otherwise letters mushroom."
+      "explanation": "Type metal softer than punch steel but harder than paper contaminants \u2014 otherwise letters mushroom."
     },
     {
       "name": "Impression pressure distribution",
-      "explanation": "Platen parallelism and packing paper shims equalise density — else outer lines fade."
+      "explanation": "Platen parallelism and packing paper shims equalise density \u2014 else outer lines fade."
     },
     {
       "name": "Justification geometry",
-      "explanation": "Word spacing and thin spaces absorb line-length slack — hyphenation rules are hyphenation algorithms."
+      "explanation": "Word spacing and thin spaces absorb line-length slack \u2014 hyphenation rules are hyphenation algorithms."
     }
   ],
   "components": [
@@ -78,7 +78,7 @@
         "Lead smelters",
         "tin trade routes"
       ],
-      "spaceAlternatives": "Lead-antimony-tin type metal from smelter chains; short-run polymer or wood type where metal casting is unavailable — expect faster wear",
+      "spaceAlternatives": "Lead-antimony-tin type metal from smelter chains; short-run polymer or wood type where metal casting is unavailable \u2014 expect faster wear",
       "processingRequired": "Remelt with antimony adjustment"
     },
     {
@@ -104,7 +104,7 @@
     {
       "order": 1,
       "title": "Cut one perfect letter punch before casting anything",
-      "description": "Work a single letter in tool steel under magnification; proof it on smoke-blackened paper until curves are true. Only then strike the matrix — a bad punch multiplies misery.",
+      "description": "Work a single letter in tool steel under magnification; proof it on smoke-blackened paper until curves are true. Only then strike the matrix \u2014 a bad punch multiplies misery.",
       "prerequisiteTools": [
         "files",
         "magnifier",
@@ -115,12 +115,12 @@
     {
       "order": 2,
       "title": "Cast a few sorts and test height",
-      "description": "Pour type metal into a hand mould; file feet until the letter matches your gauge block exactly. Print trial lines — if some letters shine while others fade, height is wrong.",
+      "description": "Pour type metal into a hand mould; file feet until the letter matches your gauge block exactly. Print trial lines \u2014 if some letters shine while others fade, height is wrong.",
       "prerequisiteTools": [
         "mould",
         "gauge block"
       ],
-      "warningNote": "Lead splash burns — leather apron and face shield"
+      "warningNote": "Lead splash burns \u2014 leather apron and face shield"
     },
     {
       "order": 3,
@@ -135,7 +135,7 @@
     {
       "order": 4,
       "title": "Mix ink to the press you actually own",
-      "description": "Start stiff, add varnish drops until the ink threads cleanly from roller to type without filling counters. Record room temperature — tack changes with heat.",
+      "description": "Start stiff, add varnish drops until the ink threads cleanly from roller to type without filling counters. Record room temperature \u2014 tack changes with heat.",
       "prerequisiteTools": [
         "ink knife",
         "glass slab"
@@ -150,7 +150,7 @@
         "proof paper",
         "drying racks"
       ],
-      "warningNote": "Wet stacks set off ink offset — rotate boards"
+      "warningNote": "Wet stacks set off ink offset \u2014 rotate boards"
     }
   ],
   "history": [
@@ -175,7 +175,7 @@
       "nationality": "German"
     }
   ],
-  "impact": "Printing collapsed the price of identical knowledge — law, scripture, and diagrams could disagree in public because multiple copies existed. It preconditioned scientific societies and newspapers.\n\nMovable type’s social externalities include propaganda at scale — technology never prints only truth.",
+  "impact": "Printing collapsed the price of identical knowledge \u2014 law, scripture, and diagrams could disagree in public because multiple copies existed. It preconditioned scientific societies and newspapers.\n\nMovable type\u2019s social externalities include propaganda at scale \u2014 technology never prints only truth.",
   "images": [],
   "videos": [
     {
@@ -188,7 +188,7 @@
   "externalLinks": [
     {
       "id": "britannica-printing",
-      "title": "Britannica — printing press",
+      "title": "Britannica \u2014 printing press",
       "url": "https://www.britannica.com/technology/printing-press"
     },
     {
@@ -198,6 +198,10 @@
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -213,14 +217,14 @@
       },
       {
         "id": "src-wiki-press",
-        "title": "Wikipedia — Printing press",
+        "title": "Wikipedia \u2014 Printing press",
         "url": "https://en.wikipedia.org/wiki/Printing_press",
         "type": "wikipedia",
         "note": "Gutenberg-era technology and dissemination effects"
       },
       {
         "id": "src-unesco-comm",
-        "title": "UNESCO — Communication and information",
+        "title": "UNESCO \u2014 Communication and information",
         "url": "https://www.unesco.org/en/communication-information",
         "type": "institution",
         "note": "Freedom of expression and documentary heritage"

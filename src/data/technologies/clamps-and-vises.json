@@ -219,6 +219,10 @@
   ],
   "lastUpdated": "2026-05-02",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

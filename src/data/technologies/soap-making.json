@@ -1,7 +1,7 @@
 {
   "id": "soap-making",
   "name": "Soap Making",
-  "tagline": "Turning fat and strong alkali into surfactant that removes pathogens from skin and fabric — hygiene without petrochemical supply chains",
+  "tagline": "Turning fat and strong alkali into surfactant that removes pathogens from skin and fabric \u2014 hygiene without petrochemical supply chains",
   "category": "medicine",
   "era": "ancient",
   "difficulty": 2,
@@ -11,12 +11,12 @@
     "charcoal"
   ],
   "unlocks": [],
-  "problem": "Skin and cloth carry invisible films of fat, protein, and dirt that shelter bacteria and viruses from mechanical removal by water alone. Historical mortality curves bend when cities adopt routine handwashing and laundry — not because soap kills every germ instantly, but because it emulsifies oils so water can rinse pathogens away. In collapse, when antibiotics are absent or counterfeit, preventing wound contamination and diarrhoeal spread through clean hands is higher leverage than almost any single drug.\n\nThe manufacturing problem is chemical danger: strong alkali from wood leachate or commercial lye can blind on splash and dissolve skin on contact. Saponification is exothermic; poorly mixed batches trap caustic pockets inside bars that only reveal themselves in a wash basin. Cold-process soap also requires patience — bars must cure until pH drops to non-irritating ranges for skin.\n\nEconomically, soap ties to fat supply: every society that preserves animals has tallow; plant-oil soaps are possible where oil palms, olives, or other lipid crops exist. Without fat chemistry literacy, people burn lean meat for calories and throw away the rendering stream that could have become hygiene infrastructure.\n\nProfessional verification is required before use on a human being for any medicinal claim beyond general hygiene; contraindications include known contact allergy to fragrance oils or botanicals; overdose risk applies to ingesting lye or raw soap; sterility is not surgical-grade from kitchen batches — do not confuse household soap with sterile field surgery supplies.",
-  "overview": "Soap is the salt of a fatty acid: triglycerides hydrolyse under hot alkali into glycerol and long-chain carboxylates that have a water-loving head and a grease-loving tail. In water, micelles form that lift oils off surfaces so rinse water carries them away.\n\nTraditional soft soap begins by leaching hardwood ash with hot water to produce potassium hydroxide solution of unknown strength — titration is historical craft; modern equivalents use measured sodium hydroxide for repeatability. Fat is rendered by gentle heating with minimal burning; strained tallow is combined with lye at calculated superfat percentages so finished bars retain a margin of unsaponified oil for mildness.\n\nCold process mixes oils and lye near trace (thickening) then moulds; hot process finishes saponification in a pot before moulding, shortening cure for field use at some cost in texture control. Laundry soap can be softer and more alkaline than skin soap if kept colour-coded and stored apart.\n\nHard water consumes soap by forming insoluble scum with calcium and magnesium; washing soda or chelating rinse strategies help in marginal water. On Mars, imported surfactants dominate early phases; local synthesis from regolith-derived chemicals is research-grade, not cottage industry yet.",
+  "problem": "Skin and cloth carry invisible films of fat, protein, and dirt that shelter bacteria and viruses from mechanical removal by water alone. Historical mortality curves bend when cities adopt routine handwashing and laundry \u2014 not because soap kills every germ instantly, but because it emulsifies oils so water can rinse pathogens away. In collapse, when antibiotics are absent or counterfeit, preventing wound contamination and diarrhoeal spread through clean hands is higher leverage than almost any single drug.\n\nThe manufacturing problem is chemical danger: strong alkali from wood leachate or commercial lye can blind on splash and dissolve skin on contact. Saponification is exothermic; poorly mixed batches trap caustic pockets inside bars that only reveal themselves in a wash basin. Cold-process soap also requires patience \u2014 bars must cure until pH drops to non-irritating ranges for skin.\n\nEconomically, soap ties to fat supply: every society that preserves animals has tallow; plant-oil soaps are possible where oil palms, olives, or other lipid crops exist. Without fat chemistry literacy, people burn lean meat for calories and throw away the rendering stream that could have become hygiene infrastructure.\n\nProfessional verification is required before use on a human being for any medicinal claim beyond general hygiene; contraindications include known contact allergy to fragrance oils or botanicals; overdose risk applies to ingesting lye or raw soap; sterility is not surgical-grade from kitchen batches \u2014 do not confuse household soap with sterile field surgery supplies.",
+  "overview": "Soap is the salt of a fatty acid: triglycerides hydrolyse under hot alkali into glycerol and long-chain carboxylates that have a water-loving head and a grease-loving tail. In water, micelles form that lift oils off surfaces so rinse water carries them away.\n\nTraditional soft soap begins by leaching hardwood ash with hot water to produce potassium hydroxide solution of unknown strength \u2014 titration is historical craft; modern equivalents use measured sodium hydroxide for repeatability. Fat is rendered by gentle heating with minimal burning; strained tallow is combined with lye at calculated superfat percentages so finished bars retain a margin of unsaponified oil for mildness.\n\nCold process mixes oils and lye near trace (thickening) then moulds; hot process finishes saponification in a pot before moulding, shortening cure for field use at some cost in texture control. Laundry soap can be softer and more alkaline than skin soap if kept colour-coded and stored apart.\n\nHard water consumes soap by forming insoluble scum with calcium and magnesium; washing soda or chelating rinse strategies help in marginal water. On Mars, imported surfactants dominate early phases; local synthesis from regolith-derived chemicals is research-grade, not cottage industry yet.",
   "principles": [
     {
       "name": "Saponification stoichiometry",
-      "explanation": "Each oil has a saponification value — grams of KOH to fully react; superfat leaves unreacted oil for mildness."
+      "explanation": "Each oil has a saponification value \u2014 grams of KOH to fully react; superfat leaves unreacted oil for mildness."
     },
     {
       "name": "pH and skin barrier",
@@ -28,7 +28,7 @@
     },
     {
       "name": "Caustic hazard",
-      "explanation": "Alkali solutions are weight-dense and splash invisibly — engineering controls first."
+      "explanation": "Alkali solutions are weight-dense and splash invisibly \u2014 engineering controls first."
     }
   ],
   "components": [
@@ -70,7 +70,7 @@
       "function": "Portions bars after partial set",
       "position": "Bench",
       "madeFrom": "Stainless wire",
-      "criticalNote": "Wear gloves — centre may still be caustic"
+      "criticalNote": "Wear gloves \u2014 centre may still be caustic"
     },
     {
       "id": "cure",
@@ -108,7 +108,7 @@
       "earthLocations": [
         "Soft rainwater preferred for lye"
       ],
-      "spaceAlternatives": "Recycled greywater never for lye — use potable loop only",
+      "spaceAlternatives": "Recycled greywater never for lye \u2014 use potable loop only",
       "processingRequired": "Boil and cool if biological contamination suspected"
     }
   ],
@@ -116,13 +116,13 @@
     {
       "order": 1,
       "title": "Calculate lye strength before touching fat",
-      "description": "If using unknown ash leach, float an egg or potato until approximate buoyancy matches published traditional tests — record everything. Prefer weighed commercial lye with SDS if available.",
+      "description": "If using unknown ash leach, float an egg or potato until approximate buoyancy matches published traditional tests \u2014 record everything. Prefer weighed commercial lye with SDS if available.",
       "prerequisiteTools": [
         "scale",
         "thermometer",
         "goggles"
       ],
-      "warningNote": "Lye solution causes permanent eye damage on splash — full face shield and vinegar rinse nearby never neutralise safely on skin without copious water after"
+      "warningNote": "Lye solution causes permanent eye damage on splash \u2014 full face shield and vinegar rinse nearby never neutralise safely on skin without copious water after"
     },
     {
       "order": 2,
@@ -132,7 +132,7 @@
         "cheesecloth",
         "pots"
       ],
-      "warningNote": "Hot fat burns deeper than boiling water — long sleeves and no water into oil"
+      "warningNote": "Hot fat burns deeper than boiling water \u2014 long sleeves and no water into oil"
     },
     {
       "order": 3,
@@ -151,7 +151,7 @@
       "prerequisiteTools": [
         "stick blender if available"
       ],
-      "warningNote": "Exotherm can crack glass vessels — metal preferred"
+      "warningNote": "Exotherm can crack glass vessels \u2014 metal preferred"
     },
     {
       "order": 5,
@@ -160,7 +160,7 @@
       "prerequisiteTools": [
         "pH strips optional"
       ],
-      "warningNote": "Caustic pockets in under-stirred soap — discard suspicious layers"
+      "warningNote": "Caustic pockets in under-stirred soap \u2014 discard suspicious layers"
     }
   ],
   "history": [
@@ -187,44 +187,48 @@
   "externalLinks": [
     {
       "id": "who-handwash",
-      "title": "WHO — Hand hygiene",
+      "title": "WHO \u2014 Hand hygiene",
       "url": "https://www.who.int/teams/integrated-health-services/infection-prevention-control/hand-hygiene"
     },
     {
       "id": "cdc-handwash",
-      "title": "CDC — Handwashing",
+      "title": "CDC \u2014 Handwashing",
       "url": "https://www.cdc.gov/handwashing/index.html"
     }
   ],
   "lastUpdated": "2026-04-12",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
     "reviewDate": null,
     "warnings": [
       "Contraindications: known severe contact allergy to specific oils or fragrances used in batch; discontinue if rash or respiratory irritation occurs.",
-      "Overdose risk: ingestion of lye or raw soap causes corrosive burns to mouth, oesophagus, and stomach — medical emergency; keep lye locked away from children.",
+      "Overdose risk: ingestion of lye or raw soap causes corrosive burns to mouth, oesophagus, and stomach \u2014 medical emergency; keep lye locked away from children.",
       "Sterility: kitchen soap is not sterile surgical scrub; do not use it as a substitute for sterile field supplies in deep contaminated wounds.",
       "Professional verification is required before use on a human being. This is especially important for any claim beyond routine hygiene and wound cleaning in non-sterile environments."
     ],
     "sources": [
       {
         "id": "who-handwash",
-        "title": "WHO — Hand hygiene in health care",
+        "title": "WHO \u2014 Hand hygiene in health care",
         "url": "https://www.who.int/teams/integrated-health-services/infection-prevention-control/hand-hygiene",
         "type": "institution",
         "note": ""
       },
       {
         "id": "cdc-handwash",
-        "title": "CDC — Handwashing",
+        "title": "CDC \u2014 Handwashing",
         "url": "https://www.cdc.gov/handwashing/index.html",
         "type": "institution",
         "note": ""
       },
       {
         "id": "wiki-soap",
-        "title": "Wikipedia — Soap",
+        "title": "Wikipedia \u2014 Soap",
         "url": "https://en.wikipedia.org/wiki/Soap",
         "type": "wikipedia",
         "note": "Chemistry overview"

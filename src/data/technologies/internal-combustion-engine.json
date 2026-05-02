@@ -14,8 +14,8 @@
     "automobile",
     "fixed-wing-aircraft"
   ],
-  "problem": "Steam engines are powerful but carry boiler inertia: slow start, heavy plant, and continuous need for water treatment and fire-tending. Many mobile applications wanted power dense enough to fit into a carriage or airframe: quick start, high rpm, and mechanical output without a separate boiler building.\n\nInternal combustion answers by oxidising fuel inside the working cylinders themselves. The chemical reaction products become the working fluid that pushes pistons directly. That raises power-to-weight and enables minutes-to-full-power — critical for vehicles and small workshops.\n\nThe obstacles are precision and control: fuel must meter correctly with air; ignition must time near top dead centre; materials must survive pressure peaks and thermal cycling; lubrication must work while combustion byproducts contaminate oil. Each subsystem is a failure mode: lean knock, rich fouling, valve float, bearing wipe.",
-  "overview": "A four-stroke petrol engine repeats: intake (draw air-fuel), compression, power (spark ignites mixture, expansion pushes piston), exhaust (scavenge burnt gas). The crankshaft converts reciprocation to rotation; a flywheel stores energy between power strokes; a camshaft times valve opening via lifters and springs or overhead mechanisms.\n\nFuel systems evolved from surface carburettors to venturi carburettors to port fuel injection to direct injection — each improves metering, emissions, or knock resistance. Ignition moved from flame gaps to magnetos to battery-coil distributor to electronic coil-on-plug. Lubrication is pressure-fed from a pump through galleries, with splash for some components; oil filters extend life.\n\nCooling removes heat that does not become shaft work — liquid jackets with radiator or air-cooled fins. Exhaust systems route hot gases safely and attenuate noise; catalytic converters oxidise pollutants when supported by oxygen sensors and three-way chemistry.\n\nDiesel variants compress air until hot, then inject fuel to self-ignite — higher compression, different injection pressures, no spark plug — sharing many mechanical subsystems with petrol engines.",
+  "problem": "Steam engines are powerful but carry boiler inertia: slow start, heavy plant, and continuous need for water treatment and fire-tending. Many mobile applications wanted power dense enough to fit into a carriage or airframe: quick start, high rpm, and mechanical output without a separate boiler building.\n\nInternal combustion answers by oxidising fuel inside the working cylinders themselves. The chemical reaction products become the working fluid that pushes pistons directly. That raises power-to-weight and enables minutes-to-full-power \u2014 critical for vehicles and small workshops.\n\nThe obstacles are precision and control: fuel must meter correctly with air; ignition must time near top dead centre; materials must survive pressure peaks and thermal cycling; lubrication must work while combustion byproducts contaminate oil. Each subsystem is a failure mode: lean knock, rich fouling, valve float, bearing wipe.",
+  "overview": "A four-stroke petrol engine repeats: intake (draw air-fuel), compression, power (spark ignites mixture, expansion pushes piston), exhaust (scavenge burnt gas). The crankshaft converts reciprocation to rotation; a flywheel stores energy between power strokes; a camshaft times valve opening via lifters and springs or overhead mechanisms.\n\nFuel systems evolved from surface carburettors to venturi carburettors to port fuel injection to direct injection \u2014 each improves metering, emissions, or knock resistance. Ignition moved from flame gaps to magnetos to battery-coil distributor to electronic coil-on-plug. Lubrication is pressure-fed from a pump through galleries, with splash for some components; oil filters extend life.\n\nCooling removes heat that does not become shaft work \u2014 liquid jackets with radiator or air-cooled fins. Exhaust systems route hot gases safely and attenuate noise; catalytic converters oxidise pollutants when supported by oxygen sensors and three-way chemistry.\n\nDiesel variants compress air until hot, then inject fuel to self-ignite \u2014 higher compression, different injection pressures, no spark plug \u2014 sharing many mechanical subsystems with petrol engines.",
   "principles": [
     {
       "name": "Otto cycle (idealised)",
@@ -23,15 +23,15 @@
     },
     {
       "name": "Knock (detonation)",
-      "explanation": "End-gas auto-ignition ahead of the flame front produces sharp pressure waves damaging pistons and bearings — controlled by octane, compression ratio, charge cooling, and knock sensors."
+      "explanation": "End-gas auto-ignition ahead of the flame front produces sharp pressure waves damaging pistons and bearings \u2014 controlled by octane, compression ratio, charge cooling, and knock sensors."
     },
     {
       "name": "Mean effective pressure",
-      "explanation": "Torque scales with displaced volume and how effectively each stroke converts chemical energy to pressure over the piston area — tuning and breathing (valves, ports) dominate."
+      "explanation": "Torque scales with displaced volume and how effectively each stroke converts chemical energy to pressure over the piston area \u2014 tuning and breathing (valves, ports) dominate."
     },
     {
       "name": "Friction mean effective pressure",
-      "explanation": "Parasitic losses from rings, bearings, pumps, and accessories consume gross indicated work — why idle fuel consumption exists even at zero output power."
+      "explanation": "Parasitic losses from rings, bearings, pumps, and accessories consume gross indicated work \u2014 why idle fuel consumption exists even at zero output power."
     }
   ],
   "components": [
@@ -41,7 +41,7 @@
       "function": "Contains cylinders, coolant passages, sometimes crankcase integration",
       "position": "Core structure",
       "madeFrom": "Cast iron or aluminium alloy",
-      "criticalNote": "Deck flatness affects head gasket seal — warpage from overheating ruins engines"
+      "criticalNote": "Deck flatness affects head gasket seal \u2014 warpage from overheating ruins engines"
     },
     {
       "id": "crankshaft",
@@ -49,7 +49,7 @@
       "function": "Converts piston thrust to torque",
       "position": "Lower end with main bearings",
       "madeFrom": "Forged steel, nitrided journals in performance engines",
-      "criticalNote": "Oil hole radii must be filleted — stress concentrations snap cranks"
+      "criticalNote": "Oil hole radii must be filleted \u2014 stress concentrations snap cranks"
     },
     {
       "id": "piston-rings",
@@ -65,7 +65,7 @@
       "function": "Admits charge and exhausts burnt gas with timed lift profiles",
       "position": "Top of cylinders",
       "madeFrom": "Aluminium or cast iron head, steel valves, springs",
-      "criticalNote": "Interference engines bend valves if timing belt fails — catastrophic"
+      "criticalNote": "Interference engines bend valves if timing belt fails \u2014 catastrophic"
     },
     {
       "id": "ignition",
@@ -81,7 +81,7 @@
       "function": "Delivers stoichiometric or commanded mixture",
       "position": "Intake path or cylinder direct",
       "madeFrom": "Injectors, pump, regulator, filter",
-      "criticalNote": "Dirt in fuel destroys injector seats — filtration is reliability"
+      "criticalNote": "Dirt in fuel destroys injector seats \u2014 filtration is reliability"
     },
     {
       "id": "lubrication",
@@ -89,7 +89,7 @@
       "function": "Maintains hydrodynamic films on bearings",
       "position": "Sump and galleries",
       "madeFrom": "Gear or gerotor pump, pleated filter media",
-      "criticalNote": "Oil starvation on long corners with low sump — baffling matters in vehicles"
+      "criticalNote": "Oil starvation on long corners with low sump \u2014 baffling matters in vehicles"
     },
     {
       "id": "cooling",
@@ -97,7 +97,7 @@
       "function": "Rejects waste heat to environment",
       "position": "Radiator, pump, thermostat",
       "madeFrom": "Aluminium heat exchanger, rubber hoses",
-      "criticalNote": "Air pockets cause local boiling — steam pockets collapse impellers"
+      "criticalNote": "Air pockets cause local boiling \u2014 steam pockets collapse impellers"
     }
   ],
   "rawMaterials": [
@@ -114,7 +114,7 @@
       "name": "Aluminium",
       "purpose": "Lightweight heads and pistons in many designs",
       "earthLocations": [
-        "Bauxite belts refined by Hall-Héroult where electricity exists"
+        "Bauxite belts refined by Hall-H\u00e9roult where electricity exists"
       ],
       "spaceAlternatives": "Regolith-derived alumina electrolysis",
       "processingRequired": "Casting, solution heat treat, aging"
@@ -125,7 +125,7 @@
       "earthLocations": [
         "Oil fields and refineries globally"
       ],
-      "spaceAlternatives": "Methanol, ethanol, hydrogen carriers — require engine/fuel-system matching",
+      "spaceAlternatives": "Methanol, ethanol, hydrogen carriers \u2014 require engine/fuel-system matching",
       "processingRequired": "Refining, desulphurisation modern"
     }
   ],
@@ -148,7 +148,7 @@
         "crank grinder",
         "balancer"
       ],
-      "warningNote": "Cast iron dust is hazardous — ventilation"
+      "warningNote": "Cast iron dust is hazardous \u2014 ventilation"
     },
     {
       "order": 3,
@@ -159,7 +159,7 @@
         "plastigage",
         "torque wrench"
       ],
-      "warningNote": "Over-torque distorts mains — binds crank"
+      "warningNote": "Over-torque distorts mains \u2014 binds crank"
     },
     {
       "order": 4,
@@ -169,7 +169,7 @@
         "dial indicator",
         "degree wheel"
       ],
-      "warningNote": "Reused head bolts may yield — replace if torque-to-yield design"
+      "warningNote": "Reused head bolts may yield \u2014 replace if torque-to-yield design"
     },
     {
       "order": 5,
@@ -179,15 +179,15 @@
         "gauge set",
         "fire extinguisher"
       ],
-      "warningNote": "Fuel leaks plus hot exhaust ignite — keep extinguisher aimed"
+      "warningNote": "Fuel leaks plus hot exhaust ignite \u2014 keep extinguisher aimed"
     }
   ],
   "history": [
     {
       "year": 1860,
-      "event": "Étienne Lenoir builds a practical gas-driven internal combustion engine, demonstrating serial production concepts.",
+      "event": "\u00c9tienne Lenoir builds a practical gas-driven internal combustion engine, demonstrating serial production concepts.",
       "location": "France",
-      "person": "Étienne Lenoir"
+      "person": "\u00c9tienne Lenoir"
     },
     {
       "year": 1876,
@@ -216,17 +216,21 @@
       "nationality": "German"
     }
   ],
-  "impact": "Internal combustion engines personalised mechanised motion: cars, motorcycles, aircraft, tractors, generators. They also anchored petroleum geopolitics and urban air quality challenges — the technology is morally double-edged.\n\nFor recovery, rebuilding engines is a mid-industrial skill: foundry, machining, fuel chemistry, and metrology together — not a cottage industry alone.",
+  "impact": "Internal combustion engines personalised mechanised motion: cars, motorcycles, aircraft, tractors, generators. They also anchored petroleum geopolitics and urban air quality challenges \u2014 the technology is morally double-edged.\n\nFor recovery, rebuilding engines is a mid-industrial skill: foundry, machining, fuel chemistry, and metrology together \u2014 not a cottage industry alone.",
   "images": [],
   "videos": [],
   "externalLinks": [
     {
       "id": "sae-mobilus",
-      "title": "SAE Mobilus — engineering papers repository (subscription)",
+      "title": "SAE Mobilus \u2014 engineering papers repository (subscription)",
       "url": "https://saemobilus.sae.org/"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -235,14 +239,14 @@
     "sources": [
       {
         "id": "src-epa-mobile",
-        "title": "U.S. EPA — Transportation and air quality program index",
+        "title": "U.S. EPA \u2014 Transportation and air quality program index",
         "url": "https://www.epa.gov/transportation-air-pollution-and-climate-change",
         "type": "institution",
         "note": "Emissions science and regulatory context for ICE vehicles"
       },
       {
         "id": "src-wiki-ice",
-        "title": "Wikipedia — Internal combustion engine",
+        "title": "Wikipedia \u2014 Internal combustion engine",
         "url": "https://en.wikipedia.org/wiki/Internal_combustion_engine",
         "type": "wikipedia",
         "note": "Cycles, fuels, and engineering references"

@@ -189,12 +189,16 @@
   "externalLinks": [
     {
       "id": "wiki-lime-production",
-      "title": "Wikipedia — Lime Production (Calcination of Limestone)",
+      "title": "Wikipedia \u2014 Lime Production (Calcination of Limestone)",
       "url": "https://en.wikipedia.org/wiki/Lime_Production_(Calcination_of_Limestone)"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "review-needed",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -209,13 +213,13 @@
       },
       {
         "id": "wiki-calcium-oxide",
-        "title": "Wikipedia — Calcium oxide",
+        "title": "Wikipedia \u2014 Calcium oxide",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Calcium_oxide"
       },
       {
         "id": "britannica-lime",
-        "title": "Encyclopaedia Britannica — Lime",
+        "title": "Encyclopaedia Britannica \u2014 Lime",
         "type": "institution",
         "url": "https://www.britannica.com/science/lime"
       }

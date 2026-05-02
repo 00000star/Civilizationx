@@ -1,7 +1,7 @@
 {
   "id": "electric-lighting-systems",
   "name": "Electric Lighting Systems",
-  "tagline": "Controlled conversion of electricity into visible radiation — from carbon arcs to solid-state diodes",
+  "tagline": "Controlled conversion of electricity into visible radiation \u2014 from carbon arcs to solid-state diodes",
   "category": "energy",
   "era": "industrial",
   "difficulty": 3,
@@ -11,16 +11,16 @@
     "glass-making"
   ],
   "unlocks": [],
-  "problem": "Gaslight and open flame solved night, but they blackened ceilings, demanded constant tending, and turned crowded cities into tinderboxes. Electric lighting promised something stranger: brightness without a flame in the room, instant on-and-off, and the possibility of scaling light the way factories scale thread — by standard parts and measured voltages.\n\nThe catch is that a lamp is not only a bulb. It is a branch circuit, a breaker, a transformer tap, and a human habit of never thinking about what happens when insulation ages in a wall cavity. Early systems fought efficiency and lifetime: incandescent filaments trade most watts as heat; arc lamps roared; discharge tubes needed something to limit current so they did not run away.\n\nSpectral quality is not vanity. A weaver distinguishing thread colours, a surgeon tracing vessels, and a reader avoiding eyestrain are solving different physics problems with the same wall switch. Metrics moved from candlepower to lumens, then to colour temperature and rendering indices — each step an admission that human eyes are part of the circuit.\n\nFor recovery, lighting is often the first friendly face of electrification: people forgive a wobbly frequency if the room feels safe. It is also where amateur wiring kills — respect the difference between a demonstration and an installation.",
-  "overview": "An incandescent lamp pushes current through a thin refractory filament in vacuum or inert gas until the wire glows. Tungsten won over carbon because it survives higher temperature before evaporating; halogen chemistry catches some evaporated metal and returns it to the filament, stretching life in compact envelopes.\n\nFluorescent and high-intensity discharge lamps drive current through a gas; phosphors convert ultraviolet to white we recognise indoors. Those plasmas want a controlled current, not a fixed voltage — historically an iron-core ballast, today often a small switched-mode supply that runs the tube at high frequency so we stop hearing the old buzz.\n\nLight-emitting diodes are chips that emit narrow bands of colour; phosphor coatings or mixed dies build white. Their brightness tracks current closely while voltage stays awkwardly sharp — drivers therefore regulate current and protect against thermal runaway. Good fixtures treat the LED module as a heat source first and a light source second.\n\nAt building scale, lighting design is secretly distribution engineering: voltage drop, inrush on banks of HID lamps, harmonic currents from cheap dimmers, and surge protection on outdoor strings. Controls — clocks, photocells, occupancy sensors — now join cybersecurity as lights become networked nodes.",
+  "problem": "Gaslight and open flame solved night, but they blackened ceilings, demanded constant tending, and turned crowded cities into tinderboxes. Electric lighting promised something stranger: brightness without a flame in the room, instant on-and-off, and the possibility of scaling light the way factories scale thread \u2014 by standard parts and measured voltages.\n\nThe catch is that a lamp is not only a bulb. It is a branch circuit, a breaker, a transformer tap, and a human habit of never thinking about what happens when insulation ages in a wall cavity. Early systems fought efficiency and lifetime: incandescent filaments trade most watts as heat; arc lamps roared; discharge tubes needed something to limit current so they did not run away.\n\nSpectral quality is not vanity. A weaver distinguishing thread colours, a surgeon tracing vessels, and a reader avoiding eyestrain are solving different physics problems with the same wall switch. Metrics moved from candlepower to lumens, then to colour temperature and rendering indices \u2014 each step an admission that human eyes are part of the circuit.\n\nFor recovery, lighting is often the first friendly face of electrification: people forgive a wobbly frequency if the room feels safe. It is also where amateur wiring kills \u2014 respect the difference between a demonstration and an installation.",
+  "overview": "An incandescent lamp pushes current through a thin refractory filament in vacuum or inert gas until the wire glows. Tungsten won over carbon because it survives higher temperature before evaporating; halogen chemistry catches some evaporated metal and returns it to the filament, stretching life in compact envelopes.\n\nFluorescent and high-intensity discharge lamps drive current through a gas; phosphors convert ultraviolet to white we recognise indoors. Those plasmas want a controlled current, not a fixed voltage \u2014 historically an iron-core ballast, today often a small switched-mode supply that runs the tube at high frequency so we stop hearing the old buzz.\n\nLight-emitting diodes are chips that emit narrow bands of colour; phosphor coatings or mixed dies build white. Their brightness tracks current closely while voltage stays awkwardly sharp \u2014 drivers therefore regulate current and protect against thermal runaway. Good fixtures treat the LED module as a heat source first and a light source second.\n\nAt building scale, lighting design is secretly distribution engineering: voltage drop, inrush on banks of HID lamps, harmonic currents from cheap dimmers, and surge protection on outdoor strings. Controls \u2014 clocks, photocells, occupancy sensors \u2014 now join cybersecurity as lights become networked nodes.",
   "principles": [
     {
       "name": "Wien displacement",
-      "explanation": "Blackbody spectrum peak shifts with temperature — higher filament temperature yields whiter light but accelerates evaporation."
+      "explanation": "Blackbody spectrum peak shifts with temperature \u2014 higher filament temperature yields whiter light but accelerates evaporation."
     },
     {
       "name": "Luminous efficacy",
-      "explanation": "Lumens per watt weights human eye sensitivity — UV and IR watts do not count equally."
+      "explanation": "Lumens per watt weights human eye sensitivity \u2014 UV and IR watts do not count equally."
     },
     {
       "name": "Power factor in ballasts",
@@ -28,7 +28,7 @@
     },
     {
       "name": "Thermal resistance in LEDs",
-      "explanation": "Junction temperature sets lumen depreciation — heatsinking is optical engineering."
+      "explanation": "Junction temperature sets lumen depreciation \u2014 heatsinking is optical engineering."
     }
   ],
   "components": [
@@ -75,7 +75,7 @@
       "earthLocations": [
         "Wolframite mines in China, Portugal, Rwanda"
       ],
-      "spaceAlternatives": "Tungsten remains ideal for incandescent filaments where simple supplies beat complexity; in spacecraft and stations, LED lighting dominates because waste heat must be routed to radiators — keep tungsten as precision instrument filaments and specialty halogen work lights",
+      "spaceAlternatives": "Tungsten remains ideal for incandescent filaments where simple supplies beat complexity; in spacecraft and stations, LED lighting dominates because waste heat must be routed to radiators \u2014 keep tungsten as precision instrument filaments and specialty halogen work lights",
       "processingRequired": "Doping and drawing to controlled cold resistance"
     },
     {
@@ -105,12 +105,12 @@
       "prerequisiteTools": [
         "notebook"
       ],
-      "warningNote": "Over-bright glare wastes power and hides contrast — especially on polished metal"
+      "warningNote": "Over-bright glare wastes power and hides contrast \u2014 especially on polished metal"
     },
     {
       "order": 2,
       "title": "Size wires for current and length, not for hope",
-      "description": "From each circuit’s lamp count and type, estimate steady current and any starting surge. Look up ampacity for your cable type and installation (open air versus insulation in a wall). If a run is long, calculate voltage drop; undervoltage kills some electronic drivers slowly while they still ‘work’.",
+      "description": "From each circuit\u2019s lamp count and type, estimate steady current and any starting surge. Look up ampacity for your cable type and installation (open air versus insulation in a wall). If a run is long, calculate voltage drop; undervoltage kills some electronic drivers slowly while they still \u2018work\u2019.",
       "prerequisiteTools": [
         "ampacity table",
         "calculator",
@@ -131,7 +131,7 @@
     {
       "order": 4,
       "title": "Commission drivers and dimmers together",
-      "description": "If you dim LEDs, verify the dimmer model matches the driver’s method (trailing-edge, 0–10 V, DALI). Listen for buzz; watch a phone camera for rolling-band flicker that eyes miss. Log driver temperatures at full output for an hour — a hot driver in a sealed ceiling is a delayed fire.",
+      "description": "If you dim LEDs, verify the dimmer model matches the driver\u2019s method (trailing-edge, 0\u201310 V, DALI). Listen for buzz; watch a phone camera for rolling-band flicker that eyes miss. Log driver temperatures at full output for an hour \u2014 a hot driver in a sealed ceiling is a delayed fire.",
       "prerequisiteTools": [
         "infrared thermometer",
         "oscilloscope if available"
@@ -140,12 +140,12 @@
     },
     {
       "order": 5,
-      "title": "Keep maintenance records like a ship’s log",
-      "description": "Note relamp dates, cleaning of optics, and any colour shift. For streets and factories, dirt depreciation dominates — a cleaned reflector can double useful light without new watts. Store spare modules where humidity and rodents cannot ruin them.",
+      "title": "Keep maintenance records like a ship\u2019s log",
+      "description": "Note relamp dates, cleaning of optics, and any colour shift. For streets and factories, dirt depreciation dominates \u2014 a cleaned reflector can double useful light without new watts. Store spare modules where humidity and rodents cannot ruin them.",
       "prerequisiteTools": [
         "notebook"
       ],
-      "warningNote": "LED batches fail in clusters — keep modest spares of the same lot if possible"
+      "warningNote": "LED batches fail in clusters \u2014 keep modest spares of the same lot if possible"
     }
   ],
   "history": [
@@ -181,7 +181,7 @@
       "nationality": "American"
     }
   ],
-  "impact": "Electric light extended civil time into night — reshaping labour shifts, crime patterns, and education. It also became a load that justified baseload generators.\n\nSolid-state lighting finally bent the lumen-per-watt curve enough to matter for climate-forced grids.",
+  "impact": "Electric light extended civil time into night \u2014 reshaping labour shifts, crime patterns, and education. It also became a load that justified baseload generators.\n\nSolid-state lighting finally bent the lumen-per-watt curve enough to matter for climate-forced grids.",
   "images": [],
   "videos": [
     {
@@ -194,7 +194,7 @@
   "externalLinks": [
     {
       "id": "doe-lighting",
-      "title": "DOE — solid-state lighting program",
+      "title": "DOE \u2014 solid-state lighting program",
       "url": "https://www.energy.gov/eere/solid-state-lighting"
     },
     {
@@ -204,6 +204,10 @@
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -212,14 +216,14 @@
     "sources": [
       {
         "id": "src-who-air-light",
-        "title": "WHO — Household air pollution and health",
+        "title": "WHO \u2014 Household air pollution and health",
         "url": "https://www.who.int/news-room/fact-sheets/detail/household-air-pollution-and-health",
         "type": "institution",
         "note": "Indoor air quality and combustion products from lighting fuels where relevant"
       },
       {
         "id": "src-wiki-lighting",
-        "title": "Wikipedia — Electric lighting",
+        "title": "Wikipedia \u2014 Electric lighting",
         "url": "https://en.wikipedia.org/wiki/Electric_lighting",
         "type": "wikipedia",
         "note": "Lamp technologies and history"

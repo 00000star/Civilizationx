@@ -1,7 +1,7 @@
 {
   "id": "writing-early-systems",
   "name": "Writing (Early Systems)",
-  "tagline": "Visible marks that store language across time — from tokens to cuneiform and hieroglyphs",
+  "tagline": "Visible marks that store language across time \u2014 from tokens to cuneiform and hieroglyphs",
   "category": "communication",
   "era": "ancient",
   "difficulty": 2,
@@ -73,8 +73,8 @@
     "watchtowers",
     "weather-station-instruments"
   ],
-  "problem": "Speech is a river — beautiful, immediate, and gone when the breath stops. Administrating a granary across seasons, collecting tithes, or promising repayment across harvests needs marks that survive the speaker. Early writing answers external memory: visible signs that rehydrate meaning when a trained reader returns with fresh eyes.\n\nThe obstacle shifts from air to stuff: clay that cracks if dried wrong, ink that fades, stone that weathers. It also shifts to labour: mastering thousands of signs was a profession; literacy rates stayed tiny for millennia while still reshaping who could command armies.\n\nWriting encodes power — law codes, propaganda, contracts — and creates new failure modes: forged seals, ambiguous clauses, copied errors that become tradition. Decipherment centuries later needs bilinguals and luck; archive dictionaries, not only heroic texts.\n\nFor recovery, treat writing as infrastructure: standardise signs, train scribes, and protect fired tablets from rain as carefully as you protect grain.",
-  "overview": "Proto-writing begins with tokens and impressions counting discrete goods; full systems map language more directly. Cuneiform presses wedges into wet clay; Egyptian hieroglyphs mix logograms with phonetic complements; alphabets shrink the sign inventory by letting letters stand mostly for sounds.\n\nThe rebus principle — using the sound of a pictured word for an unrelated homophone — bridges pictographs toward syllabaries. Determinatives act like silent classifiers disambiguating homographs.\n\nMaterial shapes script: clay invites wedge strokes; papyrus invites flowing ink; bamboo slips encourage vertical columns. Copyists introduce errors that become manuscript families; commentaries freeze readings.\n\nLiteracy’s spread is uneven, but even small literate cadres let empires administer distance — orders can outlive couriers if sealed and authenticated.",
+  "problem": "Speech is a river \u2014 beautiful, immediate, and gone when the breath stops. Administrating a granary across seasons, collecting tithes, or promising repayment across harvests needs marks that survive the speaker. Early writing answers external memory: visible signs that rehydrate meaning when a trained reader returns with fresh eyes.\n\nThe obstacle shifts from air to stuff: clay that cracks if dried wrong, ink that fades, stone that weathers. It also shifts to labour: mastering thousands of signs was a profession; literacy rates stayed tiny for millennia while still reshaping who could command armies.\n\nWriting encodes power \u2014 law codes, propaganda, contracts \u2014 and creates new failure modes: forged seals, ambiguous clauses, copied errors that become tradition. Decipherment centuries later needs bilinguals and luck; archive dictionaries, not only heroic texts.\n\nFor recovery, treat writing as infrastructure: standardise signs, train scribes, and protect fired tablets from rain as carefully as you protect grain.",
+  "overview": "Proto-writing begins with tokens and impressions counting discrete goods; full systems map language more directly. Cuneiform presses wedges into wet clay; Egyptian hieroglyphs mix logograms with phonetic complements; alphabets shrink the sign inventory by letting letters stand mostly for sounds.\n\nThe rebus principle \u2014 using the sound of a pictured word for an unrelated homophone \u2014 bridges pictographs toward syllabaries. Determinatives act like silent classifiers disambiguating homographs.\n\nMaterial shapes script: clay invites wedge strokes; papyrus invites flowing ink; bamboo slips encourage vertical columns. Copyists introduce errors that become manuscript families; commentaries freeze readings.\n\nLiteracy\u2019s spread is uneven, but even small literate cadres let empires administer distance \u2014 orders can outlive couriers if sealed and authenticated.",
   "principles": [
     {
       "name": "Rebus and phonetisation",
@@ -82,15 +82,15 @@
     },
     {
       "name": "Determinatives",
-      "explanation": "Silent classifiers disambiguate homographic logograms — early error correction."
+      "explanation": "Silent classifiers disambiguate homographic logograms \u2014 early error correction."
     },
     {
       "name": "Material constraints",
-      "explanation": "Clay encourages wedge strokes; papyrus encourages ink flows — script shape is partly substrate physics."
+      "explanation": "Clay encourages wedge strokes; papyrus encourages ink flows \u2014 script shape is partly substrate physics."
     },
     {
       "name": "Orthographic depth",
-      "explanation": "Mapping from graphemes to phonemes can be opaque — reading becomes partially memorised lexicon even in alphabets."
+      "explanation": "Mapping from graphemes to phonemes can be opaque \u2014 reading becomes partially memorised lexicon even in alphabets."
     }
   ],
   "components": [
@@ -149,7 +149,7 @@
         "Lampblack production",
         "acacia gum"
       ],
-      "spaceAlternatives": "Soot-based carbon ink from lampblack; iron-gall ink where tannin and vitriol exist — both need recipes filed with scribes",
+      "spaceAlternatives": "Soot-based carbon ink from lampblack; iron-gall ink where tannin and vitriol exist \u2014 both need recipes filed with scribes",
       "processingRequired": "Mulling into binder"
     },
     {
@@ -167,21 +167,21 @@
     {
       "order": 1,
       "title": "Decide what you must remember across seasons",
-      "description": "List transactions, inventories, laws, or prayers that fail when oral memory bottlenecks. Pick a substrate you can reliably obtain — clay if you have riverbanks, bark if your forest yields it, parchment if herds exist. Match ambition to material cost.",
+      "description": "List transactions, inventories, laws, or prayers that fail when oral memory bottlenecks. Pick a substrate you can reliably obtain \u2014 clay if you have riverbanks, bark if your forest yields it, parchment if herds exist. Match ambition to material cost.",
       "prerequisiteTools": [
         "notebook for planning"
       ],
-      "warningNote": "Over-ambitious sign inventories stall learners — start with numbers and nouns"
+      "warningNote": "Over-ambitious sign inventories stall learners \u2014 start with numbers and nouns"
     },
     {
       "order": 2,
       "title": "Invent or borrow a small stable sign set",
-      "description": "Begin with pictographs for concrete nouns; add rebuses for abstract words by sound. Write each sign’s name spoken aloud next to early tablets so future readers have a Rosetta edge. Keep stroke order simple — complexity is a tax forever.",
+      "description": "Begin with pictographs for concrete nouns; add rebuses for abstract words by sound. Write each sign\u2019s name spoken aloud next to early tablets so future readers have a Rosetta edge. Keep stroke order simple \u2014 complexity is a tax forever.",
       "prerequisiteTools": [
         "stylus",
         "straight edge"
       ],
-      "warningNote": "Homophones multiply fast — introduce determinatives early"
+      "warningNote": "Homophones multiply fast \u2014 introduce determinatives early"
     },
     {
       "order": 3,
@@ -191,12 +191,12 @@
         "master scribe",
         "correction ink"
       ],
-      "warningNote": "Secret scripts invite elite capture — publish learner tablets for community audit"
+      "warningNote": "Secret scripts invite elite capture \u2014 publish learner tablets for community audit"
     },
     {
       "order": 4,
       "title": "Fire or dry clay tablets on a schedule",
-      "description": "If using clay, learn controlled drying to avoid curling; fire tablets you intend to keep centuries. Store unfired drafts separately from archives — water is the enemy twice.",
+      "description": "If using clay, learn controlled drying to avoid curling; fire tablets you intend to keep centuries. Store unfired drafts separately from archives \u2014 water is the enemy twice.",
       "prerequisiteTools": [
         "kiln or pit fire",
         "shelving off ground"
@@ -206,7 +206,7 @@
     {
       "order": 5,
       "title": "Archive dictionaries beside heroic texts",
-      "description": "Maintain synonym lists, pronunciation notes, and measure tables — the boring pages future decipherers need. Duplicate archives geographically if politics allows.",
+      "description": "Maintain synonym lists, pronunciation notes, and measure tables \u2014 the boring pages future decipherers need. Duplicate archives geographically if politics allows.",
       "prerequisiteTools": [
         "duplicate storage"
       ],
@@ -226,7 +226,7 @@
     }
   ],
   "inventors": [],
-  "impact": "Writing turned speech into inventory — law, recipe, and insult alike. It also created scribal power until alphabets and printing widened access.",
+  "impact": "Writing turned speech into inventory \u2014 law, recipe, and insult alike. It also created scribal power until alphabets and printing widened access.",
   "images": [],
   "videos": [
     {
@@ -239,16 +239,20 @@
   "externalLinks": [
     {
       "id": "met-writing",
-      "title": "The Met — origins of writing",
+      "title": "The Met \u2014 origins of writing",
       "url": "https://www.metmuseum.org/toah/hd/writing/hd_writing.htm"
     },
     {
       "id": "britannica-cuneiform",
-      "title": "Britannica — cuneiform",
+      "title": "Britannica \u2014 cuneiform",
       "url": "https://www.britannica.com/topic/cuneiform"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -257,21 +261,21 @@
     "sources": [
       {
         "id": "src-unesco-comm",
-        "title": "UNESCO — Communication and information",
+        "title": "UNESCO \u2014 Communication and information",
         "url": "https://www.unesco.org/en/communication-information",
         "type": "institution",
         "note": "Memory of the World and documentary heritage programmes"
       },
       {
         "id": "src-wiki-writing",
-        "title": "Wikipedia — Writing",
+        "title": "Wikipedia \u2014 Writing",
         "url": "https://en.wikipedia.org/wiki/Writing",
         "type": "wikipedia",
         "note": "Origins, scripts, and archaeology references"
       },
       {
         "id": "src-loc-preservation",
-        "title": "Library of Congress — Preservation Directorate",
+        "title": "Library of Congress \u2014 Preservation Directorate",
         "url": "https://www.loc.gov/preservation/",
         "type": "institution",
         "note": "Manuscript care, inks, and conservation science"

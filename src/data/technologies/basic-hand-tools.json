@@ -92,8 +92,8 @@
     "workbench-design",
     "workshop-building"
   ],
-  "problem": "Finger pressure cannot split a log, mortise a joint, or cut plate steel. Humans need hardened working edges and mass delivery systems — hammers for impulse, chisels for controlled splitting along weak planes, saws for kerf removal through abrasion and chip clearance. Without this triad, carpentry, joinery, and rough metal forming remain painfully slow.\n\nThe design problem is not only sharpness but durability: edges chip, handles split, heat ruins temper. Each tool is a system: head mass, handle compliance, grip geometry, and maintenance ritual (peening handles, filing teeth, jointing saw plates).\n\nThese tools are also safety-critical: glancing blows, tooth kickback, and flying chips define workshop epidemiology. Technique is inseparable from hardware.",
-  "overview": "A hammer stores kinetic energy in a moving head and transfers it through a small contact patch. Hard faces elastically drive nails; soft faces drive chisels without marring steel. Mass and handle length set impact velocity trade space — heavy heads accelerate slowly but deliver momentum.\n\nChisels are wedges with controlled bevel angles: steep bevels for mortising tough wood; shallow bevels for paring across grain. Metal chisels add heat treatment — hard martensitic edge, softer tough back.\n\nSaws are rows of cutting teeth with rake and set: set widens kerf so the plate does not bind; rake and gullet shape control chip formation in rip versus crosscut profiles. Sharpening is jointing (uniform height), shaping (filing angles), and setting (bending alternately).\n\nBronze and iron ages swap materials but not functions: the biomechanics of swing, stance, and sightlines remain. Machine tools later automate these motions, but hand tools remain repair instruments when power fails.",
+  "problem": "Finger pressure cannot split a log, mortise a joint, or cut plate steel. Humans need hardened working edges and mass delivery systems \u2014 hammers for impulse, chisels for controlled splitting along weak planes, saws for kerf removal through abrasion and chip clearance. Without this triad, carpentry, joinery, and rough metal forming remain painfully slow.\n\nThe design problem is not only sharpness but durability: edges chip, handles split, heat ruins temper. Each tool is a system: head mass, handle compliance, grip geometry, and maintenance ritual (peening handles, filing teeth, jointing saw plates).\n\nThese tools are also safety-critical: glancing blows, tooth kickback, and flying chips define workshop epidemiology. Technique is inseparable from hardware.",
+  "overview": "A hammer stores kinetic energy in a moving head and transfers it through a small contact patch. Hard faces elastically drive nails; soft faces drive chisels without marring steel. Mass and handle length set impact velocity trade space \u2014 heavy heads accelerate slowly but deliver momentum.\n\nChisels are wedges with controlled bevel angles: steep bevels for mortising tough wood; shallow bevels for paring across grain. Metal chisels add heat treatment \u2014 hard martensitic edge, softer tough back.\n\nSaws are rows of cutting teeth with rake and set: set widens kerf so the plate does not bind; rake and gullet shape control chip formation in rip versus crosscut profiles. Sharpening is jointing (uniform height), shaping (filing angles), and setting (bending alternately).\n\nBronze and iron ages swap materials but not functions: the biomechanics of swing, stance, and sightlines remain. Machine tools later automate these motions, but hand tools remain repair instruments when power fails.",
   "principles": [
     {
       "name": "Impulse and momentum",
@@ -105,7 +105,7 @@
     },
     {
       "name": "Cutting geometry",
-      "explanation": "Positive rake slices; negative rake scrapes. Tooth geometry must match fibre orientation — rip teeth act like chisels; crosscut teeth shear fibres."
+      "explanation": "Positive rake slices; negative rake scrapes. Tooth geometry must match fibre orientation \u2014 rip teeth act like chisels; crosscut teeth shear fibres."
     },
     {
       "name": "Stress risers",
@@ -119,7 +119,7 @@
       "function": "Delivers impact; may include pein or claw",
       "position": "On handle end",
       "madeFrom": "Wrought iron, steel, stone maul prehistoric",
-      "criticalNote": "Secure wedge pin — loose heads are projectiles"
+      "criticalNote": "Secure wedge pin \u2014 loose heads are projectiles"
     },
     {
       "id": "hammer-handle",
@@ -135,7 +135,7 @@
       "function": "Cuts wood or metal by shearing and wedging",
       "position": "Hand-guided or mallet-driven",
       "madeFrom": "Hardened steel edge welded to softer body in quality tools",
-      "criticalNote": "Do not use sideways pry loads — snaps tang"
+      "criticalNote": "Do not use sideways pry loads \u2014 snaps tang"
     },
     {
       "id": "saw-plate",
@@ -143,7 +143,7 @@
       "function": "Removes kerf material as chips",
       "position": "Tensioned in frame (frame saw) or handheld",
       "madeFrom": "Spring steel",
-      "criticalNote": "Rust increases binding — oil lightly, not sticky"
+      "criticalNote": "Rust increases binding \u2014 oil lightly, not sticky"
     },
     {
       "id": "use-case-boundary",
@@ -172,7 +172,7 @@
         "Hickory, ash, beech"
       ],
       "spaceAlternatives": "Composite handles",
-      "processingRequired": "Air dry to 8–12% moisture before fitting"
+      "processingRequired": "Air dry to 8\u201312% moisture before fitting"
     },
     {
       "name": "Wedge and pin stock",
@@ -181,7 +181,7 @@
         "Wood wedges",
         "steel drive wedges"
       ],
-      "spaceAlternatives": "Epoxy secondary — not primary structural early",
+      "spaceAlternatives": "Epoxy secondary \u2014 not primary structural early",
       "processingRequired": "Orient wedge across grain lock"
     }
   ],
@@ -195,7 +195,7 @@
         "anvil",
         "tongs"
       ],
-      "warningNote": "Scale flies — eye protection mandatory"
+      "warningNote": "Scale flies \u2014 eye protection mandatory"
     },
     {
       "order": 2,
@@ -206,7 +206,7 @@
         "saw",
         "mallet"
       ],
-      "warningNote": "Loose handle after first day of use — re-wedge before next swing"
+      "warningNote": "Loose handle after first day of use \u2014 re-wedge before next swing"
     },
     {
       "order": 3,
@@ -227,7 +227,7 @@
         "joiner gauge",
         "files"
       ],
-      "warningNote": "Dull saws require excess force — primary kickback cause"
+      "warningNote": "Dull saws require excess force \u2014 primary kickback cause"
     },
     {
       "order": 5,
@@ -236,7 +236,7 @@
       "prerequisiteTools": [
         "maintenance stones"
       ],
-      "warningNote": "Never use a claw hammer on hardened steel tools — face chips become shrapnel"
+      "warningNote": "Never use a claw hammer on hardened steel tools \u2014 face chips become shrapnel"
     }
   ],
   "history": [
@@ -257,17 +257,21 @@
     }
   ],
   "inventors": [],
-  "impact": "Hand tools are the debugger of civilisation: when power fails, roads crack, or factories stop, chisels and saws still modify reality. They are also pedagogical — teaching grain, hardness, and human factors before anyone touches a lathe.",
+  "impact": "Hand tools are the debugger of civilisation: when power fails, roads crack, or factories stop, chisels and saws still modify reality. They are also pedagogical \u2014 teaching grain, hardness, and human factors before anyone touches a lathe.",
   "images": [],
   "videos": [],
   "externalLinks": [
     {
       "id": "osha-hand-tools",
-      "title": "OSHA — hand tool safety topics (modern regulatory framing)",
+      "title": "OSHA \u2014 hand tool safety topics (modern regulatory framing)",
       "url": "https://www.osha.gov/hand-tools"
     }
   ],
   "lastUpdated": "2026-04-10",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -276,21 +280,21 @@
     "sources": [
       {
         "id": "src-osha-tools",
-        "title": "OSHA — Standards",
+        "title": "OSHA \u2014 Standards",
         "url": "https://www.osha.gov/laws-regs/standards",
         "type": "institution",
         "note": "Guarding, PPE, and hand-tool injury prevention"
       },
       {
         "id": "src-wiki-hand-tool",
-        "title": "Wikipedia — Hand tool",
+        "title": "Wikipedia \u2014 Hand tool",
         "url": "https://en.wikipedia.org/wiki/Hand_tool",
         "type": "wikipedia",
         "note": "Categories and safe use overview"
       },
       {
         "id": "src-cdc",
-        "title": "CDC — Agency home",
+        "title": "CDC \u2014 Agency home",
         "url": "https://www.cdc.gov/",
         "type": "institution",
         "note": "First aid and wound infection prevention when cuts occur in workshop settings"

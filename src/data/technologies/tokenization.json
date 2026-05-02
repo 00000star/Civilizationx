@@ -186,12 +186,16 @@
   "externalLinks": [
     {
       "id": "wiki-tokenization",
-      "title": "Wikipedia — Tokenization",
+      "title": "Wikipedia \u2014 Tokenization",
       "url": "https://en.wikipedia.org/wiki/Tokenization"
     }
   ],
   "lastUpdated": "2026-04-22",
   "maturity": "draft",
+  "spaceReadiness": {
+    "fullAlternatives": true,
+    "earthOnly": false
+  },
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
@@ -200,19 +204,19 @@
     "sources": [
       {
         "id": "wiki-bpe",
-        "title": "Wikipedia — Byte pair encoding",
+        "title": "Wikipedia \u2014 Byte pair encoding",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Byte_pair_encoding"
       },
       {
         "id": "sennrich-bpe",
-        "title": "Sennrich et al. (2016) — Neural Machine Translation of Rare Words with Subword Units",
+        "title": "Sennrich et al. (2016) \u2014 Neural Machine Translation of Rare Words with Subword Units",
         "type": "paper",
         "url": "https://arxiv.org/abs/1508.07909"
       },
       {
         "id": "kudo-sentencepiece",
-        "title": "Kudo (2018) — SentencePiece",
+        "title": "Kudo (2018) \u2014 SentencePiece",
         "type": "paper",
         "url": "https://arxiv.org/abs/1808.06226"
       }
