@@ -10,11 +10,29 @@
     "writing-early-systems"
   ],
   "unlocks": [
+    "compiler-construction",
+    "computer-networking",
+    "cryptographic-hashing",
+    "data-compression",
     "dataset-curation",
-    "tokenization"
+    "distributed-consensus",
+    "embedded-systems",
+    "error-correcting-codes",
+    "file-systems",
+    "human-computer-interaction",
+    "operating-systems",
+    "packet-switching",
+    "public-key-cryptography",
+    "real-time-control",
+    "relational-databases",
+    "search-indexing",
+    "sensor-data-logging",
+    "software-testing",
+    "tokenization",
+    "version-control"
   ],
-  "problem": "Machine code is precise but costly to write and review. Complex systems built in raw opcodes become unmaintainable and error-prone.\n\nProgramming languages solve this by providing structured abstractions: variables, functions, types, and modules. The real problem they solve is scalable coordination across many humans and years.",
-  "overview": "A language defines syntax and semantics. Toolchains (assemblers, compilers, interpreters) translate source into executable behavior. Libraries and standards stabilize the ecosystem.\n\nFor The Codex, languages are a leverage node: they make software reproducible and auditable, but only if versioning, testing, and documentation are disciplined.",
+  "problem": "Machine code is precise but costly to write and review. Complex systems built in raw opcodes become unmaintainable and error-prone.\n\nProgramming languages solve this by providing structured abstractions: variables, functions, types, and modules. The real problem they solve is scalable coordination across many humans and years.\n\nThe remaining problem for Programming Languages is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats programming languages as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "A language defines syntax and semantics. Toolchains (assemblers, compilers, interpreters) translate source into executable behavior. Libraries and standards stabilize the ecosystem.\n\nFor The Codex, languages are a leverage node: they make software reproducible and auditable, but only if versioning, testing, and documentation are disciplined.\n\nIn collapse recovery, programming languages must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Abstraction",
@@ -57,6 +75,14 @@
       "function": "Prevents regressions",
       "position": "Process",
       "madeFrom": "Test suites and CI"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Programming Languages is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [
@@ -124,6 +150,28 @@
         "test runner"
       ],
       "warningNote": "Without tests, you cannot safely change anything later."
+    },
+    {
+      "order": 4,
+      "title": "Define the local purpose and stop conditions",
+      "description": "Write down why Programming Languages is needed, who is responsible, what success looks like, and which conditions require stopping or escalation.",
+      "prerequisiteTools": [
+        "notebook",
+        "local survey",
+        "risk checklist"
+      ],
+      "warningNote": "Do not start a life-critical or infrastructure-critical use without clear stop conditions."
+    },
+    {
+      "order": 5,
+      "title": "Inspect inputs before use",
+      "description": "Check materials, tools, water, power, workspace, records, and operator readiness. Mark substitutions and unknowns before work begins.",
+      "prerequisiteTools": [
+        "labels",
+        "inspection log",
+        "basic measuring tools"
+      ],
+      "warningNote": "Substitutions can introduce contamination, fire, structural, electrical, medical, or chemical hazards."
     }
   ],
   "history": [
@@ -155,7 +203,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "draft",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

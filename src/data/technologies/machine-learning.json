@@ -17,8 +17,8 @@
     "tokenization",
     "transformer-models"
   ],
-  "problem": "Hand-written rules break when environments are messy, high-dimensional, or partially observed. Many problems cannot be solved by enumerating if-then logic.\n\nMachine learning reframes the problem: choose a model family and fit parameters from data so the system generalizes to new cases. The hard part is not training; it is avoiding false confidence, bias, and overfitting.",
-  "overview": "A learning pipeline selects data, defines an objective (loss), and uses optimization to fit parameters. Performance is judged on held-out data and against baseline methods.\n\nReal deployments require monitoring and iteration: data drifts, labels are noisy, and correlations fail under regime change. The Codex treats this as an engineering discipline, not a one-time training run.",
+  "problem": "Hand-written rules break when environments are messy, high-dimensional, or partially observed. Many problems cannot be solved by enumerating if-then logic.\n\nMachine learning reframes the problem: choose a model family and fit parameters from data so the system generalizes to new cases. The hard part is not training; it is avoiding false confidence, bias, and overfitting.\n\nThe remaining problem for Machine Learning is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats machine learning as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "A learning pipeline selects data, defines an objective (loss), and uses optimization to fit parameters. Performance is judged on held-out data and against baseline methods.\n\nReal deployments require monitoring and iteration: data drifts, labels are noisy, and correlations fail under regime change. The Codex treats this as an engineering discipline, not a one-time training run.\n\nIn collapse recovery, machine learning must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Generalization",
@@ -222,7 +222,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "draft",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

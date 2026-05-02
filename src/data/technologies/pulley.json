@@ -64,6 +64,14 @@
       "position": "On block body",
       "madeFrom": "Integral ear or thimble-protected eye",
       "criticalNote": "Sharp bends at termination cut strength — use thimbles"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what The Pulley is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [

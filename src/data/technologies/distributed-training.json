@@ -11,8 +11,8 @@
     "internet-protocols-and-web"
   ],
   "unlocks": [],
-  "problem": "Single machines have limited memory and compute. Large models and datasets require parallelism to finish training in reasonable time.\n\nDistributed training solves this by splitting computation and data across devices, but introduces new failure modes: synchronization bugs, silent corruption, and infrastructure fragility.",
-  "overview": "Common strategies include data parallelism (replicate model, split data) and model parallelism (split model across devices). Communication bandwidth and latency become bottlenecks.\n\nA practical distributed system needs checkpointing, monitoring, and deterministic configuration management. The Codex treats this as both a software and infrastructure technology.",
+  "problem": "Single machines have limited memory and compute. Large models and datasets require parallelism to finish training in reasonable time.\n\nDistributed training solves this by splitting computation and data across devices, but introduces new failure modes: synchronization bugs, silent corruption, and infrastructure fragility.\n\nThe remaining problem for Distributed Training is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats distributed training as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "Common strategies include data parallelism (replicate model, split data) and model parallelism (split model across devices). Communication bandwidth and latency become bottlenecks.\n\nA practical distributed system needs checkpointing, monitoring, and deterministic configuration management. The Codex treats this as both a software and infrastructure technology.\n\nIn collapse recovery, distributed training must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Parallelism strategies",
@@ -55,6 +55,14 @@
       "function": "Saves state and enables recovery",
       "position": "Storage",
       "madeFrom": "Filesystems and metadata"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Distributed Training is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [
@@ -131,6 +139,17 @@
         "config management"
       ],
       "warningNote": "Untracked configs make results non-reproducible."
+    },
+    {
+      "order": 5,
+      "title": "Define the local purpose and stop conditions",
+      "description": "Write down why Distributed Training is needed, who is responsible, what success looks like, and which conditions require stopping or escalation.",
+      "prerequisiteTools": [
+        "notebook",
+        "local survey",
+        "risk checklist"
+      ],
+      "warningNote": "Do not start a life-critical or infrastructure-critical use without clear stop conditions."
     }
   ],
   "history": [
@@ -162,7 +181,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "draft",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

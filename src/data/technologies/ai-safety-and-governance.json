@@ -11,8 +11,8 @@
     "machine-learning"
   ],
   "unlocks": [],
-  "problem": "Powerful models can cause harm through mistakes, bias, misuse, or overconfidence. Treating safety as an afterthought creates brittle systems and public backlash.\n\nGovernance solves the coordination problem: define risk thresholds, audit trails, and deployment constraints so AI remains a tool rather than a hazard multiplier.",
-  "overview": "Safety includes technical work (evaluation, robustness, calibration, security) and organizational work (policy, reviews, incident response). Governance means decisions are documented and reversible.\n\nFor The Codex, this node matters because 'AI from scratch' is not only math and compute. It is also deciding what you will not deploy, and how you will detect failure early.",
+  "problem": "Powerful models can cause harm through mistakes, bias, misuse, or overconfidence. Treating safety as an afterthought creates brittle systems and public backlash.\n\nGovernance solves the coordination problem: define risk thresholds, audit trails, and deployment constraints so AI remains a tool rather than a hazard multiplier.\n\nThe remaining problem for AI Safety and Governance is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats ai safety and governance as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "Safety includes technical work (evaluation, robustness, calibration, security) and organizational work (policy, reviews, incident response). Governance means decisions are documented and reversible.\n\nFor The Codex, this node matters because 'AI from scratch' is not only math and compute. It is also deciding what you will not deploy, and how you will detect failure early.\n\nIn collapse recovery, ai safety and governance must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Risk management",
@@ -48,6 +48,22 @@
       "function": "Detects drift and incidents",
       "position": "Operations",
       "madeFrom": "Telemetry and alerts"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what AI Safety and Governance is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
+    },
+    {
+      "id": "input-control",
+      "name": "Input control point",
+      "function": "Checks materials, tools, information, and environmental conditions before work starts",
+      "position": "At receiving, storage, or setup area",
+      "madeFrom": "Labels, inspection notes, gauges, samples, and quarantine bins",
+      "criticalNote": "Unknown inputs should be isolated until checked."
     }
   ],
   "rawMaterials": [
@@ -133,6 +149,17 @@
         "playbooks"
       ],
       "warningNote": "First incident is not the time to invent a process."
+    },
+    {
+      "order": 5,
+      "title": "Define the local purpose and stop conditions",
+      "description": "Write down why AI Safety and Governance is needed, who is responsible, what success looks like, and which conditions require stopping or escalation.",
+      "prerequisiteTools": [
+        "notebook",
+        "local survey",
+        "risk checklist"
+      ],
+      "warningNote": "Do not start a life-critical or infrastructure-critical use without clear stop conditions."
     }
   ],
   "history": [
@@ -176,7 +203,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "draft",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

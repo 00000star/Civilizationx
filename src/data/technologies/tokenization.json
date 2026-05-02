@@ -10,8 +10,8 @@
     "machine-learning"
   ],
   "unlocks": [],
-  "problem": "Text is not naturally a fixed-size numeric input. Models need a stable representation that is efficient, reversible enough for decoding, and compatible with training.\n\nTokenization solves this by mapping text to token IDs. Poor tokenization inflates sequence length, harms multilingual performance, and creates brittle behavior around punctuation and whitespace.",
-  "overview": "Modern tokenizers often use subword methods (BPE/Unigram) to balance vocabulary size against sequence length. The tokenizer becomes part of the model contract: changing it changes what the model can express and how it generalizes.\n\nFor bootstrap, tokenization is attractive because it is reproducible without exotic hardware; the limiting factors are correct implementation and careful evaluation across languages and domains.",
+  "problem": "Text is not naturally a fixed-size numeric input. Models need a stable representation that is efficient, reversible enough for decoding, and compatible with training.\n\nTokenization solves this by mapping text to token IDs. Poor tokenization inflates sequence length, harms multilingual performance, and creates brittle behavior around punctuation and whitespace.\n\nThe remaining problem for Tokenization is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats tokenization as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "Modern tokenizers often use subword methods (BPE/Unigram) to balance vocabulary size against sequence length. The tokenizer becomes part of the model contract: changing it changes what the model can express and how it generalizes.\n\nFor bootstrap, tokenization is attractive because it is reproducible without exotic hardware; the limiting factors are correct implementation and careful evaluation across languages and domains.\n\nIn collapse recovery, tokenization must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Compression vs expressivity",
@@ -54,6 +54,14 @@
       "function": "Reconstructs text from IDs",
       "position": "Output",
       "madeFrom": "Inverse mapping"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Tokenization is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [
@@ -121,6 +129,28 @@
         "test suite"
       ],
       "warningNote": "Tokenizer bugs become permanent model behavior."
+    },
+    {
+      "order": 4,
+      "title": "Define the local purpose and stop conditions",
+      "description": "Write down why Tokenization is needed, who is responsible, what success looks like, and which conditions require stopping or escalation.",
+      "prerequisiteTools": [
+        "notebook",
+        "local survey",
+        "risk checklist"
+      ],
+      "warningNote": "Do not start a life-critical or infrastructure-critical use without clear stop conditions."
+    },
+    {
+      "order": 5,
+      "title": "Inspect inputs before use",
+      "description": "Check materials, tools, water, power, workspace, records, and operator readiness. Mark substitutions and unknowns before work begins.",
+      "prerequisiteTools": [
+        "labels",
+        "inspection log",
+        "basic measuring tools"
+      ],
+      "warningNote": "Substitutions can introduce contamination, fire, structural, electrical, medical, or chemical hazards."
     }
   ],
   "history": [
@@ -161,7 +191,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "draft",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

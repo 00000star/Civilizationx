@@ -11,10 +11,29 @@
     "charcoal"
   ],
   "unlocks": [
-    "concrete-portland-cement"
+    "arch-construction",
+    "concrete-portland-cement",
+    "door-and-hinge-making",
+    "drainage-ditches",
+    "earthquake-bracing",
+    "fire-resistant-layout",
+    "foundation-footings",
+    "insulation-materials",
+    "lime-plastering",
+    "post-and-beam-construction",
+    "retaining-walls",
+    "roof-trusses",
+    "scaffolding",
+    "stone-masonry",
+    "thatch-roofing",
+    "tile-roofing",
+    "timber-framing",
+    "vault-construction",
+    "window-glazing",
+    "workshop-building"
   ],
-  "problem": "Stone and mud structures fail in rain and time: joints wash out, surfaces erode, and weak binders crack. You can stack rocks, but without a binder you cannot reliably build thin walls, arches, or durable plastered interiors.\n\nLime provides a scalable binder and finish. The problem it solves is a repeatable chemistry that turns loose aggregates into a coherent mass and protects surfaces from water and abrasion.",
-  "overview": "Lime is produced by heating limestone (calcium carbonate) to drive off carbon dioxide, leaving quicklime (calcium oxide). Adding water produces slaked lime (calcium hydroxide). Mixed with sand, slaked lime becomes lime mortar or plaster.\n\nLime mortars cure primarily by carbonation: calcium hydroxide reacts with CO2 from air to reform calcium carbonate. This makes curing slow but durable when protected from rapid drying and freezing.\n\nFor recovery, lime is a bridge binder before industrial Portland cement. It also teaches kiln control, safety around caustics, and moisture management in construction.",
+  "problem": "Stone and mud structures fail in rain and time: joints wash out, surfaces erode, and weak binders crack. You can stack rocks, but without a binder you cannot reliably build thin walls, arches, or durable plastered interiors.\n\nLime provides a scalable binder and finish. The problem it solves is a repeatable chemistry that turns loose aggregates into a coherent mass and protects surfaces from water and abrasion.\n\nThe remaining problem for Lime Production (Calcination of Limestone) is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats lime production (calcination of limestone) as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "Lime is produced by heating limestone (calcium carbonate) to drive off carbon dioxide, leaving quicklime (calcium oxide). Adding water produces slaked lime (calcium hydroxide). Mixed with sand, slaked lime becomes lime mortar or plaster.\n\nLime mortars cure primarily by carbonation: calcium hydroxide reacts with CO2 from air to reform calcium carbonate. This makes curing slow but durable when protected from rapid drying and freezing.\n\nFor recovery, lime is a bridge binder before industrial Portland cement. It also teaches kiln control, safety around caustics, and moisture management in construction.\n\nIn collapse recovery, lime production (calcination of limestone) must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Calcination",
@@ -57,6 +76,14 @@
       "function": "Controlled hydration of quicklime",
       "position": "Near kiln",
       "madeFrom": "Stone/brick-lined pit, water"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Lime Production (Calcination of Limestone) is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [
@@ -167,7 +194,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "review-needed",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

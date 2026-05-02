@@ -12,8 +12,8 @@
     "data-storage-systems",
     "gpu-accelerated-computing"
   ],
-  "problem": "General-purpose computing was once room-sized and rare. Civilization needs computation everywhere: control systems, communications, instrumentation, and eventually personal devices.\n\nMicroprocessors compress a CPU into a single chip, reducing cost and power while enabling mass deployment of programmable systems.",
-  "overview": "A microprocessor integrates arithmetic logic, registers, control, and interfaces. It executes instructions from memory and interacts with peripherals via buses.\n\nThe key to bootstrap is modularity: even if you cannot manufacture microprocessors locally, you can build robust systems around imported chips if you understand their constraints, power needs, and failure modes.",
+  "problem": "General-purpose computing was once room-sized and rare. Civilization needs computation everywhere: control systems, communications, instrumentation, and eventually personal devices.\n\nMicroprocessors compress a CPU into a single chip, reducing cost and power while enabling mass deployment of programmable systems.\n\nThe remaining problem for Microprocessor is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats microprocessor as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "A microprocessor integrates arithmetic logic, registers, control, and interfaces. It executes instructions from memory and interacts with peripherals via buses.\n\nThe key to bootstrap is modularity: even if you cannot manufacture microprocessors locally, you can build robust systems around imported chips if you understand their constraints, power needs, and failure modes.\n\nIn collapse recovery, microprocessor must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Instruction execution",
@@ -49,6 +49,22 @@
       "function": "Provides stable voltages",
       "position": "Board level",
       "madeFrom": "Regulators, capacitors"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Microprocessor is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
+    },
+    {
+      "id": "input-control",
+      "name": "Input control point",
+      "function": "Checks materials, tools, information, and environmental conditions before work starts",
+      "position": "At receiving, storage, or setup area",
+      "madeFrom": "Labels, inspection notes, gauges, samples, and quarantine bins",
+      "criticalNote": "Unknown inputs should be isolated until checked."
     }
   ],
   "rawMaterials": [
@@ -126,6 +142,17 @@
         "test harness"
       ],
       "warningNote": "Without tests, repairs become folklore."
+    },
+    {
+      "order": 5,
+      "title": "Define the local purpose and stop conditions",
+      "description": "Write down why Microprocessor is needed, who is responsible, what success looks like, and which conditions require stopping or escalation.",
+      "prerequisiteTools": [
+        "notebook",
+        "local survey",
+        "risk checklist"
+      ],
+      "warningNote": "Do not start a life-critical or infrastructure-critical use without clear stop conditions."
     }
   ],
   "history": [
@@ -166,7 +193,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "draft",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

@@ -14,8 +14,8 @@
     "distributed-training",
     "transformer-models"
   ],
-  "problem": "Some workloads are dominated by linear algebra and parallel operations. CPUs excel at control flow, but they are inefficient for massive parallel numeric throughput.\n\nGPUs solve this by providing many simple cores and high memory bandwidth, enabling feasible training of large models and fast simulation.",
-  "overview": "A GPU executes many threads in parallel, typically in lockstep groups. Performance depends on memory access patterns, batching, and avoiding divergence. Modern ML relies on GPU kernels for matrix multiplies and attention.\n\nFor The Codex, GPUs are an infrastructure node: they require power, cooling, and software stacks, and they shift 'AI from scratch' from theory to practice when combined with datasets and training pipelines.",
+  "problem": "Some workloads are dominated by linear algebra and parallel operations. CPUs excel at control flow, but they are inefficient for massive parallel numeric throughput.\n\nGPUs solve this by providing many simple cores and high memory bandwidth, enabling feasible training of large models and fast simulation.\n\nThe remaining problem for GPU-Accelerated Computing is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats gpu-accelerated computing as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "A GPU executes many threads in parallel, typically in lockstep groups. Performance depends on memory access patterns, batching, and avoiding divergence. Modern ML relies on GPU kernels for matrix multiplies and attention.\n\nFor The Codex, GPUs are an infrastructure node: they require power, cooling, and software stacks, and they shift 'AI from scratch' from theory to practice when combined with datasets and training pipelines.\n\nIn collapse recovery, gpu-accelerated computing must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Parallel throughput",
@@ -58,6 +58,14 @@
       "function": "Schedules and executes kernels",
       "position": "Software layer",
       "madeFrom": "Drivers, libraries"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what GPU-Accelerated Computing is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [
@@ -134,6 +142,17 @@
         "monitoring"
       ],
       "warningNote": "Silent errors can corrupt models."
+    },
+    {
+      "order": 5,
+      "title": "Define the local purpose and stop conditions",
+      "description": "Write down why GPU-Accelerated Computing is needed, who is responsible, what success looks like, and which conditions require stopping or escalation.",
+      "prerequisiteTools": [
+        "notebook",
+        "local survey",
+        "risk checklist"
+      ],
+      "warningNote": "Do not start a life-critical or infrastructure-critical use without clear stop conditions."
     }
   ],
   "history": [
@@ -165,7 +184,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "draft",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

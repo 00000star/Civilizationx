@@ -170,21 +170,23 @@ export interface Technology {
   verification: Verification;
 }
 
-export type TechnologySummary = Pick<
-  Technology,
-  | "id"
-  | "name"
-  | "tagline"
-  | "category"
-  | "era"
-  | "difficulty"
-  | "prerequisites"
-  | "unlocks"
-  | "rawMaterials"
-  | "verification"
-  | "maturity"
-  | "lastUpdated"
->;
+export interface TechnologySummary {
+  id: string;
+  name: string;
+  tagline: string;
+  category: TechCategory;
+  era: TechEra;
+  difficulty: Difficulty;
+  prerequisites: string[];
+  unlocks: string[];
+  verification: Pick<Verification, "status">;
+  spaceReadiness: {
+    fullAlternatives: boolean;
+    earthOnly: boolean;
+  };
+  maturity: EntryMaturity;
+  lastUpdated: string;
+}
 
 export interface IndexNode {
   id: string;

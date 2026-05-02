@@ -62,6 +62,14 @@
       "position": "Along line or net headrope/footrope",
       "madeFrom": "Cork, wood, fired clay, stone, lead later",
       "warningNote": "Lead is toxic — avoid handling residues near food; modern regulations restrict lead tackle in many regions"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Fishing (Net and Line) is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [

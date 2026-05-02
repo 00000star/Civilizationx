@@ -13,8 +13,8 @@
     "gpu-accelerated-computing",
     "microprocessor"
   ],
-  "problem": "As circuits grow, wiring discrete components becomes a reliability and scale problem: solder joints fail, parasitics dominate, and assembly time explodes.\n\nIntegrated circuits solve this by fabricating many devices together on one substrate, shrinking size, improving reliability, and enabling complex systems.",
-  "overview": "ICs use photolithography and thin-film processes to pattern transistors, interconnects, and passivation on silicon. Design and manufacturing are tightly coupled: yield and defect control matter as much as schematic logic.\n\nFor The Codex, ICs represent a major threshold: the required cleanliness, materials purity, and equipment are far beyond primitive industry, so early rebuild paths rely on importing ICs and building robust systems around them.",
+  "problem": "As circuits grow, wiring discrete components becomes a reliability and scale problem: solder joints fail, parasitics dominate, and assembly time explodes.\n\nIntegrated circuits solve this by fabricating many devices together on one substrate, shrinking size, improving reliability, and enabling complex systems.\n\nThe remaining problem for Integrated Circuit (IC) is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats integrated circuit (ic) as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "ICs use photolithography and thin-film processes to pattern transistors, interconnects, and passivation on silicon. Design and manufacturing are tightly coupled: yield and defect control matter as much as schematic logic.\n\nFor The Codex, ICs represent a major threshold: the required cleanliness, materials purity, and equipment are far beyond primitive industry, so early rebuild paths rely on importing ICs and building robust systems around them.\n\nIn collapse recovery, integrated circuit (ic) must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Photolithography",
@@ -50,6 +50,22 @@
       "function": "Protects die and provides pins",
       "position": "Outside die",
       "madeFrom": "Epoxy/ceramic, lead frame"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Integrated Circuit (IC) is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
+    },
+    {
+      "id": "input-control",
+      "name": "Input control point",
+      "function": "Checks materials, tools, information, and environmental conditions before work starts",
+      "position": "At receiving, storage, or setup area",
+      "madeFrom": "Labels, inspection notes, gauges, samples, and quarantine bins",
+      "criticalNote": "Unknown inputs should be isolated until checked."
     }
   ],
   "rawMaterials": [
@@ -70,6 +86,15 @@
       ],
       "spaceAlternatives": "Closed-loop chemical management is mandatory off-world; waste handling is safety-critical.",
       "processingRequired": "Contamination control, filtration, and neutralization."
+    },
+    {
+      "name": "Reference records and operating notes",
+      "purpose": "Preserves the local method, limits, measurements, and revisions for Integrated Circuit (IC)",
+      "earthLocations": [
+        "Libraries, workshops, clinics, schools, field notebooks, maintenance logs, and printed manuals"
+      ],
+      "spaceAlternatives": "Keep redundant digital and printed copies with checksums, revision history, and offline access inside the habitat.",
+      "processingRequired": "Label version, author, date, assumptions, measurement units, and known failure cases."
     }
   ],
   "buildSteps": [
@@ -99,6 +124,28 @@
         "test equipment"
       ],
       "warningNote": "ESD and thermal overstress can destroy devices."
+    },
+    {
+      "order": 4,
+      "title": "Define the local purpose and stop conditions",
+      "description": "Write down why Integrated Circuit (IC) is needed, who is responsible, what success looks like, and which conditions require stopping or escalation.",
+      "prerequisiteTools": [
+        "notebook",
+        "local survey",
+        "risk checklist"
+      ],
+      "warningNote": "Do not start a life-critical or infrastructure-critical use without clear stop conditions."
+    },
+    {
+      "order": 5,
+      "title": "Inspect inputs before use",
+      "description": "Check materials, tools, water, power, workspace, records, and operator readiness. Mark substitutions and unknowns before work begins.",
+      "prerequisiteTools": [
+        "labels",
+        "inspection log",
+        "basic measuring tools"
+      ],
+      "warningNote": "Substitutions can introduce contamination, fire, structural, electrical, medical, or chemical hazards."
     }
   ],
   "history": [
@@ -139,7 +186,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "draft",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

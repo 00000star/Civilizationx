@@ -10,7 +10,27 @@
     "rope-and-cordage",
     "cooking"
   ],
-  "unlocks": [],
+  "unlocks": [
+    "cheese-making",
+    "communal-kitchen-workflow",
+    "community-granary-management",
+    "dairy-handling",
+    "fish-smoking",
+    "flatbread-baking",
+    "fruit-drying",
+    "grain-milling",
+    "infant-food-preparation",
+    "legume-cooking",
+    "meat-drying",
+    "nutritional-deficiency-prevention",
+    "oilseed-pressing",
+    "pickling-vegetables",
+    "rodent-proof-food-storage",
+    "root-crop-processing",
+    "salt-curing",
+    "sprouting-grains",
+    "yogurt-culturing"
+  ],
   "problem": "Fresh food spoils on a clock measured in hours for meat, days for many vegetables, and weeks at best for dry grain unless protected from moisture and pests. A civilisation cannot store labour — every calorie someone hunts, digs, or harvests must either be eaten soon, preserved, or lost. Loss is not merely hunger tomorrow; it is the inability to fund specialists who do anything other than finding the next meal.\n\nPreservation is also a public-health problem. Clostridium botulinum and other anaerobes love sealed jars of low-acid food; salt concentration must be high enough in brines; pH must be low enough in ferments; smoke deposits must actually carry antimicrobial compounds, not merely smell nice. Ignorance does not produce mild food — it produces corpses.\n\nGeography changes what works: humid tropics fight drying; cold dry winters favour freeze-drying on racks; coasts offer salt; inland peoples lean on smoke, fermentation, and tight grain discipline. Any guide that pretends one recipe fits all climates is dangerous.\n\nFinally, preservation interacts with justice: who controls the granary controls survival. Building transparent rules for weighing, sealing, and distributing stored food is political technology wrapped around chemistry.",
   "overview": "Heat preservation removes water or kills surface microbes. Sun drying and wind drying work when relative humidity cooperates; thin slices and good airflow beat thick slabs left in shade. Smoking combines heat with deposited phenols and other compounds that inhibit bacterial growth on meat surfaces — the craft is draft, temperature, and time, not colour alone.\n\nSalt and sugar osmotically bind water away from microbes; heavy brines preserve fish and meat for months if kept cool enough that fat does not go rancid. Fat sealing — confit — uses anaerobic layers of rendered fat over cooked meat as a barrier when cellar temperatures stay low.\n\nFermentation partners with desirable microbes: lactobacilli acidify vegetables, dropping pH below the comfort zone of pathogens while producing vitamins and digestibility gains. The art is cleanliness in the first days, salt level, and exclusion of oxygen where moulds would win.\n\nCold storage without electricity uses earth coupling: root cellars, ice houses, and deep pits leverage stable ground temperatures. Rodent-proofing with tight doors and raised platforms is non-negotiable — a mouse can undo a winter of potatoes in a week.\n\nCalorie accounting is simple arithmetic: preserved inventory equals deferred labour. A month of grain for ten adults is civilisation-level slack; without it, every rainstorm is a crisis.",
   "principles": [

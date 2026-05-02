@@ -81,6 +81,14 @@
       "position": "Charcoal cupola or dedicated melt",
       "madeFrom": "Graphite-clay crucibles historically",
       "criticalNote": "Liquid steel dissolves refractories — contamination path"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Steel Production (Carburised Bloom to Crucible and Bessemer Lineages) is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [

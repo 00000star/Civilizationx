@@ -11,11 +11,29 @@
     "electric-motor"
   ],
   "unlocks": [
+    "compiler-construction",
+    "computer-networking",
+    "cryptographic-hashing",
+    "data-compression",
     "dataset-curation",
-    "distributed-training"
+    "distributed-consensus",
+    "distributed-training",
+    "embedded-systems",
+    "error-correcting-codes",
+    "file-systems",
+    "human-computer-interaction",
+    "operating-systems",
+    "packet-switching",
+    "public-key-cryptography",
+    "real-time-control",
+    "relational-databases",
+    "search-indexing",
+    "sensor-data-logging",
+    "software-testing",
+    "version-control"
   ],
-  "problem": "Civilization fails when knowledge cannot persist. Memory inside a running computer is not enough: you need durable storage for documents, software, and measurements.\n\nStorage systems solve persistence with tradeoffs: cost, reliability, speed, and power. The hard part is not writing bits; it is integrity over time and repairability.",
-  "overview": "Storage spans multiple tiers: paper and print, magnetic media, solid-state flash, and redundant distributed storage. Each tier has different failure modes: bit rot, mechanical wear, radiation, humidity, and human error.\n\nFor The Codex, storage is a survival technology: keep critical references in multiple formats, with checksums and redundancy, and test restores regularly.",
+  "problem": "Civilization fails when knowledge cannot persist. Memory inside a running computer is not enough: you need durable storage for documents, software, and measurements.\n\nStorage systems solve persistence with tradeoffs: cost, reliability, speed, and power. The hard part is not writing bits; it is integrity over time and repairability.\n\nThe remaining problem for Data Storage Systems is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats data storage systems as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "Storage spans multiple tiers: paper and print, magnetic media, solid-state flash, and redundant distributed storage. Each tier has different failure modes: bit rot, mechanical wear, radiation, humidity, and human error.\n\nFor The Codex, storage is a survival technology: keep critical references in multiple formats, with checksums and redundancy, and test restores regularly.\n\nIn collapse recovery, data storage systems must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Redundancy",
@@ -58,6 +76,14 @@
       "function": "Creates recoverable copies",
       "position": "Operational process",
       "madeFrom": "Procedures and automation"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Data Storage Systems is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [
@@ -143,6 +169,17 @@
         "maintenance logs"
       ],
       "warningNote": "Old media fails at the worst time."
+    },
+    {
+      "order": 5,
+      "title": "Define the local purpose and stop conditions",
+      "description": "Write down why Data Storage Systems is needed, who is responsible, what success looks like, and which conditions require stopping or escalation.",
+      "prerequisiteTools": [
+        "notebook",
+        "local survey",
+        "risk checklist"
+      ],
+      "warningNote": "Do not start a life-critical or infrastructure-critical use without clear stop conditions."
     }
   ],
   "history": [
@@ -174,7 +211,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "draft",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

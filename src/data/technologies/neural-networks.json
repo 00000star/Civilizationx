@@ -14,8 +14,8 @@
   "unlocks": [
     "transformer-models"
   ],
-  "problem": "Many phenomena are nonlinear and high-dimensional: vision, language, control, and forecasting. Linear models can be too weak, and rule-based systems are brittle.\n\nNeural networks approximate complex functions by composing simple nonlinear transformations. The challenge is training stability and generalization, not just expressive power.",
-  "overview": "A neural network maps inputs to outputs through layers: linear transforms plus nonlinear activations. Training adjusts parameters to minimize loss on data.\n\nArchitectures specialize: convolutional nets for images, recurrent nets for sequences, transformers for attention. The common backbone is differentiable composition trained by gradient methods.",
+  "problem": "Many phenomena are nonlinear and high-dimensional: vision, language, control, and forecasting. Linear models can be too weak, and rule-based systems are brittle.\n\nNeural networks approximate complex functions by composing simple nonlinear transformations. The challenge is training stability and generalization, not just expressive power.\n\nThe remaining problem for Neural Networks is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats neural networks as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "A neural network maps inputs to outputs through layers: linear transforms plus nonlinear activations. Training adjusts parameters to minimize loss on data.\n\nArchitectures specialize: convolutional nets for images, recurrent nets for sequences, transformers for attention. The common backbone is differentiable composition trained by gradient methods.\n\nIn collapse recovery, neural networks must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Universal approximation",
@@ -58,6 +58,14 @@
       "function": "Improve generalization",
       "position": "Training loop",
       "madeFrom": "Penalties and stochastic methods"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Neural Networks is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [
@@ -134,6 +142,17 @@
         "monitoring"
       ],
       "warningNote": "Scaling amplifies bugs and costs."
+    },
+    {
+      "order": 5,
+      "title": "Define the local purpose and stop conditions",
+      "description": "Write down why Neural Networks is needed, who is responsible, what success looks like, and which conditions require stopping or escalation.",
+      "prerequisiteTools": [
+        "notebook",
+        "local survey",
+        "risk checklist"
+      ],
+      "warningNote": "Do not start a life-critical or infrastructure-critical use without clear stop conditions."
     }
   ],
   "history": [
@@ -174,7 +193,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "draft",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

@@ -167,7 +167,13 @@
       "id": "soil-science-and-composting"
     },
     {
+      "id": "field-agriculture"
+    },
+    {
       "id": "first-aid-and-wound-care"
+    },
+    {
+      "id": "oral-rehydration-therapy"
     },
     {
       "id": "germ-theory"
@@ -240,6 +246,732 @@
     },
     {
       "id": "fermentation-basic"
+    },
+    {
+      "id": "rainwater-harvesting"
+    },
+    {
+      "id": "grain-milling"
+    },
+    {
+      "id": "seed-saving"
+    },
+    {
+      "id": "triage-systems"
+    },
+    {
+      "id": "clay-brick-production"
+    },
+    {
+      "id": "wood-gas-generator"
+    },
+    {
+      "id": "drill-and-brace"
+    },
+    {
+      "id": "timber-framing"
+    },
+    {
+      "id": "pack-animal-saddles"
+    },
+    {
+      "id": "postal-relay-systems"
+    },
+    {
+      "id": "operating-systems"
+    },
+    {
+      "id": "scientific-method"
+    },
+    {
+      "id": "defensive-palisades"
+    },
+    {
+      "id": "protected-spring-development"
+    },
+    {
+      "id": "flatbread-baking"
+    },
+    {
+      "id": "crop-rotation"
+    },
+    {
+      "id": "vital-signs-monitoring"
+    },
+    {
+      "id": "adobe-blocks"
+    },
+    {
+      "id": "water-wheel"
+    },
+    {
+      "id": "files-and-rasps"
+    },
+    {
+      "id": "post-and-beam-construction"
+    },
+    {
+      "id": "harness-and-yoke-systems"
+    },
+    {
+      "id": "semaphore-towers"
+    },
+    {
+      "id": "file-systems"
+    },
+    {
+      "id": "experimental-design"
+    },
+    {
+      "id": "watchtowers"
+    },
+    {
+      "id": "hand-dug-wells"
+    },
+    {
+      "id": "legume-cooking"
+    },
+    {
+      "id": "irrigation-furrows"
+    },
+    {
+      "id": "bandage-sterilization"
+    },
+    {
+      "id": "natural-hydraulic-lime"
+    },
+    {
+      "id": "windmill-mechanical-power"
+    },
+    {
+      "id": "clamps-and-vises"
+    },
+    {
+      "id": "roof-trusses"
+    },
+    {
+      "id": "boat-hull-carving"
+    },
+    {
+      "id": "signal-flags"
+    },
+    {
+      "id": "compiler-construction"
+    },
+    {
+      "id": "measurement-uncertainty"
+    },
+    {
+      "id": "nonlethal-crowd-barriers"
+    },
+    {
+      "id": "emergency-water-storage"
+    },
+    {
+      "id": "root-crop-processing"
+    },
+    {
+      "id": "terrace-farming"
+    },
+    {
+      "id": "fracture-splinting"
+    },
+    {
+      "id": "gypsum-plaster"
+    },
+    {
+      "id": "animal-treadmill-power"
+    },
+    {
+      "id": "measuring-calipers"
+    },
+    {
+      "id": "thatch-roofing"
+    },
+    {
+      "id": "sail-rigging"
+    },
+    {
+      "id": "optical-telegraph"
+    },
+    {
+      "id": "relational-databases"
+    },
+    {
+      "id": "unit-systems"
+    },
+    {
+      "id": "armour-repair"
+    },
+    {
+      "id": "greywater-separation"
+    },
+    {
+      "id": "oilseed-pressing"
+    },
+    {
+      "id": "raised-bed-gardening"
+    },
+    {
+      "id": "burn-care-principles"
+    },
+    {
+      "id": "pozzolan-mortar"
+    },
+    {
+      "id": "biogas-digester"
+    },
+    {
+      "id": "plumb-bob-and-level"
+    },
+    {
+      "id": "tile-roofing"
+    },
+    {
+      "id": "canoe-construction"
+    },
+    {
+      "id": "printing-ink-production"
+    },
+    {
+      "id": "computer-networking"
+    },
+    {
+      "id": "laboratory-notebooks"
+    },
+    {
+      "id": "field-fortifications"
+    },
+    {
+      "id": "handwashing-station-design"
+    },
+    {
+      "id": "dairy-handling"
+    },
+    {
+      "id": "green-manure-crops"
+    },
+    {
+      "id": "heat-illness-response"
+    },
+    {
+      "id": "wood-tar-and-pitch"
+    },
+    {
+      "id": "charcoal-furnace"
+    },
+    {
+      "id": "sharpening-stones"
+    },
+    {
+      "id": "stone-masonry"
+    },
+    {
+      "id": "canal-locks"
+    },
+    {
+      "id": "bookbinding"
+    },
+    {
+      "id": "packet-switching"
+    },
+    {
+      "id": "optical-microscopy"
+    },
+    {
+      "id": "perimeter-lighting"
+    },
+    {
+      "id": "latrine-site-selection"
+    },
+    {
+      "id": "cheese-making"
+    },
+    {
+      "id": "compost-quality-control"
+    },
+    {
+      "id": "hypothermia-response"
+    },
+    {
+      "id": "natural-rubber-processing"
+    },
+    {
+      "id": "micro-hydro-turbine"
+    },
+    {
+      "id": "blacksmith-anvil"
+    },
+    {
+      "id": "arch-construction"
+    },
+    {
+      "id": "bridge-decking"
+    },
+    {
+      "id": "newspaper-workflow"
+    },
+    {
+      "id": "cryptographic-hashing"
+    },
+    {
+      "id": "basic-chemistry-lab"
+    },
+    {
+      "id": "convoy-logistics"
+    },
+    {
+      "id": "waste-burial-and-isolation"
+    },
+    {
+      "id": "yogurt-culturing"
+    },
+    {
+      "id": "orchard-establishment"
+    },
+    {
+      "id": "oral-rehydration-stock-management"
+    },
+    {
+      "id": "leather-tanning"
+    },
+    {
+      "id": "steam-boiler-operation"
+    },
+    {
+      "id": "forge-bellows"
+    },
+    {
+      "id": "vault-construction"
+    },
+    {
+      "id": "rail-track-laying"
+    },
+    {
+      "id": "public-notice-boards"
+    },
+    {
+      "id": "public-key-cryptography"
+    },
+    {
+      "id": "distillation-apparatus"
+    },
+    {
+      "id": "secure-camp-discipline"
+    },
+    {
+      "id": "vector-exclusion-netting"
+    },
+    {
+      "id": "meat-drying"
+    },
+    {
+      "id": "fruit-tree-grafting"
+    },
+    {
+      "id": "maternal-hygiene"
+    },
+    {
+      "id": "papermaking-pulp"
+    },
+    {
+      "id": "solar-thermal-collector"
+    },
+    {
+      "id": "tongs-and-pliers"
+    },
+    {
+      "id": "foundation-footings"
+    },
+    {
+      "id": "horse-drawn-carriage"
+    },
+    {
+      "id": "cipher-basics"
+    },
+    {
+      "id": "version-control"
+    },
+    {
+      "id": "titration"
+    },
+    {
+      "id": "conflict-de-escalation"
+    },
+    {
+      "id": "smoke-ventilation"
+    },
+    {
+      "id": "fish-smoking"
+    },
+    {
+      "id": "vineyard-trellising"
+    },
+    {
+      "id": "child-growth-monitoring"
+    },
+    {
+      "id": "textile-fiber-spinning"
+    },
+    {
+      "id": "solar-water-heater"
+    },
+    {
+      "id": "screw-thread-cutting"
+    },
+    {
+      "id": "drainage-ditches"
+    },
+    {
+      "id": "bicycle-maintenance"
+    },
+    {
+      "id": "map-printing"
+    },
+    {
+      "id": "software-testing"
+    },
+    {
+      "id": "spectroscopy-basics"
+    },
+    {
+      "id": "rules-of-engagement-records"
+    },
+    {
+      "id": "cold-weather-clothing"
+    },
+    {
+      "id": "pickling-vegetables"
+    },
+    {
+      "id": "pollinator-habitat"
+    },
+    {
+      "id": "nutrition-screening"
+    },
+    {
+      "id": "weaving-looms"
+    },
+    {
+      "id": "battery-charging-station"
+    },
+    {
+      "id": "lathe-basics"
+    },
+    {
+      "id": "retaining-walls"
+    },
+    {
+      "id": "motorcycle-basics"
+    },
+    {
+      "id": "radio-antenna-tuning"
+    },
+    {
+      "id": "embedded-systems"
+    },
+    {
+      "id": "astronomical-observation"
+    },
+    {
+      "id": "emergency-evacuation-routes"
+    },
+    {
+      "id": "heat-shelter-design"
+    },
+    {
+      "id": "salt-curing"
+    },
+    {
+      "id": "pest-scouting"
+    },
+    {
+      "id": "dental-hygiene"
+    },
+    {
+      "id": "dye-extraction"
+    },
+    {
+      "id": "lead-acid-battery"
+    },
+    {
+      "id": "water-powered-trip-hammer"
+    },
+    {
+      "id": "scaffolding"
+    },
+    {
+      "id": "truck-cargo-logistics"
+    },
+    {
+      "id": "field-telephone-lines"
+    },
+    {
+      "id": "real-time-control"
+    },
+    {
+      "id": "surveying"
+    },
+    {
+      "id": "signal-security"
+    },
+    {
+      "id": "flood-response-basics"
+    },
+    {
+      "id": "fruit-drying"
+    },
+    {
+      "id": "integrated-pest-management"
+    },
+    {
+      "id": "community-health-records"
+    },
+    {
+      "id": "glass-annealing"
+    },
+    {
+      "id": "flywheel-energy-storage"
+    },
+    {
+      "id": "workbench-design"
+    },
+    {
+      "id": "lime-plastering"
+    },
+    {
+      "id": "fuel-storage-depot"
+    },
+    {
+      "id": "switchboard-operations"
+    },
+    {
+      "id": "sensor-data-logging"
+    },
+    {
+      "id": "cartography"
+    },
+    {
+      "id": "shelter-hardening"
+    },
+    {
+      "id": "drought-response-basics"
+    },
+    {
+      "id": "sprouting-grains"
+    },
+    {
+      "id": "greenhouse-growing"
+    },
+    {
+      "id": "isolation-ward-workflow"
+    },
+    {
+      "id": "ceramic-glazes"
+    },
+    {
+      "id": "compressed-air-storage"
+    },
+    {
+      "id": "soldering-tools"
+    },
+    {
+      "id": "insulation-materials"
+    },
+    {
+      "id": "harbor-docking"
+    },
+    {
+      "id": "broadcast-scheduling"
+    },
+    {
+      "id": "human-computer-interaction"
+    },
+    {
+      "id": "weather-station-instruments"
+    },
+    {
+      "id": "food-store-protection"
+    },
+    {
+      "id": "firebreak-construction"
+    },
+    {
+      "id": "community-granary-management"
+    },
+    {
+      "id": "nursery-propagation"
+    },
+    {
+      "id": "vector-control"
+    },
+    {
+      "id": "refractory-brick"
+    },
+    {
+      "id": "thermoelectric-generator"
+    },
+    {
+      "id": "riveting-tools"
+    },
+    {
+      "id": "window-glazing"
+    },
+    {
+      "id": "navigation-buoys"
+    },
+    {
+      "id": "emergency-radio-net"
+    },
+    {
+      "id": "search-indexing"
+    },
+    {
+      "id": "geology-field-mapping"
+    },
+    {
+      "id": "medical-neutrality-marking"
+    },
+    {
+      "id": "camp-layout-and-zoning"
+    },
+    {
+      "id": "rodent-proof-food-storage"
+    },
+    {
+      "id": "animal-manure-management"
+    },
+    {
+      "id": "sharps-waste-handling"
+    },
+    {
+      "id": "bloomery-iron-refining"
+    },
+    {
+      "id": "kerosene-lamp"
+    },
+    {
+      "id": "grinding-wheel"
+    },
+    {
+      "id": "door-and-hinge-making"
+    },
+    {
+      "id": "rope-ferry"
+    },
+    {
+      "id": "acoustic-signaling"
+    },
+    {
+      "id": "data-compression"
+    },
+    {
+      "id": "mineral-identification"
+    },
+    {
+      "id": "prisoner-handling-records"
+    },
+    {
+      "id": "quarantine-shelter-layout"
+    },
+    {
+      "id": "nutritional-deficiency-prevention"
+    },
+    {
+      "id": "pasture-rotation"
+    },
+    {
+      "id": "basic-epidemiology"
+    },
+    {
+      "id": "wrought-iron-forging"
+    },
+    {
+      "id": "alcohol-fuel-distillation"
+    },
+    {
+      "id": "hand-pump"
+    },
+    {
+      "id": "earthquake-bracing"
+    },
+    {
+      "id": "road-signage"
+    },
+    {
+      "id": "library-cataloguing"
+    },
+    {
+      "id": "error-correcting-codes"
+    },
+    {
+      "id": "statistics-sampling"
+    },
+    {
+      "id": "checkpoint-safety"
+    },
+    {
+      "id": "emergency-signaling"
+    },
+    {
+      "id": "infant-food-preparation"
+    },
+    {
+      "id": "fodder-production"
+    },
+    {
+      "id": "vaccination-cold-chain"
+    },
+    {
+      "id": "cast-iron-founding"
+    },
+    {
+      "id": "methane-capture"
+    },
+    {
+      "id": "block-and-tackle"
+    },
+    {
+      "id": "fire-resistant-layout"
+    },
+    {
+      "id": "traffic-flow-control"
+    },
+    {
+      "id": "archive-preservation"
+    },
+    {
+      "id": "distributed-consensus"
+    },
+    {
+      "id": "quality-control-charts"
+    },
+    {
+      "id": "civilian-warning-systems"
+    },
+    {
+      "id": "weather-observation"
+    },
+    {
+      "id": "communal-kitchen-workflow"
+    },
+    {
+      "id": "grain-threshing"
+    },
+    {
+      "id": "pharmacy-inventory-control"
+    },
+    {
+      "id": "steel-heat-treatment"
+    },
+    {
+      "id": "district-heating"
+    },
+    {
+      "id": "tool-steel-tempering"
+    },
+    {
+      "id": "workshop-building"
     }
   ]
 }

@@ -9,7 +9,45 @@
     "stone-knapping"
   ],
   "unlocks": [
-    "road-construction"
+    "arch-construction",
+    "camp-layout-and-zoning",
+    "cold-weather-clothing",
+    "door-and-hinge-making",
+    "drainage-ditches",
+    "drought-response-basics",
+    "earthquake-bracing",
+    "emergency-signaling",
+    "emergency-water-storage",
+    "fire-resistant-layout",
+    "firebreak-construction",
+    "flood-response-basics",
+    "foundation-footings",
+    "greywater-separation",
+    "hand-dug-wells",
+    "handwashing-station-design",
+    "heat-shelter-design",
+    "insulation-materials",
+    "latrine-site-selection",
+    "lime-plastering",
+    "post-and-beam-construction",
+    "protected-spring-development",
+    "quarantine-shelter-layout",
+    "rainwater-harvesting",
+    "retaining-walls",
+    "road-construction",
+    "roof-trusses",
+    "scaffolding",
+    "smoke-ventilation",
+    "stone-masonry",
+    "thatch-roofing",
+    "tile-roofing",
+    "timber-framing",
+    "vault-construction",
+    "vector-exclusion-netting",
+    "waste-burial-and-isolation",
+    "weather-observation",
+    "window-glazing",
+    "workshop-building"
   ],
   "problem": "Humans tolerate a narrow comfort band without clothing and fire support. Wind strips convective heat; rain destroys insulation; sun causes dehydration; predators exploit sleeping vulnerability. The basic shelter problem is creating a bounded microclimate: reducing wind speed, shedding precipitation, reflecting radiant heat from fire, and separating occupants from damp ground.\n\nThis is not aesthetics — it is thermodynamics and hygiene. Raised sleeping platforms reduce parasitic insect contact; overhangs keep fuel dry; smoke holes balance ventilation versus heat retention. In cold climates, small enclosed volumes around a fire are dramatically easier to heat than open camps.\n\nShelter also protects technology: cordage rots faster when constantly wet; clay dries unevenly in gusts; charcoal kilns need wind shields. A civilisation rebuilding needs the very first week to include reliable nightly shelter, not only because of comfort but because cognitive work (tool repair, planning) requires dry hands and stable light.\n\nIn space settlement, shelter is an absolute pressure and radiation barrier. On planetary surfaces, the 'basic' shelter involves managing regolith overburden to block solar and cosmic radiation — a direct analog to the primitive earth-berm or cave, but with different mass-per-area requirements (typically 3-5 meters of soil).",
   "overview": "Basic shelters combine structural members, covering, and anchoring. Structural members are poles harvested green (flexible) or dry (stable), lashed into tripods, A-frames, or ridge-pole configurations. Coverings include thatch, bark sheets, hides, woven mats, and snow blocks (igloos) in polar contexts. Anchoring uses stakes, rocks, and tensioned cordage in guy lines.\n\nSite selection dominates performance: avoid 'widow-makers' (dead branches above), drainage channels, and natural wind tunnels. Position openings 90-180 degrees away from prevailing storms. In forests, standing dead timber (conifers) provides straight, dry ridge poles; willow and hazel provide flexible ribs for domed structures.\n\nLashing is the joining technology: the Clove Hitch starts and ends most wraps; Square Lashings resist shear in crossing poles; Diagonal Lashings pull mismatched angles together. Friction wraps must be seated under tension — natural cordage shrinks/stretches with humidity, requiring a daily 'tension walk'.\n\nThermal upgrades include reflective fire walls (stones, clay), partial burrows, and insulating layers of dry leaves (duff) or grass between inner and outer skins. A wicking barrier (rocks or dry bark) between the ground and bedding is mandatory to prevent conductive hypothermia.",
@@ -33,7 +71,7 @@
     {
       "name": "Radiation attenuation (Space)",
       "explanation": "In space, shelter mass (regolith) is used to slow down GCR (Galactic Cosmic Rays) and SPE (Solar Particle Events). 300g/cm² of material is the 'safe' field standard."
-  }
+    }
   ],
   "components": [
     {
@@ -234,5 +272,5 @@
       }
     ]
   },
-  "maturity": "field-guide-ready"
+  "maturity": "review-needed"
 }

@@ -11,10 +11,28 @@
   ],
   "unlocks": [
     "automobile",
-    "road-construction"
+    "bicycle-maintenance",
+    "boat-hull-carving",
+    "bridge-decking",
+    "canal-locks",
+    "canoe-construction",
+    "fuel-storage-depot",
+    "harbor-docking",
+    "harness-and-yoke-systems",
+    "horse-drawn-carriage",
+    "motorcycle-basics",
+    "navigation-buoys",
+    "pack-animal-saddles",
+    "rail-track-laying",
+    "road-construction",
+    "road-signage",
+    "rope-ferry",
+    "sail-rigging",
+    "traffic-flow-control",
+    "truck-cargo-logistics"
   ],
   "problem": "Human backs scale poorly with grain surpluses, timber lengths, and stone blocks. Sledges work but waste energy ploughing soil; pack animals cap out at modest loads per animal. The wheeled vehicle problem is distributing weight across multiple rolling contacts, steering a front axle or pivot, and braking descent without destroying wheels.\n\nTwo-wheeled carts tip easily but track narrow paths; four-wheeled wagons need steering geometry — either pivoting front axle or turntable — or they scrub tires and break on turns. Suspension is historically minimal; road quality dominates ride.\n\nWithout standardised hubs, axle sizes, and repairable parts, vehicle fleets cannot be maintained at civilisation scale. Thus carts are not only carpentry but logistics standards.",
-  "overview": "A basic cart pairs a chassis (bed) with an undercarriage: axles, wheels, and often a drawbar for animal harness. Wheels may be fixed to the axle (both rotate) or rotate on fixed axles with pins — the latter wears journals and needs grease.\n\nSteering for four-wheelers historically uses a pivoting front assembly or side-by-side animals with a flexible pole. Braking uses drag shoes, rope wraps on wheel rims, or later band brakes — absent brakes, loads control descent with chocks and human ropes.\n\nMaterials: hardwood frames, iron tyres shrunk on rims, steel leaf springs later. Tyre contact patch and ground pressure determine whether the vehicle ruts mud or floats on grass.\n\nHuman traction variants exist — handcarts — obeying the same load paths with different ergonomic constraints.",
+  "overview": "A basic cart pairs a chassis (bed) with an undercarriage: axles, wheels, and often a drawbar for animal harness. Wheels may be fixed to the axle (both rotate) or rotate on fixed axles with pins — the latter wears journals and needs grease.\n\nSteering for four-wheelers historically uses a pivoting front assembly or side-by-side animals with a flexible pole. Braking uses drag shoes, rope wraps on wheel rims, or later band brakes — absent brakes, loads control descent with chocks and human ropes.\n\nMaterials: hardwood frames, iron tyres shrunk on rims, steel leaf springs later. Tyre contact patch and ground pressure determine whether the vehicle ruts mud or floats on grass.\n\nHuman traction variants exist — handcarts — obeying the same load paths with different ergonomic constraints.\n\nIn collapse recovery, cart and wagon must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Ground pressure",

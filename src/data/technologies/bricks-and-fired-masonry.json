@@ -12,8 +12,8 @@
   "unlocks": [
     "concrete-portland-cement"
   ],
-  "problem": "Unfired mud and irregular stone limit what you can build: walls erode in rain, joints shift, and repairs consume labor. Civilization needs repeatable structural units that can be produced in volume and assembled by many hands.\n\nFired bricks solve the repeatability problem. Standard sizes make arches, vaults, and kilns practical, and they enable durable urban infrastructure when timber or quality stone is scarce.",
-  "overview": "Brickmaking shapes clay-rich mixes into consistent blocks, dries them to remove water, then fires them to sinter minerals into a hard ceramic. The firing schedule matters: too cold and bricks remain weak; too hot and they vitrify or slump.\n\nFor recovery, bricks also bootstrap industry: better kilns enable better ceramics, lime, glass, and metal heat-treatment. Bricks are both a building material and a manufacturing enabler.",
+  "problem": "Unfired mud and irregular stone limit what you can build: walls erode in rain, joints shift, and repairs consume labor. Civilization needs repeatable structural units that can be produced in volume and assembled by many hands.\n\nFired bricks solve the repeatability problem. Standard sizes make arches, vaults, and kilns practical, and they enable durable urban infrastructure when timber or quality stone is scarce.\n\nThe remaining problem for Bricks and Fired Masonry is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats bricks and fired masonry as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "Brickmaking shapes clay-rich mixes into consistent blocks, dries them to remove water, then fires them to sinter minerals into a hard ceramic. The firing schedule matters: too cold and bricks remain weak; too hot and they vitrify or slump.\n\nFor recovery, bricks also bootstrap industry: better kilns enable better ceramics, lime, glass, and metal heat-treatment. Bricks are both a building material and a manufacturing enabler.\n\nIn collapse recovery, bricks and fired masonry must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Drying and shrinkage",
@@ -56,6 +56,14 @@
       "function": "Fires bricks to strength",
       "position": "Firing site",
       "madeFrom": "Temporary clamp or permanent kiln"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Bricks and Fired Masonry is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [
@@ -167,7 +175,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "review-needed",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

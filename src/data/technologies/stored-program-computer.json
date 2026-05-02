@@ -12,11 +12,29 @@
   ],
   "unlocks": [
     "backpropagation",
+    "compiler-construction",
+    "computer-networking",
+    "cryptographic-hashing",
+    "data-compression",
+    "distributed-consensus",
+    "embedded-systems",
+    "error-correcting-codes",
+    "file-systems",
+    "human-computer-interaction",
     "machine-learning",
-    "programming-languages"
+    "operating-systems",
+    "packet-switching",
+    "programming-languages",
+    "public-key-cryptography",
+    "real-time-control",
+    "relational-databases",
+    "search-indexing",
+    "sensor-data-logging",
+    "software-testing",
+    "version-control"
   ],
-  "problem": "Special-purpose machines solve one task at a time. Civilization needs a machine that can be reconfigured by changing instructions rather than rebuilding hardware.\n\nThe stored-program concept solves that by placing both data and instructions in addressable memory, allowing complex logic, automation, and later software ecosystems.",
-  "overview": "A stored-program computer has a processor that fetches instructions from memory, decodes them, and executes operations on data. The instruction stream is itself data that can be changed, stored, and copied.\n\nIn practice, the architecture requires reliable memory, deterministic clocking, and input/output interfaces. For bootstrap scenarios, the key insight is modularity: arithmetic, storage, and control are separable subsystems.",
+  "problem": "Special-purpose machines solve one task at a time. Civilization needs a machine that can be reconfigured by changing instructions rather than rebuilding hardware.\n\nThe stored-program concept solves that by placing both data and instructions in addressable memory, allowing complex logic, automation, and later software ecosystems.\n\nThe remaining problem for Stored-Program Computer is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats stored-program computer as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "A stored-program computer has a processor that fetches instructions from memory, decodes them, and executes operations on data. The instruction stream is itself data that can be changed, stored, and copied.\n\nIn practice, the architecture requires reliable memory, deterministic clocking, and input/output interfaces. For bootstrap scenarios, the key insight is modularity: arithmetic, storage, and control are separable subsystems.\n\nIn collapse recovery, stored-program computer must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Boolean logic",
@@ -59,6 +77,14 @@
       "function": "Coordinates state changes",
       "position": "System timing",
       "madeFrom": "Oscillators and distribution"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Stored-Program Computer is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [
@@ -186,7 +212,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "draft",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

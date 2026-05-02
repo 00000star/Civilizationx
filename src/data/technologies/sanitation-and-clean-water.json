@@ -10,8 +10,48 @@
     "ceramics-and-pottery"
   ],
   "unlocks": [
+    "bandage-sterilization",
+    "basic-epidemiology",
+    "burn-care-principles",
+    "camp-layout-and-zoning",
+    "child-growth-monitoring",
+    "cold-weather-clothing",
+    "community-health-records",
+    "dental-hygiene",
+    "drought-response-basics",
+    "emergency-signaling",
+    "emergency-water-storage",
     "fermentation-basic",
-    "germ-theory"
+    "field-agriculture",
+    "firebreak-construction",
+    "flood-response-basics",
+    "fracture-splinting",
+    "germ-theory",
+    "greywater-separation",
+    "hand-dug-wells",
+    "handwashing-station-design",
+    "heat-illness-response",
+    "heat-shelter-design",
+    "hypothermia-response",
+    "isolation-ward-workflow",
+    "latrine-site-selection",
+    "maternal-hygiene",
+    "nutrition-screening",
+    "oral-rehydration-stock-management",
+    "oral-rehydration-therapy",
+    "pharmacy-inventory-control",
+    "protected-spring-development",
+    "quarantine-shelter-layout",
+    "rainwater-harvesting",
+    "sharps-waste-handling",
+    "smoke-ventilation",
+    "triage-systems",
+    "vaccination-cold-chain",
+    "vector-control",
+    "vector-exclusion-netting",
+    "vital-signs-monitoring",
+    "waste-burial-and-isolation",
+    "weather-observation"
   ],
   "problem": "Human beings are walking conflict zones for microbes: every litre of surface water near settlements is a potential culture medium seeded by faeces, urine, decaying biomass, and biofilms that protect pathogens from simple fixes. In the first hours after disruption, people still behave as if taps and chlorine exist; within days, diarrhoeal disease can remove more working adults from a labour pool than injury or violence. Children dehydrate fastest; caregivers then face impossible trade-offs between fetching water and staying at a bedside.\n\nThe second failure mode is engineering without discipline. A community can build an impressive filter or a gleaming boiling kettle and still poison itself by dipping unwashed hands into storage, by rinsing dishes in untreated stream water, or by locating a latrine uphill of the spring because the downhill slope was rockier to dig. Water safety is a system: source selection, transport, treatment, storage, and waste must be designed as one loop, not five independent hobbies.\n\nThe third failure mode is chemical complacency. Boiling does not remove arsenic, nitrates from agricultural runoff, or many industrial solvents. Clear water is not innocent water. Teaching people to recognise the limits of each method — heat, sand, sunlight, measured halogens — is as important as teaching them to tie knots.\n\nOn Mars or in closed habitats, water is the primary life-support fluid. Every litre is part of a closed-loop system where cross-contamination between greywater (wash), blackwater (waste), and potable storage is an existential threat.",
   "overview": "Practical field water treatment stacks independent barriers. First, protect the source: choose headwater springs or rain from clean roofs where possible; fence livestock away. Second, reduce turbidity: settle in a series of jars or a drum, decanting progressively cleaner supernatant; pre-filter through cloth, then through packed sand and gravel.\n\nThird, disinfect: a rolling boil for one minute (three minutes at altitudes >2000m) inactivates most bacterial and viral threats. Solar disinfection (SODIS) uses UV-A radiation and modest heating (above 50°C) in clear PET bottles laid in full sun for 6-48 hours. Where halogen chemistry exists, measured contact time (typically 30 minutes) is required for chlorine or iodine to work.\n\nSanitation is the mirror image of drinking water: isolate human waste from fingers, flies, feet, and wind. Deep pit latrines (minimum 2m depth) with fly-proof covers, trench latrines rotated on a schedule, and meticulous separation of greywater from potable storage break the faecal-oral routes. Hand hygiene with soap removes a staggering fraction of risk; where soap is absent, wood ash paste (alkaline) and friction still outperform hope.\n\nOn Mars, the 'Sanitation' challenge is brine management: separating salts and perchlorates from regolith ice to produce potable water, while recycling all habitat waste via anaerobic digesters or high-pressure oxidation.",
@@ -184,7 +224,8 @@
       "year": "1990s",
       "event": "The Biosand filter is adapted from industrial slow-sand technology for household use in the developing world.",
       "location": "Global"
-    }  ],
+    }
+  ],
   "inventors": [
     {
       "name": "John Snow",
@@ -259,5 +300,5 @@
       }
     ]
   },
-  "maturity": "field-guide-ready"
+  "maturity": "review-needed"
 }

@@ -9,7 +9,26 @@
     "rope-and-cordage",
     "basic-hand-tools"
   ],
-  "unlocks": [],
+  "unlocks": [
+    "armour-repair",
+    "checkpoint-safety",
+    "civilian-warning-systems",
+    "conflict-de-escalation",
+    "convoy-logistics",
+    "defensive-palisades",
+    "emergency-evacuation-routes",
+    "field-fortifications",
+    "food-store-protection",
+    "medical-neutrality-marking",
+    "nonlethal-crowd-barriers",
+    "perimeter-lighting",
+    "prisoner-handling-records",
+    "rules-of-engagement-records",
+    "secure-camp-discipline",
+    "shelter-hardening",
+    "signal-security",
+    "watchtowers"
+  ],
   "problem": "Humans navigate because getting lost wastes calories and invites conflict with strangers whose territory you did not mean to cross. Before magnetic compasses were reliable, and long after they fail in bulk ferrous environments or when batteries die, the sky remains a public clock and compass — if you know how to read it. The problem is not mysticism but geometry: local vertical, local horizon, and celestial reference directions must be established consistently enough that a canoe crew or a refugee column agrees which way is north and how far dawn is.\n\nThe second problem is latitude without instruments: measuring the angle of Polaris above the northern horizon approximates latitude in the northern hemisphere; near the equator, other stars replace Polaris and the mathematics shifts. Without calibrated arcs, you build crude quadrants from plumb lines, sighting sticks, and water levels — each introduces error that compounds over long ocean passages.\n\nThe third problem is time: longitude historically required accurate clocks; for collapse survivors, local solar time and star culminations may be enough to coordinate watches and planting calendars even if global longitude is unknowable. Teaching crews to agree on hour angles from simple gnomon shadows prevents arguments at dusk.\n\nFinally, weather and sea state hide the sky; navigation knowledge must pair with dead reckoning and coastal pilotage — celestial skill is one layer, not a miracle.",
   "overview": "Begin with the local meridian: the great circle through zenith and celestial pole. The altitude of Polaris above the northern horizon approximates observer latitude when refraction and height of eye are small compared to desired accuracy. For the sun, local noon occurs when the sun crosses the meridian; a stick shadow shortest points true north in northern temperate latitudes with caveats near tropics.\n\nA simple quadrant uses a plumb bob and a sighting vane along a graded arc — even a protractor glued to wood beats guessing. Measure the angle from horizontal to Polaris repeatedly and average to reduce jitter from hand shake.\n\nStar identification uses constellation patterns anchored by bright stars: Cassiopeia and the Big Dipper bracket Polaris; Orion rises east and sets west with predictable timing. Recording rising and setting azimuths for a season builds a local almanac without printing presses.\n\nFor teaching, run nightly drills: predict where a star will be at a given hour, then check. Errors shrink when crews share vocabulary and sketchbooks.\n\nOn Mars, Earth-trained celestial tricks do not transfer without a new planetarium model — thin atmosphere and different rotation still reward disciplined angle measurement for rover orientation when inertial units drift.",
   "principles": [

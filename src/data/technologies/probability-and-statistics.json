@@ -10,13 +10,31 @@
     "paper-and-ink-media"
   ],
   "unlocks": [
+    "astronomical-observation",
+    "basic-chemistry-lab",
+    "cartography",
     "dataset-curation",
+    "distillation-apparatus",
+    "experimental-design",
+    "geology-field-mapping",
+    "laboratory-notebooks",
     "machine-learning",
+    "measurement-uncertainty",
+    "mineral-identification",
     "model-evaluation",
-    "neural-networks"
+    "neural-networks",
+    "optical-microscopy",
+    "quality-control-charts",
+    "scientific-method",
+    "spectroscopy-basics",
+    "statistics-sampling",
+    "surveying",
+    "titration",
+    "unit-systems",
+    "weather-station-instruments"
   ],
-  "problem": "Real measurements are noisy and incomplete. Without a framework for uncertainty, you cannot distinguish signal from coincidence or design robust systems that survive variation.\n\nProbability models uncertainty; statistics turns observations into estimates with error bars. This is central to medicine, engineering safety, and machine learning.",
-  "overview": "Probability assigns models to random variables and events; statistics uses data to fit models, test hypotheses, and estimate parameters. The discipline is as much about avoiding self-deception as it is about formulas.\n\nFor AI, statistics governs generalization, evaluation, and calibration. For physical systems, it governs tolerances, reliability, and risk management.",
+  "problem": "Real measurements are noisy and incomplete. Without a framework for uncertainty, you cannot distinguish signal from coincidence or design robust systems that survive variation.\n\nProbability models uncertainty; statistics turns observations into estimates with error bars. This is central to medicine, engineering safety, and machine learning.\n\nThe remaining problem for Probability and Statistics is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats probability and statistics as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "Probability assigns models to random variables and events; statistics uses data to fit models, test hypotheses, and estimate parameters. The discipline is as much about avoiding self-deception as it is about formulas.\n\nFor AI, statistics governs generalization, evaluation, and calibration. For physical systems, it governs tolerances, reliability, and risk management.\n\nIn collapse recovery, probability and statistics must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Random variables",
@@ -52,6 +70,22 @@
       "function": "Estimate and test",
       "position": "Analysis",
       "madeFrom": "Algorithms and assumptions"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Probability and Statistics is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
+    },
+    {
+      "id": "input-control",
+      "name": "Input control point",
+      "function": "Checks materials, tools, information, and environmental conditions before work starts",
+      "position": "At receiving, storage, or setup area",
+      "madeFrom": "Labels, inspection notes, gauges, samples, and quarantine bins",
+      "criticalNote": "Unknown inputs should be isolated until checked."
     }
   ],
   "rawMaterials": [
@@ -119,6 +153,28 @@
         "analysis tools"
       ],
       "warningNote": "Point estimates without uncertainty invite disaster."
+    },
+    {
+      "order": 4,
+      "title": "Define the local purpose and stop conditions",
+      "description": "Write down why Probability and Statistics is needed, who is responsible, what success looks like, and which conditions require stopping or escalation.",
+      "prerequisiteTools": [
+        "notebook",
+        "local survey",
+        "risk checklist"
+      ],
+      "warningNote": "Do not start a life-critical or infrastructure-critical use without clear stop conditions."
+    },
+    {
+      "order": 5,
+      "title": "Inspect inputs before use",
+      "description": "Check materials, tools, water, power, workspace, records, and operator readiness. Mark substitutions and unknowns before work begins.",
+      "prerequisiteTools": [
+        "labels",
+        "inspection log",
+        "basic measuring tools"
+      ],
+      "warningNote": "Substitutions can introduce contamination, fire, structural, electrical, medical, or chemical hazards."
     }
   ],
   "history": [
@@ -159,7 +215,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "draft",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

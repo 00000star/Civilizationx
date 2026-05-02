@@ -14,8 +14,8 @@
     "neural-networks",
     "transformer-models"
   ],
-  "problem": "Neural networks and layered models have many parameters. Computing gradients naively is prohibitively expensive if you treat each parameter independently.\n\nBackpropagation solves this by reusing intermediate computations: apply the chain rule backward through the computation graph to compute gradients efficiently.",
-  "overview": "Backprop treats a model as a sequence of operations. A forward pass computes outputs and caches intermediates; a backward pass propagates error signals and computes gradients for each parameter.\n\nThe method is general: any differentiable computation graph can use it. Practical engineering issues include numerical stability, gradient explosion/vanishing, and correct implementation of derivatives.",
+  "problem": "Neural networks and layered models have many parameters. Computing gradients naively is prohibitively expensive if you treat each parameter independently.\n\nBackpropagation solves this by reusing intermediate computations: apply the chain rule backward through the computation graph to compute gradients efficiently.\n\nThe remaining problem for Backpropagation is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats backpropagation as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "Backprop treats a model as a sequence of operations. A forward pass computes outputs and caches intermediates; a backward pass propagates error signals and computes gradients for each parameter.\n\nThe method is general: any differentiable computation graph can use it. Practical engineering issues include numerical stability, gradient explosion/vanishing, and correct implementation of derivatives.\n\nIn collapse recovery, backpropagation must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Chain rule",
@@ -51,6 +51,22 @@
       "function": "Structure that defines dependencies",
       "position": "Model representation",
       "madeFrom": "Nodes and edges"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Backpropagation is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
+    },
+    {
+      "id": "input-control",
+      "name": "Input control point",
+      "function": "Checks materials, tools, information, and environmental conditions before work starts",
+      "position": "At receiving, storage, or setup area",
+      "madeFrom": "Labels, inspection notes, gauges, samples, and quarantine bins",
+      "criticalNote": "Unknown inputs should be isolated until checked."
     }
   ],
   "rawMaterials": [
@@ -127,6 +143,17 @@
         "monitoring"
       ],
       "warningNote": "Unstable gradients can corrupt checkpoints."
+    },
+    {
+      "order": 5,
+      "title": "Define the local purpose and stop conditions",
+      "description": "Write down why Backpropagation is needed, who is responsible, what success looks like, and which conditions require stopping or escalation.",
+      "prerequisiteTools": [
+        "notebook",
+        "local survey",
+        "risk checklist"
+      ],
+      "warningNote": "Do not start a life-critical or infrastructure-critical use without clear stop conditions."
     }
   ],
   "history": [
@@ -167,7 +194,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "draft",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

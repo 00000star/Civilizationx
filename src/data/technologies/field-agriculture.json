@@ -1,0 +1,436 @@
+{
+  "id": "field-agriculture",
+  "name": "Field Agriculture",
+  "tagline": "Deliberate crop production: turning soil, seed, water, labour, and records into repeatable food surpluses",
+  "category": "agriculture",
+  "era": "prehistoric",
+  "difficulty": 3,
+  "prerequisites": [
+    "soil-science-and-composting",
+    "basic-hand-tools",
+    "sanitation-and-clean-water",
+    "writing-early-systems"
+  ],
+  "unlocks": [
+    "animal-manure-management",
+    "cheese-making",
+    "communal-kitchen-workflow",
+    "community-granary-management",
+    "compost-quality-control",
+    "crop-rotation",
+    "dairy-handling",
+    "fish-smoking",
+    "flatbread-baking",
+    "fodder-production",
+    "fruit-drying",
+    "fruit-tree-grafting",
+    "grain-milling",
+    "grain-threshing",
+    "green-manure-crops",
+    "greenhouse-growing",
+    "infant-food-preparation",
+    "integrated-pest-management",
+    "irrigation-furrows",
+    "legume-cooking",
+    "meat-drying",
+    "nursery-propagation",
+    "nutritional-deficiency-prevention",
+    "oilseed-pressing",
+    "orchard-establishment",
+    "pasture-rotation",
+    "pest-scouting",
+    "pickling-vegetables",
+    "pollinator-habitat",
+    "raised-bed-gardening",
+    "rodent-proof-food-storage",
+    "root-crop-processing",
+    "salt-curing",
+    "seed-saving",
+    "sprouting-grains",
+    "terrace-farming",
+    "vineyard-trellising",
+    "yogurt-culturing"
+  ],
+  "problem": "Hunting, gathering, fishing, and opportunistic gardens can keep small groups alive, but they do not reliably support specialists, children, elders, workshops, or long winters. The food problem is not merely calories today. It is predictable calories next season, seed for the following season, soil that is not exhausted by harvest, and enough surplus to let some people repair tools, teach, care for the sick, and build infrastructure.\n\nField agriculture solves this by concentrating plant growth into managed plots. Humans select crop species, prepare seedbeds, control competing vegetation, manage soil fertility, move water when rainfall fails, protect plants from pests, and harvest at the right moisture and maturity. Each action is simple in isolation; the difficulty is timing. Plant too early and frost kills seedlings; plant too late and grain does not mature. Weed late and the crop has already lost the race for light.\n\nAgriculture also creates new failure modes. A single crop over a large area invites pest explosions and disease. Repeated harvest without returning nutrients mines the soil. Irrigation without drainage can make soil saline. Stored grain without drying and rodent control becomes mouldy, toxic, or eaten. The technology is therefore a cycle of observation, record keeping, and correction, not just putting seeds in dirt.\n\nFor collapse recovery, field agriculture is the transition from survival to settlement. For space settlement, it becomes controlled-environment agriculture, where light, water, nutrients, pollination, and pathogens must be managed inside a closed loop.",
+  "overview": "A field system starts with site selection. Productive fields need light, access to water, drainage, manageable slope, and soil that can hold both air and moisture. Low areas may collect frost or flood; steep slopes erode unless contoured or terraced. Before planting, the grower must know the crop calendar: expected frost dates, rainy seasons, dry spells, and how long each crop takes from sowing to harvest.\n\nSeed is the bottleneck people often underestimate. Viable seed must be selected from healthy plants, dried, labelled, protected from insects and rodents, and kept separate by variety. Some crops are annual seeds; others are planted as tubers, cuttings, bulbs, or divisions. Saved seed adapts to local conditions over years, but careless selection preserves weakness as easily as strength.\n\nSoil management balances disturbance and cover. Traditional hoe or plough systems loosen soil and bury weeds, but repeated bare tillage accelerates erosion and organic matter loss. Conservation agriculture emphasises minimum disturbance, permanent soil cover, and rotation or association of multiple species. In low-resource settings, the practical rule is to keep soil covered whenever possible, rotate crop families, return composted residues, and avoid letting water run fast over bare ground.\n\nWater management is as important as fertility. Rainfed crops need sowing timed to reliable moisture; irrigated crops need channels, furrows, basins, or drip-like delivery that does not waterlog roots. Drainage is the other half of irrigation: salts and stagnant water kill fields slowly. Mulch reduces evaporation and protects soil from crusting.\n\nPest control is a system, not a poison list. Crop rotation, intercropping, resistant varieties, sanitation, traps, hand removal, biological enemies, and careful observation reduce damage before chemical measures are considered. Farmer field schools and similar learning groups work because local pests, soils, and weather are too variable for a single universal recipe.",
+  "principles": [
+    {
+      "name": "Seed-to-seed thinking",
+      "explanation": "A food crop is not secure unless enough of the harvest is kept viable as seed or planting material for the next cycle. Eating the seed reserve trades next season's survival for this week's hunger."
+    },
+    {
+      "name": "Limiting factor",
+      "explanation": "Yield is constrained by the scarcest requirement: light, water, nutrients, temperature, rooting depth, pollination, labour, or pest control. Adding compost cannot fix drought, and irrigation cannot fix dead seed."
+    },
+    {
+      "name": "Soil cover and erosion control",
+      "explanation": "Bare soil loses water, organic matter, and fine particles. Mulch, cover crops, contour lines, and residues protect the field while feeding soil biology."
+    },
+    {
+      "name": "Rotation and diversity",
+      "explanation": "Rotating crop families and mixing species interrupts pest and disease cycles, spreads labour peaks, and uses different soil depths and nutrient patterns."
+    },
+    {
+      "name": "Harvest moisture discipline",
+      "explanation": "Food security can fail after a good crop if grain, beans, or tubers are stored too wet. Drying, curing, and ventilation are part of agriculture, not separate luxuries."
+    }
+  ],
+  "components": [
+    {
+      "id": "field-site",
+      "name": "Field site and boundaries",
+      "function": "Defines the growing area, drainage, access paths, and protection from animals",
+      "position": "Near water and settlement but outside latrine contamination zones",
+      "madeFrom": "Cleared land, contour lines, hedges, fences, paths, drainage ditches",
+      "criticalNote": "Fields downhill from latrines, dumps, or animal pens can contaminate food and water"
+    },
+    {
+      "id": "seed-stock",
+      "name": "Seed and planting stock",
+      "function": "Carries crop genetics and next-season continuity",
+      "position": "Stored dry, cool, labelled, and protected from pests",
+      "madeFrom": "Saved seeds, tubers, cuttings, bulbs, scions, or imported seed lots",
+      "criticalNote": "Seed lots need labels for crop, variety, date, source, and observed performance"
+    },
+    {
+      "id": "soil-bed",
+      "name": "Soil bed",
+      "function": "Supports roots, water exchange, nutrient cycling, and soil organisms",
+      "position": "Raised beds, flat plots, ridges, basins, or terraces depending on climate",
+      "madeFrom": "Native soil amended with compost, mulch, manure processed safely, ash or lime only when justified",
+      "criticalNote": "Fresh human waste or unsafe manure can spread pathogens onto crops"
+    },
+    {
+      "id": "water-system",
+      "name": "Water delivery and drainage",
+      "function": "Keeps roots moist without drowning them or salting the soil",
+      "position": "Rain capture, channels, furrows, basins, mulch, drains, or drip lines",
+      "madeFrom": "Ditches, clay-lined channels, buckets, ceramic emitters, hoses, terraces",
+      "criticalNote": "Standing water invites root disease and mosquitoes; irrigation must have drainage"
+    },
+    {
+      "id": "cultivation-tools",
+      "name": "Cultivation tools",
+      "function": "Open soil, plant, weed, harvest, and transport small loads",
+      "position": "Used across the growing season",
+      "madeFrom": "Digging stick, hoe, rake, sickle, basket, fork, cart where available",
+      "criticalNote": "Dull tools waste calories and cause more injuries than sharp maintained tools"
+    },
+    {
+      "id": "crop-plan",
+      "name": "Crop calendar and field records",
+      "function": "Tracks sowing date, weather, germination, pests, harvest, seed selection, and failures",
+      "position": "Notebook, wall chart, tally sticks, or waterproof field ledger",
+      "madeFrom": "Paper, charcoal ink, clay tags, carved stakes, or digital records with print backup",
+      "criticalNote": "Without records, a settlement repeats bad timing and loses local adaptation knowledge"
+    },
+    {
+      "id": "pest-barriers",
+      "name": "Pest and animal barriers",
+      "function": "Reduces losses to insects, birds, rodents, grazing animals, and human theft",
+      "position": "Around fields, over seedbeds, in stores, and along water channels",
+      "madeFrom": "Fences, nets, scare lines, traps, ash rings, row covers, sealed bins",
+      "criticalNote": "Poisons near food and water create secondary hazards; physical exclusion is safer first"
+    },
+    {
+      "id": "postharvest-area",
+      "name": "Drying, curing, and storage area",
+      "function": "Converts harvest into safe food and seed reserves",
+      "position": "Raised, dry, ventilated, shaded, and rodent-resistant",
+      "madeFrom": "Drying racks, threshing floor, granary bins, baskets, clay jars, pallets",
+      "criticalNote": "Mouldy grain can contain toxins; do not mix suspect lots into good stores"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Viable seed or planting stock",
+      "purpose": "Starts the crop cycle and preserves local adaptation",
+      "earthLocations": [
+        "Saved from previous harvests",
+        "Local farmers and seed banks",
+        "Wild relatives only after expert identification and domestication work"
+      ],
+      "spaceAlternatives": "Seed vault stores, tissue culture, cuttings from controlled-environment crops, and imported starter germplasm",
+      "processingRequired": "Select from healthy plants, dry to safe storage moisture, label, test germination, and protect from insects and rodents"
+    },
+    {
+      "name": "Arable soil or growing medium",
+      "purpose": "Root support, water retention, nutrient cycling, and microbial habitat",
+      "earthLocations": [
+        "Alluvial soils, loams, old garden beds, floodplains above contamination zones",
+        "Degraded soils that can be rebuilt with cover, compost, and erosion control"
+      ],
+      "spaceAlternatives": "Washed and processed regolith blended with composted biomass, hydroponic substrate, aeroponic root chambers",
+      "processingRequired": "Test texture and pH, remove debris and contamination, add organic matter, and protect from erosion"
+    },
+    {
+      "name": "Water",
+      "purpose": "Germination, transpiration, nutrient movement, and cooling",
+      "earthLocations": [
+        "Rainfall, wells, springs, ponds, streams, roof catchment, and stored runoff"
+      ],
+      "spaceAlternatives": "Recovered water from life-support loops with monitored nutrient and pathogen control",
+      "processingRequired": "Keep irrigation water separate from sewage; settle silt; avoid salinity buildup; match timing to crop stage"
+    },
+    {
+      "name": "Compost, manure, residues, and mulch",
+      "purpose": "Returns nutrients and organic matter while protecting soil",
+      "earthLocations": [
+        "Crop residues, leaves, straw, composted kitchen waste, herbivore manure after safe composting"
+      ],
+      "spaceAlternatives": "Inedible crop biomass, microbial composting reactors, processed human waste only after validated treatment",
+      "processingRequired": "Compost risky materials; chop residues; avoid diseased plant material in seedbeds unless hot-composted"
+    },
+    {
+      "name": "Tools and containers",
+      "purpose": "Planting, weeding, harvest, transport, drying, and storage",
+      "earthLocations": [
+        "Wood, bone, stone, iron, steel, baskets, pottery, sacks, salvaged sheet metal"
+      ],
+      "spaceAlternatives": "Printed or machined hand tools, polymer trays, stainless bins, fabric grow bags",
+      "processingRequired": "Sharpen blades, clean tools between diseased plots, dry containers before storing seed or grain"
+    },
+    {
+      "name": "Local crop knowledge",
+      "purpose": "Matches crop varieties to season length, rainfall, pests, and diet",
+      "earthLocations": [
+        "Experienced farmers, extension records, old almanacs, seed packets, local market history"
+      ],
+      "spaceAlternatives": "Controlled-environment crop databases, stored agronomy manuals, experiment logs from habitat trials",
+      "processingRequired": "Record trials; compare varieties; preserve knowledge in redundant written form"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Survey the site before clearing",
+      "description": "Map sun exposure, slope, drainage, frost pockets, water access, existing vegetation, animal paths, and contamination risks. Mark latrines, animal pens, dumps, and flood zones so food plots stay safely separated.",
+      "prerequisiteTools": [
+        "notebook",
+        "stakes",
+        "cordage",
+        "digging stick or shovel"
+      ],
+      "warningNote": "Do not plant food crops in soil contaminated by sewage, heavy metals, fuel spills, old batteries, or industrial ash"
+    },
+    {
+      "order": 2,
+      "title": "Choose staple, protein, and resilience crops",
+      "description": "Select at least one calorie staple, one protein or legume crop, and one fast or resilient crop suited to the season. Prefer locally proven varieties over impressive but untested seed.",
+      "prerequisiteTools": [
+        "crop calendar",
+        "seed records"
+      ],
+      "warningNote": "Do not rely on a single crop variety; monoculture turns one disease or drought into famine"
+    },
+    {
+      "order": 3,
+      "title": "Protect the seed reserve",
+      "description": "Before planting, divide seed into planting seed, emergency food, and reserve seed. Run a small germination test on damp cloth or soil so poor seed is discovered before the season is lost.",
+      "prerequisiteTools": [
+        "labels",
+        "dry jars or sacks",
+        "damp cloth"
+      ],
+      "warningNote": "Never eat all seed stock during a short hunger period unless there is a confirmed replacement source"
+    },
+    {
+      "order": 4,
+      "title": "Prepare soil with minimum necessary disturbance",
+      "description": "Clear only the needed area. Break compaction, remove perennial weed roots, preserve topsoil, and add compost or mulch. On slopes, align beds along contour rather than downhill.",
+      "prerequisiteTools": [
+        "hoe",
+        "rake",
+        "compost fork",
+        "level or water tube"
+      ],
+      "warningNote": "Bare loose soil on slopes can wash away in one storm; prepare erosion control before heavy rain"
+    },
+    {
+      "order": 5,
+      "title": "Plant at correct depth and spacing",
+      "description": "Use seed size as a rough guide: many seeds are planted about two to three seed diameters deep, but local crop rules override this. Mark rows or stations so weeding does not destroy seedlings.",
+      "prerequisiteTools": [
+        "dibble stick",
+        "measuring cord",
+        "row markers"
+      ],
+      "warningNote": "Seed planted too deep may exhaust itself before emergence; seed left exposed is eaten or dries out"
+    },
+    {
+      "order": 6,
+      "title": "Water for establishment, then conserve moisture",
+      "description": "Keep the seed zone moist during germination. Once plants are established, water less often but deeper where appropriate, mulch between plants, and keep leaves dry when disease pressure is high.",
+      "prerequisiteTools": [
+        "watering can",
+        "mulch",
+        "furrow tool"
+      ],
+      "warningNote": "Irrigation water contaminated with human or animal waste can spread disease onto food crops"
+    },
+    {
+      "order": 7,
+      "title": "Weed early and observe pests weekly",
+      "description": "Remove weeds while crop seedlings are small; later weeding cannot recover early lost growth. Inspect leaf undersides, stems, soil surface, and field edges. Record pest timing and weather.",
+      "prerequisiteTools": [
+        "hoe",
+        "hand fork",
+        "field notebook"
+      ],
+      "warningNote": "Avoid casual pesticide use; misidentified pests, wrong dose, or contaminated sprayers can poison people and beneficial organisms"
+    },
+    {
+      "order": 8,
+      "title": "Feed the crop without burning it",
+      "description": "Apply compost, diluted liquid feed, ash, lime, or manure only when the crop and soil indicate need. Keep strong amendments away from tender stems and roots.",
+      "prerequisiteTools": [
+        "compost",
+        "bucket",
+        "measuring scoop"
+      ],
+      "warningNote": "Fresh manure on food crops can transmit pathogens; compost and timing discipline are safety requirements"
+    },
+    {
+      "order": 9,
+      "title": "Harvest for food and select for seed",
+      "description": "Harvest food at edible maturity, but mark the healthiest, truest plants for seed before they are eaten. Keep seed harvest separate from bulk food harvest and record parent field conditions.",
+      "prerequisiteTools": [
+        "knife or sickle",
+        "baskets",
+        "labels"
+      ],
+      "warningNote": "Do not save seed from diseased plants unless the goal is explicit breeding under expert guidance"
+    },
+    {
+      "order": 10,
+      "title": "Dry, cure, and store the harvest",
+      "description": "Dry grains and beans before storage; cure roots and tubers according to crop needs; keep stores raised, ventilated, labelled, and rodent-resistant. Inspect weekly at first.",
+      "prerequisiteTools": [
+        "drying racks",
+        "granary bins",
+        "rodent barriers"
+      ],
+      "warningNote": "Mouldy grain or nuts may contain dangerous toxins; do not mix suspect lots into clean food"
+    },
+    {
+      "order": 11,
+      "title": "Return residues and rotate the field",
+      "description": "Return safe residues as mulch or compost, plant cover where possible, and rotate crop families next season. Record yield, failures, pest pressure, rainfall, and labour bottlenecks.",
+      "prerequisiteTools": [
+        "compost bay",
+        "field ledger",
+        "mulch fork"
+      ],
+      "warningNote": "Burning all residues may simplify cleanup but removes soil cover and organic matter; use fire only for diseased material or specific pest control"
+    }
+  ],
+  "history": [
+    {
+      "year": "c. 10000 BCE",
+      "event": "Plant domestication and cultivation begin independently in several regions, including the Fertile Crescent, China, New Guinea, Mesoamerica, the Andes, and parts of Africa.",
+      "location": "Multiple world regions"
+    },
+    {
+      "year": "Neolithic",
+      "event": "Settled farming communities create granaries, field boundaries, seed selection traditions, and seasonal labour organisation.",
+      "location": "Southwest Asia, East Asia, Africa, Europe, the Americas"
+    },
+    {
+      "year": "Classical and medieval periods",
+      "event": "Irrigation, terracing, manuring, crop rotation, and animal traction expand field scale and reliability in many agrarian societies.",
+      "location": "Global agrarian regions"
+    },
+    {
+      "year": "18th-19th centuries",
+      "event": "Scientific agronomy, seed breeding, drainage, mechanised tools, and crop rotations increase yields while also tying farms to markets and inputs.",
+      "location": "Europe, North America, and colonial agricultural systems"
+    },
+    {
+      "year": "20th century",
+      "event": "Synthetic fertilisers, improved varieties, irrigation expansion, pesticides, and mechanisation raise output but create new dependencies and environmental costs.",
+      "location": "Global"
+    },
+    {
+      "year": "Late 20th-21st centuries",
+      "event": "Conservation agriculture, integrated pest management, agroecology, controlled-environment farming, and seed sovereignty movements respond to soil loss, pest resistance, climate risk, and supply-chain fragility.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [],
+  "impact": "Field agriculture enables population density, permanent settlements, stores, taxation, specialists, schools, armies, and cities. It is the food engine behind most later technology. It also changes governance: granaries require measurement, fairness, defence, and trust. If stored food is captured by a few people, the technology becomes domination rather than resilience.\n\nThe environmental impact is equally large. Agriculture can build soil through cover, rotation, compost, and careful water use, or it can strip landscapes, spread salinity, collapse pollinators, and simplify ecosystems until disease and pests surge. The Codex treats soil cover, seed reserves, and crop diversity as core operating requirements, not optional ethics.\n\nOff-world agriculture is not open-field farming, but the logic remains: preserve genetic diversity, recycle nutrients, monitor water, control pathogens, and record every crop cycle. A Mars habitat does not have spare seasons to relearn what a failed crop already taught.",
+  "images": [
+    {
+      "id": "overview",
+      "filename": "overview.svg",
+      "caption": "Field agriculture cycle: survey, seed, soil, water, crop care, harvest, storage, seed saving",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "fao-conservation-agriculture",
+      "title": "FAO - Conservation agriculture principles",
+      "url": "https://www.fao.org/conservation-agriculture/overview/conservation-agriculture-principles/en/",
+      "note": "Minimum soil disturbance, permanent soil cover, and species diversification"
+    },
+    {
+      "id": "usda-soil-health",
+      "title": "USDA NRCS - Soil health management",
+      "url": "https://www.nrcs.usda.gov/conservation-basics/soil/soil-health/soil-health-management",
+      "note": "Soil cover, biodiversity, rotation, and soil health management"
+    },
+    {
+      "id": "fao-farmer-field-school",
+      "title": "FAO - Farmer field school approach",
+      "url": "https://www.fao.org/agriculture/ippm/programme/ffs-approach/en/",
+      "note": "Field-based learning for pest, soil, water, seed quality, and crop management"
+    }
+  ],
+  "lastUpdated": "2026-05-02",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [
+      "Contaminated soil or irrigation water can transmit disease or heavy metals into food",
+      "Fresh manure on food crops can spread pathogens",
+      "Monoculture and seed loss can create famine risk",
+      "Poor irrigation drainage can cause salinity and root disease",
+      "Mouldy stored grain may contain dangerous toxins"
+    ],
+    "sources": [
+      {
+        "id": "src-fao-conservation-agriculture",
+        "title": "FAO - Conservation Agriculture Principles",
+        "url": "https://www.fao.org/conservation-agriculture/overview/conservation-agriculture-principles/en/",
+        "type": "institution",
+        "note": "Core principles: minimum soil disturbance, permanent organic cover, and crop diversification"
+      },
+      {
+        "id": "src-usda-nrcs-soil-health",
+        "title": "USDA NRCS - Soil Health Management",
+        "url": "https://www.nrcs.usda.gov/conservation-basics/soil/soil-health/soil-health-management",
+        "type": "institution",
+        "note": "Soil cover, biodiversity, crop rotation, residue management, and soil health"
+      },
+      {
+        "id": "src-fao-farmer-field-school",
+        "title": "FAO - Farmer Field School Approach",
+        "url": "https://www.fao.org/agriculture/ippm/programme/ffs-approach/en/",
+        "type": "institution",
+        "note": "Local, field-based learning for pest management, soil fertility, water, seed quality, and crop systems"
+      },
+      {
+        "id": "src-usda-crop-production",
+        "title": "USDA NIFA - Crop Production",
+        "url": "https://www.nifa.usda.gov/topics/crop-production",
+        "type": "institution",
+        "note": "Research-based crop productivity, natural resource use, soil quality, and regional crop management"
+      }
+    ]
+  },
+  "maturity": "review-needed"
+}

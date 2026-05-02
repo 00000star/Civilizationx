@@ -49,7 +49,7 @@ export function TreeControls({ technologies, isSpace }: Props) {
         pannable
         zoomable
         aria-label="Tree minimap — drag to pan overview"
-        className="!bottom-4 !right-4 !left-auto !top-auto"
+        className="!bottom-4 !left-4 !right-auto !top-auto"
       />
     </>
   );

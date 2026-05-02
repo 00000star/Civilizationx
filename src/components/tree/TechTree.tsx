@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   ReactFlow,
   Background,
@@ -13,21 +13,23 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import type { TechnologySummary } from "../../types/technology";
 import { TechNode, type TechNodeData } from "./TechNode";
+import { AnimatedEdge } from "./AnimatedEdge";
 import { NodeTooltip } from "./NodeTooltip";
 import { TreeControls } from "./TreeControls";
 import { useUnlockedIds } from "../../hooks/useProgression";
 import { useCodexMode } from "../../context/useCodexMode";
-import { techHasEarthOnlyMaterial, techHasFullSpaceAlternatives } from "../../utils/spaceMaterials";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 const nodeTypes = { tech: TechNode };
+const edgeTypes = { animated: AnimatedEdge };
 
 interface Props {
   technologies: TechnologySummary[];
   positions: { id: string; x: number; y: number }[];
+  matchingIds?: Set<string>;
 }
 
-export function TechTree({ technologies, positions }: Props) {
+export function TechTree({ technologies, positions, matchingIds }: Props) {
   const navigate = useNavigate();
   const [params] = useSearchParams();
   const highlightId = params.get("node");
@@ -81,7 +83,8 @@ export function TechTree({ technologies, positions }: Props) {
       technologies.map((tech) => {
         const p = posMap.get(tech.id) ?? { x: 0, y: 0 };
         const locked = !unlocked.has(tech.id);
-        const dimmed = Boolean(hoverId && !hoverBright.has(tech.id));
+        const isMatch = !matchingIds || matchingIds.has(tech.id);
+        const dimmed = Boolean((hoverId && !hoverBright.has(tech.id)) || (!isMatch));
         const accent = isSpace ? "space" : "gold";
 
         const incomingEdgeActive =
@@ -109,15 +112,14 @@ export function TechTree({ technologies, positions }: Props) {
           id: tech.id,
           type: "tech",
           position: p,
-          style: { width: 148 },
           data: {
             tech,
             locked,
             selected: tech.id === highlightId,
             dimmed,
             edgeActive,
-            spaceGlow: isSpace && techHasFullSpaceAlternatives(tech),
-            earthOnly: isSpace && techHasEarthOnlyMaterial(tech),
+            spaceGlow: isSpace && tech.spaceReadiness.fullAlternatives,
+            earthOnly: isSpace && tech.spaceReadiness.earthOnly,
             accent,
           },
           draggable: false,
@@ -134,6 +136,7 @@ export function TechTree({ technologies, positions }: Props) {
       isSpace,
       inSet,
       techById,
+      matchingIds,
     ]
   );
 
@@ -146,19 +149,18 @@ export function TechTree({ technologies, positions }: Props) {
         const active =
           Boolean(hoverId) &&
           (hoverId === t.id || (hoverId === p && (parent?.unlocks.includes(t.id) ?? false)));
-        const stroke = active ? "#00D4FF" : "#4A7FBD";
+        
         e.push({
           id: `${p}->${t.id}`,
           source: p,
           target: t.id,
-          animated: true,
-          className: active ? "codex-edge animated" : "codex-edge animated",
-          style: { stroke, strokeWidth: active ? 2.2 : 1.5 },
+          type: "animated",
+          data: { active },
           markerEnd: {
             type: MarkerType.ArrowClosed,
-            color: stroke,
-            width: 18,
-            height: 18,
+            color: active ? "#00D4FF" : "#4A7FBD",
+            width: 16,
+            height: 16,
           },
         });
       }
@@ -207,19 +209,38 @@ export function TechTree({ technologies, positions }: Props) {
     (instance: ReactFlowInstance<Node<TechNodeData>, Edge>) => {
       setRf(instance);
       setTreeReady(true);
+      
+      if (highlightId) {
+        const p = posMap.get(highlightId);
+        if (p) {
+          setTimeout(() => {
+            instance.setCenter(p.x + 74, p.y + 46, { zoom: isMobile ? 0.8 : 1.1, duration: 800 });
+          }, 100);
+          return;
+        }
+      }
+
       instance.fitView({
-        padding: 0.2,
-        duration: 200,
-        maxZoom: isMobile ? 0.42 : 1.2,
-        minZoom: isMobile ? 0.25 : 0.15,
+        padding: 0.15,
+        duration: 400,
+        maxZoom: isMobile ? 0.42 : 1.1,
+        minZoom: isMobile ? 0.25 : 0.1,
       });
     },
-    [isMobile]
+    [isMobile, highlightId, posMap]
   );
+
+  useEffect(() => {
+    if (!treeReady || !highlightId || !rf) return;
+    const p = posMap.get(highlightId);
+    if (p) {
+      rf.setCenter(p.x + 74, p.y + 46, { zoom: isMobile ? 0.8 : 1.1, duration: 800 });
+    }
+  }, [highlightId, treeReady, rf, posMap, isMobile]);
 
   return (
     <div
-      className="relative h-[calc(100dvh-4.5rem)] min-h-[420px] w-full md:h-[calc(100dvh-5rem)]"
+      className="relative h-[calc(100dvh-4.5rem)] min-h-[420px] w-full md:h-[calc(100dvh-5rem)] overflow-hidden"
       onMouseMove={onPointerMove}
     >
       {!treeReady ? (
@@ -231,14 +252,16 @@ export function TechTree({ technologies, positions }: Props) {
           <div className="h-10 w-10 animate-pulse rounded-full border-2 border-codex-gold border-t-transparent" />
         </div>
       ) : null}
+      
       <ReactFlow
         nodes={nodes}
         edges={edges}
         nodeTypes={nodeTypes}
+        edgeTypes={edgeTypes}
         onInit={onInit}
         fitView
-        minZoom={0.12}
-        maxZoom={1.8}
+        minZoom={0.05}
+        maxZoom={1.5}
         proOptions={{ hideAttribution: true }}
         onNodeMouseEnter={onNodeMouseEnter}
         onNodeMouseLeave={onNodeMouseLeave}
@@ -250,9 +273,9 @@ export function TechTree({ technologies, positions }: Props) {
       >
         <Background
           variant={BackgroundVariant.Dots}
-          gap={28}
+          gap={32}
           size={1}
-          color="rgba(154,152,136,0.14)"
+          color="rgba(154,152,136,0.1)"
         />
         <TreeControls technologies={technologies} isSpace={isSpace} />
       </ReactFlow>
@@ -277,32 +300,43 @@ export function TechTree({ technologies, positions }: Props) {
             initial={{ x: 320, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: 320, opacity: 0 }}
-            transition={{ type: "spring", stiffness: 420, damping: 36 }}
-            className="fixed bottom-0 right-0 top-16 z-40 flex w-full max-w-[300px] flex-col border-l border-codex-border bg-codex-surface/95 p-4 shadow-2xl backdrop-blur-md md:top-20"
+            transition={{ type: "spring", stiffness: 400, damping: 30 }}
+            className="fixed bottom-0 right-0 top-16 z-40 flex w-full max-w-[320px] flex-col border-l border-white/10 bg-codex-surface/90 p-5 shadow-2xl backdrop-blur-xl md:top-20"
             aria-label="Technology quick preview"
           >
             <div className="flex items-start justify-between gap-2">
-              <h2 className="font-display text-lg font-semibold leading-snug text-codex-text">
+              <h2 className="font-display text-xl font-bold leading-tight text-codex-text">
                 {preview.name}
               </h2>
               <button
                 type="button"
                 onClick={() => setPreview(null)}
-                className="rounded border border-codex-border px-2 py-1 text-xs text-codex-secondary hover:bg-codex-card hover:text-codex-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-codex-blue"
+                className="rounded-full bg-white/5 p-1 text-codex-secondary hover:bg-white/10 hover:text-codex-text transition-colors"
               >
-                Close
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
               </button>
             </div>
-            <p className="mt-2 text-sm text-codex-secondary">{preview.tagline}</p>
-            <p className="mt-3 line-clamp-6 text-xs leading-relaxed text-codex-muted">
-              Full documentary details load when this entry is opened.
+            <p className="mt-3 text-sm leading-relaxed text-codex-secondary/90 italic">
+              {preview.tagline}
             </p>
+            <div className="mt-6 flex-1 space-y-4">
+              <div className="rounded-lg bg-white/5 p-3">
+                <p className="font-mono text-[10px] uppercase tracking-wider text-codex-muted">Category</p>
+                <p className="mt-1 text-sm font-medium text-codex-text capitalize">{preview.category}</p>
+              </div>
+              <div className="rounded-lg bg-white/5 p-3">
+                <p className="font-mono text-[10px] uppercase tracking-wider text-codex-muted">Era</p>
+                <p className="mt-1 text-sm font-medium text-codex-text">{preview.era.replaceAll("-", " ")}</p>
+              </div>
+            </div>
             <button
               type="button"
               onClick={() => navigate(`/tech/${preview.id}`)}
-              className="mt-4 w-full rounded border border-codex-gold/60 bg-codex-card py-2 text-sm font-medium text-codex-gold hover:bg-codex-border/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-codex-gold"
+              className="mt-8 w-full rounded-lg bg-codex-gold py-3 text-sm font-bold text-codex-bg shadow-lg shadow-codex-gold/20 hover:scale-[1.02] active:scale-[0.98] transition-transform"
             >
-              Open documentary
+              Access Full Documentary
             </button>
           </motion.aside>
         ) : null}

@@ -9,6 +9,18 @@ const outPath = join(root, "src", "data", "summaries.json");
 
 const files = readdirSync(techDir).filter((f) => f.endsWith(".json")).sort();
 
+function hasMeaningfulSpaceAlternatives(material) {
+  const value = (material.spaceAlternatives ?? "").trim();
+  if (value.length < 20) return false;
+  return !/\b(no practical|no substitute|earth-only|terrestrial only|cannot improvise)\b/i.test(value);
+}
+
+function hasEarthOnlyMaterial(material) {
+  const value = (material.spaceAlternatives ?? "").trim();
+  if (!value) return true;
+  return /\b(no practical|no substitute|earth-only|terrestrial only|cannot)\b/i.test(value);
+}
+
 const summaries = files
   .map((file) => JSON.parse(readFileSync(join(techDir, file), "utf8")))
   .map((tech) => ({
@@ -20,9 +32,15 @@ const summaries = files
     difficulty: tech.difficulty,
     prerequisites: tech.prerequisites,
     unlocks: tech.unlocks,
-    rawMaterials: tech.rawMaterials,
+    verification: {
+      status: tech.verification.status,
+    },
+    spaceReadiness: {
+      fullAlternatives:
+        tech.rawMaterials.length > 0 && tech.rawMaterials.every((material) => hasMeaningfulSpaceAlternatives(material)),
+      earthOnly: tech.rawMaterials.some((material) => hasEarthOnlyMaterial(material)),
+    },
     maturity: tech.maturity,
-    verification: tech.verification,
     lastUpdated: tech.lastUpdated,
   }))
   .sort((a, b) => a.name.localeCompare(b.name));

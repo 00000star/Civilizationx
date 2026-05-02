@@ -9,13 +9,32 @@
     "fire"
   ],
   "unlocks": [
+    "adobe-blocks",
+    "bloomery-iron-refining",
+    "cast-iron-founding",
+    "ceramic-glazes",
+    "clay-brick-production",
+    "dye-extraction",
+    "glass-annealing",
     "glass-making",
+    "gypsum-plaster",
     "iron-smelting",
+    "leather-tanning",
     "lime-production",
+    "natural-hydraulic-lime",
+    "natural-rubber-processing",
+    "papermaking-pulp",
+    "pozzolan-mortar",
+    "refractory-brick",
     "smelting-bronze-age",
     "soap-making",
     "steam-engine",
-    "steel-production"
+    "steel-heat-treatment",
+    "steel-production",
+    "textile-fiber-spinning",
+    "weaving-looms",
+    "wood-tar-and-pitch",
+    "wrought-iron-forging"
   ],
   "problem": "Raw wood fires are limited by moisture, volatile smoke, and the chemistry of burning whole biomass. For pottery glazes, glass melts, and especially metal smelting, you need sustained high temperature in a reducing or controllable atmosphere. Wood directly in a furnace introduces too much ash, fluctuating airflow through char structure, and heat wasted driving off water and pyrolysing large chunks.\n\nCharcoal solves this by preprocessing wood: driving off water and most volatiles in the absence of oxygen, leaving a porous carbon matrix that burns with a concentrated, relatively pure carbon-oxygen reaction. The result is higher attainable temperatures in smaller volumes and more predictable control — critical when a few degrees or the wrong oxidation state ruins a metal batch.\n\nTransport matters too: charcoal is lighter than green wood per unit energy for high-temperature tasks and stacks efficiently. Preindustrial metallurgy scaled on charcoal logistics: forests, kilns, and transport to furnaces.",
   "overview": "Charcoal is produced by pyrolysis — heating wood in an oxygen-limited environment until non-carbon gases and tars leave, leaving fixed carbon and mineral ash. Practically, this is done in a mound kiln or brick kiln where combustion of a portion of the charge heats the rest while smoke exits through vents, and air ingress is restricted enough to carbonise rather than fully burn the load.\n\nA simple earth mound covers stacked billets; a central chimney or flue path is created; kindling at the base is lit; as the fire establishes, the outer soil or turf seals cracks. Operators monitor smoke colour and smell — stages shift from white steam to blue volatiles to thinning smoke as carbonisation completes. Water quench or airtight smothering stops the burn at charcoal stage.\n\nQuality depends on wood species (density and ash chemistry), uniformity of piece size, and peak temperature profile. Hardwoods historically preferred in many regions for metallurgical charcoal because of structural strength of pieces and favourable ash chemistry, though conifers can work with process adjustments.\n\nChemically, charcoal is mostly carbon with micropores left by removed cellulose and lignin. Those pores accelerate ignition and surface area for oxidation in furnaces — why charcoal catches easily and burns hot when blown.",
@@ -43,8 +62,8 @@
       "name": "Wood charge",
       "function": "Raw material supplying carbon after pyrolysis",
       "position": "Stacked in kiln with vertical airflow channels",
-      "madeFrom": "Cordwood split to uniform lengths",
-      "criticalNote": "Green wood wastes heat; seasoned wood carbonises more predictably"
+      "madeFrom": "Cordwood split to uniform lengths and similar diameters",
+      "criticalNote": "Green wood wastes heat and creates steam pockets; seasoned wood carbonises more predictably"
     },
     {
       "id": "kiln-shell",
@@ -62,12 +81,36 @@
       "criticalNote": "Too strong a draft over-oxidises and ashes charcoal"
     },
     {
+      "id": "air-vents",
+      "name": "Adjustable air vents",
+      "function": "Admit just enough oxygen to heat the charge without burning it to ash",
+      "position": "Low around the mound or kiln, with top vents used for smoke control",
+      "madeFrom": "Gaps in earth cover, removable stones, brick ports, or metal pipe stubs",
+      "criticalNote": "Vent control is the main operator skill: too much air makes ash, too little stalls carbonisation"
+    },
+    {
+      "id": "monitoring-ports",
+      "name": "Monitoring ports and probes",
+      "function": "Let the operator judge smoke stage and sample the charge without collapsing the kiln",
+      "position": "Small temporary openings at representative zones",
+      "madeFrom": "Wooden plugs, clay patches, iron rod, or green stick probe",
+      "criticalNote": "Any opened port can flash when oxygen hits hot gases; open from the side, not over the face"
+    },
+    {
       "id": "quench",
       "name": "Quench or smother system",
       "function": "Terminates burn at charcoal endpoint",
       "position": "Applied to entire kiln load",
       "madeFrom": "Water, sand, or airtight seal with earth",
-      "warningNote": "Steam explosions if quenching too fast in sealed metal — vent"
+      "criticalNote": "Steam explosions can occur if water is forced into sealed hot metal; vent containers before quenching"
+    },
+    {
+      "id": "sorting-storage",
+      "name": "Sorting and dry storage",
+      "function": "Separates metallurgical lumps, fines, brands, ash, and rejects",
+      "position": "Downwind of the kiln after full cooling",
+      "madeFrom": "Screens, baskets, sacks, covered bins, or clay jars",
+      "criticalNote": "Apparently cold charcoal can hide embers and reignite; hold in a non-combustible quarantine area before indoor storage"
     }
   ],
   "rawMaterials": [
@@ -76,79 +119,158 @@
       "purpose": "Carbon feedstock",
       "earthLocations": [
         "Temperate hardwood forests historically dominant for European metallurgy",
-        "Tropical hardwoods in other traditions"
+        "Tropical hardwoods, coppiced woodland, orchard prunings, and storm-fallen timber where sustainable harvest is possible"
       ],
       "spaceAlternatives": "Any lignocellulosic biomass from hydroponic forestry",
-      "processingRequired": "Cut, split, season to <20% moisture ideally"
+      "processingRequired": "Cut and split to similar thickness; air season under cover until visibly checked and light, ideally below roughly 20% moisture"
+    },
+    {
+      "name": "Small kindling and brands",
+      "purpose": "Ignition and heat transfer through the first burn phase",
+      "earthLocations": [
+        "Dry twigs, bark strips, previous charcoal rejects, and partially carbonised brands"
+      ],
+      "spaceAlternatives": "Electric igniter, hot refractory starter, or methane/oxygen torch in a controlled processing bay",
+      "processingRequired": "Dry separately; keep small fuel away from the main work area until ignition"
     },
     {
       "name": "Clay or turf",
       "purpose": "Seals mound kilns",
       "earthLocations": [
-        "River clays, sod"
+        "River clay, subsoil clay, sod/turf, loam mixed with grass, or mud plaster"
       ],
       "spaceAlternatives": "Regolith binders sintered into bricks",
-      "processingRequired": "Plastic clay kneaded; turf cut in blocks"
+      "processingRequired": "Knead clay with water until plastic; cut turf blocks with roots intact; pre-stage extra patching material"
     },
     {
-      "name": "Ignition tinder",
-      "purpose": "Starts base burn",
+      "name": "Vent and flue formers",
+      "purpose": "Create temporary channels for draft and smoke before the mound settles",
       "earthLocations": [
-        "Dry grass, bark, small kindling"
+        "Straight poles, bundled reeds, split boards, stones, fired bricks, or scrap pipe"
       ],
-      "spaceAlternatives": "Methane torch in advanced habitats",
-      "processingRequired": "Dry thoroughly"
+      "spaceAlternatives": "Ceramic tube, sintered-regolith duct, or removable metal pipe",
+      "processingRequired": "Size channels before stacking; remove or plug as the burn progresses"
+    },
+    {
+      "name": "Water, sand, or loose mineral soil",
+      "purpose": "Emergency fire control and final quench or smothering",
+      "earthLocations": [
+        "Water source within hose/bucket range; dry sand or loose soil beside the kiln"
+      ],
+      "spaceAlternatives": "Airtight refractory chamber with inert gas purge; water is conserved and used only in emergency",
+      "processingRequired": "Stage before ignition; do not begin a burn without enough smothering material to cover every vent"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Prepare a level kiln pad",
-      "description": "Clear vegetation to mineral soil. For a mound kiln, slightly dome the base for drainage. Lay a draft grate of green poles if available to keep bottom airflow.",
+      "title": "Select the site and firebreak",
+      "description": "Choose mineral soil away from buildings, dry grass, roots, peat, tents, and overhanging branches. Clear a firebreak around the work area and stage water, sand, or loose soil before any ignition.",
       "prerequisiteTools": [
         "shovel",
-        "rake"
+        "rake",
+        "water buckets or sand"
       ],
-      "warningNote": "Choose sites away from structures; sparks travel"
+      "warningNote": "Do not build charcoal kilns over buried roots or peat; heat can spread underground and reappear as a delayed wildfire"
     },
     {
       "order": 2,
-      "title": "Stack wood with a central flue",
-      "description": "Stand billets vertically around a central chimney space of kindling. Tight outer perimeter, looser centre for ignition. Cover with thinner sticks then sealing layer.",
+      "title": "Prepare and sort the wood",
+      "description": "Cut billets to similar length and split thick pieces so the charge dries and carbonises evenly. Separate wet, rotten, bark-heavy, and resin-heavy pieces from the main metallurgical batch.",
       "prerequisiteTools": [
         "axe",
+        "saw",
         "wedges"
       ],
-      "warningNote": "Unstable stacks collapse during burn — brace if tall"
+      "warningNote": "Axe and saw injuries are more likely when processing large fuel piles; keep a first-aid kit and maintain clear swing zones"
     },
     {
       "order": 3,
-      "title": "Seal with turf or clay",
-      "description": "Pack soil/turf into cracks; leave top vent until smoke establishes white steam phase, then throttle vents to slow oxygen. Monitor for days depending on scale.",
+      "title": "Lay the base and flue",
+      "description": "Prepare a slightly raised or domed base for drainage. Build a central chimney or offset flue with kindling and straight billets, and leave low air channels around the perimeter so the first burn can establish.",
       "prerequisiteTools": [
-        "gloves",
-        "shovel"
+        "stakes or poles",
+        "shovel",
+        "gloves"
       ],
-      "warningNote": "Carbon monoxide risk — do not lean into vents"
+      "warningNote": "The stack must be stable enough to settle without falling outward; falling hot billets can ignite the cover and injure workers"
     },
     {
       "order": 4,
-      "title": "Judge endpoint",
-      "description": "When smoke thins and blue haze diminishes, inner zones are likely carbonised. Probe colour through a test port — black, ringing pieces indicate charcoal.",
+      "title": "Stack the charge and cover it",
+      "description": "Pack billets tightly around the flue, with larger pieces toward the lower and outer zones and smaller pieces toward the ignition core. Cover first with leafy brush or thin sticks to stop soil falling through, then seal with turf, clay, or damp loam.",
       "prerequisiteTools": [
-        "iron rod probe"
+        "axe",
+        "shovel",
+        "covering material"
       ],
-      "warningNote": "Opening kiln admits oxygen — partial burns can flash"
+      "warningNote": "Leave intentional vents; an unvented hot mound can build pressure and force smoke or flame through weak spots"
     },
     {
       "order": 5,
-      "title": "Quench and grade",
-      "description": "Smother with earth or sprinkle water carefully. Sort out brands, ash-heavy ends, and fines for separate uses — fines useful as powder, lumps for furnace.",
+      "title": "Ignite and establish draft",
+      "description": "Light the kindling at the base or central flue. Keep top and low vents open until the burn is established and white steam-heavy smoke shows that water is being driven off.",
+      "prerequisiteTools": [
+        "fire source",
+        "long lighting stick",
+        "gloves"
+      ],
+      "warningNote": "Smoke and carbon monoxide are concentrated near vents; stand upwind and never put your head over an opening"
+    },
+    {
+      "order": 6,
+      "title": "Throttle for carbonisation",
+      "description": "Once the mound is hot, reduce air by patching cracks and partly closing vents. Aim for slow carbonisation: enough oxygen to keep heat moving, not enough to burn the whole charge to ash.",
+      "prerequisiteTools": [
+        "clay patches",
+        "shovel",
+        "vent plugs"
+      ],
+      "warningNote": "Blue flame or roaring draft means too much oxygen; uncontrolled air leaks can destroy the batch and spread fire"
+    },
+    {
+      "order": 7,
+      "title": "Monitor smoke and settling",
+      "description": "Check the kiln repeatedly. White smoke indicates drying, thicker yellow-brown smoke indicates tarry volatiles, and thinning blue-grey smoke suggests later carbonisation. Patch sinkholes and leaks as the stack settles.",
+      "prerequisiteTools": [
+        "long probe",
+        "shovel",
+        "protective gloves"
+      ],
+      "warningNote": "Do not work alone on a live kiln; CO has no reliable smell and can incapacitate workers without warning"
+    },
+    {
+      "order": 8,
+      "title": "Test the endpoint carefully",
+      "description": "Open a small side test port, not the top, and pull a sample with a long probe. Finished pieces are black through the section, lighter than wood, and ring or snap rather than bend. Reseal if brown wood remains.",
+      "prerequisiteTools": [
+        "iron rod probe",
+        "tongs",
+        "clay plug"
+      ],
+      "warningNote": "Opening any hot kiln admits oxygen; flash ignition is possible, so keep face and hands out of the gas path"
+    },
+    {
+      "order": 9,
+      "title": "Smother, cool, and quarantine",
+      "description": "Close all vents and cover leaks with mineral soil. Let the kiln cool fully before unloading; small mounds may need many hours, large mounds can need days. If water is used, sprinkle from outside and keep steam escape paths open.",
+      "prerequisiteTools": [
+        "shovel",
+        "sand or soil",
+        "water only if needed"
+      ],
+      "warningNote": "Hot charcoal can reignite when exposed to air; keep the unloaded batch outdoors on bare mineral soil until every piece is cold"
+    },
+    {
+      "order": 10,
+      "title": "Grade and store the product",
+      "description": "Separate large dense lumps for furnaces, medium pieces for cooking and forge fuel, fines for briquettes or filtering, and brown brands for the next charcoal burn. Store dry but ventilated, away from living spaces.",
       "prerequisiteTools": [
         "screens optional",
-        "containers"
+        "metal or clay containers",
+        "dust mask or damp cloth"
       ],
-      "warningNote": "Hot charcoal ignites when dry — store cooled"
+      "warningNote": "Charcoal dust irritates lungs and is combustible; avoid enclosed dusty sorting and keep sparks away"
     }
   ],
   "history": [
@@ -163,10 +285,25 @@
       "location": "Global temperate zones"
     },
     {
+      "year": "Medieval period",
+      "event": "Charcoal burning becomes a specialised woodland trade in many iron-producing regions, with coppice rotations linking forest management to furnace output.",
+      "location": "Europe, Japan, parts of Africa and Asia"
+    },
+    {
       "year": 1709,
       "event": "Abraham Darby's Coalbrookdale works pioneers coke-smelted iron in Britain — a transition that eventually reduces dependence on charcoal for some iron processes, though charcoal remains essential in many regions for centuries.",
       "location": "Shropshire, United Kingdom",
       "person": "Abraham Darby I"
+    },
+    {
+      "year": "19th century",
+      "event": "Large ironworks and foundries still consume charcoal where forests, water power, and transport make charcoal iron competitive or where low-sulfur fuel is needed.",
+      "location": "North America, Scandinavia, Brazil"
+    },
+    {
+      "year": "20th-21st centuries",
+      "event": "Improved kilns, retorts, and biochar systems revisit carbonisation for rural energy, soil carbon, and lower-emission biomass processing.",
+      "location": "Global"
     }
   ],
   "inventors": [],
@@ -185,23 +322,50 @@
   "externalLinks": [
     {
       "id": "fao-charcoal",
-      "title": "FAO — wood energy / charcoal context",
-      "url": "https://www.fao.org/forestry/energy/en/"
+      "title": "FAO - Simple technologies for charcoal making",
+      "url": "https://www.fao.org/4/X5328E/X5328E00.htm",
+      "note": "Full FAO Forestry Paper 41 manual for small-scale charcoal production"
+    },
+    {
+      "id": "cpsc-charcoal-co",
+      "title": "CPSC - charcoal and carbon monoxide safety",
+      "url": "https://www.cpsc.gov/Safety-Education/Safety-Education-Centers/Carbon-Monoxide-Information-Center/Charcoal/",
+      "note": "Consumer safety warning on CO poisoning from charcoal in enclosed spaces"
     }
   ],
-  "lastUpdated": "2026-04-10",
+  "lastUpdated": "2026-05-02",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
     "reviewDate": null,
-    "warnings": [],
+    "warnings": [
+      "Carbon monoxide poisoning near vents, cooling bins, and stored or burning charcoal",
+      "Delayed reignition of apparently cold charcoal",
+      "Wildfire and underground root/peat fire risk",
+      "Flash ignition when opening hot kilns",
+      "Charcoal dust inhalation and combustible dust risk"
+    ],
     "sources": [
       {
-        "id": "src-epa",
-        "title": "U.S. EPA — Environmental topics portal",
-        "url": "https://www.epa.gov/",
+        "id": "src-fao-simple-charcoal",
+        "title": "FAO Forestry Paper 41 - Simple Technologies for Charcoal Making",
+        "url": "https://www.fao.org/4/X5328E/X5328E00.htm",
         "type": "institution",
-        "note": "Air quality, emissions, and environmental chemistry relevant to pyrolysis and charcoal production"
+        "note": "Small-scale charcoal production, earth mounds, pits, kilns, logistics, and storage"
+      },
+      {
+        "id": "src-fao-industrial-charcoal",
+        "title": "FAO Forestry Paper 63 - Industrial Charcoal Making",
+        "url": "https://www.fao.org/4/X5555E/x5555e00.htm",
+        "type": "institution",
+        "note": "Carbonisation stages, efficiency, quality, and industrial safety considerations"
+      },
+      {
+        "id": "src-cpsc-charcoal-co",
+        "title": "U.S. Consumer Product Safety Commission - Charcoal Carbon Monoxide Warning",
+        "url": "https://www.cpsc.gov/Safety-Education/Safety-Education-Centers/Carbon-Monoxide-Information-Center/Charcoal/",
+        "type": "institution",
+        "note": "Carbon monoxide safety warning for charcoal use in enclosed areas"
       },
       {
         "id": "src-wiki-charcoal",
@@ -209,15 +373,8 @@
         "url": "https://en.wikipedia.org/wiki/Charcoal",
         "type": "wikipedia",
         "note": "Manufacturing routes, chemistry overview, and references"
-      },
-      {
-        "id": "src-nps-campfire",
-        "title": "U.S. National Park Service — Campfires article",
-        "url": "https://www.nps.gov/articles/campfires.htm",
-        "type": "institution",
-        "note": "Outdoor fire safety and responsible burning practices"
       }
     ]
   },
-  "maturity": "researched"
+  "maturity": "review-needed"
 }

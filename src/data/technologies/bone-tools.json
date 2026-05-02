@@ -59,6 +59,14 @@
       "function": "Comfort and torque transmission for awls and chisels",
       "position": "Proximal end; sometimes wrapped with cordage",
       "madeFrom": "Unmodified bone surface or wrapped fibre"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Bone Tools is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [

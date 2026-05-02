@@ -9,9 +9,30 @@
     "writing-early-systems",
     "sanitation-and-clean-water"
   ],
-  "unlocks": [],
-  "problem": "Before germ theory, sickness looked like bad air, curses, or spontaneous decay. Those models fail because they cannot explain why washing hands reduces childbirth fever, why boiling water reduces diarrheal disease, or why outbreaks cluster in contact networks.\n\nThe practical problem is not philosophy. It is prevention and triage: if you do not know how infection spreads, you cannot reliably protect caregivers, keep wounds clean, manage waste, or design safe water and food systems.",
-  "overview": "Germ theory states that many diseases are caused by microorganisms that enter the body, multiply, and damage tissues directly or via toxins and immune response. Transmission depends on routes: water, food, droplets, aerosols, surfaces, vectors, and blood.\n\nThe theory becomes operational when you can break a transmission chain. That means controlling contamination, separating clean and dirty workflows, improving ventilation, disinfecting surfaces, and using barriers (gloves, masks) when appropriate.\n\nFor collapse recovery and space settlement, germ theory is a force multiplier: it turns soap, water, heat, and workflow discipline into lower mortality even without advanced drugs.",
+  "unlocks": [
+    "bandage-sterilization",
+    "basic-epidemiology",
+    "burn-care-principles",
+    "child-growth-monitoring",
+    "community-health-records",
+    "dental-hygiene",
+    "fracture-splinting",
+    "heat-illness-response",
+    "hypothermia-response",
+    "isolation-ward-workflow",
+    "maternal-hygiene",
+    "nutrition-screening",
+    "oral-rehydration-stock-management",
+    "oral-rehydration-therapy",
+    "pharmacy-inventory-control",
+    "sharps-waste-handling",
+    "triage-systems",
+    "vaccination-cold-chain",
+    "vector-control",
+    "vital-signs-monitoring"
+  ],
+  "problem": "Before germ theory, sickness looked like bad air, curses, or spontaneous decay. Those models fail because they cannot explain why washing hands reduces childbirth fever, why boiling water reduces diarrheal disease, or why outbreaks cluster in contact networks.\n\nThe practical problem is not philosophy. It is prevention and triage: if you do not know how infection spreads, you cannot reliably protect caregivers, keep wounds clean, manage waste, or design safe water and food systems.\n\nThe remaining problem for Germ Theory of Disease is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats germ theory of disease as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "Germ theory states that many diseases are caused by microorganisms that enter the body, multiply, and damage tissues directly or via toxins and immune response. Transmission depends on routes: water, food, droplets, aerosols, surfaces, vectors, and blood.\n\nThe theory becomes operational when you can break a transmission chain. That means controlling contamination, separating clean and dirty workflows, improving ventilation, disinfecting surfaces, and using barriers (gloves, masks) when appropriate.\n\nFor collapse recovery and space settlement, germ theory is a force multiplier: it turns soap, water, heat, and workflow discipline into lower mortality even without advanced drugs.\n\nIn collapse recovery, germ theory of disease must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Transmission routes",
@@ -54,6 +75,14 @@
       "function": "Reduce transfer between dirty and clean",
       "position": "Hands, tools, surfaces",
       "madeFrom": "Soap, water, heat, procedures"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Germ Theory of Disease is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [
@@ -187,7 +216,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "review-needed",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

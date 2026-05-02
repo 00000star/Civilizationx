@@ -88,6 +88,7 @@ export const PLANNER_SCENARIOS: PlannerScenario[] = [
       "pulley",
       "wheel-and-axle",
       "cart-and-wagon",
+      "field-agriculture",
       "food-preservation",
     ],
   },
@@ -148,8 +149,8 @@ export const PLANNER_GOALS: PlannerGoal[] = [
   {
     id: "preserve-food",
     name: "Preserve food and extend calories",
-    problem: "Prevent starvation by cooking safely, preserving food, and using controlled fermentation.",
-    targetTechIds: ["cooking", "food-preservation", "fermentation-basic"],
+    problem: "Prevent starvation by producing crops, cooking safely, preserving food, and using controlled fermentation.",
+    targetTechIds: ["cooking", "field-agriculture", "food-preservation", "fermentation-basic"],
   },
   {
     id: "make-metal",

@@ -10,8 +10,8 @@
     "bricks-and-fired-masonry"
   ],
   "unlocks": [],
-  "problem": "Lime mortars cure slowly and weaken in wet conditions without careful design. Large infrastructure needs a binder that hardens in water, develops predictable strength, and can be poured into forms to create complex shapes.\n\nConcrete solves that by combining aggregates with a hydraulic cement that reacts with water to form strength-giving mineral phases. The challenge is quality control: cement chemistry, aggregate grading, water ratio, and curing dominate outcomes.",
-  "overview": "Portland cement is produced by heating limestone and clay to form clinker, then grinding clinker with gypsum. Mixed with water, cement hydrates to form calcium silicate hydrates that bind aggregates into a stone-like composite.\n\nConcrete performance depends on mix design and curing. Too much water makes it weak and porous; too little prevents full hydration. Proper curing retains moisture and moderates temperature to prevent cracking and shrinkage failures.\n\nIn space contexts, cement chemistry may be constrained by feedstocks and water budget; alternatives include sulfur concrete, geopolymer binders, and sintered regolith depending on site resources.",
+  "problem": "Lime mortars cure slowly and weaken in wet conditions without careful design. Large infrastructure needs a binder that hardens in water, develops predictable strength, and can be poured into forms to create complex shapes.\n\nConcrete solves that by combining aggregates with a hydraulic cement that reacts with water to form strength-giving mineral phases. The challenge is quality control: cement chemistry, aggregate grading, water ratio, and curing dominate outcomes.\n\nThe remaining problem for Concrete and Portland Cement is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats concrete and portland cement as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "Portland cement is produced by heating limestone and clay to form clinker, then grinding clinker with gypsum. Mixed with water, cement hydrates to form calcium silicate hydrates that bind aggregates into a stone-like composite.\n\nConcrete performance depends on mix design and curing. Too much water makes it weak and porous; too little prevents full hydration. Proper curing retains moisture and moderates temperature to prevent cracking and shrinkage failures.\n\nIn space contexts, cement chemistry may be constrained by feedstocks and water budget; alternatives include sulfur concrete, geopolymer binders, and sintered regolith depending on site resources.\n\nIn collapse recovery, concrete and portland cement must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Hydraulic hydration",
@@ -54,6 +54,14 @@
       "function": "Shapes concrete; carries tension if reinforced",
       "position": "Around/within pour",
       "madeFrom": "Wood/steel forms; steel rebar"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Concrete and Portland Cement is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [
@@ -184,7 +192,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "review-needed",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

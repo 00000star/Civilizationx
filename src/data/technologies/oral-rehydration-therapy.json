@@ -1,0 +1,323 @@
+{
+  "id": "oral-rehydration-therapy",
+  "name": "Oral Rehydration Therapy",
+  "tagline": "A glucose-electrolyte treatment system that prevents many diarrhoeal dehydration deaths before intravenous care is available",
+  "category": "medicine",
+  "era": "mid-20th",
+  "difficulty": 2,
+  "prerequisites": [
+    "sanitation-and-clean-water",
+    "first-aid-and-wound-care",
+    "germ-theory"
+  ],
+  "unlocks": [],
+  "problem": "Diarrhoeal disease can kill by dehydration faster than many settlements can move a patient to advanced care. The danger is not simply water loss. Liquid stool and vomiting remove sodium, chloride, potassium, bicarbonate, and water together. Replacing only plain water can leave the body short of salts; replacing only salty fluid can worsen dehydration or sodium imbalance.\n\nOral rehydration therapy solves a narrow but enormous problem: many patients with no or some dehydration can absorb water and salts through the gut when the solution contains the right balance of glucose and electrolytes. This makes treatment possible at home, in clinics, during outbreaks, and in transport corridors where intravenous fluids, sterile lines, trained staff, and pumps are scarce.\n\nThe technology is deceptively simple and therefore easy to misuse. The powder must be mixed with the correct volume of safe water. Too little water makes a dangerously concentrated drink; too much water dilutes the salts. Severe dehydration, shock, repeated vomiting, altered consciousness, very young infants, severe malnutrition, blood in stool, persistent diarrhoea, and cholera outbreaks require trained clinical assessment. ORT is a life-saving bridge and first-line tool, not permission to ignore danger signs.",
+  "overview": "Oral rehydration therapy (ORT) is the controlled use of oral rehydration salts (ORS) solution, continued feeding, monitoring, and escalation rules. The modern WHO/UNICEF low-osmolarity ORS formula is designed so glucose and sodium transport help move water across the intestinal wall even during many diarrhoeal illnesses.\n\nA practical ORT system has five parts. First, safe water: the solution is only as safe as the water and vessel used to prepare it. Second, correct mixing: packets are designed for a stated water volume and should not be split casually unless precise measuring is available. Third, continued intake: small, repeated sips are often more realistic than large drinks, especially after vomiting. Fourth, nutrition: breastfeeding and appropriate feeding usually continue because starvation worsens recovery. Fifth, triage: caregivers must know when ORT is insufficient and urgent care is needed.\n\nFor collapse recovery, ORT belongs beside clean water, latrines, soap, records, and outbreak reporting. A settlement should store factory ORS packets, train caregivers before outbreaks, print local-language danger signs, and keep mixing vessels marked for exact volumes. For space settlement, ORT remains relevant because closed habitats can still have gastrointestinal outbreaks, but every episode also triggers contamination tracing through food, water, hygiene, and waste loops.\n\nThis entry is marked review-needed because it is medical. The Codex can preserve the operating model, source trail, warning structure, and logistics, but clinical protocols must be checked by qualified medical staff before use.",
+  "principles": [
+    {
+      "name": "Glucose-sodium co-transport",
+      "explanation": "Correctly balanced glucose and sodium can help the intestine absorb water and electrolytes during many diarrhoeal illnesses."
+    },
+    {
+      "name": "Correct concentration matters",
+      "explanation": "ORS is not ordinary sweet water. Wrong powder-to-water ratios can be ineffective or dangerous, especially for children."
+    },
+    {
+      "name": "Triage before confidence",
+      "explanation": "ORT is appropriate for many cases with no or some dehydration, but severe dehydration or danger signs require urgent clinical care."
+    },
+    {
+      "name": "Treatment plus prevention",
+      "explanation": "ORS treats dehydration risk; sanitation, clean water, hand hygiene, breastfeeding, nutrition, and outbreak control reduce the cause."
+    }
+  ],
+  "components": [
+    {
+      "id": "ors-packets",
+      "name": "ORS packets or verified formulation supply",
+      "function": "Provides glucose and electrolytes in the correct proportions",
+      "position": "Medical stores, household kits, clinic dispensary, outbreak carts",
+      "madeFrom": "Factory-produced low-osmolarity ORS packets or professionally compounded ingredients",
+      "criticalNote": "Do not improvise powder ratios when packets or trained pharmacy support are available"
+    },
+    {
+      "id": "safe-water",
+      "name": "Safe water source",
+      "function": "Carries the ORS into the patient without adding pathogens",
+      "position": "Prepared before mixing",
+      "madeFrom": "Boiled, chlorinated, filtered, or otherwise verified potable water",
+      "criticalNote": "Contaminated mixing water can worsen the diarrhoeal disease being treated"
+    },
+    {
+      "id": "marked-mixing-vessel",
+      "name": "Marked mixing vessel",
+      "function": "Ensures the packet is dissolved in the intended water volume",
+      "position": "Clinic bench, household kit, rehydration point",
+      "madeFrom": "Food-safe bottle, jug, cup, or bucket with durable volume markings",
+      "criticalNote": "A packet made for one litre must not be guessed into an unmarked container"
+    },
+    {
+      "id": "administration-tools",
+      "name": "Administration tools",
+      "function": "Allows frequent small volumes for children or vomiting patients",
+      "position": "At bedside or caregiver station",
+      "madeFrom": "Clean cup, spoon, syringe without needle, feeding cup, or oral dosing device",
+      "criticalNote": "Shared cups and spoons can spread infection unless cleaned between patients"
+    },
+    {
+      "id": "danger-sign-chart",
+      "name": "Danger sign and referral chart",
+      "function": "Tells caregivers when oral treatment is not enough",
+      "position": "Clinic wall, household card, outbreak station",
+      "madeFrom": "Printed waterproof sheet, laminated card, or copied poster",
+      "criticalNote": "Severe dehydration, lethargy, inability to drink, blood in stool, and shock signs need urgent care"
+    },
+    {
+      "id": "case-record",
+      "name": "Case and stock record",
+      "function": "Tracks patient status, fluid offered, losses, danger signs, and ORS stock",
+      "position": "Clinic register or household illness log",
+      "madeFrom": "Paper forms, notebook, pencil, labels, stock cards",
+      "criticalNote": "Outbreaks are missed when cases are treated silently without records"
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Low-osmolarity ORS packets",
+      "purpose": "Standardised glucose-electrolyte replacement for diarrhoeal dehydration prevention and treatment",
+      "earthLocations": [
+        "Clinics, pharmacies, public-health stores, disaster-relief kits, humanitarian supply chains"
+      ],
+      "spaceAlternatives": "Carry sealed packets as medical stores; long-term habitats need pharmacy-grade ingredients, calibrated scales, clean packaging, expiry tracking, and clinical governance.",
+      "processingRequired": "Store dry, check expiry and packet integrity, mix only with the labelled water volume, and discard mixed solution according to local medical guidance"
+    },
+    {
+      "name": "Potable water",
+      "purpose": "Dissolves ORS safely and replaces fluid losses",
+      "earthLocations": [
+        "Protected wells, treated municipal water, boiled water, chlorinated emergency water"
+      ],
+      "spaceAlternatives": "Use verified potable water from the habitat life-support loop; any gastrointestinal outbreak should trigger water-system contamination checks.",
+      "processingRequired": "Treat and cool water before mixing; use clean covered vessels; prevent hands, cups, or ladles from contaminating the batch"
+    },
+    {
+      "name": "Clean cups, spoons, and dosing tools",
+      "purpose": "Administers small repeated amounts and reduces caregiver contamination",
+      "earthLocations": [
+        "Households, clinics, kitchens, emergency health kits"
+      ],
+      "spaceAlternatives": "Reusable food-safe dosing tools must be assigned, cleaned, dried, and logged like other medical support equipment.",
+      "processingRequired": "Wash with soap and safe water, disinfect or boil where appropriate, dry cleanly, and do not share between infectious patients without cleaning"
+    },
+    {
+      "name": "Printed clinical guidance and danger signs",
+      "purpose": "Prevents false confidence and standardises referral decisions",
+      "earthLocations": [
+        "WHO/UNICEF materials, health-ministry posters, clinic protocols, training cards"
+      ],
+      "spaceAlternatives": "Maintain offline medical protocols in redundant digital and printed form; update only through qualified medical review.",
+      "processingRequired": "Translate locally, keep visible at rehydration points, train caregivers, and review after drills or outbreaks"
+    },
+    {
+      "name": "Zinc supply where clinically recommended",
+      "purpose": "Supports guideline-based diarrhoeal disease management in children where protocols call for it",
+      "earthLocations": [
+        "Clinics, pharmacies, child-health programmes"
+      ],
+      "spaceAlternatives": "Include paediatric medicine stores only under medical inventory control with expiry, dose-form, and contraindication review.",
+      "processingRequired": "Use only according to current clinical guidance; dosing, age limits, formulation, and contraindications require medical verification"
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Assess dehydration and danger signs first",
+      "description": "Check whether the patient is alert, able to drink, urinating, breathing normally, and showing signs of severe dehydration or shock. Look for blood in stool, persistent vomiting, fever, very young age, severe malnutrition, or worsening condition.",
+      "prerequisiteTools": [
+        "danger sign chart",
+        "case record",
+        "trained caregiver"
+      ],
+      "warningNote": "Severe dehydration, lethargy, inability to drink, shock signs, or blood in stool require urgent clinical care; do not rely on ORT alone"
+    },
+    {
+      "order": 2,
+      "title": "Prepare safe water and a clean vessel",
+      "description": "Treat water if needed, let boiled water cool, wash hands, and use a clean food-safe container with the exact volume marking required by the ORS packet.",
+      "prerequisiteTools": [
+        "safe water",
+        "soap",
+        "marked vessel"
+      ],
+      "warningNote": "Unsafe water or dirty vessels can intensify infection and spread disease to caregivers"
+    },
+    {
+      "order": 3,
+      "title": "Mix ORS exactly as labelled",
+      "description": "Empty the full packet into the stated water volume and stir until dissolved. Do not casually split packets, add extra sugar or salt, boil the mixed solution, or mix with milk, juice, or unsafe drinks.",
+      "prerequisiteTools": [
+        "ORS packet",
+        "marked vessel",
+        "stirring tool"
+      ],
+      "warningNote": "Wrong concentration can be dangerous; concentrated ORS can worsen salt imbalance, and diluted ORS may fail to treat dehydration"
+    },
+    {
+      "order": 4,
+      "title": "Give small repeated amounts and continue feeding",
+      "description": "Offer frequent small sips or spoonfuls, especially after each loose stool or vomiting episode, following local clinical guidance for age and severity. Continue breastfeeding and appropriate food unless a qualified clinician directs otherwise.",
+      "prerequisiteTools": [
+        "clean cup or spoon",
+        "caregiver",
+        "feeding plan"
+      ],
+      "warningNote": "Do not force fluid into a drowsy, unconscious, or choking patient; urgent clinical support is required"
+    },
+    {
+      "order": 5,
+      "title": "Monitor response and losses",
+      "description": "Record stool frequency, vomiting, ability to drink, urine, thirst, alertness, and whether symptoms improve. Replace lost fluid according to clinical instructions and watch for deterioration.",
+      "prerequisiteTools": [
+        "case record",
+        "clock",
+        "danger sign chart"
+      ],
+      "warningNote": "A patient who worsens, stops urinating, becomes lethargic, or cannot keep fluid down needs urgent reassessment"
+    },
+    {
+      "order": 6,
+      "title": "Prevent spread while treating",
+      "description": "Isolate stool and vomit safely, wash hands after caregiving, disinfect contaminated surfaces, protect drinking water, and record clustered cases for outbreak response.",
+      "prerequisiteTools": [
+        "soap",
+        "latrine or waste container",
+        "cleaning supplies"
+      ],
+      "warningNote": "Treating dehydration without controlling faecal contamination lets the outbreak continue"
+    },
+    {
+      "order": 7,
+      "title": "Manage storage and stock",
+      "description": "Keep unopened packets dry, rotate by expiry date, discard damaged packets, label mixed solution with time made, and replenish stocks after each episode or drill.",
+      "prerequisiteTools": [
+        "stock card",
+        "dry storage",
+        "labels"
+      ],
+      "warningNote": "Old, damp, mislabelled, or contaminated ORS supplies should not be used for patients"
+    }
+  ],
+  "history": [
+    {
+      "year": "1960s",
+      "event": "Clinical research demonstrates that glucose-electrolyte oral solutions can treat dehydration from diarrhoeal disease in many patients.",
+      "location": "South Asia and international clinical research centres"
+    },
+    {
+      "year": "1970s",
+      "event": "Oral rehydration therapy scales through cholera and diarrhoeal disease programmes, proving practical outside fully equipped hospitals.",
+      "location": "Bangladesh, India, refugee settings, and global public-health programmes"
+    },
+    {
+      "year": "2000s",
+      "event": "WHO and UNICEF recommend low-osmolarity ORS formulations and zinc supplementation in relevant childhood diarrhoea protocols.",
+      "location": "Global"
+    }
+  ],
+  "inventors": [
+    {
+      "name": "Dilip Mahalanabis",
+      "contribution": "Helped demonstrate large-scale practical use of oral rehydration therapy during cholera and refugee crises",
+      "years": "1934-2022",
+      "nationality": "Indian"
+    },
+    {
+      "name": "David R. Nalin",
+      "contribution": "Contributed to clinical research establishing oral rehydration therapy for cholera-related dehydration",
+      "years": "1941-",
+      "nationality": "American"
+    },
+    {
+      "name": "Norbert Hirschhorn",
+      "contribution": "Contributed to research and dissemination of oral rehydration therapy",
+      "years": "1938-",
+      "nationality": "American"
+    }
+  ],
+  "impact": "Oral rehydration therapy is one of the clearest examples of simple knowledge saving large numbers of lives. It reduces dependence on intravenous fluids, lets trained families and community health workers act early, and turns diarrhoeal outbreaks from immediate mass-fatality events into manageable public-health emergencies when water, sanitation, records, and referral systems also function.\n\nIts civilizational value is not only the packet. It is the protocol: safe water, exact mixing, continued feeding, monitoring, danger signs, outbreak reporting, and supply chains. A settlement that can preserve ORT knowledge has a better chance of keeping children alive through contaminated water events, displacement, cholera, and infrastructure collapse.",
+  "images": [
+    {
+      "id": "workflow",
+      "filename": "workflow.svg",
+      "caption": "Oral rehydration workflow: assess danger signs, mix safely, offer repeated fluids, monitor, prevent spread, escalate when needed",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "who-ors-production",
+      "title": "WHO - Oral rehydration salts: production of the new ORS",
+      "url": "https://www.who.int/publications/i/item/WHO-FCH-CAH-06.1",
+      "note": "Official WHO document on ORS formulation and production"
+    },
+    {
+      "id": "who-diarrhoea",
+      "title": "WHO - Diarrhoea",
+      "url": "https://www.who.int/health-topics/diarrhoea",
+      "note": "WHO overview of diarrhoeal disease, ORS, zinc, nutrition, and referral concerns"
+    },
+    {
+      "id": "cdc-cholera-treatment",
+      "title": "CDC - Treating cholera",
+      "url": "https://www.cdc.gov/cholera/treatment/index.html",
+      "note": "CDC clinical orientation on cholera dehydration and rehydration therapy"
+    }
+  ],
+  "lastUpdated": "2026-05-02",
+  "maturity": "review-needed",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [
+      "Contraindications: age, severe malnutrition, inability to drink, altered mental status, shock, persistent vomiting, blood in stool, and comorbid illness can require urgent clinical care instead of household management",
+      "Overdose: incorrect concentration, wrong packet-to-water ratio, inappropriate added salt or sugar, or unsupervised electrolyte supplementation can cause serious harm",
+      "Sterility: ORS does not need sterile preparation like an injection, but water, vessels, hands, and dosing tools must be clean enough to avoid adding pathogens",
+      "Professional verification is required before use on a human being.",
+      "ORT does not replace intravenous therapy for severe dehydration or shock"
+    ],
+    "sources": [
+      {
+        "id": "src-who-ors-production",
+        "title": "WHO - Oral Rehydration Salts: Production of the new ORS",
+        "url": "https://www.who.int/publications/i/item/WHO-FCH-CAH-06.1",
+        "type": "institution",
+        "note": "Official ORS production and formulation reference"
+      },
+      {
+        "id": "src-who-diarrhoea",
+        "title": "WHO - Diarrhoea",
+        "url": "https://www.who.int/health-topics/diarrhoea",
+        "type": "institution",
+        "note": "ORS as a life-saving commodity, nutrition continuation, dehydration signs, and professional consultation guidance"
+      },
+      {
+        "id": "src-who-zinc-diarrhoea",
+        "title": "WHO - Zinc supplementation in the management of diarrhoea",
+        "url": "https://www.who.int/tools/elena/bbc/zinc-diarrhoea",
+        "type": "institution",
+        "note": "Evidence and programme guidance on zinc as part of diarrhoeal disease management"
+      },
+      {
+        "id": "src-cdc-cholera-treatment",
+        "title": "CDC - Treating Cholera",
+        "url": "https://www.cdc.gov/cholera/treatment/index.html",
+        "type": "institution",
+        "note": "Rehydration therapy as the primary treatment priority for cholera dehydration"
+      }
+    ]
+  }
+}

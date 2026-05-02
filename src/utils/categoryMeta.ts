@@ -1,5 +1,21 @@
 import type { TechCategory } from "../types/technology";
 
+export const TECH_CATEGORIES: TechCategory[] = [
+  "survival",
+  "food",
+  "materials",
+  "energy",
+  "tools",
+  "transport",
+  "construction",
+  "medicine",
+  "communication",
+  "computing",
+  "agriculture",
+  "warfare",
+  "science",
+];
+
 export const CATEGORY_LABEL: Record<TechCategory, string> = {
   survival: "Survival",
   food: "Food",

@@ -13,8 +13,8 @@
   "unlocks": [
     "ai-safety-and-governance"
   ],
-  "problem": "Training data determines model behavior. Uncurated corpora contain duplicates, low-quality text, toxic content, private information, and licensing problems.\n\nDataset curation solves the governance problem: make data selection auditable, repeatable, and safe enough to support long-term systems without legal or ethical collapse.",
-  "overview": "Curation includes provenance tracking, deduplication, filtering, normalization, and documentation. Governance includes access control, privacy review, and a change log so future teams can reproduce or revise decisions.\n\nFor off-world settlement and collapse recovery, curated datasets matter even more: you cannot afford wasted compute or unsafe behavior from corrupted corpora.",
+  "problem": "Training data determines model behavior. Uncurated corpora contain duplicates, low-quality text, toxic content, private information, and licensing problems.\n\nDataset curation solves the governance problem: make data selection auditable, repeatable, and safe enough to support long-term systems without legal or ethical collapse.\n\nThe remaining problem for Dataset Curation and Governance is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats dataset curation and governance as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "Curation includes provenance tracking, deduplication, filtering, normalization, and documentation. Governance includes access control, privacy review, and a change log so future teams can reproduce or revise decisions.\n\nFor off-world settlement and collapse recovery, curated datasets matter even more: you cannot afford wasted compute or unsafe behavior from corrupted corpora.\n\nIn collapse recovery, dataset curation and governance must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Provenance",
@@ -57,6 +57,14 @@
       "function": "Explains decisions and limitations",
       "position": "Artifact",
       "madeFrom": "Text and examples"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Dataset Curation and Governance is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [
@@ -134,6 +142,17 @@
         "version control"
       ],
       "warningNote": "Unversioned data makes training irreproducible."
+    },
+    {
+      "order": 5,
+      "title": "Define the local purpose and stop conditions",
+      "description": "Write down why Dataset Curation and Governance is needed, who is responsible, what success looks like, and which conditions require stopping or escalation.",
+      "prerequisiteTools": [
+        "notebook",
+        "local survey",
+        "risk checklist"
+      ],
+      "warningNote": "Do not start a life-critical or infrastructure-critical use without clear stop conditions."
     }
   ],
   "history": [
@@ -182,7 +201,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "draft",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

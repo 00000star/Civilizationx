@@ -69,6 +69,14 @@
       "position": "Eyes around posts, bends around timber, hitches to rings",
       "madeFrom": "Same cordage; wooden fid for thick laid rope later",
       "criticalNote": "Most knots reduce rated strength by 40-60%; splices (interweaving strands) preserve up to 90% strength"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Rope and Cordage is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [
@@ -228,5 +236,5 @@
       }
     ]
   },
-  "maturity": "field-guide-ready"
+  "maturity": "review-needed"
 }

@@ -12,8 +12,8 @@
     "gpu-accelerated-computing"
   ],
   "unlocks": [],
-  "problem": "Many tasks require modeling long-range dependencies in sequences: language, code, and time series. Earlier architectures struggle with long contexts, training instability, and limited parallelism.\n\nTransformers solve this by using attention to connect tokens directly and by enabling highly parallel training on modern accelerators.",
-  "overview": "A transformer encodes tokens into vectors, applies self-attention to mix information across positions, then uses feed-forward layers and residual connections to build deep representations. Training typically uses gradient descent with backpropagation on large corpora.\n\nScaling behavior depends on data, compute, and optimization. The Codex treats the training recipe as part of the technology: tokenization, objective choice, evaluation, and safety constraints are not optional extras.",
+  "problem": "Many tasks require modeling long-range dependencies in sequences: language, code, and time series. Earlier architectures struggle with long contexts, training instability, and limited parallelism.\n\nTransformers solve this by using attention to connect tokens directly and by enabling highly parallel training on modern accelerators.\n\nThe remaining problem for Transformer Models is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats transformer models as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "A transformer encodes tokens into vectors, applies self-attention to mix information across positions, then uses feed-forward layers and residual connections to build deep representations. Training typically uses gradient descent with backpropagation on large corpora.\n\nScaling behavior depends on data, compute, and optimization. The Codex treats the training recipe as part of the technology: tokenization, objective choice, evaluation, and safety constraints are not optional extras.\n\nIn collapse recovery, transformer models must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Self-attention",
@@ -206,7 +206,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "draft",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

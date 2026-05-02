@@ -66,6 +66,14 @@
       "position": "Pouring floor",
       "madeFrom": "Clay, stone piece-moulds",
       "criticalNote": "Venting prevents gas traps that make porous useless castings"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Smelting (Bronze Age) is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [

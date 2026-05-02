@@ -57,6 +57,14 @@
       "function": "Manages implicature, politeness, turn-taking",
       "position": "Every utterance",
       "madeFrom": "Social norms"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Spoken Language is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [
@@ -68,6 +76,24 @@
       ],
       "spaceAlternatives": "Living communities on Earth; isolated crews rely on scheduled high-bandwidth calls, in-person rotations, and written backups because interplanetary latency removes real-time prosody for months",
       "processingRequired": "Intergenerational teaching institutions"
+    },
+    {
+      "name": "Reference records and operating notes",
+      "purpose": "Preserves the local method, limits, measurements, and revisions for Spoken Language",
+      "earthLocations": [
+        "Libraries, workshops, clinics, schools, field notebooks, maintenance logs, and printed manuals"
+      ],
+      "spaceAlternatives": "Keep redundant digital and printed copies with checksums, revision history, and offline access inside the habitat.",
+      "processingRequired": "Label version, author, date, assumptions, measurement units, and known failure cases."
+    },
+    {
+      "name": "Inspection and measuring tools",
+      "purpose": "Turns guesswork into repeatable checks before people rely on the result",
+      "earthLocations": [
+        "Workshops, labs, clinics, construction sites, farms, and salvage stores"
+      ],
+      "spaceAlternatives": "Use compact multi-use instruments, calibration artifacts, and logged maintenance because replacements are constrained.",
+      "processingRequired": "Calibrate when possible, protect from damage, record uncertainty, and retire tools that drift or break."
     }
   ],
   "buildSteps": [

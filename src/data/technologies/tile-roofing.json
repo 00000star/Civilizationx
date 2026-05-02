@@ -1,0 +1,251 @@
+{
+  "id": "tile-roofing",
+  "name": "Tile Roofing",
+  "tagline": "Tile Roofing as a documented civilization capability: inputs, limits, warnings, records, and recovery pathways",
+  "category": "construction",
+  "era": "ancient",
+  "difficulty": 3,
+  "prerequisites": [
+    "shelter-construction-basic",
+    "basic-hand-tools",
+    "lime-production"
+  ],
+  "unlocks": [],
+  "problem": "Tile Roofing is included because civilizations often fail at the support capabilities between famous inventions. A settlement may know about fire, steel, writing, medicine, or electricity and still lose lives because tile roofing is absent, undocumented, improvised under stress, or held only in one person's memory.\n\nThe practical problem is not just making or doing the thing once. It is making the capability teachable, inspectable, repairable, and bounded by safety rules. The Codex entry must tell a future reader what tile roofing is for, which inputs it depends on, what can go wrong, what needs measurement, and when to stop and escalate rather than pushing a dangerous guess further.",
+  "overview": "Tile Roofing turns materials and labour into safer structures with known load, water, and fire limits. In a recovery setting it should be understood as a small operating system: materials, tools, workspace, trained people, inspection points, maintenance, records, and limits. The entry is therefore structured around the questions a real settlement has to answer before use: what does it prevent, what does it consume, how is it checked, and how does it fail?\n\nFor collapse recovery, the focus is local substitution, safe simplification, and training more than one operator. A process that works only when an expert is present is fragile. For space settlement, the same capability must be redesigned around closed-loop resources, contamination control, power budgets, limited spare parts, and redundant documentation.\n\nThis expansion entry is intentionally conservative. It gives the Codex enough depth for search, planning, teaching, and dependency mapping, but it does not pretend to replace specialist review. Later work should add diagrams, measurements, regional variants, deeper history, and stronger topic-specific sources before promotion to field-guide-ready.",
+  "principles": [
+    {
+      "name": "Function before form",
+      "explanation": "Start with the job tile roofing performs; historical forms can be copied only after their purpose and limits are understood."
+    },
+    {
+      "name": "Inputs determine reliability",
+      "explanation": "Material quality, water, power, labour, weather, contamination, and skill limits usually decide whether the method works."
+    },
+    {
+      "name": "Inspection prevents silent failure",
+      "explanation": "Checklists, measurements, labels, and post-use inspection turn hidden failure into visible maintenance work."
+    },
+    {
+      "name": "Escalation is part of the design",
+      "explanation": "A safe entry states when to stop, isolate the hazard, seek expert help, or switch to a lower-risk alternative."
+    }
+  ],
+  "components": [
+    {
+      "id": "use-case",
+      "name": "Defined use case",
+      "function": "States what tile roofing is meant to accomplish and what it is not meant to do",
+      "position": "Before design or operation",
+      "madeFrom": "Written requirements, local survey, risk notes, and responsible operator assignment",
+      "criticalNote": "Vague goals create unsafe improvisation."
+    },
+    {
+      "id": "input-set",
+      "name": "Input set",
+      "function": "Collects materials, tools, labour, information, water, power, and time",
+      "position": "Before operation",
+      "madeFrom": "Local supplies, verified salvage, trained people, and source records",
+      "criticalNote": "Unknown or contaminated inputs must be isolated until checked."
+    },
+    {
+      "id": "workspace",
+      "name": "Controlled workspace",
+      "function": "Separates clean, dirty, hot, sharp, electrical, structural, or public areas as needed",
+      "position": "Around the work",
+      "madeFrom": "Benches, barriers, labels, ventilation, drainage, lighting, and access rules",
+      "criticalNote": "Many injuries come from poor layout rather than the core method."
+    },
+    {
+      "id": "operating-checks",
+      "name": "Operating checks",
+      "function": "Defines setup, in-process inspection, shutdown, cleaning, and storage criteria",
+      "position": "During each use",
+      "madeFrom": "Checklists, gauges, samples, witness marks, logs, and trained observation",
+      "criticalNote": "If nobody knows how to detect failure, the process is not ready."
+    },
+    {
+      "id": "record-loop",
+      "name": "Record and review loop",
+      "function": "Preserves results, failures, maintenance, changes, and training status",
+      "position": "After each use and during review",
+      "madeFrom": "Notebook, labels, diagrams, issue list, stock cards, and revision history",
+      "criticalNote": "Unrecorded local knowledge disappears quickly during crisis or migration."
+    }
+  ],
+  "rawMaterials": [
+    {
+      "name": "Structural materials",
+      "purpose": "Structural materials provides the core input for tile roofing.",
+      "earthLocations": [
+        "Local workshops, farms, clinics, libraries, salvage stores, trade networks, natural deposits, or public infrastructure depending on region"
+      ],
+      "spaceAlternatives": "Use imported starter stock first, then reduce dependence through recycling, standardised parts, controlled production, strict inventory records, and redundant procedures.",
+      "processingRequired": "Inspect for contamination or damage, label source and date, store away from incompatible materials, and record failures so unsafe substitutions are not repeated."
+    },
+    {
+      "name": "Binders, fasteners, or joinery",
+      "purpose": "Binders, fasteners, or joinery provides the operating support for tile roofing.",
+      "earthLocations": [
+        "Local workshops, farms, clinics, libraries, salvage stores, trade networks, natural deposits, or public infrastructure depending on region"
+      ],
+      "spaceAlternatives": "Use imported starter stock first, then reduce dependence through recycling, standardised parts, controlled production, strict inventory records, and redundant procedures.",
+      "processingRequired": "Inspect for contamination or damage, label source and date, store away from incompatible materials, and record failures so unsafe substitutions are not repeated."
+    },
+    {
+      "name": "Layout and lifting tools",
+      "purpose": "Layout and lifting tools provides the control layer for tile roofing.",
+      "earthLocations": [
+        "Local workshops, farms, clinics, libraries, salvage stores, trade networks, natural deposits, or public infrastructure depending on region"
+      ],
+      "spaceAlternatives": "Use imported starter stock first, then reduce dependence through recycling, standardised parts, controlled production, strict inventory records, and redundant procedures.",
+      "processingRequired": "Inspect for contamination or damage, label source and date, store away from incompatible materials, and record failures so unsafe substitutions are not repeated."
+    },
+    {
+      "name": "Drainage, fire, and inspection records",
+      "purpose": "Drainage, fire, and inspection records provides the continuity layer for tile roofing.",
+      "earthLocations": [
+        "Local workshops, farms, clinics, libraries, salvage stores, trade networks, natural deposits, or public infrastructure depending on region"
+      ],
+      "spaceAlternatives": "Use imported starter stock first, then reduce dependence through recycling, standardised parts, controlled production, strict inventory records, and redundant procedures.",
+      "processingRequired": "Inspect for contamination or damage, label source and date, store away from incompatible materials, and record failures so unsafe substitutions are not repeated."
+    }
+  ],
+  "buildSteps": [
+    {
+      "order": 1,
+      "title": "Define the local problem and stop conditions",
+      "description": "Write down why tile roofing is needed, who is responsible, what success means, and what conditions require stopping or escalation.",
+      "prerequisiteTools": [
+        "notebook",
+        "local survey",
+        "risk checklist"
+      ],
+      "warningNote": "Do not start if the likely failure modes and escalation path are unknown."
+    },
+    {
+      "order": 2,
+      "title": "Inventory inputs and substitutions",
+      "description": "List required materials, tools, water, power, space, records, people, and protective equipment. Mark substitutions and the performance or safety risk they introduce.",
+      "prerequisiteTools": [
+        "inventory ledger",
+        "labels",
+        "storage area"
+      ],
+      "warningNote": "Substitutions can introduce contamination, fire, structural, medical, chemical, or electrical hazards."
+    },
+    {
+      "order": 3,
+      "title": "Prepare the workspace",
+      "description": "Separate clean and dirty zones, establish lighting and ventilation, protect bystanders, mark exits, and place waste containers before work begins.",
+      "prerequisiteTools": [
+        "barriers",
+        "signs",
+        "cleaning tools"
+      ],
+      "warningNote": "A poor workspace can make a correct procedure unsafe."
+    },
+    {
+      "order": 4,
+      "title": "Run a small controlled trial",
+      "description": "Test the smallest useful version first. Record quantities, timing, conditions, operators, observations, and failure points before scaling.",
+      "prerequisiteTools": [
+        "measuring tools",
+        "test log",
+        "safe test area"
+      ],
+      "warningNote": "Prototype failures must not threaten people, water, food stores, shelter, or critical equipment."
+    },
+    {
+      "order": 5,
+      "title": "Create the operating checklist",
+      "description": "Turn the successful trial into setup, operation, shutdown, cleaning, storage, and maintenance checks that another trained person can follow.",
+      "prerequisiteTools": [
+        "checklist",
+        "maintenance log",
+        "labels"
+      ],
+      "warningNote": "If the process depends on memory alone, it is not resilient enough for crisis use."
+    },
+    {
+      "order": 6,
+      "title": "Train, review, and mark maturity honestly",
+      "description": "Train at least two operators, compare results, collect failures, update diagrams and notes, and keep the entry at draft or review-needed until stronger evidence supports promotion.",
+      "prerequisiteTools": [
+        "training record",
+        "review meeting",
+        "revision log"
+      ],
+      "warningNote": "Do not mark this as field-guide-ready until independent review confirms the details."
+    }
+  ],
+  "history": [
+    {
+      "year": "Traditional practice",
+      "event": "Tile Roofing appears as practical knowledge where communities need repeated solutions to survival, food, health, materials, logistics, or records problems.",
+      "location": "Multiple regions"
+    },
+    {
+      "year": "Industrial and modern standardisation",
+      "event": "Craft practice, institutional training, measurements, and written standards make the capability more transferable between communities.",
+      "location": "Global"
+    },
+    {
+      "year": "Collapse-recovery relevance",
+      "event": "The capability becomes important again when supply chains, specialist labour, or central infrastructure are interrupted.",
+      "location": "Local settlements and emergency systems"
+    }
+  ],
+  "inventors": [],
+  "impact": "Tile Roofing makes the Codex more useful because it fills one of the practical links between major inventions. Its value is not only the immediate task; it helps preserve teachable routines, safer substitutions, maintenance habits, and records. The entry should be treated as a serious draft: enough to orient planning, not enough to remove the need for expert review where lives, structures, food, water, or critical equipment are at risk.",
+  "images": [
+    {
+      "id": "workflow",
+      "filename": "workflow.svg",
+      "caption": "Tile Roofing dependency workflow: use case, inputs, workspace, checks, records, review",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
+  "videos": [],
+  "externalLinks": [
+    {
+      "id": "tile-roofing-wiki",
+      "title": "Wikipedia - Tile Roofing",
+      "url": "https://en.wikipedia.org/wiki/Tile_Roofing",
+      "note": "Orientation link; deeper review should replace this with stronger topic-specific references."
+    }
+  ],
+  "lastUpdated": "2026-05-02",
+  "maturity": "review-needed",
+  "verification": {
+    "status": "unverified",
+    "reviewedBy": null,
+    "reviewDate": null,
+    "warnings": [
+      "Tile Roofing is a draft expansion entry. It is useful for navigation and planning, but it is not field-guide-ready until reviewed against local conditions and stronger topic-specific sources.",
+      "Do not rely on this entry alone where failure could injure people, contaminate water or food, collapse structures, start fires, or damage critical equipment."
+    ],
+    "sources": [
+      {
+        "id": "tile-roofing-usace",
+        "title": "U.S. Army Corps of Engineers",
+        "type": "institution",
+        "url": "https://www.usace.army.mil/"
+      },
+      {
+        "id": "tile-roofing-building-construction-illustrated",
+        "title": "Building Construction Illustrated",
+        "type": "book"
+      },
+      {
+        "id": "tile-roofing-wiki",
+        "title": "Wikipedia - Tile Roofing",
+        "type": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tile_Roofing",
+        "note": "Orientation source only; replace with stronger topic-specific references during deep review."
+      }
+    ]
+  }
+}

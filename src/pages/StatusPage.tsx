@@ -24,10 +24,13 @@ const PLANNED: Record<TechCategory, number> = {
   science: 14,
 };
 
-const MISSING_CRITICAL: { name: string; score: number; id?: string }[] = [
+const EXPANSION_TARGET_ENTRIES = 324;
+
+const CRITICAL_REVIEW_PRIORITIES: { name: string; score: number; id?: string }[] = [
   { name: "Sanitation and clean water", score: 10, id: "sanitation-and-clean-water" },
-  { name: "Human food production (field agriculture entry)", score: 10 },
   { name: "Basic medicine / first aid expansion", score: 10, id: "first-aid-and-wound-care" },
+  { name: "Diarrhoeal dehydration / oral rehydration", score: 10, id: "oral-rehydration-therapy" },
+  { name: "Staple crop profiles and seed-saving expansion", score: 9 },
   { name: "Germ theory (dedicated entry)", score: 9 },
   { name: "Vaccines", score: 9 },
   { name: "Concrete and construction", score: 8 },
@@ -109,6 +112,7 @@ export function StatusPage() {
     const s = new Set(techs.map((t) => t.category));
     return s.size;
   }, [techs]);
+  const expansionRemaining = Math.max(0, EXPANSION_TARGET_ENTRIES - techs.length);
 
   const branchesWithZero = useMemo(
     () => (Object.keys(PLANNED) as TechCategory[]).filter((c) => (byCategory.get(c) ?? 0) === 0).length,
@@ -193,6 +197,8 @@ export function StatusPage() {
 
       <section className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <StatCard label="Technologies documented" value={String(techs.length)} />
+        <StatCard label="4x expansion target" value={`${techs.length}/${EXPANSION_TARGET_ENTRIES}`} />
+        <StatCard label="Entries remaining to 4x" value={String(expansionRemaining)} />
         <StatCard label="Expert-verified entries" value={String(expertVerified)} />
         <StatCard label="Knowledge branches represented" value={String(branchesCovered)} />
         <StatCard label="Branches with zero entries (of 13 categories)" value={String(branchesWithZero)} />
@@ -461,9 +467,13 @@ export function StatusPage() {
       </section>
 
       <section className="mt-14">
-        <h2 className="font-display text-2xl font-semibold text-codex-text">Critical gaps (prioritised)</h2>
+        <h2 className="font-display text-2xl font-semibold text-codex-text">Critical review priorities</h2>
+        <p className="mt-2 max-w-3xl text-sm text-codex-secondary">
+          These are the entries or missing topics with the highest safety impact. Existing entries still need deeper
+          review unless they are field-guide-ready and independently verified.
+        </p>
         <ol className="mt-4 list-decimal space-y-3 pl-5 text-sm text-codex-secondary">
-          {MISSING_CRITICAL.map((m) => (
+          {CRITICAL_REVIEW_PRIORITIES.map((m) => (
             <li key={m.name}>
               <span className="font-medium text-codex-text">{m.name}</span>{" "}
               <span className="font-mono text-codex-gold">[{m.score}/10]</span>{" "}

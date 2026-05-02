@@ -13,8 +13,8 @@
     "backpropagation",
     "neural-networks"
   ],
-  "problem": "Many objectives are too complex to solve in one step. You need an iterative method that improves a solution gradually using local information.\n\nGradient descent provides a generic workhorse: use the gradient as a direction of improvement and take steps with a learning rate. The hard part is step size, noise, and conditioning.",
-  "overview": "Basic gradient descent updates parameters by subtracting a scaled gradient. Variants include momentum and adaptive methods. Stochastic versions use minibatches to scale to large datasets.\n\nIn engineering, the same idea appears as iterative refinement. In AI, it is the engine that trains neural networks when combined with backpropagation.",
+  "problem": "Many objectives are too complex to solve in one step. You need an iterative method that improves a solution gradually using local information.\n\nGradient descent provides a generic workhorse: use the gradient as a direction of improvement and take steps with a learning rate. The hard part is step size, noise, and conditioning.\n\nThe remaining problem for Gradient Descent is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats gradient descent as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "Basic gradient descent updates parameters by subtracting a scaled gradient. Variants include momentum and adaptive methods. Stochastic versions use minibatches to scale to large datasets.\n\nIn engineering, the same idea appears as iterative refinement. In AI, it is the engine that trains neural networks when combined with backpropagation.\n\nIn collapse recovery, gradient descent must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Learning rate",
@@ -50,6 +50,22 @@
       "function": "Controls step sizes over time",
       "position": "Training loop",
       "madeFrom": "Rules and hyperparameters"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Gradient Descent is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
+    },
+    {
+      "id": "input-control",
+      "name": "Input control point",
+      "function": "Checks materials, tools, information, and environmental conditions before work starts",
+      "position": "At receiving, storage, or setup area",
+      "madeFrom": "Labels, inspection notes, gauges, samples, and quarantine bins",
+      "criticalNote": "Unknown inputs should be isolated until checked."
     }
   ],
   "rawMaterials": [
@@ -126,6 +142,17 @@
         "logs"
       ],
       "warningNote": "Training loss decreasing does not guarantee generalization."
+    },
+    {
+      "order": 5,
+      "title": "Define the local purpose and stop conditions",
+      "description": "Write down why Gradient Descent is needed, who is responsible, what success looks like, and which conditions require stopping or escalation.",
+      "prerequisiteTools": [
+        "notebook",
+        "local survey",
+        "risk checklist"
+      ],
+      "warningNote": "Do not start a life-critical or infrastructure-critical use without clear stop conditions."
     }
   ],
   "history": [
@@ -166,7 +193,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "draft",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,

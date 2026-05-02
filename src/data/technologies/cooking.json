@@ -9,12 +9,31 @@
     "fire"
   ],
   "unlocks": [
+    "cheese-making",
+    "communal-kitchen-workflow",
+    "community-granary-management",
+    "dairy-handling",
     "fermentation-basic",
     "first-aid-and-wound-care",
+    "fish-smoking",
+    "flatbread-baking",
     "food-preservation",
+    "fruit-drying",
+    "grain-milling",
+    "infant-food-preparation",
+    "legume-cooking",
+    "meat-drying",
+    "nutritional-deficiency-prevention",
+    "oilseed-pressing",
     "paper-and-ink-media",
+    "pickling-vegetables",
+    "rodent-proof-food-storage",
+    "root-crop-processing",
+    "salt-curing",
     "soap-making",
-    "soil-science-and-composting"
+    "soil-science-and-composting",
+    "sprouting-grains",
+    "yogurt-culturing"
   ],
   "problem": "Many foods are marginal without heat: proteins can harbour pathogens (bacteria, parasites); some plants contain heat-labile toxins (lectins, cyanogenic glycosides) or enzyme inhibitors; starches in tubers and grains are less accessible raw. Chewing and digestion are metabolically expensive — heat denatures proteins, gelatinises starches, and breaks down cell walls, changing what calories a human gut can absorb per hour.\n\nCooking also concentrates flavours and enables combining ingredients into stews that homogenise nutrients across a group — a social technology as much as a chemical one.\n\nThe engineering problem is not merely temperature peaks but controlled heat transfer without burning, efficient fuel use, and containers that survive repeated thermal cycling. That couples cooking tightly to ceramics and later metals.\n\nIn space habitats, cooking is limited by the absence of open fire and the need for total smoke/volatile capture. Heat must be delivered via electrical induction or resistance, and off-gassing from oils and caramelisation must be scrubbed by the life-support system to prevent cabin atmosphere toxicity.",
   "overview": "Cooking methods map to heat transfer modes. Direct radiation from coals or flame sears surfaces — good for Maillard browning, easy to overcook interiors. Conduction through stones (hot-rock boiling) heats liquids in organic containers (hides, bark) that would burn in flame. Convection in earth ovens (Hangi/Umu) and steam pits circulates moist heat evenly. Immersion boiling in pottery is the gateway to grains and legumes at scale.\n\nTemperature bands matter: pasteurisation concepts (time at temperature) reduce pathogen risk. For plant toxins, specific knowledge replaces thermometers: slow simmering (to destroy lectins in beans) versus multiple water-change boiling (to leach cyanide from cassava). Boiling point changes with altitude: at 5000m, water boils at ~83°C, requiring significantly longer cooking times or pressure vessels.\n\nFuel efficiency is a design variable: insulated 'hay boxes' reuse residual heat; lids reduce evaporative losses; nested pots save energy. Ash and soot management affects food taste and long-term respiratory health.\n\nNutritionally, cooking can reduce some heat-sensitive vitamins (C, B12) while increasing bioavailability of others (Lycopene, Beta-carotene); the net depends on diet composition. The civilisational net effect has been overwhelmingly enabling for human brain expansion and population density.",
@@ -72,6 +91,14 @@
       "position": "Hand tools",
       "madeFrom": "Wood (Maple, Oak), bone, or green-wood tongs",
       "criticalNote": "Avoid toxic wood species like Yew or Oleander for spoons"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Cooking with Heat is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [
@@ -243,5 +270,5 @@
       }
     ]
   },
-  "maturity": "field-guide-ready"
+  "maturity": "review-needed"
 }

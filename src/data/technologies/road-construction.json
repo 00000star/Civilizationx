@@ -11,7 +11,25 @@
   ],
   "unlocks": [
     "automobile",
-    "steam-locomotive"
+    "bicycle-maintenance",
+    "boat-hull-carving",
+    "bridge-decking",
+    "canal-locks",
+    "canoe-construction",
+    "fuel-storage-depot",
+    "harbor-docking",
+    "harness-and-yoke-systems",
+    "horse-drawn-carriage",
+    "motorcycle-basics",
+    "navigation-buoys",
+    "pack-animal-saddles",
+    "rail-track-laying",
+    "road-signage",
+    "rope-ferry",
+    "sail-rigging",
+    "steam-locomotive",
+    "traffic-flow-control",
+    "truck-cargo-logistics"
   ],
   "problem": "Soil turns to mud under wheel loads; ruts trap vehicles; slopes erode under rain. Paths sufficient for feet fail under tonnes. The road problem is distributing wheel pressure into subgrade without pumping fines upward, shedding water sideways before it softens the foundation, and maintaining crossfall for drainage.\n\nRoads are also social technology: width standards, right-of-way law, tolls, and maintenance labour allocation determine whether a route stays passable across political seasons.\n\nStone Roman roads and modern asphalt differ in materials but share layering logic: subgrade, base, wearing course — each layer sized for grain distribution and compaction.",
   "overview": "A durable unpaved road begins with clearing organics, cutting a bench into hillside for positive drainage, and installing a crown — high centre, low edges — so water runs off. Aggregate layers use graded stone: large stones at bottom, smaller toward top, fines to lock mechanically when compacted. Corduroy logs bridge bogs historically.\n\nPaved roads add a bound surface: Roman concrete with pozzolan, later macadam with angular crushed stone locked by compaction, later tar macadam, later hot-mix asphalt on prepared base. Each step improves impermeability and ride but increases maintenance tooling needs.\n\nDrainage structures — culverts, ditches, retaining walls — often matter more than surface quality. Plugged culverts destroy paved roads from underneath.\n\nSurveying aligns grades: too steep exhausts draft animals and trucks; too flat ponds water. Transition curves reduce jerk for fast traffic later.",
@@ -65,6 +83,14 @@
       "position": "Parallel to alignment and at low points",
       "madeFrom": "Stone, tile, corrugated metal later",
       "criticalNote": "Maintenance access — if culverts cannot be cleaned, they will fail"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Road Construction is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [

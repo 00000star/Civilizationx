@@ -64,6 +64,14 @@
       "function": "Removes junction heat; isolates electrically",
       "position": "Outside die",
       "madeFrom": "TO-220 epoxy, Cu base plates in power modules"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Transistor (Bipolar and Field-Effect) is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
     }
   ],
   "rawMaterials": [

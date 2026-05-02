@@ -32,8 +32,13 @@ export const CAPABILITIES: CapabilityDefinition[] = [
     mission: "Keep people alive by making water safe and waste controllable.",
     targetEntries: 8,
     categories: ["survival", "medicine"],
-    keywords: ["water", "sanitation", "soap", "steril", "clean", "wound"],
-    anchorTechIds: ["sanitation-and-clean-water", "soap-making", "first-aid-and-wound-care"],
+    keywords: ["water", "sanitation", "soap", "steril", "clean", "wound", "dehydration", "rehydration"],
+    anchorTechIds: [
+      "sanitation-and-clean-water",
+      "soap-making",
+      "first-aid-and-wound-care",
+      "oral-rehydration-therapy",
+    ],
   },
   {
     id: "food-agriculture",
@@ -41,8 +46,14 @@ export const CAPABILITIES: CapabilityDefinition[] = [
     mission: "Produce, preserve, cook, and replenish food systems.",
     targetEntries: 10,
     categories: ["food", "agriculture"],
-    keywords: ["food", "cook", "soil", "compost", "fishing", "preservation", "agriculture"],
-    anchorTechIds: ["cooking", "food-preservation", "soil-science-and-composting", "fishing-net-and-line"],
+    keywords: ["food", "cook", "soil", "compost", "fishing", "preservation", "agriculture", "seed", "crop"],
+    anchorTechIds: [
+      "cooking",
+      "field-agriculture",
+      "food-preservation",
+      "soil-science-and-composting",
+      "fishing-net-and-line",
+    ],
   },
   {
     id: "shelter-habitat",
@@ -86,8 +97,13 @@ export const CAPABILITIES: CapabilityDefinition[] = [
     mission: "Prevent infection, treat injuries, and support public health.",
     targetEntries: 10,
     categories: ["medicine", "survival"],
-    keywords: ["first aid", "wound", "soap", "sanitation", "medical", "infection", "steril"],
-    anchorTechIds: ["first-aid-and-wound-care", "soap-making", "sanitation-and-clean-water"],
+    keywords: ["first aid", "wound", "soap", "sanitation", "medical", "infection", "steril", "dehydration"],
+    anchorTechIds: [
+      "first-aid-and-wound-care",
+      "soap-making",
+      "sanitation-and-clean-water",
+      "oral-rehydration-therapy",
+    ],
   },
   {
     id: "transport-logistics",

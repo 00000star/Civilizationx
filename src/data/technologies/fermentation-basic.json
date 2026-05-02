@@ -10,8 +10,8 @@
     "sanitation-and-clean-water"
   ],
   "unlocks": [],
-  "problem": "Fresh food spoils quickly and can be unsafe. Without refrigeration, civilizations need methods to preserve calories and make nutrients more bioavailable.\n\nFermentation solves this by using controlled microbial processes to acidify, alcoholize, or otherwise stabilize foods. The challenge is control: contamination can harm or waste the batch.",
-  "overview": "Fermentation uses yeasts and bacteria to convert sugars into acids, alcohols, and gases. Many traditions rely on stable starter cultures and workflow hygiene rather than advanced instruments.\n\nFor bootstrap, fermentation is both food technology and microbiology education: it teaches contamination control, temperature management, and process repeatability.",
+  "problem": "Fresh food spoils quickly and can be unsafe. Without refrigeration, civilizations need methods to preserve calories and make nutrients more bioavailable.\n\nFermentation solves this by using controlled microbial processes to acidify, alcoholize, or otherwise stabilize foods. The challenge is control: contamination can harm or waste the batch.\n\nThe remaining problem for Fermentation (Basic) is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats fermentation (basic) as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
+  "overview": "Fermentation uses yeasts and bacteria to convert sugars into acids, alcohols, and gases. Many traditions rely on stable starter cultures and workflow hygiene rather than advanced instruments.\n\nFor bootstrap, fermentation is both food technology and microbiology education: it teaches contamination control, temperature management, and process repeatability.\n\nIn collapse recovery, fermentation (basic) must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
   "principles": [
     {
       "name": "Microbial metabolism",
@@ -47,6 +47,22 @@
       "function": "Contains process and controls oxygen",
       "position": "Container",
       "madeFrom": "Ceramic/glass/food-safe wood"
+    },
+    {
+      "id": "use-case-boundary",
+      "name": "Use-case boundary",
+      "function": "Defines what Fermentation (Basic) is meant to accomplish and what it must not be used for",
+      "position": "Planning and review stage",
+      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
+      "criticalNote": "A vague use case leads to unsafe improvisation."
+    },
+    {
+      "id": "input-control",
+      "name": "Input control point",
+      "function": "Checks materials, tools, information, and environmental conditions before work starts",
+      "position": "At receiving, storage, or setup area",
+      "madeFrom": "Labels, inspection notes, gauges, samples, and quarantine bins",
+      "criticalNote": "Unknown inputs should be isolated until checked."
     }
   ],
   "rawMaterials": [
@@ -150,7 +166,7 @@
     }
   ],
   "lastUpdated": "2026-04-22",
-  "maturity": "stub",
+  "maturity": "draft",
   "verification": {
     "status": "unverified",
     "reviewedBy": null,
