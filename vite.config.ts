@@ -2,11 +2,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 import { execSync } from "node:child_process";
-import { dirname, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
-import { readdirSync } from "node:fs";
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
 
 function normalizeBasePath(pathname: string): string {
   const trimmed = pathname.trim();
@@ -35,10 +30,6 @@ function codexBuildId(): string {
   }
 }
 
-const techJsonUrls = readdirSync(resolve(__dirname, "src/data/technologies"))
-  .filter((f) => f.endsWith(".json"))
-  .map((f) => `src/data/technologies/${f}`);
-
 const basePath = resolveBasePath();
 const faviconPath = `${basePath}favicon.svg`;
 
@@ -52,7 +43,7 @@ export default defineConfig({
     VitePWA({
       strategies: "generateSW",
       registerType: "autoUpdate",
-      includeAssets: ["favicon.svg", ...techJsonUrls],
+      includeAssets: ["favicon.svg"],
       manifest: {
         name: "The Codex",
         short_name: "Codex",
@@ -74,11 +65,25 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: [
-          "**/*.{js,css,html,ico,png,svg,woff2,json,webmanifest}",
+          "**/*.{js,css,html,ico,png,svg,woff2,webmanifest}",
         ],
         navigateFallback: `${basePath}index.html`,
         navigateFallbackDenylist: [/^\/api\//],
         runtimeCaching: [
+          {
+            // Cache technology JSON files with Stale-While-Revalidate
+            // This makes initial load instant and populates cache as users browse
+            urlPattern: ({ url }: { url: URL }) =>
+              url.pathname.includes("/technologies/"),
+            handler: "StaleWhileRevalidate",
+            options: {
+              cacheName: "codex-tech-data",
+              expiration: {
+                maxEntries: 400,
+                maxAgeSeconds: 60 * 60 * 24 * 30,
+              },
+            },
+          },
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
             handler: "CacheFirst",

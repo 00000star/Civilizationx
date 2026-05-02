@@ -1,4 +1,4 @@
-import { memo, useCallback, useRef } from "react";
+import { memo, useCallback, useRef, useMemo } from "react";
 import { Handle, Position, type NodeProps, useStore } from "@xyflow/react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -7,24 +7,27 @@ import { CategoryIcon } from "../ui/CategoryIcon";
 import { CATEGORY_GLOW, CATEGORY_LABEL } from "../../utils/categoryMeta";
 import { verificationDotClass } from "../../utils/verificationUi";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
+import { useHighlight } from "./HighlightContext";
 
 export type TechNodeData = {
   tech: TechnologySummary;
-  selected: boolean;
   locked: boolean;
-  dimmed: boolean;
-  edgeActive: boolean;
   spaceGlow: boolean;
   earthOnly: boolean;
   accent: "gold" | "space";
+  isMatch: boolean;
 };
 
 function TechNodeInner({ data }: NodeProps) {
-  const { tech, selected, locked, dimmed, edgeActive, spaceGlow, earthOnly, accent } =
+  const { tech, locked, spaceGlow, earthOnly, accent, isMatch } =
     data as TechNodeData;
   const navigate = useNavigate();
   const isMobile = useMediaQuery("(max-width: 767px)");
   const lastTap = useRef<number>(0);
+
+  // Consume Highlight Context
+  const { state, setHoverId } = useHighlight();
+  const { hoverId, highlightId, pathIds, hoverBrightIds } = state;
 
   // Selective selector for zoom thresholds to avoid re-renders on pan/slight-zoom
   const { showContent, showLabels } = useStore((s) => {
@@ -34,6 +37,20 @@ function TechNodeInner({ data }: NodeProps) {
       showLabels: zoom > 0.35,
     };
   }, (a, b) => a.showContent === b.showContent && a.showLabels === b.showLabels);
+
+  const isSelected = useMemo(() => Boolean(tech.id === highlightId || pathIds?.has(tech.id)), [tech.id, highlightId, pathIds]);
+  const isPath = useMemo(() => Boolean(pathIds?.has(tech.id)), [tech.id, pathIds]);
+
+  const dimmed = useMemo(() => {
+    if (hoverId) return !hoverBrightIds.has(tech.id);
+    if (pathIds) return !isPath;
+    return !isMatch;
+  }, [hoverId, hoverBrightIds, tech.id, pathIds, isPath, isMatch]);
+
+  // Check if any connected edge is active (this node is either source or target of an active edge)
+  // This is a bit complex to do per-node efficiently without passing more data, 
+  // so we'll simplify: edgeActive is true if this node is hovered or a direct neighbor of a hovered node.
+  const edgeActive = useMemo(() => hoverBrightIds.has(tech.id), [hoverBrightIds, tech.id]);
 
   const open = useCallback(() => {
     navigate(`/tech/${tech.id}`);
@@ -70,7 +87,7 @@ function TechNodeInner({ data }: NodeProps) {
   const glassClass = "backdrop-blur-md bg-codex-card/85 border-white/10";
   const borderClass = locked
     ? "border-codex-locked/40"
-    : selected
+    : isSelected
       ? "border-codex-gold shadow-node-selected"
       : spaceGlow
         ? "border-codex-space/60"
@@ -80,10 +97,12 @@ function TechNodeInner({ data }: NodeProps) {
     <motion.div
       initial={false}
       animate={{
-        scale: selected ? 1.05 : 1,
+        scale: isSelected ? 1.05 : 1,
         opacity: dimmed ? 0.3 : 1,
       }}
       whileHover={{ scale: 1.02, y: -2 }}
+      onMouseEnter={() => setHoverId(tech.id)}
+      onMouseLeave={() => setHoverId(null)}
       className="relative"
     >
       <span
@@ -119,7 +138,7 @@ function TechNodeInner({ data }: NodeProps) {
         style={{
           width: showContent ? 148 : 42,
           height: showContent ? 92 : 42,
-          boxShadow: locked || selected ? undefined : `0 0 20px -5px ${edgeActive ? "rgba(0,212,255,0.4)" : glowBase}`,
+          boxShadow: locked || isSelected ? undefined : `0 0 20px -5px ${edgeActive ? "rgba(0,212,255,0.4)" : glowBase}`,
         }}
         aria-label={`${tech.name}. ${tech.tagline}. Category ${CATEGORY_LABEL[tech.category]}. Era ${tech.era.replaceAll("-", " ")}. Difficulty ${tech.difficulty} of 5.${isMobile ? " Double-tap to open." : " Press Enter to open."}`}
       >

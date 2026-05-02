@@ -3,7 +3,8 @@ import {
   getBezierPath,
   type EdgeProps,
 } from "@xyflow/react";
-import { memo } from "react";
+import { memo, useMemo } from "react";
+import { useHighlight } from "./HighlightContext";
 
 export function AnimatedEdgeInner({
   id,
@@ -15,7 +16,8 @@ export function AnimatedEdgeInner({
   targetPosition,
   style = {},
   markerEnd,
-  data,
+  source,
+  target,
 }: EdgeProps) {
   const [edgePath] = getBezierPath({
     sourceX,
@@ -26,9 +28,20 @@ export function AnimatedEdgeInner({
     targetPosition,
   });
 
-  const active = data?.active;
-  const stroke = active ? "#00D4FF" : "#4A7FBD";
-  const strokeWidth = active ? 3 : 1.5;
+  const { state } = useHighlight();
+  const { hoverId, pathEdgeIds, hoverBrightIds } = state;
+
+  const isPathEdge = useMemo(() => Boolean(pathEdgeIds?.has(id)), [pathEdgeIds, id]);
+  
+  // Active if part of selected path OR if connected to hovered node
+  const active = useMemo(() => {
+    if (isPathEdge) return true;
+    if (!hoverId) return false;
+    return hoverBrightIds.has(source) && hoverBrightIds.has(target) && (source === hoverId || target === hoverId);
+  }, [isPathEdge, hoverId, hoverBrightIds, source, target]);
+
+  const stroke = active ? (isPathEdge ? "#FBBF24" : "#00D4FF") : "#4A7FBD";
+  const strokeWidth = active ? (isPathEdge ? 4 : 3) : 1.5;
   const opacity = active ? 0.9 : 0.25;
 
   return (
