@@ -1,5 +1,4 @@
 import type { Component } from "../../types/technology";
-import { motion } from "framer-motion";
 
 interface Props {
   component: Component;
@@ -50,14 +49,12 @@ export function ComponentCard({ component }: Props) {
       </div>
 
       {component.criticalNote && (
-        <motion.div 
-          initial={{ opacity: 0.8 }}
-          whileHover={{ opacity: 1 }}
+        <div 
           className="mt-4 rounded border border-red-500/20 bg-red-500/5 p-3"
         >
           <p className="font-mono text-[9px] font-bold uppercase tracking-widest text-red-400">Critical Failure Protocol</p>
           <p className="mt-1 text-xs text-red-200/80 leading-relaxed">{component.criticalNote}</p>
-        </motion.div>
+        </div>
       )}
 
       {/* Decorative Blueprint Background Grid */}

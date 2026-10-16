@@ -1,18 +1,8 @@
-import { createContext, useContext, useState, useMemo, ReactNode } from "react";
-import type { TechnologySummary } from "../../types/technology";
-
-type HighlightState = {
-  hoverId: string | null;
-  highlightId: string | null;
-  pathIds: Set<string> | null;
-  pathEdgeIds: Set<string> | null;
-  hoverBrightIds: Set<string>;
-};
-
-const HighlightContext = createContext<{
-  state: HighlightState;
-  setHoverId: (id: string | null) => void;
-} | null>(null);
+import { useMemo, useState } from "react";
+import {
+  HighlightContext,
+  type HighlightProviderProps,
+} from "./highlightContextCore";
 
 export function HighlightProvider({ 
   children, 
@@ -21,14 +11,7 @@ export function HighlightProvider({
   pathEdgeIds,
   techById,
   inSet
-}: { 
-  children: ReactNode;
-  highlightId: string | null;
-  pathIds?: Set<string>;
-  pathEdgeIds?: Set<string>;
-  techById: Map<string, TechnologySummary>;
-  inSet: Set<string>;
-}) {
+}: HighlightProviderProps) {
   const [hoverId, setHoverId] = useState<string | null>(null);
 
   const hoverBrightIds = useMemo(() => {
@@ -58,10 +41,4 @@ export function HighlightProvider({
       {children}
     </HighlightContext.Provider>
   );
-}
-
-export function useHighlight() {
-  const ctx = useContext(HighlightContext);
-  if (!ctx) throw new Error("useHighlight must be used within HighlightProvider");
-  return ctx;
 }

@@ -55,20 +55,77 @@ body {
   color: #5a5848 !important;
 }
 
+.codex-tree-stage {
+  background:
+    radial-gradient(circle at 16% 18%, rgba(201, 168, 76, 0.12), transparent 28rem),
+    radial-gradient(circle at 84% 24%, rgba(74, 127, 189, 0.14), transparent 30rem),
+    radial-gradient(circle at 56% 86%, rgba(76, 175, 125, 0.08), transparent 24rem),
+    linear-gradient(180deg, rgba(10, 10, 15, 0.86), rgba(7, 7, 11, 0.98));
+}
+
+.codex-tree-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.032) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.024) 1px, transparent 1px);
+  background-size: 128px 128px;
+  mask-image: radial-gradient(circle at center, black, transparent 82%);
+}
+
+.codex-tree-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(10, 10, 15, 0.62), transparent 12%, transparent 78%, rgba(10, 10, 15, 0.72)),
+    radial-gradient(circle at center, transparent 46%, rgba(0, 0, 0, 0.46));
+}
+
+.codex-tree-flow {
+  position: relative;
+  z-index: 2;
+}
+
+.codex-tree-flow .react-flow__viewport {
+  transition: filter 180ms ease;
+}
+
+.codex-tree-selecting .react-flow__pane {
+  cursor: crosshair;
+}
+
 .react-flow__controls {
-  @apply overflow-hidden rounded border border-codex-border bg-codex-surface shadow-lg;
+  @apply overflow-hidden rounded-lg border border-codex-border bg-codex-surface/90 shadow-2xl backdrop-blur;
 }
 
 .react-flow__controls-button {
-  @apply border-codex-border bg-codex-surface fill-codex-secondary;
+  @apply h-8 w-8 border-codex-border bg-codex-surface/90 fill-codex-secondary transition-colors;
 }
 
 .react-flow__controls-button:hover {
-  @apply bg-codex-card fill-codex-text;
+  @apply bg-codex-card fill-codex-gold;
 }
 
 .react-flow__minimap {
-  @apply rounded border border-codex-border bg-codex-surface;
+  @apply rounded-lg border border-codex-border bg-codex-surface/90 shadow-2xl backdrop-blur;
+}
+
+.react-flow__minimap svg {
+  border-radius: 0.5rem;
+}
+
+.react-flow__edge-path {
+  filter: drop-shadow(0 0 4px rgba(74, 127, 189, 0.18));
+}
+
+.react-flow__background pattern circle {
+  opacity: 0.8;
 }
 
 .prose-codex p {

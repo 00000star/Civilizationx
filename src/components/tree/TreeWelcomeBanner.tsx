@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useCodexMode } from "../../context/useCodexMode";
 
@@ -15,12 +14,7 @@ export function TreeWelcomeBanner({ onDismiss }: Props) {
     : "shadow-[0_0_48px_rgba(201,168,76,0.1)]";
 
   return (
-    <motion.div
-      layout
-      initial={{ opacity: 0, y: 14 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 10, transition: { duration: 0.22 } }}
-      transition={{ type: "spring", stiffness: 360, damping: 28 }}
+    <div
       className="pointer-events-none absolute left-3 right-3 top-3 z-[15] mx-auto max-w-2xl print:hidden md:left-6 md:right-6 md:top-4"
     >
       <div
@@ -67,6 +61,6 @@ export function TreeWelcomeBanner({ onDismiss }: Props) {
           </button>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

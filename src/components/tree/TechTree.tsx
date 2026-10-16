@@ -18,10 +18,12 @@ import { TreeControls } from "./TreeControls";
 import { useUnlockedIds } from "../../hooks/useProgression";
 import { useCodexMode } from "../../context/useCodexMode";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
-import { HighlightProvider, useHighlight } from "./HighlightContext";
+import { HighlightProvider } from "./HighlightContext";
+import { useHighlight } from "./useHighlight";
 
 const nodeTypes = { tech: TechNode };
 const edgeTypes = { animated: AnimatedEdge };
+const NODE_CENTER = { x: 78, y: 48 };
 
 interface Props {
   technologies: TechnologySummary[];
@@ -29,6 +31,7 @@ interface Props {
   matchingIds?: Set<string>;
   pathIds?: Set<string>;
   pathEdgeIds?: Set<string>;
+  selectionMode?: boolean;
   onNodeClick?: (id: string) => void;
 }
 
@@ -36,6 +39,7 @@ function TechTreeInner({
   technologies, 
   positions, 
   matchingIds, 
+  selectionMode,
   onNodeClick,
   techById
 }: Props & { techById: Map<string, TechnologySummary> }) {
@@ -45,6 +49,7 @@ function TechTreeInner({
   const { isSpace } = useCodexMode();
   const isMobile = useMediaQuery("(max-width: 767px)");
   const [treeReady, setTreeReady] = useState(false);
+  const [edgesReady, setEdgesReady] = useState(false);
   
   const { state } = useHighlight();
   const { hoverId } = state;
@@ -73,14 +78,16 @@ function TechTreeInner({
           earthOnly: isSpace && tech.spaceReadiness.earthOnly,
           accent: isSpace ? "space" : "gold",
           isMatch: !matchingIds || matchingIds.has(tech.id),
+          selectionMode: Boolean(selectionMode),
+          onSelect: onNodeClick,
         },
         draggable: false,
         selectable: false,
       })),
-    [technologies, posMap, unlocked, isSpace, matchingIds]
+    [technologies, posMap, unlocked, isSpace, matchingIds, selectionMode, onNodeClick]
   );
 
-  const edges: Edge[] = useMemo(() => {
+  const allEdges: Edge[] = useMemo(() => {
     const e: Edge[] = [];
     for (const t of technologies) {
       for (const p of t.prerequisites) {
@@ -102,6 +109,19 @@ function TechTreeInner({
     return e;
   }, [technologies, inSet]);
 
+  useEffect(() => {
+    setEdgesReady(false);
+    if ("requestIdleCallback" in window && "cancelIdleCallback" in window) {
+      const id = window.requestIdleCallback(() => setEdgesReady(true), { timeout: 900 });
+      return () => window.cancelIdleCallback(id);
+    }
+
+    const id = globalThis.setTimeout(() => setEdgesReady(true), 80);
+    return () => globalThis.clearTimeout(id);
+  }, [technologies]);
+
+  const edges = edgesReady ? allEdges : [];
+
   const onPointerMove = useCallback((event: React.MouseEvent) => {
     if (!hoverId) {
       setHoverPt(null);
@@ -116,23 +136,29 @@ function TechTreeInner({
     if (highlightId) {
       const p = posMap.get(highlightId);
       if (p) {
-        setTimeout(() => instance.setCenter(p.x + 74, p.y + 46, { zoom: isMobile ? 0.8 : 1.1, duration: 800 }), 100);
+        setTimeout(() => instance.setCenter(p.x + NODE_CENTER.x, p.y + NODE_CENTER.y, { zoom: isMobile ? 0.72 : 0.95, duration: 800 }), 100);
         return;
       }
     }
-    instance.fitView({ padding: 0.15, duration: 400, maxZoom: isMobile ? 0.42 : 1.1, minZoom: isMobile ? 0.25 : 0.1 });
+    instance.fitView({
+      padding: isMobile ? 0.03 : 0.05,
+      duration: 450,
+      maxZoom: isMobile ? 0.34 : 0.82,
+      minZoom: isMobile ? 0.035 : 0.04,
+    });
   }, [isMobile, highlightId, posMap]);
 
   useEffect(() => {
     if (!treeReady || !highlightId || !rf) return;
     const p = posMap.get(highlightId);
-    if (p) rf.setCenter(p.x + 74, p.y + 46, { zoom: isMobile ? 0.8 : 1.1, duration: 800 });
+    if (p) rf.setCenter(p.x + NODE_CENTER.x, p.y + NODE_CENTER.y, { zoom: isMobile ? 0.72 : 0.95, duration: 800 });
   }, [highlightId, treeReady, rf, posMap, isMobile]);
 
   const hoverTech = hoverId ? techById.get(hoverId) : undefined;
+  const visibleCount = matchingIds?.size ?? technologies.length;
 
   return (
-    <div className="relative h-[calc(100dvh-4.5rem)] min-h-[420px] w-full md:h-[calc(100dvh-5rem)] overflow-hidden" onMouseMove={onPointerMove}>
+    <div className="codex-tree-stage relative h-[calc(100dvh-4.5rem)] min-h-[420px] w-full overflow-hidden md:h-[calc(100dvh-5rem)]" onMouseMove={onPointerMove}>
       {!treeReady && (
         <div className="absolute inset-0 z-10 flex items-center justify-center bg-codex-bg/55 backdrop-blur-sm">
           <div className="h-10 w-10 animate-pulse rounded-full border-2 border-codex-gold border-t-transparent" />
@@ -146,16 +172,17 @@ function TechTreeInner({
         edgeTypes={edgeTypes}
         onInit={onInit}
         fitView
-        minZoom={0.05}
-        maxZoom={1.5}
+        minZoom={isMobile ? 0.035 : 0.04}
+        maxZoom={1.35}
         proOptions={{ hideAttribution: true }}
-        onNodeClick={(_, node) => onNodeClick?.(node.id)}
+        onNodeClick={selectionMode ? undefined : (_, node) => onNodeClick?.(node.id)}
         nodesDraggable={false}
         elevateEdgesOnSelect
-        className="!bg-transparent"
+        className={`codex-tree-flow !bg-transparent ${selectionMode ? "codex-tree-selecting" : ""}`}
       >
-        <Background variant={BackgroundVariant.Dots} gap={32} size={1} color="rgba(154,152,136,0.1)" />
-        <TreeControls technologies={technologies} isSpace={isSpace} />
+        <Background variant={BackgroundVariant.Lines} gap={96} size={0.45} color="rgba(201,168,76,0.07)" />
+        <Background variant={BackgroundVariant.Dots} gap={32} size={1} color="rgba(154,152,136,0.13)" />
+        <TreeControls technologies={technologies} isSpace={isSpace} visibleCount={visibleCount} />
       </ReactFlow>
 
       {hoverTech && hoverPt && (

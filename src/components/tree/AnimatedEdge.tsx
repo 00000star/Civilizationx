@@ -4,7 +4,7 @@ import {
   type EdgeProps,
 } from "@xyflow/react";
 import { memo, useMemo } from "react";
-import { useHighlight } from "./HighlightContext";
+import { useHighlight } from "./useHighlight";
 
 export function AnimatedEdgeInner({
   id,

@@ -1,4 +1,3 @@
-import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { CategoryFilter } from "../components/ui/CategoryFilter";
 import { TechTree } from "../components/tree/TechTree";
@@ -43,9 +42,12 @@ export function TreePage() {
   }, [all, pathStart, pathEnd]);
 
   const pathIds = useMemo(() => {
-    if (!pathResult) return undefined;
-    return new Set(pathResult);
-  }, [pathResult]);
+    const ids = new Set<string>();
+    if (pathStart) ids.add(pathStart);
+    if (pathEnd) ids.add(pathEnd);
+    if (pathResult) for (const id of pathResult) ids.add(id);
+    return ids.size ? ids : undefined;
+  }, [pathStart, pathEnd, pathResult]);
 
   const pathEdgeIds = useMemo(() => {
     if (!pathResult) return undefined;
@@ -100,16 +102,36 @@ export function TreePage() {
     }
   }, []);
 
+  const visibleCount = matchingIds?.size ?? all.length;
+  const activeEraLabel = era ? ERAS.find((e) => e.id === era)?.label : "All eras";
+
   return (
     <div className="flex min-h-0 flex-1 flex-col">
-      <div className="border-b border-codex-border bg-codex-surface/80 px-3 py-3 backdrop-blur md:px-6">
+      <div className="border-b border-white/10 bg-codex-bg/90 px-3 py-3 shadow-[0_12px_40px_rgba(0,0,0,0.28)] backdrop-blur-xl md:px-6">
         <div className="mx-auto flex max-w-[1600px] flex-col gap-3 lg:flex-row lg:items-center lg:gap-6">
+          <div className="min-w-0 lg:w-64">
+            <p className="font-mono text-[10px] uppercase tracking-widest text-codex-gold">
+              Dependency Atlas
+            </p>
+            <h1 className="mt-1 truncate font-display text-2xl font-semibold tracking-tight text-codex-text">
+              Technology Tree
+            </h1>
+          </div>
           <TreeSearch technologies={all} />
           
           <div className="flex flex-1 flex-col gap-2 lg:items-end">
-            <div className="flex items-center gap-4">
-               {/* Pathfinder Toggle */}
+            <div className="flex flex-wrap items-center gap-2 lg:justify-end">
+              <div className="hidden items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 md:flex">
+                <span className="font-mono text-[10px] uppercase tracking-wider text-codex-muted">
+                  {visibleCount} / {all.length}
+                </span>
+                <span className="h-1 w-1 rounded-full bg-codex-muted/60" />
+                <span className="font-mono text-[10px] uppercase tracking-wider text-codex-muted">
+                  {activeEraLabel}
+                </span>
+              </div>
               <button
+                type="button"
                 onClick={() => {
                   setPathfinderMode(!pathfinderMode);
                   if (pathfinderMode) {
@@ -117,10 +139,10 @@ export function TreePage() {
                     setPathEnd(null);
                   }
                 }}
-                className={`flex items-center gap-2 rounded-md border px-3 py-1.5 text-xs font-bold transition-all ${
+                className={`flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-bold transition-all ${
                   pathfinderMode 
                     ? "border-codex-gold bg-codex-gold/10 text-codex-gold shadow-lg shadow-codex-gold/10" 
-                    : "border-white/10 bg-white/5 text-codex-muted hover:border-white/20 hover:text-codex-text"
+                    : "border-white/10 bg-white/[0.04] text-codex-muted hover:border-codex-gold/40 hover:text-codex-text"
                 }`}
               >
                 <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -152,20 +174,11 @@ export function TreePage() {
 
       <div className="relative min-h-0 flex-1">
         <StarfieldCanvas />
-        <AnimatePresence>
-          {showWelcome ? <TreeWelcomeBanner onDismiss={dismissWelcome} /> : null}
-        </AnimatePresence>
+        {showWelcome ? <TreeWelcomeBanner onDismiss={dismissWelcome} /> : null}
         
-        {/* Pathfinder Status Overlay */}
-        <AnimatePresence>
-          {pathfinderMode && (
-            <motion.div
-              initial={{ y: -20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -20, opacity: 0 }}
-              className="absolute top-4 left-1/2 z-30 -translate-x-1/2 pointer-events-none"
-            >
-              <div className="rounded-full border border-codex-gold/30 bg-codex-bg/90 px-6 py-2 shadow-2xl backdrop-blur-md flex items-center gap-4">
+        {pathfinderMode ? (
+          <div className="pointer-events-none absolute left-1/2 top-4 z-30 -translate-x-1/2">
+              <div className="flex max-w-[min(92vw,900px)] items-center gap-4 overflow-hidden rounded-full border border-codex-gold/30 bg-codex-bg/90 px-5 py-2 shadow-2xl backdrop-blur-xl">
                 <div className="flex items-center gap-2">
                   <div className={`h-2 w-2 rounded-full ${pathStart ? "bg-codex-gold" : "bg-white/20 animate-pulse"}`} />
                   <span className="text-[10px] uppercase tracking-widest text-codex-muted">
@@ -187,9 +200,8 @@ export function TreePage() {
                    </div>
                 )}
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+          </div>
+        ) : null}
 
         <div className="relative z-[1] min-h-0 flex-1">
           <TechTree 
@@ -198,6 +210,7 @@ export function TreePage() {
             matchingIds={matchingIds}
             pathIds={pathIds}
             pathEdgeIds={pathEdgeIds}
+            selectionMode={pathfinderMode}
             onNodeClick={onNodeClick}
           />
         </div>
@@ -205,7 +218,7 @@ export function TreePage() {
         {/* Category Jump Bar */}
         {!pathfinderMode && (
           <div className="absolute bottom-6 left-1/2 z-20 -translate-x-1/2 pointer-events-auto">
-            <div className="rounded-full border border-white/10 bg-codex-bg/80 shadow-2xl backdrop-blur-md">
+            <div className="rounded-full border border-white/10 bg-codex-bg/75 shadow-2xl backdrop-blur-xl">
               <TreeCategoryJump technologies={all} />
             </div>
           </div>

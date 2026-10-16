@@ -45,6 +45,7 @@ export default function App() {
         <Route element={<Layout />}>
           <Route element={<PageTransition />}>
             <Route path="/" element={<TreePage />} />
+            <Route path="/tree" element={<TreePage />} />
             <Route path="/tech/:id" element={<TechDetailPage />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/foundations" element={<FoundationsPage />} />

@@ -251,3 +251,77 @@ npm run validate-data
 npm run lint
 npm run build
 ```
+
+## 2026-05-02
+
+Upgraded the dependency tree visual system and interaction model.
+
+- Replaced the previous broad row layout with Dagre graph layout for a cleaner left-to-right dependency flow on the 324-node graph.
+- Added glass, zoom-aware nodes that collapse to icon nodes when zoomed out and reveal readable labels when zoomed in.
+- Added animated highlighted edges for hovered dependencies and pathfinder routes.
+- Added search jump, category jump, timeline filtering, minimap placement, and a pathfinder overlay for start/end selection.
+- Fixed pathfinder mode so clicking nodes selects route endpoints instead of opening the technology detail page.
+- Kept selected start/end nodes highlighted even before a full path is found.
+- Split highlight hook/context internals to remove the React fast-refresh lint warning.
+- Polished React Flow controls, minimap, edge glow, and background styling.
+
+Checks passed:
+
+```bash
+npm run lint
+npm run build
+```
+
+## 2026-05-02
+
+Optimized Codex performance using measured hot spots rather than visual guesswork.
+
+- Removed Framer Motion from the app shell, tree nodes, tree banners, and documentary/detail components; then removed the dependency from `package.json` and `package-lock.json`.
+- Replaced per-node Framer animation with CSS transitions so the 324-node tree no longer pays animation-library cost on every node.
+- Converted the starfield from continuous `requestAnimationFrame` drawing to a one-shot static canvas that redraws only on resize/mode change.
+- Lazy-loaded the route finder panel so it is not bundled/executed until opened.
+- Added staged edge hydration: the tree renders nodes first, then schedules edge rendering during idle time.
+- Changed unlocked-id calculation from repeated hook-local set construction to a module-level cached set.
+
+Measured build/runtime impacts:
+
+- Main app JS chunk reduced from roughly `316 kB` raw to roughly `201 kB` raw.
+- Tech detail chunk returned from roughly `172 kB` raw after chunk reshuffling to roughly `57 kB` raw after removing Framer.
+- Tree chunk remains roughly `213 kB` raw but now does less startup work: no continuous starfield animation, no Framer wrappers per node, lazy route panel, and deferred edge render.
+- Production build transforms dropped from about `1295` modules to `644` modules after removing Framer and Dagre from the shipped app.
+
+Checks passed:
+
+```bash
+npm run lint
+npm run build
+```
+
+Follow-up fix:
+
+- Added `/tree` as a real route alias for the tree page. Previously the tree existed at `/`, so opening `/tree` produced an empty dark shell.
+- Moved the decorative tree overlay behind the graph layer to prevent it from visually covering the React Flow canvas.
+
+Layout compaction follow-up:
+
+- Replaced the overly tall Dagre overview with a compact layered atlas layout.
+- Dependency depth still flows left-to-right, but large depth layers wrap into neighboring columns instead of one enormous vertical stack.
+- Reduced measured overview bounds from roughly `4,704 x 30,640` to roughly `9,066 x 2,224`, making fit-to-screen overview practical.
+- Initial fit view now allows lower zoom and less padding so the whole tree can be seen.
+
+## 2026-05-02
+
+Raised the technology tree's visual polish so the graph reads as an intentional atlas rather than plain graph output.
+
+- Reworked the tree canvas with layered radial lighting, subtle grid texture, and vignette depth.
+- Redesigned tree nodes with richer glass panels, category color rails, glow blooms, icon wells, selected-node haloing, and clearer rank/maturity treatment.
+- Improved the top tree bar with a stronger title block, integrated search, live visible-count chip, and rounder pathfinder/category controls.
+- Added a compact graph status panel and refined the route finder/minimap styling.
+- Tightened category jump and search result surfaces so the floating UI feels consistent with the tree.
+
+Checks passed:
+
+```bash
+npm run lint
+npm run build
+```

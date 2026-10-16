@@ -1,13 +1,19 @@
-import { memo, useCallback, useRef, useMemo } from "react";
+import {
+  memo,
+  useCallback,
+  useRef,
+  useMemo,
+  type CSSProperties,
+  type KeyboardEvent,
+} from "react";
 import { Handle, Position, type NodeProps, useStore } from "@xyflow/react";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
 import type { TechnologySummary } from "../../types/technology";
 import { CategoryIcon } from "../ui/CategoryIcon";
 import { CATEGORY_GLOW, CATEGORY_LABEL } from "../../utils/categoryMeta";
 import { verificationDotClass } from "../../utils/verificationUi";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
-import { useHighlight } from "./HighlightContext";
+import { useHighlight } from "./useHighlight";
 
 export type TechNodeData = {
   tech: TechnologySummary;
@@ -16,10 +22,12 @@ export type TechNodeData = {
   earthOnly: boolean;
   accent: "gold" | "space";
   isMatch: boolean;
+  selectionMode: boolean;
+  onSelect?: (id: string) => void;
 };
 
 function TechNodeInner({ data }: NodeProps) {
-  const { tech, locked, spaceGlow, earthOnly, accent, isMatch } =
+  const { tech, locked, spaceGlow, earthOnly, accent, isMatch, selectionMode, onSelect } =
     data as TechNodeData;
   const navigate = useNavigate();
   const isMobile = useMediaQuery("(max-width: 767px)");
@@ -56,7 +64,15 @@ function TechNodeInner({ data }: NodeProps) {
     navigate(`/tech/${tech.id}`);
   }, [navigate, tech.id]);
 
+  const selectForPath = useCallback(() => {
+    onSelect?.(tech.id);
+  }, [onSelect, tech.id]);
+
   const onClick = useCallback(() => {
+    if (selectionMode) {
+      selectForPath();
+      return;
+    }
     if (!isMobile) {
       open();
       return;
@@ -68,42 +84,59 @@ function TechNodeInner({ data }: NodeProps) {
     } else {
       lastTap.current = now;
     }
-  }, [isMobile, open]);
+  }, [isMobile, open, selectForPath, selectionMode]);
 
   const onKeyDown = useCallback(
-    (e: React.KeyboardEvent) => {
+    (e: KeyboardEvent) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
-        open();
+        if (selectionMode) selectForPath();
+        else open();
       }
     },
-    [open]
+    [open, selectForPath, selectionMode]
   );
 
   const glowBase = accent === "space" ? "rgba(0,212,255,0.45)" : CATEGORY_GLOW[tech.category];
   const vDot = verificationDotClass(tech.verification.status);
 
-  // Glassmorphism classes
-  const glassClass = "backdrop-blur-md bg-codex-card/85 border-white/10";
+  const nodeAccent = accent === "space" ? "rgba(0,212,255,0.52)" : glowBase;
+  const nodeStyle = useMemo<CSSProperties>(
+    () => ({
+      width: showContent ? 156 : 46,
+      height: showContent ? 96 : 46,
+      background:
+        "linear-gradient(145deg, rgba(35,35,51,0.96), rgba(16,16,25,0.94) 58%, rgba(8,8,13,0.98))",
+      boxShadow:
+        locked || isSelected
+          ? undefined
+          : `0 16px 40px -28px rgba(0,0,0,0.9), 0 0 26px -12px ${edgeActive ? "rgba(0,212,255,0.72)" : nodeAccent}`,
+    }),
+    [edgeActive, isSelected, locked, nodeAccent, showContent]
+  );
+
   const borderClass = locked
     ? "border-codex-locked/40"
     : isSelected
-      ? "border-codex-gold shadow-node-selected"
+      ? "border-codex-gold/90 shadow-node-selected"
       : spaceGlow
         ? "border-codex-space/60"
-        : "border-white/20";
+        : "border-white/15";
+
+  const wrapperStyle = useMemo<CSSProperties>(
+    () => ({
+      opacity: dimmed ? 0.3 : 1,
+      transform: isSelected ? "scale(1.05)" : undefined,
+    }),
+    [dimmed, isSelected]
+  );
 
   return (
-    <motion.div
-      initial={false}
-      animate={{
-        scale: isSelected ? 1.05 : 1,
-        opacity: dimmed ? 0.3 : 1,
-      }}
-      whileHover={{ scale: 1.02, y: -2 }}
+    <div
+      style={wrapperStyle}
       onMouseEnter={() => setHoverId(tech.id)}
       onMouseLeave={() => setHoverId(null)}
-      className="relative"
+      className="relative transition-[opacity,transform] duration-150 hover:-translate-y-0.5 hover:scale-[1.02]"
     >
       <span
         className={`absolute -right-0.5 -top-0.5 z-10 h-2.5 w-2.5 rounded-full border border-codex-bg shadow-sm ${vDot}`}
@@ -132,46 +165,81 @@ function TechNodeInner({ data }: NodeProps) {
         type="button"
         onClick={onClick}
         onKeyDown={onKeyDown}
-        className={`group relative flex flex-col rounded-lg border p-2.5 text-left outline-none transition-all duration-300 focus-visible:ring-2 focus-visible:ring-codex-blue/50 ${glassClass} ${borderClass} ${
-          locked ? "opacity-60 saturate-50" : "hover:shadow-lg"
+        className={`group relative flex overflow-hidden rounded-xl border p-2.5 text-left outline-none backdrop-blur-md transition-all duration-300 focus-visible:ring-2 focus-visible:ring-codex-blue/50 ${borderClass} ${
+          selectionMode ? "cursor-crosshair" : ""
+        } ${
+          locked ? "opacity-60 saturate-50" : "hover:border-white/30"
         }`}
-        style={{
-          width: showContent ? 148 : 42,
-          height: showContent ? 92 : 42,
-          boxShadow: locked || isSelected ? undefined : `0 0 20px -5px ${edgeActive ? "rgba(0,212,255,0.4)" : glowBase}`,
-        }}
-        aria-label={`${tech.name}. ${tech.tagline}. Category ${CATEGORY_LABEL[tech.category]}. Era ${tech.era.replaceAll("-", " ")}. Difficulty ${tech.difficulty} of 5.${isMobile ? " Double-tap to open." : " Press Enter to open."}`}
+        style={nodeStyle}
+        aria-label={`${tech.name}. ${tech.tagline}. Category ${CATEGORY_LABEL[tech.category]}. Era ${tech.era.replaceAll("-", " ")}. Difficulty ${tech.difficulty} of 5.${selectionMode ? " Select for pathfinding." : isMobile ? " Double-tap to open." : " Press Enter to open."}`}
       >
-        <div className={`flex items-center ${showContent ? "gap-1.5" : "justify-center"}`}>
-          <CategoryIcon
-            category={tech.category}
-            className={`h-4 w-4 transition-colors ${locked ? "text-codex-muted" : accent === "space" ? "text-codex-space" : "text-codex-gold"}`}
-            label=""
+        <span
+          className="pointer-events-none absolute inset-x-0 top-0 h-px opacity-80"
+          style={{
+            background: `linear-gradient(90deg, transparent, ${nodeAccent}, transparent)`,
+          }}
+        />
+        <span
+          className="pointer-events-none absolute bottom-0 left-0 top-0 w-1 opacity-80"
+          style={{
+            background: `linear-gradient(180deg, transparent, ${nodeAccent}, transparent)`,
+          }}
+        />
+        <span
+          className="pointer-events-none absolute -right-10 -top-10 h-24 w-24 rounded-full opacity-25 blur-2xl transition-opacity group-hover:opacity-45"
+          style={{ background: nodeAccent }}
+        />
+        {isSelected ? (
+          <span
+            className="pointer-events-none absolute inset-0 rounded-xl"
+            style={{
+              boxShadow: `inset 0 0 0 1px ${nodeAccent}, 0 0 32px -8px ${nodeAccent}`,
+            }}
           />
-          {showContent && (
+        ) : null}
+
+        <div className={`relative z-[1] flex items-center ${showContent ? "gap-2" : "justify-center"}`}>
+          <span
+            className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border ${
+              locked ? "border-white/5 bg-white/[0.03]" : "border-white/10 bg-white/[0.06]"
+            }`}
+            style={{ boxShadow: locked ? undefined : `inset 0 0 18px -12px ${nodeAccent}` }}
+          >
+            <CategoryIcon
+              category={tech.category}
+              className={`h-4 w-4 transition-colors ${locked ? "text-codex-muted" : accent === "space" ? "text-codex-space" : "text-codex-gold"}`}
+              label=""
+            />
+          </span>
+          {showContent ? (
             <span className="min-w-0 truncate font-mono text-[9px] uppercase tracking-widest text-codex-muted">
-              {tech.category}
+              {CATEGORY_LABEL[tech.category]}
             </span>
-          )}
+          ) : null}
         </div>
 
         {showContent && (
           <>
-            <span className="mt-1.5 line-clamp-2 min-h-[2.2rem] font-display text-[13px] font-bold leading-tight tracking-tight text-codex-text">
+            <span className="relative z-[1] mt-2 line-clamp-2 min-h-[2.1rem] font-display text-[13px] font-bold leading-tight tracking-tight text-codex-text">
               {tech.name}
             </span>
-            <div className="mt-auto flex items-center justify-between gap-2 font-mono text-[8px] uppercase tracking-tighter text-codex-muted/80">
-              <span className="flex items-center gap-1">
-                {locked ? "locked" : <span className="text-codex-gold/80">rank {tech.difficulty}</span>}
+            <div className="relative z-[1] mt-auto flex items-center justify-between gap-2 font-mono text-[8px] uppercase text-codex-muted/85">
+              <span
+                className={`rounded-full border px-1.5 py-0.5 ${
+                  locked
+                    ? "border-white/5 text-codex-muted"
+                    : "border-codex-gold/25 bg-codex-gold/10 text-codex-gold/90"
+                }`}
+              >
+                {locked ? "locked" : `rank ${tech.difficulty}`}
               </span>
-              <span className="truncate opacity-60">{tech.maturity.replaceAll("-", " ")}</span>
+              <span className="truncate opacity-65">{tech.maturity.replaceAll("-", " ")}</span>
             </div>
           </>
         )}
 
-        {/* Subtle holographic glare effect on hover */}
         {!locked && (
-          <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-tr from-white/0 via-white/5 to-white/0 opacity-0 transition-opacity group-hover:opacity-100" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity group-hover:opacity-100" />
         )}
       </button>
 
@@ -181,7 +249,7 @@ function TechNodeInner({ data }: NodeProps) {
         className={`!h-2 !w-2 !border-0 transition-colors ${edgeActive ? "!bg-codex-space" : "!bg-codex-blue/50"}`}
         aria-label={`Unlocks connect from here for ${tech.name}`}
       />
-    </motion.div>
+    </div>
   );
 }
 

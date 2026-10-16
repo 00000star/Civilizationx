@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useId, useMemo, useState } from "react";
 import QRCode from "qrcode";
-import { motion } from "framer-motion";
 import type { Technology } from "../../types/technology";
 import { CATEGORY_LABEL } from "../../utils/categoryMeta";
 import { ComponentList } from "./ComponentList";
@@ -126,10 +125,8 @@ export function TechDetail({ tech }: Props) {
             </div>
           </div>
 
-          <motion.div 
+          <div
             key={tab}
-            initial={{ opacity: 0, x: 10 }}
-            animate={{ opacity: 1, x: 0 }}
             className="print:hidden pt-12" 
             role="tabpanel" 
             aria-labelledby={`tab-${tab}-${printId}`}
@@ -149,7 +146,7 @@ export function TechDetail({ tech }: Props) {
               />
             ) : null}
             {tab === "history" ? <HistorySection tech={tech} /> : null}
-          </motion.div>
+          </div>
         </div>
 
         {/* Sidebar Info - "The Blueprint Block" */}

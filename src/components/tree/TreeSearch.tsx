@@ -54,17 +54,17 @@ export function TreeSearch({ technologies }: Props) {
           }}
           onFocus={() => setIsOpen(true)}
           placeholder="Jump to technology..."
-          className="w-full rounded-md border border-codex-border bg-codex-surface px-3 py-2 text-sm text-codex-text focus:border-codex-gold focus:outline-none focus:ring-1 focus:ring-codex-gold"
+          className="w-full rounded-full border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-codex-text shadow-inner outline-none transition-colors placeholder:text-codex-muted focus:border-codex-gold/70 focus:bg-codex-surface/80 focus:ring-1 focus:ring-codex-gold"
         />
       </div>
       
       {isOpen && results.length > 0 && (
-        <div className="absolute top-full left-0 z-[60] mt-1 w-full rounded-lg border border-codex-border bg-codex-card/95 shadow-2xl backdrop-blur-xl max-h-64 overflow-y-auto">
+        <div className="absolute left-0 top-full z-[60] mt-2 max-h-72 w-full overflow-y-auto rounded-xl border border-white/10 bg-codex-card/95 shadow-2xl backdrop-blur-xl">
           {results.map((t) => (
             <button
               key={t.id}
               onClick={() => select(t.id)}
-              className="w-full px-4 py-3 text-left hover:bg-white/5 transition-colors border-b border-white/5 last:border-0"
+              className="w-full border-b border-white/5 px-4 py-3 text-left transition-colors last:border-0 hover:bg-white/[0.06]"
             >
               <p className="font-display text-sm font-semibold text-codex-text">{t.name}</p>
               <p className="text-[10px] text-codex-muted truncate uppercase tracking-wide">{t.category} · {t.era.replaceAll("-", " ")}</p>

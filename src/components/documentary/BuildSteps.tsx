@@ -1,5 +1,4 @@
 import { useCallback, useState, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import type { BuildStep } from "../../types/technology";
 
 interface Props {
@@ -71,9 +70,8 @@ export function BuildSteps({ steps }: Props) {
                   <span className="text-codex-gold font-bold">{progress}%</span>
                </div>
                <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                  <motion.div 
-                    initial={{ width: 0 }}
-                    animate={{ width: `${progress}%` }}
+                  <div 
+                    style={{ width: `${progress}%` }}
                     className="h-full bg-codex-gold shadow-[0_0_10px_rgba(251,191,36,0.5)]"
                   />
                </div>
@@ -156,13 +154,8 @@ export function BuildSteps({ steps }: Props) {
                     </div>
                   )}
 
-                  <AnimatePresence>
-                    {(!missionActive || isActive || isCompleted) && (
-                      <motion.div
-                        initial={missionActive ? { height: 0, opacity: 0 } : false}
-                        animate={{ height: "auto", opacity: 1 }}
-                        className="overflow-hidden"
-                      >
+                  {(!missionActive || isActive || isCompleted) && (
+                    <div className="overflow-hidden">
                         <p className="mt-4 text-sm leading-relaxed text-codex-secondary">
                           {s.description}
                         </p>
@@ -177,9 +170,8 @@ export function BuildSteps({ steps }: Props) {
                             ))}
                           </div>
                         )}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                    </div>
+                  )}
                 </div>
               </div>
             </li>
