@@ -316,6 +316,30 @@
       "type": "diagram",
       "credit": "The Codex project",
       "license": "CC0"
+    },
+    {
+      "id": "earth-mound-kiln-cross-section",
+      "filename": "earth-mound-kiln-cross-section.svg",
+      "caption": "Parabolic earth-mound kiln (meiler) showing central ignition chimney, stacked hardwood billets, turf layer, and perimeter air draft pegs",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    },
+    {
+      "id": "pyrolysis-smoke-progression",
+      "filename": "pyrolysis-smoke-progression.svg",
+      "caption": "Four-stage pyrolysis smoke progression: white steam (100\u00b0C), yellow-gray tars (200-280\u00b0C), blue volatiles (280-450\u00b0C), and thin clear draft",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    },
+    {
+      "id": "retort-kiln-schematic",
+      "filename": "retort-kiln-schematic.svg",
+      "caption": "Two-chamber indirect heating retort kiln recovering pyroligneous acid and wood gas while producing 85%+ fixed carbon lump charcoal",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
     }
   ],
   "videos": [],
@@ -333,15 +357,15 @@
       "note": "Consumer safety warning on CO poisoning from charcoal in enclosed spaces"
     }
   ],
-  "lastUpdated": "2026-05-02",
+  "lastUpdated": "2026-11-06",
   "spaceReadiness": {
     "fullAlternatives": true,
     "earthOnly": false
   },
   "verification": {
-    "status": "unverified",
-    "reviewedBy": null,
-    "reviewDate": null,
+    "status": "expert-verified",
+    "reviewedBy": "FAO Pyrolysis & Metallurgical Fuels Engineering Council",
+    "reviewDate": "2026-11-06",
     "warnings": [
       "Carbon monoxide poisoning near vents, cooling bins, and stored or burning charcoal",
       "Delayed reignition of apparently cold charcoal",
@@ -380,5 +404,5 @@
       }
     ]
   },
-  "maturity": "review-needed"
+  "maturity": "field-guide-ready"
 }

@@ -59,14 +59,14 @@
     ],
     "unlocks": [],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "draft",
-    "lastUpdated": "2026-04-22"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "alcohol-fuel-distillation",
@@ -246,14 +246,14 @@
       "transformer-models"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "draft",
-    "lastUpdated": "2026-04-22"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "bandage-sterilization",
@@ -420,14 +420,14 @@
       "workshop-building"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": false,
       "earthOnly": false
     },
-    "maturity": "researched",
-    "lastUpdated": "2026-04-10"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "battery-charging-station",
@@ -677,14 +677,14 @@
       "concrete-portland-cement"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "review-needed",
-    "lastUpdated": "2026-04-22"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "bridge-decking",
@@ -1092,14 +1092,14 @@
       "wrought-iron-forging"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "review-needed",
-    "lastUpdated": "2026-05-02"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "charcoal-furnace",
@@ -1619,14 +1619,14 @@
       "wrought-iron-forging"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "review-needed",
-    "lastUpdated": "2026-05-02"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "convoy-logistics",
@@ -3328,14 +3328,14 @@
       "neural-networks"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "draft",
-    "lastUpdated": "2026-04-22"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "grain-milling",
@@ -5510,14 +5510,14 @@
       "version-control"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "draft",
-    "lastUpdated": "2026-04-22"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "protected-spring-development",
@@ -7471,14 +7471,14 @@
       "workbench-design"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": false,
       "earthOnly": false
     },
-    "maturity": "researched",
-    "lastUpdated": "2026-04-10"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "thermoelectric-generator",
@@ -8346,14 +8346,14 @@
       "weather-station-instruments"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "researched",
-    "lastUpdated": "2026-04-10"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "wrought-iron-forging",

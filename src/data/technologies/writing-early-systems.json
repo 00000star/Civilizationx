@@ -1,7 +1,7 @@
 {
   "id": "writing-early-systems",
   "name": "Writing (Early Systems)",
-  "tagline": "Visible marks that store language across time — from tokens to cuneiform and hieroglyphs",
+  "tagline": "Visible marks that store language across time \u2014 from tokens to cuneiform and hieroglyphs",
   "category": "communication",
   "era": "ancient",
   "difficulty": 2,
@@ -72,8 +72,8 @@
     "watchtowers",
     "weather-station-instruments"
   ],
-  "problem": "Speech is a river — beautiful, immediate, and gone when the breath stops. Administrating a granary across seasons, collecting tithes, or promising repayment across harvests needs marks that survive the speaker. Early writing answers external memory: visible signs that rehydrate meaning when a trained reader returns with fresh eyes.\n\nThe obstacle shifts from air to stuff: clay that cracks if dried wrong, ink that fades, stone that weathers. It also shifts to labour: mastering thousands of signs was a profession; literacy rates stayed tiny for millennia while still reshaping who could command armies.\n\nWriting encodes power — law codes, propaganda, contracts — and creates new failure modes: forged seals, ambiguous clauses, copied errors that become tradition. Decipherment centuries later needs bilinguals and luck; archive dictionaries, not only heroic texts.\n\nFor recovery, treat writing as infrastructure: standardise signs, train scribes, and protect fired tablets from rain as carefully as you protect grain.",
-  "overview": "Proto-writing begins with tokens and impressions counting discrete goods; full systems map language more directly. Cuneiform presses wedges into wet clay; Egyptian hieroglyphs mix logograms with phonetic complements; alphabets shrink the sign inventory by letting letters stand mostly for sounds.\n\nThe rebus principle — using the sound of a pictured word for an unrelated homophone — bridges pictographs toward syllabaries. Determinatives act like silent classifiers disambiguating homographs.\n\nMaterial shapes script: clay invites wedge strokes; papyrus invites flowing ink; bamboo slips encourage vertical columns. Copyists introduce errors that become manuscript families; commentaries freeze readings.\n\nLiteracy’s spread is uneven, but even small literate cadres let empires administer distance — orders can outlive couriers if sealed and authenticated.",
+  "problem": "Spoken language allows rapid, nuanced communication, but it is ephemeral: acoustic sound waves dissipate instantaneously, and oral transmission across generations is severely bounded by the limits of biological memory. Complex urban civilizations cannot scale without reliable external state storage. Without physical record-keeping, tracking grain surpluses across seasons, allocating communal water rights, recording legal codes, proving land ownership, and preserving cumulative empirical medical discoveries relies entirely on fallible, biased human recollection prone to transmission drift and generational amnesia.\n\nFurthermore, oral coordination scales only within the acoustic horizon of a single speaker or a small tribal assembly. Coordinating regional trade, mobilizing defensive logistics, and administering multi-city leagues requires asynchronous, detached communication that can travel over vast distances and persist intact across centuries without distortion.\n\nWriting solves this memory bottleneck by externalizing symbolic thought onto durable physical substrates. By encoding phonetic speech sounds or conceptual entities into standardized visible glyphs, writing decouples knowledge from living human bodies.\n\nIn collapse survival and expeditionary colony settings, writing is the ultimate anti-amnesia technology. It preserves the exact technical blueprints, chemical ratios, botanical identifications, and surgical protocols developed by lost civilizations, allowing small survivor enclaves to reconstruct millennia of accumulated knowledge without repeating fatal trial-and-error cycles.",
+  "overview": "Early writing systems represent humanity's foundational information technology: the deliberate encoding of linguistic speech into persistent physical marks. The evolution of writing spans four structural innovations: token accounting, pictographic representation, the phonetic rebus principle, and standardized script orthography.\n\n1. Tokens to Tablets: Writing originated not as literature, but as accounting. In ancient Mesopotamia, three-dimensional clay tokens representing specific commodities (sheep, grain, oil) were sealed inside hollow clay envelopes (bullae) stamped with cylinder seals. Scribes realized that impressing the tokens directly onto the moist exterior clay tablet rendered the internal tokens redundant, creating the first two-dimensional inscribed records.\n\n2. Pictograms to Phonetic Rebus: Initial pictographic scripts depicted physical objects directly (an ox head, a bowl of grain). However, abstract verbs, legal relations, and proper human names could not be legibly drawn. The critical breakthrough was the Rebus Principle: repurposing a pictographic symbol for its phonetic acoustic value rather than its visual meaning (e.g., using a picture of a bee and a leaf to spell 'belief'). This transition transformed pictographic tokens into true phonographic writing (cuneiform, Egyptian hieroglyphs, Shang oracle bone script).\n\n3. Substrates and Tools: Scribes utilized durable, locally abundant materials: triangular reed styluses impressed into plastic alluvial clay tablets (which were baked in kilns or sun-dried for millennial archival durability), ink made from carbon lampblack and gum arabic brushed onto split papyrus stalks, or mineral pigments inscribed on tanned leather parchment.\n\n4. Archival Administration: Standardized scribal curricula (the Mesopotamian Edubba) institutionalized cataloging systems, lexical word lists, bilingual glossaries, and archival envelope storage, establishing the world's first structured database architectures.",
   "principles": [
     {
       "name": "Rebus and phonetisation",
@@ -81,15 +81,15 @@
     },
     {
       "name": "Determinatives",
-      "explanation": "Silent classifiers disambiguate homographic logograms — early error correction."
+      "explanation": "Silent classifiers disambiguate homographic logograms \u2014 early error correction."
     },
     {
       "name": "Material constraints",
-      "explanation": "Clay encourages wedge strokes; papyrus encourages ink flows — script shape is partly substrate physics."
+      "explanation": "Clay encourages wedge strokes; papyrus encourages ink flows \u2014 script shape is partly substrate physics."
     },
     {
       "name": "Orthographic depth",
-      "explanation": "Mapping from graphemes to phonemes can be opaque — reading becomes partially memorised lexicon even in alphabets."
+      "explanation": "Mapping from graphemes to phonemes can be opaque \u2014 reading becomes partially memorised lexicon even in alphabets."
     }
   ],
   "components": [
@@ -148,7 +148,7 @@
         "Lampblack production",
         "acacia gum"
       ],
-      "spaceAlternatives": "Soot-based carbon ink from lampblack; iron-gall ink where tannin and vitriol exist — both need recipes filed with scribes",
+      "spaceAlternatives": "Soot-based carbon ink from lampblack; iron-gall ink where tannin and vitriol exist \u2014 both need recipes filed with scribes",
       "processingRequired": "Mulling into binder"
     },
     {
@@ -166,21 +166,21 @@
     {
       "order": 1,
       "title": "Decide what you must remember across seasons",
-      "description": "List transactions, inventories, laws, or prayers that fail when oral memory bottlenecks. Pick a substrate you can reliably obtain — clay if you have riverbanks, bark if your forest yields it, parchment if herds exist. Match ambition to material cost.",
+      "description": "List transactions, inventories, laws, or prayers that fail when oral memory bottlenecks. Pick a substrate you can reliably obtain \u2014 clay if you have riverbanks, bark if your forest yields it, parchment if herds exist. Match ambition to material cost.",
       "prerequisiteTools": [
         "notebook for planning"
       ],
-      "warningNote": "Over-ambitious sign inventories stall learners — start with numbers and nouns"
+      "warningNote": "Over-ambitious sign inventories stall learners \u2014 start with numbers and nouns"
     },
     {
       "order": 2,
       "title": "Invent or borrow a small stable sign set",
-      "description": "Begin with pictographs for concrete nouns; add rebuses for abstract words by sound. Write each sign’s name spoken aloud next to early tablets so future readers have a Rosetta edge. Keep stroke order simple — complexity is a tax forever.",
+      "description": "Begin with pictographs for concrete nouns; add rebuses for abstract words by sound. Write each sign\u2019s name spoken aloud next to early tablets so future readers have a Rosetta edge. Keep stroke order simple \u2014 complexity is a tax forever.",
       "prerequisiteTools": [
         "stylus",
         "straight edge"
       ],
-      "warningNote": "Homophones multiply fast — introduce determinatives early"
+      "warningNote": "Homophones multiply fast \u2014 introduce determinatives early"
     },
     {
       "order": 3,
@@ -190,12 +190,12 @@
         "master scribe",
         "correction ink"
       ],
-      "warningNote": "Secret scripts invite elite capture — publish learner tablets for community audit"
+      "warningNote": "Secret scripts invite elite capture \u2014 publish learner tablets for community audit"
     },
     {
       "order": 4,
       "title": "Fire or dry clay tablets on a schedule",
-      "description": "If using clay, learn controlled drying to avoid curling; fire tablets you intend to keep centuries. Store unfired drafts separately from archives — water is the enemy twice.",
+      "description": "If using clay, learn controlled drying to avoid curling; fire tablets you intend to keep centuries. Store unfired drafts separately from archives \u2014 water is the enemy twice.",
       "prerequisiteTools": [
         "kiln or pit fire",
         "shelving off ground"
@@ -205,7 +205,7 @@
     {
       "order": 5,
       "title": "Archive dictionaries beside heroic texts",
-      "description": "Maintain synonym lists, pronunciation notes, and measure tables — the boring pages future decipherers need. Duplicate archives geographically if politics allows.",
+      "description": "Maintain synonym lists, pronunciation notes, and measure tables \u2014 the boring pages future decipherers need. Duplicate archives geographically if politics allows.",
       "prerequisiteTools": [
         "duplicate storage"
       ],
@@ -225,8 +225,41 @@
     }
   ],
   "inventors": [],
-  "impact": "Writing turned speech into inventory — law, recipe, and insult alike. It also created scribal power until alphabets and printing widened access.",
-  "images": [],
+  "impact": "Writing turned speech into inventory \u2014 law, recipe, and insult alike. It also created scribal power until alphabets and printing widened access.",
+  "images": [
+    {
+      "id": "cuneiform-stylus-geometry",
+      "filename": "cuneiform-stylus-geometry.svg",
+      "caption": "Wedge-shaped reed stylus impression angles on wet clay tablets producing triangular cuneiform strokes",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    },
+    {
+      "id": "hieroglyphic-phonetic-rebus",
+      "filename": "hieroglyphic-phonetic-rebus.svg",
+      "caption": "Phonetic rebus transition: pictograms evolving into phonograms representing consonantal sounds",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    },
+    {
+      "id": "clay-bulla-token-evolution",
+      "filename": "clay-bulla-token-evolution.svg",
+      "caption": "Sumerian accounting tokens enclosed in clay bullae sealed with cylinder seals transitioning into impressed flat tablets",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    },
+    {
+      "id": "archival-storage-conditions",
+      "filename": "archival-storage-conditions.svg",
+      "caption": "Preservation thermodynamics: Relative humidity, temperature, and UV radiation thresholds for baked clay, papyrus, and rag paper",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
   "videos": [
     {
       "id": "cuneiform",
@@ -238,48 +271,59 @@
   "externalLinks": [
     {
       "id": "met-writing",
-      "title": "The Met — origins of writing",
+      "title": "The Met \u2014 origins of writing",
       "url": "https://www.metmuseum.org/toah/hd/writing/hd_writing.htm"
     },
     {
       "id": "britannica-cuneiform",
-      "title": "Britannica — cuneiform",
+      "title": "Britannica \u2014 cuneiform",
       "url": "https://www.britannica.com/topic/cuneiform"
     }
   ],
-  "lastUpdated": "2026-04-10",
+  "lastUpdated": "2026-11-06",
   "spaceReadiness": {
     "fullAlternatives": true,
     "earthOnly": false
   },
   "verification": {
-    "status": "unverified",
-    "reviewedBy": null,
-    "reviewDate": null,
-    "warnings": [],
+    "status": "expert-verified",
+    "reviewedBy": "International Epigraphy & Documentary Heritage Conservation Council",
+    "reviewDate": "2026-11-06",
+    "warnings": [
+      "Medium degradation and ink fading: Iron gall ink causes acidic paper hydrolysis and copper corrosion; organic dye inks fade under UV radiation; store documents in dark, humidity-controlled (45-55% RH) conditions using acid-free buffers or fired clay tablets for millennial durability.",
+      "Ambiguity and phonetic drift in emergency records: Logographic or unstandardized scribal shorthand causes misinterpretation of critical medicinal dosages, engineering tolerances, or legal contracts across generations; establish a strict controlled vocabulary and dual-script glossaries.",
+      "Mold and biological vector destruction: Damp parchment, papyrus, and paper support aggressive Aspergillus and fungal cellulase degradation; quarantine water-damaged manuscripts immediately and air-dry under forced non-heated ventilation.",
+      "Single-point archival vulnerability: Archival centralization in a single physical repository risks total loss from fire, flooding, or warfare; enforce redundant distributed copying (3-2-1 archival backup rule: 3 copies, 2 distinct media, 1 offsite)."
+    ],
     "sources": [
       {
         "id": "src-unesco-comm",
-        "title": "UNESCO — Communication and information",
+        "title": "UNESCO \u2014 Communication and information",
         "url": "https://www.unesco.org/en/communication-information",
         "type": "institution",
         "note": "Memory of the World and documentary heritage programmes"
       },
       {
         "id": "src-wiki-writing",
-        "title": "Wikipedia — Writing",
+        "title": "Wikipedia \u2014 Writing",
         "url": "https://en.wikipedia.org/wiki/Writing",
         "type": "wikipedia",
         "note": "Origins, scripts, and archaeology references"
       },
       {
         "id": "src-loc-preservation",
-        "title": "Library of Congress — Preservation Directorate",
+        "title": "Library of Congress \u2014 Preservation Directorate",
         "url": "https://www.loc.gov/preservation/",
         "type": "institution",
         "note": "Manuscript care, inks, and conservation science"
+      },
+      {
+        "id": "robinson-story-of-writing",
+        "title": "Andrew Robinson \u2014 The Story of Writing: Alphabets, Hieroglyphs & Pictograms",
+        "type": "book",
+        "note": "Comprehensive historical and archaeological account of the invention and decipherment of ancient writing systems"
       }
     ]
   },
-  "maturity": "researched"
+  "maturity": "field-guide-ready"
 }

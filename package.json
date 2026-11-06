@@ -28,7 +28,8 @@
     "sync-unlocks": "node scripts/sync-unlocks.mjs",
     "generate-technologies": "node scripts/generate-technologies.mjs",
     "fetch-media": "node scripts/fetch-media.mjs",
-    "merge-verification-sources": "node scripts/merge-verification-sources.mjs"
+    "merge-verification-sources": "node scripts/merge-verification-sources.mjs",
+    "test": "node scripts/test-offline-suite.mjs"
   },
   "dependencies": {
     "@tanstack/react-virtual": "^3.13.23",

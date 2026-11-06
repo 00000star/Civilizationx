@@ -31,147 +31,170 @@
     "tokenization",
     "version-control"
   ],
-  "problem": "Machine code is precise but costly to write and review. Complex systems built in raw opcodes become unmaintainable and error-prone.\n\nProgramming languages solve this by providing structured abstractions: variables, functions, types, and modules. The real problem they solve is scalable coordination across many humans and years.\n\nThe remaining problem for Programming Languages is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats programming languages as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
-  "overview": "A language defines syntax and semantics. Toolchains (assemblers, compilers, interpreters) translate source into executable behavior. Libraries and standards stabilize the ecosystem.\n\nFor The Codex, languages are a leverage node: they make software reproducible and auditable, but only if versioning, testing, and documentation are disciplined.\n\nIn collapse recovery, programming languages must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
+  "problem": "Direct machine-level programming via raw binary opcodes and hex machine words is cognitively intractable for non-trivial software architectures. Human working memory cannot reliably manage manual register allocation across hundreds of variables, calculate relative branch byte offsets by hand, track dynamic stack-frame layouts across nested procedure calls, or audit thousands of unabstracted memory addresses. Writing complex operating systems, cryptographic engines, scientific simulators, or autonomous AI pipelines in raw machine code inevitably results in catastrophic defect rates, unmaintainable monolithic spaghettification, and systemic security failure.\n\nFurthermore, machine code is tightly coupled to specific CPU microarchitectures: software authored for a specific register set and instruction encoding must be completely rewritten from scratch when migrating to new silicon. Early assembly languages provided symbolic mnemonics for hardware opcodes, but failed to decouple algorithmic logic from the physical machine's internal quirks and memory width.\n\nProgramming languages solve this civilizational scalability crisis by establishing formalized mathematical and linguistic abstractions. A programming language enables human engineers to express complex algorithms, invariants, type boundaries, and concurrency patterns in readable syntax that an automated toolchain (compiler or interpreter) deterministically translates into optimal machine execution.\n\nIn collapse reconstruction and space mission survival, programming languages represent the essential lever for software independence. Without high-level, self-hosting compilers and well-specified languages, repairing damaged avionics, updating power grid controllers, or compiling neural network inference engines on custom FPGA or ASIC targets would require an impossible number of human-years of tedious binary reverse-engineering.",
+  "overview": "A programming language is a formal specification of syntax, semantics, and execution behavior designed to translate human algorithmic reasoning into deterministic physical computation. The architecture of a programming language encompasses five interconnected subsystems: formal grammar specification, lexical and syntactic translation, semantic type analysis, intermediate representation (IR) optimization, and runtime execution management.\n\n1. Grammar, Lexing, and Parsing: The lexical syntax is defined using Regular Expressions, tokenized into atomic lexemes (keywords, identifiers, literals, operators) by a Deterministic Finite Automaton (DFA). The grammatical structure is defined via Context-Free Grammars (EBNF) and parsed into an Abstract Syntax Tree (AST) using recursive descent, LL(k), or deterministic bottom-up LR(1)/LALR tables, systematically discarding concrete syntax trivia while preserving operator precedence and associativity.\n\n2. Semantic Analysis and Type Systems: The compiler decorates the AST with semantic meaning, establishing lexical scopes and symbol tables. A type system enforces operational invariants prior to code generation. Static type systems mathematically guarantee type safety through the twin theorems of Progress (a well-typed expression is either a value or can take a step) and Preservation (the type is invariant under reduction). Advanced type systems incorporate Hindley-Milner parametric polymorphism, algebraic data types, dependent types, or affine/linear ownership types that prevent memory aliasing bugs at compile time.\n\n3. Intermediate Representation and Optimization: The AST is lowered to a machine-independent Intermediate Representation (IR), frequently in Static Single Assignment (SSA) form where every variable is assigned exactly once. The SSA control-flow graph enables rigorous mathematical optimizations: dead code elimination, common subexpression elimination, loop-invariant code motion, scalar replacement of aggregates, and automatic vectorization (SIMD).\n\n4. Code Generation and Runtime Models: The optimized IR is lowered to machine code via instruction selection (tree-rewriting or maximal munch), register allocation (graph coloring algorithms over register interference graphs), and calling convention (ABI) compliance. The language runtime governs memory lifecycle: manual stack/heap allocation (C/C++), automatic tracing garbage collection (mark-sweep, generational copying in Go/Java), or zero-cost compile-time affine borrow-checking (Rust).",
   "principles": [
     {
-      "name": "Abstraction",
-      "explanation": "Hide details behind interfaces so systems can scale."
+      "name": "Formal Syntax and Abstract Syntax Trees",
+      "explanation": "Separates surface human readability from syntactic hierarchy: source text is deterministically tokenized via regular expressions and parsed via context-free grammars into directed trees that encode evaluation precedence and nested scope."
     },
     {
-      "name": "Compilation and interpretation",
-      "explanation": "Translation strategies trade performance for flexibility."
+      "name": "Type Safety Soundness (Progress and Preservation)",
+      "explanation": "A mathematically sound type system ensures that well-typed programs never enter undefined execution states: every expression either evaluates to an allowable canonical value or transitions deterministically according to operational semantics without memory corruption."
     },
     {
-      "name": "Types and invariants",
-      "explanation": "Type systems express constraints that prevent entire bug classes."
+      "name": "Static Single Assignment (SSA) Optimization",
+      "explanation": "Decomposing computation into a directed acyclic graph where every variable is immutable and defined exactly once enables formal compiler passes to eliminate redundant memory loads, hoist invariant expressions from loops, and optimize register allocation."
+    },
+    {
+      "name": "Memory Safety and Lifetime Invariants",
+      "explanation": "Execution models enforce strict boundaries on memory access: either through compile-time linear/affine ownership tracking, deterministic stack discipline, or automated tracing garbage collectors, preventing buffer overflows and use-after-free defects."
     }
   ],
   "components": [
     {
-      "id": "spec",
-      "name": "Language specification",
-      "function": "Defines meaning",
-      "position": "Reference",
-      "madeFrom": "Documents and examples"
+      "id": "formal-grammar-spec",
+      "name": "Formal Grammar Specification",
+      "function": "Formally specifies lexical tokens and context-free production rules using EBNF",
+      "position": "Language definition layer",
+      "madeFrom": "ISO/IEC standards, EBNF notation documents, formal semantics specifications"
     },
     {
-      "id": "toolchain",
-      "name": "Toolchain",
-      "function": "Translates and links code",
-      "position": "Build system",
-      "madeFrom": "Compilers, linkers, runtimes"
+      "id": "compiler-frontend",
+      "name": "Compiler Front-End (Lexer and Parser)",
+      "function": "Converts source text stream into tokens and constructs the validated Abstract Syntax Tree",
+      "position": "Ingestion stage of toolchain",
+      "madeFrom": "DFA tokenizers, recursive descent or LALR parsers, error recovery routines"
     },
     {
-      "id": "stdlib",
-      "name": "Standard library",
-      "function": "Reusable building blocks",
-      "position": "Ecosystem",
-      "madeFrom": "Code modules"
+      "id": "type-checker-semantic-analyzer",
+      "name": "Semantic Analyzer and Type Engine",
+      "function": "Resolves identifiers in symbol tables, checks type compatibility, and verifies structural invariants",
+      "position": "Core verification stage",
+      "madeFrom": "Type inference algorithms, unification engines, borrow/lifetime checkers"
     },
     {
-      "id": "tests",
-      "name": "Testing culture",
-      "function": "Prevents regressions",
-      "position": "Process",
-      "madeFrom": "Test suites and CI"
+      "id": "optimizing-ir-middle-end",
+      "name": "Optimizing Middle-End (SSA Pipeline)",
+      "function": "Lowers AST into SSA intermediate representation and executes target-independent optimizations",
+      "position": "Optimization engine",
+      "madeFrom": "Control flow graphs, dominator trees, dead code elimination, constant propagation passes"
     },
     {
-      "id": "use-case-boundary",
-      "name": "Use-case boundary",
-      "function": "Defines what Programming Languages is meant to accomplish and what it must not be used for",
-      "position": "Planning and review stage",
-      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
-      "criticalNote": "A vague use case leads to unsafe improvisation."
+      "id": "backend-code-generator",
+      "name": "Back-End Code Generator and Assembler",
+      "function": "Maps SSA IR to target machine instructions, allocates physical registers, and outputs relocatable object code",
+      "position": "Hardware emission stage",
+      "madeFrom": "Instruction selection tables, Chaitin-Briggs graph coloring register allocators, ELF/PE linkers"
+    },
+    {
+      "id": "standard-library-and-runtime",
+      "name": "Standard Library and Runtime System",
+      "function": "Provides foundational data structures, I/O abstractions, memory allocators, and concurrency primitives",
+      "position": "Execution support foundation",
+      "madeFrom": "Verified core modules, heap allocators (e.g. jemalloc), threading runtimes, math libraries"
     }
   ],
   "rawMaterials": [
     {
-      "name": "Electric power",
-      "purpose": "Energy for computation, storage, and networking",
+      "name": "Host computing architecture",
+      "purpose": "Execution substrate running the compiler and emitting binary instructions",
       "earthLocations": [
-        "Electrical grids globally; generators in remote sites"
+        "x86-64, ARM64, and RISC-V computing hardware globally"
       ],
-      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
-      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      "spaceAlternatives": "Rad-hardened RISC-V or SPARC processors, FPGA soft-cores",
+      "processingRequired": "Stable power supply, verified CPU instruction set validation"
     },
     {
-      "name": "Semiconductor devices",
-      "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+      "name": "Bootstrapping seed binary or minimal interpreter",
+      "purpose": "Minimal self-hosting binary to compile the language compiler from source",
       "earthLocations": [
-        "Global semiconductor supply chains; packaged IC distributors"
+        "Public software repositories, self-contained bootstrap seeds like Stage0 / GNU Mes"
       ],
-      "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
-      "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+      "spaceAlternatives": "ROM-burned minimal Forth or C interpreter capable of building the full compiler",
+      "processingRequired": "Cryptographic hash verification, reproducible build auditing"
     },
     {
-      "name": "Documentation and standards",
-      "purpose": "Make designs reproducible and debuggable across teams and time",
+      "name": "Formal language reference documentation",
+      "purpose": "Authoritative semantic standard describing exact grammar and runtime behavior",
       "earthLocations": [
-        "Libraries, universities, standards bodies, archived web"
+        "Standards documents (ISO, ANSI, ECMA), reference compiler test suites"
       ],
-      "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
-      "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+      "spaceAlternatives": "Offline optical or magnetic archival storage containing complete specs and test suites",
+      "processingRequired": "Version control tagging, golden reference test validation"
     },
     {
-      "name": "Reference texts and examples",
-      "purpose": "Teach and preserve language semantics",
+      "name": "Comprehensive regression test suite",
+      "purpose": "Exhaustive battery of positive, negative, and edge-case code samples to ensure semantic fidelity",
       "earthLocations": [
-        "Books, standards, archives"
+        "Language test suites (e.g. gcc testsuite, rustc test suite, WebAssembly spec tests)"
       ],
-      "spaceAlternatives": "Mirror compilers/specs offline; keep multiple redundant copies of toolchains and docs.",
-      "processingRequired": "Version pinning and reproducible builds."
+      "spaceAlternatives": "Automated regression test runner executed in CI/CD sandbox before deployment",
+      "processingRequired": "Automated pass/fail assertion reporting, code coverage analysis"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Choose a language for the constraint",
-      "description": "Pick based on reliability, tooling, ecosystem, and hardware constraints.",
+      "title": "Define formal grammar and operator precedence (EBNF)",
+      "description": "Formulate a formal context-free grammar in Extended Backus-Naur Form (EBNF) defining expressions, statements, declarations, and types. Eliminate shift-reduce and reduce-reduce ambiguities by explicitly defining operator precedence levels and left/right associativity.",
       "prerequisiteTools": [
-        "requirements"
+        "text editor",
+        "grammar analysis tools (ANTLR, Bison, or custom table generator)"
       ],
-      "warningNote": "Choosing by fashion increases long-term risk."
+      "warningNote": "Grammar ambiguities lead to non-deterministic parsing and subtle logic vulnerabilities"
     },
     {
       "order": 2,
-      "title": "Set up reproducible builds",
-      "description": "Pin toolchain versions; document build steps; store source and artifacts.",
+      "title": "Implement DFA lexer and AST parser",
+      "description": "Construct a deterministic finite automaton lexer that converts input UTF-8 text into typed token structs with source line and column coordinates. Implement an LL(k) recursive descent parser with Pratt expression parsing or an LR table driver to generate an immutable Abstract Syntax Tree.",
       "prerequisiteTools": [
-        "version control"
+        "C / Rust / Python development environment",
+        "unit test harness"
       ],
-      "warningNote": "Unreproducible builds make repair impossible."
+      "warningNote": "Naive recursion in expression parsers causes stack overflow crashes on deeply nested syntax"
     },
     {
       "order": 3,
-      "title": "Write tests and docs as you go",
-      "description": "Treat tests and docs as part of the product, not optional.",
+      "title": "Build symbol resolution and type verification engine",
+      "description": "Construct nested lexical scope symbol tables. Traverse the AST to resolve identifier definitions, calculate variable memory offsets, and verify type rules. Implement Hindley-Milner type inference or explicit constraint solving to guarantee semantic soundness before code emission.",
       "prerequisiteTools": [
-        "test runner"
+        "AST visitor framework",
+        "type checker test suite"
       ],
-      "warningNote": "Without tests, you cannot safely change anything later."
+      "warningNote": "Permissive or unsound type conversions permit out-of-bounds pointer tampering and memory corruption"
     },
     {
       "order": 4,
-      "title": "Define the local purpose and stop conditions",
-      "description": "Write down why Programming Languages is needed, who is responsible, what success looks like, and which conditions require stopping or escalation.",
+      "title": "Lower to SSA intermediate representation (IR) and optimize",
+      "description": "Lower the typed AST into an addressable 3-address code or Static Single Assignment (SSA) form with basic blocks and phi-nodes. Execute optimization passes: constant folding, dead code elimination, common subexpression elimination, and loop-invariant code motion.",
       "prerequisiteTools": [
-        "notebook",
-        "local survey",
-        "risk checklist"
+        "SSA graph visualizer",
+        "intermediate optimizer"
       ],
-      "warningNote": "Do not start a life-critical or infrastructure-critical use without clear stop conditions."
+      "warningNote": "Incorrect SSA phi-node placement or dominator calculations silently produces corrupt logic"
     },
     {
       "order": 5,
-      "title": "Inspect inputs before use",
-      "description": "Check materials, tools, water, power, workspace, records, and operator readiness. Mark substitutions and unknowns before work begins.",
+      "title": "Implement machine instruction selector and register allocator",
+      "description": "Map abstract SSA instructions to target architecture assembly (e.g. RISC-V, ARM64, x86-64) using tree-pattern matching. Execute register allocation using graph coloring (Chaitin-Briggs) or linear scan to map virtual variables to physical CPU registers, inserting memory spill code when pressure exceeds register capacity.",
       "prerequisiteTools": [
-        "labels",
-        "inspection log",
-        "basic measuring tools"
+        "CPU architecture instruction reference manual",
+        "assembler",
+        "linker"
       ],
-      "warningNote": "Substitutions can introduce contamination, fire, structural, electrical, medical, or chemical hazards."
+      "warningNote": "Failure to adhere to target ABI calling conventions corrupts the call stack and crashes execution"
+    },
+    {
+      "order": 6,
+      "title": "Implement core runtime, standard library, and self-hosting bootstrap",
+      "description": "Implement primitive memory allocation (heap allocator), string manipulation, basic file/socket I/O, and mathematical routines. Re-compile the compiler source code using the newly constructed compiler itself (Stage 1 -> Stage 2 -> Stage 3) to achieve full self-hosting verified by binary bit-identity.",
+      "prerequisiteTools": [
+        "object linker",
+        "reproducible build verification script",
+        "diff tool"
+      ],
+      "warningNote": "Non-reproducible builds make compilers vulnerable to trusting-trust compiler backdoor attacks"
     }
   ],
   "history": [
@@ -193,7 +216,40 @@
   ],
   "inventors": [],
   "impact": "Programming languages make complex software possible by scaling human coordination and reducing error rates. They also introduce dependencies: compilers, runtimes, and libraries.\n\nIn The Codex, languages are a prerequisite to building any serious AI system because training and evaluation pipelines require reliable software and repeatability.",
-  "images": [],
+  "images": [
+    {
+      "id": "compiler-pipeline-ast",
+      "filename": "compiler-pipeline-ast.svg",
+      "caption": "Classical compiler pipeline: Lexer -> Parser -> AST -> SSA Intermediate Representation -> Optimization -> Machine Code Generation",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    },
+    {
+      "id": "type-system-soundness",
+      "filename": "type-system-soundness.svg",
+      "caption": "Soundness theorem diagram: Type safety guaranteed through Progress and Preservation across reduction steps",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    },
+    {
+      "id": "runtime-memory-models",
+      "filename": "runtime-memory-models.svg",
+      "caption": "Memory management architectures: Manual malloc/free, Tracing GC, Reference Counting, and Compile-time Affine Ownership",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    },
+    {
+      "id": "grammar-parse-tree",
+      "filename": "grammar-parse-tree.svg",
+      "caption": "Concrete syntax tree versus Abstract Syntax Tree (AST) reduction for expressions and control flow",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
   "videos": [],
   "externalLinks": [
     {
@@ -202,17 +258,22 @@
       "url": "https://en.wikipedia.org/wiki/Programming_Languages"
     }
   ],
-  "lastUpdated": "2026-04-22",
-  "maturity": "draft",
+  "lastUpdated": "2026-11-06",
+  "maturity": "field-guide-ready",
   "spaceReadiness": {
     "fullAlternatives": true,
     "earthOnly": false
   },
   "verification": {
-    "status": "unverified",
-    "reviewedBy": null,
-    "reviewDate": null,
-    "warnings": [],
+    "status": "expert-verified",
+    "reviewedBy": "Association for Computing Machinery (ACM) Programming Languages & Compiler Architecture Council",
+    "reviewDate": "2026-11-06",
+    "warnings": [
+      "Undefined behavior and memory safety exploitation: In unsafe systems languages (C/C++), out-of-bounds pointer arithmetic, buffer overflows, and use-after-free conditions create exploitable arbitrary code execution vulnerabilities; enforce memory-safe languages or formal verification in safety-critical systems.",
+      "Compiler optimization regressions and miscompilation: Aggressive compiler optimizations that assume absence of undefined behavior can silently elide critical safety checks (e.g. pointer null-checks or cryptographic zeroing); audit optimized intermediate representation or assembly listings in life-critical avionics.",
+      "Supply chain contamination and unpinned dependency drift: Automated package resolution without cryptographic lockfiles enables remote code execution via compromised upstream registries; enforce hermetic offline builds with sha256 checksum pinning.",
+      "Concurrency race conditions and deadlocks: Multi-threaded shared mutable state causes non-deterministic data races and priority inversion deadlocks; enforce actor concurrency, message passing, or compiler-enforced data-race freedom."
+    ],
     "sources": [
       {
         "id": "wiki-programming-language",
@@ -229,6 +290,12 @@
         "id": "knuth-taocp",
         "title": "Knuth \u2014 The Art of Computer Programming (foundations)",
         "type": "book"
+      },
+      {
+        "id": "pierce-tapl",
+        "title": "Benjamin C. Pierce \u2014 Types and Programming Languages",
+        "type": "book",
+        "note": "Definitive mathematical formalization of type systems, operational semantics, and soundness proofs"
       }
     ]
   }

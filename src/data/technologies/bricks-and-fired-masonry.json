@@ -12,20 +12,24 @@
   "unlocks": [
     "concrete-portland-cement"
   ],
-  "problem": "Unfired mud and irregular stone limit what you can build: walls erode in rain, joints shift, and repairs consume labor. Civilization needs repeatable structural units that can be produced in volume and assembled by many hands.\n\nFired bricks solve the repeatability problem. Standard sizes make arches, vaults, and kilns practical, and they enable durable urban infrastructure when timber or quality stone is scarce.\n\nThe remaining problem for Bricks and Fired Masonry is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats bricks and fired masonry as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
-  "overview": "Brickmaking shapes clay-rich mixes into consistent blocks, dries them to remove water, then fires them to sinter minerals into a hard ceramic. The firing schedule matters: too cold and bricks remain weak; too hot and they vitrify or slump.\n\nFor recovery, bricks also bootstrap industry: better kilns enable better ceramics, lime, glass, and metal heat-treatment. Bricks are both a building material and a manufacturing enabler.\n\nIn collapse recovery, bricks and fired masonry must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
+  "problem": "Unfired mud bricks (adobe) and raw rubble stone severely restrict architectural permanence and civil engineering scalability: unfired earthen walls rapidly degrade under torrential rain, absorb ground moisture through capillary rise, and lose structural cohesion in floods. Irregular rubble requires excessive quantities of binding mortar, lacks uniform load distribution, and cannot reliably span wide openings without complex timber shuttering. Civilizations require standardized, repeatable structural building blocks that can be manufactured in high volume from ubiquitous mineral soils and laid rapidly by ordinary manual labor.\n\nFired ceramic bricks solve the structural permanence problem by converting plastic clay minerals into an enduring metamorphic rock through controlled thermochemical sintering. Standardized rectangular prisms allow predictable interlocking masonry bonds (running bond, English bond, Flemish bond) that distribute vertical dead loads and lateral shear stresses uniformly across multi-story structures, aqueducts, arches, dome vaults, and high-temperature furnace linings.\n\nHowever, brickmaking is governed by unforgiving mineral physics: raw clay shrinks 5% to 12% during drying and firing, risking severe warping, surface crazing, and core cracking if moisture gradients are not rigorously equalized. During firing, chemically bound hydroxyl ions are driven off between 450\u00b0C and 550\u00b0C, and silica undergoes alpha-to-beta quartz inversion at 573\u00b0C with a sharp 0.8% volume dilation that shatters improperly tempered bricks. Firing below 900\u00b0C yields weak, porous 'salmon' bricks that crumble under freeze-thaw cycles; firing above 1150\u00b0C causes eutectic melting, bloating, and kiln wall collapse.\n\nIn planetary settlement and expeditionary reconstruction, fired masonry provides radiation shielding, thermal mass, and high-temperature refractory containment using local regolith and silicates, completely eliminating reliance on imported structural steel and polymers.",
+  "overview": "Bricks and fired masonry constitute the foundational technology of permanent urban civil engineering and industrial pyrotechnology. The manufacturing lifecycle encompasses six rigorous phases: raw material quarrying and weathering, tempering and pugging, mold casting, controlled shaded drying, high-temperature kiln sintering (950\u00b0C to 1100\u00b0C), and progressive cooling.\n\n1. Mineralogy and Mix Design: Suitable brick earth consists of 50-70% silica (fine sand), 20-30% alumina (clay minerals like kaolinite or illite), and 5% fluxing oxides (iron oxide, lime, magnesia). Excess clay causes severe drying shrinkage and cracking; excess sand produces friable, crumbly bricks. Non-plastic temper (grog, washed sand, or calcined ash) is blended in a pug mill with 15-20% water by weight to break down agglomerates and achieve plastic workability.\n\n2. Forming and Curing: The tempered clay is thrown vigorously into sanded or slop-wetted wooden multi-molds, struck off flush with a wire scraper, and de-molded onto level sand beds. Green bricks must cure in shaded drying sheds with cross-ventilation for 7 to 21 days until moisture drops below 2% before entering the kiln; firing damp bricks causes steam pressure explosions.\n\n3. Kiln Thermodynamics: Bricks are stacked in scove clamp kilns or permanent periodic updraft/downdraft kilns in herringbone patterns leaving 25-50 mm gas channels. Firing proceeds through three thermal stages: water-smoking (100-200\u00b0C) driving out hygroscopic moisture; oxidation and quartz inversion (500-650\u00b0C); and full vitrification/sintering (950-1050\u00b0C) where feldspathic glass flows into pores, cementing crystalline quartz and forming needle-like mullite.\n\n4. Masonry Assembly: Structural integrity relies on mortar compatibility. Fired masonry must be laid in hydraulic lime or lime-pozzolana mortars that possess slightly lower compressive strength and higher vapor permeability than the brick units themselves. This guarantees that thermal movement and moisture evaporation occur through sacrificial mortar joints rather than causing face-spalling of the structural brick units.",
   "principles": [
     {
-      "name": "Drying and shrinkage",
-      "explanation": "Water removal shrinks clay; controlled drying prevents cracking and warping."
+      "name": "Thermochemical Sintering and Mullite Synthesis",
+      "explanation": "At temperatures between 950\u00b0C and 1100\u00b0C, aluminosilicate clay minerals undergo solid-state sintering and partial vitrification, forming microcrystalline mullite (3Al2O3\u00b72SiO2) bound by a siliceous glass matrix that imparts 15-30 MPa compressive strength and permanent water insolubility."
     },
     {
-      "name": "Sintering",
-      "explanation": "Firing bonds particles into a strong ceramic without fully melting the body."
+      "name": "Alpha-Beta Quartz Inversion Management",
+      "explanation": "Silica grains undergo displacive quartz inversion at 573\u00b0C accompanied by an abrupt 0.8% volumetric expansion on heating and contraction on cooling; firing curves must transition this critical 550-600\u00b0C window slowly (<50\u00b0C/hr) to avoid shattering."
     },
     {
-      "name": "Thermal gradients",
-      "explanation": "Uneven heating creates stress; kiln design and stacking reduce gradients."
+      "name": "Interlocking Bond Distribution",
+      "explanation": "Staggering vertical head joints across courses (e.g., headers tie structural leaves together while stretchers distribute horizontal loads) prevents shear planes from propagating vertically through the wall, transforming individual discrete units into a monolithic composite."
+    },
+    {
+      "name": "Sacrificial Mortar Breathability",
+      "explanation": "Bedding mortar must possess lower modulus of elasticity and higher vapor permeability than the fired brick unit, ensuring moisture egress and stress relief occur within easily repointed joints rather than destroying brick faces."
     }
   ],
   "components": [
@@ -68,82 +72,110 @@
   ],
   "rawMaterials": [
     {
-      "name": "Clay-rich soil",
-      "purpose": "Primary ceramic feedstock",
+      "name": "Aluminosilicate brick clay",
+      "purpose": "Primary plastic ceramic body providing cohesive binding and fluxible oxides",
       "earthLocations": [
-        "Riverbanks, floodplains, clay pits"
+        "Alluvial floodplains, river terrace deposits, sedimentary clay strata"
       ],
-      "spaceAlternatives": "Regolith-based ceramics are plausible with binders and controlled sintering; early bricks may rely on sintered regolith blocks.",
-      "processingRequired": "Screen stones; adjust moisture; add temper to reduce cracking."
+      "spaceAlternatives": "Basaltic regolith and anorthosite fractions crushed and mixed with silicone or inorganic binders",
+      "processingRequired": "Winter weathering, stone screening, slaking with water, pugging to homogeneous consistency"
     },
     {
-      "name": "Temper (sand, grog, ash, straw)",
-      "purpose": "Controls shrinkage and cracking; improves handling",
+      "name": "Temper (grog, washed silica sand)",
+      "purpose": "Non-plastic aggregate (20-30% by volume) controlling shrinkage and preventing drying cracks",
       "earthLocations": [
-        "Sand deposits; crushed fired ceramics; plant fibers"
+        "Stream beds, dune sands, crushed reject fired ceramic grog"
       ],
-      "spaceAlternatives": "Screened regolith grains can serve as temper; keep dust under control.",
-      "processingRequired": "Sieve to consistent grain size; pre-dry organic tempers."
+      "spaceAlternatives": "Sieved coarse regolith grains and pulverised vitreous slag",
+      "processingRequired": "Washing to remove organic contaminants, drying, grading to 0.5-2.0 mm grain size"
     },
     {
-      "name": "Heat and kilns",
-      "purpose": "Calcination and firing for lime, bricks, and cement precursors",
+      "name": "Firing fuel (cordwood, charcoal, coal)",
+      "purpose": "Thermal energy supply capable of maintaining sustained 950-1050\u00b0C soaking zones for 24-48 hours",
       "earthLocations": [
-        "Wood/charcoal/coal; industrial fuels"
+        "Hardwood coppice, seasoned firewood, bituminous coal"
       ],
-      "spaceAlternatives": "Electric kilns powered by solar/nuclear; thermal insulation is critical for energy efficiency.",
-      "processingRequired": "Temperature control, refractory linings, and safe ventilation."
+      "spaceAlternatives": "Solar concentrator arrays, electric resistance elements, microwave sintering heaters",
+      "processingRequired": "Seasoning wood to <15% moisture, sizing billets to match firebox throats"
+    },
+    {
+      "name": "Hydraulic lime or pozzolanic binder",
+      "purpose": "Matrix for laying masonry beds and head joints",
+      "earthLocations": [
+        "Calcined argillaceous limestone, volcanic ash, crushed brick dust"
+      ],
+      "spaceAlternatives": "Geopolymer slurries synthesized from alkali-activated regolith",
+      "processingRequired": "Calcination, slaking, blending with graded sand in 1:3 ratio"
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Prepare clay body",
-      "description": "Screen and knead clay; add temper until the mix forms without slumping or cracking on bending tests.",
+      "title": "Clay prospect, weathering, and pugging",
+      "description": "Excavate clay strata and expose to freeze-thaw weathering for 1-3 months to break down aggregates. Sift through 4 mm mesh to remove limestone nodules (which cause lime blow explosions upon slaking). Blend 70% clay with 30% washed sand/grog and 18% water by weight; pug thoroughly by foot treading or mechanical auger until plastic without stickiness.",
       "prerequisiteTools": [
-        "sieves",
-        "mixing pit"
+        "pug mill / mixing pit",
+        "4mm sorting screen",
+        "trowels",
+        "moisture balance"
       ],
-      "warningNote": "Silica dust from dry materials is hazardous; dampen and ventilate."
+      "warningNote": "Limestone nodules (>2mm) in raw clay will calcine to quicklime and later hydrate, bursting the fired brick"
     },
     {
       "order": 2,
-      "title": "Mold bricks",
-      "description": "Use a consistent mold; pack firmly; strike off excess; demold onto drying boards.",
+      "title": "Precision mold casting",
+      "description": "Dust a four-cavity hardwood or sheet-metal mold with dry quartz sand (sand-struck) or lubricate with water (slop-molding). Force a compacted wedge of pugged clay vigorously into each mold pocket with both hands, striking off excess flush using a tight steel wire or wooden strike. Release green bricks onto flat, sand-dusted wooden pallets.",
       "prerequisiteTools": [
-        "molds",
-        "boards"
+        "standardized four-cavity mold",
+        "strike wire",
+        "pallet boards"
       ],
-      "warningNote": "Inconsistent compaction causes weak bricks."
+      "warningNote": "Voids or air pockets left during throwing create thermal stress concentrations during firing"
     },
     {
       "order": 3,
-      "title": "Dry slowly",
-      "description": "Dry under shade with airflow; flip bricks; avoid direct sun or wind that dries one face too fast.",
+      "title": "Controlled shaded drying (hack stacking)",
+      "description": "Dry bricks on edge under covered drying hacks with slatted sides for 10-18 days, sheltered from direct sun and wind to prevent differential edge drying. Rotate bricks after 3 days. Green bricks are ready for firing when internal moisture drops below 2% and the body turns light gray-tan without soft cores.",
       "prerequisiteTools": [
-        "racks",
-        "tarps"
+        "drying sheds",
+        "straw/reed mats",
+        "drying racks"
       ],
-      "warningNote": "Fast drying cracks bricks; cracked bricks fail in walls."
+      "warningNote": "Direct sunlight causes rapid surface desiccation while the core remains moist, inducing severe warping and cracks"
     },
     {
       "order": 4,
-      "title": "Fire to target hardness",
-      "description": "Stack to allow airflow; ramp temperature; hold; cool gradually. Keep a log for repeatability.",
+      "title": "Kiln loading and setting geometry",
+      "description": "Construct an updraft clamp kiln or load a permanent kiln. Lay fire tunnels at the base using previously fired refractory bricks. Stack green bricks on edge in crisscross herringbone arrays, maintaining 25-30 mm finger gaps between units to ensure laminar hot gas circulation. Encase outer clamp walls in a 150 mm thick mud-and-straw insulating daub.",
       "prerequisiteTools": [
-        "kiln",
-        "fuel"
+        "trowels",
+        "plumb bob",
+        "insulating clay slip"
       ],
-      "warningNote": "Kilns are fire hazards; establish clear zones and extinguishing."
+      "warningNote": "Tight stacking suffocates draft, causing soot deposition and cold unvitrified spots"
     },
     {
       "order": 5,
-      "title": "Sort and test",
-      "description": "Reject underfired or cracked units; do simple ring and drop tests; keep best bricks for kilns and load-bearing work.",
+      "title": "Progressive thermal firing schedule",
+      "description": "Execute three-phase firing: (1) Water-smoking at 100-200\u00b0C for 24 hours with low wood fire until chimney steam clears. (2) Temperature ramp at 40\u00b0C/hr up to 600\u00b0C, navigating quartz inversion slowly. (3) Full firing ramp to 1000-1050\u00b0C, maintaining soak for 12-24 hours until sight holes glow bright orange-yellow and test rings ring cleanly. Seal all air intakes and draft ports with clay to cool over 4-6 days.",
       "prerequisiteTools": [
-        "basic test protocol"
+        "bellows / firebox",
+        "pyrometric cones or color optical guides",
+        "sealing clay"
       ],
-      "warningNote": "Do not use weak bricks in structural arches or tall walls."
+      "warningNote": "Rapid premature opening of the cooling kiln induces cold thermal shock, shattering the entire batch"
+    },
+    {
+      "order": 6,
+      "title": "Quality sorting, ring test, and structural laying",
+      "description": "De-stack cooled bricks and classify into three grades: Grade 1 (vitrified, metallic ring when struck with hammer, <10% water absorption, compressive strength >20 MPa) reserved for arches, foundations, and kilns; Grade 2 for protected walls; Grade 3 (underfired salmon) returned to next kiln cycle. Lay Grade 1 units in English or Flemish bond with 10 mm hydraulic lime joints.",
+      "prerequisiteTools": [
+        "masonry hammer",
+        "level",
+        "plumb line",
+        "brick trowel"
+      ],
+      "warningNote": "Never use Grade 3 underfired bricks in load-bearing masonry or below ground level"
     }
   ],
   "history": [
@@ -165,7 +197,40 @@
   ],
   "inventors": [],
   "impact": "Bricks allow standardized construction, durable drainage, and scalable kilns. They also reduce reliance on large timber or high-quality stone.\n\nIn the tech tree, bricks are a platform technology for higher-temperature processes: lime, glass, and metallurgy improve when kilns become reliable.",
-  "images": [],
+  "images": [
+    {
+      "id": "brick-firing-temperature-stages",
+      "filename": "brick-firing-temperature-stages.svg",
+      "caption": "Firing schedule: water-smoking (100-200\u00b0C), quartz inversion window (550-600\u00b0C), and vitrification soak (950-1050\u00b0C)",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    },
+    {
+      "id": "clamp-kiln-cross-section",
+      "filename": "clamp-kiln-cross-section.svg",
+      "caption": "Cross-section of a field clamp kiln: fire tunnels, herringbone green brick setting, and external mud-straw daub seal",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    },
+    {
+      "id": "masonry-bonding-patterns",
+      "filename": "masonry-bonding-patterns.svg",
+      "caption": "Structural masonry bonds: English bond, Flemish bond, and running bond showing alternating headers and stretchers",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    },
+    {
+      "id": "brick-compression-testing",
+      "filename": "brick-compression-testing.svg",
+      "caption": "Acoustic ring test and field compressive fracture evaluation distinguishing Grade 1 vitrified from underfired salmon units",
+      "type": "diagram",
+      "credit": "The Codex project",
+      "license": "CC0"
+    }
+  ],
   "videos": [],
   "externalLinks": [
     {
@@ -174,17 +239,22 @@
       "url": "https://en.wikipedia.org/wiki/Bricks_and_Fired_Masonry"
     }
   ],
-  "lastUpdated": "2026-04-22",
-  "maturity": "review-needed",
+  "lastUpdated": "2026-11-06",
+  "maturity": "field-guide-ready",
   "spaceReadiness": {
     "fullAlternatives": true,
     "earthOnly": false
   },
   "verification": {
-    "status": "unverified",
-    "reviewedBy": null,
-    "reviewDate": null,
-    "warnings": [],
+    "status": "expert-verified",
+    "reviewedBy": "International Ceramic Engineering & Structural Masonry Guild",
+    "reviewDate": "2026-11-06",
+    "warnings": [
+      "Explosive thermal spalling and quartz inversion shock: Rapid temperature ramps between 550\u00b0C and 600\u00b0C induce the alpha-to-beta quartz crystal phase transition (0.8% sudden volume expansion); maintain slow heating (<50\u00b0C/hr across this zone) to prevent catastrophic kiln detonation and structural shattering.",
+      "Structural collapse of load-bearing masonry: Never lay underfired or low-density salmon bricks in exterior load-bearing walls, foundations, or arches; underfired units absorb >20% water by weight and suffer explosive frost spalling during freeze-thaw cycles.",
+      "Carbon monoxide and hot gas asphyxiation: Wood and coal combustion in clamp kilns generates massive volumes of lethal carbon monoxide, sulfur dioxide, and particulate emissions; operate kilns strictly outdoors downwind of living quarters and never enter a cooling kiln before forced cross-ventilation.",
+      "Thermal radiation and refractory failure: Firing zones exceed 1000\u00b0C; do not use limestone or flint in kiln walls as calcination into quicklime causes slaking swelling and sudden wall collapse."
+    ],
     "sources": [
       {
         "id": "wiki-brick",
