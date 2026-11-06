@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codex: CivilizationX — Offline Field Manual</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --heading: #58a6ff;
+    --accent: #238636;
+    --warn: #d29922;
+    --danger: #f85149;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  }
+  @media print {
+    body { background: #fff !important; color: #000 !important; }
+    .card { page-break-inside: avoid; border: 1px solid #ccc !important; }
+    .no-print { display: none !important; }
+  }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    line-height: 1.6;
+    margin: 0;
+    padding: 16px;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+  header {
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+  }
+  h1 { color: var(--heading); margin: 0 0 8px 0; font-size: 1.8rem; }
+  h2 { color: #58a6ff; border-bottom: 1px solid var(--border); padding-bottom: 6px; margin-top: 32px; }
+  h3 { color: #79c0ff; margin-top: 20px; font-size: 1.2rem; }
+  h4 { color: #e6edf3; margin-bottom: 6px; }
+  .badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-family: var(--mono);
+    margin-right: 6px;
+    background: #21262d;
+    border: 1px solid var(--border);
+  }
+  .badge-field { background: #1f6feb33; color: #58a6ff; border-color: #1f6feb; }
+  .badge-expert { background: #23863633; color: #3fb950; border-color: #238636; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 28px;
+  }
+  .warning-box {
+    background: #3b2300;
+    border-left: 4px solid var(--warn);
+    padding: 12px 16px;
+    margin: 12px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .hazard-box {
+    background: #3c1214;
+    border-left: 4px solid var(--danger);
+    padding: 12px 16px;
+    margin: 12px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  code {
+    font-family: var(--mono);
+    background: #21262d;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.85em;
+  }
+  #search {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    font-size: 1rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: #fff;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+  .toc {
+    background: #161b22;
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+  .toc a { color: #58a6ff; text-decoration: none; display: block; padding: 4px 0; }
+  .toc a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>The Codex: CivilizationX — Survival Field Manual</h1>
+  <p><strong>Everything humanity knows. Everything humanity built. Nothing forgotten.</strong></p>
+  <div>
+    <span class="badge badge-field">10 FIELD-READY ANCHORS</span>
+    <span class="badge badge-expert">EXPERT-VERIFIED</span>
+    <span class="badge">100% OFFLINE</span>
+  </div>
+</header>
+
+<div class="no-print">
+  <input type="text" id="search" placeholder="Type to filter technologies, materials, or hazards..." onkeyup="filterDocs()">
+</div>
+
+<div class="toc no-print">
+  <strong>Quick Navigation:</strong>
+  <a href="#bone-tools">» Bone Tools <small>(prehistoric / tools)</small></a>
+  <a href="#emergency-water-storage">» Emergency Water Storage <small>(prehistoric / survival)</small></a>
+  <a href="#fermentation-basic">» Fermentation (Basic) <small>(prehistoric / food)</small></a>
+  <a href="#sanitation-and-clean-water">» Sanitation and Clean Water <small>(prehistoric / survival)</small></a>
+  <a href="#blacksmith-anvil">» Blacksmith Anvil <small>(ancient / tools)</small></a>
+  <a href="#forge-bellows">» Forge Bellows <small>(ancient / tools)</small></a>
+  <a href="#iron-smelting">» Iron Smelting (Bloomery Tradition) <small>(ancient / materials)</small></a>
+  <a href="#basic-chemistry-lab">» Basic Chemistry Lab <small>(early-modern / science)</small></a>
+  <a href="#stored-program-computer">» Stored-Program Computer <small>(mid-20th / computing)</small></a>
+  <a href="#neural-networks">» Neural Networks <small>(late-20th / computing)</small></a>
+</div>
+
+<div id="content">
+<article class="card" id="bone-tools" data-tags="bone-tools Bone Tools tools prehistoric Ungulate Metapodial and Long Bones Shed Cervid Antler (Deer, Elk, Caribou, Moose) Quartzite and Silica Sandstone Slabs Micro-Lithic Flint / Chert Spalls and Burins Hardwood Spindles, Rawhide Cordage, and Tallow">
+  <h2>Bone Tools</h2>
+  <p><em>Osteo-technological manufacturing of slender composite tools: eyed sewing needles, perforating awls, barbed fishing harpoons, and antler knapping billets</em></p>
+  <div>
+    <span class="badge badge-field">ERA: PREHISTORIC</span>
+    <span class="badge badge-expert">DIFFICULTY: 1/5</span>
+    <span class="badge">CATEGORY: TOOLS</span>
+    <span class="badge badge-expert">STATUS: expert-verified</span>
+  </div>
+
+  <h3>1. Problem & Crisis Context</h3>
+  <p>Lithic (stone) flakes and blades provide exceptional compressive hardness and razor sharpness, but suffer catastrophic brittle fracture when subjected to tensile bending, shear, or torsional loads. Fabricating slender, high-aspect-ratio piercing tools (such as fine eyed sewing needles, hide awls, or barbed fish hooks) out of flint, chert, or obsidian is physically impossible; they snap on initial contact. Conversely, seasoned wood possesses longitudinal grain but splits easily across tracheid cell boundaries and dulls rapidly against tough mammalian rawhide.
+
+Mammalian bone and cervid antler occupy a unique material niche: they are natural biological biocomposites comprised of rigid mineral hydroxyapatite crystals embedded within a flexible, elastic Type-I collagen protein matrix. This microstructure yields high fracture toughness, anisotropic elasticity along osteon grain lines, and high resistance to impact shock. Without bone tools, human populations cannot manufacture tailored, airtight multi-layer fur clothing, leaving them vulnerable to lethal hypothermia in periglacial and winter environments.
+
+In collapse recovery scenarios or off-grid survival where metal wire drawing and steel needles are absent, working mammalian skeletal remains is the sole physical route to producing sewing needles, weaving shuttles, and barbed aquatic harpoons. In extraterrestrial bio-regenerative settlements, bone remains a valuable structural agricultural byproduct that can be converted into precision surgical instruments and textile tools without consuming electrical melting power or titanium reserves.</p>
+
+  <h3>2. Technical Overview</h3>
+  <p>Bone and antler technology transforms butchery waste into durable mechanical tools using four standardized reductive unit operations: Anatomical Element Selection, The Longitudinal Groove-and-Splinter Technique, Wet Sandstone Abrasion, and Biconical Micro-Drilling.
+
+1. Osteological Material Selection: Anisotropic strength varies across anatomical elements. Metapodial cannon bones from ungulates (deer, cattle, sheep) offer dense, thick-walled cortical bone ideal for high-thrust awls and chisels. Bird long bones (ulnae and radii) feature hollow, thin-walled, light cylinders ideal for fine needles and tubular bead cases. Ribs provide pre-curved, flexible blanks for hide scrapers and shuttles. Cervid antlers (deer, elk, caribou) contain up to 40% collagen (compared to ~30% in bone), providing supreme shock-damping ductility for flintknapping soft hammers (billets).
+
+2. The Groove-and-Splinter Technique: To extract long, straight blanks without shattering the shaft into useless irregular fragments, artisans employ flint burins to engrave two deep parallel longitudinal V-shaped channels through the cortical bone down to the cancellous marrow cavity. Hardwood or bone wedges are driven into the scored channels, cleanly popping out straight, defect-free splinters with longitudinal grain orientation.
+
+3. Wet Abrasion and Frictional Heat Control: Blanks are shaped against coarse silica sandstone or quartzite slabs. Grinding MUST be conducted with continuous water lubrication. Dry grinding rapidly generates frictional surface temperatures exceeding 120°C, causing thermal denaturation (pyrolysis) of the collagen matrix. Denatured bone becomes chalky, micro-cracked, and snaps under minimal load. Water lubricates cutting grains, flushes bone swarf, and preserves structural collagen elasticity.
+
+4. Biconical Micro-Drilling of Needle Eyes: Drilling needle eyes requires delicate micro-lithic flint bits rotated via a bow drill or palm drill. A cylindrical hole drilled straight through concentrates mechanical stress at sharp edge corners, causing the needle head to snap during eye expansion. Artisans drill two opposing convergent cones—first from the dorsal face until halfway through, then flipping the needle to drill a matching cone from the ventral face. The resulting hourglass-shaped aperture is deburred and polished by drawing grit-charged sinew cord back and forth through the hole.
+
+5. Degreasing and Surface Burnishing: Fresh green bone contains marrow lipids that spoil, attract vermin, and harbor bacteria. Simmering bone in mild wood-ash water saponifies and extracts fats. Subsequent burnishing with tallow and fine river silt compacts the surface osteons, producing a friction-free, glass-smooth water-resistant polish.</p>
+
+  <h3>3. Core Engineering Principles</h3>
+  <ul>
+    <li><strong>Collagen-Apatite Biocomposite Synergy:</strong> Bone derives its mechanical strength from two interpenetrating phases: brittle hydroxyapatite mineral crystals (Ca10(PO4)6(OH)2) providing compressive hardness, intertwined with fibrous Type-I collagen providing tensile elasticity and stopping crack propagation. Aligning tool working axes with osteon grain maximizes bending toughness.</li>
+    <li><strong>Groove-and-Splinter Fracture Control:</strong> Scoring deep parallel guide channels with a burin concentrates tensile stress during lateral wedging, directing fracture propagation strictly along cement lines between osteons. This eliminates uncontrolled transverse shattering and yields straight, uniform blanks.</li>
+    <li><strong>Wet Abrasion Thermal Preservation:</strong> Dry grinding friction heats bone past 120°C, denaturing structural collagen proteins and inducing micro-fissuring. Continuous water lubrication keeps cutting temperatures cool, prevents thermal brittleness, and captures hazardous bone dust swarf.</li>
+    <li><strong>Biconical Hourglass Stress Distribution:</strong> Drilling needle eyes from opposing faces creates a smooth, rounded biconical hourglass profile. This eliminates sharp corner notches, distributing sewing tensile stress across the entire proximal web and preventing thread abrasion during tight hide stitches.</li>
+    <li><strong>Antler Plastic Deformation Capacity:</strong> Cervid antler possesses higher collagen content and lower mineral density than skeletal bone, allowing it to absorb severe dynamic impact without shattering. This makes antler billets the supreme soft hammer for controlled shock transmission during bifacial stone flaking.</li>
+  </ul>
+
+  <h3>4. Critical Components</h3>
+  <ul>
+    <li><strong>Dense Cortical Bone Blank / Metapodial Splinter:</strong> Provides straight, high-density osteon stock with oriented longitudinal grain for shaping <em>(Cortical compact bone of deer, bovine, or ovicaprid cannon bone)</em></li>
+    <li><strong>Eyed Needle Working Tip and Deburred Web:</strong> Pierces leather and carries fine sinew/cordage through pierced hide for tailored garments <em>(Dense compact bone splinter ground round and polished to a 1 mm needle point)</em></li>
+    <li><strong>Heavy Hide-Piercing Awl with Epiphysis Handle:</strong> Punches calibrated holes through heavy rawhide and bark without tearing fibers <em>(Split distal or proximal end of ungulate metapodial retaining natural joint condyle for palm grip)</em></li>
+    <li><strong>Cervid Antler Percussion Soft Hammer (Billet):</strong> Delivers controlled, elastic shock to lithic cores, detaching thin invasive thinning flakes <em>(Basal beam and burr of shed deer, elk, or moose antler)</em></li>
+    <li><strong>Bow Drill with Micro-Lithic Chert Drill Bit:</strong> Rotates stone micro-drills at high RPM to perforate needle eyes and fishhook blanks <em>(Hardwood spindle with hafted bifacial flint mèche micro-drill bit and soapstone hand-bearing block)</em></li>
+    <li><strong>Dual-Grit Silica Sandstone Abrading & Polishing Slab:</strong> Rapidly grinds bone blanks to rough shape and polishes working surfaces to glass finish <em>(Coarse-grained red quartz sandstone paired with fine-grained siltstone or slate slab)</em></li>
+  </ul>
+
+  <h3>5. Step-by-Step Execution Protocol</h3>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 1: Anatomical Selection and Marrow Degreasing</h4>
+    <p>Select fresh ungulate cannon bones (metatarsals or metacarpals) free of impact fractures. Split bone longitudinally or scrape clean of residual flesh and periosteum. Simmer in water mixed with 5% clean hardwood ash for 45 minutes to saponify and remove marrow grease, then air-dry slowly in shade.</p>
+    <p><code>Tools: flint-scraper, simmering-pot</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Wash hands with soap and water after handling fresh butchery bone; decomposing bone harbors Salmonella and Clostridium perfringens.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 2: Longitudinal Groove-and-Splinter Scoring</h4>
+    <p>Secure the bone in a timber vise or between knees. Using a sharp flint burin held at 45°, score two parallel V-shaped channels 4 to 6 mm apart down the entire length of the flat anterior or posterior face. Continue scoring firmly until the bottom of the grooves penetrates through cortical bone into the porous marrow cavity.</p>
+    <p><code>Tools: flint-burin, timber-bench-vise</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Wear leather work gloves; slippage of sharp lithic burins across slick bone causes deep palm lacerations.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 3: Splinter Extraction and Wedging</h4>
+    <p>Insert a thin flat chert flake or bone wedge into the groove near the joint end. Gently tap the wedge with a light wooden mallet. Pry laterally to propagate a clean longitudinal fracture along the scored channels, releasing a straight bone splinter blank.</p>
+    <p><code>Tools: bone-wedge, wooden-mallet</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Do not force or twist wedges abruptly; uneven prying snaps the blank transversely in half.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 4: Wet Sandstone Roughing and Profile Squaring</h4>
+    <p>Submerge a coarse silica sandstone slab in a shallow water basin. Rub the extracted splinter back and forth with long, even strokes, keeping the stone wet at all times. Grind away all residual cancellous marrow bone from the inner face, producing a straight rectangular blank of uniform thickness.</p>
+    <p><code>Tools: sandstone-slab, water-basin</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never grind bone dry; inhaling airborne particulate bone dust causes chronic lung irritation and aerosolized infection.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 5: Symmetrical Taper Grinding and Tip Shaping</h4>
+    <p>Roll the blank continuously between fingertips while dragging it along a grooved fine-grit whetstone. Gradually taper the distal third into a fine, sharp conical point. Flatten the proximal end slightly into a spatula shape to prepare the seating platform for the eye.</p>
+    <p><code>Tools: fine-grit-whetstone, water-sponge</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Check point taper frequently against fingernail; steep blunt angles punch ragged holes that tear hide instead of passing smoothly.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 6: Biconical Micro-Drilling of the Needle Eye</h4>
+    <p>Indicate the eye center 5 mm from the proximal edge with a sharp flint graver. Chuck a 1 mm flint micro-drill into a bow-drill spindle. Lubricate with a drop of water and rotate bow until the bit penetrates 50% through the bone thickness. Invert the needle and drill an opposing cone from the reverse face until the cavities meet in an hourglass aperture.</p>
+    <p><code>Tools: bow-drill, flint-micro-drill-bit, magnifying-lens</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Excessive drill pressure crushes the fragile proximal web; reduce speed and pressure as the drill breakthrough approaches.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 7: Sinew Deburring, Polishing, and Tallow Burnishing</h4>
+    <p>Thread a thin rawhide thong or sinew strand coated in fine river silt through the drilled eye. Draw the strand rapidly back and forth in all directions to round and deburr internal aperture edges. Polish the entire needle body on fine leather charged with wood ash and beef tallow until water beads on the surface.</p>
+    <p><code>Tools: sinew-thread, burnishing-leather, rendered-tallow</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Test eye smoothness by pulling sewing thread through under tension; any burr that frays thread must be re-polished.</div>
+  </div>
+  <h3>6. Fatal Hazard Warnings</h3>
+  <div class="hazard-box"><strong>HAZARD:</strong> Wash hands and tools with soap after handling raw bone; decomposing osteological matter harbors dangerous pathogens (Anthrax, Clostridium, Brucella).</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Never grind or abrade bone dry; inhaling fine airborne bone dust causes occupational respiratory inflammation and silicosis-like symptoms.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Do not boil bone excessively in harsh alkaline wood-ash water; over-boiling dissolves structural collagen, reducing bone to chalky brittleness.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Never use slender bone needles as prying levers; biological bone has high longitudinal tensile resilience but snaps under transverse shear.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> In bio-regenerative planetary habitats, skeletal animal byproducts must be autoclaved before machining to prevent cross-contamination into hydroponic loops.</div>
+</article>
+<article class="card" id="emergency-water-storage" data-tags="emergency-water-storage Emergency Water Storage survival prehistoric Potable Feedwater Sodium Hypochlorite (5-6% Bleach) or Calcium Hypochlorite (HTH 65%) High-Density Polyethylene (HDPE Resin) Food-Grade Silicone / EPDM Elastomer Structural Timber or Plastic Pallets">
+  <h2>Emergency Water Storage</h2>
+  <p><em>Vessel sanitization, chemical preservation, hydraulic isolation, and ration budgeting for prolonged survival and collapse recovery</em></p>
+  <div>
+    <span class="badge badge-field">ERA: PREHISTORIC</span>
+    <span class="badge badge-expert">DIFFICULTY: 2/5</span>
+    <span class="badge">CATEGORY: SURVIVAL</span>
+    <span class="badge badge-expert">STATUS: expert-verified</span>
+  </div>
+
+  <h3>1. Problem & Crisis Context</h3>
+  <p>When municipal water distribution networks fail, water pressure drops to zero within minutes. This pressure collapse causes back-siphonage: surrounding groundwater, chemical runoff, and raw sewer seepage are sucked through cracks in underground piping directly into the dry supply mains. Relying on tap lines during or immediately following a disruption guarantees ingestion of lethal pathogen loads.
+
+Storing untreated water or using contaminated containers causes rapid biological explosion. A clean-looking container holding untreated surface water can develop tens of millions of colony-forming units (CFU) of enteric bacteria, Giardia cysts, and cyanobacteria within 72 hours at ambient room temperature. Furthermore, using improvised containers previously used for motor oil, agricultural pesticides, or industrial solvents leaches endocrine-disrupting chemicals and organophosphates that cannot be removed by boiling or simple filtration.
+
+In long-duration space settlement or planetary habitats, water storage is not passive; it is the thermal mass and life-support buffer of the vessel. In zero-gravity or low-gravity environments, biofilms form exponentially faster along interior vessel walls due to lack of shear currents, creating biocidal resistance and clogging life-support recycling membranes.</p>
+
+  <h3>2. Technical Overview</h3>
+  <p>Safe emergency water storage is governed by five interdependent engineering controls: Vessel Qualification, Shock Sanitization, Residual Chemical Preservation, Hydraulic Isolation, and Environmental Exclusion.
+
+1. Vessel Qualification: Storage vessels must be chemically inert, impermeable to light, and food-grade certified (High-Density Polyethylene [HDPE, resin code 2], Polypropylene [PP, resin code 5], borosilicate glass, or 316-grade stainless steel). Non-food plastics leach toxic plasticizers, lead stabilizers, and antimony trioxide into stored water over time.
+
+2. Shock Sanitization: Prior to filling, the container must undergo a chlorine shock rinse (15 mL of 5-6% sodium hypochlorite per 4 liters of water, creating a ~200 ppm solution) swirled across all interior surfaces, valve threads, and caps for at least 3 minutes, then drained.
+
+3. Residual Preservation: Water is stabilized using regular, unscented household bleach (5-6% sodium hypochlorite) or calcium hypochlorite (HTH). Clear water requires 2 drops (0.1 mL) per liter (approx. 8 drops or 0.5 mL per gallon / 2 teaspoons per 55-gallon drum) to achieve a free available chlorine residual of 0.2 to 0.5 mg/L after a 30-minute contact dwell. If water is turbid, filtration through cloth or sand and doubling the dose is mandatory.
+
+4. Hydraulic Isolation: The primary mechanism of post-treatment contamination is 'dipping'—using hands, cups, or unsterilized ladles to scoop water. Vessels must remain hermetically sealed, dispensing exclusively through a dedicated, food-grade bottom tap or clean manual siphon valve with a downward spout.
+
+5. Storage Environment: Containers must be elevated at least 15 cm off concrete floors on wooden or plastic dunnage pallets. Concrete is porous and off-gases volatile petrochemical vapors that migrate through polyethylene over months. Water must be stored in total darkness below 20°C to prevent photochemical breakdown of chlorine and cyanobacterial blooms, with full stock rotation every 6 to 12 months.</p>
+
+  <h3>3. Core Engineering Principles</h3>
+  <ul>
+    <li><strong>The Closed Hydraulic Standard (Anti-Dipping):</strong> Dipping hands, cups, or ladles into stored drinking water causes over 80% of secondary bacteriological outbreaks in humanitarian crises. A strict closed design with narrow threaded bungs and downward spigots prevents hands and airborne dust from contacting the bulk fluid.</li>
+    <li><strong>Free Available Chlorine Residual (FAC):</strong> Disinfection is a dynamic chemical equilibrium. Achieving an initial kill is insufficient; maintaining a free chlorine residual of 0.2 to 0.5 mg/L ensures that any rogue bacterial spores or airborne pathogens entering during liquid drawdown are immediately neutralized.</li>
+    <li><strong>Polymer Integrity and Osmotic Migration:</strong> Polyethylene polymers (HDPE #2) are semi-permeable membranes on a molecular level over long storage windows. Volatile organic compounds (fuels, solvents, pesticide vapors) from bare concrete floors or shared garage storage can migrate across drum walls into water. Elevation on dunnage is mandatory.</li>
+    <li><strong>Thermal and Photonic Retardation:</strong> Sunlight (photons) accelerates the photolysis of free hypochlorite into inactive chloride and chlorate ions, while providing photosynthetic energy for algae. Complete light exclusion and storage below 20°C preserves chemical stability and prevents biological regrowth.</li>
+    <li><strong>Survival Water Rationing Geometry:</strong> Baseline physiological survival requires 3 to 5 liters of potable water per person per day for drinking and minimal food rehydration. Comprehensive survival hygiene, sanitation, and medical washing requires a minimum of 15 to 20 liters per person per day.</li>
+  </ul>
+
+  <h3>4. Critical Components</h3>
+  <ul>
+    <li><strong>Food-Grade HDPE Storage Drum / Carboy:</strong> Hermetically contains the water volume without leaching toxins or allowing light penetration <em>(High-Density Polyethylene (HDPE #2) with opaque blue/black UV-inhibiting pigmentation)</em></li>
+    <li><strong>Food-Grade Dispensing Tap / Siphon Valve:</strong> Allows controlled liquid dispensing without opening top access bungs or introducing dipped utensils <em>(Food-grade Polypropylene (PP) or lead-free 304/316 stainless steel with PTFE seal tape)</em></li>
+    <li><strong>Bung Plugs with Silicone Gaskets:</strong> Provides an airtight, watertight mechanical seal preventing atmospheric contamination and vapor loss <em>(EPDM or food-grade silicone O-rings with threaded HDPE plugs)</em></li>
+    <li><strong>Air Relief Vent with Micron Filter:</strong> Allows smooth liquid discharge without hydraulic vacuum lock while filtering incoming replacement air <em>(Hydrophobic PTFE 0.2-micron air filter membrane in polypropylene housing)</em></li>
+    <li><strong>Storage Elevation Dunnage / Pallet:</strong> Physically decouples drum base from concrete floors, preventing chemical vapor migration and moisture rot <em>(Hardwood timber pallets, plastic grids, or structural masonry blocks)</em></li>
+    <li><strong>Chlorine Dosing Dropper & Test Kit:</strong> Delivers measured biocide volumes and verifies residual free chlorine levels <em>(Amber glass eyedropper (calibrated to 20 drops/mL) and DPD-1 colorimetric chlorine test strips)</em></li>
+  </ul>
+
+  <h3>5. Step-by-Step Execution Protocol</h3>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 1: Vessel Inspection and Food-Grade Validation</h4>
+    <p>Inspect drum or carboy interior with an LED flashlight for cracks, chemical odors, or residue. Confirm the embossed triangular recycle code #2 (HDPE) or #5 (PP) and the food-safe cup-and-fork logo. Reject any container with unknown provenance or petrochemical smell.</p>
+    <p><code>Tools: inspection-flashlight, magnifying-glass</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never use plastic trash cans or pickle barrels; trash cans contain toxic mold inhibitors, and pickle plastic absorbs vinegar aromatics that accelerate chemical leaching.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 2: Shock Sanitization Wash</h4>
+    <p>Prepare a 200 ppm sanitizing solution by mixing 15 mL (1 tablespoon) of unscented 5-6% household bleach per 4 liters of clean water. Pour into the vessel, seal tightly, and roll/tilt the drum so all internal surfaces, bungs, and valve threads are wetted for at least 3 minutes. Drain completely without rinsing.</p>
+    <p><code>Tools: graduated-measuring-spoon, clean-bucket</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Wear safety goggles and nitrile gloves; splashing 200 ppm chlorine into eyes causes acute corneal irritation.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 3: Feedwater Filtration and Filling</h4>
+    <p>Connect a dedicated, food-grade drinking water hose (white RV grade) to the water source. If filling from surface water or wells, pass water through a 5-micron sediment filter or multi-layer sand filter. Fill the container to within 5 cm of the bung neck, leaving minimal air headspace.</p>
+    <p><code>Tools: food-grade-rv-hose, inline-sediment-filter</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Standard garden hoses contain lead, plasticizers, and vinyl stabilizers that impart toxic chemical taints to stored water.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 4: Chemical Preservation Dosing</h4>
+    <p>Add 2 drops of fresh, unscented household bleach (5-6% sodium hypochlorite) per liter of water (approx. 2.5 teaspoons / 12.5 mL per 55-gallon drum). For calcium hypochlorite granules (HTH 65%), dissolve 1 level teaspoon in 1 liter of water to create stock, then add 50 mL of stock per 50 liters. Tightly seal bungs and rock the drum to mix.</p>
+    <p><code>Tools: calibrated-glass-pipette, bung-wrench</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Do NOT use splash-less, scented, or color-safe bleaches. They contain sodium hydroxide thickeners and fragrances toxic for internal consumption.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 5: Residual Verification Dwell Test</h4>
+    <p>Allow the sealed container to dwell undisturbed for 30 minutes. Unseal the vent bung and test water with a DPD-1 colorimetric test strip or test kit. The free available chlorine must register between 0.2 and 0.5 mg/L, with a distinct faint chlorine smell. If no chlorine is detected, repeat dosing and dwell for another 15 minutes.</p>
+    <p><code>Tools: dpd-1-chlorine-test-strips, clean-sample-vial</code></p>
+    <div class="warning-box"><strong>Caution:</strong> If water smells strongly pungent or bleach burns the tongue, chlorine concentration is excessive; aerate or dilute with sterile water before drinking.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 6: Spigot Installation and Hermetic Sealing</h4>
+    <p>Wrap male spigot threads with 4 layers of virgin PTFE thread seal tape. Thread the spigot into the 3/4-inch bung opening until torque is firm and gasket is compressed. Tighten the 2-inch main bung with an aluminium drum wrench to approx. 25-30 Nm torque.</p>
+    <p><code>Tools: ptfe-thread-tape, cast-aluminium-drum-wrench</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Do not overtighten poly fittings; stripped threads cause catastrophic slow leaks that ruin floorboards and drain water reserves.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 7: Elevation, Siting, and Rotation Maintenance</h4>
+    <p>Position the storage drum upright on a level wooden dunnage pallet or concrete block platform at least 15 cm above ground. Site in a dark, cool cellar or insulated pantry between 10°C and 18°C. Affix a weatherproof label recording Date Filled, Source Water, Chemical Dose, and Expiration Date (6 to 12 months). Rotate annually.</p>
+    <p><code>Tools: waterproof-marker, weatherproof-vinyl-label</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never store near gasoline, motor oil, paint thinners, or pool chlorine tablets; volatile fumes permeate plastic drums over time.</div>
+  </div>
+  <h3>6. Fatal Hazard Warnings</h3>
+  <div class="hazard-box"><strong>HAZARD:</strong> Never store water containers directly on bare concrete; volatile hydrocarbon fumes migrate through polyethylene over time.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Never use containers previously holding fuel, solvents, engine oil, or pesticides; polymers permanently retain carcinogenic residues.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Scented, splash-less, or color-safe bleaches contain toxic sodium hydroxide and fragrance surfactants; use only 5-6% pure sodium hypochlorite.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Water without a disinfectant residual will develop bacterial biofilms within 72 hours even in hermetically sealed containers.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> In planetary habitats and zero-g closed loops, stagnant storage creates anaerobic slime and sulfate-reducing bacteria capable of microbially-induced corrosion of titanium alloy conduits.</div>
+</article>
+<article class="card" id="fermentation-basic" data-tags="fermentation-basic Fermentation (Basic) food prehistoric Fresh Carbohydrate / Brassica Substrate Pure Non-Iodized Mineral Salt (NaCl) Dechlorinated Potable Spring / Well Water Vitrified Stoneware / High-Borosilicate Glass Containers Organic Spices and Tannin Leaves (Optional Stabilizers)">
+  <h2>Fermentation (Basic)</h2>
+  <p><em>Anaerobic lactic and alcoholic microbial bioprocessing for seasonal caloric stabilization, pathogen suppression, and nutrient bioavailability</em></p>
+  <div>
+    <span class="badge badge-field">ERA: PREHISTORIC</span>
+    <span class="badge badge-expert">DIFFICULTY: 2/5</span>
+    <span class="badge">CATEGORY: FOOD</span>
+    <span class="badge badge-expert">STATUS: expert-verified</span>
+  </div>
+
+  <h3>1. Problem & Crisis Context</h3>
+  <p>Fresh agricultural harvests and meats begin biological degradation within hours of harvest. In the absence of electrical refrigeration or fossil-fueled drying, ambient temperatures trigger rapid colonization by proteolytic putrefactive bacteria and fungal molds (including Aspergillus flavus producing carcinogenic aflatoxins, Salmonella, and lethal Clostridium botulinum). Uncontrolled post-harvest spoilage routinely destroys 30% to 50% of seasonal calories, trapping human populations in catastrophic seasonal starvation.
+
+While thermal boiling or dehydration can preserve food, boiling requires massive wood fuel expenditures (typically 1 kg of firewood per 1 kg of food) and destroys heat-labile vitamins (particularly Vitamin C and thiamine B1). Sun-drying is vulnerable to rain, humidity rot, and insect oviposition. Dehydration in humid climates invariably fails, resulting in bacterial slime and mycotoxin accumulation.
+
+In planetary habitats, space stations, and sealed disaster bunkers, fresh produce cannot be preserved using open refrigeration without massive electrical cooling power loads. Furthermore, stored carbohydrates and plant cellulose are deficient in complete bioavailable proteins and Vitamin B12. Basic fermentation provides a non-thermal, zero-power ecological biotechnology: steering wild microbial consortia to acidify and stabilize bulk calories while synthesizing essential vitamins and complete amino acids.</p>
+
+  <h3>2. Technical Overview</h3>
+  <p>Basic fermentation harnesses benign microbial populations (primarily Lactic Acid Bacteria [LAB] such as Leuconostoc, Lactobacillus, and Pediococcus, alongside Saccharomyces yeasts) to transform simple sugars into lactic acid, acetic acid, ethanol, and carbon dioxide. This process is governed by five interdependent biophysical controls: Ecological Succession, The pH 4.6 Botulinum Barrier, Osmotic Brine Regulation, Anaerobic Atmosphere Management, and Thermal Fermentation Dwell.
+
+1. Ecological Microbial Succession: Wild vegetable fermentation (such as lacto-fermented cabbage or root crops) is not a single-microbe reaction; it is a coordinated multi-stage bacterial relay. In the initial stage, heterofermentative *Leuconostoc mesenteroides* rapidly metabolizes glucose and fructose, producing lactic acid, acetic acid, ethanol, and abundant CO2. This initial flush purges oxygen and drops the pH from neutral (~6.5) down to ~4.5. Once pH drops below 4.5, acid-tolerant homofermentative *Lactobacillus plantarum* and *Lactobacillus brevis* take over, driving final pH down to 3.6 - 3.8 and producing clean, crisp lactic acid.
+
+2. The pH 4.6 Botulinum Inactivation Threshold: The lethal neurotoxin of *Clostridium botulinum* represents the primary biological threat in anaerobic food storage. Botulinum spores cannot germinate or synthesize toxin in an environment with a pH below 4.6. By measuring and maintaining final brine pH strictly below 4.2, the batch achieves absolute, self-sterilizing protection against botulism without requiring autoclave pressure cooking.
+
+3. Osmotic Brine Regulation (The 2.0% Standard): Sodium chloride (NaCl) is added to the vegetable mass at a concentration of 2.0% to 2.5% by total weight (or a 3.5% to 5.0% liquid brine for submerged whole vegetables). Salt exerts immediate osmotic pressure, extracting cell sap and fermentable sugars from plant tissues while plasmolysing and inhibiting putrefactive Gram-negative bacteria. Halotolerant lactic acid bacteria survive and immediately establish competitive dominance.
+
+4. Anaerobic Headspace and Gas Purging: Lactic acid bacteria are facultative anaerobes that thrive in zero-oxygen environments, whereas surface molds (Penicillium, Cladosporium) and wild kahm yeasts require oxygen to survive. Utilizing fermentation crocks with continuous water-filled airlock troughs or glass jars fitted with one-way bubbler airlocks permits rising CO2 gas to escape while preventing oxygen ingress and stopping vinegar flies (Drosophila melanogaster) from introducing acetic acid spoilage bacteria.
+
+5. Long-Term Maturation and Cold Cellaring: Once active primary fermentation ceases (bubbling subsides and pH stabilizes below 4.0 after 7 to 21 days at 18°C to 22°C), the food is transitioned into a dark, cool cellar (8°C to 15°C). Cold storage halts further microbial acid accumulation, preserving crisp texture and nutrient density for 6 to 12 months.</p>
+
+  <h3>3. Core Engineering Principles</h3>
+  <ul>
+    <li><strong>Competitive Microbial Exclusion & Niche Dominance:</strong> Lactic acid bacteria flood the micro-environment with bactericidal metabolites: organic lactic acid, hydrogen peroxide, and peptide bacteriocins. By rapidly exhausting free sugars and dropping local pH, beneficial microbes render the ecological niche uninhabitable to pathogenic organisms.</li>
+    <li><strong>The pH 4.6 Clostridium Botulinum Inactivation Standard:</strong> The deadly paralytic neurotoxin produced by Clostridium botulinum is synthesized exclusively in anaerobic environments where pH exceeds 4.6. Lowering food pH below 4.2 via active lactic acidification guarantees absolute botulism inhibition without high-temperature pressure canning.</li>
+    <li><strong>Osmotic Selection via Sodium Chloride Gradient:</strong> Maintaining a strict 2.0% to 2.5% salt-to-substrate mass ratio draws cellular moisture out of vegetables through osmosis, creating a submerged anaerobic liquid pool while selectively lysing spoilage bacteria and favoring halotolerant Lactobacillus species.</li>
+    <li><strong>Heavy-Gas Blanketing (Carbon Dioxide Exclusion):</strong> Carbon dioxide gas evolved during active glycolysis is denser than ambient air (1.98 g/L vs 1.22 g/L). In a sealed, water-locked vessel, the evolved CO2 forms an impermeable gaseous blanket directly over the liquid surface, completely starving aerobic molds of oxygen.</li>
+    <li><strong>Nutritional Bioavailability & Phytate Enzymatic Cleavage:</strong> Lactic fermentation activates plant phytase enzymes that break down phytic acid (myo-inositol hexakisphosphate), liberating chelated iron, zinc, calcium, and magnesium for immediate human intestinal absorption while synthesizing Vitamin C and B-complex vitamins.</li>
+  </ul>
+
+  <h3>4. Critical Components</h3>
+  <ul>
+    <li><strong>Water-Trough Ceramic Fermentation Crock / Airlock Jar:</strong> Provides an airtight, light-blocking anaerobic fermentation chamber with self-venting gas release <em>(Vitrified lead-free glazed stoneware with lid groove, or borosilicate glass jar with silicone bubbler airlock)</em></li>
+    <li><strong>Glazed Ceramic Submersion Weights:</strong> Holds vegetable shreds completely submerged 2 to 3 cm beneath the brine level, preventing air contact <em>(Non-porous glazed stoneware or thick soda-lime glass disks divided into semi-circular halves)</em></li>
+    <li><strong>Precision Gram Balance / Brine Hydrometer:</strong> Measures exact salt-to-substrate weight ratios to maintain the critical 2.0% to 2.5% salinity baseline <em>(Two-pan mechanical balance or specific gravity hydrometer calibrated for sodium chloride solutions)</em></li>
+    <li><strong>Narrow-Range pH Colorimetric Test Strips:</strong> Verifies that acid evolution has successfully breached the critical pH 4.2 safety threshold <em>(Impregnated cellulose test paper with color comparison chart calibrated between pH 2.8 and 5.5)</em></li>
+    <li><strong>Turned Hardwood Vegetable Tamper / Pounder:</strong> Mechanically bruises shredded cell walls and compacts vegetables into the crock to purge air pockets <em>(Solid turned food-grade hardwood (hard maple, beech, or ash) treated with food-grade mineral oil)</em></li>
+    <li><strong>Temperature-Controlled Dark Cellar / Storage Larder:</strong> Provides stable temperature regulation (18°C-22°C for active stage; 8°C-15°C for long-term maturation) <em>(Earthen subterranean cellar with masonry walls and slatted timber shelving)</em></li>
+  </ul>
+
+  <h3>5. Step-by-Step Execution Protocol</h3>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 1: Sanitization and Vessel Inspection</h4>
+    <p>Inspect stoneware crock or glass jar for hairline cracks, chips, or defective glaze. Wash all vessels, weights, and tools in boiling water or a mild 100 ppm chlorine rinse, followed by complete draining. Do not use chemical sanitizer residuals on active fermentation surfaces.</p>
+    <p><code>Tools: inspection-flashlight, hot-water-kettle, clean-linen-towel</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Porous unglazed earthenware or cracked glass harbors rogue molds that contaminate batches; use only fully vitrified, intact vessels.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 2: Substrate Trimming and Precision Shredding</h4>
+    <p>Remove and set aside two clean, intact outer cabbage leaves for surface capping. Quarter the heads and core them. Shred the remaining leaves into uniform 2 to 3 mm ribbons using a sharp vegetable knife or wooden mandoline to expose maximum cellular surface area.</p>
+    <p><code>Tools: chef-knife, hardwood-cutting-board, wooden-mandoline</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never wash shredded vegetables in municipal tap water containing chlorine; chlorine kills the beneficial lactic acid bacteria required to start fermentation.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 3: Precision Salting and Mechanical Cell Lysis (Tamping)</h4>
+    <p>Weigh the shredded vegetable ribbons on a gram scale. Measure exactly 2.0% to 2.2% pure non-iodized salt by weight (20 to 22 grams of salt per 1,000 grams of cabbage). Distribute salt evenly across shreds in a large ceramic basin. Massage and pound vigorously with clean hands or a wooden tamper for 10 minutes until cellular walls break and free brine pools copiously.</p>
+    <p><code>Tools: two-pan-balance, hardwood-tamper, ceramic-mixing-basin</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Do not skip mechanical pounding; if insufficient natural brine is released to submerge the shreds, the exposed vegetables will rot.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 4: Crock Packing and Air Void Elimination</h4>
+    <p>Pack salted shreds into the crock in 5 cm layers, tamping firmly with the hardwood pounder after each addition to drive out trapped air bubbles. Continue packing until the vessel is filled to within 8 to 10 cm of the rim. Pour all extracted free liquid over the packed mass.</p>
+    <p><code>Tools: hardwood-tamper, measuring-scoop</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Trapped air pockets inside the packed mass allow localized pockets of aerobic mold to grow beneath the brine line.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 5: Capping, Weight Submersion, and Airlock Commissioning</h4>
+    <p>Lay the reserved clean outer cabbage leaves over the shredded surface to create a barrier mat. Place sterilized ceramic weight stones on top, pressing down firmly until brine rises 2 to 3 cm above the stones. Wipe the crock rim clean. Place lid in position and fill the water trough airlock with clean potable water.</p>
+    <p><code>Tools: ceramic-weights, water-cruet</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Check the water seal trough every 48 hours; if the water evaporates, room air and vinegar flies will enter, turning the ferment to foul vinegar.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 6: Primary Fermentation Temperature Control and Daily Observation</h4>
+    <p>Place crock in a dark pantry maintained between 18°C and 22°C. Active fermentation will commence within 24 to 48 hours, evidenced by steady bubbling through the water airlock. Inspect daily: ensure weights remain submerged and skim any harmless white film (kahm yeast) from the liquid surface if present.</p>
+    <p><code>Tools: room-thermometer, sanitized-spoon</code></p>
+    <div class="warning-box"><strong>Caution:</strong> If fuzzy green, black, or pink mold develops on the surface, or if the brine smells foul, putrid, or ammoniacal, discard the entire batch immediately.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 7: pH Safety Validation and Cold Cellar Transfer</h4>
+    <p>On Day 7 and Day 14, draw 5 mL of clear brine and test with narrow-range pH paper. Once pH tests reliably below 4.0 (ideally between 3.5 and 3.8) and sour acid flavor is confirmed, transfer the crock or pack into glass jars and move to a cold cellar (8°C to 15°C) for long-term multi-month storage.</p>
+    <p><code>Tools: ph-test-strips, sampling-pipette, canning-tongs</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never consume fermented food if pH is 4.6 or higher; insufficient acidification in an anaerobic environment creates acute botulism poisoning risk.</div>
+  </div>
+  <h3>6. Fatal Hazard Warnings</h3>
+  <div class="hazard-box"><strong>HAZARD:</strong> Never consume fermented foods with a pH of 4.6 or higher; failure of acidification in anaerobic conditions creates fatal Clostridium botulinum poisoning risk.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Discard any batch exhibiting fuzzy green, black, pink, or powdery mold; mycotoxins (especially aflatoxin) penetrate deeply into food liquid and cannot be neutralized by cooking.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Always maintain salt concentration between 2.0% and 3.0% by weight; under-salting permits proteolytic putrefactive bacteria to spoil the batch before lactic acid bacteria take over.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Never use iodized table salt with anti-caking additives (silicates or ferrocyanide); iodine inhibits starter cultures and anti-caking agents cloud brine and ruin texture.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> In planetary habitats and sealed spacecraft, fermentation vessels must incorporate automatic pressure-relief valves; uncontrolled microbial CO2 evolution will shatter sealed glass containers.</div>
+</article>
+<article class="card" id="sanitation-and-clean-water" data-tags="sanitation-and-clean-water Sanitation and Clean Water survival prehistoric Raw Source Water Sieved Sharp Sand Natural Coagulants (Alum or Moringa) Alkaline Wood Ash Safe Storage Containers">
+  <h2>Sanitation and Clean Water</h2>
+  <p><em>A multi-barrier system for safe hydration, waste isolation, and epidemiological defense in resource-constrained environments</em></p>
+  <div>
+    <span class="badge badge-field">ERA: PREHISTORIC</span>
+    <span class="badge badge-expert">DIFFICULTY: 2/5</span>
+    <span class="badge">CATEGORY: SURVIVAL</span>
+    <span class="badge badge-expert">STATUS: expert-verified</span>
+  </div>
+
+  <h3>1. Problem & Crisis Context</h3>
+  <p>Human beings are walking culture media for pathogens. Every settlement produces a 'fecal plume' that travels through surface water, groundwater, and insect vectors. Without a multi-barrier sanitation system, diarrheal disease will inflict more casualties than trauma or combat. Children under five are the primary indicators: high infant mortality from 'fever and flux' signals a fundamental failure of the water loop.
+
+The core obstacle is visibility. Clear water can contain 10^8 pathogens per liter. Odorless waste can harbor cysts that survive for months in damp soil. Civilization depends on the intellectual discipline to treat water that looks clean and isolate waste that seems inert.
+
+In collapse scenarios, the loss of municipal pressure leads to immediate cross-contamination as backflow pulls sewer water into dry mains. In space settlement, water is the primary life-support fluid; there is no 'external environment' to flush waste into. Every milligram of nitrogen and every milliliter of moisture must be recovered through high-integrity chemical or biological recycling loops.</p>
+
+  <h3>2. Technical Overview</h3>
+  <p>Field water safety is achieved by stacking independent barriers: Protect the Source, Settle/Clarify, Filter, Disinfect, and Store Safely. Each barrier removes a specific class of failure. Protecting the source (e.g., capping a spring) prevents contamination from entering. Settling (clarification) removes the silt that 'shields' bacteria from UV and chemicals. Filtration (slow-sand) removes larger parasites and uses a biological biofilm to consume bacteria. Disinfection (boiling/SODIS/halogens) provides the final biological kill. Safe storage prevents re-contamination during use.
+
+Sanitation is the mirror image: break the fecal-oral route by isolating waste from Fingers, Flies, Fields, and Fluids (The 4-F Framework). Latrines must be deep, covered, and located at least 30 meters down-gradient from any water source. Hand hygiene with soap or alkaline wood ash is the single highest-leverage mechanical intervention in public health. On Mars, the loop is closed via membrane distillation and anaerobic digestion, where human waste becomes the primary feedstock for greenhouse fertilizers.</p>
+
+  <h3>3. Core Engineering Principles</h3>
+  <ul>
+    <li><strong>The Multi-Barrier Standard:</strong> No single treatment is 100% reliable. Stacking clarification (removes 90% parasites), filtration (removes 99% bacteria), and boiling (removes 99.99% viruses) creates a system where failure in one layer does not result in an outbreak.</li>
+    <li><strong>Schmutzdecke Dynamics:</strong> In a biosand filter, the active agent is a 2cm thick biological layer (biofilm) of algae, bacteria, and zooplankton. They consume pathogens through predation and competition. This layer requires 14-21 days of daily 'feeding' with oxygenated water to reach full efficacy.</li>
+    <li><strong>CT Value (Kill Power):</strong> Disinfection efficiency is Concentration x Time. For chlorine, lower temperatures or higher pH require longer contact times. For boiling, a rolling boil is the indicator that the critical 'kill temperature' (usually 70°C for enteric pathogens) has been exceeded and maintained.</li>
+    <li><strong>The 30-Meter Rule (Hydraulic Isolation):</strong> Latrines must be separated from water intakes by at least 30 meters of soil. This distance allows for natural filtration and UV/desiccation to neutralize the majority of mobile pathogens in the groundwater plume.</li>
+    <li><strong>Solar Thermal-UV Synergy:</strong> Solar disinfection (SODIS) works through two parallel mechanisms: UV-A radiation causes DNA cross-linking in pathogens, while heat (exceeding 50°C) accelerates their metabolic collapse. PET bottles maximize UV-A transmission; glass does not.</li>
+  </ul>
+
+  <h3>4. Critical Components</h3>
+  <ul>
+    <li><strong>Protected Intake / Spring Box:</strong> Captures raw water without surface contamination or sediment uptake <em>(Ceramic pipe, bamboo, or stone-packed basin with concrete/clay cap)</em></li>
+    <li><strong>Clarification Tank (The Settling Chain):</strong> Removes turbidity through gravity and flocculation <em>(Two or more 200L drums or ceramic jars)</em></li>
+    <li><strong>Slow-Sand / Biosand Filter:</strong> Mechanical filtration + biological predation of pathogens <em>(Concrete or plastic housing, sieved sharp sand, pea gravel, standpipe)</em></li>
+    <li><strong>Thermal Disinfection Unit (Kettle/Vat):</strong> Inactivates 99.9% of biological pathogens via heat <em>(Copper, stainless steel, or thick-walled stoneware)</em></li>
+    <li><strong>Solar Disinfection Array:</strong> UV-A and thermal inactivation <em>(Clear PET bottles (<2L), black or reflective backing sheet)</em></li>
+    <li><strong>Hygiene Station (Tippy-Tap):</strong> Touch-free handwashing using minimal water <em>(Suspended 5L jug, foot-pedal string, bar of soap/ash-sock)</em></li>
+    <li><strong>VIP Latrine (Ventilated Improved Pit):</strong> Fecal isolation + fly trap <em>(2m+ pit, sealed slab, dark vent pipe with fly-screen)</em></li>
+  </ul>
+
+  <h3>5. Step-by-Step Execution Protocol</h3>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 1: Site Survey & Watershed Mapping</h4>
+    <p>Walk 2km upstream of intended intake. Identify 'dead zones' (stagnant water), animal access points, and potential chemical runoff. Dig test holes to find water table depth. Mark latrine sites at least 30m away and downhill from the intake.</p>
+    <p><code>Tools: notebook, digging stick, pacing</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Assume all surface water is contaminated; 'clear' mountain streams often harbor Giardia/Cryptosporidium from wildlife.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 2: Construct the 3-Stage Clarifier</h4>
+    <p>Link three containers. Vessel 1: Raw intake + crushed Moringa seeds. Vessel 2: 12-hour settling. Vessel 3: 12-hour settling. Transfer water only from the top 75% of each vessel. This reduces turbidity to <10 NTU, protecting downstream filters.</p>
+    <p><code>Tools: 3 drums/jars, Moringa seeds</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Do not reuse 'dregs' from the bottom of settling tanks for any purpose other than agriculture.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 3: Biosand Filter Commissioning</h4>
+    <p>Layer 5cm pea gravel, then 5cm coarse sand, then 40cm fine sieved sand. Fill with water until 5cm of standing water remains above sand. Feed with 20L of clarified water daily for 21 days. Do not use for drinking until the Schmutzdecke (greenish-brown film) is visible and flow rate stabilizes.</p>
+    <p><code>Tools: housing, sieve, sand/gravel</code></p>
+    <div class="warning-box"><strong>Caution:</strong> A dry filter is a dead filter. The biofilm dies if exposed to air for more than 4 hours.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 4: Final Biological Kill (Boil or SODIS)</h4>
+    <p>For Boiling: Maintain a rolling boil for 1 minute (3 mins at altitude). For SODIS: Fill clear PET bottles, shake for 30s to oxygenate, and place on a reflective metal roof in full sun. Exposure time: 6h sunny, 48h cloudy.</p>
+    <p><code>Tools: pot/fire or PET bottles</code></p>
+    <div class="warning-box"><strong>Caution:</strong> SODIS bottles must be PET (Symbol #1); PVC or glass will block UV-A or leach toxins.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 5: Establish Fecal Isolation (The VIP Latrine)</h4>
+    <p>Dig a 2-3m pit. Build a concrete or hardwood slab with a 15x30cm drop-hole. Install a 10cm diameter black vent pipe facing the sun, topped with a fine mesh screen. The sun heats the pipe, creating a vacuum that pulls air (and flies) down the hole and up the pipe where they die against the screen.</p>
+    <p><code>Tools: shovel, slab materials, pipe, screen</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never dig a latrine in high-water-table areas; waste will travel directly into the local aquifer.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 6: Implement the Tippy-Tap Protocol</h4>
+    <p>Hang a water jug by a string at the latrine exit. Use a foot pedal to tilt the jug. This allows handwashing with soap or ash-sock without touching any surfaces. Enforce a 'No Wash, No Food' community rule.</p>
+    <p><code>Tools: jug, string, soap/ash</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Hand contamination is the #1 failure mode of clean water systems.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 7: Safe Storage & Secondary Defense</h4>
+    <p>Store treated water in narrow-necked, covered vessels. Never dip hands or cups into the main storage. Clean storage vessels with a 0.5% chlorine solution or boiling water every 7 days to prevent biofilm regrowth.</p>
+    <p><code>Tools: covered vessels</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Biofilms in storage containers can re-colonize sterile water within 24-48 hours.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 8: Closed-Loop Recovery (Mars Protocol)</h4>
+    <p>For space contexts: Pass all habitat humidity and greywater through a catalytic oxidizer at 130°C, then through an ion-exchange bed to remove nitrogenous waste and perchlorates. Final polishing via 254nm UVC radiation. Total recovery target: 98%.</p>
+    <p><code>Tools: catalytic reactor, ion-exchange resin</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Ammonia breakthrough is the primary failure mode of recycled water; monitor pH and conductivity hourly.</div>
+  </div>
+  <h3>6. Fatal Hazard Warnings</h3>
+  <div class="hazard-box"><strong>HAZARD:</strong> Boiling does NOT remove heavy metals (Lead/Arsenic/Mercury)</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Biosand filters require 2-3 weeks to become biologically active</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Pit latrines must never be dug in flood-prone or high-water-table zones</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> SODIS requires PET plastic; glass and most other plastics block UV-A</div>
+</article>
+<article class="card" id="blacksmith-anvil" data-tags="blacksmith-anvil Blacksmith Anvil tools ancient Forged Wrought Iron or Cast Structural Steel (Anvil Body) High-Carbon Tool Steel Plate (AISI 1075 / 1095, Shear Steel) Solid White Oak, Rock Elm, or Hickory Tree Trunk Sheet Lead or High-Density Neoprene / Silicone Bedding Heavy Forged Steel Drive Spikes or Threaded Hold-Down Straps">
+  <h2>Blacksmith Anvil</h2>
+  <p><em>High-rebound mass and tooling platform with hardened face, horn, and pritchel/hardy apertures for plastic metal forming and forge welding</em></p>
+  <div>
+    <span class="badge badge-field">ERA: ANCIENT</span>
+    <span class="badge badge-expert">DIFFICULTY: 3/5</span>
+    <span class="badge">CATEGORY: TOOLS</span>
+    <span class="badge badge-expert">STATUS: expert-verified</span>
+  </div>
+
+  <h3>1. Problem & Crisis Context</h3>
+  <p>Forging hot metal is physically impossible on compressible, elastic, or loose surfaces like wood, soft rock, or unanchored stones. When a heavy hammer strikes an incandescent piece of steel resting on a soft backing, 80% to 90% of the kinetic energy is absorbed by the backing material, bending the support and leaving the metal barely deformed. Improvised granite or river rocks crack and explode from thermal shock, while unhardened iron slabs dent and deform under blows, embossing gouges into every forged workpiece.
+
+Furthermore, shaping metal requires diverse geometric surfaces: drawing out thick bars into wire, bending tight rings without flattening the cross-section, punching clean bolt holes without destroying the punch tip, and cutting off excess stock. Without a specialized, multi-featured forming station, a blacksmith cannot fabricate reliable tools, wagon hardware, architectural nails, or weapon blades.
+
+A true blacksmith's anvil is not a passive block of iron; it is an active mechanical energy reflector. Its surface must possess a rebound coefficient exceeding 75% to 85%, bouncing the hammer upward to reduce operator fatigue and effectively forging the hot metal from both top and bottom simultaneously. In space settlement machine shops or collapse recovery forges, the anvil is the primary non-electrical tooling mother: the machine tool that manufactures all other machine tools.</p>
+
+  <h3>2. Technical Overview</h3>
+  <p>The blacksmith's anvil combines high structural mass, acoustic rebound restitution, and geometric forming versatility across five integrated engineering features: The Bimetallic Gradient Body, The London Pattern Forming Geometry, The Tooling Aperture System, The Wooden Inertial Block Mounting, and Acoustic Vibration Damping.
+
+1. Bimetallic Structural Construction: A solid block of high-carbon steel is excessively brittle; intense sledgehammer shocks will cause it to crack and split in half. A solid block of mild wrought iron, conversely, is too soft; hammer blows will dent the surface within hours. Historic anvils solve this through a composite bimetallic weld: a tough, shock-damping low-carbon wrought iron or cast steel body topped with a 12 to 15 mm thick plate of high-carbon shear steel (AISI 1075/1095). The plate is forge-welded at white heat (1250°C) with quartz flux and quenched to 56-60 HRC, creating a glass-hard, wear-resistant working face supported by a ductile, fracture-proof body.
+
+2. London Pattern Anatomy:
+   - The Hardened Face: Flat, mirror-smooth working table for drawing out, truing edges, and forge-welding.
+   - The Horn (Bick): A solid conical round horn for radiused bending, scrolling, and forging curved hoops and rings.
+   - The Step / Cutting Table: A slightly depressed, unhardened mild iron shelf between the face and horn. Hot steel is cut here with cold chisels without risk of chipping the chisel edge against the hardened face.
+   - The Heel: The flat overhang extending beyond the hardy hole, used for offset bending and access to awkward forgings.
+
+3. Tooling Apertures (Hardy & Pritchel):
+   - The Hardy Hole: A precision 1-inch (25 mm) square hole passing through the heel. It mechanically locks bottom tools (cut-off hardies, swages, fullers, bending forks) against rotation without requiring set-screws or clamping wedges.
+   - The Pritchel Hole: A round 1/2-inch (12 mm) through-hole adjacent to the hardy hole. When punching holes through hot iron, the punch passes through the workpiece and clears into the open pritchel cavity, allowing clean slug extraction without blunting punch tips against the solid anvil face.
+
+4. Inertial Mounting and Height Calibration: The anvil must be mounted onto a solid end-grain tree trunk (white oak, elm, or ash) weighing at least as much as the anvil itself. The stump is set 40 to 60 cm into the earth or ringed with heavy iron bands to prevent splitting. The anvil face height is calibrated to the smith's knuckles when standing relaxed with arms hanging down. Correct height maximizes ergonomic hammer leverage, preventing rotator cuff damage and lower back injury.
+
+5. Microgravity and Closed Habitats: In microgravity space environments, traditional gravity-dependent hand forging is impossible; equal and opposite reaction forces would accelerate the smith across the module. Space habitats utilize dual-opposed balanced hydraulic platens or contained rotary forging machines. In planetary bases (Mars/Moon), cast regolith-iron anvils anchored into basalt bedrock provide the fundamental tooling foundation for habitat machine shops.</p>
+
+  <h3>3. Core Engineering Principles</h3>
+  <ul>
+    <li><strong>Kinetic Energy Restitution & Rebound Coefficient:</strong> A properly hardened steel anvil face acts as an acoustic reflector of kinetic impact. Elastic restitution rebounds the hammer upward, reducing muscular effort by 50% and transmitting equal compressive shock into the bottom of the hot metal, forging both sides at once.</li>
+    <li><strong>The 40:1 Inertial Mass Ratio:</strong> To prevent kinetic energy from dissipating as useless ground vibration, the anvil mass must be at least 40 to 50 times greater than the hand hammer mass. A 1.5 kg forging hammer requires a minimum 60 to 75 kg anvil to achieve 90%+ kinetic transfer efficiency.</li>
+    <li><strong>Bimetallic Gradient Welding:</strong> Combining a high-carbon tool-steel face plate (58 HRC) with a low-carbon ductile body unites high surface hardness with bulk impact toughness. The softer body absorbs and dampens shock waves that would otherwise shatter a through-hardened block.</li>
+    <li><strong>Square Mechanical Keying (The Hardy Standard):</strong> Forging hot steel over bottom tools produces massive torsional shear. The square hardy aperture locks swage blocks and cut-off tools securely against rotational slippage without requiring set-screws, keys, or threaded fasteners.</li>
+    <li><strong>Acoustic Resonance Dissipation:</strong> Unmuted high-carbon steel anvils produce high-frequency sonic ring exceeding 115 dB at 3 kHz, inducing rapid permanent hearing damage. Clamping a heavy link chain around the waist or bedding the base in lead sheet dissipates vibration modes into safe acoustic thuds.</li>
+  </ul>
+
+  <h3>4. Critical Components</h3>
+  <ul>
+    <li><strong>London Pattern Anvil Body with Quenched Steel Face:</strong> Provides the primary mass, rebound face, conical horn, and aperture platform for hot forming <em>(Cast steel or wrought iron body with forge-welded high-carbon steel face plate (quenched to 58 HRC))</em></li>
+    <li><strong>End-Grain Hardwood Anvil Stump:</strong> Anchors anvil mass, absorbs downward shock, and prevents floor resonance and rebound drift <em>(Solid round tree trunk section of white oak, rock elm, or hickory with iron binding hoops)</em></li>
+    <li><strong>Square-Shank Bottom Hardy Cut-Off Chisel:</strong> Sits in hardy hole to allow one-person hot cutting of iron bars without requiring an assistant striker <em>(Forged medium-carbon steel (AISI 1045 or spring steel) ground to a 60° cutting wedge)</em></li>
+    <li><strong>Heavy Link Acoustic Damping Chain and Wedge:</strong> Suppresses high-frequency sonic resonance and anchors anvil tightly to the mounting block <em>(Forged iron or steel chain (10 mm link diameter) with threaded turnbuckle or drive wedge)</em></li>
+    <li><strong>Forged Steel Cross-Peen Hand Hammer (1.5 kg):</strong> Delivers focused kinetic blows to draw out, spread, and bevel hot metal on the anvil face <em>(Forged medium-carbon steel head with crowned face and cross-peen, hung on resilient hickory handle)</em></li>
+    <li><strong>Pritchel-Mounted Spring Holdfast Arm:</strong> Clamps long or awkward workpieces firmly to the anvil face with a single hammer tap <em>(Forged ductile low-carbon steel bar bent into a goose-neck spring clamping arm)</em></li>
+  </ul>
+
+  <h3>5. Step-by-Step Execution Protocol</h3>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 1: Anvil Body Forging and Profile Sculpting</h4>
+    <p>Forge the anvil body from dense wrought iron or cast structural steel (75 to 150 kg mass). Shape the conical horn, forge the square waist, and draft the wide base feet. Broach a 25 mm square hardy hole through the heel and drill a 12 mm round pritchel hole, ensuring apertures are true and parallel.</p>
+    <p><code>Tools: water-trip-hammer, broaching-drifts, furnace-tongs</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Ensure hardy hole broach is tapered slightly wider at the bottom; reverse taper will cause tooling to jam permanently.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 2: Face Plate Preparation and High-Temperature Forge-Welding</h4>
+    <p>Machine or forge a 15 mm thick high-carbon tool steel plate matching the top table footprint. Scrape faces clean of rust and apply borax or silica flux. Bring both the anvil body and face plate to dazzling yellow-white welding heat (1250°C) in a clean charcoal fire. Join the plate to the body with continuous, synchronized sledgehammer blows from center outward, squeezing out liquid flux and forge-welding the bimetallic interface.</p>
+    <p><code>Tools: sledgehammers, flux-applicator, welding-furnace</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Trapped flux between plate and body creates an internal hollow spot that will cause the face plate to delaminate and shatter under use.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 3: Face Quenching and Differential Thermal Tempering</h4>
+    <p>Heat the entire working face to non-magnetic cherry-red heat (800°C) while keeping the horn and feet cooler. Invert the anvil and quench the face beneath a high-pressure stream of cold aerated water, cooling the surface rapidly while the massive body retains residual heat. Watch the oxide temper colors run on the cleaned steel face: when the face reaches straw yellow (230°C, ~58 HRC), quench completely in water.</p>
+    <p><code>Tools: quench-water-flume, emery-polishing-stone, pyrometer</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Do not quench in stagnant water; steam blanket formation creates soft spots on the face plate that dent during forging.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 4: Face Grinding and Corner Radiusing</h4>
+    <p>Grind the face plate perfectly flat on a stone wheel or belt grinder. Radius the sharp corners: leave 5 cm near the cutting table sharp (1 mm radius) for sharp shoulder work, and graduate the rest of the edges to 3 mm and 6 mm radii along the length.</p>
+    <p><code>Tools: grinding-wheel, radius-gauges</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Razor-sharp anvil edges will shear hot metal rather than bending it, creating fatal cold-shut fracture lines in tools.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 5: Mounting Stump Sizing and Leveling</h4>
+    <p>Select a seasoned white oak or rock elm stump measuring at least 50 cm in diameter and 70 cm tall. Level both ends with a crosscut saw and hand adze. Position the stump on an earth, brick, or concrete floor. Chisel a 10 mm recess into the top end grain conforming to the anvil base footprint.</p>
+    <p><code>Tools: crosscut-saw, carpentry-adze, wood-chisels</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never mount an anvil on a hollow or rotten stump; decayed wood absorbs hammer energy and can split violently under sledging.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 6: Ergonomic Height Calibration and Bedding Installation</h4>
+    <p>Lay a 5 mm sheet of lead or high-density silicone bedding into the stump recess to fill voids. Lower the anvil into position. Stand erect beside the anvil with arms hanging loosely: the flat anvil face must touch your second knuckles. Trim or shim the stump base until height is calibrated within 1 cm.</p>
+    <p><code>Tools: spirit-level, lifting-tackle, measuring-tape</code></p>
+    <div class="warning-box"><strong>Caution:</strong> An anvil mounted too low causes crippling back strain; an anvil mounted too high strains elbows and wrists, causing tendonitis.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 7: Anchoring, Chain Damping, and Rebound Calibration</h4>
+    <p>Drive four heavy forged L-staples over the anvil feet into the hardwood stump. Wrap heavy steel link chain tightly around the anvil waist, drawing links tight with an iron wedge. Drop a 25 mm hardened chrome steel ball bearing from a height of 50 cm onto the center face: the ball must rebound at least 40 cm (80%+ restitution) with a crisp, muted thud.</p>
+    <p><code>Tools: heavy-staples, sledgehammer, steel-ball-bearing, ruler</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never strike the hardened anvil face directly with a steel hammer; missing the hot metal and striking the face can shatter chips off either tool.</div>
+  </div>
+  <h3>6. Fatal Hazard Warnings</h3>
+  <div class="hazard-box"><strong>HAZARD:</strong> Never strike a hardened anvil face directly with a hardened hammer without hot metal in between; microscopic glass-hard steel shards will spall off at ballistic velocities.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Anchor the anvil rigidly to its wooden stump with forged staples; a loose 100-kg anvil vibrating off its base during sledging will crush feet and break legs.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Damp high-frequency anvil ringing with chain or base lead; unmuted ringing (>115 dB at 3 kHz) induces permanent irreversible hearing damage within two years.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Do not cut cold steel with a chisel directly on the hardened face plate; use the soft mild iron cutting table step to prevent gouging the face.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> In planetary microgravity or space habitats, impact hammer forging produces equal and opposite kinetic recoil that damages habitat structural bulkheads; use dual-opposed hydraulic platen presses.</div>
+</article>
+<article class="card" id="forge-bellows" data-tags="forge-bellows Forge Bellows tools ancient Seasoned Hardwood Planks (Ash, Oak, or Pine) Vegetable-Tanned Cowhide Leather or Dense Wool Felt Refractory Fireclay and Chamotte (Grog) Goose / Chicken Down Feathers or Raw Wool Animal Tallow or Beeswax-Mineral Lubricant">
+  <h2>Forge Bellows</h2>
+  <p><em>Forced-draft air pumps delivering continuous forced oxygen to forge beds, enabling iron smelting, bloom refining, and forge welding temperatures</em></p>
+  <div>
+    <span class="badge badge-field">ERA: ANCIENT</span>
+    <span class="badge badge-expert">DIFFICULTY: 3/5</span>
+    <span class="badge">CATEGORY: TOOLS</span>
+    <span class="badge badge-expert">STATUS: expert-verified</span>
+  </div>
+
+  <h3>1. Problem & Crisis Context</h3>
+  <p>An open natural-draft wood or charcoal campfire is thermally limited to 700°C to 900°C because combustion is throttled by passive atmospheric convection. Copper melts at 1085°C, bronze melts at 950°C to 1050°C, and iron requires at least 1150°C to 1250°C for bloomery reduction and solid-state forge welding (pure iron melts at 1538°C). Without a forced-air blast delivering concentrated oxygen directly into the incandescent charcoal fuel bed, metallurgy is thermodynamically impossible; human societies remain permanently locked in the Stone Age.
+
+Furthermore, intermittent or pulsating air blasts introduce severe thermal cycling. Every time airflow pauses, ambient room air cools the forge bed, allowing oxygen to attack the red-hot metal surface and forming thick, brittle oxide scale (iron oxide, Fe3O4). This scale prevents metal surfaces from fusing during hammer strikes, causing forge welds to shatter. A dependable bellows system must produce high volumetric flow with continuous, non-reversing positive pressure.
+
+In planetary habitats or sealed survival shelters, forced draft is the core gas-dynamic driver for closed-loop thermal furnaces, basalt smelting, and metal extraction. Operating an open furnace indoors without strict back-draft protection produces lethal concentrations of carbon monoxide (CO) gas within minutes, risking catastrophic asphyxiation or fuel-air combustion within the pump itself.</p>
+
+  <h3>2. Technical Overview</h3>
+  <p>The forge bellows operates on fluid displacement to overcome the hydraulic resistance of densely packed charcoal or coke fuel beds, driving chemical combustion into the intense reducing and forge-welding regime.
+
+1. Combustion Thermodynamics: Forcing oxygen through glowing carbon accelerates the exothermic reaction: C + O2 -> CO2 (releasing 393.5 kJ/mol), which immediately undergoes the endothermic Boudouard reduction against excess incandescent carbon: CO2 + C -> 2CO. The resulting carbon monoxide (CO) gas is the active chemical agent that strips oxygen from metal ores (e.g., Fe2O3 + 3CO -> 2Fe + 3CO2) while elevating local bed temperatures beyond 1300°C.
+
+2. Mechanical Architectures: Historical metallurgy evolved through three distinct mechanical designs:
+   - Double-Acting Box Bellows (The Chinese 'Fengxiang', 4th c. BCE): A rigid rectangular wooden cylinder with a central piston packed with feathers, felt, or tallow-soaked leather. A system of four directional flap valves delivers high-pressure air into the delivery pipe on BOTH the push and pull strokes. A single operator generates a continuous, uninterrupted blast with minimal physical exertion.
+   - Double-Lung Accordion Bellows: Two hinged leather chambers mounted vertically. The lower chamber acts as the manual pump, discharging pressurized air through an internal clack valve into the upper chamber, which is weighted with stones. The upper chamber floats and acts as a constant-pressure hydraulic accumulator, feeding a steady draft to the tuyère while the lower chamber reloads.
+   - Bag or Pot Bellows (Prehistoric): Paired animal skins or ceramic bowls covered with loose leather diaphragms, pumped in alternating rhythm with hand sticks or feet.
+
+3. Tuyère and Firepot Geometry: The pressurized air discharges through a refractory ceramic or copper pipe called a tuyère (blast nozzle). The tuyère must enter the hearth 5 to 8 cm above the floor, angled 10° to 15° downward toward the center. This geometry creates a localized, intense 'reducing sweet spot' 5 to 10 cm directly in front of the nozzle, where heat is maximized and free oxygen is completely consumed before it can oxidize the metal workpiece.
+
+4. Anti-Blowback Protection: When pumping halts, cooling gases in the hearth contract, creating a vacuum that siphons explosive carbon monoxide gas and burning embers backward through the tuyère into the wooden bellows box. Incorporating self-closing gravity flap valves and a secondary slag trap is mandatory to prevent internal pump detonation.</p>
+
+  <h3>3. Core Engineering Principles</h3>
+  <ul>
+    <li><strong>Boudouard Equilibrium and Reducing Atmosphere:</strong> Blasting air into hot charcoal produces a two-stage chemical reaction: initial combustion yields CO2, which reacts with excess incandescent carbon to form carbon monoxide (CO). The active forge sweet spot is chemically reducing; placing hot steel here prevents oxidation scaling and decarburization.</li>
+    <li><strong>Continuous Positive Displacement:</strong> Intermittent air pulses allow the combustion zone to cool and invite ambient oxygen back into the weld zone. Double-acting piston mechanisms or dual-chamber weighted accumulators deliver continuous laminar airflow, stabilizing core temperature at 1200°C+.</li>
+    <li><strong>Tuyère Aerodynamic Throat Sizing:</strong> The nozzle throat diameter dictates the balance between volumetric airflow (liters per second) and static pressure head (pascals). A 20 to 25 mm diameter tuyère nozzle optimally matches manual box bellows displacement, penetrating 15 to 25 cm into the fuel bed without blowing charcoal out of the hearth.</li>
+    <li><strong>The Hydraulic Anti-Backdraft Standard:</strong> When an air pump stroke terminates, negative pressure in the delivery trunk can draw carbon monoxide and glowing coal dust backward. Gravity-closed leather clack valves and dedicated air breaks isolate the fuel bed from the flammable pumping chamber.</li>
+    <li><strong>Thermal Gradient Decoupling:</strong> Wood, leather, and tallow-lubricated seals degrade rapidly above 80°C. The intense 1300°C hearth environment is decoupled from the bellows box using an extended refractory fireclay tuyère pipe (minimum 30 cm long) wrapped in thermal clay lagging.</li>
+  </ul>
+
+  <h3>4. Critical Components</h3>
+  <ul>
+    <li><strong>Double-Acting Wooden Piston Cylinder:</strong> Provides the rigid, airtight structural displacement volume for forced air compression <em>(Kiln-dried seasoned hardwood planks (oak, ash, or pine) joined with airtight splines and hide glue)</em></li>
+    <li><strong>Piston Head with Compressible Perimeter Packing:</strong> Sweeps the cylinder bore, driving air ahead of it while drawing fresh intake air behind it <em>(Hardwood core wrapped in chicken feathers, goose down, or dense wool felt lubricated with beef tallow)</em></li>
+    <li><strong>Four-Way Directional Leather Flap Valves:</strong> Automatically directs incoming ambient air and routes outgoing compressed air to the delivery trunk <em>(Vegetable-tanned oil-softened leather backed with thin wooden stiffening battens)</em></li>
+    <li><strong>Piston Push-Pull Shaft and Cross-Handle:</strong> Transmits operator mechanical force into reciprocating linear compression strokes <em>(Turned ash or hickory rod passing through a grease-packed leather gland seal)</em></li>
+    <li><strong>Refractory Fireclay Blast Nozzle (Tuyère):</strong> Directs the pressurized air blast directly into the combustion zone while resisting 1400°C forge temperatures <em>(Aluminosilicate fireclay mixed with 30% crushed fired pottery grog, bisqued and vitrified)</em></li>
+    <li><strong>Air Delivery Trunk with Drop-Out Cleanout Cap:</strong> Connects bellows exhaust ports to tuyère while capturing stray ash or embers before they enter the pump <em>(Formed sheet copper, brass, or carved wood trunk with a removable weighted bottom trap door)</em></li>
+  </ul>
+
+  <h3>5. Step-by-Step Execution Protocol</h3>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 1: Stock Preparation and Cylinder Box Joinery</h4>
+    <p>Select straight-grained, seasoned hardwood boards free of knots. Plane four interior planks mirror-smooth to form a box with internal dimensions approx. 90 cm long, 30 cm wide, and 30 cm deep. Cut matched spline or rebated joints along all edges. Fasten three sides securely with wood pegs and hide glue, leaving top plank removable for internal fitment.</p>
+    <p><code>Tools: smoothing-hand-plane, mortise-chisel, wood-clamps</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Any twist or bowing in side walls will allow air to blow past the piston head, cutting pump pressure by over 50%.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 2: Air Manifold and Intake Port Milling</h4>
+    <p>Bore two 50 mm intake holes in each end cap and two 50 mm exhaust holes into the lower manifold channel. Plane valve seating surfaces around each hole perfectly flat. Apply a thin ring of tallow-soaked wool felt around each port to act as an airtight valve seat.</p>
+    <p><code>Tools: brace-and-expansion-bit, cabinet-scraper</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Rough or splintered valve seats prevent flap closure, resulting in loud valve flutter and loss of output draft.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 3: Fabrication of Four-Way Directional Leather Flap Valves</h4>
+    <p>Cut four rectangular flaps from 2.5 mm vegetable-tanned leather, leaving 10 mm extra margin around the port holes. Glue thin wooden laths to the back of each leather flap to prevent curling under pressure. Mount the flaps over ports with brass or copper tack hinges, ensuring gravity keeps them naturally closed in rest state.</p>
+    <p><code>Tools: leather-skiving-knife, tack-hammer</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never mount exhaust flaps where hot slag particles could land on them; leather flap failure leads to immediate internal fires.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 4: Piston Head Assembly and Perimeter Feather Packing</h4>
+    <p>Cut two hardwood boards 10 mm smaller than the box internal bore. Clamp them together with a perimeter groove 20 mm deep and 25 mm wide. Pack this groove densely with goose down or raw wool, pinning the fibers with leather capping strips. Mount the actuating rod centrally through the piston, securing with two opposing wooden draw-wedges.</p>
+    <p><code>Tools: tenon-saw, pack-needle, mallet</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Do not overpack the groove; excessive packing pressure creates immense sliding friction that exhausts the operator within 5 minutes.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 5: Cylinder Assembly and Tallow Lubrication</h4>
+    <p>Generously coat the interior cylinder walls with rendered beef tallow and beeswax compound. Insert the packed piston head into the chamber. Fasten the top lid board with gasket cord and wood screws for future servicing. Test stroke manually: action should be smooth, silent, and produce immediate positive air blast from the exhaust ports in both directions.</p>
+    <p><code>Tools: screwdriver, lubricant-dauber</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Avoid mineral petroleum grease; petroleums can swell and degrade natural leather valve hinges and emit volatile fumes.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 6: Sculpting and Firing the Refractory Clay Tuyère</h4>
+    <p>Mix 70% fat fireclay with 30% crushed 1 mm grog. Roll the clay around a 25 mm greased wooden dowel into a thick-walled pipe (minimum 15 mm wall thickness, 35 cm long) with a flared trumpet intake. Dry slowly in shade for 7 days, then fire in a campfire or kiln to glowing red (>1000°C) until vitrified.</p>
+    <p><code>Tools: pottery-rib-tool, turning-dowel, fire-pit</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Firing damp clay causes steam explosion; ensure the tuyère is bone-dry before burning or inserting into the hot hearth.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 7: Hearth Installation and Cold Blast Verification</h4>
+    <p>Position the bellows box on timber stands beside the forge hearth. Connect the exhaust manifold to the refractory tuyère with a sheet metal sleeve or clay slip joint, incorporating a downward-pointing ash trap. Bed the tuyère in refractory clay in the hearth wall, 6 cm above the floor, angled 10° down. Pump vigorously for 60 seconds with cold air to verify leak-free volumetric output.</p>
+    <p><code>Tools: trowel, draft-gauge</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Always open the forge shop windows or work under an open-sided roof; forge combustion consumes huge volumes of oxygen and generates fatal carbon monoxide.</div>
+  </div>
+  <h3>6. Fatal Hazard Warnings</h3>
+  <div class="hazard-box"><strong>HAZARD:</strong> Never stop pumping abruptly without withdrawing the workpiece; cooling gases create negative pressure that siphons burning embers and CO into wooden chambers.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Ensure forge shops are vigorously ventilated; coal combustion consumes huge oxygen volumes and emits lethal odorless carbon monoxide (CO) gas.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Tuyère nozzle must never be submerged in molten slag; sudden thermal contact causes steam/gas explosions that blast white-hot slag across the shop.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Check leather flap valves before every lighting session; dry, stiff, or stuck flaps fail to prevent backdraft flash fires.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> In planetary regolith reduction reactors or space furnaces, forced-draft pumps must utilize oxygen-inert fluorinated lubricants to prevent explosive spontaneous ignition.</div>
+</article>
+<article class="card" id="iron-smelting" data-tags="iron-smelting Iron Smelting (Bloomery Tradition) materials ancient Iron Ore (Bog Iron Goethite, Rock Hematite, or Magnetite) Metallurgical Hardwood Charcoal Refractory Fireclay and Coarse Quartz Sand Calcium Carbonate (Limestone or Crushed Seashells, Optional Flux) Green Hardwood Saplings and Bundled Willow">
+  <h2>Iron Smelting (Bloomery Tradition)</h2>
+  <p><em>Direct solid-state carbothermic reduction of iron oxide ores in natural and forced-draft bloomeries, yielding malleable wrought iron blooms and low-carbon steel</em></p>
+  <div>
+    <span class="badge badge-field">ERA: ANCIENT</span>
+    <span class="badge badge-expert">DIFFICULTY: 4/5</span>
+    <span class="badge">CATEGORY: MATERIALS</span>
+    <span class="badge badge-expert">STATUS: expert-verified</span>
+  </div>
+
+  <h3>1. Problem & Crisis Context</h3>
+  <p>Bronze was humanity's first industrial alloy, but it suffered from fatal supply-chain vulnerability: copper and tin ores rarely co-occur in the same geological basin, necessitating thousands of kilometers of precarious sea and overland trade routes. When trade routes collapse, bronze production immediately ceases. Iron oxide, by contrast, is one of the most abundant mineral elements in the Earth's crust (present as bog iron in peat bogs, hematite in banded iron formations, and iron-rich laterite soils).
+
+The technical obstacle to iron is thermodynamic. Copper melts at 1085°C and bronze melts at 950°C, temperatures easily exceeded in basic charcoal fires, allowing ancient metalsmiths to pour liquid metal into molds. Pure iron, however, melts at 1538°C—far higher than any pre-industrial furnace can achieve. Attempting to melt iron with charcoal only succeeds if the metal dissolves excess carbon (>2.1%), forming brittle cast iron (pig iron) that shatters under the hammer like glass.
+
+To manufacture ductile, tough wrought iron for tools and weapons, ancient civilizations had to develop solid-state direct reduction (the bloomery process). Instead of melting, solid iron oxide particles are reduced by carbon monoxide gas into an incandescent, spongy consolidation of metallic iron grains entangled with liquid silica slag. The challenge is extracting this spongy mass at white heat (1200°C) and mechanically compacting it under heavy hammer blows to squeeze out molten glass slag and forge-weld iron grains into a solid bar before the metal cools.</p>
+
+  <h3>2. Technical Overview</h3>
+  <p>The bloomery smelting process operates on five tightly coupled physicochemical stages: Ore Calcination & Granulometry, Carbothermic Indirect Reduction, Slag Liquefaction & Self-Fluxing, The Slag-Tap Drainage Dynamic, and Hot Primary Bloom Consolidation.
+
+1. Ore Preparation and Roasting: Raw iron ores (bog iron goethite [FeO(OH)], rock hematite [Fe2O3], or magnetite [Fe3O4]) contain bound water, clay silicates, and organic contaminants. Ores must undergo an open roasting fire on cordwood. Roasting drives off chemically bound hydroxyls, converts non-porous rock into micro-fractured spongy granules, and converts non-magnetic oxides into magnetic hematite. Roasted ore is crushed to uniform hazelnut size (10 to 20 mm) and screened to remove fine dust.
+
+2. The Carbothermic Reaction Cascade: The bloomery is a vertical chimney furnace (1.0 to 1.8 meters high, 30 to 45 cm internal bore) built of refractory clay mixed with quartz sand and straw. Forced air from forge bellows enters through a ceramic tuyère near the base. Combustion of metallurgical charcoal creates carbon dioxide, which instantly reacts with excess incandescent charcoal to form carbon monoxide (CO). As ascending CO gas permeates the descending ore burden, it strips oxygen in a progressive chemical reduction cascade: 3Fe2O3 + CO -> 2Fe3O4 + CO2; Fe3O4 + CO -> 3FeO + CO2; and finally FeO + CO -> Fe (solid metallic iron) + CO2. This reduction occurs entirely in the solid state between 900°C and 1150°C.
+
+3. Slag Liquefaction and Fayalite Phase: Iron ore always contains silica (SiO2) gangue. Without adding external flux, the unreduced iron oxide (FeO) acts as its own flux, combining with silica to synthesize fayalite slag (2FeO·SiO2, melting point ~1177°C). Because operating temperatures in the lower bosh reach 1200°C to 1250°C, the fayalite slag melts into a viscous liquid, trickling downward like molten lava. This liquid slag serves an essential protective role: it coats the freshly reduced metallic iron crystals, shielding them from the oxidizing tuyère air blast.
+
+4. Slag Tapping: Below the tuyère, in the furnace hearth, liquid slag accumulates and metallic iron crystals sinter together into a spongy boulder called a 'bloom' or 'loupe'. Periodically, the smelter punches open a clay-sealed tap hole at the furnace base with an iron bar, allowing hundreds of kilograms of incandescent liquid fayalite slag to gush out into an exterior sand basin. This prevents slag from rising and drowning the tuyère nozzle.
+
+5. Bloom Extraction and Mechanical Consolidation: After 6 to 10 hours of continuous charging (burning ~50 to 100 kg of charcoal and 30 to 60 kg of ore), the blast is halted. The clay arch at the front of the furnace is broken open with sledges. The spongy, slag-dripping iron bloom (typically 5 to 15 kg) is wrestled out of the hearth using heavy iron tongs. The bloom is dragged immediately to a nearby wooden anvil stump and struck continuously with heavy wooden beetles and sledgehammers. The blows squirt remaining liquid slag out in showers of sparks, consolidating the porous sponge and forge-welding iron grains into a dense, solid wrought iron bloom bar.</p>
+
+  <h3>3. Core Engineering Principles</h3>
+  <ul>
+    <li><strong>Solid-State Gaseous Indirect Reduction:</strong> Metallic iron is not formed by liquid melting, but by gas-solid reduction. Ascending carbon monoxide (CO) gas diffuses through the micro-pores of descending solid iron ore chunks, sequentially stripping oxygen atoms between 900°C and 1150°C without ever melting the metal.</li>
+    <li><strong>The Self-Fluxing Fayalite Liquid Window:</strong> Silica gangue (SiO2) is scavenged by sacrificed iron oxide (FeO) to form fayalite slag (2FeO·SiO2) with a eutectic melting point of 1177°C. The resulting liquid slag flows downward through the spongy bloom, flushing out rock impurities and protecting reduced iron from re-oxidation.</li>
+    <li><strong>Carburization Kinetic Suppression:</strong> Keeping operating temperatures below 1250°C and limiting furnace height prevents excessive carbon dissolution into the iron. This guarantees the product remains malleable wrought iron (<0.1% C) or forgeable steel (0.2-0.8% C) rather than unforgeable brittle cast pig iron.</li>
+    <li><strong>Dynamic Plastic Consolidation (Forge-Welding):</strong> Freshly extracted blooms are over 40% void and liquid slag by volume. Striking the bloom white-hot (1150°C-1200°C) exploits high-temperature solid-state plasticity, expelling trapped slag and forge-welding microscopic iron nodules into continuous metallic fibers.</li>
+    <li><strong>Burden Permeability and Blast Velocity:</strong> Ore chunks and charcoal lumps must be screened to uniform walnut size (15-25 mm) and fines (<5 mm) eliminated. This creates interconnected void channels that allow ascending CO gas to percolate uniformly through the stack without channeling or choking.</li>
+  </ul>
+
+  <h3>4. Critical Components</h3>
+  <ul>
+    <li><strong>Refractory Clay Shaft Furnace with Slag Arch:</strong> Contains the layered fuel-ore burden and focuses high-temperature combustion and gas reduction <em>(Aluminosilicate fireclay tempered with 30% quartz sand and chopped straw, pre-cured with gentle fire)</em></li>
+    <li><strong>Sloped Refractory Tuyère Blast Pipe:</strong> Directs forced air blast from bellows deep into the fuel bed just above the bloom consolidation zone <em>(Vitrified aluminosilicate clay pipe (25 mm internal bore, 15 mm wall thickness))</em></li>
+    <li><strong>Double-Acting Bellows Air Supply System:</strong> Delivers continuous, high-volume air blast (20 to 40 liters/second) to drive combustion core past 1250°C <em>(Double-acting wooden piston box or paired weighted accordion bellows with directional flap valves)</em></li>
+    <li><strong>Long-Reined Forged Steel Bloom Extraction Tongs:</strong> Safely grips, lifts, and extracts the 10-15 kg white-hot iron bloom from the broken furnace arch <em>(Heavy forged low-carbon steel with curved jaws and 1.2-meter long reins)</em></li>
+    <li><strong>Hardwood Bloom Compaction Maul & Sledge:</strong> Delivers heavy compressive shock to white-hot bloom, squeezing out liquid slag without sticking <em>(Turned root-ball or knot of dense hardwood (oak, hickory, elm) on hickory handle, followed by iron sledges)</em></li>
+    <li><strong>Slag Run-Out Trench and Vitrified Pit:</strong> Channels and cools discharged molten fayalite slag safely away from the smelter's feet <em>(Dry sand trench leading to a shallow pit lined with crushed charcoal dust)</em></li>
+  </ul>
+
+  <h3>5. Step-by-Step Execution Protocol</h3>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 1: Ore Sourcing, Roasting, and Granulometric Sizing</h4>
+    <p>Gather high-grade iron ore (bog iron or hematite with >50% iron content). Build a cordwood bonfire and roast the ore chunks for 4 to 6 hours until glowing dull red. Quench with cold water to induce thermal micro-cracking. Crush the roasted ore with iron hammers on a stone anvil, screening the aggregate to hazelnut size (10 to 20 mm). Discard all dust smaller than 3 mm.</p>
+    <p><code>Tools: sledgehammer, stone-crushing-anvil, wire-sizing-screen</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Wear safety goggles and a leather apron; shatter-cracking roasted ore throws razor-sharp flying rock splinters.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 2: Charcoal Sizing and Fines De-Dusting</h4>
+    <p>Select hard, dense hardwood charcoal that rings with a metallic clink when struck. Break charcoal into uniform walnut-sized lumps (20 to 40 mm). Pass the fuel through a 10 mm wire mesh riddle to eliminate all fine charcoal powder and ash, which would otherwise choke gas permeability in the shaft.</p>
+    <p><code>Tools: charcoal-riddle-screen, shovels, measuring-tubs</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Work outdoors upwind; inhaling fine charcoal dust causes chronic black-lung pneumoconiosis.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 3: Erecting the Refractory Clay Shaft Furnace</h4>
+    <p>Lay a level dry-stone foundation with an open front slag arch (25 cm wide, 30 cm high). Erect a cylindrical willow wickerwork form (35 cm inner diameter, 1.5 meters tall). Pack refractory clay mixed with 30% quartz sand and straw around the former in 10 cm lifts, building walls 12 cm thick at the base and 8 cm thick at the top. Insert the refractory clay tuyère 18 cm above the hearth, angled 12° downward.</p>
+    <p><code>Tools: trowel, clay-kneading-trough, plumb-line</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Allow each 30 cm clay lift to firm up for 12 hours before adding the next lift to prevent wall collapse.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 4: Thermal Curing and Charcoal Preheating</h4>
+    <p>Light a gentle, slow-burning wood fire inside the shaft for 24 hours to bake out moisture and vitrify the inner clay liner without thermal shock cracking. Gradually fill the dried shaft with burning charcoal and engage the bellows at low blast (10 L/s) for 2 hours until the entire chimney glows white-hot (>1200°C) from tuyère to throat.</p>
+    <p><code>Tools: bellows-system, long-handled-poker, kindling</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never engage full blast on a damp furnace; trapped steam in clay walls will cause a violent explosive wall blowout.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 5: Charging Cycles and Carbothermic Smelt Run</h4>
+    <p>Commence charging in strict, alternating volumetric batches: 2 kg of walnut charcoal followed by 2 kg of roasted ore. As the burden descends, maintain full blast (25-35 L/s). Replenish charges every 10 to 15 minutes, tracking descent rate. Continue for 6 to 8 hours until 40 to 60 kg of ore has been charged, creating a continuous reducing column of CO gas.</p>
+    <p><code>Tools: charging-troughs, tally-board, stopwatch</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Lethal carbon monoxide (CO) gas vents continuously from the furnace top; operators must never lean over the throat to look inside.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 6: Slag Tapping and Hearth Level Management</h4>
+    <p>Monitor the color and sound of the blast through the tuyère sight port. When liquid slag rises to tuyère level (indicated by bubbling and popping sounds), drive an iron bar through the clay-plugged tap hole at the furnace base. Draw the bar back: incandescent liquid fayalite slag will rush out into the exterior sand trench. Re-plug with damp clay once liquid flow subsides.</p>
+    <p><code>Tools: slag-tapping-bar, clay-plugging-rod, slag-rake</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Ensure the sand slag trench is completely bone-dry; molten slag contacting damp soil flashes to steam, blasting molten glass into the air.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 7: Bloom Extraction and Primary Consolidation Forging</h4>
+    <p>After final charge descends, halt bellows blast. Break down the temporary clay wall in the front arch with sledges. Thrust heavy bloom tongs into the hearth, seize the 12-kg glowing white-hot iron bloom (1200°C), and wrestle it onto the nearby wooden anvil stump. Strike immediately and vigorously with wooden beetles and sledges, driving out liquid slag and welding iron grains into a compact bloom billet.</p>
+    <p><code>Tools: heavy-bloom-tongs, wooden-compaction-maul, sledgehammers, anvil-stump</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Initial hammer blows spray showers of white-hot liquid slag up to 5 meters; all crew must wear full leather coats, leg gaiters, and face shields.</div>
+  </div>
+  <h3>6. Fatal Hazard Warnings</h3>
+  <div class="hazard-box"><strong>HAZARD:</strong> Deadly carbon monoxide (CO) gas vents continuously from the furnace chimney; operators must remain strictly upwind and never inhale shaft exhaust.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Liquid fayalite slag at 1200°C violently spatters when struck; all operators must wear heavy leather aprons, leg gaiters, gloves, and full face shields.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Never allow molten slag to contact damp soil or water; instantaneous steam expansion will blast explosive sprays of molten slag over the crew.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Ensure furnace walls are completely dried before blast smelting; residual moisture in thick clay will cause steam-induced structural furnace explosions.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> In planetary habitats and sealed spacecraft, carbothermic smelting produces toxic carbon monoxide and carbon dioxide in quantities that will poison life support; use closed-loop molten regolith electrolysis (MRE) instead.</div>
+</article>
+<article class="card" id="basic-chemistry-lab" data-tags="basic-chemistry-lab Basic Chemistry Lab science early-modern Borosilicate Glass Stock (Pyrex Type 3.3) Refractory Glazed Porcelain / Stoneware Sodium Bicarbonate and Calcium Hydroxide (Slaked Lime) Pure Virgin PTFE (Teflon) or Fluorosilicone Tubing Purified Distilled Water (Conductivity < 2 uS/cm)">
+  <h2>Basic Chemistry Lab</h2>
+  <p><em>Standardized chemical reaction laboratory: fractional distillation, acid-base titration, gravimetric balance, and PPE protocol for compound synthesis and assay</em></p>
+  <div>
+    <span class="badge badge-field">ERA: EARLY-MODERN</span>
+    <span class="badge badge-expert">DIFFICULTY: 3/5</span>
+    <span class="badge">CATEGORY: SCIENCE</span>
+    <span class="badge badge-expert">STATUS: expert-verified</span>
+  </div>
+
+  <h3>1. Problem & Crisis Context</h3>
+  <p>Before the establishment of standardized chemical laboratories, material transformation was trapped in alchemy: unmeasured recipes, mystical nomenclature, and uncontrolled contamination. A settlement attempting to produce medicines, acids for metallurgy, antiseptics, or battery electrolytes using improvised cooking vessels will suffer catastrophic yield failure and lethal laboratory accidents. Incompatible vessel materials leach lead and arsenic into chemical products, while trace organic impurities poison catalytic syntheses.
+
+Furthermore, handling reactive reagents without rigorous physical engineering controls creates acute operational hazards. Heating volatile organic solvents (such as ethanol, acetone, or ether) over open fire causes explosive vapor-air ignition. Pouring water into concentrated sulfuric acid creates instantaneous flash-boiling that blasts caustic boiling acid into the technician's eyes. Inhaling invisible fumes of chlorine, sulfur dioxide, or nitrogen oxides causes fatal pulmonary edema 12 to 24 hours post-exposure.
+
+In closed planetary habitats, uncontained chemical vapors are fatal to the entire settlement within hours. The Environmental Control and Life Support System (ECLSS) catalytic oxidizers and trace contaminant control beds become poisoned by trace halogens, ruining habitat air recyclers. A basic chemistry capability must therefore be engineered as an isolated, negative-pressure, quantitative operating system with standardized volumetric glassware, precision balances, thermal buffers, and immediate neutralization protocols.</p>
+
+  <h3>2. Technical Overview</h3>
+  <p>A basic chemistry laboratory transitions a civilization from qualitative trial-and-error to repeatable, quantitative molecular engineering. The facility is organized across five rigorous operational domains: Physical Layout & Negative Draft, Gravimetric & Volumetric Measurement, Thermal Heat Transfer Buffering, Separation & Purification Units, and Spill Containment Safety.
+
+1. Physical Layout and Fume Exhaust: The lab requires dedicated counter heights (90 cm) surfaced with acid-resistant ceramic tile, slate, or epoxy resin. Active reactions take place exclusively within a counterbalanced fume hood maintaining a minimum face velocity of 0.5 m/s. Exhaust air is drafted through a dedicated clay or borosilicate chimney flue away from settlement living quarters.
+
+2. Analytical Measurement: Chemistry is governed by mass conservation and stoichiometry. The lab centers around a two-pan analytical beam balance with agate knife-edges, sensitive to 10 milligrams (0.01 g), housed in a glass draft shield to eliminate air current errors. Volumetric measurement uses calibrated Class-A borosilicate graduated cylinders, volumetric flasks, and precision burettes for quantitative acid-base titrations.
+
+3. Thermal Buffering (Indirect Heating): Open flames under glass flasks create localized hotspots that cause glassware to shatter from thermal stress. The lab utilizes indirect heat transfer media: sand baths (dry silica sand for temperatures up to 350°C), boiling water baths (bain-marie, stable at 100°C), and molten salt/oil baths for higher temperatures. This distributes heat isotropically around flask walls.
+
+4. Separation and Distillation: Chemical compounds are isolated using standardized unit operations: gravity filtration with porous unglazed porcelain Buchner funnels; fractional distillation using Liebig or Graham water-cooled counter-current condensers; and liquid-liquid extraction using glass separatory funnels to isolate organic and aqueous phases.
+
+5. Reagent Isolation and Storage Matrix: Chemicals are stored strictly by compatibility class: strong mineral acids (sulfuric, hydrochloric, nitric) isolated in a dedicated vented cabinet lined with lead or ceramic trays; flammable solvents isolated in grounded metal bins; strong bases (sodium hydroxide, potassium hydroxide) stored away from acids and aluminum. Every bench is equipped with bulk sodium bicarbonate (baking soda) for acid spills, dilute acetic acid for base splashes, and clean eye-wash stations.</p>
+
+  <h3>3. Core Engineering Principles</h3>
+  <ul>
+    <li><strong>The Law of Conservation of Mass and Stoichiometry:</strong> Matter cannot be created or destroyed in chemical reactions. Calculating molar ratios and pre-weighing reagents on an analytical balance ensures complete consumption of starting materials, maximizing yield and preventing dangerous runaway reactions from unreacted excess reagents.</li>
+    <li><strong>Thermal Gradient Mitigation and Borosilicate Glass:</strong> Glassware shatters when uneven heating induces differential expansion, creating tensile stress exceeding structural shear strength. Borosilicate glass (with low thermal expansion coefficient ~3.3 x 10^-6 /K) paired with indirect sand or water baths ensures uniform heat distribution and prevents explosive failure.</li>
+    <li><strong>The Hydration Exotherm Rule (Acid into Water):</strong> Dissolving concentrated mineral acid (especially H2SO4) in water releases massive heat of hydration (~95 kJ/mol). Adding water to acid flash-boils the localized surface layer, spraying boiling concentrated acid violently outward. Technicians must ALWAYS pour acid slowly into water along a glass stirring rod with continuous agitation.</li>
+    <li><strong>Continuous Negative Pressure Vapor Containment:</strong> Chemical vapors (HCl, SO2, HNO3, NH3) are heavier than air or acutely toxic to mucous membranes. Reactions must be conducted inside a dedicated hood with active updraft (minimum face velocity 0.5 m/s) to capture and exhaust vapors before they diffuse into the technician's breathing zone.</li>
+    <li><strong>Secondary Containment and Neutralization Preparedness:</strong> Every reaction flask and acid storage carboy must rest within a chemically inert secondary tub capable of holding 110% of total vessel volume. Amphoteric neutralizers (sodium bicarbonate) and bucketed dry sand must be stationed within arm's reach of every workstation.</li>
+  </ul>
+
+  <h3>4. Critical Components</h3>
+  <ul>
+    <li><strong>Two-Pan Analytical Beam Balance with Draft Shield:</strong> Provides precision gravimetric measurement of chemical reagents down to 10 milligrams (0.01 g) <em>(Cast brass beam with polished agate or hardened steel knife-edge fulcrums, encased in glass cabinet)</em></li>
+    <li><strong>Standardized Borosilicate Glassware Array:</strong> Contains, heats, and mixes corrosive reagents without chemical leaching or thermal cracking <em>(Low-expansion borosilicate glass (Pyrex 3.3) with interchangeable ground-glass taper joints (standard 24/40))</em></li>
+    <li><strong>Liebig Counter-Current Condensation Apparatus:</strong> Condenses volatile reaction vapors back into liquid for reflux syntheses and fractional distillation <em>(Concentric borosilicate tubes with counter-flow water cooling inlet and outlet ports)</em></li>
+    <li><strong>Counterbalanced Fume Hood with High-Draft Flue:</strong> Captures and exhausts hazardous toxic fumes, acid vapors, and volatile solvent mists outside the building <em>(Acid-resistant glazed ceramic brick chamber with tempered glass sliding sash and clay tile exhaust duct)</em></li>
+    <li><strong>Cast-Iron Indirect Heating Sand Bath:</strong> Provides uniform, controllable conductive heat transfer to round-bottom flasks without hotspots or open flame <em>(Heavy cast iron pan filled with clean, washed 0.5-1.0 mm silica sand)</em></li>
+    <li><strong>Emergency Eye-Wash Basin and Chemical Spill Kit:</strong> Provides instantaneous continuous water flushing for chemical splashes and dry neutralizer for bench spills <em>(Gravity-fed potable water carboy with twin aerated eye nozzles, buckets of sodium bicarbonate, and dry sand)</em></li>
+  </ul>
+
+  <h3>5. Step-by-Step Execution Protocol</h3>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 1: Site Selection and Acid-Proof Bench Construction</h4>
+    <p>Select a dry, well-ventilated ground-floor room isolated from living and sleeping quarters. Erect heavy timber or masonry workbenches at 90 cm working height. Surface benches with acid-proof glazed ceramic tiles or slate slabs bedded in chemical-resistant epoxy or sulfur-sand hydraulic mortar.</p>
+    <p><code>Tools: carpentry-hand-tools, masonry-trowel, spirit-level</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never use bare wood or porous concrete bench surfaces; spilled acids soak into wood, rotting structural joints and off-gassing toxic fumes indefinitely.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 2: Construction and Draft Verification of Fume Hood</h4>
+    <p>Build an enclosed three-sided fume chamber measuring 120 cm wide, 80 cm deep, and 120 cm high using fire-rated cement board or brick. Install a vertical sliding counterbalanced tempered glass sash. Connect the top exhaust to a dedicated 20 cm diameter chimney flue extending 2 meters above the roofline. Verify positive updraft with a burning pine-needle smoke taper.</p>
+    <p><code>Tools: hand-drill, pulley-rigging-kit, smoke-taper</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never connect fume hood exhaust into standard domestic heating chimneys or stove flues; corrosive acid vapors eat chimney mortar and poison living areas.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 3: Analytical Beam Balance Installation and Leveling</h4>
+    <p>Place the two-pan analytical balance onto a heavy, rigid stone slab decoupled from the floor. Adjust the leveling thumb-screws until the plumb bob aligns perfectly with the center marker. Clean agate knife-edges with camel-hair brush and ether. Verify zero point with pans empty and check sensitivity using calibrated brass test weights down to 10 mg.</p>
+    <p><code>Tools: fine-camel-hair-brush, calibrated-gram-weight-set, tweezers</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never touch precision calibration weights with bare fingers; finger oils add 0.5 to 2 mg of mass and corrode brass calibration standards.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 4: Glassware Array Assembly and Ground-Joint Sealing</h4>
+    <p>Mount retort stands securely to the bench. Inspect borosilicate round-bottom boiling flasks, distillation adapters, and Liebig condensers for thermal stress fractures. Apply a trace film of chemically inert fluorocarbon or silicone stopcock grease to the upper 50% of male ground-glass taper joints. Assemble joints with a gentle twisting motion to create a clear, bubble-free hermetic vacuum seal.</p>
+    <p><code>Tools: cast-iron-retort-stands, burette-clamps, stopcock-grease-applicator</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never grease the entire ground joint; excess grease dissolves in boiling solvents, contaminating chemical products with silicone impurities.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 5: Indirect Sand Bath and Thermal Well Setup</h4>
+    <p>Fill a heavy cast-iron skillet with 5 cm of clean, washed dry silica sand. Position the bath onto an adjustable tripod over a brass spirit lamp or gas burner inside the fume hood. Embed an alcohol or mercury laboratory thermometer (scale -10°C to +300°C) into the sand adjacent to the round-bottom reaction flask, ensuring the bulb does not contact the metal pan floor.</p>
+    <p><code>Tools: cast-iron-pan, laboratory-thermometer, spirit-lamp</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Ensure sand is completely desiccated; cold wet sand dumped into a hot pan pops violently, throwing scalding sand and glass fragments.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 6: Commissioning Spill Control and Eye-Wash Stations</h4>
+    <p>Mount a 20-liter gravity-fed clean water eye-wash reservoir 1.5 meters high adjacent to the room exit. Connect dual aerated dispensing nozzles operated by a single pull-cord. Place dedicated, clearly labeled plastic buckets of dry sodium bicarbonate (for acids) and 5% acetic acid solution (for bases) within immediate arm's reach of every workbench.</p>
+    <p><code>Tools: wall-anchors, plumbing-wrenches, label-stencils</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never lock or block the laboratory exit door; technicians blinded by acid splashes must be able to push doors open with their shoulders.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 7: Baseline Calibration and Distillation Assay Run</h4>
+    <p>Perform an inaugural benchmark run: charge a 500 mL boiling flask with 300 mL of 10% ethanol-water mixture and ceramic boiling stones. Heat via sand bath to 78.4°C while operating counter-current cooling water through the Liebig condenser. Collect the distillate fraction, measure density with a hydrometer, and titrate purity to confirm equipment vacuum integrity and condenser efficiency.</p>
+    <p><code>Tools: specific-gravity-hydrometer, porcelain-boiling-chips, graduated-cylinder</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Always add porous boiling stones before heating; heating unstirred liquids without boiling chips causes violent explosive bumping that shatters glassware.</div>
+  </div>
+  <h3>6. Fatal Hazard Warnings</h3>
+  <div class="hazard-box"><strong>HAZARD:</strong> NEVER add water to concentrated acid; always add acid slowly to water along a stirring rod with continuous agitation to avoid explosive flash-boiling.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Never heat volatile organic solvents (ethanol, ether, acetone) over open flame; use indirect water, oil, or sand baths exclusively.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Wear wrap-around chemical splash goggles and impervious nitrile/neoprene gloves at all times; a single dropped droplet of strong alkali causes permanent cornea destruction in seconds.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Fume hood exhaust must vent to high external air away from doors, windows, and HVAC intakes; toxic vapors (NO2, SO2, Cl2) cause fatal delayed pulmonary edema.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> In planetary habitats and sealed spacecraft, all chemical exhausts must route through regenerative catalytic scrubbers and activated charcoal filters; halogen or solvent leaks permanently destroy ECLSS life-support membranes.</div>
+</article>
+<article class="card" id="stored-program-computer" data-tags="stored-program-computer Stored-Program Computer computing mid-20th Semiconductor Switching Transistors / Thermionic Vacuum Tubes Ferrite Toroid Cores and Enamelled Copper Magnet Wire Glass-Reinforced Epoxy Circuit Boards (FR-4) with Copper Cladding Quartz Crystal Piezoelectric Resonator Regulated Linear or Switching Direct-Current Power Supply">
+  <h2>Stored-Program Computer</h2>
+  <p><em>Von Neumann architecture executing sequences of binary machine instructions stored alongside operands in unified addressable memory</em></p>
+  <div>
+    <span class="badge badge-field">ERA: MID-20TH</span>
+    <span class="badge badge-expert">DIFFICULTY: 5/5</span>
+    <span class="badge">CATEGORY: COMPUTING</span>
+    <span class="badge badge-expert">STATUS: expert-verified</span>
+  </div>
+
+  <h3>1. Problem & Crisis Context</h3>
+  <p>Early computational machinery (such as mechanical differential analyzers, ballistic calculation tables, and the original 1945 ENIAC) suffered from a crippling architectural limitation: they were fixed-function or physically reconfigurable machines. To change the program on ENIAC from a ballistic trajectory calculation to a thermodynamic simulation required a team of technicians to physically rewire hundreds of patch cables, plugboards, and rotary switches over three to five consecutive days. Hardware was hard-wired directly to the specific algorithm, leaving million-dollar machines sitting idle for days during manual setup.
+
+Furthermore, hardwired patch-cord systems were incapable of dynamic internal decision-making. When a complex algorithm required conditional branching based on the runtime result of an intermediate computation (e.g., IF result < 0 THEN GOTO step 42), patch cables could not adapt. The machine could not modify its own instructions, load software dynamically from magnetic tape, or store libraries of reusable subroutines.
+
+To establish scalable automated computation, civilization required the von Neumann breakthrough: unifying instructions and data within the same physical addressable memory substrate. By encoding machine instructions as numerical binary words, software becomes indistinguishable from data: it can be loaded instantly, generated algorithmically, edited, and executed sequentially by an automated control loop. In space settlements or automated survival habitats, the stored-program computer is the non-biological nervous system that operates life-support atmospheric scrubbers, coordinates power routing, and executes celestial orbital navigation.</p>
+
+  <h3>2. Technical Overview</h3>
+  <p>A stored-program computer realizes the Universal Turing Machine model by cycling through deterministic machine states governed by a global master clock. The architecture is decomposed into five coordinated functional subsystems: The Control Unit (CU), The Arithmetic Logic Unit (ALU), The Addressable Memory Hierarchy, The Tristate System Bus, and The Input/Output (I/O) Interface.
+
+1. Subsystem Decomposition (Von Neumann Architecture):
+   - Control Unit (CU): The brain of the processor, consisting of the Program Counter (PC), the Instruction Register (IR), and microcode or combinational decoder logic. The CU orchestrates control signal lines that strobe registers, enable memory read/write, and command the ALU.
+   - Arithmetic Logic Unit (ALU): Combinational logic circuits (binary adders, bitwise logic gates, shifters) that perform mathematical operations (ADD, SUB, AND, OR, XOR) on operands held in the Accumulator register, updating condition flags (Zero, Carry, Negative, Overflow).
+   - Addressable Memory (RAM): An orthogonal grid of bistable memory cells (ferrite cores, delay lines, or flip-flops) indexed by unique numerical addresses, holding both executable machine code and operational data.
+   - System Bus: Three distinct parallel signal highways: the Address Bus (unidirectional, drives memory addresses), the Data Bus (bidirectional, carries data words), and the Control Bus (timing signals, READ, WRITE, RESET, INTERRUPT).
+
+2. The Fetch-Decode-Execute (FDE) Machine Cycle:
+   - Fetch: The Program Counter (PC) asserts its address onto the address bus. The memory controller latches the corresponding word onto the data bus. The CPU reads the word into the Instruction Register (IR). Simultaneously, the PC auto-increments to point to the next instruction in sequence.
+   - Decode: The instruction decoder decodes the opcode bits (e.g., Opcode 0010 = ADD). It identifies required operand addressing modes (immediate, direct memory address, or register indirect) and asserts gating signals.
+   - Execute: The ALU receives operand data from memory or internal registers, executes the arithmetic or logic operation, latches the result back into the Accumulator, and evaluates condition flags. If a branch instruction is decoded (e.g., JUMP IF ZERO) and the Zero flag is set, the target address is written directly into the Program Counter, redirecting future instruction fetches.
+
+3. Hardware Implementation Tiers:
+   - Relays (Electromechanical): Heavy copper coil telephone relays (Zuse Z3, 1941) operating at 10 to 50 Hz clock rates.
+   - Vacuum Tubes (Thermionic): Dual-triode flip-flop circuits (ENIAC, Manchester Baby, EDSAC, 1948) operating at 100 kHz to 1 MHz.
+   - Transistors & Microprocessors: Monolithic silicon CMOS logic scaling to billions of switches operating past GHz clock frequencies.
+
+4. Fault Tolerance & Planetary Environment: In planetary habitats or high-radiation environments (solar proton events, galactic cosmic rays), energetic particles induce Single-Event Upsets (SEUs) that flip binary bits in memory cells. Reliable spaceborne and survival computers utilize Triple Modular Redundancy (TMR), parity error-correcting codes (Hamming SEC-DED), and radiation-hardened magnetic core memory to ensure uninterrupted mission-critical life-support operations.</p>
+
+  <h3>3. Core Engineering Principles</h3>
+  <ul>
+    <li><strong>The Stored-Program Unity (Von Neumann Concept):</strong> Machine instructions and numerical data reside in a single shared, addressable memory space encoded in identical binary formats. This permits software to be stored on persistent media, loaded into memory on demand, and altered dynamically by running programs.</li>
+    <li><strong>Deterministic Fetch-Decode-Execute Synchronization:</strong> Computation progresses through discrete, synchronized temporal steps governed by a master clock. Each clock tick triggers predictable state transitions in registers, eliminating propagation race conditions and signal hazards across combinational logic gates.</li>
+    <li><strong>Conditional Branching and Flow Redirection:</strong> Evaluating mathematical condition flags (Zero, Carry, Negative) to selectively overwrite the Program Counter register transforms linear instruction sequences into dynamic, adaptive algorithms capable of looping, subroutine calling, and decision trees.</li>
+    <li><strong>Binary Boolean Logic Completeness:</strong> Any computable mathematical or logical algorithm can be synthesized using complete functional logic sets (such as NAND or NOR gates) coupled to bistable flip-flop memory latches, establishing physical hardware equivalence to the Universal Turing Machine.</li>
+    <li><strong>The Von Neumann Bus Bottleneck:</strong> Because instructions and data share the same physical memory bus, CPU throughput is fundamentally throttled by memory bus bandwidth. Pipelined execution stages, dedicated register files, and internal cache buffers are required to decouple CPU speed from memory latency.</li>
+  </ul>
+
+  <h3>4. Critical Components</h3>
+  <ul>
+    <li><strong>Central Control Unit & Micro-Sequencing Logic:</strong> Decodes machine instructions and generates timed electrical strobe signals driving registers and buses <em>(Diode matrix instruction decoder, state counter flip-flops, and combinational gating logic)</em></li>
+    <li><strong>Parallel Binary Arithmetic Logic Unit (ALU) & Accumulator:</strong> Executes 8-bit or 16-bit binary addition, subtraction, bitwise logic, and shifts on operand registers <em>(Full adders with carry-lookahead logic, multiplexers, and 8-bit D-type register latches)</em></li>
+    <li><strong>Addressable RAM Memory Matrix (Magnetic Core / Semiconductor):</strong> Stores binary instructions and variable data words indexed by unique parallel address lines <em>(Coincident-current ferrite core plane array (or static CMOS RAM chips) with address decoder drivers)</em></li>
+    <li><strong>Master Crystal Clock Generator & Phase Splitter:</strong> Generates continuous, non-overlapping two-phase square-wave timing pulses synchronizing the CPU <em>(Piezoelectric quartz crystal oscillator, Schmitt trigger buffers, and flip-flop frequency dividers)</em></li>
+    <li><strong>Program Counter (PC) & Instruction Register (IR):</strong> Holds the memory address of the current instruction and latches the active instruction word during execution <em>(Synchronous binary up-counter with parallel load inputs (for jumps) and edge-triggered register latches)</em></li>
+    <li><strong>Tristate System Bus & Memory-Mapped I/O Controller:</strong> Routes address, data, and control lines between CPU, RAM, and peripheral sensors/displays <em>(Tristate bus transceivers (74LS245 or discrete FET gates), pull-up resistor arrays, and memory-mapped address decoders)</em></li>
+  </ul>
+
+  <h3>5. Step-by-Step Execution Protocol</h3>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 1: Instruction Set Architecture (ISA) Specification</h4>
+    <p>Formulate a minimal, complete 8-bit or 16-bit Instruction Set Architecture. Define register complement (Accumulator, B-register, Program Counter, Stack Pointer), memory address space (4 KB to 64 KB), and binary opcode mappings for arithmetic (ADD, SUB), logic (AND, OR, XOR), memory access (LOAD, STORE), and conditional control (JUMP, JUMP_IF_ZERO).</p>
+    <p><code>Tools: engineering-notebook, boolean-logic-simulator</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Keep ISA orthogonal and simple; complex multi-word instructions exponentially increase control logic debugging complexity.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 2: Power Rail and Master Clock Oscillator Commissioning</h4>
+    <p>Erect a regulated +5.0V DC power supply with over-current foldback protection. Solder a 1 MHz to 4 MHz quartz crystal Pierce oscillator circuit. Verify clean, symmetrical square-wave output and non-overlapping two-phase clock outputs (Phase 1 and Phase 2) on a dual-channel oscilloscope.</p>
+    <p><code>Tools: bench-power-supply, dual-channel-oscilloscope, soldering-iron</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never power TTL logic beyond 5.25V DC; over-voltage causes instantaneous catastrophic latch-up and destruction of silicon gates.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 3: ALU and Accumulator Subsystem Assembly</h4>
+    <p>Construct the 8-bit Arithmetic Logic Unit using binary full adders and multiplexer logic gates. Wire the Accumulator output register to feed back into ALU Input A, with external bus feeding Input B. Test all arithmetic functions (addition, subtraction via two's complement) and verify Zero and Carry flag generation.</p>
+    <p><code>Tools: logic-probe, digital-multimeter, wire-wrap-tool</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Verify two's complement inversion logic thoroughly; incorrect sign bit handling causes silent calculation divergence in mathematical loops.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 4: Coincident-Current Memory Matrix Wiring and Testing</h4>
+    <p>Assemble the random-access memory array (minimum 256 bytes for basic bootstrap). Connect address bus lines to X and Y coordinate decoders. Connect data lines to read/write driver amplifiers. Write automated checkerboard patterns (0x55, 0xAA) across all addresses and read back to confirm 100% cell retention without cross-talk.</p>
+    <p><code>Tools: memory-pattern-generator, logic-analyzer</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Address line capacitive cross-talk causes ghost writes in adjacent memory cells; route ground traces between parallel address lines.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 5: Program Counter and Instruction Decoder Wiring</h4>
+    <p>Wire the synchronous Program Counter up-counter to the address bus. Connect the Instruction Register to the data bus, triggered on Phase 1 clock pulses. Wire the opcode output bits into a diode matrix or PROM instruction decoder, generating timed gating pulses for ALU, register load, and memory write signals.</p>
+    <p><code>Tools: wire-wrap-gun, continuity-tester</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Ensure Program Counter load enable overrides count enable during jump instructions, or branches will execute the subsequent sequential instruction erroneously.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 6: Tristate Bus Integration and Front-Panel Console Setup</h4>
+    <p>Interconnect CPU, Memory, and I/O registers via the tristate system bus. Wire a hardware front-panel diagnostic console featuring toggle switches for manual address and data deposit, a RUN/HALT switch, a SINGLE-STEP clock button, and LED lamps displaying bus lines and PC address.</p>
+    <p><code>Tools: front-panel-switches, led-bar-displays, ribbon-cables</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Bus contention occurs if two devices output onto the data bus simultaneously; verify all output enable lines are strictly mutually exclusive.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 7: Bootstrap Program Loading and Diagnostic Execution</h4>
+    <p>Set CPU to HALT. Using front-panel toggle switches, manually deposit an 8-instruction Fibonacci sequence program into memory addresses 0x00 through 0x07. Switch to SINGLE-STEP mode to observe the Program Counter increment, instruction fetch into IR, and addition in Accumulator. Switch to RUN: verify on LEDs that the computer executes autonomous continuous computation at full clock speed.</p>
+    <p><code>Tools: front-panel-console, stopwatch</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Include a software HALT instruction at program termination; if execution runs off the end of memory, the CPU will execute random garbage data with unpredictable results.</div>
+  </div>
+  <h3>6. Fatal Hazard Warnings</h3>
+  <div class="hazard-box"><strong>HAZARD:</strong> Exercise extreme caution when testing high-voltage circuitry on vacuum-tube or CRT memory computers; power supplies exceed 300V to 1500V DC.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Electrostatic discharge (ESD) will permanently destroy unhardened semiconductor gates; always wear grounded wrist straps when handling bare ICs.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> In high-radiation space environments or fallout zones, cosmic rays cause single-event bitflips in semiconductor RAM; implement magnetic core memory or triple modular redundancy (TMR).</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Clock signal skew across uneven bus lines causes catastrophic register race conditions; balance trace lengths and verify setup and hold times on an oscilloscope.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> In mission-critical autonomous life-support controllers, software hangs can result in asphyxiation; independent hardware watchdog timers (WDT) with hard reset lines are mandatory.</div>
+</article>
+<article class="card" id="neural-networks" data-tags="neural-networks Neural Networks computing late-20th Curated, Labeled Training Dataset Tensors High-Performance Floating-Point Hardware Accelerators (GPU / NPU) High-Bandwidth Unified Memory (HBM2e / LPDDR5x) Optimized Basic Linear Algebra Subprograms (BLAS / GEMM Libraries) Clean Regulated Electrical Power and Active Thermal Dissipation">
+  <h2>Neural Networks</h2>
+  <p><em>Differentiable parameterized function approximators optimizing matrix weights via backpropagation and gradient descent for perception, language, and autonomous control</em></p>
+  <div>
+    <span class="badge badge-field">ERA: LATE-20TH</span>
+    <span class="badge badge-expert">DIFFICULTY: 5/5</span>
+    <span class="badge">CATEGORY: COMPUTING</span>
+    <span class="badge badge-expert">STATUS: expert-verified</span>
+  </div>
+
+  <h3>1. Problem & Crisis Context</h3>
+  <p>Classical symbolic AI and handcrafted rule-based decision trees fail catastrophically when confronted with high-dimensional, noisy real-world sensory environments. In biological vision, acoustic speech recognition, robotic manipulation, and nonlinear climate modeling, the input state space spans millions of continuous variables. Attempting to manually program IF-THEN rules for facial recognition or autonomous vehicle navigation requires anticipating billions of combinatorial edge cases; such systems are notoriously brittle, crashing upon encountering the slightest sensory noise or novel lighting conditions.
+
+Furthermore, simple linear statistical models (such as linear regression or single-layer perceptrons) are incapable of representing complex interactions. As proven by Minsky and Papert (1969), single-layer perceptrons cannot even compute the simple nonlinear XOR logic function. Physical nature is fundamentally nonlinear and non-convex; modeling fluid dynamics, chemical yields, and structural stress requires learning complex multi-dimensional manifolds.
+
+To establish scalable autonomous perception and control, civilization required deep neural networks: parameterized, differentiable computational graphs composed of alternating linear matrix multiplications and nonlinear activation functions. The core technical hurdle is optimization: how to reliably adjust millions to billions of interdependent parameters across deep layers without gradients vanishing to zero or exploding to infinity, and how to regularize the network so it extracts true causal patterns rather than memorizing training noise. In planetary exploration, autonomous habitats, and collapse recovery, neural networks provide the critical perception and control layer: diagnosing mechanical failures, navigating unmanned rover terrain, and optimizing closed-loop life-support bio-reactors without requiring real-time human intervention.</p>
+
+  <h3>2. Technical Overview</h3>
+  <p>A neural network maps input vectors to prediction outputs through a cascade of parameterized mathematical transformations. The system operates across five fundamental computational phases: Forward Matrix Transformation, Nonlinear Activation, Loss Gradient Evaluation, Backpropagation (Reverse-Mode AD), and Optimization Parameter Updating.
+
+1. Mathematical Layer Composition: Given an input vector x, a feedforward layer computes an affine linear transformation: z = W · x + b, where W is a learned weight matrix and b is a bias vector. To prevent stacked linear transformations from collapsing mathematically into a single trivial matrix (since W2 · W1 = W_combined), each linear transformation is followed by an element-wise nonlinear activation function: a = sigma(z). Standard modern activations include the Rectified Linear Unit (ReLU: sigma(z) = max(0, z)), Leaky ReLU, or Gaussian Error Linear Units (GeLU), which allow deep networks to form complex piecewise-linear decision boundaries.
+
+2. The Forward and Backward Execution Loop:
+   - Forward Pass: Input tensors propagate forward through successive hidden layers, building hierarchical representations (e.g., edges -> textures -> object parts -> semantic classes). The final layer outputs a prediction tensor, which is evaluated against ground-truth targets using a scalar Loss Function L (such as Categorical Cross-Entropy for classification or Mean Squared Error for regression).
+   - Backward Pass (Automatic Differentiation): The network computes the exact analytical gradient of the loss with respect to every weight parameter in the network using the multivariate chain rule of differential calculus. Error gradients flow backward from the loss through the network layers in reverse order.
+
+3. Adaptive Gradient Optimization: Weight matrices are updated iteratively using gradient descent variants. While standard Stochastic Gradient Descent (SGD) updates parameters proportionally to the negative gradient (W <- W - eta * grad_L), modern networks employ adaptive moment estimation algorithms (such as AdamW). AdamW maintains running exponential moving averages of both the first moment (gradient momentum) and second moment (uncentered variance), dynamically scaling learning rates per-parameter while applying decoupled weight decay to enforce structural regularization.
+
+4. Generalization and Structural Regularization: To prevent the network from memorizing training data (overfitting), engineers apply multiple structural constraints: Weight Decay (L2 penalty discouraging oversized weights), Dropout (randomly setting 10% to 50% of activation nodes to zero during training iterations to prevent co-adaptation), and Layer Normalization (rescaling activations to zero mean and unit variance to stabilize forward/backward signal propagation).
+
+5. Edge and Offline Deployment: In post-collapse environments and extraterrestrial habitats, neural networks cannot rely on gigawatt data centers or cloud APIs. The network must be compiled for local edge inference on low-power tensor accelerators (10W to 30W). Using Post-Training Quantization (PTQ), 32-bit floating-point weights (FP32) are quantized to 8-bit or 4-bit integers (INT8/INT4), slashing memory footprint and memory bus bandwidth by 75% to 87% with negligible accuracy degradation.</p>
+
+  <h3>3. Core Engineering Principles</h3>
+  <ul>
+    <li><strong>Universal Function Approximation Theorem:</strong> A feedforward neural network containing a single hidden layer with a sufficient finite number of non-linear activation units can approximate any continuous multivariate function on compact subsets of R^n to arbitrary precision, establishing theoretical bounds for universal pattern recognition.</li>
+    <li><strong>Reverse-Mode Automatic Differentiation (Backpropagation):</strong> Evaluating parameter gradients via backward propagation scales linearly (O(N)) with total parameter count, allowing simultaneous optimization of millions to billions of weights via efficient backward matrix-vector tensor sweeps without combinatorial explosion.</li>
+    <li><strong>Hierarchical Representation Learning:</strong> Stacking layers produces an automated hierarchy of abstract representations: early layers detect localized low-level primitives (edges, frequencies), intermediate layers compose geometric features, and deep layers capture invariant semantic concepts.</li>
+    <li><strong>Identity Gradient Pathways (Residual Connections):</strong> Multiplying gradients across deep stacks leads to exponential decay (vanishing gradients) or numerical overflow (exploding gradients). Adding identity skip connections (y = F(x) + x) allows error gradients to flow unimpeded directly back to early layers, enabling networks hundreds of layers deep.</li>
+    <li><strong>The Generalization Gap & Regularization:</strong> Minimizing training loss does not guarantee real-world success; over-parameterized networks easily memorize noise. Enforcing structural inductive biases, weight decay penalties, dropout masking, and strict out-of-sample validation testing prevents overfitting and ensures robust generalization.</li>
+  </ul>
+
+  <h3>4. Critical Components</h3>
+  <ul>
+    <li><strong>Dense Parameter Weight Tensors & Bias Vectors:</strong> Stores the learned knowledge of the neural network as multi-dimensional floating-point arrays <em>(Multi-dimensional IEEE 754 floating-point tensors (FP32, FP16, or BF16 format))</em></li>
+    <li><strong>Vectorized Nonlinear Activation Kernel (ReLU / GeLU):</strong> Introduces point-wise nonlinearity, preventing multilayer networks from collapsing into a single linear matrix <em>(Hardware-accelerated vectorized SIMD math instruction routines)</em></li>
+    <li><strong>Differentiable Loss Function Evaluator:</strong> Quantifies the mathematical discrepancy between model predictions and ground-truth targets into a scalar loss <em>(Categorical Cross-Entropy, Binary Cross-Entropy, or Mean Squared Error software loss kernels)</em></li>
+    <li><strong>Reverse-Mode Automatic Differentiation Engine:</strong> Traverses the dynamically recorded computation graph in reverse to calculate analytical partial derivatives <em>(Differentiable directed acyclic graph (DAG) scheduler and tensor memory allocator)</em></li>
+    <li><strong>Adaptive Momentum Gradient Optimizer (AdamW / SGD):</strong> Updates parameter tensors using running momentum and variance estimates to navigate non-convex loss valleys <em>(First-order stochastic gradient optimization routines with decoupled weight decay)</em></li>
+    <li><strong>Tensor Matrix-Multiply-Accumulate Accelerator (GPU / NPU):</strong> Executes billions of parallel fused multiply-add (FMA) operations per second to accelerate matrix transforms <em>(Massively parallel SIMD execution cores, systolic tensor arrays, and high-bandwidth memory (HBM/GDDR))</em></li>
+  </ul>
+
+  <h3>5. Step-by-Step Execution Protocol</h3>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 1: Problem Formulation, Data Ingestion, and Normalization</h4>
+    <p>Define the mathematical learning objective (classification, regression, or control policy). Ingest raw sensory data (images, audio, or telemetry). Remove corrupted samples. Compute global mean and standard deviation across training features, normalizing input tensors to zero mean and unit variance (z-score scaling).</p>
+    <p><code>Tools: python-environment, data-visualization-tool</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never compute normalization statistics across the combined dataset; calculating mean and variance on test data causes data leakage that invalidates validation results.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 2: Architecture Topology Definition and Layer Stacking</h4>
+    <p>Design network computational graph: specify input dimension, hidden layer widths, activation functions, and output layer. For spatial imagery, stack 2D convolution and max-pooling layers; for tabular telemetry, stack fully connected dense linear layers with Leaky ReLU activations and LayerNorm.</p>
+    <p><code>Tools: neural-network-framework, text-editor</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Do not oversize hidden layer dimensions beyond parameter capacity supportable by data volume; oversized networks overfit rapidly on sparse datasets.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 3: Variance-Scaled Parameter Weight Initialization</h4>
+    <p>Initialize weight matrices using He (Kaiming) normal initialization for ReLU activations (drawing from normal distribution with variance = 2 / fan_in) or Xavier/Glorot initialization for symmetric activations. Initialize all bias vectors to exact zero.</p>
+    <p><code>Tools: random-number-generator, tensor-library</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Never initialize weights to all zeros or identical constants; identical weights cause symmetric gradient updates, preventing neurons from learning distinct features.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 4: Forward Pass Implementation and Differentiable Loss Calculation</h4>
+    <p>Implement tensor execution graph: propagate batch tensors through linear transforms and activation layers to compute output logits. Pass logits into a numerically stabilized loss function (such as Softmax with Cross-Entropy Loss) to calculate batch scalar error.</p>
+    <p><code>Tools: tensor-accelerator, debugger</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Ensure output logits are not clipped before softmax; manual clipping creates zero-gradient plateaus where optimization completely halts.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 5: Reverse-Mode Automatic Differentiation Graph Construction</h4>
+    <p>Execute backward pass through the computation graph. Apply multivariate chain rule to calculate partial derivatives of loss with respect to all layer weights and biases. Verify analytical backpropagation gradients against numerical finite-difference approximations (gradient checking) to confirm 100% mathematical derivative precision.</p>
+    <p><code>Tools: autograd-engine, gradient-checker</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Check gradient norms across all layers; if gradients in early layers drop below 1e-7, vanishing gradients have stalled learning in early feature extractors.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 6: Optimizer Integration and Regularization Parameter Updates</h4>
+    <p>Configure the AdamW optimizer with initial learning rate (e.g., 1e-3), beta1=0.9, beta2=0.999, and decoupled weight decay (e.g., 0.01). Integrate gradient clipping (clipping global gradient L2 norm to 1.0) to prevent catastrophic parameter divergence during loss spikes.</p>
+    <p><code>Tools: optimizer-library</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Always implement gradient norm clipping in deep architectures; unclipped gradient surges permanently corrupt weight matrices with NaN (Not-a-Number) values.</div>
+  </div>
+  <div style="margin-bottom: 14px;">
+    <h4>Step 7: Training Loop Execution, Validation Tracking, and INT8 Quantization</h4>
+    <p>Run iterative mini-batch training loop over multiple epochs. Track training loss and validation loss on independent curves. Halt training when validation loss stops improving (Early Stopping). Export optimized model weights, apply Post-Training Quantization (PTQ) to 8-bit integers (INT8), and deploy onto target offline edge hardware.</p>
+    <p><code>Tools: model-profiler, quantization-compiler</code></p>
+    <div class="warning-box"><strong>Caution:</strong> Monitor the gap between training and validation loss curves; diverging curves indicate severe overfitting, requiring increased dropout or data augmentation.</div>
+  </div>
+  <h3>6. Fatal Hazard Warnings</h3>
+  <div class="hazard-box"><strong>HAZARD:</strong> Do not train or evaluate neural models on un-normalized or contaminated datasets; out-of-distribution inputs cause high-confidence hallucinations and catastrophic failure.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Monitor gradient norms during early training epochs; exploding gradients will permanently corrupt weight tensors with NaN values, requiring full training restarts.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Never deploy autonomous control networks into life-critical machinery without formal adversarial robustness verification; small input perturbations can induce catastrophic misclassification.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> Ensure tensor accelerators have adequate cooling and clean electrical power; thermal throttling cuts training throughput by 50% and causes silent memory hardware bitflips.</div>
+  <div class="hazard-box"><strong>HAZARD:</strong> In planetary habitats and isolated off-grid survival scenarios, neural models must be compiled for offline local edge inference, completely independent of cloud APIs or external connectivity.</div>
+</article>
+</div>
+</div>
+
+<script>
+function filterDocs() {
+  const query = document.getElementById('search').value.toLowerCase();
+  const articles = document.querySelectorAll('article.card');
+  articles.forEach(a => {
+    const text = (a.getAttribute('data-tags') + ' ' + a.innerText).toLowerCase();
+    a.style.display = text.includes(query) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

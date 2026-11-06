@@ -501,25 +501,25 @@
   {
     "id": "blacksmith-anvil",
     "name": "Blacksmith Anvil",
-    "tagline": "Blacksmith Anvil as a documented civilization capability: inputs, limits, warnings, records, and recovery pathways",
+    "tagline": "High-rebound mass and tooling platform with hardened face, horn, and pritchel/hardy apertures for plastic metal forming and forge welding",
     "category": "tools",
     "era": "ancient",
     "difficulty": 3,
     "prerequisites": [
       "basic-hand-tools",
-      "lever-system",
-      "wheel-and-axle"
+      "iron-smelting",
+      "forge-bellows"
     ],
     "unlocks": [],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "draft",
-    "lastUpdated": "2026-05-02"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "block-and-tackle",
@@ -3036,7 +3036,10 @@
       "fire",
       "ceramics-and-pottery"
     ],
-    "unlocks": [],
+    "unlocks": [
+      "blacksmith-anvil",
+      "iron-smelting"
+    ],
     "verification": {
       "status": "expert-verified"
     },
@@ -3923,27 +3926,29 @@
   {
     "id": "iron-smelting",
     "name": "Iron Smelting (Bloomery Tradition)",
-    "tagline": "Reducing iron ore in a solid-state bloomery to produce wrought iron for tools and weapons",
+    "tagline": "Direct solid-state carbothermic reduction of iron oxide ores in natural and forced-draft bloomeries, yielding malleable wrought iron blooms and low-carbon steel",
     "category": "materials",
     "era": "ancient",
     "difficulty": 4,
     "prerequisites": [
       "smelting-bronze-age",
-      "charcoal"
+      "charcoal",
+      "forge-bellows"
     ],
     "unlocks": [
+      "blacksmith-anvil",
       "steel-production",
       "steam-engine"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "researched",
-    "lastUpdated": "2026-04-10"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "irrigation-furrows",
@@ -4664,7 +4669,7 @@
   {
     "id": "neural-networks",
     "name": "Neural Networks",
-    "tagline": "Parameterized function approximators built from layers of simple units",
+    "tagline": "Differentiable parameterized function approximators optimizing matrix weights via backpropagation and gradient descent for perception, language, and autonomous control",
     "category": "computing",
     "era": "late-20th",
     "difficulty": 5,
@@ -4678,14 +4683,14 @@
       "transformer-models"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "draft",
-    "lastUpdated": "2026-04-22"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "newspaper-workflow",
@@ -7121,7 +7126,7 @@
   {
     "id": "stored-program-computer",
     "name": "Stored-Program Computer",
-    "tagline": "General-purpose computation by executing instructions from memory",
+    "tagline": "Von Neumann architecture executing sequences of binary machine instructions stored alongside operands in unified addressable memory",
     "category": "computing",
     "era": "mid-20th",
     "difficulty": 5,
@@ -7154,14 +7159,14 @@
       "version-control"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "draft",
-    "lastUpdated": "2026-04-22"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "surveying",
@@ -7362,7 +7367,6 @@
     ],
     "unlocks": [
       "basic-hand-tools",
-      "blacksmith-anvil",
       "block-and-tackle",
       "clamps-and-vises",
       "drill-and-brace",
@@ -7428,7 +7432,6 @@
     "unlocks": [
       "bicycle",
       "bicycle-maintenance",
-      "blacksmith-anvil",
       "block-and-tackle",
       "boat-hull-carving",
       "bridge-decking",

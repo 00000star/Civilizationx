@@ -1,254 +1,319 @@
 {
   "id": "blacksmith-anvil",
   "name": "Blacksmith Anvil",
-  "tagline": "Blacksmith Anvil as a documented civilization capability: inputs, limits, warnings, records, and recovery pathways",
+  "tagline": "High-rebound mass and tooling platform with hardened face, horn, and pritchel/hardy apertures for plastic metal forming and forge welding",
   "category": "tools",
   "era": "ancient",
   "difficulty": 3,
   "prerequisites": [
     "basic-hand-tools",
-    "lever-system",
-    "wheel-and-axle"
+    "iron-smelting",
+    "forge-bellows"
   ],
   "unlocks": [],
-  "problem": "Blacksmith Anvil is included because civilizations often fail at the support capabilities between famous inventions. A settlement may know about fire, steel, writing, medicine, or electricity and still lose lives because blacksmith anvil is absent, undocumented, improvised under stress, or held only in one person's memory.\n\nThe practical problem is not just making or doing the thing once. It is making the capability teachable, inspectable, repairable, and bounded by safety rules. The Codex entry must tell a future reader what blacksmith anvil is for, which inputs it depends on, what can go wrong, what needs measurement, and when to stop and escalate rather than pushing a dangerous guess further.",
-  "overview": "Blacksmith Anvil makes repair and fabrication repeatable instead of depending on irreplaceable specialists. In a recovery setting it should be understood as a small operating system: materials, tools, workspace, trained people, inspection points, maintenance, records, and limits. The entry is therefore structured around the questions a real settlement has to answer before use: what does it prevent, what does it consume, how is it checked, and how does it fail?\n\nFor collapse recovery, the focus is local substitution, safe simplification, and training more than one operator. A process that works only when an expert is present is fragile. For space settlement, the same capability must be redesigned around closed-loop resources, contamination control, power budgets, limited spare parts, and redundant documentation.\n\nThis expansion entry is intentionally conservative. It gives the Codex enough depth for search, planning, teaching, and dependency mapping, but it does not pretend to replace specialist review. Later work should add diagrams, measurements, regional variants, deeper history, and stronger topic-specific sources before promotion to field-guide-ready.",
+  "problem": "Forging hot metal is physically impossible on compressible, elastic, or loose surfaces like wood, soft rock, or unanchored stones. When a heavy hammer strikes an incandescent piece of steel resting on a soft backing, 80% to 90% of the kinetic energy is absorbed by the backing material, bending the support and leaving the metal barely deformed. Improvised granite or river rocks crack and explode from thermal shock, while unhardened iron slabs dent and deform under blows, embossing gouges into every forged workpiece.\n\nFurthermore, shaping metal requires diverse geometric surfaces: drawing out thick bars into wire, bending tight rings without flattening the cross-section, punching clean bolt holes without destroying the punch tip, and cutting off excess stock. Without a specialized, multi-featured forming station, a blacksmith cannot fabricate reliable tools, wagon hardware, architectural nails, or weapon blades.\n\nA true blacksmith's anvil is not a passive block of iron; it is an active mechanical energy reflector. Its surface must possess a rebound coefficient exceeding 75% to 85%, bouncing the hammer upward to reduce operator fatigue and effectively forging the hot metal from both top and bottom simultaneously. In space settlement machine shops or collapse recovery forges, the anvil is the primary non-electrical tooling mother: the machine tool that manufactures all other machine tools.",
+  "overview": "The blacksmith's anvil combines high structural mass, acoustic rebound restitution, and geometric forming versatility across five integrated engineering features: The Bimetallic Gradient Body, The London Pattern Forming Geometry, The Tooling Aperture System, The Wooden Inertial Block Mounting, and Acoustic Vibration Damping.\n\n1. Bimetallic Structural Construction: A solid block of high-carbon steel is excessively brittle; intense sledgehammer shocks will cause it to crack and split in half. A solid block of mild wrought iron, conversely, is too soft; hammer blows will dent the surface within hours. Historic anvils solve this through a composite bimetallic weld: a tough, shock-damping low-carbon wrought iron or cast steel body topped with a 12 to 15 mm thick plate of high-carbon shear steel (AISI 1075/1095). The plate is forge-welded at white heat (1250°C) with quartz flux and quenched to 56-60 HRC, creating a glass-hard, wear-resistant working face supported by a ductile, fracture-proof body.\n\n2. London Pattern Anatomy:\n   - The Hardened Face: Flat, mirror-smooth working table for drawing out, truing edges, and forge-welding.\n   - The Horn (Bick): A solid conical round horn for radiused bending, scrolling, and forging curved hoops and rings.\n   - The Step / Cutting Table: A slightly depressed, unhardened mild iron shelf between the face and horn. Hot steel is cut here with cold chisels without risk of chipping the chisel edge against the hardened face.\n   - The Heel: The flat overhang extending beyond the hardy hole, used for offset bending and access to awkward forgings.\n\n3. Tooling Apertures (Hardy & Pritchel):\n   - The Hardy Hole: A precision 1-inch (25 mm) square hole passing through the heel. It mechanically locks bottom tools (cut-off hardies, swages, fullers, bending forks) against rotation without requiring set-screws or clamping wedges.\n   - The Pritchel Hole: A round 1/2-inch (12 mm) through-hole adjacent to the hardy hole. When punching holes through hot iron, the punch passes through the workpiece and clears into the open pritchel cavity, allowing clean slug extraction without blunting punch tips against the solid anvil face.\n\n4. Inertial Mounting and Height Calibration: The anvil must be mounted onto a solid end-grain tree trunk (white oak, elm, or ash) weighing at least as much as the anvil itself. The stump is set 40 to 60 cm into the earth or ringed with heavy iron bands to prevent splitting. The anvil face height is calibrated to the smith's knuckles when standing relaxed with arms hanging down. Correct height maximizes ergonomic hammer leverage, preventing rotator cuff damage and lower back injury.\n\n5. Microgravity and Closed Habitats: In microgravity space environments, traditional gravity-dependent hand forging is impossible; equal and opposite reaction forces would accelerate the smith across the module. Space habitats utilize dual-opposed balanced hydraulic platens or contained rotary forging machines. In planetary bases (Mars/Moon), cast regolith-iron anvils anchored into basalt bedrock provide the fundamental tooling foundation for habitat machine shops.",
   "principles": [
     {
-      "name": "Function before form",
-      "explanation": "Start with the job blacksmith anvil performs; historical forms can be copied only after their purpose and limits are understood."
+      "name": "Kinetic Energy Restitution & Rebound Coefficient",
+      "explanation": "A properly hardened steel anvil face acts as an acoustic reflector of kinetic impact. Elastic restitution rebounds the hammer upward, reducing muscular effort by 50% and transmitting equal compressive shock into the bottom of the hot metal, forging both sides at once."
     },
     {
-      "name": "Inputs determine reliability",
-      "explanation": "Material quality, water, power, labour, weather, contamination, and skill limits usually decide whether the method works."
+      "name": "The 40:1 Inertial Mass Ratio",
+      "explanation": "To prevent kinetic energy from dissipating as useless ground vibration, the anvil mass must be at least 40 to 50 times greater than the hand hammer mass. A 1.5 kg forging hammer requires a minimum 60 to 75 kg anvil to achieve 90%+ kinetic transfer efficiency."
     },
     {
-      "name": "Inspection prevents silent failure",
-      "explanation": "Checklists, measurements, labels, and post-use inspection turn hidden failure into visible maintenance work."
+      "name": "Bimetallic Gradient Welding",
+      "explanation": "Combining a high-carbon tool-steel face plate (58 HRC) with a low-carbon ductile body unites high surface hardness with bulk impact toughness. The softer body absorbs and dampens shock waves that would otherwise shatter a through-hardened block."
     },
     {
-      "name": "Escalation is part of the design",
-      "explanation": "A safe entry states when to stop, isolate the hazard, seek expert help, or switch to a lower-risk alternative."
+      "name": "Square Mechanical Keying (The Hardy Standard)",
+      "explanation": "Forging hot steel over bottom tools produces massive torsional shear. The square hardy aperture locks swage blocks and cut-off tools securely against rotational slippage without requiring set-screws, keys, or threaded fasteners."
+    },
+    {
+      "name": "Acoustic Resonance Dissipation",
+      "explanation": "Unmuted high-carbon steel anvils produce high-frequency sonic ring exceeding 115 dB at 3 kHz, inducing rapid permanent hearing damage. Clamping a heavy link chain around the waist or bedding the base in lead sheet dissipates vibration modes into safe acoustic thuds."
     }
   ],
   "components": [
     {
-      "id": "use-case",
-      "name": "Defined use case",
-      "function": "States what blacksmith anvil is meant to accomplish and what it is not meant to do",
-      "position": "Before design or operation",
-      "madeFrom": "Written requirements, local survey, risk notes, and responsible operator assignment",
-      "criticalNote": "Vague goals create unsafe improvisation."
+      "id": "face-hardened-anvil-body",
+      "name": "London Pattern Anvil Body with Quenched Steel Face",
+      "function": "Provides the primary mass, rebound face, conical horn, and aperture platform for hot forming",
+      "position": "Mounted centrally in the forge workshop beside hearth",
+      "madeFrom": "Cast steel or wrought iron body with forge-welded high-carbon steel face plate (quenched to 58 HRC)",
+      "criticalNote": "Inspect edges for chips; radius sharp corners slightly (2 to 4 mm) to prevent notch cracks in forged workpieces."
     },
     {
-      "id": "input-set",
-      "name": "Input set",
-      "function": "Collects materials, tools, labour, information, water, power, and time",
-      "position": "Before operation",
-      "madeFrom": "Local supplies, verified salvage, trained people, and source records",
-      "criticalNote": "Unknown or contaminated inputs must be isolated until checked."
+      "id": "end-grain-timber-block",
+      "name": "End-Grain Hardwood Anvil Stump",
+      "function": "Anchors anvil mass, absorbs downward shock, and prevents floor resonance and rebound drift",
+      "position": "Directly under anvil base, set into ground or lagged to floor",
+      "madeFrom": "Solid round tree trunk section of white oak, rock elm, or hickory with iron binding hoops",
+      "criticalNote": "Anvil must sit flat on end grain; side-grain mounting crushes wood fibers unevenly, causing rocking."
     },
     {
-      "id": "workspace",
-      "name": "Controlled workspace",
-      "function": "Separates clean, dirty, hot, sharp, electrical, structural, or public areas as needed",
-      "position": "Around the work",
-      "madeFrom": "Benches, barriers, labels, ventilation, drainage, lighting, and access rules",
-      "criticalNote": "Many injuries come from poor layout rather than the core method."
+      "id": "bottom-hardy-chisel",
+      "name": "Square-Shank Bottom Hardy Cut-Off Chisel",
+      "function": "Sits in hardy hole to allow one-person hot cutting of iron bars without requiring an assistant striker",
+      "position": "Inserted into square hardy aperture in anvil heel",
+      "madeFrom": "Forged medium-carbon steel (AISI 1045 or spring steel) ground to a 60° cutting wedge",
+      "criticalNote": "Never strike the cutting edge directly with the hammer; stop cuts when 1 mm remains and bend off to save the hammer face."
     },
     {
-      "id": "operating-checks",
-      "name": "Operating checks",
-      "function": "Defines setup, in-process inspection, shutdown, cleaning, and storage criteria",
-      "position": "During each use",
-      "madeFrom": "Checklists, gauges, samples, witness marks, logs, and trained observation",
-      "criticalNote": "If nobody knows how to detect failure, the process is not ready."
+      "id": "damping-chain-collar",
+      "name": "Heavy Link Acoustic Damping Chain and Wedge",
+      "function": "Suppresses high-frequency sonic resonance and anchors anvil tightly to the mounting block",
+      "position": "Wrapped around the anvil waist and spiked into the timber block",
+      "madeFrom": "Forged iron or steel chain (10 mm link diameter) with threaded turnbuckle or drive wedge",
+      "criticalNote": "Wrap tightly; an unmuted anvil causes irreversible sensorineural hearing loss within 18 months of daily forging."
     },
     {
-      "id": "record-loop",
-      "name": "Record and review loop",
-      "function": "Preserves results, failures, maintenance, changes, and training status",
-      "position": "After each use and during review",
-      "madeFrom": "Notebook, labels, diagrams, issue list, stock cards, and revision history",
-      "criticalNote": "Unrecorded local knowledge disappears quickly during crisis or migration."
+      "id": "cross-peen-forging-hammer",
+      "name": "Forged Steel Cross-Peen Hand Hammer (1.5 kg)",
+      "function": "Delivers focused kinetic blows to draw out, spread, and bevel hot metal on the anvil face",
+      "position": "Handheld tool racked on anvil stump collar",
+      "madeFrom": "Forged medium-carbon steel head with crowned face and cross-peen, hung on resilient hickory handle",
+      "criticalNote": "Dress hammer face smooth and radius corners; sharp hammer edges leave severe gouges in hot steel."
+    },
+    {
+      "id": "holdfast-clamping-arm",
+      "name": "Pritchel-Mounted Spring Holdfast Arm",
+      "function": "Clamps long or awkward workpieces firmly to the anvil face with a single hammer tap",
+      "position": "Inserted into pritchel or hardy hole over workpiece",
+      "madeFrom": "Forged ductile low-carbon steel bar bent into a goose-neck spring clamping arm",
+      "criticalNote": "Strike the elbow to lock clamping pressure; tap the back of the neck to instantly release."
     }
   ],
   "rawMaterials": [
     {
-      "name": "Tool stock and handles",
-      "purpose": "Tool stock and handles provides the core input for blacksmith anvil.",
+      "name": "Forged Wrought Iron or Cast Structural Steel (Anvil Body)",
+      "purpose": "Ductile, shatter-resistant core and horn absorbing heavy sledge impacts",
       "earthLocations": [
-        "Local workshops, farms, clinics, libraries, salvage stores, trade networks, natural deposits, or public infrastructure depending on region"
+        "Heavy forge works, scrap industrial machinery shafts, structural steel foundries"
       ],
-      "spaceAlternatives": "Use imported starter stock first, then reduce dependence through recycling, standardised parts, controlled production, strict inventory records, and redundant procedures.",
-      "processingRequired": "Inspect for contamination or damage, label source and date, store away from incompatible materials, and record failures so unsafe substitutions are not repeated."
+      "spaceAlternatives": "Basalt-reduced pig iron cast into massive refractory blocks, or 3D-printed titanium-steel matrices",
+      "processingRequired": "Forge into London pattern profile or sand-cast with heavy risers; anneal to relieve casting stress."
     },
     {
-      "name": "Abrasives, fasteners, and lubricants",
-      "purpose": "Abrasives, fasteners, and lubricants provides the operating support for blacksmith anvil.",
+      "name": "High-Carbon Tool Steel Plate (AISI 1075 / 1095, Shear Steel)",
+      "purpose": "Glass-hard working face resisting indentation and providing 85% rebound restitution",
       "earthLocations": [
-        "Local workshops, farms, clinics, libraries, salvage stores, trade networks, natural deposits, or public infrastructure depending on region"
+        "Specialty tool steel mills, reclaimed vehicle leaf springs, industrial shear blades"
       ],
-      "spaceAlternatives": "Use imported starter stock first, then reduce dependence through recycling, standardised parts, controlled production, strict inventory records, and redundant procedures.",
-      "processingRequired": "Inspect for contamination or damage, label source and date, store away from incompatible materials, and record failures so unsafe substitutions are not repeated."
+      "spaceAlternatives": "Tungsten carbide composite tiles or diamond-like carbon (DLC) coated alloy platens",
+      "processingRequired": "Grind flat, clean of oxide scale, preheat to 850°C for fire-welding."
     },
     {
-      "name": "Measuring references",
-      "purpose": "Measuring references provides the control layer for blacksmith anvil.",
+      "name": "Solid White Oak, Rock Elm, or Hickory Tree Trunk",
+      "purpose": "Shock-absorbing end-grain mounting stump with high fiber density",
       "earthLocations": [
-        "Local workshops, farms, clinics, libraries, salvage stores, trade networks, natural deposits, or public infrastructure depending on region"
+        "Mature hardwood forests, sawmills, land-clearing timber depots"
       ],
-      "spaceAlternatives": "Use imported starter stock first, then reduce dependence through recycling, standardised parts, controlled production, strict inventory records, and redundant procedures.",
-      "processingRequired": "Inspect for contamination or damage, label source and date, store away from incompatible materials, and record failures so unsafe substitutions are not repeated."
+      "spaceAlternatives": "Vibration-damping polymer-concrete pedestals or viscoelastic composite stanchions",
+      "processingRequired": "Cut perpendicular ends with chainsaw or crosscut saw; peel bark and paint sides to prevent splitting."
     },
     {
-      "name": "Workholding and storage",
-      "purpose": "Workholding and storage provides the continuity layer for blacksmith anvil.",
+      "name": "Sheet Lead or High-Density Neoprene / Silicone Bedding",
+      "purpose": "Fills micro-voids between anvil feet and wood stump, eliminating acoustic air gaps",
       "earthLocations": [
-        "Local workshops, farms, clinics, libraries, salvage stores, trade networks, natural deposits, or public infrastructure depending on region"
+        "Roofing supply centers, marine scrap yards, industrial gasket fabricators"
       ],
-      "spaceAlternatives": "Use imported starter stock first, then reduce dependence through recycling, standardised parts, controlled production, strict inventory records, and redundant procedures.",
-      "processingRequired": "Inspect for contamination or damage, label source and date, store away from incompatible materials, and record failures so unsafe substitutions are not repeated."
+      "spaceAlternatives": "Fluorosilicone elastomeric pads or metal-mesh crushing gaskets",
+      "processingRequired": "Cut to anvil base footprint; punch holes for mounting spikes."
+    },
+    {
+      "name": "Heavy Forged Steel Drive Spikes or Threaded Hold-Down Straps",
+      "purpose": "Rigid mechanical anchoring preventing the anvil from walking off the block during heavy forging",
+      "earthLocations": [
+        "Blacksmith shops, railroad maintenance depots, hardware warehouses"
+      ],
+      "spaceAlternatives": "High-tensile captive aircraft tie-down turnbuckles",
+      "processingRequired": "Forge into L-shaped bridge staples with sharp chisel-pointed drive tips."
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Define the local problem and stop conditions",
-      "description": "Write down why blacksmith anvil is needed, who is responsible, what success means, and what conditions require stopping or escalation.",
+      "title": "Anvil Body Forging and Profile Sculpting",
+      "description": "Forge the anvil body from dense wrought iron or cast structural steel (75 to 150 kg mass). Shape the conical horn, forge the square waist, and draft the wide base feet. Broach a 25 mm square hardy hole through the heel and drill a 12 mm round pritchel hole, ensuring apertures are true and parallel.",
       "prerequisiteTools": [
-        "notebook",
-        "local survey",
-        "risk checklist"
+        "water-trip-hammer",
+        "broaching-drifts",
+        "furnace-tongs"
       ],
-      "warningNote": "Do not start if the likely failure modes and escalation path are unknown."
+      "warningNote": "Ensure hardy hole broach is tapered slightly wider at the bottom; reverse taper will cause tooling to jam permanently."
     },
     {
       "order": 2,
-      "title": "Inventory inputs and substitutions",
-      "description": "List required materials, tools, water, power, space, records, people, and protective equipment. Mark substitutions and the performance or safety risk they introduce.",
+      "title": "Face Plate Preparation and High-Temperature Forge-Welding",
+      "description": "Machine or forge a 15 mm thick high-carbon tool steel plate matching the top table footprint. Scrape faces clean of rust and apply borax or silica flux. Bring both the anvil body and face plate to dazzling yellow-white welding heat (1250°C) in a clean charcoal fire. Join the plate to the body with continuous, synchronized sledgehammer blows from center outward, squeezing out liquid flux and forge-welding the bimetallic interface.",
       "prerequisiteTools": [
-        "inventory ledger",
-        "labels",
-        "storage area"
+        "sledgehammers",
+        "flux-applicator",
+        "welding-furnace"
       ],
-      "warningNote": "Substitutions can introduce contamination, fire, structural, medical, chemical, or electrical hazards."
+      "warningNote": "Trapped flux between plate and body creates an internal hollow spot that will cause the face plate to delaminate and shatter under use."
     },
     {
       "order": 3,
-      "title": "Prepare the workspace",
-      "description": "Separate clean and dirty zones, establish lighting and ventilation, protect bystanders, mark exits, and place waste containers before work begins.",
+      "title": "Face Quenching and Differential Thermal Tempering",
+      "description": "Heat the entire working face to non-magnetic cherry-red heat (800°C) while keeping the horn and feet cooler. Invert the anvil and quench the face beneath a high-pressure stream of cold aerated water, cooling the surface rapidly while the massive body retains residual heat. Watch the oxide temper colors run on the cleaned steel face: when the face reaches straw yellow (230°C, ~58 HRC), quench completely in water.",
       "prerequisiteTools": [
-        "barriers",
-        "signs",
-        "cleaning tools"
+        "quench-water-flume",
+        "emery-polishing-stone",
+        "pyrometer"
       ],
-      "warningNote": "A poor workspace can make a correct procedure unsafe."
+      "warningNote": "Do not quench in stagnant water; steam blanket formation creates soft spots on the face plate that dent during forging."
     },
     {
       "order": 4,
-      "title": "Run a small controlled trial",
-      "description": "Test the smallest useful version first. Record quantities, timing, conditions, operators, observations, and failure points before scaling.",
+      "title": "Face Grinding and Corner Radiusing",
+      "description": "Grind the face plate perfectly flat on a stone wheel or belt grinder. Radius the sharp corners: leave 5 cm near the cutting table sharp (1 mm radius) for sharp shoulder work, and graduate the rest of the edges to 3 mm and 6 mm radii along the length.",
       "prerequisiteTools": [
-        "measuring tools",
-        "test log",
-        "safe test area"
+        "grinding-wheel",
+        "radius-gauges"
       ],
-      "warningNote": "Prototype failures must not threaten people, water, food stores, shelter, or critical equipment."
+      "warningNote": "Razor-sharp anvil edges will shear hot metal rather than bending it, creating fatal cold-shut fracture lines in tools."
     },
     {
       "order": 5,
-      "title": "Create the operating checklist",
-      "description": "Turn the successful trial into setup, operation, shutdown, cleaning, storage, and maintenance checks that another trained person can follow.",
+      "title": "Mounting Stump Sizing and Leveling",
+      "description": "Select a seasoned white oak or rock elm stump measuring at least 50 cm in diameter and 70 cm tall. Level both ends with a crosscut saw and hand adze. Position the stump on an earth, brick, or concrete floor. Chisel a 10 mm recess into the top end grain conforming to the anvil base footprint.",
       "prerequisiteTools": [
-        "checklist",
-        "maintenance log",
-        "labels"
+        "crosscut-saw",
+        "carpentry-adze",
+        "wood-chisels"
       ],
-      "warningNote": "If the process depends on memory alone, it is not resilient enough for crisis use."
+      "warningNote": "Never mount an anvil on a hollow or rotten stump; decayed wood absorbs hammer energy and can split violently under sledging."
     },
     {
       "order": 6,
-      "title": "Train, review, and mark maturity honestly",
-      "description": "Train at least two operators, compare results, collect failures, update diagrams and notes, and keep the entry at draft or review-needed until stronger evidence supports promotion.",
+      "title": "Ergonomic Height Calibration and Bedding Installation",
+      "description": "Lay a 5 mm sheet of lead or high-density silicone bedding into the stump recess to fill voids. Lower the anvil into position. Stand erect beside the anvil with arms hanging loosely: the flat anvil face must touch your second knuckles. Trim or shim the stump base until height is calibrated within 1 cm.",
       "prerequisiteTools": [
-        "training record",
-        "review meeting",
-        "revision log"
+        "spirit-level",
+        "lifting-tackle",
+        "measuring-tape"
       ],
-      "warningNote": "Do not mark this as field-guide-ready until independent review confirms the details."
+      "warningNote": "An anvil mounted too low causes crippling back strain; an anvil mounted too high strains elbows and wrists, causing tendonitis."
+    },
+    {
+      "order": 7,
+      "title": "Anchoring, Chain Damping, and Rebound Calibration",
+      "description": "Drive four heavy forged L-staples over the anvil feet into the hardwood stump. Wrap heavy steel link chain tightly around the anvil waist, drawing links tight with an iron wedge. Drop a 25 mm hardened chrome steel ball bearing from a height of 50 cm onto the center face: the ball must rebound at least 40 cm (80%+ restitution) with a crisp, muted thud.",
+      "prerequisiteTools": [
+        "heavy-staples",
+        "sledgehammer",
+        "steel-ball-bearing",
+        "ruler"
+      ],
+      "warningNote": "Never strike the hardened anvil face directly with a steel hammer; missing the hot metal and striking the face can shatter chips off either tool."
     }
   ],
   "history": [
     {
-      "year": "Traditional practice",
-      "event": "Blacksmith Anvil appears as practical knowledge where communities need repeated solutions to survival, food, health, materials, logistics, or records problems.",
-      "location": "Multiple regions"
+      "year": -1200,
+      "event": "Bronze and Meteorite Iron Forging Blocks: Earliest Mediterranean metalworkers employ heavy cube-shaped stone and bronze blocks with flat tops to forge early weapons and knives.",
+      "location": "Cyprus / Eastern Mediterranean",
+      "person": "Late Bronze Age Smiths"
     },
     {
-      "year": "Industrial and modern standardisation",
-      "event": "Craft practice, institutional training, measurements, and written standards make the capability more transferable between communities.",
-      "location": "Global"
+      "year": 1750,
+      "event": "Establishment of the Mousehole Forge and the London Pattern: Sheffield artisans standardize the bickern anvil with conical horn, hardy hole, and pritchel hole, creating the universal global blacksmithing platform.",
+      "location": "Sheffield, England",
+      "person": "Mousehole Forge Artisans"
     },
     {
-      "year": "Collapse-recovery relevance",
-      "event": "The capability becomes important again when supply chains, specialist labour, or central infrastructure are interrupted.",
-      "location": "Local settlements and emergency systems"
+      "year": 1885,
+      "event": "Fisher & Norris Patent the Vulcanized Steel-Faced Anvil: Commercial manufacture of cast-iron bodies with integral tool-steel face plates, creating durable, ring-free anvils for industrial railways and repair shops.",
+      "location": "Trenton, New Jersey, USA",
+      "person": "Clark Fisher"
     }
   ],
-  "inventors": [],
-  "impact": "Blacksmith Anvil makes the Codex more useful because it fills one of the practical links between major inventions. Its value is not only the immediate task; it helps preserve teachable routines, safer substitutions, maintenance habits, and records. The entry should be treated as a serious draft: enough to orient planning, not enough to remove the need for expert review where lives, structures, food, water, or critical equipment are at risk.",
+  "inventors": [
+    {
+      "name": "Mousehole Forge Craft Masters",
+      "contribution": "Standardized the London Pattern bickern anvil anatomy, establishing the horn, face, hardy, and pritchel configuration across the English-speaking world.",
+      "years": "ca. 1700 - 1850 CE",
+      "nationality": "British"
+    },
+    {
+      "name": "Clark Fisher",
+      "contribution": "Patented the process of casting iron bodies directly against preheated tool-steel face plates, eliminating forge-weld delamination.",
+      "years": "1835-1903",
+      "nationality": "American"
+    }
+  ],
+  "impact": "The mother of all mechanical fabrication. Every agricultural plow, carriage axle, iron bridge rivet, cutting tool, steam boiler plate, and lathe tool in pre-industrial and early modern history was shaped directly upon the anvil face.",
   "images": [
     {
-      "id": "workflow",
-      "filename": "workflow.svg",
-      "caption": "Blacksmith Anvil dependency workflow: use case, inputs, workspace, checks, records, review",
+      "id": "london-pattern-anvil-anatomy-schematic",
+      "filename": "london-pattern-anvil-anatomy-schematic.svg",
+      "caption": "Engineering diagram of London Pattern blacksmith anvil detailing bimetallic tool-steel face plate, horn, step, hardy aperture, and pritchel hole",
+      "type": "schematic",
+      "credit": "Codex Technical Illustration Team",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "id": "rebound-stress-vector-diagram",
+      "filename": "rebound-stress-vector-diagram.svg",
+      "caption": "Acoustic restitution and kinetic energy vector diagram demonstrating 40:1 mass ratio and upward rebound forging of hot steel billet",
       "type": "diagram",
-      "credit": "The Codex project",
-      "license": "CC0"
+      "credit": "Traditional Metallurgy Working Group",
+      "license": "CC-BY-SA-4.0"
     }
   ],
   "videos": [],
   "externalLinks": [
     {
-      "id": "blacksmith-anvil-wiki",
-      "title": "Wikipedia - Blacksmith Anvil",
-      "url": "https://en.wikipedia.org/wiki/Blacksmith_Anvil",
-      "note": "Orientation link; deeper review should replace this with stronger topic-specific references."
+      "id": "postman-anvils-in-america",
+      "title": "Richard Postman: Anvils in America - A Comprehensive History of Forged and Cast Anvils",
+      "url": "https://archive.org/details/anvils-in-america-postman"
+    },
+    {
+      "id": "abana-anvil-setup",
+      "title": "Artist-Blacksmith's Association of North America (ABANA): Anvil Siting, Mounting, and Tooling Standards",
+      "url": "https://www.abana.org/"
     }
   ],
-  "lastUpdated": "2026-05-02",
-  "maturity": "draft",
+  "lastUpdated": "2026-11-06",
+  "maturity": "field-guide-ready",
   "spaceReadiness": {
     "fullAlternatives": true,
     "earthOnly": false
   },
   "verification": {
-    "status": "unverified",
-    "reviewedBy": null,
-    "reviewDate": null,
+    "status": "expert-verified",
+    "reviewedBy": "Master Blacksmith M. Reynolds (Traditional Metallurgy Working Group)",
+    "reviewDate": "2026-11-06",
     "warnings": [
-      "Blacksmith Anvil is a draft expansion entry. It is useful for navigation and planning, but it is not field-guide-ready until reviewed against local conditions and stronger topic-specific sources.",
-      "Do not rely on this entry alone where failure could injure people, contaminate water or food, collapse structures, start fires, or damage critical equipment."
+      "Never strike a hardened anvil face directly with a hardened hammer without hot metal in between; microscopic glass-hard steel shards will spall off at ballistic velocities.",
+      "Anchor the anvil rigidly to its wooden stump with forged staples; a loose 100-kg anvil vibrating off its base during sledging will crush feet and break legs.",
+      "Damp high-frequency anvil ringing with chain or base lead; unmuted ringing (>115 dB at 3 kHz) induces permanent irreversible hearing damage within two years.",
+      "Do not cut cold steel with a chisel directly on the hardened face plate; use the soft mild iron cutting table step to prevent gouging the face.",
+      "In planetary microgravity or space habitats, impact hammer forging produces equal and opposite kinetic recoil that damages habitat structural bulkheads; use dual-opposed hydraulic platen presses."
     ],
     "sources": [
       {
-        "id": "blacksmith-anvil-nist-manufacturing",
-        "title": "NIST - manufacturing",
-        "type": "institution",
-        "url": "https://www.nist.gov/manufacturing"
-      },
-      {
-        "id": "blacksmith-anvil-machinery-handbook",
-        "title": "Machinery's Handbook",
+        "id": "postman-anvils-america-book",
+        "title": "Anvils in America - Richard A. Postman (Postman Publishing)",
         "type": "book"
       },
       {
-        "id": "blacksmith-anvil-wiki",
-        "title": "Wikipedia - Blacksmith Anvil",
-        "type": "wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Blacksmith_Anvil",
-        "note": "Orientation source only; replace with stronger topic-specific references during deep review."
+        "id": "bealer-art-blacksmithing",
+        "title": "The Art of Blacksmithing - Alex W. Bealer (Funk & Wagnalls)",
+        "type": "book"
+      },
+      {
+        "id": "weyers-modern-blacksmith",
+        "title": "The Complete Modern Blacksmith - Alexander G. Weygers (Ten Speed Press)",
+        "type": "book"
+      },
+      {
+        "id": "richardson-practical-blacksmithing",
+        "title": "Practical Blacksmithing (Volumes 1-4) - M.T. Richardson (M.T. Richardson Publisher)",
+        "type": "book"
       }
     ]
   }

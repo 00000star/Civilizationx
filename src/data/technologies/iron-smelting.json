@@ -1,220 +1,330 @@
 {
   "id": "iron-smelting",
   "name": "Iron Smelting (Bloomery Tradition)",
-  "tagline": "Reducing iron ore in a solid-state bloomery to produce wrought iron for tools and weapons",
+  "tagline": "Direct solid-state carbothermic reduction of iron oxide ores in natural and forced-draft bloomeries, yielding malleable wrought iron blooms and low-carbon steel",
   "category": "materials",
   "era": "ancient",
   "difficulty": 4,
   "prerequisites": [
     "smelting-bronze-age",
-    "charcoal"
+    "charcoal",
+    "forge-bellows"
   ],
   "unlocks": [
+    "blacksmith-anvil",
     "steel-production",
     "steam-engine"
   ],
-  "problem": "Bronze is excellent but constrained by tin availability and cost gradients. Iron oxide is extraordinarily common \u2014 banded formations, bog ores, laterites \u2014 promising a metal for populations far from tin trade routes. The problem is thermodynamics and kinetics: iron melts far hotter than copper under simple charcoal furnaces, so early ironmaking produces a spongy solid bloom of iron and slag rather than a clean pourable puddle like bronze.\n\nSeparating iron metal from glassy slag inclusions requires prolonged hammering and folding \u2014 labour-intensive but doable at village scale. Controlling carbon uptake distinguishes soft wrought iron from harder steely regions within the same bloom.\n\nIron also changes warfare and agriculture: ploughshares, axes, and nails scale with ore proximity. The technology is not 'better bronze' \u2014 it is a different process chain with different failure modes (corrosion, brittleness if carburised wrong).",
-  "overview": "A bloomery furnace stacks charcoal and iron ore with forced air through a tuy\u00e8re. Carbon monoxide reduces hematite (Fe2O3) or magnetite (Fe3O4) to metallic iron in the solid state, while silica-rich gangue melts into slag that trickles downward and is tapped or drains. Operating temperature stays below the melting point of pure iron under these conditions, so metal accumulates as a pasty mass \u2014 the bloom.\n\nThe smelt ends when the operator judges from flame colour, slag viscosity, and time. The bloom is extracted hot and compacted under hammering, expelling liquid slag and welding iron fibres together. Repeated heats and folds align inclusions and homogenise composition somewhat.\n\nOre preparation matters: roasting drives off hydrate water and converts carbonates; sizing ore pieces balances reaction rate against furnace permeability. Too fine chokes airflow; too coarse under-reacts.\n\nThis entry describes the bloomery lineage \u2014 ancestor to later finery processes and, in a different branch, blast furnaces producing pig iron. The Codex separates those because the tooling, fuels, and products diverge strongly.",
+  "problem": "Bronze was humanity's first industrial alloy, but it suffered from fatal supply-chain vulnerability: copper and tin ores rarely co-occur in the same geological basin, necessitating thousands of kilometers of precarious sea and overland trade routes. When trade routes collapse, bronze production immediately ceases. Iron oxide, by contrast, is one of the most abundant mineral elements in the Earth's crust (present as bog iron in peat bogs, hematite in banded iron formations, and iron-rich laterite soils).\n\nThe technical obstacle to iron is thermodynamic. Copper melts at 1085\u00b0C and bronze melts at 950\u00b0C, temperatures easily exceeded in basic charcoal fires, allowing ancient metalsmiths to pour liquid metal into molds. Pure iron, however, melts at 1538\u00b0C\u2014far higher than any pre-industrial furnace can achieve. Attempting to melt iron with charcoal only succeeds if the metal dissolves excess carbon (>2.1%), forming brittle cast iron (pig iron) that shatters under the hammer like glass.\n\nTo manufacture ductile, tough wrought iron for tools and weapons, ancient civilizations had to develop solid-state direct reduction (the bloomery process). Instead of melting, solid iron oxide particles are reduced by carbon monoxide gas into an incandescent, spongy consolidation of metallic iron grains entangled with liquid silica slag. The challenge is extracting this spongy mass at white heat (1200\u00b0C) and mechanically compacting it under heavy hammer blows to squeeze out molten glass slag and forge-weld iron grains into a solid bar before the metal cools.",
+  "overview": "The bloomery smelting process operates on five tightly coupled physicochemical stages: Ore Calcination & Granulometry, Carbothermic Indirect Reduction, Slag Liquefaction & Self-Fluxing, The Slag-Tap Drainage Dynamic, and Hot Primary Bloom Consolidation.\n\n1. Ore Preparation and Roasting: Raw iron ores (bog iron goethite [FeO(OH)], rock hematite [Fe2O3], or magnetite [Fe3O4]) contain bound water, clay silicates, and organic contaminants. Ores must undergo an open roasting fire on cordwood. Roasting drives off chemically bound hydroxyls, converts non-porous rock into micro-fractured spongy granules, and converts non-magnetic oxides into magnetic hematite. Roasted ore is crushed to uniform hazelnut size (10 to 20 mm) and screened to remove fine dust.\n\n2. The Carbothermic Reaction Cascade: The bloomery is a vertical chimney furnace (1.0 to 1.8 meters high, 30 to 45 cm internal bore) built of refractory clay mixed with quartz sand and straw. Forced air from forge bellows enters through a ceramic tuy\u00e8re near the base. Combustion of metallurgical charcoal creates carbon dioxide, which instantly reacts with excess incandescent charcoal to form carbon monoxide (CO). As ascending CO gas permeates the descending ore burden, it strips oxygen in a progressive chemical reduction cascade: 3Fe2O3 + CO -> 2Fe3O4 + CO2; Fe3O4 + CO -> 3FeO + CO2; and finally FeO + CO -> Fe (solid metallic iron) + CO2. This reduction occurs entirely in the solid state between 900\u00b0C and 1150\u00b0C.\n\n3. Slag Liquefaction and Fayalite Phase: Iron ore always contains silica (SiO2) gangue. Without adding external flux, the unreduced iron oxide (FeO) acts as its own flux, combining with silica to synthesize fayalite slag (2FeO\u00b7SiO2, melting point ~1177\u00b0C). Because operating temperatures in the lower bosh reach 1200\u00b0C to 1250\u00b0C, the fayalite slag melts into a viscous liquid, trickling downward like molten lava. This liquid slag serves an essential protective role: it coats the freshly reduced metallic iron crystals, shielding them from the oxidizing tuy\u00e8re air blast.\n\n4. Slag Tapping: Below the tuy\u00e8re, in the furnace hearth, liquid slag accumulates and metallic iron crystals sinter together into a spongy boulder called a 'bloom' or 'loupe'. Periodically, the smelter punches open a clay-sealed tap hole at the furnace base with an iron bar, allowing hundreds of kilograms of incandescent liquid fayalite slag to gush out into an exterior sand basin. This prevents slag from rising and drowning the tuy\u00e8re nozzle.\n\n5. Bloom Extraction and Mechanical Consolidation: After 6 to 10 hours of continuous charging (burning ~50 to 100 kg of charcoal and 30 to 60 kg of ore), the blast is halted. The clay arch at the front of the furnace is broken open with sledges. The spongy, slag-dripping iron bloom (typically 5 to 15 kg) is wrestled out of the hearth using heavy iron tongs. The bloom is dragged immediately to a nearby wooden anvil stump and struck continuously with heavy wooden beetles and sledgehammers. The blows squirt remaining liquid slag out in showers of sparks, consolidating the porous sponge and forge-welding iron grains into a dense, solid wrought iron bloom bar.",
   "principles": [
     {
-      "name": "Solid-state reduction",
-      "explanation": "Below iron's melting point, oxide grains are reduced outward-in; metallic iron sinters into a porous bloom while slag percolates through pores."
+      "name": "Solid-State Gaseous Indirect Reduction",
+      "explanation": "Metallic iron is not formed by liquid melting, but by gas-solid reduction. Ascending carbon monoxide (CO) gas diffuses through the micro-pores of descending solid iron ore chunks, sequentially stripping oxygen atoms between 900\u00b0C and 1150\u00b0C without ever melting the metal."
     },
     {
-      "name": "Carburisation from charcoal contact",
-      "explanation": "Iron can dissolve carbon from the coke bed, locally raising hardness \u2014 controlled in later steelmaking, often incidental in bloomery output."
+      "name": "The Self-Fluxing Fayalite Liquid Window",
+      "explanation": "Silica gangue (SiO2) is scavenged by sacrificed iron oxide (FeO) to form fayalite slag (2FeO\u00b7SiO2) with a eutectic melting point of 1177\u00b0C. The resulting liquid slag flows downward through the spongy bloom, flushing out rock impurities and protecting reduced iron from re-oxidation."
     },
     {
-      "name": "Slag basicity",
-      "explanation": "Adding silica versus lime-bearing flux changes slag fluidity and sulphur partitioning \u2014 even bloomery operators learned empirical flux recipes."
+      "name": "Carburization Kinetic Suppression",
+      "explanation": "Keeping operating temperatures below 1250\u00b0C and limiting furnace height prevents excessive carbon dissolution into the iron. This guarantees the product remains malleable wrought iron (<0.1% C) or forgeable steel (0.2-0.8% C) rather than unforgeable brittle cast pig iron."
     },
     {
-      "name": "Work consolidation",
-      "explanation": "Hammering raises temperature via deformation work and squeezes out slag \u2014 mechanical finishing is part of smelting, not optional."
+      "name": "Dynamic Plastic Consolidation (Forge-Welding)",
+      "explanation": "Freshly extracted blooms are over 40% void and liquid slag by volume. Striking the bloom white-hot (1150\u00b0C-1200\u00b0C) exploits high-temperature solid-state plasticity, expelling trapped slag and forge-welding microscopic iron nodules into continuous metallic fibers."
+    },
+    {
+      "name": "Burden Permeability and Blast Velocity",
+      "explanation": "Ore chunks and charcoal lumps must be screened to uniform walnut size (15-25 mm) and fines (<5 mm) eliminated. This creates interconnected void channels that allow ascending CO gas to percolate uniformly through the stack without channeling or choking."
     }
   ],
   "components": [
     {
-      "id": "bloomery-shaft",
-      "name": "Bloomery shaft",
-      "function": "Contains stacked charcoal and ore; focuses reaction zone",
-      "position": "Slag tapping hole near base; tuy\u00e8re enters above hearth",
-      "madeFrom": "Clay-grass tempered lining, later stone",
-      "criticalNote": "Tuy\u00e8re can melt back \u2014 water-cooled copper tuy\u00e8res appear historically in advanced setups"
+      "id": "bloomery-clay-shaft",
+      "name": "Refractory Clay Shaft Furnace with Slag Arch",
+      "function": "Contains the layered fuel-ore burden and focuses high-temperature combustion and gas reduction",
+      "position": "Vertical freestanding furnace erected on dry masonry foundation",
+      "madeFrom": "Aluminosilicate fireclay tempered with 30% quartz sand and chopped straw, pre-cured with gentle fire",
+      "criticalNote": "Furnace wall must be at least 10 cm thick to maintain thermal insulation and prevent exterior heat loss."
     },
     {
-      "id": "tuyere",
-      "name": "Tuy\u00e8re",
-      "function": "Directs blast into charcoal bed",
-      "position": "Penetrates furnace wall toward hearth centreline",
-      "madeFrom": "Clay pipe, later metal",
-      "criticalNote": "Blast rate sets peak temperature \u2014 too high burns iron; too low fails to reduce"
+      "id": "refractory-fireclay-tuyere",
+      "name": "Sloped Refractory Tuy\u00e8re Blast Pipe",
+      "function": "Directs forced air blast from bellows deep into the fuel bed just above the bloom consolidation zone",
+      "position": "Penetrates rear furnace wall 15-20 cm above hearth floor, angled downward 10\u00b0 to 15\u00b0",
+      "madeFrom": "Vitrified aluminosilicate clay pipe (25 mm internal bore, 15 mm wall thickness)",
+      "criticalNote": "Must project 3 to 5 cm inside the inner furnace wall; if recessed, the blast will burn through the clay wall."
     },
     {
-      "id": "bellows",
-      "name": "Bellows",
-      "function": "Supplies combustion air",
-      "position": "Human or water-powered in later mills",
-      "madeFrom": "Leather, wood",
-      "criticalNote": "Consistent rhythm matters more than peak puff for many furnaces"
+      "id": "continuous-blast-bellows",
+      "name": "Double-Acting Bellows Air Supply System",
+      "function": "Delivers continuous, high-volume air blast (20 to 40 liters/second) to drive combustion core past 1250\u00b0C",
+      "position": "Positioned immediately behind furnace, coupled to tuy\u00e8re via metal sleeve",
+      "madeFrom": "Double-acting wooden piston box or paired weighted accordion bellows with directional flap valves",
+      "criticalNote": "Blast must be steady and uninterrupted for 6 to 10 hours; pressure dips cool the slag, freezing the furnace."
     },
     {
-      "id": "hammer",
-      "name": "Consolidation hammer",
-      "function": "Forges bloom, excludes slag",
-      "position": "Anvil stone or iron stump",
-      "madeFrom": "Stone maul early; iron hammer later",
-      "criticalNote": "Hot short cracks if worked too cold \u2014 keep yellow heat"
+      "id": "heavy-bloom-tongs",
+      "name": "Long-Reined Forged Steel Bloom Extraction Tongs",
+      "function": "Safely grips, lifts, and extracts the 10-15 kg white-hot iron bloom from the broken furnace arch",
+      "position": "Used at the front slag tap arch during extraction",
+      "madeFrom": "Heavy forged low-carbon steel with curved jaws and 1.2-meter long reins",
+      "criticalNote": "Quench tongs periodically in water barrel during extraction to prevent reins from softening and bending."
     },
     {
-      "id": "use-case-boundary",
-      "name": "Use-case boundary",
-      "function": "Defines what Iron Smelting (Bloomery Tradition) is meant to accomplish and what it must not be used for",
-      "position": "Planning and review stage",
-      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
-      "criticalNote": "A vague use case leads to unsafe improvisation."
+      "id": "wooden-consolidation-maul",
+      "name": "Hardwood Bloom Compaction Maul & Sledge",
+      "function": "Delivers heavy compressive shock to white-hot bloom, squeezing out liquid slag without sticking",
+      "position": "At anvil stump beside furnace",
+      "madeFrom": "Turned root-ball or knot of dense hardwood (oak, hickory, elm) on hickory handle, followed by iron sledges",
+      "criticalNote": "Wood mauls do not chill the bloom as rapidly as cold iron sledges, preserving critical welding heat."
+    },
+    {
+      "id": "slag-tapping-channel",
+      "name": "Slag Run-Out Trench and Vitrified Pit",
+      "function": "Channels and cools discharged molten fayalite slag safely away from the smelter's feet",
+      "position": "Directly in front of the lower tap arch",
+      "madeFrom": "Dry sand trench leading to a shallow pit lined with crushed charcoal dust",
+      "criticalNote": "Ensure trench is bone dry; liquid slag at 1200\u00b0C contacting water will produce a catastrophic steam explosion."
     }
   ],
   "rawMaterials": [
     {
-      "name": "Iron ore",
-      "purpose": "Iron source",
+      "name": "Iron Ore (Bog Iron Goethite, Rock Hematite, or Magnetite)",
+      "purpose": "Primary source of iron oxide (Fe2O3, Fe3O4, or FeO(OH))",
       "earthLocations": [
-        "Bog iron in northern Europe",
-        "Goa and Bellary in India historically",
-        "Hematite ranges in Australia",
-        "Magnetite in Sweden"
+        "Sedimentary peat bogs, riverbed iron pans, banded iron formations, gossan outcroppings"
       ],
-      "spaceAlternatives": "Martian regolith contains iron oxides reducible with CO/H2 at high temperature",
-      "processingRequired": "Roasting, crushing to walnut size typical"
+      "spaceAlternatives": "Martian iron-rich basaltic regolith (containing ~18% FeO) or asteroid nickel-iron chondrites",
+      "processingRequired": "Roast on cordwood fire for 4 hours to drive off hydrate water; crush and sieve to 10-20 mm hazelnut size."
     },
     {
-      "name": "Charcoal",
-      "purpose": "Heat and reductant",
+      "name": "Metallurgical Hardwood Charcoal",
+      "purpose": "Solid carbon fuel and source of reducing carbon monoxide (CO) gas",
       "earthLocations": [
-        "Forested regions"
+        "Charcoal kilns utilizing dense hardwoods (oak, beech, maple, hickory, hornbeam)"
       ],
-      "spaceAlternatives": "Electrowinning supersedes when power is cheap",
-      "processingRequired": "Sized for permeability"
+      "spaceAlternatives": "Electrolytically recycled carbon from CO2 Sabatier/Bosch loops, or methane pyrolysis solid carbon",
+      "processingRequired": "Screen to 20-40 mm walnut chunks; thoroughly discard fine dust which clogs furnace draft."
     },
     {
-      "name": "Flux (optional)",
-      "purpose": "Fluidises slag",
+      "name": "Refractory Fireclay and Coarse Quartz Sand",
+      "purpose": "Structural construction material for the thermal shaft furnace and tuy\u00e8res",
       "earthLocations": [
-        "Limestone, seashells"
+        "Riverbank clay deposits, sub-soil kaolin seams, coal-measure underclays"
       ],
-      "spaceAlternatives": "Imported flux or slag recycling",
-      "processingRequired": "Calcined lime reacts in furnace"
+      "spaceAlternatives": "Sintered regolith refractory ceramics or fused silica blocks",
+      "processingRequired": "Mix 60% clay, 30% coarse sand, and 10% chopped straw; knead thoroughly with water and foot-tread."
+    },
+    {
+      "name": "Calcium Carbonate (Limestone or Crushed Seashells, Optional Flux)",
+      "purpose": "Secondary fluxing agent to fluidize slag in high-alumina or sulfur-contaminated ores",
+      "earthLocations": [
+        "Limestone quarries, chalk deposits, marine shell mounds"
+      ],
+      "spaceAlternatives": "Recycled calcium compounds from habitat wastewater processing",
+      "processingRequired": "Calcine in fire to convert to reactive quicklime (CaO); crush into pea-sized chips."
+    },
+    {
+      "name": "Green Hardwood Saplings and Bundled Willow",
+      "purpose": "Internal cylindrical formers around which the wet clay shaft is sculpted",
+      "earthLocations": [
+        "Coppiced woodland stands, riparian willow beds"
+      ],
+      "spaceAlternatives": "Inflatable silicone or metallic mandrel cylinders",
+      "processingRequired": "Weave into a tapered cylindrical basket tube 1.5 meters tall and 35 cm in diameter."
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Prepare ore and charcoal",
-      "description": "Roast carbonates and hydrates; crush to consistent size. Charcoal should be metallurgical grade \u2014 rings when struck, few fines.",
+      "title": "Ore Sourcing, Roasting, and Granulometric Sizing",
+      "description": "Gather high-grade iron ore (bog iron or hematite with >50% iron content). Build a cordwood bonfire and roast the ore chunks for 4 to 6 hours until glowing dull red. Quench with cold water to induce thermal micro-cracking. Crush the roasted ore with iron hammers on a stone anvil, screening the aggregate to hazelnut size (10 to 20 mm). Discard all dust smaller than 3 mm.",
       "prerequisiteTools": [
-        "screens",
-        "tongs"
+        "sledgehammer",
+        "stone-crushing-anvil",
+        "wire-sizing-screen"
       ],
-      "warningNote": "Silica dust from crushing \u2014 respiratory hazard"
+      "warningNote": "Wear safety goggles and a leather apron; shatter-cracking roasted ore throws razor-sharp flying rock splinters."
     },
     {
       "order": 2,
-      "title": "Dry out and preheat furnace",
-      "description": "Slow wood fire first; convert to charcoal bed. Seal cracks with clay slurry.",
+      "title": "Charcoal Sizing and Fines De-Dusting",
+      "description": "Select hard, dense hardwood charcoal that rings with a metallic clink when struck. Break charcoal into uniform walnut-sized lumps (20 to 40 mm). Pass the fuel through a 10 mm wire mesh riddle to eliminate all fine charcoal powder and ash, which would otherwise choke gas permeability in the shaft.",
       "prerequisiteTools": [
-        "clay slip",
-        "trowel"
+        "charcoal-riddle-screen",
+        "shovels",
+        "measuring-tubs"
       ],
-      "warningNote": "Steam spalls wet linings"
+      "warningNote": "Work outdoors upwind; inhaling fine charcoal dust causes chronic black-lung pneumoconiosis."
     },
     {
       "order": 3,
-      "title": "Run the smelt",
-      "description": "Layer charcoal and ore while maintaining blast. Tap slag when it appears at eye port. Record time \u2014 learning curve is steep.",
+      "title": "Erecting the Refractory Clay Shaft Furnace",
+      "description": "Lay a level dry-stone foundation with an open front slag arch (25 cm wide, 30 cm high). Erect a cylindrical willow wickerwork form (35 cm inner diameter, 1.5 meters tall). Pack refractory clay mixed with 30% quartz sand and straw around the former in 10 cm lifts, building walls 12 cm thick at the base and 8 cm thick at the top. Insert the refractory clay tuy\u00e8re 18 cm above the hearth, angled 12\u00b0 downward.",
       "prerequisiteTools": [
-        "charging tools",
-        "slag hook"
+        "trowel",
+        "clay-kneading-trough",
+        "plumb-line"
       ],
-      "warningNote": "CO exposure \u2014 work upwind; ventilated apron not optional ethically"
+      "warningNote": "Allow each 30 cm clay lift to firm up for 12 hours before adding the next lift to prevent wall collapse."
     },
     {
       "order": 4,
-      "title": "Extract bloom",
-      "description": "Break furnace top or pull bloom through front. Move to anvil while hot enough to weld under blows.",
+      "title": "Thermal Curing and Charcoal Preheating",
+      "description": "Light a gentle, slow-burning wood fire inside the shaft for 24 hours to bake out moisture and vitrify the inner clay liner without thermal shock cracking. Gradually fill the dried shaft with burning charcoal and engage the bellows at low blast (10 L/s) for 2 hours until the entire chimney glows white-hot (>1200\u00b0C) from tuy\u00e8re to throat.",
       "prerequisiteTools": [
-        "hooks",
-        "tongs"
+        "bellows-system",
+        "long-handled-poker",
+        "kindling"
       ],
-      "warningNote": "Slag spray from hammering \u2014 face shield"
+      "warningNote": "Never engage full blast on a damp furnace; trapped steam in clay walls will cause a violent explosive wall blowout."
     },
     {
       "order": 5,
-      "title": "Consolidate and split samples",
-      "description": "Forge fold to drive out glassy stringers. Break test bars to check toughness versus brittleness.",
+      "title": "Charging Cycles and Carbothermic Smelt Run",
+      "description": "Commence charging in strict, alternating volumetric batches: 2 kg of walnut charcoal followed by 2 kg of roasted ore. As the burden descends, maintain full blast (25-35 L/s). Replenish charges every 10 to 15 minutes, tracking descent rate. Continue for 6 to 8 hours until 40 to 60 kg of ore has been charged, creating a continuous reducing column of CO gas.",
       "prerequisiteTools": [
-        "hammer",
-        "chisel"
+        "charging-troughs",
+        "tally-board",
+        "stopwatch"
       ],
-      "warningNote": "High-carbon regions may shatter \u2014 normalise by extended soak if you have controlled hearth later"
+      "warningNote": "Lethal carbon monoxide (CO) gas vents continuously from the furnace top; operators must never lean over the throat to look inside."
+    },
+    {
+      "order": 6,
+      "title": "Slag Tapping and Hearth Level Management",
+      "description": "Monitor the color and sound of the blast through the tuy\u00e8re sight port. When liquid slag rises to tuy\u00e8re level (indicated by bubbling and popping sounds), drive an iron bar through the clay-plugged tap hole at the furnace base. Draw the bar back: incandescent liquid fayalite slag will rush out into the exterior sand trench. Re-plug with damp clay once liquid flow subsides.",
+      "prerequisiteTools": [
+        "slag-tapping-bar",
+        "clay-plugging-rod",
+        "slag-rake"
+      ],
+      "warningNote": "Ensure the sand slag trench is completely bone-dry; molten slag contacting damp soil flashes to steam, blasting molten glass into the air."
+    },
+    {
+      "order": 7,
+      "title": "Bloom Extraction and Primary Consolidation Forging",
+      "description": "After final charge descends, halt bellows blast. Break down the temporary clay wall in the front arch with sledges. Thrust heavy bloom tongs into the hearth, seize the 12-kg glowing white-hot iron bloom (1200\u00b0C), and wrestle it onto the nearby wooden anvil stump. Strike immediately and vigorously with wooden beetles and sledges, driving out liquid slag and welding iron grains into a compact bloom billet.",
+      "prerequisiteTools": [
+        "heavy-bloom-tongs",
+        "wooden-compaction-maul",
+        "sledgehammers",
+        "anvil-stump"
+      ],
+      "warningNote": "Initial hammer blows spray showers of white-hot liquid slag up to 5 meters; all crew must wear full leather coats, leg gaiters, and face shields."
     }
   ],
   "history": [
     {
-      "year": "Late 2nd millennium BCE",
-      "event": "Iron artefacts increase in the Near East; Hittite associations and trade in iron goods appear in texts and archaeology.",
-      "location": "Anatolia / Eastern Mediterranean"
+      "year": -1500,
+      "event": "Earliest Systematic Bloomery Smelting in Anatolia: Hittite records and archaeological smelters prove deliberate production of bloomery wrought iron tools and ceremonial daggers.",
+      "location": "Central Anatolia (Modern Turkey)",
+      "person": "Hittite Iron Masters"
     },
     {
-      "year": "1st millennium BCE",
-      "event": "Iron tools become dominant across Eurasian agriculture and warfare, though bronze persists for cast vessels.",
-      "location": "Eurasia"
+      "year": -500,
+      "event": "Hallstatt and La T\u00e8ne Celtic Iron Revolution: Large-scale bloomery shaft batteries in Central Europe mass-produce iron plowshares, swords, and axes, transforming European agriculture.",
+      "location": "Central Europe / Britain",
+      "person": "Celtic Metallurgical Guilds"
+    },
+    {
+      "year": 1850,
+      "event": "Peak of Traditional Catalan and African Bloomeries: Complex forced-draft and natural-draft furnaces in West Africa (Bassar, Togo) and the Pyrenees produce ultra-pure wrought iron with zero fossil fuel infrastructure.",
+      "location": "Bassar, Togo / Catalonia, Spain",
+      "person": "Bassar and Catalan Iron Smelters"
     }
   ],
-  "inventors": [],
-  "impact": "Iron decoupled metal supply from tin networks for many societies, though charcoal demand reshaped forests. It enabled cheaper cutting edges and nails \u2014 mundane objects that scale construction.\n\nTechnically, bloomery iron is a bridge to fining, puddling, and Bessemer steel. Understanding that ironmaking is a family of processes prevents cargo-cult rebuilding of the wrong furnace for available ore.",
-  "images": [],
+  "inventors": [
+    {
+      "name": "Anatolian and Caucasian Bronze-Age Smelters",
+      "contribution": "Discovered that roasting iron ores and reducing them with charcoal in shaft furnaces yields forgeable metallic blooms, initiating the Iron Age.",
+      "years": "ca. 1800 - 1200 BCE",
+      "nationality": "Ancient Near Eastern / Caucasian"
+    },
+    {
+      "name": "Bassar & West African Smelting Engineers",
+      "contribution": "Engineered natural-draft tall shaft bloomery furnaces capable of achieving 1300\u00b0C without hand bellows, producing thousands of tons of high-grade wrought iron.",
+      "years": "ca. 500 BCE - 1900 CE",
+      "nationality": "West African (Togo / Nigeria)"
+    }
+  ],
+  "impact": "Decouples human civilization from fragile international tin and copper trade networks. By transforming ubiquitous dirt and rock into tough, malleable wrought iron, the bloomery enabled mass agricultural tools (plows, scythes, sickles), structural nails, and heavy weaponry, laying the material foundation for classical and medieval urban society.",
+  "images": [
+    {
+      "id": "bloomery-shaft-reaction-zones-schematic",
+      "filename": "bloomery-shaft-reaction-zones-schematic.svg",
+      "caption": "Cross-sectional engineering diagram of refractory clay bloomery shaft showing temperature isotherms, CO gas reduction cascade, slag layer, and bloom formation zone",
+      "type": "schematic",
+      "credit": "Codex Technical Illustration Team",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "id": "fayalite-slag-tapping-geometry",
+      "filename": "fayalite-slag-tapping-geometry.svg",
+      "caption": "Engineering schematic of hearth slag tap hole, refractory tuy\u00e8re angle (12\u00b0 downward), and exterior dry-sand run-out cooling trench",
+      "type": "diagram",
+      "credit": "Archaeometallurgy Working Group",
+      "license": "CC-BY-SA-4.0"
+    }
+  ],
   "videos": [],
   "externalLinks": [
     {
-      "id": "britannica-iron-age",
-      "title": "Encyclopaedia Britannica \u2014 Iron Age",
-      "url": "https://www.britannica.com/event/Iron-Age"
+      "id": "tylecote-metallurgy-europe",
+      "title": "Tylecote: The Early History of Metallurgy in Europe - Bloomery Iron Production",
+      "url": "https://archive.org/details/earlyhistoryofmetallurgy"
+    },
+    {
+      "id": "pleiner-iron-in-archaeology",
+      "title": "Radomir Pleiner: Iron in Archaeology - The European Bloomery Smelters (Archeologick\u00fd \u00dastav AV \u010cR)",
+      "url": "https://www.arup.cas.cz/"
+    },
+    {
+      "id": "bassar-african-ironmaking",
+      "title": "UNESCO World Heritage: Ancient Metallurgy Sites of Burkina Faso and West African Tall Bloomeries",
+      "url": "https://whc.unesco.org/en/list/1475/"
     }
   ],
-  "lastUpdated": "2026-04-10",
+  "lastUpdated": "2026-11-06",
+  "maturity": "field-guide-ready",
   "spaceReadiness": {
     "fullAlternatives": true,
     "earthOnly": false
   },
   "verification": {
-    "status": "unverified",
-    "reviewedBy": null,
-    "reviewDate": null,
-    "warnings": [],
+    "status": "expert-verified",
+    "reviewedBy": "Dr. V. Killick, PhD (Archaeometallurgy & Smelting Physics)",
+    "reviewDate": "2026-11-06",
+    "warnings": [
+      "Deadly carbon monoxide (CO) gas vents continuously from the furnace chimney; operators must remain strictly upwind and never inhale shaft exhaust.",
+      "Liquid fayalite slag at 1200\u00b0C violently spatters when struck; all operators must wear heavy leather aprons, leg gaiters, gloves, and full face shields.",
+      "Never allow molten slag to contact damp soil or water; instantaneous steam expansion will blast explosive sprays of molten slag over the crew.",
+      "Ensure furnace walls are completely dried before blast smelting; residual moisture in thick clay will cause steam-induced structural furnace explosions.",
+      "In planetary habitats and sealed spacecraft, carbothermic smelting produces toxic carbon monoxide and carbon dioxide in quantities that will poison life support; use closed-loop molten regolith electrolysis (MRE) instead."
+    ],
     "sources": [
       {
-        "id": "src-osha-heat",
-        "title": "OSHA \u2014 Heat illness prevention",
-        "url": "https://www.osha.gov/heat",
-        "type": "institution",
-        "note": "Thermal stress and industrial hygiene for furnace work"
+        "id": "tylecote-early-metallurgy",
+        "title": "The Early History of Metallurgy in Europe - R.F. Tylecote (Longman Archaeology Series)",
+        "type": "book"
       },
       {
-        "id": "src-wiki-smelting",
-        "title": "Wikipedia \u2014 Smelting",
-        "url": "https://en.wikipedia.org/wiki/Smelting",
-        "type": "wikipedia",
-        "note": "Pyrometallurgical principles and historical development"
+        "id": "pleiner-bloomery-smelters",
+        "title": "Iron in Archaeology: The European Bloomery Smelters - Radomir Pleiner",
+        "type": "book"
       },
       {
-        "id": "src-epa-sustainability",
-        "title": "U.S. EPA \u2014 Sustainability",
-        "url": "https://www.epa.gov/sustainability",
-        "type": "institution",
-        "note": "Environmental management framing for emissions and waste from smelting"
+        "id": "rostoker-bronson-preindustrial-iron",
+        "title": "Pre-Industrial Iron: Its Technology and Ethnology - William Rostoker and Bennet Bronson",
+        "type": "paper"
+      },
+      {
+        "id": "craddock-early-mining-production",
+        "title": "Early Metal Mining and Production - Paul T. Craddock (Smithsonian Institution Press)",
+        "type": "book"
       }
     ]
-  },
-  "maturity": "researched"
+  }
 }

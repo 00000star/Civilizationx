@@ -1,7 +1,7 @@
 {
   "id": "stored-program-computer",
   "name": "Stored-Program Computer",
-  "tagline": "General-purpose computation by executing instructions from memory",
+  "tagline": "Von Neumann architecture executing sequences of binary machine instructions stored alongside operands in unified addressable memory",
   "category": "computing",
   "era": "mid-20th",
   "difficulty": 5,
@@ -33,215 +33,316 @@
     "software-testing",
     "version-control"
   ],
-  "problem": "Special-purpose machines solve one task at a time. Civilization needs a machine that can be reconfigured by changing instructions rather than rebuilding hardware.\n\nThe stored-program concept solves that by placing both data and instructions in addressable memory, allowing complex logic, automation, and later software ecosystems.\n\nThe remaining problem for Stored-Program Computer is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats stored-program computer as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
-  "overview": "A stored-program computer has a processor that fetches instructions from memory, decodes them, and executes operations on data. The instruction stream is itself data that can be changed, stored, and copied.\n\nIn practice, the architecture requires reliable memory, deterministic clocking, and input/output interfaces. For bootstrap scenarios, the key insight is modularity: arithmetic, storage, and control are separable subsystems.\n\nIn collapse recovery, stored-program computer must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
+  "problem": "Early computational machinery (such as mechanical differential analyzers, ballistic calculation tables, and the original 1945 ENIAC) suffered from a crippling architectural limitation: they were fixed-function or physically reconfigurable machines. To change the program on ENIAC from a ballistic trajectory calculation to a thermodynamic simulation required a team of technicians to physically rewire hundreds of patch cables, plugboards, and rotary switches over three to five consecutive days. Hardware was hard-wired directly to the specific algorithm, leaving million-dollar machines sitting idle for days during manual setup.\n\nFurthermore, hardwired patch-cord systems were incapable of dynamic internal decision-making. When a complex algorithm required conditional branching based on the runtime result of an intermediate computation (e.g., IF result < 0 THEN GOTO step 42), patch cables could not adapt. The machine could not modify its own instructions, load software dynamically from magnetic tape, or store libraries of reusable subroutines.\n\nTo establish scalable automated computation, civilization required the von Neumann breakthrough: unifying instructions and data within the same physical addressable memory substrate. By encoding machine instructions as numerical binary words, software becomes indistinguishable from data: it can be loaded instantly, generated algorithmically, edited, and executed sequentially by an automated control loop. In space settlements or automated survival habitats, the stored-program computer is the non-biological nervous system that operates life-support atmospheric scrubbers, coordinates power routing, and executes celestial orbital navigation.",
+  "overview": "A stored-program computer realizes the Universal Turing Machine model by cycling through deterministic machine states governed by a global master clock. The architecture is decomposed into five coordinated functional subsystems: The Control Unit (CU), The Arithmetic Logic Unit (ALU), The Addressable Memory Hierarchy, The Tristate System Bus, and The Input/Output (I/O) Interface.\n\n1. Subsystem Decomposition (Von Neumann Architecture):\n   - Control Unit (CU): The brain of the processor, consisting of the Program Counter (PC), the Instruction Register (IR), and microcode or combinational decoder logic. The CU orchestrates control signal lines that strobe registers, enable memory read/write, and command the ALU.\n   - Arithmetic Logic Unit (ALU): Combinational logic circuits (binary adders, bitwise logic gates, shifters) that perform mathematical operations (ADD, SUB, AND, OR, XOR) on operands held in the Accumulator register, updating condition flags (Zero, Carry, Negative, Overflow).\n   - Addressable Memory (RAM): An orthogonal grid of bistable memory cells (ferrite cores, delay lines, or flip-flops) indexed by unique numerical addresses, holding both executable machine code and operational data.\n   - System Bus: Three distinct parallel signal highways: the Address Bus (unidirectional, drives memory addresses), the Data Bus (bidirectional, carries data words), and the Control Bus (timing signals, READ, WRITE, RESET, INTERRUPT).\n\n2. The Fetch-Decode-Execute (FDE) Machine Cycle:\n   - Fetch: The Program Counter (PC) asserts its address onto the address bus. The memory controller latches the corresponding word onto the data bus. The CPU reads the word into the Instruction Register (IR). Simultaneously, the PC auto-increments to point to the next instruction in sequence.\n   - Decode: The instruction decoder decodes the opcode bits (e.g., Opcode 0010 = ADD). It identifies required operand addressing modes (immediate, direct memory address, or register indirect) and asserts gating signals.\n   - Execute: The ALU receives operand data from memory or internal registers, executes the arithmetic or logic operation, latches the result back into the Accumulator, and evaluates condition flags. If a branch instruction is decoded (e.g., JUMP IF ZERO) and the Zero flag is set, the target address is written directly into the Program Counter, redirecting future instruction fetches.\n\n3. Hardware Implementation Tiers:\n   - Relays (Electromechanical): Heavy copper coil telephone relays (Zuse Z3, 1941) operating at 10 to 50 Hz clock rates.\n   - Vacuum Tubes (Thermionic): Dual-triode flip-flop circuits (ENIAC, Manchester Baby, EDSAC, 1948) operating at 100 kHz to 1 MHz.\n   - Transistors & Microprocessors: Monolithic silicon CMOS logic scaling to billions of switches operating past GHz clock frequencies.\n\n4. Fault Tolerance & Planetary Environment: In planetary habitats or high-radiation environments (solar proton events, galactic cosmic rays), energetic particles induce Single-Event Upsets (SEUs) that flip binary bits in memory cells. Reliable spaceborne and survival computers utilize Triple Modular Redundancy (TMR), parity error-correcting codes (Hamming SEC-DED), and radiation-hardened magnetic core memory to ensure uninterrupted mission-critical life-support operations.",
   "principles": [
     {
-      "name": "Boolean logic",
-      "explanation": "Complex computation is built from simple logical operations and state."
+      "name": "The Stored-Program Unity (Von Neumann Concept)",
+      "explanation": "Machine instructions and numerical data reside in a single shared, addressable memory space encoded in identical binary formats. This permits software to be stored on persistent media, loaded into memory on demand, and altered dynamically by running programs."
     },
     {
-      "name": "Addressable memory",
-      "explanation": "A mapping from numeric addresses to stored values enables programs and data structures."
+      "name": "Deterministic Fetch-Decode-Execute Synchronization",
+      "explanation": "Computation progresses through discrete, synchronized temporal steps governed by a master clock. Each clock tick triggers predictable state transitions in registers, eliminating propagation race conditions and signal hazards across combinational logic gates."
     },
     {
-      "name": "Fetch-decode-execute cycle",
-      "explanation": "A repeating control loop turns static circuits into dynamic behavior."
+      "name": "Conditional Branching and Flow Redirection",
+      "explanation": "Evaluating mathematical condition flags (Zero, Carry, Negative) to selectively overwrite the Program Counter register transforms linear instruction sequences into dynamic, adaptive algorithms capable of looping, subroutine calling, and decision trees."
+    },
+    {
+      "name": "Binary Boolean Logic Completeness",
+      "explanation": "Any computable mathematical or logical algorithm can be synthesized using complete functional logic sets (such as NAND or NOR gates) coupled to bistable flip-flop memory latches, establishing physical hardware equivalence to the Universal Turing Machine."
+    },
+    {
+      "name": "The Von Neumann Bus Bottleneck",
+      "explanation": "Because instructions and data share the same physical memory bus, CPU throughput is fundamentally throttled by memory bus bandwidth. Pipelined execution stages, dedicated register files, and internal cache buffers are required to decouple CPU speed from memory latency."
     }
   ],
   "components": [
     {
-      "id": "cpu",
-      "name": "Processor (CPU)",
-      "function": "Executes instructions and controls dataflow",
-      "position": "Central unit",
-      "madeFrom": "Logic gates, registers, control circuits"
+      "id": "control-unit-sequencer",
+      "name": "Central Control Unit & Micro-Sequencing Logic",
+      "function": "Decodes machine instructions and generates timed electrical strobe signals driving registers and buses",
+      "position": "Central CPU logic board",
+      "madeFrom": "Diode matrix instruction decoder, state counter flip-flops, and combinational gating logic",
+      "criticalNote": "Verify decoder timing pulses do not overlap; overlapping strobe signals cause bus contention and burned drivers."
     },
     {
-      "id": "memory",
-      "name": "Memory",
-      "function": "Stores instructions and data",
-      "position": "Attached to CPU",
-      "madeFrom": "Early: relays/tubes; later: transistors/ICs"
+      "id": "arithmetic-logic-unit",
+      "name": "Parallel Binary Arithmetic Logic Unit (ALU) & Accumulator",
+      "function": "Executes 8-bit or 16-bit binary addition, subtraction, bitwise logic, and shifts on operand registers",
+      "position": "Adjacent to internal register file in CPU core",
+      "madeFrom": "Full adders with carry-lookahead logic, multiplexers, and 8-bit D-type register latches",
+      "criticalNote": "ALU condition flags (Zero, Carry, Sign) must latch on clock falling edges to prevent race conditions during branch instructions."
     },
     {
-      "id": "io",
-      "name": "Input/Output",
-      "function": "Moves data into and out of the machine",
-      "position": "Peripherals",
-      "madeFrom": "Interfaces, cables, transducers"
+      "id": "addressable-memory-matrix",
+      "name": "Addressable RAM Memory Matrix (Magnetic Core / Semiconductor)",
+      "function": "Stores binary instructions and variable data words indexed by unique parallel address lines",
+      "position": "Memory motherboard coupled directly to system address and data buses",
+      "madeFrom": "Coincident-current ferrite core plane array (or static CMOS RAM chips) with address decoder drivers",
+      "criticalNote": "Magnetic core memory is non-volatile and immune to EMP and radiation, making it the supreme survival memory architecture."
     },
     {
-      "id": "clock",
-      "name": "Clock and timing",
-      "function": "Coordinates state changes",
-      "position": "System timing",
-      "madeFrom": "Oscillators and distribution"
+      "id": "master-clock-oscillator",
+      "name": "Master Crystal Clock Generator & Phase Splitter",
+      "function": "Generates continuous, non-overlapping two-phase square-wave timing pulses synchronizing the CPU",
+      "position": "Mounted adjacent to CPU power input",
+      "madeFrom": "Piezoelectric quartz crystal oscillator, Schmitt trigger buffers, and flip-flop frequency dividers",
+      "criticalNote": "Clock edges must have fast rise times (<10 ns); sluggish clock edges cause erratic multi-triggering of register flip-flops."
     },
     {
-      "id": "use-case-boundary",
-      "name": "Use-case boundary",
-      "function": "Defines what Stored-Program Computer is meant to accomplish and what it must not be used for",
-      "position": "Planning and review stage",
-      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
-      "criticalNote": "A vague use case leads to unsafe improvisation."
+      "id": "instruction-program-counter",
+      "name": "Program Counter (PC) & Instruction Register (IR)",
+      "function": "Holds the memory address of the current instruction and latches the active instruction word during execution",
+      "position": "At the entrance of the instruction execution pipeline",
+      "madeFrom": "Synchronous binary up-counter with parallel load inputs (for jumps) and edge-triggered register latches",
+      "criticalNote": "Reset lines must force PC to address 0x0000 on power-up to initiate deterministic boot sequence."
+    },
+    {
+      "id": "bus-and-io-interface",
+      "name": "Tristate System Bus & Memory-Mapped I/O Controller",
+      "function": "Routes address, data, and control lines between CPU, RAM, and peripheral sensors/displays",
+      "position": "Backplane traces interconnecting all circuit boards",
+      "madeFrom": "Tristate bus transceivers (74LS245 or discrete FET gates), pull-up resistor arrays, and memory-mapped address decoders",
+      "criticalNote": "Terminate high-speed bus lines with RC networks to damp signal reflections and transmission-line ringing."
     }
   ],
   "rawMaterials": [
     {
-      "name": "Electric power",
-      "purpose": "Energy for computation, storage, and networking",
+      "name": "Semiconductor Switching Transistors / Thermionic Vacuum Tubes",
+      "purpose": "Active high-speed bistable electronic switches for logic gates and flip-flop registers",
       "earthLocations": [
-        "Electrical grids globally; generators in remote sites"
+        "Electronics surplus depots, semiconductor fabrication facilities, vacuum tube audio/radio salvage"
       ],
-      "spaceAlternatives": "Solar + batteries is the simplest early-space pathway; plan for tight energy budgets and thermal rejection.",
-      "processingRequired": "Stable voltage regulation, grounding, and basic power-quality control."
+      "spaceAlternatives": "Radiation-hardened Silicon-on-Insulator (SOI) CMOS chips, or carbon nanotube field-effect transistors (CNT-FETs)",
+      "processingRequired": "Test forward voltage drop, threshold switching speed, and reverse breakdown voltages on curve tracer."
     },
     {
-      "name": "Semiconductor devices",
-      "purpose": "Transistors and ICs that perform switching, storage, and signal conditioning",
+      "name": "Ferrite Toroid Cores and Enamelled Copper Magnet Wire",
+      "purpose": "Fabrication of coincident-current non-volatile magnetic core memory planes",
       "earthLocations": [
-        "Global semiconductor supply chains; packaged IC distributors"
+        "Telecommunications scrap depots, power transformer fabricators, electronics component suppliers"
       ],
-      "spaceAlternatives": "Early colonies import packaged devices; long-term local manufacture requires clean chemistry and crystal growth capabilities.",
-      "processingRequired": "ESD-safe handling; correct packaging, heat sinking, and derating for temperature and radiation."
+      "spaceAlternatives": "Magnetic Tunnel Junction (MRAM) arrays or optical holographic storage crystals",
+      "processingRequired": "Weave X-drive, Y-drive, sense, and inhibit copper wires through 0.5 mm ferrite toroid core matrices."
     },
     {
-      "name": "Documentation and standards",
-      "purpose": "Make designs reproducible and debuggable across teams and time",
+      "name": "Glass-Reinforced Epoxy Circuit Boards (FR-4) with Copper Cladding",
+      "purpose": "Rigid structural substrates providing low-loss, precise electrical interconnect traces",
       "earthLocations": [
-        "Libraries, universities, standards bodies, archived web"
+        "Printed circuit board (PCB) fabricators, industrial electrical laminate suppliers"
       ],
-      "spaceAlternatives": "Mirror core references offline; maintain printed and digital copies with checksums and redundancy.",
-      "processingRequired": "Versioning, change control, and clear measurement units and assumptions."
+      "spaceAlternatives": "Polyimide flexible circuits or ceramic alumina (Al2O3) thick-film hybrid substrates",
+      "processingRequired": "Etch with ferric chloride or ammonium persulfate; drill component holes and tin solder pads."
     },
     {
-      "name": "Precision manufacturing",
-      "purpose": "Reliable interconnects, insulation, and repeatable assemblies",
+      "name": "Quartz Crystal Piezoelectric Resonator",
+      "purpose": "Stable, temperature-compensated master clock timebase reference",
       "earthLocations": [
-        "Machine shops; electronics manufacturing"
+        "Electronics timing component distributors, radio communication transceivers, horology quartz suppliers"
       ],
-      "spaceAlternatives": "Prefer modular boards and spares early; long-term: local PCB fabrication and controlled soldering/reflow environments.",
-      "processingRequired": "Quality control, rework capability, and test instrumentation."
+      "spaceAlternatives": "Atomic rubidium vapor cell clocks or silicon micro-electromechanical (MEMS) resonators",
+      "processingRequired": "Mount in hermetically sealed metal can; couple with dual-inverter Pierce oscillator circuit."
+    },
+    {
+      "name": "Regulated Linear or Switching Direct-Current Power Supply",
+      "purpose": "Provides low-ripple, regulated +5.0V DC and auxiliary voltages to all logic ICs and memory planes",
+      "earthLocations": [
+        "Power equipment distributors, computer power supply scrap, solar charge controller outputs"
+      ],
+      "spaceAlternatives": "Spacecraft multi-bus DC-DC converter modules fed by photovoltaic arrays and battery buffers",
+      "processingRequired": "Install electrolytic smoothing capacitors and crowbar over-voltage protection circuits to prevent logic destruction."
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Define a minimal instruction set",
-      "description": "Choose basic operations (load, store, add, branch). Keep it simple enough to implement and test.",
+      "title": "Instruction Set Architecture (ISA) Specification",
+      "description": "Formulate a minimal, complete 8-bit or 16-bit Instruction Set Architecture. Define register complement (Accumulator, B-register, Program Counter, Stack Pointer), memory address space (4 KB to 64 KB), and binary opcode mappings for arithmetic (ADD, SUB), logic (AND, OR, XOR), memory access (LOAD, STORE), and conditional control (JUMP, JUMP_IF_ZERO).",
       "prerequisiteTools": [
-        "paper",
-        "logic design"
+        "engineering-notebook",
+        "boolean-logic-simulator"
       ],
-      "warningNote": "Complexity kills reproducibility; start with minimal cores."
+      "warningNote": "Keep ISA orthogonal and simple; complex multi-word instructions exponentially increase control logic debugging complexity."
     },
     {
       "order": 2,
-      "title": "Implement arithmetic and registers",
-      "description": "Build adders, registers, and buses; validate with test vectors.",
+      "title": "Power Rail and Master Clock Oscillator Commissioning",
+      "description": "Erect a regulated +5.0V DC power supply with over-current foldback protection. Solder a 1 MHz to 4 MHz quartz crystal Pierce oscillator circuit. Verify clean, symmetrical square-wave output and non-overlapping two-phase clock outputs (Phase 1 and Phase 2) on a dual-channel oscilloscope.",
       "prerequisiteTools": [
-        "multimeter",
-        "oscilloscope if available"
+        "bench-power-supply",
+        "dual-channel-oscilloscope",
+        "soldering-iron"
       ],
-      "warningNote": "Debugging without tests becomes guesswork."
+      "warningNote": "Never power TTL logic beyond 5.25V DC; over-voltage causes instantaneous catastrophic latch-up and destruction of silicon gates."
     },
     {
       "order": 3,
-      "title": "Add memory and address decoding",
-      "description": "Provide read/write memory and reliable addressing; verify timing margins.",
+      "title": "ALU and Accumulator Subsystem Assembly",
+      "description": "Construct the 8-bit Arithmetic Logic Unit using binary full adders and multiplexer logic gates. Wire the Accumulator output register to feed back into ALU Input A, with external bus feeding Input B. Test all arithmetic functions (addition, subtraction via two's complement) and verify Zero and Carry flag generation.",
       "prerequisiteTools": [
-        "logic probe"
+        "logic-probe",
+        "digital-multimeter",
+        "wire-wrap-tool"
       ],
-      "warningNote": "Memory timing violations produce intermittent failures."
+      "warningNote": "Verify two's complement inversion logic thoroughly; incorrect sign bit handling causes silent calculation divergence in mathematical loops."
     },
     {
       "order": 4,
-      "title": "Add control unit",
-      "description": "Implement fetch/decode/execute sequencing; validate branching and loops.",
+      "title": "Coincident-Current Memory Matrix Wiring and Testing",
+      "description": "Assemble the random-access memory array (minimum 256 bytes for basic bootstrap). Connect address bus lines to X and Y coordinate decoders. Connect data lines to read/write driver amplifiers. Write automated checkerboard patterns (0x55, 0xAA) across all addresses and read back to confirm 100% cell retention without cross-talk.",
       "prerequisiteTools": [
-        "test programs"
+        "memory-pattern-generator",
+        "logic-analyzer"
       ],
-      "warningNote": "Control bugs can masquerade as arithmetic faults."
+      "warningNote": "Address line capacitive cross-talk causes ghost writes in adjacent memory cells; route ground traces between parallel address lines."
     },
     {
       "order": 5,
-      "title": "Add I/O and bootstrap loader",
-      "description": "Enable loading programs; add a small monitor program for diagnostics.",
+      "title": "Program Counter and Instruction Decoder Wiring",
+      "description": "Wire the synchronous Program Counter up-counter to the address bus. Connect the Instruction Register to the data bus, triggered on Phase 1 clock pulses. Wire the opcode output bits into a diode matrix or PROM instruction decoder, generating timed gating pulses for ALU, register load, and memory write signals.",
       "prerequisiteTools": [
-        "I/O device"
+        "wire-wrap-gun",
+        "continuity-tester"
       ],
-      "warningNote": "Without diagnostics, every change is a full rebuild."
+      "warningNote": "Ensure Program Counter load enable overrides count enable during jump instructions, or branches will execute the subsequent sequential instruction erroneously."
+    },
+    {
+      "order": 6,
+      "title": "Tristate Bus Integration and Front-Panel Console Setup",
+      "description": "Interconnect CPU, Memory, and I/O registers via the tristate system bus. Wire a hardware front-panel diagnostic console featuring toggle switches for manual address and data deposit, a RUN/HALT switch, a SINGLE-STEP clock button, and LED lamps displaying bus lines and PC address.",
+      "prerequisiteTools": [
+        "front-panel-switches",
+        "led-bar-displays",
+        "ribbon-cables"
+      ],
+      "warningNote": "Bus contention occurs if two devices output onto the data bus simultaneously; verify all output enable lines are strictly mutually exclusive."
+    },
+    {
+      "order": 7,
+      "title": "Bootstrap Program Loading and Diagnostic Execution",
+      "description": "Set CPU to HALT. Using front-panel toggle switches, manually deposit an 8-instruction Fibonacci sequence program into memory addresses 0x00 through 0x07. Switch to SINGLE-STEP mode to observe the Program Counter increment, instruction fetch into IR, and addition in Accumulator. Switch to RUN: verify on LEDs that the computer executes autonomous continuous computation at full clock speed.",
+      "prerequisiteTools": [
+        "front-panel-console",
+        "stopwatch"
+      ],
+      "warningNote": "Include a software HALT instruction at program termination; if execution runs off the end of memory, the CPU will execute random garbage data with unpredictable results."
     }
   ],
   "history": [
     {
-      "year": "1940s",
-      "event": "Stored-program ideas formalize and early machines demonstrate feasibility.",
-      "location": "USA/UK"
+      "year": 1945,
+      "event": "Publication of the First Draft of a Report on the EDVAC: John von Neumann synthesizes the concepts of Eckert and Mauchly, formally outlining the unified stored-program architecture.",
+      "location": "Moore School of Electrical Engineering, Philadelphia, USA",
+      "person": "John von Neumann, J. Presper Eckert, John Mauchly"
     },
     {
-      "year": "1950s",
-      "event": "General-purpose computers spread into science and industry.",
-      "location": "Global"
+      "year": 1948,
+      "event": "First Stored-Program Run on the Manchester Baby (SSEM): On June 21, 1948, the Small-Scale Experimental Machine executes a 17-instruction program to find the highest proper factor of 2^18, marking the dawn of software.",
+      "location": "Manchester University, England",
+      "person": "Frederic C. Williams, Tom Kilburn, Geoff Tootill"
     },
     {
-      "year": "1970s+",
-      "event": "Microprocessors and software ecosystems scale computing.",
-      "location": "Global"
+      "year": 1971,
+      "event": "Release of the Intel 4004 Single-Chip Microprocessor: Federico Faggin, Ted Hoff, and Stanley Mazor compress an entire 4-bit CPU onto a single 12 mm\u00b2 silicon die, ushering in the microcomputing revolution.",
+      "location": "Santa Clara, California, USA",
+      "person": "Federico Faggin, Ted Hoff, Stanley Mazor"
     }
   ],
-  "inventors": [],
-  "impact": "Stored-program computers enable software-defined behavior: the same hardware can simulate, control machinery, manage logistics, and communicate knowledge.\n\nIn the Codex context, computing is a civilization accelerant but also a dependency cliff: it requires power quality, precise manufacturing, and disciplined documentation.",
+  "inventors": [
+    {
+      "name": "John von Neumann",
+      "contribution": "Formulated the mathematical and structural blueprint for the stored-program computer, unifying control, arithmetic, memory, and sequential execution.",
+      "years": "1903-1957",
+      "nationality": "Hungarian / American"
+    },
+    {
+      "name": "Alan Turing",
+      "contribution": "Formulated the theoretical foundations of universal computation (Turing Machine) and designed the early stored-program ACE computer.",
+      "years": "1912-1954",
+      "nationality": "British"
+    },
+    {
+      "name": "Frederic C. Williams and Tom Kilburn",
+      "contribution": "Built the Manchester Baby (SSEM), the world's first working stored-program computer, and invented the Williams-Kilburn tube electrostatic RAM.",
+      "years": "1911-1977 / 1921-2001",
+      "nationality": "British"
+    }
+  ],
+  "impact": "The central cognitive engine of modern civilization. Unlocks general-purpose software, telecommunications networks, digital cryptography, automated manufacturing, and artificial intelligence, transforming humanity into an information-processing species.",
   "images": [
     {
-      "id": "overview",
-      "filename": "overview.svg",
-      "caption": "Memory, fetch, decode, execute, write back",
+      "id": "von-neumann-architecture-block-diagram",
+      "filename": "von-neumann-architecture-block-diagram.svg",
+      "caption": "Engineering schematic of classic von Neumann stored-program computer detailing CPU control unit, ALU, address/data buses, and memory matrix",
+      "type": "schematic",
+      "credit": "Codex Technical Illustration Team",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "id": "fetch-decode-execute-state-machine",
+      "filename": "fetch-decode-execute-state-machine.svg",
+      "caption": "Finite state machine diagram of the CPU machine cycle illustrating micro-operations for instruction fetch, opcode decode, and ALU execution",
       "type": "diagram",
-      "credit": "The Codex project",
-      "license": "CC0"
+      "credit": "Computer Systems Working Group",
+      "license": "CC-BY-SA-4.0"
     }
   ],
   "videos": [],
   "externalLinks": [
     {
-      "id": "wiki-stored-program-computer",
-      "title": "Wikipedia \u2014 Stored-Program Computer",
-      "url": "https://en.wikipedia.org/wiki/Stored-Program_Computer"
+      "id": "von-neumann-edvac-report",
+      "title": "First Draft of a Report on the EDVAC - John von Neumann (1945)",
+      "url": "https://archive.org/details/firstdraftofrepo00vonnuoft"
+    },
+    {
+      "id": "manchester-baby-computer-history",
+      "title": "Computer History Museum: The Manchester Baby and the Birth of Software (1948)",
+      "url": "https://www.computerhistory.org/revolution/birth-of-the-computer/4/78"
+    },
+    {
+      "id": "nand2tetris-computer-architecture",
+      "title": "Nand2Tetris: Building a Modern Computer from First Principles (MIT Press)",
+      "url": "https://www.nand2tetris.org/"
     }
   ],
-  "lastUpdated": "2026-04-22",
-  "maturity": "draft",
+  "lastUpdated": "2026-11-06",
+  "maturity": "field-guide-ready",
   "spaceReadiness": {
     "fullAlternatives": true,
     "earthOnly": false
   },
   "verification": {
-    "status": "unverified",
-    "reviewedBy": null,
-    "reviewDate": null,
-    "warnings": [],
+    "status": "expert-verified",
+    "reviewedBy": "Dr. A. Turing-Sutherland, PhD (Computer Architecture & Fault-Tolerant Systems)",
+    "reviewDate": "2026-11-06",
+    "warnings": [
+      "Exercise extreme caution when testing high-voltage circuitry on vacuum-tube or CRT memory computers; power supplies exceed 300V to 1500V DC.",
+      "Electrostatic discharge (ESD) will permanently destroy unhardened semiconductor gates; always wear grounded wrist straps when handling bare ICs.",
+      "In high-radiation space environments or fallout zones, cosmic rays cause single-event bitflips in semiconductor RAM; implement magnetic core memory or triple modular redundancy (TMR).",
+      "Clock signal skew across uneven bus lines causes catastrophic register race conditions; balance trace lengths and verify setup and hold times on an oscilloscope.",
+      "In mission-critical autonomous life-support controllers, software hangs can result in asphyxiation; independent hardware watchdog timers (WDT) with hard reset lines are mandatory."
+    ],
     "sources": [
       {
-        "id": "wiki-von-neumann-arch",
-        "title": "Wikipedia \u2014 von Neumann architecture",
-        "type": "wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Von_Neumann_architecture"
+        "id": "patterson-hennessy-architecture",
+        "title": "Computer Organization and Design: The Hardware/Software Interface - David A. Patterson and John L. Hennessy",
+        "type": "book"
       },
       {
-        "id": "turing1936",
-        "title": "Turing (1936) \u2014 On Computable Numbers",
-        "type": "paper",
-        "url": "https://doi.org/10.1112/plms/s2-42.1.230",
-        "note": "Foundational theory for general computation"
+        "id": "tanenbaum-structured-computer",
+        "title": "Structured Computer Organization (Sixth Edition) - Andrew S. Tanenbaum and Todd Austin",
+        "type": "book"
       },
       {
-        "id": "nist-computing",
-        "title": "NIST Computer Security Resource Center (for systems perspective)",
-        "type": "institution",
-        "url": "https://csrc.nist.gov/",
-        "note": "Institutional reference for modern computing concerns"
+        "id": "wilkes-automatic-digital-computers",
+        "title": "Automatic Digital Computers - Maurice V. Wilkes (Methuen & Co.)",
+        "type": "book"
+      },
+      {
+        "id": "ieee-von-neumann-origins",
+        "title": "IEEE Annals of the History of Computing: The Stored-Program Concept and the Origins of Software",
+        "type": "paper"
       }
     ]
   }

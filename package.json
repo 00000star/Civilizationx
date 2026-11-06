@@ -16,6 +16,7 @@
     "preview": "vite preview",
     "validate-data": "node scripts/validate-technology-data.mjs",
     "validate-standalone": "node scripts/validate-technologies-standalone.mjs",
+    "generate-manual": "node scripts/generate-offline-manual.mjs",
     "pathfinder": "node scripts/survival-pathfinder.mjs",
     "audit-content": "node scripts/audit-content-depth.mjs",
     "audit-content:strict": "node scripts/audit-content-depth.mjs --strict",
