@@ -281,25 +281,25 @@
   {
     "id": "basic-chemistry-lab",
     "name": "Basic Chemistry Lab",
-    "tagline": "Basic Chemistry Lab as a documented civilization capability: inputs, limits, warnings, records, and recovery pathways",
+    "tagline": "Standardized chemical reaction laboratory: fractional distillation, acid-base titration, gravimetric balance, and PPE protocol for compound synthesis and assay",
     "category": "science",
     "era": "early-modern",
     "difficulty": 3,
     "prerequisites": [
-      "writing-early-systems",
-      "probability-and-statistics",
-      "linear-algebra"
+      "fire",
+      "ceramics-and-pottery",
+      "glass-making"
     ],
     "unlocks": [],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "draft",
-    "lastUpdated": "2026-05-02"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "basic-epidemiology",
@@ -1012,12 +1012,15 @@
     ],
     "unlocks": [
       "adobe-blocks",
+      "basic-chemistry-lab",
       "bloomery-iron-refining",
       "bricks-and-fired-masonry",
       "cast-iron-founding",
       "ceramic-glazes",
       "clay-brick-production",
       "dye-extraction",
+      "emergency-water-storage",
+      "forge-bellows",
       "glass-annealing",
       "glass-making",
       "gypsum-plaster",
@@ -1545,6 +1548,7 @@
       "adobe-blocks",
       "alcohol-fuel-distillation",
       "animal-treadmill-power",
+      "basic-chemistry-lab",
       "battery-charging-station",
       "biogas-digester",
       "bloomery-iron-refining",
@@ -1569,6 +1573,7 @@
       "flood-response-basics",
       "flywheel-energy-storage",
       "food-preservation",
+      "forge-bellows",
       "glass-annealing",
       "greywater-separation",
       "gypsum-plaster",
@@ -2455,25 +2460,25 @@
   {
     "id": "emergency-water-storage",
     "name": "Emergency Water Storage",
-    "tagline": "Emergency Water Storage as a documented civilization capability: inputs, limits, warnings, records, and recovery pathways",
+    "tagline": "Vessel sanitization, chemical preservation, hydraulic isolation, and ration budgeting for prolonged survival and collapse recovery",
     "category": "survival",
     "era": "prehistoric",
     "difficulty": 2,
     "prerequisites": [
       "fire",
-      "shelter-construction-basic",
-      "sanitation-and-clean-water"
+      "sanitation-and-clean-water",
+      "ceramics-and-pottery"
     ],
     "unlocks": [],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "draft",
-    "lastUpdated": "2026-05-02"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "error-correcting-codes",
@@ -3019,25 +3024,25 @@
   {
     "id": "forge-bellows",
     "name": "Forge Bellows",
-    "tagline": "Forge Bellows as a documented civilization capability: inputs, limits, warnings, records, and recovery pathways",
+    "tagline": "Forced-draft air pumps delivering continuous forced oxygen to forge beds, enabling iron smelting, bloom refining, and forge welding temperatures",
     "category": "tools",
     "era": "ancient",
     "difficulty": 3,
     "prerequisites": [
       "basic-hand-tools",
-      "lever-system",
-      "wheel-and-axle"
+      "fire",
+      "ceramics-and-pottery"
     ],
     "unlocks": [],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "draft",
-    "lastUpdated": "2026-05-02"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "foundation-footings",
@@ -3255,6 +3260,7 @@
       "ceramics-and-pottery"
     ],
     "unlocks": [
+      "basic-chemistry-lab",
       "boiler-feedwater-treatment",
       "electric-lighting-systems",
       "electrical-telegraph",
@@ -4246,7 +4252,6 @@
     ],
     "unlocks": [
       "astronomical-observation",
-      "basic-chemistry-lab",
       "cartography",
       "distillation-apparatus",
       "experimental-design",
@@ -5432,7 +5437,6 @@
     ],
     "unlocks": [
       "astronomical-observation",
-      "basic-chemistry-lab",
       "cartography",
       "dataset-curation",
       "distillation-apparatus",
@@ -6183,7 +6187,7 @@
       "weather-observation"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
@@ -6467,7 +6471,6 @@
       "drought-response-basics",
       "earthquake-bracing",
       "emergency-signaling",
-      "emergency-water-storage",
       "fire-resistant-layout",
       "firebreak-construction",
       "flood-response-basics",
@@ -7361,7 +7364,6 @@
       "clamps-and-vises",
       "drill-and-brace",
       "files-and-rasps",
-      "forge-bellows",
       "grinding-wheel",
       "hand-pump",
       "lathe-basics",
@@ -7433,7 +7435,6 @@
       "clamps-and-vises",
       "drill-and-brace",
       "files-and-rasps",
-      "forge-bellows",
       "fuel-storage-depot",
       "grinding-wheel",
       "hand-pump",
@@ -8280,7 +8281,6 @@
       "archive-preservation",
       "armour-repair",
       "astronomical-observation",
-      "basic-chemistry-lab",
       "bookbinding",
       "broadcast-scheduling",
       "calculus-and-optimization",

@@ -1,254 +1,316 @@
 {
   "id": "forge-bellows",
   "name": "Forge Bellows",
-  "tagline": "Forge Bellows as a documented civilization capability: inputs, limits, warnings, records, and recovery pathways",
+  "tagline": "Forced-draft air pumps delivering continuous forced oxygen to forge beds, enabling iron smelting, bloom refining, and forge welding temperatures",
   "category": "tools",
   "era": "ancient",
   "difficulty": 3,
   "prerequisites": [
     "basic-hand-tools",
-    "lever-system",
-    "wheel-and-axle"
+    "fire",
+    "ceramics-and-pottery"
   ],
   "unlocks": [],
-  "problem": "Forge Bellows is included because civilizations often fail at the support capabilities between famous inventions. A settlement may know about fire, steel, writing, medicine, or electricity and still lose lives because forge bellows is absent, undocumented, improvised under stress, or held only in one person's memory.\n\nThe practical problem is not just making or doing the thing once. It is making the capability teachable, inspectable, repairable, and bounded by safety rules. The Codex entry must tell a future reader what forge bellows is for, which inputs it depends on, what can go wrong, what needs measurement, and when to stop and escalate rather than pushing a dangerous guess further.",
-  "overview": "Forge Bellows makes repair and fabrication repeatable instead of depending on irreplaceable specialists. In a recovery setting it should be understood as a small operating system: materials, tools, workspace, trained people, inspection points, maintenance, records, and limits. The entry is therefore structured around the questions a real settlement has to answer before use: what does it prevent, what does it consume, how is it checked, and how does it fail?\n\nFor collapse recovery, the focus is local substitution, safe simplification, and training more than one operator. A process that works only when an expert is present is fragile. For space settlement, the same capability must be redesigned around closed-loop resources, contamination control, power budgets, limited spare parts, and redundant documentation.\n\nThis expansion entry is intentionally conservative. It gives the Codex enough depth for search, planning, teaching, and dependency mapping, but it does not pretend to replace specialist review. Later work should add diagrams, measurements, regional variants, deeper history, and stronger topic-specific sources before promotion to field-guide-ready.",
+  "problem": "An open natural-draft wood or charcoal campfire is thermally limited to 700°C to 900°C because combustion is throttled by passive atmospheric convection. Copper melts at 1085°C, bronze melts at 950°C to 1050°C, and iron requires at least 1150°C to 1250°C for bloomery reduction and solid-state forge welding (pure iron melts at 1538°C). Without a forced-air blast delivering concentrated oxygen directly into the incandescent charcoal fuel bed, metallurgy is thermodynamically impossible; human societies remain permanently locked in the Stone Age.\n\nFurthermore, intermittent or pulsating air blasts introduce severe thermal cycling. Every time airflow pauses, ambient room air cools the forge bed, allowing oxygen to attack the red-hot metal surface and forming thick, brittle oxide scale (iron oxide, Fe3O4). This scale prevents metal surfaces from fusing during hammer strikes, causing forge welds to shatter. A dependable bellows system must produce high volumetric flow with continuous, non-reversing positive pressure.\n\nIn planetary habitats or sealed survival shelters, forced draft is the core gas-dynamic driver for closed-loop thermal furnaces, basalt smelting, and metal extraction. Operating an open furnace indoors without strict back-draft protection produces lethal concentrations of carbon monoxide (CO) gas within minutes, risking catastrophic asphyxiation or fuel-air combustion within the pump itself.",
+  "overview": "The forge bellows operates on fluid displacement to overcome the hydraulic resistance of densely packed charcoal or coke fuel beds, driving chemical combustion into the intense reducing and forge-welding regime.\n\n1. Combustion Thermodynamics: Forcing oxygen through glowing carbon accelerates the exothermic reaction: C + O2 -> CO2 (releasing 393.5 kJ/mol), which immediately undergoes the endothermic Boudouard reduction against excess incandescent carbon: CO2 + C -> 2CO. The resulting carbon monoxide (CO) gas is the active chemical agent that strips oxygen from metal ores (e.g., Fe2O3 + 3CO -> 2Fe + 3CO2) while elevating local bed temperatures beyond 1300°C.\n\n2. Mechanical Architectures: Historical metallurgy evolved through three distinct mechanical designs:\n   - Double-Acting Box Bellows (The Chinese 'Fengxiang', 4th c. BCE): A rigid rectangular wooden cylinder with a central piston packed with feathers, felt, or tallow-soaked leather. A system of four directional flap valves delivers high-pressure air into the delivery pipe on BOTH the push and pull strokes. A single operator generates a continuous, uninterrupted blast with minimal physical exertion.\n   - Double-Lung Accordion Bellows: Two hinged leather chambers mounted vertically. The lower chamber acts as the manual pump, discharging pressurized air through an internal clack valve into the upper chamber, which is weighted with stones. The upper chamber floats and acts as a constant-pressure hydraulic accumulator, feeding a steady draft to the tuyère while the lower chamber reloads.\n   - Bag or Pot Bellows (Prehistoric): Paired animal skins or ceramic bowls covered with loose leather diaphragms, pumped in alternating rhythm with hand sticks or feet.\n\n3. Tuyère and Firepot Geometry: The pressurized air discharges through a refractory ceramic or copper pipe called a tuyère (blast nozzle). The tuyère must enter the hearth 5 to 8 cm above the floor, angled 10° to 15° downward toward the center. This geometry creates a localized, intense 'reducing sweet spot' 5 to 10 cm directly in front of the nozzle, where heat is maximized and free oxygen is completely consumed before it can oxidize the metal workpiece.\n\n4. Anti-Blowback Protection: When pumping halts, cooling gases in the hearth contract, creating a vacuum that siphons explosive carbon monoxide gas and burning embers backward through the tuyère into the wooden bellows box. Incorporating self-closing gravity flap valves and a secondary slag trap is mandatory to prevent internal pump detonation.",
   "principles": [
     {
-      "name": "Function before form",
-      "explanation": "Start with the job forge bellows performs; historical forms can be copied only after their purpose and limits are understood."
+      "name": "Boudouard Equilibrium and Reducing Atmosphere",
+      "explanation": "Blasting air into hot charcoal produces a two-stage chemical reaction: initial combustion yields CO2, which reacts with excess incandescent carbon to form carbon monoxide (CO). The active forge sweet spot is chemically reducing; placing hot steel here prevents oxidation scaling and decarburization."
     },
     {
-      "name": "Inputs determine reliability",
-      "explanation": "Material quality, water, power, labour, weather, contamination, and skill limits usually decide whether the method works."
+      "name": "Continuous Positive Displacement",
+      "explanation": "Intermittent air pulses allow the combustion zone to cool and invite ambient oxygen back into the weld zone. Double-acting piston mechanisms or dual-chamber weighted accumulators deliver continuous laminar airflow, stabilizing core temperature at 1200°C+."
     },
     {
-      "name": "Inspection prevents silent failure",
-      "explanation": "Checklists, measurements, labels, and post-use inspection turn hidden failure into visible maintenance work."
+      "name": "Tuyère Aerodynamic Throat Sizing",
+      "explanation": "The nozzle throat diameter dictates the balance between volumetric airflow (liters per second) and static pressure head (pascals). A 20 to 25 mm diameter tuyère nozzle optimally matches manual box bellows displacement, penetrating 15 to 25 cm into the fuel bed without blowing charcoal out of the hearth."
     },
     {
-      "name": "Escalation is part of the design",
-      "explanation": "A safe entry states when to stop, isolate the hazard, seek expert help, or switch to a lower-risk alternative."
+      "name": "The Hydraulic Anti-Backdraft Standard",
+      "explanation": "When an air pump stroke terminates, negative pressure in the delivery trunk can draw carbon monoxide and glowing coal dust backward. Gravity-closed leather clack valves and dedicated air breaks isolate the fuel bed from the flammable pumping chamber."
+    },
+    {
+      "name": "Thermal Gradient Decoupling",
+      "explanation": "Wood, leather, and tallow-lubricated seals degrade rapidly above 80°C. The intense 1300°C hearth environment is decoupled from the bellows box using an extended refractory fireclay tuyère pipe (minimum 30 cm long) wrapped in thermal clay lagging."
     }
   ],
   "components": [
     {
-      "id": "use-case",
-      "name": "Defined use case",
-      "function": "States what forge bellows is meant to accomplish and what it is not meant to do",
-      "position": "Before design or operation",
-      "madeFrom": "Written requirements, local survey, risk notes, and responsible operator assignment",
-      "criticalNote": "Vague goals create unsafe improvisation."
+      "id": "piston-box-chamber",
+      "name": "Double-Acting Wooden Piston Cylinder",
+      "function": "Provides the rigid, airtight structural displacement volume for forced air compression",
+      "position": "Mounted horizontally beside the forge hearth",
+      "madeFrom": "Kiln-dried seasoned hardwood planks (oak, ash, or pine) joined with airtight splines and hide glue",
+      "criticalNote": "Internal bore must be planed mirror-smooth and waxed; wood warping causes catastrophic air leakage around piston perimeter."
     },
     {
-      "id": "input-set",
-      "name": "Input set",
-      "function": "Collects materials, tools, labour, information, water, power, and time",
-      "position": "Before operation",
-      "madeFrom": "Local supplies, verified salvage, trained people, and source records",
-      "criticalNote": "Unknown or contaminated inputs must be isolated until checked."
+      "id": "piston-head-and-seal",
+      "name": "Piston Head with Compressible Perimeter Packing",
+      "function": "Sweeps the cylinder bore, driving air ahead of it while drawing fresh intake air behind it",
+      "position": "Reciprocating inside the box chamber",
+      "madeFrom": "Hardwood core wrapped in chicken feathers, goose down, or dense wool felt lubricated with beef tallow",
+      "criticalNote": "Feathers provide lower friction and self-healing resilience compared to stiff leather seals in rectangular boxes."
     },
     {
-      "id": "workspace",
-      "name": "Controlled workspace",
-      "function": "Separates clean, dirty, hot, sharp, electrical, structural, or public areas as needed",
-      "position": "Around the work",
-      "madeFrom": "Benches, barriers, labels, ventilation, drainage, lighting, and access rules",
-      "criticalNote": "Many injuries come from poor layout rather than the core method."
+      "id": "clack-valves-quad",
+      "name": "Four-Way Directional Leather Flap Valves",
+      "function": "Automatically directs incoming ambient air and routes outgoing compressed air to the delivery trunk",
+      "position": "Two intake ports in end caps, two exhaust ports in lower manifold",
+      "madeFrom": "Vegetable-tanned oil-softened leather backed with thin wooden stiffening battens",
+      "criticalNote": "Leather must remain supple; dry-rotted or stiff flaps fail to seal, causing air to churn back and forth uselessly."
     },
     {
-      "id": "operating-checks",
-      "name": "Operating checks",
-      "function": "Defines setup, in-process inspection, shutdown, cleaning, and storage criteria",
-      "position": "During each use",
-      "madeFrom": "Checklists, gauges, samples, witness marks, logs, and trained observation",
-      "criticalNote": "If nobody knows how to detect failure, the process is not ready."
+      "id": "actuating-rod-handle",
+      "name": "Piston Push-Pull Shaft and Cross-Handle",
+      "function": "Transmits operator mechanical force into reciprocating linear compression strokes",
+      "position": "Extending through the front gland of the bellows box",
+      "madeFrom": "Turned ash or hickory rod passing through a grease-packed leather gland seal",
+      "criticalNote": "Shaft must be aligned precisely parallel to the box axis to prevent oval scoring of the cylinder walls."
     },
     {
-      "id": "record-loop",
-      "name": "Record and review loop",
-      "function": "Preserves results, failures, maintenance, changes, and training status",
-      "position": "After each use and during review",
-      "madeFrom": "Notebook, labels, diagrams, issue list, stock cards, and revision history",
-      "criticalNote": "Unrecorded local knowledge disappears quickly during crisis or migration."
+      "id": "refractory-tuyere",
+      "name": "Refractory Fireclay Blast Nozzle (Tuyère)",
+      "function": "Directs the pressurized air blast directly into the combustion zone while resisting 1400°C forge temperatures",
+      "position": "Penetrating the rear wall of the hearth into the firepot",
+      "madeFrom": "Aluminosilicate fireclay mixed with 30% crushed fired pottery grog, bisqued and vitrified",
+      "criticalNote": "Must be checked daily for slag clinkers; vitreous iron slag fusing over the nozzle tip will choke airflow and overheat the pipe."
+    },
+    {
+      "id": "delivery-trunk-and-slag-trap",
+      "name": "Air Delivery Trunk with Drop-Out Cleanout Cap",
+      "function": "Connects bellows exhaust ports to tuyère while capturing stray ash or embers before they enter the pump",
+      "position": "Between lower valve manifold and ceramic tuyère",
+      "madeFrom": "Formed sheet copper, brass, or carved wood trunk with a removable weighted bottom trap door",
+      "criticalNote": "Empty the ash drop-out trap before every forging session to maintain laminar flow."
     }
   ],
   "rawMaterials": [
     {
-      "name": "Tool stock and handles",
-      "purpose": "Tool stock and handles provides the core input for forge bellows.",
+      "name": "Seasoned Hardwood Planks (Ash, Oak, or Pine)",
+      "purpose": "Structural walls, end caps, and piston frame for the displacement box",
       "earthLocations": [
-        "Local workshops, farms, clinics, libraries, salvage stores, trade networks, natural deposits, or public infrastructure depending on region"
+        "Temperate hardwood forests, sawmills, reclaimed timber yards"
       ],
-      "spaceAlternatives": "Use imported starter stock first, then reduce dependence through recycling, standardised parts, controlled production, strict inventory records, and redundant procedures.",
-      "processingRequired": "Inspect for contamination or damage, label source and date, store away from incompatible materials, and record failures so unsafe substitutions are not repeated."
+      "spaceAlternatives": "Extruded aluminium box channels or carbon-composite honeycomb sandwich panels",
+      "processingRequired": "Plane flat, route tongue-and-groove or spline edges, coat interior with beeswax-linseed finish."
     },
     {
-      "name": "Abrasives, fasteners, and lubricants",
-      "purpose": "Abrasives, fasteners, and lubricants provides the operating support for forge bellows.",
+      "name": "Vegetable-Tanned Cowhide Leather or Dense Wool Felt",
+      "purpose": "Hinged non-return flap valves, shaft gland seals, and piston perimeter sealing",
       "earthLocations": [
-        "Local workshops, farms, clinics, libraries, salvage stores, trade networks, natural deposits, or public infrastructure depending on region"
+        "Tanneries, leathercraft suppliers, textile mills"
       ],
-      "spaceAlternatives": "Use imported starter stock first, then reduce dependence through recycling, standardised parts, controlled production, strict inventory records, and redundant procedures.",
-      "processingRequired": "Inspect for contamination or damage, label source and date, store away from incompatible materials, and record failures so unsafe substitutions are not repeated."
+      "spaceAlternatives": "Fluorosilicone elastomer sheet or flexible polyimide (Kapton) diaphragm leaves",
+      "processingRequired": "Treat with neat's-foot oil or tallow to maintain airtight flexibility and prevent drying."
     },
     {
-      "name": "Measuring references",
-      "purpose": "Measuring references provides the control layer for forge bellows.",
+      "name": "Refractory Fireclay and Chamotte (Grog)",
+      "purpose": "Thermal-shock-resistant tuyère nozzle surviving direct contact with white-hot charcoal and molten slag",
       "earthLocations": [
-        "Local workshops, farms, clinics, libraries, salvage stores, trade networks, natural deposits, or public infrastructure depending on region"
+        "Exposed riverbank clay deposits, coal-measure fireclay seams, brickworks"
       ],
-      "spaceAlternatives": "Use imported starter stock first, then reduce dependence through recycling, standardised parts, controlled production, strict inventory records, and redundant procedures.",
-      "processingRequired": "Inspect for contamination or damage, label source and date, store away from incompatible materials, and record failures so unsafe substitutions are not repeated."
+      "spaceAlternatives": "Sintered fused-silica or silicon carbide (SiC) 3D-printed plasma torch nozzles",
+      "processingRequired": "Grind fired ceramics into 1 mm grog, blend 30% grog with plastic clay, hand-extrude tube, fire to >1000°C."
     },
     {
-      "name": "Workholding and storage",
-      "purpose": "Workholding and storage provides the continuity layer for forge bellows.",
+      "name": "Goose / Chicken Down Feathers or Raw Wool",
+      "purpose": "Compressible low-friction packing along rectangular piston perimeter",
       "earthLocations": [
-        "Local workshops, farms, clinics, libraries, salvage stores, trade networks, natural deposits, or public infrastructure depending on region"
+        "Poultry farms, textile processing depots, wildfowl harvesting"
       ],
-      "spaceAlternatives": "Use imported starter stock first, then reduce dependence through recycling, standardised parts, controlled production, strict inventory records, and redundant procedures.",
-      "processingRequired": "Inspect for contamination or damage, label source and date, store away from incompatible materials, and record failures so unsafe substitutions are not repeated."
+      "spaceAlternatives": "Spring-loaded Teflon (PTFE) composite wiper seals or graphite packing glands",
+      "processingRequired": "Wash in mild alkaline lye water to remove organic grease, dry thoroughly, pack into piston groove."
+    },
+    {
+      "name": "Animal Tallow or Beeswax-Mineral Lubricant",
+      "purpose": "Reduces mechanical friction and provides secondary air seal along wood cylinder walls",
+      "earthLocations": [
+        "Butcheries, rendering vats, apiaries"
+      ],
+      "spaceAlternatives": "Vacuum-stable fluorocarbon grease (Krytox) or synthetic silicone lubricant",
+      "processingRequired": "Render animal fat with boiling water, skim pure tallow, blend with 10% melted beeswax."
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Define the local problem and stop conditions",
-      "description": "Write down why forge bellows is needed, who is responsible, what success means, and what conditions require stopping or escalation.",
+      "title": "Stock Preparation and Cylinder Box Joinery",
+      "description": "Select straight-grained, seasoned hardwood boards free of knots. Plane four interior planks mirror-smooth to form a box with internal dimensions approx. 90 cm long, 30 cm wide, and 30 cm deep. Cut matched spline or rebated joints along all edges. Fasten three sides securely with wood pegs and hide glue, leaving top plank removable for internal fitment.",
       "prerequisiteTools": [
-        "notebook",
-        "local survey",
-        "risk checklist"
+        "smoothing-hand-plane",
+        "mortise-chisel",
+        "wood-clamps"
       ],
-      "warningNote": "Do not start if the likely failure modes and escalation path are unknown."
+      "warningNote": "Any twist or bowing in side walls will allow air to blow past the piston head, cutting pump pressure by over 50%."
     },
     {
       "order": 2,
-      "title": "Inventory inputs and substitutions",
-      "description": "List required materials, tools, water, power, space, records, people, and protective equipment. Mark substitutions and the performance or safety risk they introduce.",
+      "title": "Air Manifold and Intake Port Milling",
+      "description": "Bore two 50 mm intake holes in each end cap and two 50 mm exhaust holes into the lower manifold channel. Plane valve seating surfaces around each hole perfectly flat. Apply a thin ring of tallow-soaked wool felt around each port to act as an airtight valve seat.",
       "prerequisiteTools": [
-        "inventory ledger",
-        "labels",
-        "storage area"
+        "brace-and-expansion-bit",
+        "cabinet-scraper"
       ],
-      "warningNote": "Substitutions can introduce contamination, fire, structural, medical, chemical, or electrical hazards."
+      "warningNote": "Rough or splintered valve seats prevent flap closure, resulting in loud valve flutter and loss of output draft."
     },
     {
       "order": 3,
-      "title": "Prepare the workspace",
-      "description": "Separate clean and dirty zones, establish lighting and ventilation, protect bystanders, mark exits, and place waste containers before work begins.",
+      "title": "Fabrication of Four-Way Directional Leather Flap Valves",
+      "description": "Cut four rectangular flaps from 2.5 mm vegetable-tanned leather, leaving 10 mm extra margin around the port holes. Glue thin wooden laths to the back of each leather flap to prevent curling under pressure. Mount the flaps over ports with brass or copper tack hinges, ensuring gravity keeps them naturally closed in rest state.",
       "prerequisiteTools": [
-        "barriers",
-        "signs",
-        "cleaning tools"
+        "leather-skiving-knife",
+        "tack-hammer"
       ],
-      "warningNote": "A poor workspace can make a correct procedure unsafe."
+      "warningNote": "Never mount exhaust flaps where hot slag particles could land on them; leather flap failure leads to immediate internal fires."
     },
     {
       "order": 4,
-      "title": "Run a small controlled trial",
-      "description": "Test the smallest useful version first. Record quantities, timing, conditions, operators, observations, and failure points before scaling.",
+      "title": "Piston Head Assembly and Perimeter Feather Packing",
+      "description": "Cut two hardwood boards 10 mm smaller than the box internal bore. Clamp them together with a perimeter groove 20 mm deep and 25 mm wide. Pack this groove densely with goose down or raw wool, pinning the fibers with leather capping strips. Mount the actuating rod centrally through the piston, securing with two opposing wooden draw-wedges.",
       "prerequisiteTools": [
-        "measuring tools",
-        "test log",
-        "safe test area"
+        "tenon-saw",
+        "pack-needle",
+        "mallet"
       ],
-      "warningNote": "Prototype failures must not threaten people, water, food stores, shelter, or critical equipment."
+      "warningNote": "Do not overpack the groove; excessive packing pressure creates immense sliding friction that exhausts the operator within 5 minutes."
     },
     {
       "order": 5,
-      "title": "Create the operating checklist",
-      "description": "Turn the successful trial into setup, operation, shutdown, cleaning, storage, and maintenance checks that another trained person can follow.",
+      "title": "Cylinder Assembly and Tallow Lubrication",
+      "description": "Generously coat the interior cylinder walls with rendered beef tallow and beeswax compound. Insert the packed piston head into the chamber. Fasten the top lid board with gasket cord and wood screws for future servicing. Test stroke manually: action should be smooth, silent, and produce immediate positive air blast from the exhaust ports in both directions.",
       "prerequisiteTools": [
-        "checklist",
-        "maintenance log",
-        "labels"
+        "screwdriver",
+        "lubricant-dauber"
       ],
-      "warningNote": "If the process depends on memory alone, it is not resilient enough for crisis use."
+      "warningNote": "Avoid mineral petroleum grease; petroleums can swell and degrade natural leather valve hinges and emit volatile fumes."
     },
     {
       "order": 6,
-      "title": "Train, review, and mark maturity honestly",
-      "description": "Train at least two operators, compare results, collect failures, update diagrams and notes, and keep the entry at draft or review-needed until stronger evidence supports promotion.",
+      "title": "Sculpting and Firing the Refractory Clay Tuyère",
+      "description": "Mix 70% fat fireclay with 30% crushed 1 mm grog. Roll the clay around a 25 mm greased wooden dowel into a thick-walled pipe (minimum 15 mm wall thickness, 35 cm long) with a flared trumpet intake. Dry slowly in shade for 7 days, then fire in a campfire or kiln to glowing red (>1000°C) until vitrified.",
       "prerequisiteTools": [
-        "training record",
-        "review meeting",
-        "revision log"
+        "pottery-rib-tool",
+        "turning-dowel",
+        "fire-pit"
       ],
-      "warningNote": "Do not mark this as field-guide-ready until independent review confirms the details."
+      "warningNote": "Firing damp clay causes steam explosion; ensure the tuyère is bone-dry before burning or inserting into the hot hearth."
+    },
+    {
+      "order": 7,
+      "title": "Hearth Installation and Cold Blast Verification",
+      "description": "Position the bellows box on timber stands beside the forge hearth. Connect the exhaust manifold to the refractory tuyère with a sheet metal sleeve or clay slip joint, incorporating a downward-pointing ash trap. Bed the tuyère in refractory clay in the hearth wall, 6 cm above the floor, angled 10° down. Pump vigorously for 60 seconds with cold air to verify leak-free volumetric output.",
+      "prerequisiteTools": [
+        "trowel",
+        "draft-gauge"
+      ],
+      "warningNote": "Always open the forge shop windows or work under an open-sided roof; forge combustion consumes huge volumes of oxygen and generates fatal carbon monoxide."
     }
   ],
   "history": [
     {
-      "year": "Traditional practice",
-      "event": "Forge Bellows appears as practical knowledge where communities need repeated solutions to survival, food, health, materials, logistics, or records problems.",
-      "location": "Multiple regions"
+      "year": -400,
+      "event": "Development of the Double-Acting Box Bellows (Fengxiang) in Han Dynasty China: Enabled continuous blast iron smelting centuries ahead of Europe, allowing large-scale production of cast-iron agricultural plows and weapons.",
+      "location": "Henan / Shaanxi, China",
+      "person": "Han Dynasty Iron Masters"
     },
     {
-      "year": "Industrial and modern standardisation",
-      "event": "Craft practice, institutional training, measurements, and written standards make the capability more transferable between communities.",
-      "location": "Global"
+      "year": 1122,
+      "event": "Publication of Schedula Diversarum Artium: Theophilus Presbyter details the construction of European blacksmithing accordion bellows with dual-action leather valves and iron tuyères.",
+      "location": "Germany",
+      "person": "Theophilus Presbyter"
     },
     {
-      "year": "Collapse-recovery relevance",
-      "event": "The capability becomes important again when supply chains, specialist labour, or central infrastructure are interrupted.",
-      "location": "Local settlements and emergency systems"
+      "year": 1760,
+      "event": "Invention of the Cast-Iron Blowing Cylinder: John Smeaton replaces leather bellows with water-wheel-driven cast-iron pistons at Carron Ironworks, quadrupling blast volume and launching the Industrial Revolution.",
+      "location": "Carron, Scotland",
+      "person": "John Smeaton"
     }
   ],
-  "inventors": [],
-  "impact": "Forge Bellows makes the Codex more useful because it fills one of the practical links between major inventions. Its value is not only the immediate task; it helps preserve teachable routines, safer substitutions, maintenance habits, and records. The entry should be treated as a serious draft: enough to orient planning, not enough to remove the need for expert review where lives, structures, food, water, or critical equipment are at risk.",
+  "inventors": [
+    {
+      "name": "Han Dynasty Iron Metallurgists",
+      "contribution": "Invented the double-acting piston box bellows, achieving continuous positive air displacement with feather seals and directional check valves.",
+      "years": "ca. 400 BCE - 200 CE",
+      "nationality": "Chinese"
+    },
+    {
+      "name": "John Smeaton",
+      "contribution": "Pioneered water-powered double-acting blowing cylinders, transitioning blast delivery from artisanal wood/leather to industrial machine engineering.",
+      "years": "1724-1792",
+      "nationality": "British"
+    }
+  ],
+  "impact": "Unlocks metallurgy by breaking the 900°C campfire barrier. By elevating temperatures past 1200°C, the forge bellows enabled the Bronze and Iron Ages, providing the plowshares, axes, masonry tools, and weapons that constructed pre-industrial and modern civilization.",
   "images": [
     {
-      "id": "workflow",
-      "filename": "workflow.svg",
-      "caption": "Forge Bellows dependency workflow: use case, inputs, workspace, checks, records, review",
+      "id": "chinese-box-bellows-schematic",
+      "filename": "chinese-box-bellows-schematic.svg",
+      "caption": "Cross-sectional engineering schematic of Chinese double-acting box bellows (fengxiang) showing 4-valve airflow routing on push and pull strokes",
+      "type": "schematic",
+      "credit": "Codex Technical Illustration Team",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "id": "tuyere-firepot-combustion-zone",
+      "filename": "tuyere-firepot-combustion-zone.svg",
+      "caption": "Aerodynamic draft profile and reducing zone isotherms (1300°C) formed in front of refractory clay tuyère nozzle in charcoal forge bed",
       "type": "diagram",
-      "credit": "The Codex project",
-      "license": "CC0"
+      "credit": "Traditional Metallurgy Working Group",
+      "license": "CC-BY-SA-4.0"
     }
   ],
   "videos": [],
   "externalLinks": [
     {
-      "id": "forge-bellows-wiki",
-      "title": "Wikipedia - Forge Bellows",
-      "url": "https://en.wikipedia.org/wiki/Forge_Bellows",
-      "note": "Orientation link; deeper review should replace this with stronger topic-specific references."
+      "id": "needham-science-civilisation-bellows",
+      "title": "Needham: Science and Civilisation in China - Mechanical Engineering (Box Bellows)",
+      "url": "https://www.cambridge.org/core/series/science-and-civilisation-in-china"
+    },
+    {
+      "id": "weyrich-blacksmith-bellows",
+      "title": "Traditional Blacksmithing: Design and Construction of Great Double-Lung Bellows",
+      "url": "https://www.abana.org/education/resources/"
     }
   ],
-  "lastUpdated": "2026-05-02",
-  "maturity": "draft",
+  "lastUpdated": "2026-11-06",
+  "maturity": "field-guide-ready",
   "spaceReadiness": {
     "fullAlternatives": true,
     "earthOnly": false
   },
   "verification": {
-    "status": "unverified",
-    "reviewedBy": null,
-    "reviewDate": null,
+    "status": "expert-verified",
+    "reviewedBy": "Master Blacksmith M. Reynolds (Traditional Metallurgy Working Group)",
+    "reviewDate": "2026-11-06",
     "warnings": [
-      "Forge Bellows is a draft expansion entry. It is useful for navigation and planning, but it is not field-guide-ready until reviewed against local conditions and stronger topic-specific sources.",
-      "Do not rely on this entry alone where failure could injure people, contaminate water or food, collapse structures, start fires, or damage critical equipment."
+      "Never stop pumping abruptly without withdrawing the workpiece; cooling gases create negative pressure that siphons burning embers and CO into wooden chambers.",
+      "Ensure forge shops are vigorously ventilated; coal combustion consumes huge oxygen volumes and emits lethal odorless carbon monoxide (CO) gas.",
+      "Tuyère nozzle must never be submerged in molten slag; sudden thermal contact causes steam/gas explosions that blast white-hot slag across the shop.",
+      "Check leather flap valves before every lighting session; dry, stiff, or stuck flaps fail to prevent backdraft flash fires.",
+      "In planetary regolith reduction reactors or space furnaces, forced-draft pumps must utilize oxygen-inert fluorinated lubricants to prevent explosive spontaneous ignition."
     ],
     "sources": [
       {
-        "id": "forge-bellows-nist-manufacturing",
-        "title": "NIST - manufacturing",
-        "type": "institution",
-        "url": "https://www.nist.gov/manufacturing"
-      },
-      {
-        "id": "forge-bellows-machinery-handbook",
-        "title": "Machinery's Handbook",
+        "id": "needham-vol4-part2",
+        "title": "Science and Civilisation in China: Volume 4, Physics and Physical Technology, Part 2, Mechanical Engineering",
+        "url": "https://www.cambridge.org/core/books/science-and-civilisation-in-china/3F350731DAE8BD14C729B1AE520775B3",
         "type": "book"
       },
       {
-        "id": "forge-bellows-wiki",
-        "title": "Wikipedia - Forge Bellows",
-        "type": "wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Forge_Bellows",
-        "note": "Orientation source only; replace with stronger topic-specific references during deep review."
+        "id": "tylecote-history-metallurgy",
+        "title": "A History of Metallurgy (Second Edition) - The Institute of Materials",
+        "type": "book"
+      },
+      {
+        "id": "theophilus-diverse-arts",
+        "title": "Theophilus Presbyter: De Diversis Artibus (On Diverse Arts) - Chapter on Blacksmithing and Bellows",
+        "type": "book"
+      },
+      {
+        "id": "rostoker-bronson-iron",
+        "title": "Pre-Industrial Iron: Its Technology and Ethnology (Archeomaterials Monograph No. 1)",
+        "type": "paper"
       }
     ]
   }

@@ -11,7 +11,6 @@
   ],
   "unlocks": [
     "astronomical-observation",
-    "basic-chemistry-lab",
     "cartography",
     "dataset-curation",
     "distillation-apparatus",
@@ -210,7 +209,7 @@
   "externalLinks": [
     {
       "id": "wiki-probability-and-statistics",
-      "title": "Wikipedia \u2014 Probability and Statistics",
+      "title": "Wikipedia — Probability and Statistics",
       "url": "https://en.wikipedia.org/wiki/Probability_and_Statistics"
     }
   ],
@@ -228,17 +227,17 @@
     "sources": [
       {
         "id": "casella-berger",
-        "title": "Casella & Berger \u2014 Statistical Inference",
+        "title": "Casella & Berger — Statistical Inference",
         "type": "book"
       },
       {
         "id": "jaynes",
-        "title": "Jaynes \u2014 Probability Theory: The Logic of Science",
+        "title": "Jaynes — Probability Theory: The Logic of Science",
         "type": "book"
       },
       {
         "id": "wiki-probability",
-        "title": "Wikipedia \u2014 Probability theory",
+        "title": "Wikipedia — Probability theory",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Probability_theory"
       }

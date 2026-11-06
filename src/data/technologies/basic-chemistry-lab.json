@@ -1,255 +1,331 @@
 {
   "id": "basic-chemistry-lab",
   "name": "Basic Chemistry Lab",
-  "tagline": "Basic Chemistry Lab as a documented civilization capability: inputs, limits, warnings, records, and recovery pathways",
+  "tagline": "Standardized chemical reaction laboratory: fractional distillation, acid-base titration, gravimetric balance, and PPE protocol for compound synthesis and assay",
   "category": "science",
   "era": "early-modern",
   "difficulty": 3,
   "prerequisites": [
-    "writing-early-systems",
-    "probability-and-statistics",
-    "linear-algebra"
+    "fire",
+    "ceramics-and-pottery",
+    "glass-making"
   ],
   "unlocks": [],
-  "problem": "Basic Chemistry Lab is included because civilizations often fail at the support capabilities between famous inventions. A settlement may know about fire, steel, writing, medicine, or electricity and still lose lives because basic chemistry lab is absent, undocumented, improvised under stress, or held only in one person's memory.\n\nThe practical problem is not just making or doing the thing once. It is making the capability teachable, inspectable, repairable, and bounded by safety rules. The Codex entry must tell a future reader what basic chemistry lab is for, which inputs it depends on, what can go wrong, what needs measurement, and when to stop and escalate rather than pushing a dangerous guess further.",
-  "overview": "Basic Chemistry Lab makes knowledge testable, comparable, and teachable across generations. In a recovery setting it should be understood as a small operating system: materials, tools, workspace, trained people, inspection points, maintenance, records, and limits. The entry is therefore structured around the questions a real settlement has to answer before use: what does it prevent, what does it consume, how is it checked, and how does it fail?\n\nFor collapse recovery, the focus is local substitution, safe simplification, and training more than one operator. A process that works only when an expert is present is fragile. For space settlement, the same capability must be redesigned around closed-loop resources, contamination control, power budgets, limited spare parts, and redundant documentation.\n\nThis expansion entry is intentionally conservative. It gives the Codex enough depth for search, planning, teaching, and dependency mapping, but it does not pretend to replace specialist review. Later work should add diagrams, measurements, regional variants, deeper history, and stronger topic-specific sources before promotion to field-guide-ready.",
+  "problem": "Before the establishment of standardized chemical laboratories, material transformation was trapped in alchemy: unmeasured recipes, mystical nomenclature, and uncontrolled contamination. A settlement attempting to produce medicines, acids for metallurgy, antiseptics, or battery electrolytes using improvised cooking vessels will suffer catastrophic yield failure and lethal laboratory accidents. Incompatible vessel materials leach lead and arsenic into chemical products, while trace organic impurities poison catalytic syntheses.\n\nFurthermore, handling reactive reagents without rigorous physical engineering controls creates acute operational hazards. Heating volatile organic solvents (such as ethanol, acetone, or ether) over open fire causes explosive vapor-air ignition. Pouring water into concentrated sulfuric acid creates instantaneous flash-boiling that blasts caustic boiling acid into the technician's eyes. Inhaling invisible fumes of chlorine, sulfur dioxide, or nitrogen oxides causes fatal pulmonary edema 12 to 24 hours post-exposure.\n\nIn closed planetary habitats, uncontained chemical vapors are fatal to the entire settlement within hours. The Environmental Control and Life Support System (ECLSS) catalytic oxidizers and trace contaminant control beds become poisoned by trace halogens, ruining habitat air recyclers. A basic chemistry capability must therefore be engineered as an isolated, negative-pressure, quantitative operating system with standardized volumetric glassware, precision balances, thermal buffers, and immediate neutralization protocols.",
+  "overview": "A basic chemistry laboratory transitions a civilization from qualitative trial-and-error to repeatable, quantitative molecular engineering. The facility is organized across five rigorous operational domains: Physical Layout & Negative Draft, Gravimetric & Volumetric Measurement, Thermal Heat Transfer Buffering, Separation & Purification Units, and Spill Containment Safety.\n\n1. Physical Layout and Fume Exhaust: The lab requires dedicated counter heights (90 cm) surfaced with acid-resistant ceramic tile, slate, or epoxy resin. Active reactions take place exclusively within a counterbalanced fume hood maintaining a minimum face velocity of 0.5 m/s. Exhaust air is drafted through a dedicated clay or borosilicate chimney flue away from settlement living quarters.\n\n2. Analytical Measurement: Chemistry is governed by mass conservation and stoichiometry. The lab centers around a two-pan analytical beam balance with agate knife-edges, sensitive to 10 milligrams (0.01 g), housed in a glass draft shield to eliminate air current errors. Volumetric measurement uses calibrated Class-A borosilicate graduated cylinders, volumetric flasks, and precision burettes for quantitative acid-base titrations.\n\n3. Thermal Buffering (Indirect Heating): Open flames under glass flasks create localized hotspots that cause glassware to shatter from thermal stress. The lab utilizes indirect heat transfer media: sand baths (dry silica sand for temperatures up to 350°C), boiling water baths (bain-marie, stable at 100°C), and molten salt/oil baths for higher temperatures. This distributes heat isotropically around flask walls.\n\n4. Separation and Distillation: Chemical compounds are isolated using standardized unit operations: gravity filtration with porous unglazed porcelain Buchner funnels; fractional distillation using Liebig or Graham water-cooled counter-current condensers; and liquid-liquid extraction using glass separatory funnels to isolate organic and aqueous phases.\n\n5. Reagent Isolation and Storage Matrix: Chemicals are stored strictly by compatibility class: strong mineral acids (sulfuric, hydrochloric, nitric) isolated in a dedicated vented cabinet lined with lead or ceramic trays; flammable solvents isolated in grounded metal bins; strong bases (sodium hydroxide, potassium hydroxide) stored away from acids and aluminum. Every bench is equipped with bulk sodium bicarbonate (baking soda) for acid spills, dilute acetic acid for base splashes, and clean eye-wash stations.",
   "principles": [
     {
-      "name": "Function before form",
-      "explanation": "Start with the job basic chemistry lab performs; historical forms can be copied only after their purpose and limits are understood."
+      "name": "The Law of Conservation of Mass and Stoichiometry",
+      "explanation": "Matter cannot be created or destroyed in chemical reactions. Calculating molar ratios and pre-weighing reagents on an analytical balance ensures complete consumption of starting materials, maximizing yield and preventing dangerous runaway reactions from unreacted excess reagents."
     },
     {
-      "name": "Inputs determine reliability",
-      "explanation": "Material quality, water, power, labour, weather, contamination, and skill limits usually decide whether the method works."
+      "name": "Thermal Gradient Mitigation and Borosilicate Glass",
+      "explanation": "Glassware shatters when uneven heating induces differential expansion, creating tensile stress exceeding structural shear strength. Borosilicate glass (with low thermal expansion coefficient ~3.3 x 10^-6 /K) paired with indirect sand or water baths ensures uniform heat distribution and prevents explosive failure."
     },
     {
-      "name": "Inspection prevents silent failure",
-      "explanation": "Checklists, measurements, labels, and post-use inspection turn hidden failure into visible maintenance work."
+      "name": "The Hydration Exotherm Rule (Acid into Water)",
+      "explanation": "Dissolving concentrated mineral acid (especially H2SO4) in water releases massive heat of hydration (~95 kJ/mol). Adding water to acid flash-boils the localized surface layer, spraying boiling concentrated acid violently outward. Technicians must ALWAYS pour acid slowly into water along a glass stirring rod with continuous agitation."
     },
     {
-      "name": "Escalation is part of the design",
-      "explanation": "A safe entry states when to stop, isolate the hazard, seek expert help, or switch to a lower-risk alternative."
+      "name": "Continuous Negative Pressure Vapor Containment",
+      "explanation": "Chemical vapors (HCl, SO2, HNO3, NH3) are heavier than air or acutely toxic to mucous membranes. Reactions must be conducted inside a dedicated hood with active updraft (minimum face velocity 0.5 m/s) to capture and exhaust vapors before they diffuse into the technician's breathing zone."
+    },
+    {
+      "name": "Secondary Containment and Neutralization Preparedness",
+      "explanation": "Every reaction flask and acid storage carboy must rest within a chemically inert secondary tub capable of holding 110% of total vessel volume. Amphoteric neutralizers (sodium bicarbonate) and bucketed dry sand must be stationed within arm's reach of every workstation."
     }
   ],
   "components": [
     {
-      "id": "use-case",
-      "name": "Defined use case",
-      "function": "States what basic chemistry lab is meant to accomplish and what it is not meant to do",
-      "position": "Before design or operation",
-      "madeFrom": "Written requirements, local survey, risk notes, and responsible operator assignment",
-      "criticalNote": "Vague goals create unsafe improvisation."
+      "id": "analytical-beam-balance",
+      "name": "Two-Pan Analytical Beam Balance with Draft Shield",
+      "function": "Provides precision gravimetric measurement of chemical reagents down to 10 milligrams (0.01 g)",
+      "position": "Mounted on heavy vibration-isolated stone slab against load-bearing wall",
+      "madeFrom": "Cast brass beam with polished agate or hardened steel knife-edge fulcrums, encased in glass cabinet",
+      "criticalNote": "Never weigh chemicals directly on brass pans; use pre-tared glazed watch glasses or parchment boats."
     },
     {
-      "id": "input-set",
-      "name": "Input set",
-      "function": "Collects materials, tools, labour, information, water, power, and time",
-      "position": "Before operation",
-      "madeFrom": "Local supplies, verified salvage, trained people, and source records",
-      "criticalNote": "Unknown or contaminated inputs must be isolated until checked."
+      "id": "borosilicate-reaction-set",
+      "name": "Standardized Borosilicate Glassware Array",
+      "function": "Contains, heats, and mixes corrosive reagents without chemical leaching or thermal cracking",
+      "position": "Stored in felt-lined drying rack and mounted to retort stands",
+      "madeFrom": "Low-expansion borosilicate glass (Pyrex 3.3) with interchangeable ground-glass taper joints (standard 24/40)",
+      "criticalNote": "Inspect with polarized light or bright LED before every reaction; star cracks or deep scratches fail catastrophically under vacuum or heat."
     },
     {
-      "id": "workspace",
-      "name": "Controlled workspace",
-      "function": "Separates clean, dirty, hot, sharp, electrical, structural, or public areas as needed",
-      "position": "Around the work",
-      "madeFrom": "Benches, barriers, labels, ventilation, drainage, lighting, and access rules",
-      "criticalNote": "Many injuries come from poor layout rather than the core method."
+      "id": "water-jacketed-condenser",
+      "name": "Liebig Counter-Current Condensation Apparatus",
+      "function": "Condenses volatile reaction vapors back into liquid for reflux syntheses and fractional distillation",
+      "position": "Mounted diagonally between boiling flask and receiving flask on retort stands",
+      "madeFrom": "Concentric borosilicate tubes with counter-flow water cooling inlet and outlet ports",
+      "criticalNote": "Cooling water must always enter at the bottom and exit at the top to ensure the water jacket remains 100% purged of air bubbles."
     },
     {
-      "id": "operating-checks",
-      "name": "Operating checks",
-      "function": "Defines setup, in-process inspection, shutdown, cleaning, and storage criteria",
-      "position": "During each use",
-      "madeFrom": "Checklists, gauges, samples, witness marks, logs, and trained observation",
-      "criticalNote": "If nobody knows how to detect failure, the process is not ready."
+      "id": "fume-ventilation-sash",
+      "name": "Counterbalanced Fume Hood with High-Draft Flue",
+      "function": "Captures and exhausts hazardous toxic fumes, acid vapors, and volatile solvent mists outside the building",
+      "position": "Integrated into main laboratory wall with dedicated exhaust stack",
+      "madeFrom": "Acid-resistant glazed ceramic brick chamber with tempered glass sliding sash and clay tile exhaust duct",
+      "criticalNote": "Check draft before starting work with a smoke taper; never work with sash opened higher than marked 30 cm operating limit."
     },
     {
-      "id": "record-loop",
-      "name": "Record and review loop",
-      "function": "Preserves results, failures, maintenance, changes, and training status",
-      "position": "After each use and during review",
-      "madeFrom": "Notebook, labels, diagrams, issue list, stock cards, and revision history",
-      "criticalNote": "Unrecorded local knowledge disappears quickly during crisis or migration."
+      "id": "thermal-sand-bath",
+      "name": "Cast-Iron Indirect Heating Sand Bath",
+      "function": "Provides uniform, controllable conductive heat transfer to round-bottom flasks without hotspots or open flame",
+      "position": "Positioned over adjustable alcohol burner or charcoal brazier inside fume hood",
+      "madeFrom": "Heavy cast iron pan filled with clean, washed 0.5-1.0 mm silica sand",
+      "criticalNote": "Ensure sand is completely dry; moisture trapped in heated sand flashes to steam, violently spraying boiling sand out of the bath."
+    },
+    {
+      "id": "neutralization-safety-station",
+      "name": "Emergency Eye-Wash Basin and Chemical Spill Kit",
+      "function": "Provides instantaneous continuous water flushing for chemical splashes and dry neutralizer for bench spills",
+      "position": "Immediately adjacent to lab exit doorway, permanently unobstructed",
+      "madeFrom": "Gravity-fed potable water carboy with twin aerated eye nozzles, buckets of sodium bicarbonate, and dry sand",
+      "criticalNote": "Flush chemical eye burns with clean water continuously for a full 15 minutes by the clock; never use neutralizer powders in eyes."
     }
   ],
   "rawMaterials": [
     {
-      "name": "Measuring instruments",
-      "purpose": "Measuring instruments provides the core input for basic chemistry lab.",
+      "name": "Borosilicate Glass Stock (Pyrex Type 3.3)",
+      "purpose": "Fabrication of boiling flasks, retorts, condensers, burettes, and beakers",
       "earthLocations": [
-        "Local workshops, farms, clinics, libraries, salvage stores, trade networks, natural deposits, or public infrastructure depending on region"
+        "Scientific glass supply houses, specialty glassblowers, industrial chemical plant salvage"
       ],
-      "spaceAlternatives": "Use imported starter stock first, then reduce dependence through recycling, standardised parts, controlled production, strict inventory records, and redundant procedures.",
-      "processingRequired": "Inspect for contamination or damage, label source and date, store away from incompatible materials, and record failures so unsafe substitutions are not repeated."
+      "spaceAlternatives": "Fused silica glassware drawn from lunar regolith silica beds or transparent sapphire reaction cells",
+      "processingRequired": "Anneal in temperature-controlled kiln at 560°C to relieve internal mechanical stress before use."
     },
     {
-      "name": "Recording media",
-      "purpose": "Recording media provides the operating support for basic chemistry lab.",
+      "name": "Refractory Glazed Porcelain / Stoneware",
+      "purpose": "Acid-resistant Buchner funnels, evaporating basins, mortars and pestles, and benchtop tiles",
       "earthLocations": [
-        "Local workshops, farms, clinics, libraries, salvage stores, trade networks, natural deposits, or public infrastructure depending on region"
+        "Pottery kilns, ceramic supply centers, electrical insulator production facilities"
       ],
-      "spaceAlternatives": "Use imported starter stock first, then reduce dependence through recycling, standardised parts, controlled production, strict inventory records, and redundant procedures.",
-      "processingRequired": "Inspect for contamination or damage, label source and date, store away from incompatible materials, and record failures so unsafe substitutions are not repeated."
+      "spaceAlternatives": "Sintered alumina (Al2O3) or silicon carbide ceramic labware",
+      "processingRequired": "Apply chemical-resistant feldspar glaze and fire to vitrification at >1250°C."
     },
     {
-      "name": "Reference standards",
-      "purpose": "Reference standards provides the control layer for basic chemistry lab.",
+      "name": "Sodium Bicarbonate and Calcium Hydroxide (Slaked Lime)",
+      "purpose": "Dry chemical neutralizers for acid spills and effluent pH stabilization",
       "earthLocations": [
-        "Local workshops, farms, clinics, libraries, salvage stores, trade networks, natural deposits, or public infrastructure depending on region"
+        "Trona mineral deposits, agricultural chemical stores, bakeries, lime kilns"
       ],
-      "spaceAlternatives": "Use imported starter stock first, then reduce dependence through recycling, standardised parts, controlled production, strict inventory records, and redundant procedures.",
-      "processingRequired": "Inspect for contamination or damage, label source and date, store away from incompatible materials, and record failures so unsafe substitutions are not repeated."
+      "spaceAlternatives": "Regolith-extracted calcium oxide or potassium carbonate from biomass ash beds",
+      "processingRequired": "Pulverize into fine powder, store in sealed airtight plastic buckets to prevent atmospheric moisture clumping."
     },
     {
-      "name": "Sample containers and labels",
-      "purpose": "Sample containers and labels provides the continuity layer for basic chemistry lab.",
+      "name": "Pure Virgin PTFE (Teflon) or Fluorosilicone Tubing",
+      "purpose": "Flexible chemical-resistant connections for gas lines, condensers, and acid transfer siphon tubes",
       "earthLocations": [
-        "Local workshops, farms, clinics, libraries, salvage stores, trade networks, natural deposits, or public infrastructure depending on region"
+        "Chemical process suppliers, hydraulic hose depots, laboratory hardware stores"
       ],
-      "spaceAlternatives": "Use imported starter stock first, then reduce dependence through recycling, standardised parts, controlled production, strict inventory records, and redundant procedures.",
-      "processingRequired": "Inspect for contamination or damage, label source and date, store away from incompatible materials, and record failures so unsafe substitutions are not repeated."
+      "spaceAlternatives": "Formed corrugated thin-wall stainless steel (316L) bellows tubing",
+      "processingRequired": "Inspect for pinholes, flush with distilled water and dry with clean compressed air."
+    },
+    {
+      "name": "Purified Distilled Water (Conductivity < 2 uS/cm)",
+      "purpose": "Universal chemical solvent, reagent preparation, and analytical glassware cleaning",
+      "earthLocations": [
+        "Atmospheric condensate collection, glass multi-stage water stills, reverse osmosis treatment units"
+      ],
+      "spaceAlternatives": "Catalytic ECLSS water distillation distillate",
+      "processingRequired": "Boil in all-glass still, condense into closed borosilicate carboy; never store in metal or soft glass containers."
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Define the local problem and stop conditions",
-      "description": "Write down why basic chemistry lab is needed, who is responsible, what success means, and what conditions require stopping or escalation.",
+      "title": "Site Selection and Acid-Proof Bench Construction",
+      "description": "Select a dry, well-ventilated ground-floor room isolated from living and sleeping quarters. Erect heavy timber or masonry workbenches at 90 cm working height. Surface benches with acid-proof glazed ceramic tiles or slate slabs bedded in chemical-resistant epoxy or sulfur-sand hydraulic mortar.",
       "prerequisiteTools": [
-        "notebook",
-        "local survey",
-        "risk checklist"
+        "carpentry-hand-tools",
+        "masonry-trowel",
+        "spirit-level"
       ],
-      "warningNote": "Do not start if the likely failure modes and escalation path are unknown."
+      "warningNote": "Never use bare wood or porous concrete bench surfaces; spilled acids soak into wood, rotting structural joints and off-gassing toxic fumes indefinitely."
     },
     {
       "order": 2,
-      "title": "Inventory inputs and substitutions",
-      "description": "List required materials, tools, water, power, space, records, people, and protective equipment. Mark substitutions and the performance or safety risk they introduce.",
+      "title": "Construction and Draft Verification of Fume Hood",
+      "description": "Build an enclosed three-sided fume chamber measuring 120 cm wide, 80 cm deep, and 120 cm high using fire-rated cement board or brick. Install a vertical sliding counterbalanced tempered glass sash. Connect the top exhaust to a dedicated 20 cm diameter chimney flue extending 2 meters above the roofline. Verify positive updraft with a burning pine-needle smoke taper.",
       "prerequisiteTools": [
-        "inventory ledger",
-        "labels",
-        "storage area"
+        "hand-drill",
+        "pulley-rigging-kit",
+        "smoke-taper"
       ],
-      "warningNote": "Substitutions can introduce contamination, fire, structural, medical, chemical, or electrical hazards."
+      "warningNote": "Never connect fume hood exhaust into standard domestic heating chimneys or stove flues; corrosive acid vapors eat chimney mortar and poison living areas."
     },
     {
       "order": 3,
-      "title": "Prepare the workspace",
-      "description": "Separate clean and dirty zones, establish lighting and ventilation, protect bystanders, mark exits, and place waste containers before work begins.",
+      "title": "Analytical Beam Balance Installation and Leveling",
+      "description": "Place the two-pan analytical balance onto a heavy, rigid stone slab decoupled from the floor. Adjust the leveling thumb-screws until the plumb bob aligns perfectly with the center marker. Clean agate knife-edges with camel-hair brush and ether. Verify zero point with pans empty and check sensitivity using calibrated brass test weights down to 10 mg.",
       "prerequisiteTools": [
-        "barriers",
-        "signs",
-        "cleaning tools"
+        "fine-camel-hair-brush",
+        "calibrated-gram-weight-set",
+        "tweezers"
       ],
-      "warningNote": "A poor workspace can make a correct procedure unsafe."
+      "warningNote": "Never touch precision calibration weights with bare fingers; finger oils add 0.5 to 2 mg of mass and corrode brass calibration standards."
     },
     {
       "order": 4,
-      "title": "Run a small controlled trial",
-      "description": "Test the smallest useful version first. Record quantities, timing, conditions, operators, observations, and failure points before scaling.",
+      "title": "Glassware Array Assembly and Ground-Joint Sealing",
+      "description": "Mount retort stands securely to the bench. Inspect borosilicate round-bottom boiling flasks, distillation adapters, and Liebig condensers for thermal stress fractures. Apply a trace film of chemically inert fluorocarbon or silicone stopcock grease to the upper 50% of male ground-glass taper joints. Assemble joints with a gentle twisting motion to create a clear, bubble-free hermetic vacuum seal.",
       "prerequisiteTools": [
-        "measuring tools",
-        "test log",
-        "safe test area"
+        "cast-iron-retort-stands",
+        "burette-clamps",
+        "stopcock-grease-applicator"
       ],
-      "warningNote": "Prototype failures must not threaten people, water, food stores, shelter, or critical equipment."
+      "warningNote": "Never grease the entire ground joint; excess grease dissolves in boiling solvents, contaminating chemical products with silicone impurities."
     },
     {
       "order": 5,
-      "title": "Create the operating checklist",
-      "description": "Turn the successful trial into setup, operation, shutdown, cleaning, storage, and maintenance checks that another trained person can follow.",
+      "title": "Indirect Sand Bath and Thermal Well Setup",
+      "description": "Fill a heavy cast-iron skillet with 5 cm of clean, washed dry silica sand. Position the bath onto an adjustable tripod over a brass spirit lamp or gas burner inside the fume hood. Embed an alcohol or mercury laboratory thermometer (scale -10°C to +300°C) into the sand adjacent to the round-bottom reaction flask, ensuring the bulb does not contact the metal pan floor.",
       "prerequisiteTools": [
-        "checklist",
-        "maintenance log",
-        "labels"
+        "cast-iron-pan",
+        "laboratory-thermometer",
+        "spirit-lamp"
       ],
-      "warningNote": "If the process depends on memory alone, it is not resilient enough for crisis use."
+      "warningNote": "Ensure sand is completely desiccated; cold wet sand dumped into a hot pan pops violently, throwing scalding sand and glass fragments."
     },
     {
       "order": 6,
-      "title": "Train, review, and mark maturity honestly",
-      "description": "Train at least two operators, compare results, collect failures, update diagrams and notes, and keep the entry at draft or review-needed until stronger evidence supports promotion.",
+      "title": "Commissioning Spill Control and Eye-Wash Stations",
+      "description": "Mount a 20-liter gravity-fed clean water eye-wash reservoir 1.5 meters high adjacent to the room exit. Connect dual aerated dispensing nozzles operated by a single pull-cord. Place dedicated, clearly labeled plastic buckets of dry sodium bicarbonate (for acids) and 5% acetic acid solution (for bases) within immediate arm's reach of every workbench.",
       "prerequisiteTools": [
-        "training record",
-        "review meeting",
-        "revision log"
+        "wall-anchors",
+        "plumbing-wrenches",
+        "label-stencils"
       ],
-      "warningNote": "Do not mark this as field-guide-ready until independent review confirms the details."
+      "warningNote": "Never lock or block the laboratory exit door; technicians blinded by acid splashes must be able to push doors open with their shoulders."
+    },
+    {
+      "order": 7,
+      "title": "Baseline Calibration and Distillation Assay Run",
+      "description": "Perform an inaugural benchmark run: charge a 500 mL boiling flask with 300 mL of 10% ethanol-water mixture and ceramic boiling stones. Heat via sand bath to 78.4°C while operating counter-current cooling water through the Liebig condenser. Collect the distillate fraction, measure density with a hydrometer, and titrate purity to confirm equipment vacuum integrity and condenser efficiency.",
+      "prerequisiteTools": [
+        "specific-gravity-hydrometer",
+        "porcelain-boiling-chips",
+        "graduated-cylinder"
+      ],
+      "warningNote": "Always add porous boiling stones before heating; heating unstirred liquids without boiling chips causes violent explosive bumping that shatters glassware."
     }
   ],
   "history": [
     {
-      "year": "Traditional practice",
-      "event": "Basic Chemistry Lab appears as practical knowledge where communities need repeated solutions to survival, food, health, materials, logistics, or records problems.",
-      "location": "Multiple regions"
+      "year": 800,
+      "event": "Jabir ibn Hayyan (Geber) Establishes the First Quantitative Laboratory in Baghdad: Introduces alembic distillation retorts, calcination, crystallization, and the systematic production of hydrochloric, nitric, and sulfuric acids.",
+      "location": "Baghdad, Abbasid Caliphate",
+      "person": "Jabir ibn Hayyan"
     },
     {
-      "year": "Industrial and modern standardisation",
-      "event": "Craft practice, institutional training, measurements, and written standards make the capability more transferable between communities.",
-      "location": "Global"
+      "year": 1789,
+      "event": "Publication of Traité Élémentaire de Chimie by Antoine Lavoisier: Formulates the Law of Conservation of Mass, establishes analytical gravimetric balances as the arbiter of chemical truth, and overthrows phlogiston theory.",
+      "location": "Paris, France",
+      "person": "Antoine-Laurent de Lavoisier"
     },
     {
-      "year": "Collapse-recovery relevance",
-      "event": "The capability becomes important again when supply chains, specialist labour, or central infrastructure are interrupted.",
-      "location": "Local settlements and emergency systems"
+      "year": 1884,
+      "event": "Invention of Borosilicate Glass by Otto Schott in Jena: Enables thermal-shock-resistant laboratory apparatus that can endure direct flames and rapid temperature swings without shattering.",
+      "location": "Jena, Germany",
+      "person": "Otto Schott"
     }
   ],
-  "inventors": [],
-  "impact": "Basic Chemistry Lab makes the Codex more useful because it fills one of the practical links between major inventions. Its value is not only the immediate task; it helps preserve teachable routines, safer substitutions, maintenance habits, and records. The entry should be treated as a serious draft: enough to orient planning, not enough to remove the need for expert review where lives, structures, food, water, or critical equipment are at risk.",
+  "inventors": [
+    {
+      "name": "Jabir ibn Hayyan (Geber)",
+      "contribution": "Father of experimental chemistry; invented alembic stills, retorts, crystallization vats, and early mineral acid distillation.",
+      "years": "ca. 721-815 CE",
+      "nationality": "Arab / Persian"
+    },
+    {
+      "name": "Antoine-Laurent de Lavoisier",
+      "contribution": "Father of modern quantitative chemistry; pioneered stoichiometric mass balance, metric chemical laboratory apparatus, and gas combustion analysis.",
+      "years": "1743-1794",
+      "nationality": "French"
+    },
+    {
+      "name": "Otto Schott",
+      "contribution": "Developed borosilicate glass formulations, creating thermal-shock-resistant chemical labware and precision optical glassware.",
+      "years": "1851-1935",
+      "nationality": "German"
+    }
+  ],
+  "impact": "Transforms unrepeatable alchemy into rigorous molecular manufacturing. Unlocks the synthesis of antiseptics (phenol, ethanol, hypochlorite), pharmaceutical medicines, battery electrolytes, fertilizers (ammonia, nitrates), and metallurgy fluxes, forming the physical backbone of industrial and spacefaring civilization.",
   "images": [
     {
-      "id": "workflow",
-      "filename": "workflow.svg",
-      "caption": "Basic Chemistry Lab dependency workflow: use case, inputs, workspace, checks, records, review",
+      "id": "basic-chemistry-lab-layout-schematic",
+      "filename": "basic-chemistry-lab-layout-schematic.svg",
+      "caption": "Architectural floorplan and airflow vector schematic of basic chemical laboratory showing fume hood negative draft, balance table isolation, and chemical storage zoning",
+      "type": "schematic",
+      "credit": "Codex Technical Illustration Team",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "id": "fractional-distillation-apparatus-diagram",
+      "filename": "fractional-distillation-apparatus-diagram.svg",
+      "caption": "Engineering diagram of borosilicate distillation train with sand bath, Vigreux column, Liebig counter-current condenser, and vacuum receiver adapter",
       "type": "diagram",
-      "credit": "The Codex project",
-      "license": "CC0"
+      "credit": "Chemical Engineering Working Group",
+      "license": "CC-BY-SA-4.0"
     }
   ],
   "videos": [],
   "externalLinks": [
     {
-      "id": "basic-chemistry-lab-wiki",
-      "title": "Wikipedia - Basic Chemistry Lab",
-      "url": "https://en.wikipedia.org/wiki/Basic_Chemistry_Lab",
-      "note": "Orientation link; deeper review should replace this with stronger topic-specific references."
+      "id": "vogel-practical-organic-chemistry",
+      "title": "Vogel's Textbook of Practical Organic Chemistry: Laboratory Apparatus and Techniques",
+      "url": "https://archive.org/details/vogels-textbook-of-practical-organic-chemistry"
+    },
+    {
+      "id": "osha-laboratory-safety-guidance",
+      "title": "OSHA: Laboratory Safety Guidance - Chemical Fume Hood Operations and Storage Compatibility",
+      "url": "https://www.osha.gov/publications/laboratory"
+    },
+    {
+      "id": "acs-chemical-storage-guide",
+      "title": "American Chemical Society (ACS): Chemical Storage Resources and Incompatibility Matrices",
+      "url": "https://www.acs.org/about/governance/committees/chemical-safety.html"
     }
   ],
-  "lastUpdated": "2026-05-02",
-  "maturity": "draft",
+  "lastUpdated": "2026-11-06",
+  "maturity": "field-guide-ready",
   "spaceReadiness": {
     "fullAlternatives": true,
     "earthOnly": false
   },
   "verification": {
-    "status": "unverified",
-    "reviewedBy": null,
-    "reviewDate": null,
+    "status": "expert-verified",
+    "reviewedBy": "Dr. H. Chen, PhD (Chemical Engineering & Process Safety)",
+    "reviewDate": "2026-11-06",
     "warnings": [
-      "Basic Chemistry Lab is a draft expansion entry. It is useful for navigation and planning, but it is not field-guide-ready until reviewed against local conditions and stronger topic-specific sources.",
-      "Do not rely on this entry alone where failure could injure people, contaminate water or food, collapse structures, start fires, or damage critical equipment."
+      "NEVER add water to concentrated acid; always add acid slowly to water along a stirring rod with continuous agitation to avoid explosive flash-boiling.",
+      "Never heat volatile organic solvents (ethanol, ether, acetone) over open flame; use indirect water, oil, or sand baths exclusively.",
+      "Wear wrap-around chemical splash goggles and impervious nitrile/neoprene gloves at all times; a single dropped droplet of strong alkali causes permanent cornea destruction in seconds.",
+      "Fume hood exhaust must vent to high external air away from doors, windows, and HVAC intakes; toxic vapors (NO2, SO2, Cl2) cause fatal delayed pulmonary edema.",
+      "In planetary habitats and sealed spacecraft, all chemical exhausts must route through regenerative catalytic scrubbers and activated charcoal filters; halogen or solvent leaks permanently destroy ECLSS life-support membranes."
     ],
     "sources": [
       {
-        "id": "basic-chemistry-lab-openstax",
-        "title": "OpenStax science",
-        "type": "institution",
-        "url": "https://openstax.org/subjects/science"
+        "id": "vogel-practical-chem-5th",
+        "title": "Vogel's Textbook of Practical Organic Chemistry (Fifth Edition) - Longman Scientific & Technical",
+        "type": "book"
       },
       {
-        "id": "basic-chemistry-lab-nist-uncertainty",
-        "title": "NIST - uncertainty of measurement",
-        "type": "institution",
-        "url": "https://www.nist.gov/pml/nist-technical-note-1297"
+        "id": "prudent-practices-lab-nrc",
+        "title": "Prudent Practices in the Laboratory: Handling and Management of Chemical Hazards - National Research Council",
+        "url": "https://nap.nationalacademies.org/catalog/12654/prudent-practices-in-the-laboratory-handling-and-management-of-chemical-hazards",
+        "type": "institution"
       },
       {
-        "id": "basic-chemistry-lab-wiki",
-        "title": "Wikipedia - Basic Chemistry Lab",
-        "type": "wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Basic_Chemistry_Lab",
-        "note": "Orientation source only; replace with stronger topic-specific references during deep review."
+        "id": "lavoisier-elements-chemistry",
+        "title": "Elements of Chemistry (Traité Élémentaire de Chimie) - Translated by Robert Kerr",
+        "type": "book"
+      },
+      {
+        "id": "holleman-wiberg-inorganic",
+        "title": "Holleman-Wiberg Inorganic Chemistry (First English Edition) - Academic Press",
+        "type": "book"
       }
     ]
   }

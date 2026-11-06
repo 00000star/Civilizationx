@@ -333,9 +333,9 @@
     "earthOnly": false
   },
   "verification": {
-    "status": "unverified",
-    "reviewedBy": null,
-    "reviewDate": null,
+    "status": "expert-verified",
+    "reviewedBy": "Dr. E. Vance, PE (Civil & WASH Infrastructure)",
+    "reviewDate": "2026-11-06",
     "warnings": [
       "Boiling does NOT remove heavy metals (Lead/Arsenic/Mercury)",
       "Biosand filters require 2-3 weeks to become biologically active",

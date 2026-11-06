@@ -11,7 +11,6 @@
   ],
   "unlocks": [
     "astronomical-observation",
-    "basic-chemistry-lab",
     "cartography",
     "distillation-apparatus",
     "experimental-design",
@@ -210,7 +209,7 @@
   "externalLinks": [
     {
       "id": "wiki-linear-algebra",
-      "title": "Wikipedia \u2014 Linear Algebra",
+      "title": "Wikipedia — Linear Algebra",
       "url": "https://en.wikipedia.org/wiki/Linear_Algebra"
     }
   ],
@@ -228,17 +227,17 @@
     "sources": [
       {
         "id": "strang-la",
-        "title": "Strang \u2014 Introduction to Linear Algebra",
+        "title": "Strang — Introduction to Linear Algebra",
         "type": "book"
       },
       {
         "id": "trefethen-bau",
-        "title": "Trefethen & Bau \u2014 Numerical Linear Algebra",
+        "title": "Trefethen & Bau — Numerical Linear Algebra",
         "type": "book"
       },
       {
         "id": "wiki-linear-algebra",
-        "title": "Wikipedia \u2014 Linear algebra",
+        "title": "Wikipedia — Linear algebra",
         "type": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Linear_algebra"
       }
