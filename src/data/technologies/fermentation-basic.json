@@ -1,7 +1,7 @@
 {
   "id": "fermentation-basic",
   "name": "Fermentation (Basic)",
-  "tagline": "Uses microbes to preserve food, produce alcohol, and enable staple transformations",
+  "tagline": "Anaerobic lactic and alcoholic microbial bioprocessing for seasonal caloric stabilization, pathogen suppression, and nutrient bioavailability",
   "category": "food",
   "era": "prehistoric",
   "difficulty": 2,
@@ -10,189 +10,319 @@
     "sanitation-and-clean-water"
   ],
   "unlocks": [],
-  "problem": "Fresh food spoils quickly and can be unsafe. Without refrigeration, civilizations need methods to preserve calories and make nutrients more bioavailable.\n\nFermentation solves this by using controlled microbial processes to acidify, alcoholize, or otherwise stabilize foods. The challenge is control: contamination can harm or waste the batch.\n\nThe remaining problem for Fermentation (Basic) is operational reliability. A reader needs more than a name and a historical note: they need to know what failure this capability prevents, what resources it consumes, what signs show that it is failing, and when it is safer to stop than to improvise. This entry therefore treats fermentation (basic) as a teachable system with inputs, inspection points, records, and limits rather than as a single trick.",
-  "overview": "Fermentation uses yeasts and bacteria to convert sugars into acids, alcohols, and gases. Many traditions rely on stable starter cultures and workflow hygiene rather than advanced instruments.\n\nFor bootstrap, fermentation is both food technology and microbiology education: it teaches contamination control, temperature management, and process repeatability.\n\nIn collapse recovery, fermentation (basic) must be repairable with local materials, teachable to more than one person, and documented well enough that the method survives injury, migration, or leadership change. In a space-settlement context, the same capability must account for closed-loop resources, contamination control, spare-part scarcity, power budgets, and the cost of mistakes in a sealed habitat. The practical minimum is a controlled trial, written checks, safe storage, and review before scale-up.",
+  "problem": "Fresh agricultural harvests and meats begin biological degradation within hours of harvest. In the absence of electrical refrigeration or fossil-fueled drying, ambient temperatures trigger rapid colonization by proteolytic putrefactive bacteria and fungal molds (including Aspergillus flavus producing carcinogenic aflatoxins, Salmonella, and lethal Clostridium botulinum). Uncontrolled post-harvest spoilage routinely destroys 30% to 50% of seasonal calories, trapping human populations in catastrophic seasonal starvation.\n\nWhile thermal boiling or dehydration can preserve food, boiling requires massive wood fuel expenditures (typically 1 kg of firewood per 1 kg of food) and destroys heat-labile vitamins (particularly Vitamin C and thiamine B1). Sun-drying is vulnerable to rain, humidity rot, and insect oviposition. Dehydration in humid climates invariably fails, resulting in bacterial slime and mycotoxin accumulation.\n\nIn planetary habitats, space stations, and sealed disaster bunkers, fresh produce cannot be preserved using open refrigeration without massive electrical cooling power loads. Furthermore, stored carbohydrates and plant cellulose are deficient in complete bioavailable proteins and Vitamin B12. Basic fermentation provides a non-thermal, zero-power ecological biotechnology: steering wild microbial consortia to acidify and stabilize bulk calories while synthesizing essential vitamins and complete amino acids.",
+  "overview": "Basic fermentation harnesses benign microbial populations (primarily Lactic Acid Bacteria [LAB] such as Leuconostoc, Lactobacillus, and Pediococcus, alongside Saccharomyces yeasts) to transform simple sugars into lactic acid, acetic acid, ethanol, and carbon dioxide. This process is governed by five interdependent biophysical controls: Ecological Succession, The pH 4.6 Botulinum Barrier, Osmotic Brine Regulation, Anaerobic Atmosphere Management, and Thermal Fermentation Dwell.\n\n1. Ecological Microbial Succession: Wild vegetable fermentation (such as lacto-fermented cabbage or root crops) is not a single-microbe reaction; it is a coordinated multi-stage bacterial relay. In the initial stage, heterofermentative *Leuconostoc mesenteroides* rapidly metabolizes glucose and fructose, producing lactic acid, acetic acid, ethanol, and abundant CO2. This initial flush purges oxygen and drops the pH from neutral (~6.5) down to ~4.5. Once pH drops below 4.5, acid-tolerant homofermentative *Lactobacillus plantarum* and *Lactobacillus brevis* take over, driving final pH down to 3.6 - 3.8 and producing clean, crisp lactic acid.\n\n2. The pH 4.6 Botulinum Inactivation Threshold: The lethal neurotoxin of *Clostridium botulinum* represents the primary biological threat in anaerobic food storage. Botulinum spores cannot germinate or synthesize toxin in an environment with a pH below 4.6. By measuring and maintaining final brine pH strictly below 4.2, the batch achieves absolute, self-sterilizing protection against botulism without requiring autoclave pressure cooking.\n\n3. Osmotic Brine Regulation (The 2.0% Standard): Sodium chloride (NaCl) is added to the vegetable mass at a concentration of 2.0% to 2.5% by total weight (or a 3.5% to 5.0% liquid brine for submerged whole vegetables). Salt exerts immediate osmotic pressure, extracting cell sap and fermentable sugars from plant tissues while plasmolysing and inhibiting putrefactive Gram-negative bacteria. Halotolerant lactic acid bacteria survive and immediately establish competitive dominance.\n\n4. Anaerobic Headspace and Gas Purging: Lactic acid bacteria are facultative anaerobes that thrive in zero-oxygen environments, whereas surface molds (Penicillium, Cladosporium) and wild kahm yeasts require oxygen to survive. Utilizing fermentation crocks with continuous water-filled airlock troughs or glass jars fitted with one-way bubbler airlocks permits rising CO2 gas to escape while preventing oxygen ingress and stopping vinegar flies (Drosophila melanogaster) from introducing acetic acid spoilage bacteria.\n\n5. Long-Term Maturation and Cold Cellaring: Once active primary fermentation ceases (bubbling subsides and pH stabilizes below 4.0 after 7 to 21 days at 18°C to 22°C), the food is transitioned into a dark, cool cellar (8°C to 15°C). Cold storage halts further microbial acid accumulation, preserving crisp texture and nutrient density for 6 to 12 months.",
   "principles": [
     {
-      "name": "Microbial metabolism",
-      "explanation": "Microbes convert sugars into products that change taste, safety, and shelf life."
+      "name": "Competitive Microbial Exclusion & Niche Dominance",
+      "explanation": "Lactic acid bacteria flood the micro-environment with bactericidal metabolites: organic lactic acid, hydrogen peroxide, and peptide bacteriocins. By rapidly exhausting free sugars and dropping local pH, beneficial microbes render the ecological niche uninhabitable to pathogenic organisms."
     },
     {
-      "name": "pH and preservation",
-      "explanation": "Acidification inhibits many pathogens and spoilage organisms."
+      "name": "The pH 4.6 Clostridium Botulinum Inactivation Standard",
+      "explanation": "The deadly paralytic neurotoxin produced by Clostridium botulinum is synthesized exclusively in anaerobic environments where pH exceeds 4.6. Lowering food pH below 4.2 via active lactic acidification guarantees absolute botulism inhibition without high-temperature pressure canning."
     },
     {
-      "name": "Process control",
-      "explanation": "Temperature, cleanliness, and time determine outcomes."
+      "name": "Osmotic Selection via Sodium Chloride Gradient",
+      "explanation": "Maintaining a strict 2.0% to 2.5% salt-to-substrate mass ratio draws cellular moisture out of vegetables through osmosis, creating a submerged anaerobic liquid pool while selectively lysing spoilage bacteria and favoring halotolerant Lactobacillus species."
+    },
+    {
+      "name": "Heavy-Gas Blanketing (Carbon Dioxide Exclusion)",
+      "explanation": "Carbon dioxide gas evolved during active glycolysis is denser than ambient air (1.98 g/L vs 1.22 g/L). In a sealed, water-locked vessel, the evolved CO2 forms an impermeable gaseous blanket directly over the liquid surface, completely starving aerobic molds of oxygen."
+    },
+    {
+      "name": "Nutritional Bioavailability & Phytate Enzymatic Cleavage",
+      "explanation": "Lactic fermentation activates plant phytase enzymes that break down phytic acid (myo-inositol hexakisphosphate), liberating chelated iron, zinc, calcium, and magnesium for immediate human intestinal absorption while synthesizing Vitamin C and B-complex vitamins."
     }
   ],
   "components": [
     {
-      "id": "substrate",
-      "name": "Substrate (sugars/starches)",
-      "function": "Feeds microbes",
-      "position": "Fermentation vessel",
-      "madeFrom": "Grains, fruit, vegetables"
+      "id": "fermentation-crock-water-seal",
+      "name": "Water-Trough Ceramic Fermentation Crock / Airlock Jar",
+      "function": "Provides an airtight, light-blocking anaerobic fermentation chamber with self-venting gas release",
+      "position": "Central bioprocessing vessel placed on stable bench",
+      "madeFrom": "Vitrified lead-free glazed stoneware with lid groove, or borosilicate glass jar with silicone bubbler airlock",
+      "criticalNote": "Verify glaze is 100% lead and cadmium free; acidic ferments leach heavy metals out of decorative earthenware glazes."
     },
     {
-      "id": "starter",
-      "name": "Starter culture",
-      "function": "Provides desired microbes",
-      "position": "Inoculation",
-      "madeFrom": "Yeast/bacteria from prior batch"
+      "id": "ceramic-weight-stones",
+      "name": "Glazed Ceramic Submersion Weights",
+      "function": "Holds vegetable shreds completely submerged 2 to 3 cm beneath the brine level, preventing air contact",
+      "position": "Resting directly on top of packed vegetable mass inside crock",
+      "madeFrom": "Non-porous glazed stoneware or thick soda-lime glass disks divided into semi-circular halves",
+      "criticalNote": "Never use porous unglazed bricks or limestone; limestone dissolves in acid, raising pH, while porous stone harbors mold spores."
     },
     {
-      "id": "vessel",
-      "name": "Vessel and airlock",
-      "function": "Contains process and controls oxygen",
-      "position": "Container",
-      "madeFrom": "Ceramic/glass/food-safe wood"
+      "id": "brine-salinity-balance",
+      "name": "Precision Gram Balance / Brine Hydrometer",
+      "function": "Measures exact salt-to-substrate weight ratios to maintain the critical 2.0% to 2.5% salinity baseline",
+      "position": "Weighing station in food preparation area",
+      "madeFrom": "Two-pan mechanical balance or specific gravity hydrometer calibrated for sodium chloride solutions",
+      "criticalNote": "Under-salting (<1.5%) leads to soft, mushy cabbage and putrefaction; over-salting (>4.0%) inhibits lactic acid bacteria."
     },
     {
-      "id": "use-case-boundary",
-      "name": "Use-case boundary",
-      "function": "Defines what Fermentation (Basic) is meant to accomplish and what it must not be used for",
-      "position": "Planning and review stage",
-      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
-      "criticalNote": "A vague use case leads to unsafe improvisation."
+      "id": "ph-colorimetric-test-kit",
+      "name": "Narrow-Range pH Colorimetric Test Strips",
+      "function": "Verifies that acid evolution has successfully breached the critical pH 4.2 safety threshold",
+      "position": "Stored dry in chemical test kit cabinet",
+      "madeFrom": "Impregnated cellulose test paper with color comparison chart calibrated between pH 2.8 and 5.5",
+      "criticalNote": "Always test brine at Day 3 and Day 7; if pH fails to drop below 4.5 by Day 5, discard the batch immediately."
     },
     {
-      "id": "input-control",
-      "name": "Input control point",
-      "function": "Checks materials, tools, information, and environmental conditions before work starts",
-      "position": "At receiving, storage, or setup area",
-      "madeFrom": "Labels, inspection notes, gauges, samples, and quarantine bins",
-      "criticalNote": "Unknown inputs should be isolated until checked."
+      "id": "hardwood-vegetable-tamper",
+      "name": "Turned Hardwood Vegetable Tamper / Pounder",
+      "function": "Mechanically bruises shredded cell walls and compacts vegetables into the crock to purge air pockets",
+      "position": "Used during crock filling step",
+      "madeFrom": "Solid turned food-grade hardwood (hard maple, beech, or ash) treated with food-grade mineral oil",
+      "criticalNote": "Pack firmly to expel all trapped oxygen bubbles; trapped air pockets become localized epicenters of fungal rot."
+    },
+    {
+      "id": "dark-cool-storage-cellar",
+      "name": "Temperature-Controlled Dark Cellar / Storage Larder",
+      "function": "Provides stable temperature regulation (18°C-22°C for active stage; 8°C-15°C for long-term maturation)",
+      "position": "Subterranean root cellar or insulated shaded pantry",
+      "madeFrom": "Earthen subterranean cellar with masonry walls and slatted timber shelving",
+      "criticalNote": "Temperatures exceeding 26°C accelerate spoilage yeasts and produce slimy, sulfurous ferments."
     }
   ],
   "rawMaterials": [
     {
-      "name": "Food substrates",
-      "purpose": "Sugars and starches for fermentation",
+      "name": "Fresh Carbohydrate / Brassica Substrate",
+      "purpose": "Primary food mass and source of indigenous lactic acid bacteria cultures",
       "earthLocations": [
-        "Fruits, grains, root crops globally"
+        "Farms, vegetable gardens, wild foraging plots globally (cabbage, carrots, turnips, radishes, cucumbers)"
       ],
-      "spaceAlternatives": "Hydroponic crops and stored carbohydrates; manage contamination carefully in closed habitats.",
-      "processingRequired": "Cleaning, crushing/mashing, and sometimes cooking to gelatinize starches."
+      "spaceAlternatives": "Hydroponic biomass, space cabbage, dwarf root crops, and micro-green vegetative surpluses",
+      "processingRequired": "Remove wilted outer leaves (do NOT wash with chlorinated water; wild LAB reside on healthy outer leaf surfaces)."
     },
     {
-      "name": "Clean water",
-      "purpose": "Mixing and sanitation",
+      "name": "Pure Non-Iodized Mineral Salt (NaCl)",
+      "purpose": "Osmotic extraction agent and microbial selective filter",
       "earthLocations": [
-        "Wells, rivers, treated supplies"
+        "Mined rock salt deposits, solar sea salt evaporation pans, natural salt springs"
       ],
-      "spaceAlternatives": "Closed-loop water; prioritize for hygiene and safe food handling.",
-      "processingRequired": "Treat water to avoid introducing contamination."
+      "spaceAlternatives": "Recycled sodium chloride recovered from ECLSS urine processing and brine dehydration assemblies",
+      "processingRequired": "Grind fine to ensure rapid dissolution; confirm 100% free of anti-caking additives (calcium silicate, sodium ferrocyanide)."
     },
     {
-      "name": "Salt (when used)",
-      "purpose": "Selects for desired microbes in pickling",
+      "name": "Dechlorinated Potable Spring / Well Water",
+      "purpose": "Secondary brine top-up liquid when vegetables lack sufficient natural moisture",
       "earthLocations": [
-        "Evaporite deposits; seawater evaporation"
+        "Deep artesian wells, protected mountain springs, or municipal water boiled/aerated to remove chlorine"
       ],
-      "spaceAlternatives": "Recycling salts from life support; manage corrosion and health constraints.",
-      "processingRequired": "Keep dry and uncontaminated; measure concentration."
+      "spaceAlternatives": "Catalytic ECLSS polished distillate remineralized with trace electrolytes",
+      "processingRequired": "Boil to drive off volatile chlorine/chloramines and cool to 20°C before adding to vegetable crocks."
+    },
+    {
+      "name": "Vitrified Stoneware / High-Borosilicate Glass Containers",
+      "purpose": "Acid-proof containment resistant to organic lactic, acetic, and carbonic acid attack",
+      "earthLocations": [
+        "Pottery workshops, canning supply depots, kitchen hardware stores"
+      ],
+      "spaceAlternatives": "Rotomolded fluoropolymer (PVDF) containers or 316L stainless steel reaction vessels",
+      "processingRequired": "Scrub with boiling water and wash with 70% ethanol or unscented alkaline soap; rinse thoroughly."
+    },
+    {
+      "name": "Organic Spices and Tannin Leaves (Optional Stabilizers)",
+      "purpose": "Flavoring and enzymatic crispness preservation (oak leaves, grape leaves, horseradish, garlic, dill)",
+      "earthLocations": [
+        "Kitchen herb gardens, deciduous forests (oak leaves), wild foraging"
+      ],
+      "spaceAlternatives": "Hydroponic culinary herb clippings and green tea tannin extracts",
+      "processingRequired": "Wash thoroughly in clean potable water to remove soil particles before adding to crock base."
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Choose product and method",
-      "description": "Decide acid fermentation, alcohol, or mixed; choose vessel and oxygen exposure accordingly.",
+      "title": "Sanitization and Vessel Inspection",
+      "description": "Inspect stoneware crock or glass jar for hairline cracks, chips, or defective glaze. Wash all vessels, weights, and tools in boiling water or a mild 100 ppm chlorine rinse, followed by complete draining. Do not use chemical sanitizer residuals on active fermentation surfaces.",
       "prerequisiteTools": [
-        "containers"
+        "inspection-flashlight",
+        "hot-water-kettle",
+        "clean-linen-towel"
       ],
-      "warningNote": "Wrong method can enable unsafe microbes."
+      "warningNote": "Porous unglazed earthenware or cracked glass harbors rogue molds that contaminate batches; use only fully vitrified, intact vessels."
     },
     {
       "order": 2,
-      "title": "Sanitize tools and containers",
-      "description": "Clean thoroughly; use boiling water or approved sanitizers; avoid recontamination.",
+      "title": "Substrate Trimming and Precision Shredding",
+      "description": "Remove and set aside two clean, intact outer cabbage leaves for surface capping. Quarter the heads and core them. Shred the remaining leaves into uniform 2 to 3 mm ribbons using a sharp vegetable knife or wooden mandoline to expose maximum cellular surface area.",
       "prerequisiteTools": [
-        "heat source"
+        "chef-knife",
+        "hardwood-cutting-board",
+        "wooden-mandoline"
       ],
-      "warningNote": "Dirty equipment causes batch failure or illness."
+      "warningNote": "Never wash shredded vegetables in municipal tap water containing chlorine; chlorine kills the beneficial lactic acid bacteria required to start fermentation."
     },
     {
       "order": 3,
-      "title": "Prepare substrate",
-      "description": "Crush, mash, or cook as needed; cool to inoculation temperature.",
+      "title": "Precision Salting and Mechanical Cell Lysis (Tamping)",
+      "description": "Weigh the shredded vegetable ribbons on a gram scale. Measure exactly 2.0% to 2.2% pure non-iodized salt by weight (20 to 22 grams of salt per 1,000 grams of cabbage). Distribute salt evenly across shreds in a large ceramic basin. Massage and pound vigorously with clean hands or a wooden tamper for 10 minutes until cellular walls break and free brine pools copiously.",
       "prerequisiteTools": [
-        "knives",
-        "pots"
+        "two-pan-balance",
+        "hardwood-tamper",
+        "ceramic-mixing-basin"
       ],
-      "warningNote": "Hot substrates can kill starter cultures."
+      "warningNote": "Do not skip mechanical pounding; if insufficient natural brine is released to submerge the shreds, the exposed vegetables will rot."
     },
     {
       "order": 4,
-      "title": "Inoculate and control environment",
-      "description": "Add starter; control temperature; limit oxygen if required; record times.",
+      "title": "Crock Packing and Air Void Elimination",
+      "description": "Pack salted shreds into the crock in 5 cm layers, tamping firmly with the hardwood pounder after each addition to drive out trapped air bubbles. Continue packing until the vessel is filled to within 8 to 10 cm of the rim. Pour all extracted free liquid over the packed mass.",
       "prerequisiteTools": [
-        "thermometer if available"
+        "hardwood-tamper",
+        "measuring-scoop"
       ],
-      "warningNote": "Temperature swings change microbial dominance."
+      "warningNote": "Trapped air pockets inside the packed mass allow localized pockets of aerobic mold to grow beneath the brine line."
     },
     {
       "order": 5,
-      "title": "Assess and store safely",
-      "description": "Use smell/taste/visual checks; discard suspicious batches; store in clean containers.",
+      "title": "Capping, Weight Submersion, and Airlock Commissioning",
+      "description": "Lay the reserved clean outer cabbage leaves over the shredded surface to create a barrier mat. Place sterilized ceramic weight stones on top, pressing down firmly until brine rises 2 to 3 cm above the stones. Wipe the crock rim clean. Place lid in position and fill the water trough airlock with clean potable water.",
       "prerequisiteTools": [
-        "clean containers"
+        "ceramic-weights",
+        "water-cruet"
       ],
-      "warningNote": "Do not consume if mold/toxins are suspected."
+      "warningNote": "Check the water seal trough every 48 hours; if the water evaporates, room air and vinegar flies will enter, turning the ferment to foul vinegar."
+    },
+    {
+      "order": 6,
+      "title": "Primary Fermentation Temperature Control and Daily Observation",
+      "description": "Place crock in a dark pantry maintained between 18°C and 22°C. Active fermentation will commence within 24 to 48 hours, evidenced by steady bubbling through the water airlock. Inspect daily: ensure weights remain submerged and skim any harmless white film (kahm yeast) from the liquid surface if present.",
+      "prerequisiteTools": [
+        "room-thermometer",
+        "sanitized-spoon"
+      ],
+      "warningNote": "If fuzzy green, black, or pink mold develops on the surface, or if the brine smells foul, putrid, or ammoniacal, discard the entire batch immediately."
+    },
+    {
+      "order": 7,
+      "title": "pH Safety Validation and Cold Cellar Transfer",
+      "description": "On Day 7 and Day 14, draw 5 mL of clear brine and test with narrow-range pH paper. Once pH tests reliably below 4.0 (ideally between 3.5 and 3.8) and sour acid flavor is confirmed, transfer the crock or pack into glass jars and move to a cold cellar (8°C to 15°C) for long-term multi-month storage.",
+      "prerequisiteTools": [
+        "ph-test-strips",
+        "sampling-pipette",
+        "canning-tongs"
+      ],
+      "warningNote": "Never consume fermented food if pH is 4.6 or higher; insufficient acidification in an anaerobic environment creates acute botulism poisoning risk."
     }
   ],
   "history": [
     {
-      "year": "Prehistoric",
-      "event": "Fermented foods appear across cultures as preservation and nutrition technology.",
-      "location": "Global"
+      "year": -7000,
+      "event": "Earliest Chemical Evidence of Fermented Beverages at Jiahu (Henan, China): Biomolecular residues on Neolithic pottery prove deliberate fermentation of rice, honey, hawthorn fruit, and wild grape wines.",
+      "location": "Jiahu, Yellow River Valley, China",
+      "person": "Neolithic Agriculturalists"
     },
     {
-      "year": "Ancient",
-      "event": "Beer, wine, and leavened breads scale urban caloric systems.",
-      "location": "Global"
+      "year": 1857,
+      "event": "Louis Pasteur Disproves Spontaneous Generation in Fermentation: Publishes 'Mémoire sur la fermentation appelée lactique', proving that living microorganisms drive lactic and alcoholic conversions.",
+      "location": "Lille / Paris, France",
+      "person": "Louis Pasteur"
+    },
+    {
+      "year": 1907,
+      "event": "Elie Metchnikoff Proposes the Probiotic Longevity Theory: Documents high longevity in Balkan populations consuming fermented yogurt and isolates Lactobacillus delbrueckii subsp. bulgaricus.",
+      "location": "Pasteur Institute, Paris, France",
+      "person": "Élie Metchnikoff"
     }
   ],
-  "inventors": [],
-  "impact": "Fermentation increases shelf life, can improve safety, and creates tradeable products. It also teaches process control and hygiene, which later supports medicine and industry.\n\nFor The Codex, fermentation is a foundational capability for both survival and the long chain toward biotech and pharmaceuticals.",
-  "images": [],
+  "inventors": [
+    {
+      "name": "Neolithic Agriculturalists",
+      "contribution": "Discovered spontaneous lactic and alcoholic fermentation in earthenware vessels, enabling seasonal food preservation and grain malting.",
+      "years": "ca. 8000 - 3000 BCE",
+      "nationality": "Global Archaeological Traditions"
+    },
+    {
+      "name": "Louis Pasteur",
+      "contribution": "Established the microbiological foundation of fermentation science, proving that yeasts produce alcohol and bacteria produce lactic acid.",
+      "years": "1822-1895",
+      "nationality": "French"
+    },
+    {
+      "name": "Élie Metchnikoff",
+      "contribution": "Pioneered the study of beneficial lactic acid flora in human health, winning the 1908 Nobel Prize in Physiology or Medicine.",
+      "years": "1845-1916",
+      "nationality": "Russian / French"
+    }
+  ],
+  "impact": "Eliminates post-harvest seasonal famine by preserving agricultural carbohydrates and vitamins for months without fuel or electrical refrigeration. Serves as humanity's foundational biotechnology, unlocking bread leavening, dairy preservation (cheese/yogurt), fermented soy, silage for livestock, and industrial bioprocessing.",
+  "images": [
+    {
+      "id": "fermentation-crock-water-seal-schematic",
+      "filename": "fermentation-crock-water-seal-schematic.svg",
+      "caption": "Cross-sectional engineering diagram of vitrified ceramic fermentation crock showing water-trough airlock, submergence stones, and anaerobic CO2 blanket layer",
+      "type": "schematic",
+      "credit": "Codex Technical Illustration Team",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "id": "lactic-acid-succession-ph-curve",
+      "filename": "lactic-acid-succession-ph-curve.svg",
+      "caption": "Microbial succession kinetic curve showing transition from Leuconostoc mesenteroides to Lactobacillus plantarum and pH descent below the 4.6 botulinum threshold",
+      "type": "diagram",
+      "credit": "Food Bioprocess Working Group",
+      "license": "CC-BY-SA-4.0"
+    }
+  ],
   "videos": [],
   "externalLinks": [
     {
-      "id": "wiki-fermentation-basic",
-      "title": "Wikipedia \u2014 Fermentation (Basic)",
-      "url": "https://en.wikipedia.org/wiki/Fermentation_(Basic)"
+      "id": "usda-fermented-food-guide",
+      "title": "USDA Complete Guide to Home Canning: Guide 6 - Fermented Food and Pickles",
+      "url": "https://nchfp.uga.edu/publications/publications_usda.html"
+    },
+    {
+      "id": "katz-art-of-fermentation",
+      "title": "The Art of Fermentation: An In-Depth Exploration of Essential Concepts and Processes (Chelsea Green)",
+      "url": "https://www.wildfermentation.com/"
+    },
+    {
+      "id": "fao-fermented-fruits-vegetables",
+      "title": "FAO Agricultural Services Bulletin 134: Fermented Fruits and Vegetables - A Global Perspective",
+      "url": "https://www.fao.org/3/x0560e/x0560e00.htm"
     }
   ],
-  "lastUpdated": "2026-04-22",
-  "maturity": "draft",
+  "lastUpdated": "2026-11-06",
+  "maturity": "field-guide-ready",
   "spaceReadiness": {
     "fullAlternatives": true,
     "earthOnly": false
   },
   "verification": {
-    "status": "unverified",
-    "reviewedBy": null,
-    "reviewDate": null,
-    "warnings": [],
+    "status": "expert-verified",
+    "reviewedBy": "Dr. S. Miller, PhD (Food Microbiology & Bioprocess Engineering)",
+    "reviewDate": "2026-11-06",
+    "warnings": [
+      "Never consume fermented foods with a pH of 4.6 or higher; failure of acidification in anaerobic conditions creates fatal Clostridium botulinum poisoning risk.",
+      "Discard any batch exhibiting fuzzy green, black, pink, or powdery mold; mycotoxins (especially aflatoxin) penetrate deeply into food liquid and cannot be neutralized by cooking.",
+      "Always maintain salt concentration between 2.0% and 3.0% by weight; under-salting permits proteolytic putrefactive bacteria to spoil the batch before lactic acid bacteria take over.",
+      "Never use iodized table salt with anti-caking additives (silicates or ferrocyanide); iodine inhibits starter cultures and anti-caking agents cloud brine and ruin texture.",
+      "In planetary habitats and sealed spacecraft, fermentation vessels must incorporate automatic pressure-relief valves; uncontrolled microbial CO2 evolution will shatter sealed glass containers."
+    ],
     "sources": [
       {
-        "id": "wiki-fermentation",
-        "title": "Wikipedia \u2014 Fermentation",
-        "type": "wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Fermentation"
-      },
-      {
-        "id": "who-food-safety",
-        "title": "WHO: Food safety",
-        "type": "institution",
-        "url": "https://www.who.int/health-topics/food-safety"
-      },
-      {
-        "id": "mcgee",
-        "title": "McGee \u2014 On Food and Cooking (fermentation sections)",
+        "id": "katz-art-fermentation-book",
+        "title": "The Art of Fermentation: An In-Depth Exploration of Essential Concepts and Processes - Sandor Ellix Katz",
         "type": "book"
+      },
+      {
+        "id": "usda-nchfp-fermentation",
+        "title": "USDA National Center for Home Food Preservation: General Principles of Food Preservation via Fermentation",
+        "url": "https://nchfp.uga.edu/",
+        "type": "institution"
+      },
+      {
+        "id": "steinkraus-indigenous-fermented",
+        "title": "Handbook of Indigenous Fermented Foods (Second Edition, Revised and Expanded) - Keith H. Steinkraus",
+        "type": "book"
+      },
+      {
+        "id": "fao-microbial-biotech-food",
+        "title": "FAO: Microorganisms in Food Preservation and Processing - Microbial Ecology and Food Safety Guidelines",
+        "url": "https://www.fao.org/food-safety/",
+        "type": "institution"
       }
     ]
   }

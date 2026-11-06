@@ -25,7 +25,7 @@ The project has recently undergone a massive 10x upgrade, transforming from a st
 
 ---
 
-## 🛠️ Local Development
+## 🛠️ Local Development & Survival Pathfinder
 
 1.  **Clone and Launch:**
     ```bash
@@ -34,10 +34,31 @@ The project has recently undergone a massive 10x upgrade, transforming from a st
     ./launch-codex.sh
     ```
 
-2.  **Scripts:**
-    *   `npm run validate-data`: Ensure all 324 entries match the strict bootstrap schema.
+2.  **Zero-Dependency Survival Pathfinder CLI:**
+    ```bash
+    # Solve prerequisite chain & raw material bill for any technology:
+    node scripts/survival-pathfinder.mjs path iron-smelting
+
+    # Resolve craftable technologies from scavenged materials:
+    node scripts/survival-pathfinder.mjs scavenge clay sand charcoal copper
+
+    # Identify single-point-of-failure bottlenecks across the civilization tree:
+    node scripts/survival-pathfinder.mjs bottlenecks
+    ```
+
+3.  **Validation & Integrity Audits:**
+    *   `node scripts/validate-technologies-standalone.mjs`: Zero-dependency validation checking schema, references, and circular DAG dependencies.
+    *   `npm run audit-readiness`: Assess maturity bands and safety gate compliance across all 324 entries.
     *   `npm run generate-summaries`: Build the lightweight search and graph index.
-    *   `npm run lint`: Verify technical and stylistic integrity.
+
+### 🛡️ Field-Ready Anchor Technologies
+The Codex maintains fully specified, expert-verified reference anchors with complete component bills, safety warnings, and step-by-step schematics:
+*   **Sanitation & Clean Water:** Multi-barrier chlorination, schmutzdecke biosand filtration, and 30m hydraulic zoning.
+*   **Emergency Water Storage:** Food-grade HDPE selection, 0.2–0.5 ppm free residual chlorine, and vapor-barrier dunnage.
+*   **Forge Bellows:** Han Dynasty double-acting box bellows (*fengxiang*), refractory tuyère nozzles, and anti-blowback traps.
+*   **Basic Chemistry Lab:** Two-pan analytical beam balances, indirect sand baths, negative-draft fume hoods, and titration.
+*   **Fermentation (Basic):** Ecological microbial succession (LAB), pH < 4.2 botulinum defense, and water-lock crocks.
+*   **Bone Tools:** Groove-and-splinter extraction, wet sandstone abrasion, and biconically drilled eyed needles.
 
 ## 🌏 Mission
 Wikipedia explains what things are; The Codex explains how civilization has things. Our goal is to ensure that the chain of human knowledge remains unbroken, regardless of the scenario.

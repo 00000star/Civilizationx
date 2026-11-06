@@ -15,6 +15,8 @@
     "prebuild": "npm run generate-summaries",
     "preview": "vite preview",
     "validate-data": "node scripts/validate-technology-data.mjs",
+    "validate-standalone": "node scripts/validate-technologies-standalone.mjs",
+    "pathfinder": "node scripts/survival-pathfinder.mjs",
     "audit-content": "node scripts/audit-content-depth.mjs",
     "audit-content:strict": "node scripts/audit-content-depth.mjs --strict",
     "audit-readiness": "node scripts/audit-field-readiness.mjs",

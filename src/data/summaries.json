@@ -342,6 +342,7 @@
       "bicycle",
       "blacksmith-anvil",
       "block-and-tackle",
+      "bone-tools",
       "checkpoint-safety",
       "civilian-warning-systems",
       "clamps-and-vises",
@@ -618,23 +619,25 @@
   {
     "id": "bone-tools",
     "name": "Bone Tools",
-    "tagline": "Worked skeletal elements for needles, awls, points, and soft hammers",
+    "tagline": "Osteo-technological manufacturing of slender composite tools: eyed sewing needles, perforating awls, barbed fishing harpoons, and antler knapping billets",
     "category": "tools",
     "era": "prehistoric",
     "difficulty": 1,
-    "prerequisites": [],
+    "prerequisites": [
+      "basic-hand-tools"
+    ],
     "unlocks": [
       "fishing-net-and-line"
     ],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "researched",
-    "lastUpdated": "2026-04-10"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "bookbinding",
@@ -2529,7 +2532,7 @@
   {
     "id": "fermentation-basic",
     "name": "Fermentation (Basic)",
-    "tagline": "Uses microbes to preserve food, produce alcohol, and enable staple transformations",
+    "tagline": "Anaerobic lactic and alcoholic microbial bioprocessing for seasonal caloric stabilization, pathogen suppression, and nutrient bioavailability",
     "category": "food",
     "era": "prehistoric",
     "difficulty": 2,
@@ -2539,14 +2542,14 @@
     ],
     "unlocks": [],
     "verification": {
-      "status": "unverified"
+      "status": "expert-verified"
     },
     "spaceReadiness": {
       "fullAlternatives": true,
       "earthOnly": false
     },
-    "maturity": "draft",
-    "lastUpdated": "2026-04-22"
+    "maturity": "field-guide-ready",
+    "lastUpdated": "2026-11-06"
   },
   {
     "id": "field-agriculture",

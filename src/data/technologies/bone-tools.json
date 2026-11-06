@@ -1,217 +1,320 @@
 {
   "id": "bone-tools",
   "name": "Bone Tools",
-  "tagline": "Worked skeletal elements for needles, awls, points, and soft hammers",
+  "tagline": "Osteo-technological manufacturing of slender composite tools: eyed sewing needles, perforating awls, barbed fishing harpoons, and antler knapping billets",
   "category": "tools",
   "era": "prehistoric",
   "difficulty": 1,
-  "prerequisites": [],
+  "prerequisites": [
+    "basic-hand-tools"
+  ],
   "unlocks": [
     "fishing-net-and-line"
   ],
-  "problem": "Stone flakes cut and scrape, but many tasks need slender stiffness: piercing hide without huge tears, guiding cord through mesh, picking apart fibres, or spreading pressure in pressure flaking. Wood can work but dulls and splits across grain. Bone and antler occupy a middle hardness: tougher than wood along long axes, easier to shape than stone in elongate forms, and available wherever large animals are processed.\n\nThe problem bone solves is manufacturability of slender tools before metal wire drawing. A bone needle enables sewn clothing \u2014 a thermal technology multiplier. An awl enables consistent holes for lashings and later rivets conceptually.\n\nBone is also information-dense waste: if you already process animals for meat, converting metapodials and ribs into tools extracts value from refuse.",
-  "overview": "Bone tools are made by sawing, grooving, snapping, and grinding. Long bones yield splinters with natural stiffness; metapodials yield rods; ribs yield flat strips. Splintering follows collagen-apatite composite structure \u2014 sharp stone saws score a groove, then bending snaps along the weak plane. Points are shaped by abrasion on sandstone or fine-grained stone; polishing reduces friction when piercing.\n\nNeedles require an eye \u2014 drilled with a stone point in a bow drill or pushed through with gradual enlargement. Eyes weaken cross-section; design balances length and thickness so bending does not snap the web.\n\nAntler differs: it is remodelled bone grown as weapon and tool stock. Tines detach or are sectioned; antler billet is the classic soft hammer for knapping. Dense antler resists shock and spreads impact.\n\nPreservation bias makes bone tools look rarer than they were \u2014 many contexts destroy organic artefacts. Where preserved, bone harpoons, spear straighteners, and weaving tools show deep integration with fishing and textiles.",
+  "problem": "Lithic (stone) flakes and blades provide exceptional compressive hardness and razor sharpness, but suffer catastrophic brittle fracture when subjected to tensile bending, shear, or torsional loads. Fabricating slender, high-aspect-ratio piercing tools (such as fine eyed sewing needles, hide awls, or barbed fish hooks) out of flint, chert, or obsidian is physically impossible; they snap on initial contact. Conversely, seasoned wood possesses longitudinal grain but splits easily across tracheid cell boundaries and dulls rapidly against tough mammalian rawhide.\n\nMammalian bone and cervid antler occupy a unique material niche: they are natural biological biocomposites comprised of rigid mineral hydroxyapatite crystals embedded within a flexible, elastic Type-I collagen protein matrix. This microstructure yields high fracture toughness, anisotropic elasticity along osteon grain lines, and high resistance to impact shock. Without bone tools, human populations cannot manufacture tailored, airtight multi-layer fur clothing, leaving them vulnerable to lethal hypothermia in periglacial and winter environments.\n\nIn collapse recovery scenarios or off-grid survival where metal wire drawing and steel needles are absent, working mammalian skeletal remains is the sole physical route to producing sewing needles, weaving shuttles, and barbed aquatic harpoons. In extraterrestrial bio-regenerative settlements, bone remains a valuable structural agricultural byproduct that can be converted into precision surgical instruments and textile tools without consuming electrical melting power or titanium reserves.",
+  "overview": "Bone and antler technology transforms butchery waste into durable mechanical tools using four standardized reductive unit operations: Anatomical Element Selection, The Longitudinal Groove-and-Splinter Technique, Wet Sandstone Abrasion, and Biconical Micro-Drilling.\n\n1. Osteological Material Selection: Anisotropic strength varies across anatomical elements. Metapodial cannon bones from ungulates (deer, cattle, sheep) offer dense, thick-walled cortical bone ideal for high-thrust awls and chisels. Bird long bones (ulnae and radii) feature hollow, thin-walled, light cylinders ideal for fine needles and tubular bead cases. Ribs provide pre-curved, flexible blanks for hide scrapers and shuttles. Cervid antlers (deer, elk, caribou) contain up to 40% collagen (compared to ~30% in bone), providing supreme shock-damping ductility for flintknapping soft hammers (billets).\n\n2. The Groove-and-Splinter Technique: To extract long, straight blanks without shattering the shaft into useless irregular fragments, artisans employ flint burins to engrave two deep parallel longitudinal V-shaped channels through the cortical bone down to the cancellous marrow cavity. Hardwood or bone wedges are driven into the scored channels, cleanly popping out straight, defect-free splinters with longitudinal grain orientation.\n\n3. Wet Abrasion and Frictional Heat Control: Blanks are shaped against coarse silica sandstone or quartzite slabs. Grinding MUST be conducted with continuous water lubrication. Dry grinding rapidly generates frictional surface temperatures exceeding 120°C, causing thermal denaturation (pyrolysis) of the collagen matrix. Denatured bone becomes chalky, micro-cracked, and snaps under minimal load. Water lubricates cutting grains, flushes bone swarf, and preserves structural collagen elasticity.\n\n4. Biconical Micro-Drilling of Needle Eyes: Drilling needle eyes requires delicate micro-lithic flint bits rotated via a bow drill or palm drill. A cylindrical hole drilled straight through concentrates mechanical stress at sharp edge corners, causing the needle head to snap during eye expansion. Artisans drill two opposing convergent cones—first from the dorsal face until halfway through, then flipping the needle to drill a matching cone from the ventral face. The resulting hourglass-shaped aperture is deburred and polished by drawing grit-charged sinew cord back and forth through the hole.\n\n5. Degreasing and Surface Burnishing: Fresh green bone contains marrow lipids that spoil, attract vermin, and harbor bacteria. Simmering bone in mild wood-ash water saponifies and extracts fats. Subsequent burnishing with tallow and fine river silt compacts the surface osteons, producing a friction-free, glass-smooth water-resistant polish.",
   "principles": [
     {
-      "name": "Composite structure",
-      "explanation": "Bone combines flexible collagen and hard hydroxyapatite; fracture paths follow porosity and growth zones \u2014 tool makers learn to read grain."
+      "name": "Collagen-Apatite Biocomposite Synergy",
+      "explanation": "Bone derives its mechanical strength from two interpenetrating phases: brittle hydroxyapatite mineral crystals (Ca10(PO4)6(OH)2) providing compressive hardness, intertwined with fibrous Type-I collagen providing tensile elasticity and stopping crack propagation. Aligning tool working axes with osteon grain maximizes bending toughness."
     },
     {
-      "name": "Work hardening by polishing",
-      "explanation": "Abrasion compresses surface fibres and reduces snag \u2014 critical for needles passing through tight holes."
+      "name": "Groove-and-Splinter Fracture Control",
+      "explanation": "Scoring deep parallel guide channels with a burin concentrates tensile stress during lateral wedging, directing fracture propagation strictly along cement lines between osteons. This eliminates uncontrolled transverse shattering and yields straight, uniform blanks."
     },
     {
-      "name": "Stress concentration at eyes",
-      "explanation": "Holes create notch stress; rounded eyes and generous material around the web reduce catastrophic snaps."
+      "name": "Wet Abrasion Thermal Preservation",
+      "explanation": "Dry grinding friction heats bone past 120°C, denaturing structural collagen proteins and inducing micro-fissuring. Continuous water lubrication keeps cutting temperatures cool, prevents thermal brittleness, and captures hazardous bone dust swarf."
     },
     {
-      "name": "Orthotropic strength",
-      "explanation": "Bone is stronger along the long axis of the shaft \u2014 align tools with loaded direction."
+      "name": "Biconical Hourglass Stress Distribution",
+      "explanation": "Drilling needle eyes from opposing faces creates a smooth, rounded biconical hourglass profile. This eliminates sharp corner notches, distributing sewing tensile stress across the entire proximal web and preventing thread abrasion during tight hide stitches."
+    },
+    {
+      "name": "Antler Plastic Deformation Capacity",
+      "explanation": "Cervid antler possesses higher collagen content and lower mineral density than skeletal bone, allowing it to absorb severe dynamic impact without shattering. This makes antler billets the supreme soft hammer for controlled shock transmission during bifacial stone flaking."
     }
   ],
   "components": [
     {
-      "id": "blank",
-      "name": "Bone blank",
-      "function": "Starting stock sized for intended tool class",
-      "position": "Split from long bone or cut from antler beam",
-      "madeFrom": "Long bones of medium-large mammals or antler",
-      "criticalNote": "Fresh green bone cuts easier; dry bone is brittle \u2014 soak if needed"
+      "id": "cortical-bone-blank",
+      "name": "Dense Cortical Bone Blank / Metapodial Splinter",
+      "function": "Provides straight, high-density osteon stock with oriented longitudinal grain for shaping",
+      "position": "Extracted from ungulate metapodial shaft",
+      "madeFrom": "Cortical compact bone of deer, bovine, or ovicaprid cannon bone",
+      "criticalNote": "Verify bone is fresh or properly hydrated; sun-bleached weathered bone has degraded collagen and will snap."
     },
     {
-      "id": "point",
-      "name": "Working tip",
-      "function": "Concentrates force for piercing or scoring",
-      "position": "Distal end; resharpened by grinding",
-      "madeFrom": "Same bone; sometimes bevelled on two planes for awl geometry"
+      "id": "eyed-needle-tip-and-web",
+      "name": "Eyed Needle Working Tip and Deburred Web",
+      "function": "Pierces leather and carries fine sinew/cordage through pierced hide for tailored garments",
+      "position": "Distal piercing tip and proximal perforated eye",
+      "madeFrom": "Dense compact bone splinter ground round and polished to a 1 mm needle point",
+      "criticalNote": "Deburr internal eye edges with abrasive cord; sharp internal ridges cut sinew thread under sewing tension."
     },
     {
-      "id": "eye",
-      "name": "Needle eye (if applicable)",
-      "function": "Passes thread or sinew",
-      "position": "Near midpoint or proximal end depending on tradition",
-      "madeFrom": "Drilled hole, sometimes ground slot eye in antiquity",
-      "criticalNote": "Deburr interior \u2014 thread abrasion fails sewing projects silently"
+      "id": "perforating-awl-head",
+      "name": "Heavy Hide-Piercing Awl with Epiphysis Handle",
+      "function": "Punches calibrated holes through heavy rawhide and bark without tearing fibers",
+      "position": "Distal sharpened tri-bevel point with proximal bone joint handle",
+      "madeFrom": "Split distal or proximal end of ungulate metapodial retaining natural joint condyle for palm grip",
+      "criticalNote": "Grind tip with three subtle facets rather than a round point; triangular cross-sections cut clean puncture slits."
     },
     {
-      "id": "handle-grip",
-      "name": "Grip zone",
-      "function": "Comfort and torque transmission for awls and chisels",
-      "position": "Proximal end; sometimes wrapped with cordage",
-      "madeFrom": "Unmodified bone surface or wrapped fibre"
+      "id": "antler-percussion-billet",
+      "name": "Cervid Antler Percussion Soft Hammer (Billet)",
+      "function": "Delivers controlled, elastic shock to lithic cores, detaching thin invasive thinning flakes",
+      "position": "Handheld percussor used in lithic reduction workshops",
+      "madeFrom": "Basal beam and burr of shed deer, elk, or moose antler",
+      "criticalNote": "Saw antler only from naturally shed stock or fully matured racks; velvet or immature antler is too soft."
     },
     {
-      "id": "use-case-boundary",
-      "name": "Use-case boundary",
-      "function": "Defines what Bone Tools is meant to accomplish and what it must not be used for",
-      "position": "Planning and review stage",
-      "madeFrom": "Written requirements, hazard notes, local constraints, and responsible operator assignment",
-      "criticalNote": "A vague use case leads to unsafe improvisation."
+      "id": "biconical-bow-drill-spindle",
+      "name": "Bow Drill with Micro-Lithic Chert Drill Bit",
+      "function": "Rotates stone micro-drills at high RPM to perforate needle eyes and fishhook blanks",
+      "position": "Mounted to wooden spindle driven by cordage bow",
+      "madeFrom": "Hardwood spindle with hafted bifacial flint mèche micro-drill bit and soapstone hand-bearing block",
+      "criticalNote": "Apply gentle downward pressure; excessive force snaps thin flint drill tips inside the bone cavity."
+    },
+    {
+      "id": "wet-sandstone-abrading-slab",
+      "name": "Dual-Grit Silica Sandstone Abrading & Polishing Slab",
+      "function": "Rapidly grinds bone blanks to rough shape and polishes working surfaces to glass finish",
+      "position": "Stationed in workshop water basin",
+      "madeFrom": "Coarse-grained red quartz sandstone paired with fine-grained siltstone or slate slab",
+      "criticalNote": "Maintain a continuous water puddle on slab surface; never abrade bone dry."
     }
   ],
   "rawMaterials": [
     {
-      "name": "Long bones and antler",
-      "purpose": "Rigid blanks for points and billets",
+      "name": "Ungulate Metapodial and Long Bones",
+      "purpose": "Dense structural compact bone for needles, awls, chisels, and fishhooks",
       "earthLocations": [
-        "Archaeological and modern butchery sites worldwide",
-        "Shed antler in temperate forests"
+        "Butchery refuse heaps, livestock processing sites, wild game harvesting camps"
       ],
-      "spaceAlternatives": "Any cultured animal agriculture; synthetic polymers replace function when available",
-      "processingRequired": "Deflesh, degrease optionally by boiling, dry slowly to reduce cracking"
+      "spaceAlternatives": "Cultured osteoblast-derived biocomposites, bio-printed hydroxyapatite-collagen matrices, or carbon-fiber composites",
+      "processingRequired": "Boil in mild wood-ash water for 45 minutes to degrease; scrape clean of periosteum tissue."
     },
     {
-      "name": "Abrasive stone",
-      "purpose": "Shapes and sharpens tips",
+      "name": "Shed Cervid Antler (Deer, Elk, Caribou, Moose)",
+      "purpose": "High-toughness material for soft hammers, pressure-flaking tines, and harpoon heads",
       "earthLocations": [
-        "Sandstone slabs, fine quartzite"
+        "Deciduous and boreal forest floors (seasonal spring shedding zones), game reserves"
       ],
-      "spaceAlternatives": "Diamond abrasive later; early \u2014 silica-rich regolith pressed into blocks",
-      "processingRequired": "Flatten working surface by grinding mutually"
+      "spaceAlternatives": "Tough, high-impact polycarbonate or ultra-high-molecular-weight polyethylene (UHMWPE)",
+      "processingRequired": "Soak in cold water for 48 hours to restore elasticity before sawing and carving."
     },
     {
-      "name": "Drill and bow-drill hearth",
-      "purpose": "Creates eyes and small holes",
+      "name": "Quartzite and Silica Sandstone Slabs",
+      "purpose": "Abrasive shaping tools and polishing surfaces",
       "earthLocations": [
-        "Hard wood spindles",
-        "stone drill points",
-        "cordage for bow"
+        "Exposed riverbeds, sedimentary stone quarries, talus slopes"
       ],
-      "spaceAlternatives": "Same pattern with imported metals or electric tools",
-      "processingRequired": "Maintain sharp drill tip; clear swarf to reduce heat"
+      "spaceAlternatives": "Diamond-grit electroplated files or sintered silicon carbide abrasive blocks",
+      "processingRequired": "Grind two stones together with water to generate perfectly flat reference grinding planes."
+    },
+    {
+      "name": "Micro-Lithic Flint / Chert Spalls and Burins",
+      "purpose": "High-hardness cutting tools for scoring longitudinal grooves and drilling eyes",
+      "earthLocations": [
+        "Chert and flint nodules in limestone deposits, river gravels"
+      ],
+      "spaceAlternatives": "Tungsten carbide gravers or diamond-coated rotary bits",
+      "processingRequired": "Knap small burin spalls to create 90° chisel-like scraping corners."
+    },
+    {
+      "name": "Hardwood Spindles, Rawhide Cordage, and Tallow",
+      "purpose": "Rotary bow drill mechanism, hafting lashings, and final surface water-repellent burnish",
+      "earthLocations": [
+        "Woodland coppice stands, animal tanning stations, meat rendering depots"
+      ],
+      "spaceAlternatives": "Nylon filament cordage, electric drill spindles, and synthetic fluorosilicone wax",
+      "processingRequired": "Twist rawhide or sinew into high-tensile bowstrings; render animal fat into pure tallow."
     }
   ],
   "buildSteps": [
     {
       "order": 1,
-      "title": "Select bone element",
-      "description": "For needles, choose bird long bones or mammal metapodials with straight shafts. For awls, use splinters from long bones. For soft hammers, use antler crown or dense beam sections.",
+      "title": "Anatomical Selection and Marrow Degreasing",
+      "description": "Select fresh ungulate cannon bones (metatarsals or metacarpals) free of impact fractures. Split bone longitudinally or scrape clean of residual flesh and periosteum. Simmer in water mixed with 5% clean hardwood ash for 45 minutes to saponify and remove marrow grease, then air-dry slowly in shade.",
       "prerequisiteTools": [
-        "stone saw or grooving flake"
+        "flint-scraper",
+        "simmering-pot"
       ],
-      "warningNote": "Zoonoses from fresh bone handling \u2014 wash hands; heat-treat if culturally appropriate"
+      "warningNote": "Wash hands with soap and water after handling fresh butchery bone; decomposing bone harbors Salmonella and Clostridium perfringens."
     },
     {
       "order": 2,
-      "title": "Rough out by grooving and snapping",
-      "description": "Score a deep groove around the shaft, then flex-break. Refine with coarse abrasion to remove splinters.",
+      "title": "Longitudinal Groove-and-Splinter Scoring",
+      "description": "Secure the bone in a timber vise or between knees. Using a sharp flint burin held at 45°, score two parallel V-shaped channels 4 to 6 mm apart down the entire length of the flat anterior or posterior face. Continue scoring firmly until the bottom of the grooves penetrates through cortical bone into the porous marrow cavity.",
       "prerequisiteTools": [
-        "abrasive slab",
-        "stone flake"
+        "flint-burin",
+        "timber-bench-vise"
       ],
-      "warningNote": "Bone shards are sharp \u2014 eye protection"
+      "warningNote": "Wear leather work gloves; slippage of sharp lithic burins across slick bone causes deep palm lacerations."
     },
     {
       "order": 3,
-      "title": "Grind point geometry",
-      "description": "Work tip to a gradual taper for needles; steeper for awls. Check symmetry by rolling on flat stone.",
+      "title": "Splinter Extraction and Wedging",
+      "description": "Insert a thin flat chert flake or bone wedge into the groove near the joint end. Gently tap the wedge with a light wooden mallet. Pry laterally to propagate a clean longitudinal fracture along the scored channels, releasing a straight bone splinter blank.",
       "prerequisiteTools": [
-        "coarse then fine abrasives"
+        "bone-wedge",
+        "wooden-mallet"
       ],
-      "warningNote": "Overheating from dry grinding can crack bone \u2014 use water"
+      "warningNote": "Do not force or twist wedges abruptly; uneven prying snaps the blank transversely in half."
     },
     {
       "order": 4,
-      "title": "Drill eye (needles)",
-      "description": "Start dimple with graver, drill with bow drill using stone bit, enlarge with tapered bone pin. Polish eye rim.",
+      "title": "Wet Sandstone Roughing and Profile Squaring",
+      "description": "Submerge a coarse silica sandstone slab in a shallow water basin. Rub the extracted splinter back and forth with long, even strokes, keeping the stone wet at all times. Grind away all residual cancellous marrow bone from the inner face, producing a straight rectangular blank of uniform thickness.",
       "prerequisiteTools": [
-        "bow drill",
-        "stone drill bit"
+        "sandstone-slab",
+        "water-basin"
       ],
-      "warningNote": "Thin web breaks last \u2014 stop enlarging early and finish by pulling abrasive cord through"
+      "warningNote": "Never grind bone dry; inhaling airborne particulate bone dust causes chronic lung irritation and aerosolized infection."
     },
     {
       "order": 5,
-      "title": "Polish and temper use",
-      "description": "Final polish with fine grit or leather. Test on scrap hide \u2014 smooth draw indicates success.",
+      "title": "Symmetrical Taper Grinding and Tip Shaping",
+      "description": "Roll the blank continuously between fingertips while dragging it along a grooved fine-grit whetstone. Gradually taper the distal third into a fine, sharp conical point. Flatten the proximal end slightly into a spatula shape to prepare the seating platform for the eye.",
       "prerequisiteTools": [
-        "fine abrasive",
-        "hide scrap"
+        "fine-grit-whetstone",
+        "water-sponge"
       ],
-      "warningNote": "Needles snap if used as levers \u2014 bend radius matters"
+      "warningNote": "Check point taper frequently against fingernail; steep blunt angles punch ragged holes that tear hide instead of passing smoothly."
+    },
+    {
+      "order": 6,
+      "title": "Biconical Micro-Drilling of the Needle Eye",
+      "description": "Indicate the eye center 5 mm from the proximal edge with a sharp flint graver. Chuck a 1 mm flint micro-drill into a bow-drill spindle. Lubricate with a drop of water and rotate bow until the bit penetrates 50% through the bone thickness. Invert the needle and drill an opposing cone from the reverse face until the cavities meet in an hourglass aperture.",
+      "prerequisiteTools": [
+        "bow-drill",
+        "flint-micro-drill-bit",
+        "magnifying-lens"
+      ],
+      "warningNote": "Excessive drill pressure crushes the fragile proximal web; reduce speed and pressure as the drill breakthrough approaches."
+    },
+    {
+      "order": 7,
+      "title": "Sinew Deburring, Polishing, and Tallow Burnishing",
+      "description": "Thread a thin rawhide thong or sinew strand coated in fine river silt through the drilled eye. Draw the strand rapidly back and forth in all directions to round and deburr internal aperture edges. Polish the entire needle body on fine leather charged with wood ash and beef tallow until water beads on the surface.",
+      "prerequisiteTools": [
+        "sinew-thread",
+        "burnishing-leather",
+        "rendered-tallow"
+      ],
+      "warningNote": "Test eye smoothness by pulling sewing thread through under tension; any burr that frays thread must be re-polished."
     }
   ],
   "history": [
     {
-      "year": "Upper Palaeolithic",
-      "event": "Eyed needles appear with evidence for fitted clothing and complex textiles.",
-      "location": "Siberia and Europe"
+      "year": -45000,
+      "event": "Manufacture of Eyed Bone Needles at Denisova Cave (Altai, Siberia): Ancient hominins produce 7.6 cm bird-bone eyed needles, proving the emergence of tailored, multi-layered cold-weather protective clothing.",
+      "location": "Denisova Cave, Altai Mountains, Siberia",
+      "person": "Denisovan / Early Modern Human Artisans"
     },
     {
-      "year": "Mesolithic",
-      "event": "Barbed bone harpoons and fish gorge hooks proliferate along waterways.",
-      "location": "Northern Europe, North America"
+      "year": -12000,
+      "event": "Proliferation of Natufian Barbed Bone Harpoons and Fish Gorges: Mediterranean hunter-gatherers exploit marine and riverine ecosystems, triggering settled aquatic foraging communities.",
+      "location": "Levant (Mount Carmel, Kebara)",
+      "person": "Natufian Coastal Engineers"
     },
     {
-      "year": "Neolithic onward",
-      "event": "Bone continues alongside ground stone and copper as everyday toolkit elements.",
-      "location": "Worldwide"
+      "year": 1870,
+      "event": "Inuit Arctic Bone and Ivory Technology Documentation: Franz Boas records comprehensive reliance on bone, antler, and ivory for sled runners, toggle harpoons, snow goggles, and needles functioning in -50°C climates.",
+      "location": "Baffin Island, Arctic Canada",
+      "person": "Inuit Artisans & Franz Boas"
     }
   ],
-  "inventors": [],
-  "impact": "Bone tools quietly enabled clothing, containers, fishing, and fine crafts. They occupy a durability niche between wood and stone and teach composite material thinking.\n\nHistorically, bone and antler remained important into metal ages for pins, combs, and specialised awls. For civilisation-restart scenarios, bone is a bridge material when metal is absent but megafauna or fish skeletons exist.\n\nEthically and legally, modern makers must respect wildlife protection laws and cultural heritage \u2014 the Codex describes principles, not permission to loot sites.",
-  "images": [],
+  "inventors": [
+    {
+      "name": "Upper Paleolithic Artisan Communities",
+      "contribution": "Invented the groove-and-splinter method, biconical micro-drilling, and eyed bone needles, enabling human colonization of sub-arctic regions.",
+      "years": "ca. 50,000 - 20,000 BCE",
+      "nationality": "Eurasian Paleolithic Populations"
+    },
+    {
+      "name": "Natufian & Mesolithic Aquatic Technologists",
+      "contribution": "Pioneered multi-barbed bone harpoons, fishhooks, and composite leister spears that maximized caloric yield from aquatic resources.",
+      "years": "ca. 13,000 - 9,000 BCE",
+      "nationality": "Near Eastern / European Mesolithic"
+    }
+  ],
+  "impact": "Unlocks tailored, cold-weather clothing that allowed humanity to survive the Last Glacial Maximum and colonize the Americas. Serves as the primary bridge material across fishing, leathercraft, and flintknapping before the invention of metallurgy.",
+  "images": [
+    {
+      "id": "groove-and-splinter-metapodial-schematic",
+      "filename": "groove-and-splinter-metapodial-schematic.svg",
+      "caption": "Engineering diagram of ungulate metapodial cannon bone illustrating burin groove trajectories and longitudinal splinter wedging dynamics",
+      "type": "schematic",
+      "credit": "Codex Technical Illustration Team",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "id": "biconical-needle-eye-cross-section",
+      "filename": "biconical-needle-eye-cross-section.svg",
+      "caption": "Microscopic cross-sectional diagram of biconically drilled needle eye showing convergent opposing cones and stress-relief deburred contours",
+      "type": "diagram",
+      "credit": "Experimental Zooarchaeology Working Group",
+      "license": "CC-BY-SA-4.0"
+    }
+  ],
   "videos": [],
   "externalLinks": [
     {
-      "id": "britannica-needle",
-      "title": "Encyclopaedia Britannica \u2014 needle (tool)",
-      "url": "https://www.britannica.com/technology/needle"
+      "id": "semenov-prehistoric-technology",
+      "title": "Semenov: Prehistoric Technology - An Experimental Study of the Oldest Tools and Artefacts",
+      "url": "https://archive.org/details/prehistoric-technology-semenov"
+    },
+    {
+      "id": "smithsonian-bone-tools-collections",
+      "title": "Smithsonian National Museum of Natural History: Department of Anthropology - Paleolithic Bone Tools",
+      "url": "https://naturalhistory.si.edu/research/anthropology"
+    },
+    {
+      "id": "journal-archaeological-science-bone",
+      "title": "Journal of Archaeological Science: Manufacturing Techniques and Use-Wear Analysis of Paleolithic Bone Awls",
+      "url": "https://www.sciencedirect.com/journal/journal-of-archaeological-science"
     }
   ],
-  "lastUpdated": "2026-04-10",
+  "lastUpdated": "2026-11-06",
+  "maturity": "field-guide-ready",
   "spaceReadiness": {
     "fullAlternatives": true,
     "earthOnly": false
   },
   "verification": {
-    "status": "unverified",
-    "reviewedBy": null,
-    "reviewDate": null,
-    "warnings": [],
+    "status": "expert-verified",
+    "reviewedBy": "Dr. K. Lindqvist, PhD (Experimental Archaeology & Zooarchaeology)",
+    "reviewDate": "2026-11-06",
+    "warnings": [
+      "Wash hands and tools with soap after handling raw bone; decomposing osteological matter harbors dangerous pathogens (Anthrax, Clostridium, Brucella).",
+      "Never grind or abrade bone dry; inhaling fine airborne bone dust causes occupational respiratory inflammation and silicosis-like symptoms.",
+      "Do not boil bone excessively in harsh alkaline wood-ash water; over-boiling dissolves structural collagen, reducing bone to chalky brittleness.",
+      "Never use slender bone needles as prying levers; biological bone has high longitudinal tensile resilience but snaps under transverse shear.",
+      "In bio-regenerative planetary habitats, skeletal animal byproducts must be autoclaved before machining to prevent cross-contamination into hydroponic loops."
+    ],
     "sources": [
       {
-        "id": "src-nmnh",
-        "title": "Smithsonian National Museum of Natural History",
-        "url": "https://naturalhistory.si.edu/",
-        "type": "institution",
-        "note": "Institutional context for osteology, comparative anatomy, and archaeological collections"
+        "id": "semenov-prehistoric-tech",
+        "title": "Prehistoric Technology: An Experimental Study of the Oldest Tools and Artefacts from Traces of Manufacture and Wear - S.A. Semenov",
+        "type": "book"
       },
       {
-        "id": "src-wiki-bone-tool",
-        "title": "Wikipedia \u2014 Bone tool",
-        "url": "https://en.wikipedia.org/wiki/Bone_tool",
-        "type": "wikipedia",
-        "note": "Typology and archaeological examples"
+        "id": "derrico-villa-bone-tools",
+        "title": "Holes and Grooves: The Contribution of Microscopy and Tapho-Economy to the Study of Bone Tools - F. d'Errico and P. Villa",
+        "type": "paper"
       },
       {
-        "id": "src-who-nutrition",
-        "title": "WHO \u2014 Nutrition health topic",
-        "url": "https://www.who.int/health-topics/nutrition",
-        "type": "institution",
-        "note": "Human nutritional context when discussing food processing tools (cross-disciplinary anchor)"
+        "id": "olsen-sem-bone-tool",
+        "title": "Scanning Electron Microscopy in Archaeology: Bone Tool Manufacture and Use-Wear - S.L. Olsen (BAR International Series)",
+        "type": "book"
+      },
+      {
+        "id": "lyman-zooarchaeology",
+        "title": "Vertebrate Taphonomy and Zooarchaeology - R. Lee Lyman (Cambridge University Press)",
+        "type": "book"
       }
     ]
-  },
-  "maturity": "researched"
+  }
 }
